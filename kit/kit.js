@@ -105,6 +105,6 @@
     d.addEventListener("click", function (e) { var a = e.target.closest('a[href^="#"]'); if (!a) return; var t = a.hash.length > 1 && d.querySelector(a.hash); if (t) { e.preventDefault(); l.scrollTo(t, { offset: -70 }); } });
   }
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
-  lenis(); bar(); reveal(); counters(); magnetic(); header(); forms();
+  lenis(); if (!root.hasAttribute("data-nobar")) bar(); reveal(); counters(); magnetic(); header(); forms();
   d.dispatchEvent(new Event("kit:ready"));
 })();
