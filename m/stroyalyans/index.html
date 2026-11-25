@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru" class="lg-off">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>СтройАльянс — металлопрокат и стройматериалы, калькулятор веса труб</title>
+<meta name="description" content="Концепция редизайна сайта ООО «СтройАльянс», Тюмень: каталог металлопроката и стройматериалов, расчёт массы труб и загрузки вагона на сайте, заявка и доставка по всей России.">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="preload" href="../../kit/fonts/commissioner-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css"><link rel="stylesheet" href="../../kit/base.css"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a class="lg" href="#top" aria-label="СтройАльянс, на главную"><img src="img/logo.svg" alt="" width="40" height="45"><span>СтройАльянс</span></a>
+  <nav data-menu aria-label="Основное меню"><a href="#about">О&nbsp;компании</a><a href="#calc">Калькуляторы</a><a href="#catalog">Каталог</a><a href="#tenders">Тендеры</a><a href="#regions">Регионы</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a></nav>
+  <a class="tel num" href="tel:+73452680768">+7 (3452) 68-07-68</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-g">
+    <div class="h-l">
+      <div class="brand" id="brand"><img src="img/logo.svg" alt="Логотип СтройАльянс" width="40" height="45"><p><b>СтройАльянс</b><small>Ваш надёжный поставщик</small></p></div>
+      <h1><span><i>Металл</i></span> <span><i>точно в&nbsp;срок</i></span></h1>
+      <p class="sub">Металлопрокат и&nbsp;строительные материалы с&nbsp;доставкой по&nbsp;всей России</p>
+      <form class="hook" id="hook" novalidate><p class="hk-q"><label>Нужна труба <input id="hk-s" value="219х8" inputmode="text" autocomplete="off" aria-label="Размер трубы, диаметр и стенка"></label> <label><input id="hk-m" value="120" inputmode="decimal" autocomplete="off" aria-label="Длина, метров"> метров</label></p>
+        <p class="hk-a" aria-live="polite"><output id="hk-o" class="num">4,995&nbsp;т</output><span id="hk-n"></span></p>
+        <div class="cta"><button type="submit" class="btn" data-magnetic>Заказать</button><a class="btn btn--ghost" href="#calc">Все калькуляторы</a></div></form>
+    </div>
+    <div class="h-r"><img class="poster" src="img/hero.webp" alt="Пакет металлопроката: трубы, балка, швеллер, уголок, лист и арматура" width="1600" height="1400" loading="lazy"><canvas id="steel" aria-hidden="true"></canvas>
+      <div class="tags" id="tags"></div></div>
+  </div>
+</section>
+
+<div class="run" aria-hidden="true"><div id="run"></div></div>
+
+<section class="sec about" id="about"><div class="wrap">
+  <div class="ab-h"><h2 data-split>О&nbsp;компании</h2>
+    <div><p class="big" id="say">Поставляем металлопрокат, строительные материалы и&nbsp;комплектующие по&nbsp;всей России. Опыт работы&nbsp;— более 10&nbsp;лет с&nbsp;ведущими поставщиками и&nbsp;известными брендами России и&nbsp;стран СНГ.</p>
+    <p class="lead" data-reveal>Наши главные ценности&nbsp;— ответственное отношение к&nbsp;каждому заказу, персональный подход к&nbsp;каждому партнёру и&nbsp;исполнение поставок точно в&nbsp;срок.</p></div></div>
+  <div class="who"><p>Среди заказчиков предприятия малого бизнеса и&nbsp;крупные промышленные корпорации</p><ul><li>Строительство</li><li>Нефтегазовая отрасль</li><li>Машиностроение</li><li>ЖКХ</li><li>Сельское хозяйство</li></ul></div>
+  <ul class="why">
+    <li class="up"><b>Персональный подход</b><span>Комплексный подход к&nbsp;каждому заказу, индивидуальные финансовые условия, рассрочка для постоянных клиентов.</span></li>
+    <li class="up"><b>Сертифицированная продукция</b><span>Широкий ассортимент и&nbsp;гарантия качества.</span></li>
+    <li class="up"><b>Любой вид транспорта</b><span>Удобная доставка по&nbsp;всей России или самовывоз.</span></li>
+    <li class="up"><b>Быстрая обработка</b><span>Команда обрабатывает заказ в&nbsp;самые короткие сроки.</span></li>
+    <li class="up"><b>Выгодные оптовые поставки</b><span>Нам доверяют крупные производители.</span></li>
+  </ul>
+</div></section>
+
+<section class="calc" id="calc" data-theme="night"><div class="wrap">
+  <div class="cl-h"><h2 data-split>Калькуляторы</h2><p class="lead">Считают прямо на&nbsp;сайте, скачивать ничего не&nbsp;нужно.</p></div>
+  <div class="tabs" role="tablist" aria-label="Калькуляторы">
+    <button role="tab" id="t0" aria-controls="cform" aria-selected="true">Масса объёма труб</button><button role="tab" id="t1" aria-controls="cform" aria-selected="false" tabindex="-1">Масса 1&nbsp;метра</button><button role="tab" id="t2" aria-controls="cform" aria-selected="false" tabindex="-1">Трубы в&nbsp;вагоне</button></div>
+  <div class="cl-g">
+    <form class="cform" id="cform" role="tabpanel" aria-labelledby="t0" novalidate>
+      <div class="row2 only1"><div class="seg" role="radiogroup" aria-label="Форма трубы"><label><input type="radio" name="kind" value="round" checked><span>Круглая</span></label><label><input type="radio" name="kind" value="box"><span>Профильная</span></label></div></div>
+      <label class="field rnd"><span>Размер из&nbsp;каталога</span><select id="preset"><option value="">Свой размер</option></select></label>
+      <div class="row2">
+        <label class="field rnd"><span>Диаметр, мм</span><input id="f-d" inputmode="decimal" autocomplete="off" value="219"></label>
+        <label class="field bx"><span>Сторона A, мм</span><input id="f-a" inputmode="decimal" autocomplete="off" value="80"></label>
+        <label class="field bx"><span>Сторона B, мм</span><input id="f-b" inputmode="decimal" autocomplete="off" value="60"></label>
+        <label class="field"><span>Стенка, мм</span><input id="f-s" inputmode="decimal" autocomplete="off" value="8"></label>
+        <label class="field only1"><span>Сталь</span><select id="f-r"><option value="7850">углеродистая, 7850 кг/м³</option><option value="7900">нержавеющая, 7900 кг/м³</option></select></label>
+        <label class="field only0 only2"><span>Длина трубы, м</span><input id="f-l" inputmode="decimal" autocomplete="off" value="12"></label>
+      </div>
+      <div class="only0"><div class="seg" role="radiogroup" aria-label="Что известно"><label><input type="radio" name="by" value="n" checked><span>Штуки</span></label><label><input type="radio" name="by" value="m"><span>Метры</span></label><label><input type="radio" name="by" value="t"><span>Тонны</span></label></div>
+        <label class="field"><span id="q-l">Количество, шт</span><input id="f-q" inputmode="decimal" autocomplete="off" value="28"></label></div>
+      <fieldset class="only2 wag"><legend>Полувагон, внутренние размеры</legend><div class="row4">
+        <label class="field"><span>Длина, м</span><input id="w-l" inputmode="decimal" autocomplete="off" value="12,7"></label><label class="field"><span>Ширина, м</span><input id="w-w" inputmode="decimal" autocomplete="off" value="2,88"></label><label class="field"><span>Высота, м</span><input id="w-h" inputmode="decimal" autocomplete="off" value="2,06"></label><label class="field"><span>Груз, т</span><input id="w-t" inputmode="decimal" autocomplete="off" value="69"></label></div></fieldset>
+      <p class="err" id="err" role="alert"></p>
+    </form>
+    <div class="cview"><canvas id="cv" aria-hidden="true"></canvas>
+      <div class="res" aria-live="polite"><p class="main"><output id="r0" class="num"></output><span id="r0u"></span></p><dl id="rl"></dl>
+        <button type="button" class="btn" id="cadd">Добавить расчёт в&nbsp;заявку</button></div></div>
+  </div>
+  <p class="note" id="cnote"></p>
+</div></section>
+
+<section class="sec cat" id="catalog"><div class="wrap">
+  <div class="ct-h"><h2 data-split>Каталог</h2><label class="field find"><span>Поиск по&nbsp;каталогу</span><input id="find" type="search" autocomplete="off" placeholder="например, 159х6 или швеллер"></label></div>
+  <div class="cat-g"><div class="cats" id="cats" role="group" aria-label="Разделы каталога"></div>
+    <div class="cat-r"><div class="subs" id="subs" role="group" aria-label="Подразделы"></div>
+      <p class="cnt" id="cnt" aria-live="polite"></p><ul class="list" id="list"></ul><button type="button" class="btn btn--line" id="more">Показать ещё</button></div></div>
+</div></section>
+
+<section class="sec ten" id="tenders" data-theme="night"><div class="wrap">
+  <h2 data-split>Тендеры и&nbsp;госконтракты</h2>
+  <p class="lead">Участвуем в&nbsp;торгах и&nbsp;государственных закупках как поставщик металлопроката и&nbsp;строительных материалов.</p>
+  <ul class="tn"><li class="up"><b class="num" data-n="304">304</b><span>участия в&nbsp;торгах</span></li><li class="up"><b class="num" data-n="63">63</b><span>победы</span></li><li class="up"><b class="num" data-n="80">80</b><span>заказчиков в&nbsp;реестре закупок</span></li></ul>
+  <div class="tn-g"><div><h3>Среди заказчиков</h3><ul class="cust"><li class="up"><b>РН‑Юганскнефтегаз</b><span>Нефтеюганск</span></li><li class="up"><b>УКС Югры</b><span>Ханты-Мансийск</span></li><li class="up"><b>Управление гражданской защиты</b><span>Ханты-Мансийский район</span></li><li class="up"><b>Теплоснабжение и водоотведение №&nbsp;1</b><span>Сургутский район</span></li><li class="up"><b>Тазовское дорожно‑транспортное предприятие</b><span>Тазовский, ЯНАО</span></li><li class="up"><b>МУП «Водоканал»</b><span>Екатеринбург</span></li></ul>
+    <a class="btn" data-add="Приглашение в закупку" href="#order">Пригласить в&nbsp;закупку</a></div>
+    <figure class="rev" id="rev"><figcaption><h3>Точки роста</h3><p>Доход компании, млн&nbsp;₽</p></figcaption><ol><li style="--v:0.0888;--i:0"><b class="num">319</b><i></i><span class="num">2016</span></li><li style="--v:0.1546;--i:1"><b class="num">556</b><i></i><span class="num">2017</span></li><li style="--v:0.2078;--i:2"><b class="num">748</b><i></i><span class="num">2018</span></li><li style="--v:0.2016;--i:3"><b class="num">725</b><i></i><span class="num">2019</span></li><li style="--v:0.2206;--i:4"><b class="num">793</b><i></i><span class="num">2020</span></li><li style="--v:0.3087;--i:5"><b class="num">1&nbsp;110</b><i></i><span class="num">2021</span></li><li style="--v:0.3341;--i:6"><b class="num">1&nbsp;202</b><i></i><span class="num">2022</span></li><li style="--v:0.5459;--i:7"><b class="num">1&nbsp;963</b><i></i><span class="num">2023</span></li><li style="--v:0.7617;--i:8"><b class="num">2&nbsp;740</b><i></i><span class="num">2024</span></li><li style="--v:1.0000;--i:9" class="last"><b class="num">3&nbsp;597</b><i></i><span class="num">2025</span></li></ol></figure></div>
+  <p class="note">Торги, победы и&nbsp;доход: Saby. Число заказчиков: Rusprofile. Данные на&nbsp;25.11.2026 за&nbsp;весь период.</p>
+</div></section>
+
+<section class="reg" id="regions" data-theme="night"><div class="rg-s"><canvas id="rmap" role="img" aria-label="Карта России: офис в Тюмени и регионы заказчиков"></canvas>
+  <div class="wrap rg-w"><h2 data-split>Регионы работы</h2><div class="rg-b"><div class="rg-l" id="rgl" role="group" aria-label="Регионы"></div><p class="rg-c" id="rgc" aria-live="polite"></p></div></div></div></section>
+
+<section class="sec dlv" id="delivery"><div class="wrap dl-g">
+  <div><h2 data-split>Доставка по&nbsp;всей России</h2><p class="lead">Привозим на&nbsp;объект в&nbsp;удобное для вас время, в&nbsp;минимальные сроки и&nbsp;с&nbsp;минимальными затратами. Цена зависит от&nbsp;тоннажа, объёма, вида транспорта, километража и&nbsp;региона. При отгрузке большого объёма действуют льготные условия.</p></div>
+  <ol class="ways"><li class="up"><span>Автотранспорт</span><svg viewBox="0 0 220 24" aria-hidden="true"><path d="M0 12h214M204 2l10 10-10 10" fill="none" stroke="currentColor" stroke-width="2.500" pathLength="1"/></svg></li><li class="up"><span>Железная дорога</span><svg viewBox="0 0 220 24" aria-hidden="true"><path d="M0 12h214M204 2l10 10-10 10" fill="none" stroke="currentColor" stroke-width="2.500" pathLength="1"/></svg></li><li class="up"><span>Авиаперевозки</span><svg viewBox="0 0 220 24" aria-hidden="true"><path d="M0 12h214M204 2l10 10-10 10" fill="none" stroke="currentColor" stroke-width="2.500" pathLength="1"/></svg></li><li class="up"><span>Водный транспорт</span><svg viewBox="0 0 220 24" aria-hidden="true"><path d="M0 12h214M204 2l10 10-10 10" fill="none" stroke="currentColor" stroke-width="2.500" pathLength="1"/></svg></li><li class="up"><span>Самовывоз</span><svg viewBox="0 0 220 24" aria-hidden="true"><path d="M0 12h214M204 2l10 10-10 10" fill="none" stroke="currentColor" stroke-width="2.500" pathLength="1"/></svg></li></ol>
+</div></section>
+
+<section class="sec ord" id="order"><div class="wrap">
+  <h2 data-split>Заявка</h2>
+  <form data-demo-form>
+    <div class="bag"><ul id="bag"></ul></div><div id="hid"></div>
+    <div class="ord-g"><label class="field full"><span>Что нужно: позиции, тоннаж, город доставки</span><textarea name="Что нужно" rows="3"></textarea></label>
+      <label class="field"><span>Имя или компания</span><input name="Контакт" required autocomplete="organization"></label><label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label><label class="field"><span>E-mail</span><input name="E-mail" type="email" autocomplete="email"></label>
+      <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label><button class="btn full" data-magnetic>Отправить заявку</button></div>
+    <div class="done" role="status"><h3>Заявка собрана</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+  </form>
+</div></section>
+
+<section class="sec cnt-s" id="contacts" data-theme="night"><div class="wrap">
+  <h2 data-split>Тюмень, Самарская, 20</h2>
+  <div class="cn-g"><a class="phone num" href="tel:+73452680768">+7 (3452) 68-07-68</a>
+    <p class="open"><span id="open"></span><br>Понедельник&nbsp;— пятница, 09:00–18:00 по&nbsp;Тюмени, 07:00–16:00 по&nbsp;Москве</p>
+    <p>625003, г.&nbsp;Тюмень, ул.&nbsp;Самарская, д.&nbsp;20, помещение&nbsp;4, офис&nbsp;404<br><a class="link" href="mailto:zakaz@s-alians.ru">zakaz@s-alians.ru</a><br><a class="link" href="mailto:tender@ooo-sa.ru">tender@ooo-sa.ru</a></p>
+    <ul><li><a class="link" href="#contacts">Реквизиты и&nbsp;документы</a></li><li><a class="link" href="#contacts">ГОСТы и&nbsp;ТУ</a></li><li><a class="link" href="#tenders">Госконтракты, тендеры</a></li><li><a class="link" href="#contacts">Политика конфиденциальности</a></li></ul></div>
+</div></section>
+</main>
+<footer class="ftr" data-theme="night"><div class="wrap"><span>ООО «СтройАльянс»</span><span>ИНН 7204175523, ОГРН 1117232056677</span></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73452680768">Позвонить</a><a class="btn" href="#order">Заявка <span id="mb"></span></a></div>
+<script src="../../kit/vendor/lenis.min.js" defer></script><script src="../../kit/kit.js" defer></script><script src="data.js" defer></script><script src="geo.js" defer></script><script src="app.js" defer></script>
+</body>
+</html>
