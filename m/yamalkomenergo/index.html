@@ -5,7 +5,7 @@
 <script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Ямалкоммунэнерго — тепло, электроэнергия и вода для Ямала</title>
+<title>ЭНЕРГИЯ ЯМАЛА — Ямалкоммунэнерго</title>
 <meta name="description" content="Концепция редизайна сайта АО «Ямалкоммунэнерго»: крупнейшее ресурсоснабжающее предприятие ЯНАО, филиалы, подключение к сетям, тарифы.">
 <link rel="icon" href="img/logo.png">
 <link rel="preload" href="../../kit/fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,25 +17,44 @@
 <a class="skip" href="#main">К содержанию</a>
 <header class="hdr" data-header>
   <a class="plate" href="#main" aria-label="Ямалкоммунэнерго, на главную"><img src="img/logo.png" alt="Ямалкоммунэнерго, акционерное общество" width="700" height="176"></a>
-  <nav data-menu aria-label="Основное меню"><a href="#flow">О компании</a><a href="#map">Филиалы</a><a href="#use">Потребителям</a><a href="#connect">Подключение</a><a href="#people">Люди</a><a href="#contacts">Контакты</a></nav>
+  <nav data-menu aria-label="Основное меню"><a href="#line">Энергия</a><a href="#flow">О компании</a><a href="#map">Филиалы</a><a href="#use">Потребителям</a><a href="#connect">Подключение</a><a href="#people">Люди</a><a href="#contacts">Контакты</a></nav>
   <button class="lv-btn" type="button" aria-pressed="false" aria-label="Версия для слабовидящих"><svg viewBox="0 0 32 20" width="30" height="19" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10S7 2 16 2s14 8 14 8-5 8-14 8S2 10 2 10Z"/><circle cx="16" cy="10" r="4"/></svg></button>
   <button data-burger aria-label="Меню" aria-expanded="false"></button>
 </header>
 
 <main id="main">
-<section class="hero" data-theme="night">
+<section class="hero" id="hero" data-theme="night">
   <canvas id="sun" aria-hidden="true"></canvas>
   <svg class="town" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="#EAF4FF" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-    <path class="d" d="M60 452h480"/><path class="d" d="M150 452V330h84v122M234 452V372h62v80M162 350h18M162 376h18M162 402h18M204 350h18M204 376h18M204 402h18M250 392h14M250 418h14M276 392h14M276 418h14"/>
-    <path class="d" d="M326 452l6-232h26l8 232M331 262h29M329 300h33"/><path class="d" d="M376 452l5-190h22l7 190"/>
-    <path class="d" d="M440 452l22-236 22 236M448 372h30M452 328h22M456 284h14M424 252h76M432 252l30-36 30 36M448 372l27-44M475 372l-25-44"/>
-    <path class="d" d="M424 252C360 300 300 296 250 262M500 252c28 22 52 28 78 26"/></g></svg>
+    <path class="d" d="M92 500h416"/><path class="d" d="M120 500v-82h52v82M172 500v-58h44v58M130 436h10M152 436h10M130 458h10M152 458h10M184 458h10M184 478h10M388 500v-96h46v96M434 500v-66h44v66M400 422h10M416 422h10M400 446h10M416 446h10M400 470h10M446 452h10M446 474h10"/>
+    <path class="d" d="M238 500 290 96h20l52 404M300 66v30M248 420h104M256 358h88M264 300h72M271 246h58M279 190h42M286 136h28"/><path class="d" d="M248 420l88-62M352 420l-88-62M256 358l80-58M344 358l-80-58M264 300l65-54M336 300l-65-54M271 246l50-56M329 246l-50-56M279 190l35-54M321 190l-35-54M248 420l-10 80 124-80M352 420l10 80-124-80"/>
+    <path class="d" d="M208 152h184M208 152l78-16M392 152l-78-16M170 214h260M170 214l106-20M430 214l-106-20M194 278h212M194 278l76-18M406 278l-76-18"/>
+    <path class="d" stroke-width="5" d="M208 152v20M392 152v20M170 214v20M430 214v20M236 214v20M194 278v20M406 278v20M244 278v20"/></g>
+    <g fill="#FFC24B"><circle class="an" cx="208" cy="174" r="4"/><circle class="an" cx="170" cy="236" r="4"/><circle class="an" cx="194" cy="300" r="4"/><circle class="an" cx="236" cy="236" r="4"/><circle class="an" cx="244" cy="300" r="4"/><circle class="in" cx="392" cy="174" r="4"/><circle class="in" cx="430" cy="236" r="4"/><circle class="in" cx="406" cy="300" r="4"/></g></svg>
+  <canvas id="wires" aria-hidden="true"></canvas>
   <div class="wrap hero-in">
-    <h1><span>Тепло там,</span> <span>где мы!</span></h1>
+    <p class="motto">Тепло там, где мы!</p>
+    <h1><span>ЭНЕРГИЯ</span> <span>ЯМАЛА</span></h1>
     <p class="lead">Ямалкоммунэнерго&nbsp;— крупнейшее в&nbsp;Ямало‑Ненецком автономном округе ресурсоснабжающее предприятие.</p>
-    <div class="cta"><a class="btn" data-magnetic href="#connect">Подключиться к&nbsp;сетям</a><a class="btn btn--ghost" href="#appeal">Написать обращение</a></div>
+    <div class="cta"><a class="btn" data-magnetic href="#connect">Подключиться к&nbsp;сетям</a></div>
   </div>
-  <p class="hint" aria-hidden="true">Проведите по&nbsp;инею</p>
+  <div class="wrap"><ul class="terms" id="terms" aria-label="Быстрые действия">
+    <li><a href="#connect"><i aria-hidden="true"></i><b>Подключение</b><span>заявка в&nbsp;нужный филиал</span></a></li>
+    <li><a href="#use"><i aria-hidden="true"></i><b>Тарифы</b><span>с&nbsp;1&nbsp;января 2026&nbsp;года</span></a></li>
+    <li><a href="#map"><i aria-hidden="true"></i><b>Филиалы</b><span>десять по&nbsp;округу</span></a></li>
+    <li><a href="tel:+73492251098"><i aria-hidden="true"></i><b>Телефон доверия</b><span class="num">8&nbsp;(34922) 5‑10‑98</span></a></li>
+    <li><a href="#appeal"><i aria-hidden="true"></i><b>Обращение</b><span>написать в&nbsp;компанию</span></a></li>
+  </ul></div>
+</section>
+
+<section class="line" id="line" data-theme="night" aria-label="Линия электропередачи">
+  <div class="lstage"><canvas id="lep" aria-hidden="true"></canvas>
+    <div class="wrap lread"><h2 class="sr">Поставка энергии</h2><ol class="lsteps">
+      <li><b class="num">44</b><span>электростанции вырабатывают энергию</span></li>
+      <li><b class="num">487,4&nbsp;км</b><span>линий электропередачи</span></li>
+      <li><b class="num">226&nbsp;524</b><span>человека живут на&nbsp;территории, которую мы&nbsp;обслуживаем</span></li>
+    </ol></div>
+  </div>
 </section>
 
 <section class="flow" id="flow" data-theme="night" aria-label="Путь тепла в цифрах">
@@ -46,8 +65,8 @@
         <li><b class="num">122</b><span>котельные в&nbsp;городах, районных центрах и&nbsp;посёлках</span></li>
         <li><b class="num">982,34&nbsp;км</b><span>магистральных и&nbsp;распределительных тепловых сетей в&nbsp;двухтрубном исполнении</span></li>
         <li><b class="num">25</b><span>тепловых пунктов</span></li>
-        <li><b class="num">44</b><span>электростанции и&nbsp;487,4&nbsp;км линий электропередачи</span></li>
-        <li><b class="num">209,5&nbsp;тыс.</b><span>лицевых счетов по&nbsp;всем видам коммунальных услуг для жителей Ямала</span></li>
+        <li><b class="num">31&nbsp;123</b><span>условные единицы энергетического оборудования на&nbsp;обслуживании</span></li>
+        <li><b class="num">≈&nbsp;209&nbsp;500</b><span>лицевых счетов жителей Ямала по&nbsp;всем видам коммунальных услуг</span></li>
       </ol>
     </div>
     <div class="rail" aria-hidden="true"><i></i></div>
@@ -75,7 +94,7 @@
 
 <section class="sec con" id="connect"><div class="wrap">
   <h2 data-split>Подключение к&nbsp;сетям</h2>
-  <form class="con-f" data-demo-form>
+  <form class="con-f" data-demo-form id="conf"><canvas id="cw" aria-hidden="true"></canvas>
     <fieldset class="res"><legend>Что подключаем</legend>
       <label><input type="radio" name="Ресурс" value="Тепловая энергия" checked><span style="--c:#F58A1F">Тепловая энергия</span></label>
       <label><input type="radio" name="Ресурс" value="Холодная вода"><span style="--c:#4FA8F0">Холодная вода</span></label>
@@ -83,7 +102,7 @@
       <label><input type="radio" name="Ресурс" value="Водоотведение"><span style="--c:#3E7F8F">Водоотведение</span></label>
       <label><input type="radio" name="Ресурс" value="Электрическая энергия"><span style="--c:#F4C430">Электрическая энергия</span></label>
     </fieldset>
-    <div class="con-b">
+    <div class="con-b"><i class="sock" aria-hidden="true"></i>
       <label class="field"><span>Где находится объект</span><select name="Муниципальное образование" id="c-b"></select></label>
       <label class="field"><span>Заявитель</span><input name="Заявитель" required autocomplete="name"></label>
       <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
