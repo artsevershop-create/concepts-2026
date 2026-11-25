@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ЭКОТОН — текущий и капитальный ремонт скважин в Югре</title>
+<meta name="description" content="Концепция редизайна сайта ООО «ЭКОТОН»: 270 бригад ТКРС, текущий и капитальный ремонт скважин, Пыть-Ях.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/sofia-sans-extra-condensed-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--coal:#16110B;--coal-2:#241B11;--sun:#FFC52B;--red:#E0242A;--sheet:#F6F0E3;--ink:#1A150E;
+  --bg:var(--sheet);--fg:var(--ink);--muted:#6A5F4E;--accent:var(--red);--accent-h:#B5161C;--r:0px;
+  --f-display:"Sofia Sans Extra Condensed",Impact,sans-serif;--f-text:"Golos Text",system-ui,sans-serif;--hdr-h:84px;--dip:-24deg}
+[data-theme=night]{--bg:var(--coal);--fg:#F8F1E2;--muted:#B5A88F;--line:rgba(255,235,195,.16);background:var(--bg);color:var(--fg)}
+h1,h2,h3,.big{font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:-.005em;line-height:.88}
+h2{font-size:clamp(46px,7.2vw,116px)}
+.lead{font-size:clamp(18px,1.5vw,22px);line-height:1.5;color:var(--muted);max-width:34em}
+.btn{font-size:17px}
+/* шапка */
+.hdr{background:var(--sheet);color:var(--ink);border-bottom:1px solid rgba(26,21,14,.12)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(20px,3vw,48px)}
+.hdr img{height:52px;width:auto}
+.hdr nav{display:flex;gap:clamp(18px,2.2vw,36px);margin-left:auto;font-weight:500;font-size:16px}
+.hdr nav a{text-decoration:none;padding:12px 0;position:relative}
+.hdr nav a::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:3px;background:var(--red);transform:scaleX(0) skewX(var(--dip));transform-origin:0 50%;transition:transform .35s var(--e-smooth)}
+.hdr nav a:hover::after{transform:scaleX(1) skewX(var(--dip))}
+.hdr .tel{text-decoration:none;font-weight:600;white-space:nowrap}
+/* первый экран: солнце из логотипа */
+.hero{position:relative;min-height:min(100svh,940px);padding-top:var(--hdr-h);display:grid;grid-template-rows:1fr auto;overflow:clip;isolation:isolate}
+.hero .wrap{width:100%}
+.hero-in{position:relative;display:grid;align-content:center;padding-block:clamp(28px,5vh,64px) clamp(24px,4vh,48px)}
+.sun{position:absolute;z-index:-1;right:max(calc(50% - 760px),-9vw);top:50%;width:min(62vw,860px);aspect-ratio:1;translate:0 -50%;border-radius:50%;overflow:hidden;background:var(--sun)}
+.sun img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;transform:scale(1.04)}
+/* наклонные прорези, как на диске логотипа */
+.sun i{position:absolute;left:-20%;width:140%;background:var(--sheet);transform:rotate(var(--dip));transform-origin:50% 50%}
+.sun::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,var(--sun) 8%,rgba(255,197,43,.86) 24%,rgba(255,197,43,0) 54%)}
+h1{font-size:clamp(58px,10.4vw,172px);max-width:8.6em}
+h1 em{font-style:normal;color:var(--red)}
+.hero .lead{margin-top:26px;color:var(--ink);max-width:27em;font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.cta .btn--ghost{background:var(--sheet)}
+.facts{background:var(--ink);color:#F8F1E2;position:relative}
+.facts .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.facts div div{padding:22px 0 24px;display:flex;align-items:baseline;gap:16px;border-left:1px solid rgba(255,235,195,.18);padding-left:24px}
+.facts div div:first-child{border:0;padding-left:0}
+.facts b{font:800 clamp(38px,4.4vw,66px)/.9 var(--f-display);color:var(--sun)}
+.facts span{font-size:16px;line-height:1.3;color:#D8CBB2}
+@media (prefers-reduced-motion:no-preference){
+  .js .sun i{animation:slat 1.5s var(--e-strike) both;animation-delay:calc(.1s + var(--n)*.09s)}
+  .js .sun img{animation:rise 2.6s var(--e-smooth) both}
+  .js h1 span{display:inline-block;animation:push 1.1s var(--e-smooth) both;animation-delay:calc(var(--n)*.09s)}
+}
+@keyframes slat{from{transform:rotate(var(--dip)) scaleY(9)}}
+@keyframes rise{from{transform:scale(1.2) translateY(4%)}}
+@keyframes push{from{transform:translateX(-.22em) skewX(-8deg)}}
+/* под землёй: график стволами */
+.depth{padding-block:clamp(72px,9vw,140px) 0;overflow:clip}
+.depth-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px 60px;align-items:end}
+.well-read{display:flex;gap:clamp(24px,3vw,56px);justify-content:flex-end}
+.well-read div{min-width:7.2em}
+.well-read b{display:block;font:800 clamp(44px,5.4vw,84px)/.9 var(--f-display)}
+.well-read div:first-child b{color:var(--sun)}
+.well-read span{font-size:15px;color:var(--muted)}
+.field{--x:0}
+.ground{position:relative;margin-top:clamp(30px,5vw,64px);--h:clamp(430px,54vw,700px)}
+.ground svg.surface{width:100%;height:auto;overflow:visible}
+.bores{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));position:relative;height:var(--h);list-style:none;background:
+  linear-gradient(180deg,#3A2A15 0,#3A2A15 16%,transparent 16.1%),linear-gradient(180deg,transparent 0 38%,#2B2013 38.1%),
+  repeating-linear-gradient(-24deg,rgba(255,220,150,.035) 0 2px,transparent 2px 22px),#31240F}
+.bores::before,.bores::after{content:"";position:absolute;left:0;right:0;pointer-events:none}
+.bores::before{top:38%;height:1px;background:rgba(255,220,150,.16)}
+.bores::after{inset:60% 0 0;background:linear-gradient(180deg,transparent,var(--coal))}
+.bore{position:relative;z-index:1;width:100%;height:100%;display:block;text-align:center}
+.bore button{position:absolute;inset:0;width:100%}
+.bore .yr{position:absolute;top:14px;left:0;right:0;font:700 clamp(15px,1.5vw,22px)/1 var(--f-display);color:#D8C9A8;transition:color .25s}
+.bore .pipe{position:absolute;left:50%;top:46px;width:clamp(8px,1.5vw,22px);height:calc((var(--h) - 76px)*var(--v));translate:-50% 0;background:linear-gradient(90deg,#0b0805,#4d3a1c 22%,#0c0905 52%,#34270f 88%,#0b0805);transform-origin:50% 0;transition:filter .25s}
+.bore .pipe::after{content:"";position:absolute;left:50%;bottom:-1px;translate:-50% 60%;width:170%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 42% 36%,#FFE08A,var(--sun) 40%,#C98B00);box-shadow:0 0 44px rgba(255,190,30,.38)}
+.bore.on .pipe{filter:brightness(1.7)}
+.bore.on .yr{color:var(--sun)}
+.bore.on .pipe::after{background:radial-gradient(circle at 42% 36%,#FF8F8F,var(--red) 45%,#8E0E12);box-shadow:0 0 54px rgba(224,36,42,.6)}
+.bore button:focus-visible{outline-offset:-4px}
+@media (prefers-reduced-motion:no-preference){.js .bore .pipe{transform:scaleY(var(--p,0))}.js .bore .pipe::after{transform:scaleY(calc(1/max(var(--p,.0001),.0001)))}}
+.note{padding:22px 0 clamp(56px,7vw,110px);color:var(--muted);font-size:15px}
+/* виды работ и разрез */
+.works-g{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,90px);margin-top:clamp(28px,4vw,56px);align-items:start}
+.tabs{display:inline-flex;margin-top:30px;border:2px solid var(--ink)}
+.tabs button{min-height:54px;padding:0 clamp(18px,2.4vw,38px);font:800 clamp(22px,2vw,30px)/1 var(--f-display);text-transform:uppercase;transition:background-color .25s,color .25s}
+.tabs [aria-selected=true]{background:var(--ink);color:var(--sun)}
+.wl li{border-top:1px solid var(--line)}.wl li:last-child{border-bottom:1px solid var(--line)}
+.wl button{width:100%;min-height:58px;padding:14px 8px 14px 0;text-align:left;font-size:clamp(17px,1.35vw,20px);line-height:1.35;display:flex;gap:18px;align-items:center;transition:padding .35s var(--e-smooth),color .25s}
+.wl button::before{content:"";flex:none;width:14px;height:30px;background:var(--sun);transform:skewX(-24deg) scaleY(.25);transition:transform .35s var(--e-smooth),background-color .25s}
+.wl [aria-pressed=true],.wl button:hover{padding-left:14px}
+.wl [aria-pressed=true]::before{background:var(--red);transform:skewX(-24deg)}
+.wl[hidden]{display:none}
+.cut{position:sticky;top:calc(var(--hdr-h) + 20px);background:var(--coal);color:#F8F1E2;padding:clamp(14px,1.6vw,26px)}
+.cut svg{width:100%;height:auto;max-height:min(72vh,680px)}
+.cut .z{opacity:0;transition:opacity .45s}
+.cut .z.on{opacity:1}
+.cut .lb{font:700 23px var(--f-display);fill:#B5A88F;text-transform:uppercase;letter-spacing:.02em;transition:fill .3s}
+.cut .lb.on{fill:var(--sun)}
+/* награды */
+.aw{background:var(--sun);color:var(--ink);overflow:clip}
+.aw-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,5vw,90px);align-items:center}
+.aw ol{margin-top:34px}
+.aw li{display:flex;align-items:baseline;gap:22px;border-top:2px solid var(--ink);padding:8px 0 10px}
+.aw li b{font:800 clamp(50px,6.2vw,100px)/.86 var(--f-display)}
+.aw li span{font-weight:500}
+.aw li:last-child{color:var(--red)}
+.aw figure{clip-path:polygon(18% 0,100% 0,82% 100%,0 100%)}
+.aw figure img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:42% 50%}
+/* три адресата */
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:3px solid var(--ink);margin-top:clamp(30px,4vw,60px)}
+.who>div{padding:28px clamp(16px,2vw,36px) 36px 0;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.who>div+div{padding-left:clamp(16px,2vw,36px)}.who>div:last-child{border:0}
+.who h3{font-size:clamp(34px,3.2vw,52px)}
+.who p{color:var(--muted)}
+.who a{font-weight:600;min-height:44px;display:inline-flex;align-items:center}
+.shops{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:clamp(30px,4vw,56px)}
+.shops a{background:var(--sheet);padding:16px 18px;text-decoration:none;min-height:80px;transition:background-color .3s}
+.shops a:hover{background:var(--sun)}
+.shops b{display:block;font:800 24px/1.1 var(--f-display);text-transform:uppercase}
+.shops span{font-size:15px;color:var(--muted)}.shops a:hover span{color:var(--ink)}
+/* заявка */
+.req-g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,6vw,110px)}
+.req form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.req .full{grid-column:1/-1}
+.req .done{grid-column:1/-1;border:1px solid var(--line);padding:28px}
+.req .done h3{font-size:44px;color:var(--sun)}
+.req dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 20px;margin-top:18px}.req dt{color:var(--muted)}
+.ftr{border-top:1px solid var(--line);padding:30px 0 40px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:16px 60px;justify-content:space-between;font-size:15px;color:var(--muted)}
+.ftr a{color:var(--fg)}
+@media (max-width:900px){
+  :root{--hdr-h:68px}
+  .hdr img{height:40px}.hdr .tel{display:none}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:var(--sheet);flex-direction:column;justify-content:flex-start;gap:4px;padding:24px var(--gutter);font:800 40px/1 var(--f-display);text-transform:uppercase;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  [data-burger]{margin-left:auto}
+  .hero{min-height:0}
+  .hero-in{padding-top:min(82vw,400px)}
+  .sun{top:14px;translate:0 0;right:-14vw;width:min(96vw,470px)}
+  .sun::after{background:linear-gradient(0deg,var(--sun) 0,rgba(255,197,43,0) 38%)}
+  .hero .lead{margin-top:18px}
+  .cta .btn{flex:1 1 100%}
+  .facts .wrap{grid-template-columns:minmax(0,1fr)}
+  .facts div div,.facts div div:first-child{border:0;border-top:1px solid rgba(255,235,195,.18);padding:14px 0}
+  .facts div div:first-child{border:0}.facts b{min-width:3.2em}
+  .depth-head,.works-g,.aw-g,.who,.req-g{grid-template-columns:minmax(0,1fr)}
+  .well-read{justify-content:flex-start}
+  .bore .yr{font-size:15px;top:16px}
+  .works-g .cut{position:relative;top:0;order:-1}.cut svg{max-height:380px}
+  .tabs{display:flex}.tabs button{flex:1;padding:0 8px}
+  .shops{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .who>div,.who>div+div{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .req form{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="ЭКОТОН, на главную"><img src="img/logo.png" alt="ЭКОТОН — движение вперёд" width="464" height="128"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#depth">Результаты</a><a href="#works">Услуги</a><a href="#career">Карьера</a><a href="#sale">Реализация имущества</a><a href="#contacts">Контакты</a></nav>
+  <a class="tel num" href="tel:+73463462544">8 (3463) 46-25-44</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="sun" aria-hidden="true"><img src="img/rig.webp" alt="" width="1920" height="774" fetchpriority="high"><i style="--n:0;bottom:37%;height:6px"></i><i style="--n:1;bottom:30%;height:9px"></i><i style="--n:2;bottom:22.5%;height:13px"></i><i style="--n:3;bottom:14.5%;height:18px"></i><i style="--n:4;bottom:6%;height:24px"></i></div>
+    <h1><span style="--n:0">Текущий и&nbsp;</span><span style="--n:1">капитальный </span><span style="--n:2"><em>ремонт&nbsp;скважин</em></span></h1>
+    <p class="lead">Лучшее сервисное предприятие ТКРС по&nbsp;итогам 2025&nbsp;года. Так решил заказчик, ООО&nbsp;«РН‑Юганскнефтегаз».</p>
+    <div class="cta"><a class="btn" data-magnetic href="#req">Обсудить ремонт скважин</a><a class="btn btn--ghost" href="#career">Работа в бригаде</a></div>
+  </div>
+  <div class="facts"><div class="wrap">
+    <div><b class="num">270</b><span>бригад ТКРС<br>в работе</span></div>
+    <div><b class="num">5 700</b><span>и более человек<br>в&nbsp;компании</span></div>
+    <div><b class="num">140 830</b><span>скважин<br>отремонтировано</span></div>
+  </div></div>
+</section>
+
+<section class="depth" id="depth" data-theme="night">
+  <div class="wrap">
+    <div class="depth-head">
+      <h2 data-split>Наш график растёт вглубь</h2>
+      <div class="well-read" aria-live="polite"><div><b class="num" id="rd-w">16 414</b><span>скважин за <span id="rd-y">2025</span> год</span></div><div><b class="num" id="rd-b">242</b><span>ремонтных бригады</span></div></div>
+    </div>
+  </div>
+  <div class="ground"><ol class="bores" id="bores" aria-label="Отремонтированные скважины и число ремонтных бригад по годам"></ol></div>
+  <div class="wrap"><p class="note">Глубина ствола показывает число скважин, отремонтированных за год. Выберите год, чтобы увидеть цифры. Данные с&nbsp;действующего сайта компании.</p></div>
+</section>
+
+<section class="sec" id="works"><div class="wrap">
+  <h2 data-split>Весь комплекс работ ТКРС</h2>
+  <div class="tabs" role="tablist" aria-label="Вид ремонта"><button role="tab" aria-selected="true" aria-controls="wl-t" data-tab="t">Текущий</button><button role="tab" aria-selected="false" aria-controls="wl-k" data-tab="k">Капитальный</button></div>
+  <div class="works-g">
+    <div>
+      <ul class="wl" id="wl-t" role="tabpanel"></ul>
+      <ul class="wl" id="wl-k" role="tabpanel" hidden></ul>
+    </div>
+    <div class="cut" data-reveal>
+      <svg viewBox="0 0 460 640" role="img" aria-label="Разрез скважины: подсвечена зона выбранной работы">
+        <defs><linearGradient id="st" x1="0" x2="1"><stop offset="0" stop-color="#6b5430"/><stop offset=".5" stop-color="#2a1f10"/><stop offset="1" stop-color="#6b5430"/></linearGradient>
+        <pattern id="hp" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(-24)"><path d="M0 8h16" stroke="rgba(255,220,150,.10)" stroke-width="2"/></pattern>
+        <radialGradient id="gl"><stop offset="0" stop-color="#FFC52B" stop-opacity=".95"/><stop offset="1" stop-color="#FFC52B" stop-opacity="0"/></radialGradient></defs>
+        <rect y="112" width="460" height="528" fill="#31240F"/><rect y="112" width="460" height="528" fill="url(#hp)"/>
+        <rect y="500" width="460" height="86" fill="#4a3512"/><path d="M0 500h460M0 586h460" stroke="rgba(255,220,150,.28)"/>
+        <g stroke="#FFC52B" stroke-width="3" fill="none"><path d="M124 112 156 14h8l32 98M133 84h54M140 62h40M147 40h26M133 84l47-22M187 84l-47-22M140 62l33-22M180 62l-33-22"/></g>
+        <path d="M0 112h460" stroke="#FFC52B" stroke-width="3"/>
+        <rect x="128" y="112" width="64" height="120" fill="none" stroke="#8f7446" stroke-width="5"/>
+        <rect x="140" y="112" width="40" height="462" fill="#0c0805" stroke="#8f7446" stroke-width="4"/>
+        <rect x="154" y="112" width="12" height="350" fill="url(#st)"/>
+        <rect x="150" y="408" width="20" height="62" fill="#B33"/>
+        <g stroke="#FFC52B" stroke-width="4"><path d="M120 520h20M120 540h20M120 560h20M180 520h20M180 540h20M180 560h20"/></g>
+        <g class="z" data-z="top"><ellipse cx="160" cy="112" rx="130" ry="60" fill="url(#gl)" opacity=".75"/></g>
+        <g class="z" data-z="pump"><ellipse cx="160" cy="440" rx="92" ry="66" fill="url(#gl)"/></g>
+        <g class="z" data-z="col"><rect x="136" y="232" width="48" height="180" fill="#FFC52B" opacity=".75"/></g>
+        <g class="z" data-z="bot"><ellipse cx="160" cy="572" rx="84" ry="40" fill="url(#gl)"/></g>
+        <g class="z" data-z="lay"><rect y="500" width="460" height="86" fill="#FFC52B" opacity=".5"/></g>
+        <g><text class="lb" data-z="top" x="232" y="152">Устье</text><text class="lb" data-z="col" x="232" y="328">Ствол и колонна</text><text class="lb" data-z="pump" x="232" y="446">Насосное оборудование</text><text class="lb" data-z="lay" x="232" y="550">Пласт</text><text class="lb" data-z="bot" x="232" y="616">Забой</text></g>
+        <g stroke="#8f7446"><path d="M196 144h26M190 320h32M176 438h46M190 608h32"/></g>
+      </svg>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec aw"><div class="wrap aw-g">
+  <div><h2 data-split>Лучшее сервисное предприятие по ремонту скважин</h2>
+    <ol><li data-reveal><b class="num">2020</b></li><li data-reveal><b class="num">2021</b></li><li data-reveal><b class="num">2022</b></li><li data-reveal><b class="num">2024</b></li><li data-reveal><b class="num">2025</b><span>снова признаны лучшими</span></li></ol></div>
+  <figure data-img><img src="img/crew.webp" alt="Бригада ЭКОТОНа работает с трубой на устье скважины" loading="lazy" width="1920" height="774"></figure>
+</div></section>
+
+<section class="sec" id="contacts"><div class="wrap">
+  <h2 data-split>Сразу к нужному человеку</h2>
+  <div class="who">
+    <div><h3>Заказчику</h3><p>Ремонт скважин, освоение, ликвидация и&nbsp;консервация.</p><a class="link" href="tel:+73463462544">Приёмная 8 (3463) 46-25-44</a><a class="link" href="mailto:ekoton@ekoton.ooo">ekoton@ekoton.ooo</a></div>
+    <div id="career"><h3>Соискателю</h3><p>Вакансии, молодые специалисты, анкета кандидата.</p><a class="link" href="tel:+73463452778">8 (3463) 45-27-78</a><a class="link" href="tel:+73463452747">8 (3463) 45-27-47</a><a class="link" href="mailto:orp@ekoton.ooo">orp@ekoton.ooo</a></div>
+    <div id="sale"><h3>Покупателю имущества</h3><p>Вагон‑дома жилые, инструменталки, культбудки и&nbsp;автозапчасти.</p><a class="link" href="mailto:ekoton@ekoton.ooo">Запросить список</a></div>
+  </div>
+  <div class="shops" id="shops"></div>
+</div></section>
+
+<section class="sec req" id="req" data-theme="night"><div class="wrap req-g">
+  <div><h2 data-split>Обсудить ремонт скважин</h2><p class="lead" style="margin-top:22px">Укажите вид работ и&nbsp;месторождение. Запрос сразу придёт на&nbsp;ekoton@ekoton.ooo.</p></div>
+  <form data-demo-form>
+    <label class="field full"><span>Вид работ</span><select name="Вид работ" id="f-work"></select></label>
+    <label class="field"><span>Месторождение, куст</span><input name="Объект" autocomplete="off"></label>
+    <label class="field"><span>Когда нужна бригада</span><input name="Срок" autocomplete="off"></label>
+    <label class="field"><span>Компания и имя</span><input name="Контакт" required autocomplete="organization"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить запрос</button>
+    <div class="done" role="status"><h3>Так запрос придёт в ЭКОТОН</h3><dl></dl><p style="margin-top:16px;color:var(--muted)">Это макет: письмо никуда не ушло.</p></div>
+  </form>
+</div></section>
+</main>
+<footer class="ftr" data-theme="night"><div class="wrap"><span>ООО «ЭКОТОН», 628384, ХМАО – Югра, г.&nbsp;Пыть‑Ях, промзона «Центральная», ул.&nbsp;Тепловский тракт, стр.&nbsp;5/1</span><span><a class="link" href="tel:+73463462544">8 (3463) 46-25-44</a> · <a class="link" href="mailto:ekoton@ekoton.ooo">ekoton@ekoton.ooo</a></span></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73463462544">Позвонить</a><a class="btn" href="#req">Запрос</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},fmt=function(n){return n.toLocaleString('ru-RU')};
+  // год, скважины, бригады: график на главной ekoton.ooo
+  var D=[[2012,4125,66],[2013,4142,74],[2014,4511,82],[2015,4747,83],[2016,5299,110],[2017,8160,128],[2018,9190,142],[2019,10659,161],[2020,9236,133],[2021,10187,175],[2022,13085,207],[2023,13481,233],[2024,15893,231],[2025,16414,242]];
+  var ol=$('#bores'),max=16414,items=[];
+  D.forEach(function(d,i){
+    var li=document.createElement('li');li.className='bore';li.style.setProperty('--v',d[1]/max);
+    li.innerHTML='<span class="yr" aria-hidden="true">'+(innerWidth<700?"’"+String(d[0]).slice(2):d[0])+'</span><span class="pipe"></span><button type="button" aria-label="'+d[0]+' год: '+fmt(d[1])+' скважин, '+d[2]+' бригад"></button>';
+    var pick=function(){items.forEach(function(x){x.classList.remove('on')});li.classList.add('on');$('#rd-w').textContent=fmt(d[1]);$('#rd-y').textContent=d[0];$('#rd-b').textContent=d[2]};
+    li.lastChild.addEventListener('pointerenter',pick);li.lastChild.addEventListener('focus',pick);li.lastChild.addEventListener('click',pick);
+    ol.appendChild(li);items.push(li);
+  });
+  items[13].classList.add('on');
+  // бурение по прокрутке: каждый ствол со своей задержкой
+  if(!KIT.REDUCED){
+    var on=false,tick=false,upd=function(){tick=false;var r=ol.getBoundingClientRect(),p=(innerHeight*.92-r.top)/(innerHeight*.95);items.forEach(function(li,i){var k=Math.min(1,Math.max(0,p*1.6-i*.045));li.style.setProperty('--p',(1-Math.pow(1-k,3)).toFixed(4))})};
+    KIT.onView(ol,function(v){on=v;if(v)upd()},{rootMargin:'20% 0px'});
+    addEventListener('scroll',function(){if(on&&!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});upd();
+  }
+  // виды работ с сайта; вторая колонка: зона на разрезе
+  var T=[['Оснащение скважин скважинным оборудованием при вводе в эксплуатацию','pump'],['Оптимизация режима эксплуатации','pump'],['Перевод скважин на другой способ эксплуатации','pump'],['Ремонт скважин, оборудованных УЭЦН, ШГН','pump'],['Ремонт водозаборных скважин','col'],['Очистка, промывка забоя и ствола скважины','bot']];
+  var K=[['Ловильные работы по извлечению аварийного оборудования в скважине','col'],['Переходы на другие горизонты, приобщение пластов','lay'],['Устранение негерметичности эксплуатационной колонны тампонированием','col'],['Изоляция источника обводнения','lay'],['Перевод скважин в ППД','lay'],['Комплексные обработки скважин (СКО, ГКО)','lay'],['Углубление забоя бурением, гидростатическая желонка','bot'],['Подготовка и освоение после ГРП','lay'],['Освоение скважин после бурения','lay'],['Освоение скважин после ЗБС','lay'],['Консервация, расконсервация','top'],['Ликвидация скважин','col'],['Ликвидация гидратно‑парафиновых пробок','col']];
+  function zone(z){document.querySelectorAll('.cut [data-z]').forEach(function(e){e.classList.toggle('on',e.dataset.z===z)})}
+  function list(id,a){a.forEach(function(w,i){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=w[0];b.setAttribute('aria-pressed',i===0);
+    var go=function(){document.querySelectorAll('#'+id+' button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});zone(w[1])};
+    b.addEventListener('click',function(){go();$('#f-work').value=w[0]});b.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')go()});b.addEventListener('focus',go);li.appendChild(b);$('#'+id).appendChild(li);
+    var o=document.createElement('option');o.textContent=w[0];$('#f-work').appendChild(o)})}
+  list('wl-t',T);list('wl-k',K);zone(T[0][1]);
+  document.querySelectorAll('[data-tab]').forEach(function(t){t.addEventListener('click',function(){document.querySelectorAll('[data-tab]').forEach(function(x){x.setAttribute('aria-selected',x===t)});$('#wl-t').hidden=t.dataset.tab!=='t';$('#wl-k').hidden=t.dataset.tab!=='k';var f=$('#wl-'+t.dataset.tab+' button');zone((t.dataset.tab==='t'?T:K)[0][1]);document.querySelectorAll('#wl-'+t.dataset.tab+' button').forEach(function(x){x.setAttribute('aria-pressed',x===f)})})});
+  [['ЦКРС‑1','8-912-080-70-66'],['ЦКРС‑2','8-912-415-57-25'],['ЦКРС‑3','8-917-427-51-55'],['ЦКРС‑4','8-982-219-51-00'],['ЦКРС‑5','8-912-086-15-67'],['ЦКРС‑6','8-982-591-61-54'],['ЦКРС‑7','8-912-411-04-20'],['ЦКРС‑8','8-912-511-51-02'],['Транспортный цех','8-912-412-53-35'],['База производственного обслуживания','8-912-411-34-11']].forEach(function(s){var a=document.createElement('a');a.href='tel:'+s[1].replace(/-/g,'');a.innerHTML='<b></b><span class="num"></span>';a.firstChild.textContent=s[0];a.lastChild.textContent=s[1];$('#shops').appendChild(a)});
+});
+</script>
+</body>
+</html>

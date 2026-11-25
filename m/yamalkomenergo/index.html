@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ямалкоммунэнерго — тепло, электроэнергия и вода для Ямала</title>
+<meta name="description" content="Концепция редизайна сайта АО «Ямалкоммунэнерго»: крупнейшее ресурсоснабжающее предприятие ЯНАО, филиалы, подключение к сетям, тарифы.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header>
+  <a class="plate" href="#main" aria-label="Ямалкоммунэнерго, на главную"><img src="img/logo.png" alt="Ямалкоммунэнерго, акционерное общество" width="700" height="176"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#flow">О компании</a><a href="#map">Филиалы</a><a href="#use">Потребителям</a><a href="#connect">Подключение</a><a href="#people">Люди</a><a href="#contacts">Контакты</a></nav>
+  <button class="lv-btn" type="button" aria-pressed="false" aria-label="Версия для слабовидящих"><svg viewBox="0 0 32 20" width="30" height="19" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10S7 2 16 2s14 8 14 8-5 8-14 8S2 10 2 10Z"/><circle cx="16" cy="10" r="4"/></svg></button>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</header>
+
+<main id="main">
+<section class="hero" data-theme="night">
+  <canvas id="sun" aria-hidden="true"></canvas>
+  <svg class="town" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="#EAF4FF" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path class="d" d="M60 452h480"/><path class="d" d="M150 452V330h84v122M234 452V372h62v80M162 350h18M162 376h18M162 402h18M204 350h18M204 376h18M204 402h18M250 392h14M250 418h14M276 392h14M276 418h14"/>
+    <path class="d" d="M326 452l6-232h26l8 232M331 262h29M329 300h33"/><path class="d" d="M376 452l5-190h22l7 190"/>
+    <path class="d" d="M440 452l22-236 22 236M448 372h30M452 328h22M456 284h14M424 252h76M432 252l30-36 30 36M448 372l27-44M475 372l-25-44"/>
+    <path class="d" d="M424 252C360 300 300 296 250 262M500 252c28 22 52 28 78 26"/></g></svg>
+  <div class="wrap hero-in">
+    <h1><span>Тепло там,</span> <span>где мы!</span></h1>
+    <p class="lead">Ямалкоммунэнерго&nbsp;— крупнейшее в&nbsp;Ямало‑Ненецком автономном округе ресурсоснабжающее предприятие.</p>
+    <div class="cta"><a class="btn" data-magnetic href="#connect">Подключиться к&nbsp;сетям</a><a class="btn btn--ghost" href="#appeal">Написать обращение</a></div>
+  </div>
+  <p class="hint" aria-hidden="true">Проведите по&nbsp;инею</p>
+</section>
+
+<section class="flow" id="flow" data-theme="night" aria-label="Путь тепла в цифрах">
+  <div class="stage">
+    <div class="pano" aria-hidden="true"></div>
+    <div class="wrap read"><h2 class="sr">Путь тепла в цифрах</h2>
+      <ol class="steps">
+        <li><b class="num">122</b><span>котельные в&nbsp;городах, районных центрах и&nbsp;посёлках</span></li>
+        <li><b class="num">982,34&nbsp;км</b><span>магистральных и&nbsp;распределительных тепловых сетей в&nbsp;двухтрубном исполнении</span></li>
+        <li><b class="num">25</b><span>тепловых пунктов</span></li>
+        <li><b class="num">44</b><span>электростанции и&nbsp;487,4&nbsp;км линий электропередачи</span></li>
+        <li><b class="num">209,5&nbsp;тыс.</b><span>лицевых счетов по&nbsp;всем видам коммунальных услуг для жителей Ямала</span></li>
+      </ol>
+    </div>
+    <div class="rail" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<section class="sec map" id="map" data-theme="night"><div class="wrap map-g">
+  <div class="map-l"><h2 data-split>Десять филиалов, один тепловой контур</h2>
+    <p class="lead">Обслуживаемая территория: 552&nbsp;100&nbsp;км². На ней 5&nbsp;крупных по&nbsp;северным меркам городов, 4&nbsp;районных центра и&nbsp;48&nbsp;поселений.</p>
+    <div class="brs" id="brs" role="group" aria-label="Филиалы"></div></div>
+  <div class="map-r"><canvas id="ymap" role="img" aria-label="Карта Ямало-Ненецкого округа: филиалы светятся как источники тепла"></canvas>
+    <div class="card" aria-live="polite"><h3 id="b-n"></h3><p id="b-a"></p><dl><dt>Приёмная</dt><dd id="b-t"></dd><dt>Диспетчерская</dt><dd id="b-d"></dd><dt>Почта</dt><dd id="b-e"></dd></dl></div></div>
+</div></section>
+
+<section class="sec use" id="use"><div class="wrap">
+  <div class="use-h"><h2 data-split>Потребителям</h2><p class="lead">Мы работаем с&nbsp;населением, предприятиями и&nbsp;организациями городов и&nbsp;районов Ямала. С&nbsp;юридическими лицами заключено более 7,6&nbsp;тысячи договоров.</p></div>
+  <ul class="rows">
+    <li><a href="#appeal" data-topic="Цены и тарифы"><b>Цены и&nbsp;тарифы</b><span>Утверждены Департаментом тарифной политики, энергетики и&nbsp;ЖКК ЯНАО, действуют с&nbsp;1&nbsp;января 2026&nbsp;года</span></a></li>
+    <li><a href="#appeal" data-topic="Нормы потребления"><b>Нормы потребления</b><span>Нормативы коммунальных ресурсов</span></a></li>
+    <li><a href="#appeal" data-topic="Приборы учёта"><b>Приборы учёта</b><span>Порядок установки</span></a></li>
+    <li><a href="#appeal" data-topic="Типовые формы документов"><b>Документы</b><span>Типовые формы и&nbsp;паспорта услуг</span></a></li>
+    <li><a href="#appeal" data-topic="Вопрос по услугам"><b>Вопросы и&nbsp;ответы</b><span>Теплоснабжение, водоснабжение, газ, электроэнергия</span></a></li>
+  </ul>
+</div></section>
+
+<section class="sec con" id="connect"><div class="wrap">
+  <h2 data-split>Подключение к&nbsp;сетям</h2>
+  <form class="con-f" data-demo-form>
+    <fieldset class="res"><legend>Что подключаем</legend>
+      <label><input type="radio" name="Ресурс" value="Тепловая энергия" checked><span style="--c:#F58A1F">Тепловая энергия</span></label>
+      <label><input type="radio" name="Ресурс" value="Холодная вода"><span style="--c:#4FA8F0">Холодная вода</span></label>
+      <label><input type="radio" name="Ресурс" value="Горячая вода"><span style="--c:#E85A2A">Горячая вода</span></label>
+      <label><input type="radio" name="Ресурс" value="Водоотведение"><span style="--c:#3E7F8F">Водоотведение</span></label>
+      <label><input type="radio" name="Ресурс" value="Электрическая энергия"><span style="--c:#F4C430">Электрическая энергия</span></label>
+    </fieldset>
+    <div class="con-b">
+      <label class="field"><span>Где находится объект</span><select name="Муниципальное образование" id="c-b"></select></label>
+      <label class="field"><span>Заявитель</span><input name="Заявитель" required autocomplete="name"></label>
+      <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+      <p class="to">Заявка уйдёт в&nbsp;<b id="c-to"></b></p>
+      <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+      <button class="btn" data-magnetic>Подать заявку</button>
+    </div>
+    <div class="done" role="status"><h3>Заявка готова к&nbsp;отправке</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+  </form>
+</div></section>
+
+<section class="hist" data-theme="night"><div class="wrap"><h2 data-split>С&nbsp;2011&nbsp;года собираем энергетику Ямала в&nbsp;одно целое</h2></div>
+  <ol class="tl" tabindex="0" aria-label="История компании, прокручивается по горизонтали">
+    <li><time>27 июня 2011</time><p>Учреждено ОАО «Ямалкоммунэнерго». 11&nbsp;июля общество зарегистрировано.</p></li>
+    <li><time>2011</time><p>Первые филиалы: Надымский, Тазовский и&nbsp;Пуровский районы, города Муравленко и&nbsp;Губкинский.</p></li>
+    <li><time>25 апреля 2012</time><p>Филиал в&nbsp;Шурышкарском районе.</p></li>
+    <li><time>25 апреля 2014</time><p>Филиал в&nbsp;Приуральском районе.</p></li>
+    <li><time>11 декабря 2014</time><p>Филиал в&nbsp;Ямальском районе объединил работников шести муниципальных организаций. Общество переименовано в&nbsp;АО.</p></li>
+    <li><time>13 апреля 2015</time><p>Дочерним предприятием стало ООО&nbsp;ЭК «Тепло‑Водо‑Электро‑Сервис».</p></li>
+    <li><time>2018</time><p>Объекты теплогенерации в&nbsp;Тарко‑Сале: 12&nbsp;МВт.</p></li>
+  </ol>
+</section>
+
+<section class="sec ppl" id="people"><div class="wrap ppl-g">
+  <figure data-img><img src="img/engineer.webp" alt="Специалист Ямалкоммунэнерго у горелки котла" width="1360" height="1088" loading="lazy"></figure>
+  <div><h2 data-split>Свыше 5000&nbsp;человек держат тепло</h2>
+    <p class="lead">Средний возраст персонала&nbsp;— 43&nbsp;года.</p>
+    <ul class="nw">
+      <li><time>30.06.2026</time><a class="link" href="#people">Оксана Шестакова: «Работаю в&nbsp;сердце города»</a></li>
+      <li><time>29.06.2026</time><a class="link" href="#people">Энергетики из&nbsp;Муравленко поучаствовали в&nbsp;гастрономическом «Пикнике»</a></li>
+      <li><time>26.06.2026</time><a class="link" href="#people">В&nbsp;Лабытнанги проходит IV&nbsp;региональный форум руководителей АО «Ямалкоммунэнерго»</a></li>
+      <li><time>26.06.2026</time><a class="link" href="#people">Специалисты Надымского филиала поучаствовали в&nbsp;ярмарке вакансий</a></li>
+    </ul></div>
+</div></section>
+
+<section class="sec app" id="appeal" data-theme="night"><canvas id="ember" aria-hidden="true"></canvas><div class="wrap app-g">
+  <div id="contacts"><h2 data-split>Ответим по&nbsp;существу</h2>
+    <div class="tels"><a href="tel:+73492251098"><span>Телефон доверия</span><b class="num">8&nbsp;(34922) 5‑10‑98</b></a><a href="tel:+73492239963"><span>Приёмная</span><b class="num">8&nbsp;(34922) 3‑99‑63</b></a></div>
+    <p class="lead">629004, г.&nbsp;Салехард, ул.&nbsp;Республики, д.&nbsp;67, офис&nbsp;600<br><a class="link" href="mailto:office@id.yamalkomenergo.ru">office@id.yamalkomenergo.ru</a></p>
+    <p class="soc"><a class="link" href="https://vk.com/ao_yke" rel="noreferrer">ВКонтакте</a> <a class="link" href="https://max.ru/id8901025421_biz" rel="noreferrer">MAX</a> <a class="link" href="https://ok.ru/yamalkomenergo" rel="noreferrer">Одноклассники</a></p></div>
+  <form data-demo-form>
+    <label class="field"><span>Тема</span><select name="Тема" id="a-t"><option>Обращение</option><option>Цены и тарифы</option><option>Нормы потребления</option><option>Приборы учёта</option><option>Типовые формы документов</option><option>Вопрос по услугам</option></select></label>
+    <label class="field"><span>Муниципальное образование</span><select name="Муниципальное образование" id="a-b"></select></label>
+    <label class="field full"><span>Что случилось</span><textarea name="Сообщение" required></textarea></label>
+    <label class="field"><span>Имя</span><input name="Имя" required autocomplete="name"></label>
+    <label class="field"><span>Телефон или почта</span><input name="Контакт" required></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить обращение</button>
+    <div class="done" role="status"><h3>Обращение принято</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+  </form>
+</div></section>
+</main>
+<footer class="ftr" data-theme="night"><div class="wrap"><span>АО «Ямалкоммунэнерго»</span><nav aria-label="Служебное меню"><a class="link" href="#use">Раскрытие информации</a><a class="link" href="#use">Закупочная деятельность</a><a class="link" href="#people">Вакансии</a><a class="link" href="#contacts">Политика обработки персональных данных</a></nav></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73492251098">Позвонить</a><a class="btn" href="#connect">Подключиться</a></div>
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script src="geo.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

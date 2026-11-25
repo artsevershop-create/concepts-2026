@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ЯмалСпецЦентр — ремонт и производство бурового оборудования, Ноябрьск и Новый Уренгой</title>
+<meta name="description" content="Концепция редизайна сайта ООО «ЯмалСпецЦентр»: ремонт бурового и нефтепромыслового оборудования, производство, вышкостроение, неразрушающий контроль.">
+<link rel="icon" href="img/logo.svg">
+<link rel="preload" href="../../kit/fonts/finlandica-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/ph/10.webp" as="image">
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+/* у Finlandica перечёркнутый ноль: цифры берём из Commissioner */
+@font-face{font-family:"Digits";src:url(../../kit/fonts/commissioner-latin.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+30-39}
+:root{--steel:#E4EBF0;--steel-2:#CBD6DF;--ink:#0D1B28;--blue:#0070BA;--sky:#0097D8;--night:#0A1B2B;--night-2:#12293D;
+  --bg:var(--steel);--fg:var(--ink);--muted:#465868;--accent:var(--blue);--accent-h:#004F86;--r:0px;--line:rgba(13,45,72,.18);
+  --f-display:"Digits","Finlandica",system-ui,sans-serif;--f-text:"Commissioner",system-ui,sans-serif;--hdr-h:80px;--wrap:1340px;--sec:clamp(72px,9vw,140px);
+  --hex:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+[data-theme=night]{--bg:var(--night);--fg:#EAF2F8;--muted:#A3B6C6;--line:rgba(190,220,245,.18);--accent:#1E9BE0;background:var(--night);color:var(--fg)}
+body{font-size:17px}
+img{height:auto}
+h1,h2,h3{font-weight:700;letter-spacing:-.022em;line-height:1}
+h2{font-size:clamp(36px,4.8vw,74px);max-width:13em}
+.lead{font-size:clamp(18px,1.45vw,21px);line-height:1.5}
+/* кнопка со срезом под 60°, как грань гайки */
+.btn{clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%);padding-inline:2.1em}
+.btn--ghost{box-shadow:none;background:var(--steel-2)}
+[data-theme=night] .btn{background:var(--blue)}
+/* шапка */
+.hdr{background:#fff;border-bottom:1px solid var(--line)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.4vw,40px)}
+.hdr .logo{display:flex;align-items:center;min-height:48px}
+.hdr .logo img{width:262px}
+.hdr nav{display:flex;gap:clamp(16px,2vw,34px);margin-left:auto;font-weight:500}
+.hdr nav a{text-decoration:none;padding:12px 0;position:relative}
+.hdr nav a::before{content:"";position:absolute;left:50%;bottom:4px;width:8px;height:9px;background:var(--blue);clip-path:var(--hex);transform:translateX(-50%) rotate(-60deg) scale(0);transition:transform .45s var(--e-smooth)}
+.hdr nav a:hover::before{transform:translateX(-50%)}
+.hdr .tel{font-weight:600;text-decoration:none;padding:12px 0;white-space:nowrap}
+/* первый экран */
+.hero{position:relative;padding-top:var(--hdr-h);min-height:min(100svh,920px);display:grid;grid-template-rows:1fr auto;overflow:clip;isolation:isolate;
+  background:linear-gradient(118deg,#F7FAFC 0 34%,#E4EBF0 34% 62%,#D3DEE7 62%)}
+.hero-in{width:100%;display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);align-items:center;position:relative}
+.hero-in>div:first-child{padding-block:34px}
+h1{font-size:clamp(40px,4.75vw,69px);max-width:10.6em}
+.hero .lead{margin-top:24px;max-width:29em;color:#24384A}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.nut{position:absolute;z-index:-1;left:calc(50% - 20px);top:50%;width:min(62vw,900px);aspect-ratio:1;translate:0 -50%}
+.nut svg{width:100%;height:100%;overflow:visible}
+.facts{background:var(--blue);color:#fff;position:relative}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.facts div div{padding:20px 18px 22px 0}
+.facts b{display:block;font:700 clamp(30px,3.1vw,48px)/1 var(--f-display);letter-spacing:-.02em}
+.facts span{font-size:16px;line-height:1.3;display:block;margin-top:4px}
+/* соты */
+@media (min-width:1600px){.nut{left:calc(50% + 10px)}}
+.hive{padding-block:var(--sec);overflow:clip}
+.hive-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 50px;align-items:end}
+.base{display:flex;gap:6px}
+.base button{min-height:58px;padding:8px 30px;font:700 19px/1.15 var(--f-display);background:var(--night-2);color:#C6D6E3;clip-path:polygon(16px 0,100% 0,calc(100% - 16px) 100%,0 100%);transition:background-color .3s,color .3s}
+.base [aria-pressed=true]{background:#fff;color:var(--blue)}
+.base button:focus-visible{outline:0;background:var(--sky);color:#fff}
+.left{position:sticky;top:calc(var(--hdr-h) + 16px)}.find{margin-top:30px;max-width:640px}
+.find input{width:100%;min-height:56px;padding:12px 18px;font-size:18px;color:#fff;background:var(--night-2);border:0;border-bottom:3px solid var(--sky);border-radius:0}
+.find input::placeholder{color:#8FA6B8}
+.find label{display:block;margin-bottom:8px;color:var(--muted)}
+.hits{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.hits button{min-height:44px;padding:8px 16px;background:rgba(0,151,216,.18);color:#DDF1FD;text-align:left;font-size:16px;line-height:1.25;transition:background-color .25s}
+.hits button:hover{background:var(--blue)}
+.hive-g{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);margin-top:clamp(28px,3.6vw,54px);align-items:start}
+.comb{position:relative}
+.comb button{position:absolute;pointer-events:none;display:grid;place-items:center;text-align:center;color:var(--ink);font:700 clamp(15px,1.28vw,18.5px)/1.1 var(--f-display);transition:color .4s}
+.comb i{position:absolute;inset:0;pointer-events:auto;clip-path:var(--hex);background:linear-gradient(150deg,#FBFDFE,#C3D0DB 62%,#A6B7C5);transition:transform 1s var(--e-strike),opacity .5s}
+.comb i::after{content:"";position:absolute;inset:0;background:linear-gradient(150deg,#19A7EA,#0070BA 60%,#005491);opacity:0;transition:opacity .45s}
+.comb span{position:relative;padding:0 12%;pointer-events:none;hyphens:manual}
+.comb [aria-pressed=true]{color:#fff}.comb [aria-pressed=true] i::after,.comb button:not([disabled]):hover i::after{opacity:1}
+.comb button:not([disabled]):hover{color:#fff}
+.comb button:focus-visible{outline:0;color:#fff}.comb button:focus-visible i::after{opacity:1;background:#fff}.comb button:focus-visible{color:var(--blue)}
+.comb [disabled]{color:#6F8799;cursor:default}.comb [disabled] i{background:var(--night-2)}
+.comb .hit:not([aria-pressed=true]):not(:hover){color:var(--ink)}.comb .hit i{background:linear-gradient(150deg,#E0F4FF,#7CC9F2)}
+.wrench{position:absolute;left:0;top:0;pointer-events:none;opacity:0;overflow:visible;z-index:3}
+.panel{background:#fff;color:var(--ink);padding:clamp(22px,2.4vw,40px);position:relative;min-height:540px;--muted:#465868;--line:rgba(13,45,72,.18)}
+.panel .pic{float:right;width:min(44%,230px);margin:-70px -10px 10px 16px;aspect-ratio:.866;clip-path:var(--hex);background:var(--steel-2);shape-outside:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.panel .pic img{width:100%;height:100%;object-fit:cover}
+.panel .pic[hidden]{display:none}
+.panel h3{font-size:clamp(26px,2.3vw,36px);color:var(--blue);hyphens:manual}
+.panel .where{font-weight:600;margin-bottom:10px;display:block}
+.panel .note{margin-top:14px}
+.panel ul{margin-top:18px;clear:none}
+.panel li{padding:8px 0 8px 22px;position:relative;line-height:1.4;border-bottom:1px solid var(--line)}
+.panel li::before{content:"";position:absolute;left:0;top:14px;width:10px;height:11.5px;background:var(--sky);clip-path:var(--hex)}
+.panel summary{min-height:48px;display:flex;align-items:center;cursor:pointer;font-weight:600;color:var(--blue)}
+.panel details ul{margin-top:0}
+.who{clear:both;margin-top:22px;padding-top:18px;border-top:3px solid var(--blue);display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:space-between}
+.who p{line-height:1.35;max-width:21em}.who p b{display:block}
+.who a.num{display:inline-flex;align-items:center;min-height:44px;font:700 22px/1 var(--f-display);color:var(--blue)}
+/* письма */
+.let-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,5vw,90px);align-items:center}
+.pile{position:relative;width:min(100%,500px);aspect-ratio:761/1076;margin-inline:auto}
+.pile img{position:absolute;inset:0;width:100%;height:100%;background:#fff;box-shadow:0 1px 0 rgba(13,45,72,.2),0 14px 34px -14px rgba(13,45,72,.4);transition:transform .9s var(--e-smooth),opacity .5s;transform:rotate(var(--a)) translate(var(--dx),var(--dy))}
+.pile img.away{transform:translateX(-118%) rotate(-14deg);opacity:0}
+.orgs{margin-top:28px;border-top:3px solid var(--ink)}
+.orgs button{display:flex;justify-content:space-between;gap:16px;width:100%;min-height:48px;padding:9px 0;border-bottom:1px solid var(--line);text-align:left;font:600 clamp(17px,1.4vw,20px)/1.2 var(--f-display);transition:color .25s,padding .4s var(--e-smooth)}
+.orgs button:hover,.orgs [aria-pressed=true]{color:var(--blue);padding-left:16px}
+.orgs [aria-pressed=true]{background:linear-gradient(var(--blue),var(--blue)) 0 50%/8px 9px no-repeat}
+.orgs span{font:400 16px/1.2 var(--f-text);color:var(--muted)}
+/* своё производство */
+.own{background:#fff}
+.own-g{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(28px,5vw,90px);align-items:center;margin-top:clamp(28px,4vw,60px)}
+.own svg{width:100%;height:auto;max-height:620px}
+.own .nums{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 24px;margin-top:26px}
+.own .nums b{display:block;font:700 clamp(34px,3.9vw,60px)/1 var(--f-display);letter-spacing:-.03em;color:var(--blue)}
+.own .nums span{color:var(--muted);display:block;margin-top:6px;line-height:1.35}
+.own h3{font-size:clamp(28px,2.7vw,42px)}
+.cnsn{margin-top:clamp(36px,5vw,70px);display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:20px clamp(28px,5vw,90px);border-top:3px solid var(--ink);padding-top:24px}
+.cnsn ul{columns:2;column-gap:30px;font-weight:500}.cnsn li{padding:6px 0;border-bottom:1px solid var(--line);break-inside:avoid;font-variant-numeric:tabular-nums}
+/* допуски */
+.lic{padding-block:0 var(--sec);background:#fff}
+.lic ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(24px,3vw,56px)}
+.lic li{border-top:1px solid var(--line);padding:16px 0 20px;line-height:1.4}
+.lic b{display:block;font:700 22px/1.15 var(--f-display);margin-bottom:4px}
+/* заявка */
+.req{background:var(--blue);color:#fff;--fg:#fff;--muted:#D6EBFA;--line:rgba(255,255,255,.5);--accent:#fff;--bg:var(--blue);padding-block:var(--sec)}
+.req-g{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,90px)}
+.req form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.req .full{grid-column:1/-1}
+.req .field>span,.req .agree{font-size:16px}
+.req .btn{background:#fff;color:var(--blue)}.req .btn::before{background:#CFE9FA}
+.req .agree input{accent-color:#0A1B2B}
+.req .done{grid-column:1/-1;background:#fff;color:var(--ink);padding:28px}.req .done h3{font-size:36px;color:var(--blue)}
+.req dl{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr);gap:8px 20px;margin:18px 0}.req dt{color:#465868}
+.req .lead{margin-top:20px;max-width:24em}
+/* контакты */
+.con-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,90px)}
+.con h3{font-size:clamp(32px,3.6vw,54px)}
+.con .row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;border-bottom:1px solid var(--line);min-height:54px;padding:6px 0}
+.con .row a{font:700 20px/1 var(--f-display);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;white-space:nowrap}
+.con .row a:hover{color:var(--sky)}
+.con p{margin:14px 0 20px;color:var(--muted);max-width:30em}
+.con .also{margin-top:26px;color:var(--muted)}
+.ftr{border-top:1px solid var(--line);padding:26px 0}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:10px 40px;justify-content:space-between;color:var(--muted);font-size:16px}
+.ftr a{color:var(--fg);display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:1240px) and (min-width:901px){.hdr .tel{display:none}.hdr .logo img{width:220px}}
+@media (max-width:900px){
+  :root{--hdr-h:68px}
+  .hdr .logo img{width:212px}.hdr .tel{display:none}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:#fff;flex-direction:column;gap:0;padding:20px var(--gutter);font:700 32px/1.2 var(--f-display);visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  .hdr nav a::before{display:none}
+  [data-burger]{margin-left:auto}
+  .hero{min-height:0;background:linear-gradient(118deg,#F7FAFC 0 50%,#E4EBF0 50%)}
+  .hero-in{grid-template-columns:minmax(0,1fr)}
+  .hero-in>div:first-child{padding-block:374px 30px}
+  .nut{left:auto;right:-74px;top:-42px;width:420px;translate:0 0}
+  h1{font-size:clamp(30px,8.9vw,54px)}
+  .cta .btn{flex:1 1 100%}
+  .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts div div{padding:14px 12px 14px 0}
+  .hive-top,.hive-g,.let-g,.own-g,.cnsn,.req-g,.con-g{grid-template-columns:minmax(0,1fr)}
+  .base button{flex:1;padding:8px 12px;font-size:18px}
+  .left{position:static}.comb{margin-inline:-8px}
+  .comb button{font-size:15px}
+  .panel{min-height:0}.panel .pic{margin:-10px -8px 8px 10px;width:38%}
+  .lic ul{grid-template-columns:minmax(0,1fr)}
+  .req form{grid-template-columns:minmax(0,1fr)}
+  .cnsn ul{columns:1}
+  .pile{width:min(86%,400px);order:-1}
+  .own .nums{gap:20px 14px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a class="logo" href="#main" aria-label="ЯмалСпецЦентр, на главную"><img src="img/logo.svg" alt="ЯмалСпецЦентр" width="304" height="56"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#hive">Услуги</a><a href="#letters">Отзывы</a><a href="#own">Производство</a><a href="#lic">Допуски</a><a href="#con">Контакты</a></nav>
+  <a class="tel num" href="tel:+73496334601">+7 (3496) 33 46 01</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <h1>Ремонт, производство и&nbsp;монтаж бурового и&nbsp;нефтепромыслового оборудования</h1>
+      <p class="lead">Базы в&nbsp;Ноябрьске, Муравленко и&nbsp;Новом Уренгое, подразделения прямо на&nbsp;месторождениях ЯНАО и&nbsp;ХМАО.</p>
+      <div class="cta"><a class="btn" data-magnetic href="#hive">Найти услугу</a><a class="btn btn--ghost" href="#req">Отправить заявку</a></div>
+    </div>
+    <div class="nut" aria-hidden="true"><svg viewBox="-500 -500 1000 1000" id="nut"></svg></div>
+  </div>
+  <div class="facts"><div class="wrap">
+    <div><b class="num">2011</b><span>год основания</span></div>
+    <div><b class="num">300+</b><span>единиц оборудования в&nbsp;цехах</span></div>
+    <div><b class="num">4000+</b><span>наименований изделий</span></div>
+    <div><b class="num">8</b><span>подразделений на&nbsp;месторождениях</span></div>
+  </div></div>
+</section>
+
+<section class="hive" id="hive" data-theme="night"><div class="wrap">
+  <div class="hive-top"><h2 data-split>Выберите базу и&nbsp;направление</h2>
+    <div class="base" role="group" aria-label="База"><button type="button" data-base="n" aria-pressed="true">Ноябрьск</button><button type="button" data-base="u" aria-pressed="false">Новый Уренгой</button></div></div>
+  <div class="hive-g">
+    <div class="left"><div class="comb" id="comb" role="group" aria-label="Направления"></div>
+  <div class="find"><label for="q">Марка оборудования или вид работ</label><input id="q" type="search" autocomplete="off" placeholder="Например, Derrick, АКБ, ЦНС"><div class="hits" id="hits" aria-live="polite"></div></div></div>
+    <div class="panel" id="panel" aria-live="polite"><div class="pic" id="p-pic"><img id="p-img" alt="" width="1600" height="400"></div><span class="where" id="p-where"></span><h3 id="p-h"></h3><p class="note" id="p-note"></p><ul id="p-ul"></ul><details id="p-more"><summary id="p-sum"></summary><ul id="p-ul2"></ul></details>
+      <div class="who"><p id="p-who"></p><a class="btn" href="#req" id="p-ask">Отправить заявку</a></div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="letters"><div class="wrap let-g">
+  <div><h2 data-split>Отзывы на&nbsp;бланках заказчиков</h2><div class="orgs" id="orgs"></div></div>
+  <div class="pile" id="pile"></div>
+</div></section>
+
+<section class="sec own" id="own"><div class="wrap">
+  <h2 data-split>Делаем своё, рассчитанное на&nbsp;холод</h2>
+  <div class="own-g">
+    <svg viewBox="-190 -175 380 350" role="img" aria-label="Фланец задвижки ЗМС 80х35ХЛ: наружный диаметр 265, окружность отверстий 203, канавка 136,5, проход 80 мм"><g id="fl" fill="none" stroke="#0D1B28">
+      <circle r="132.5" fill="#E4EBF0" stroke-width="2"/><circle r="101.5" stroke="#0070BA" stroke-dasharray="10 4 2 4"/><circle r="68.25" stroke="#0097D8" stroke-width="7"/><circle r="40" fill="#fff" stroke-width="2"/>
+      <path d="M-150 0H150M0 -150V150" stroke="#0070BA" stroke-width=".8" stroke-dasharray="14 4 3 4"/></g>
+      <g font-family="Digits,Finlandica" font-weight="700" font-size="13" fill="#0D1B28"><path d="M-93.7 -93.7 -118 -118H-170" fill="none" stroke="#0D1B28"/><text x="-172" y="-123">Ø 265 наружный</text><path d="M71.8 -71.8 112 -118H160" fill="none" stroke="#0070BA"/><text x="78" y="-123" fill="#0070BA">Ø 203 шпильки</text><path d="M48 48 112 124H166" fill="none" stroke="#0070BA"/><text x="84" y="140" fill="#0070BA">Ø 136,5 канавка</text><path d="M-28 28 -110 124H-164" fill="none" stroke="#0D1B28"/><text x="-166" y="140">Ø 80 проход</text></g></svg>
+    <div><h3>Задвижка ЗМС&nbsp;80х35ХЛ</h3><p style="margin-top:14px;max-width:34em">Выпускаем с&nbsp;2021&nbsp;года. Спроектирована по&nbsp;итогам сравнения конструкций разных производителей и&nbsp;их&nbsp;многолетней работы на&nbsp;месторождениях в&nbsp;холодном климате.</p>
+      <div class="nums"><div><b class="num">35 МПа</b><span>рабочее давление</span></div><div><b class="num">−60…+40</b><span>°C, температура окружающей среды</span></div><div><b class="num">2000</b><span>циклов, полный средний ресурс</span></div><div><b class="num">750</b><span>циклов, наработка на&nbsp;отказ</span></div></div></div>
+  </div>
+  <div class="cnsn"><div><h3>Насосы с&nbsp;торцевым уплотнением закрытого типа</h3><p style="margin-top:14px;color:var(--muted)">Мощности позволяют изготавливать более 100&nbsp;единиц такого оборудования в&nbsp;год. Обслуживание персоналом заказчика между текущими ремонтами практически исключено, потери нефти через уплотнение вала ниже.</p></div>
+    <ul><li>ЦНСн 13х70…350</li><li>ЦНСн 38х44…220</li><li>ЦНСн 60х66…330</li><li>ЦНСн 105х98…490</li><li>ЦНСн 180х85…425</li><li>ЦНСн 300х120…600</li><li>1Д 200х90</li><li>1Д 315х71</li><li>1Д 630х90, 630х125</li><li>1Д 1250х125</li></ul></div>
+</div></section>
+
+<section class="lic" id="lic"><div class="wrap"><h2 data-split style="margin-bottom:clamp(26px,3vw,48px)">Допуски и&nbsp;аттестации</h2><ul>
+  <li data-reveal><b>ISO 9001, 14001, 45001</b>сертификаты соответствия ГОСТ&nbsp;ISO</li>
+  <li data-reveal><b>НАКС</b>аттестованы сварочные технологии и&nbsp;оборудование</li>
+  <li data-reveal><b>ТМК UP&nbsp;PF</b>лицензия на&nbsp;герметичное резьбовое соединение, официальный лицензиат ТМК</li>
+  <li data-reveal><b>Экспертиза промбезопасности</b>лицензия №&nbsp;ДЭ‑00‑014820</li>
+  <li data-reveal><b>Лаборатория контроля</b>свидетельство об&nbsp;аттестации №&nbsp;58А140892</li>
+  <li data-reveal><b>СРО «Строители ЯНАО»</b>член союза с&nbsp;2017&nbsp;года</li>
+  <li data-reveal><b>Пожарная безопасность</b>лицензия №&nbsp;89‑Б/00211 на&nbsp;монтаж, обслуживание и&nbsp;ремонт</li>
+  <li data-reveal><b>Источники излучения</b>лицензия на&nbsp;использование источников ионизирующего излучения</li>
+  <li data-reveal><b>ТР&nbsp;ТС 010/2011</b>сертификаты и&nbsp;декларации о&nbsp;безопасности машин и&nbsp;оборудования</li>
+</ul></div></section>
+
+<section class="req" id="req"><div class="wrap req-g">
+  <div><h2 data-split>Заявка в&nbsp;нужный цех</h2><p class="lead">База и&nbsp;направление уже подставлены из&nbsp;вашего выбора. Допишите, что за&nbsp;оборудование и&nbsp;где оно стоит.</p></div>
+  <form data-demo-form>
+    <label class="field"><span>База</span><select name="База" id="f-base"><option>Ноябрьск</option><option>Новый Уренгой</option></select></label>
+    <label class="field"><span>Направление</span><select name="Направление" id="f-dir"></select></label>
+    <label class="field full"><span>Оборудование, марка, неисправность</span><textarea name="Оборудование" id="f-eq"></textarea></label>
+    <label class="field full"><span>Месторождение или адрес</span><input name="Объект" autocomplete="off"></label>
+    <label class="field"><span>Компания и&nbsp;имя</span><input name="Контакт" required autocomplete="organization"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить заявку</button>
+    <div class="done" role="status"><h3>Заявка собрана</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+  </form>
+</div></section>
+
+<section class="sec con" id="con" data-theme="night"><div class="wrap con-g">
+  <div><h3>Ноябрьск</h3><p>ООО «ЯмалСпецЦентр», 629805, ЯНАО, тер. Промузел Пелей, панель VI, д.&nbsp;6</p>
+    <div class="row"><span>Приёмная</span><a class="num" href="tel:+73496334601">+7 3496 334601</a></div>
+    <div class="row"><span>Производственный отдел</span><a class="num" href="tel:+73496334650">+7 3496 334650</a></div>
+    <div class="row"><span>Отдел маркетинга</span><a class="num" href="tel:+73496334660">+7 3496 334660</a></div>
+    <div class="row"><span>Снабжение</span><a class="num" href="tel:+73496334698">+7 3496 334698</a></div>
+    <div class="row"><span>Почта</span><a href="mailto:info@yamalspeccentr.ru" style="font-size:18px">info@yamalspeccentr.ru</a></div></div>
+  <div><h3>Новый Уренгой</h3><p>ООО «Новоуренгойский филиал ЯмалСпецЦентр», ул.&nbsp;Промысловая, д.&nbsp;23к/11</p>
+    <div class="row"><span>Приёмная</span><a class="num" href="tel:+73494939711">+7 3494 939711</a></div>
+    <div class="row"><span>Почта</span><a href="mailto:priemnaya.nur@yamalspeccentr.ru" style="font-size:18px;white-space:normal;overflow-wrap:anywhere">priemnaya.nur@yamalspeccentr.ru</a></div>
+    <p class="also">Ещё базы: Муравленко (ул.&nbsp;Школьная,&nbsp;33), мкр.&nbsp;Вынгапуровский, площадки в&nbsp;Юго‑Восточном промузле Ноябрьска и&nbsp;8&nbsp;удалённых подразделений на&nbsp;месторождениях.</p></div>
+</div></section>
+</main>
+<footer class="ftr" data-theme="night"><div class="wrap"><span>© 2011–2026 ООО «ЯмалСпецЦентр»</span><a class="link num" href="tel:+73496334601">+7 (3496) 33 46 01</a></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73496334601">Позвонить</a><a class="btn" href="#req">Заявка</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))},NS='http://www.w3.org/2000/svg';
+  function hexPts(r,rot){var a=[],i;for(i=0;i<6;i++){var t=(i*60+rot)*Math.PI/180;a.push([Math.cos(t)*r,Math.sin(t)*r])}return a}
+  function P(a){return 'M'+a.map(function(p){return p[0].toFixed(1)+' '+p[1].toFixed(1)}).join('L')+'Z'}
+
+  /* ---------- гайка и накидной ключ. Свет сверху слева считается по углу грани ---------- */
+  var nut=$('#nut'),R=312,H=hexPts(R,-90),s='';
+  s+='<defs><linearGradient id="kl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2A89C8"/><stop offset=".45" stop-color="#0070BA"/><stop offset="1" stop-color="#004A80"/></linearGradient><clipPath id="hole"><circle r="196"/></clipPath><radialGradient id="rim"><stop offset=".78" stop-color="#0D1B28" stop-opacity="0"/><stop offset="1" stop-color="#0D1B28" stop-opacity=".75"/></radialGradient></defs>';
+  s+='<g id="key"><path d="M150 -62 L1500 -120 L1500 120 L150 62Z" transform="rotate(33)" fill="url(#kl)"/><path d="M430 -20 L1500 -62 L1500 62 L430 20Z" transform="rotate(33)" fill="#005C9B"/><path fill-rule="evenodd" fill="url(#kl)" d="M-398 0A398 398 0 1 0 398 0A398 398 0 1 0 -398 0Z'+P(hexPts(R+9,-90))+'"/><circle r="384" fill="none" stroke="#6CC1F0" stroke-width="2.5" stroke-opacity=".7"/></g><g id="fac"></g>';
+  s+='<circle r="266" fill="#DCE5EC"/><circle r="266" fill="none" stroke="#fff" stroke-width="3"/>';
+  for(var i=0;i<6;i++)s+='<circle r="'+(250-i*9)+'" fill="none" stroke="'+(i%2?'#F4F8FB':'#7F93A4')+'" stroke-width="5"/>';
+  s+='<g clip-path="url(#hole)"><image id="him" href="img/ph/10.webp" x="-1150" y="-203" width="1624" height="406"/><circle r="198" fill="url(#rim)"/></g>';
+  nut.innerHTML=s;
+  var fac=$('#fac'),ff=[];
+  H.forEach(function(p,i){var q=H[(i+1)%6],e=document.createElementNS(NS,'path');e.setAttribute('d','M0 0L'+p+'L'+q+'Z');fac.appendChild(e);ff.push(e)});
+  function turn(a){fac.setAttribute('transform','rotate('+a+')');$('#key').setAttribute('transform','rotate('+a+')');
+    ff.forEach(function(e,i){var m=(i*60-60+a)*Math.PI/180,l=.5+.5*Math.cos(m+2.2),v=function(x,y){return Math.round(x+(y-x)*l)};e.setAttribute('fill','rgb('+v(96,250)+','+v(116,252)+','+v(134,253)+')')})}
+  var base0=0,scr=0,intro=KIT.REDUCED?0:-60;
+  function paint(){turn(intro+scr)}paint();
+  if(!KIT.REDUCED){
+    var t0=performance.now();(function go(t){var p=Math.min(1,Math.max(0,(t-t0-250)/2300));intro=-60*(1-(p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2));paint();if(p<1)requestAnimationFrame(go)})(t0);
+    var tk=false;addEventListener('scroll',function(){if(tk||scrollY>innerHeight*1.2)return;tk=true;requestAnimationFrame(function(){tk=false;scr=Math.min(60,scrollY*.075);paint()})},{passive:true});
+  }
+
+  /* ---------- направления. k: ключ, s: подпись, f: полное имя, b: базы, img/x: фото и центр кадра, w: ответственный ---------- */
+  var KOR=['Коренов Сергей Викторович','начальник производственного отдела','+7 3496 334650','доб. 116'],NIK=['Николаева Людмила Ивановна','начальник лаборатории неразрушающего контроля','+7 3496 334508',''],NU=['Приёмная филиала','Новый Уренгой','+7 3494 939711',''];
+  var RBO=['Буровые и шламовые насосы различного типа','Центробежные насосы КМ, СМ, POL 65, POL 100, AC 80','Буровые ключи АКБ-4М, АКБ-3М2, АКБ-АТТ','Гидравлические ключи TSK, Oil Country, Westco, АТТ, КТПГ-324, КГРП-18, ГКШ','Центрифуги Derrick DE-1000, Brandt HS 3400 и HS 1850, MI Swaco 518 CP, Lynx 20-200','Вибросита ZS/Z2, Derrick FLC 503/504 и FLC-2000, MI Swaco Mongoose PT','Компрессоры 4ВУ, ДЭН, АВШ, Атлас, КР-2, АК-150, ВТ','Станции гидроключей АТТ, Oil Country (Westco), ГС','Лебёдки вспомогательные ЛВ-15, ЛВ-44(50), XJH-5/35F','Кронблоки, крюкоблоки, вертлюги, роторы, валы, редукторы','Илоотделители Derrick, ИИС-6х2/100, MI Swaco Dsilter','Пескоотделители Derrick, ИПС-2/300, MI Swaco Dsanger','Дегазаторы Derrick ACD 1500, Vacu-flo 1200, MI Swaco CD-1400, Каскад-40','Домкраты и толкатели гидравлические БУ','Электротельферы 2, 3,2 и 5 т','Пневматические клинья ротора ПКР-560, PSA-150','Перемешиватели ПЛ-1200, ПБРТ-45, ПБРТ-55, FD-60, MAG15-H','Дроссельно-запорное устройство ДЗУ-700','Глиномешалка МГ2-4, фрезерно-струйная мельница ФСМ-7','Бурильная труба, шнековые транспортёры'];
+  var D=[
+    {k:'rbo',s:'Ремонт бурового',f:'Ремонт бурового оборудования',b:'nu',img:'05',x:690,w:KOR,n:'Текущий и капитальный: разборка, мойка, дефектовка, ремонт, сборка, регулировка, испытание под нагрузкой.',l:RBO},
+    {k:'pso',s:'Сервис НПО',f:'Ремонт и сервис нефте\u00adпромыслового оборудования',b:'n',img:'04',x:650,w:KOR,n:'Цеха сервиса в Ноябрьске, Вынгапуровском и Муравленко, работы на кустовых площадках заказчика.',l:['Капитальный ремонт насосов систем ППД с обкаткой на стендах','Станки-качалки СК-8, СКД-8, ВУЛКАН-9, ВУЛКАН-12, LEGRAND, LUFKIN','Предохранительные клапаны СППК с проверкой на стендах СИ','БГ и АГЗУ «СПУТНИК», «МЕРА» с обвязкой','Компрессоры EGSI, ТАКАТ, ATLAS COPCO, GEA GRASSO','Блочно-модульные насосные станции НОВОМЕТ, КУПЕР, ШЛЮМБЕРЖЕ','Динамическая балансировка роторов','Лазерная центровка и балансировка агрегатов','Восстановление корпусов наплавкой и расточкой','Ремонт и входной контроль запорной арматуры']},
+    {k:'new',s:'Новые насосы',f:'Производство модернизи\u00adрованного нефте\u00adпромыслового оборудования',b:'n',img:'07',x:540,w:['Сахаров Олег Александрович','начальник производства капитального ремонта и изготовления НПО','+7 3496 334520',''],n:'Более 100 единиц оборудования в год.',l:['Насосы ЦНСн 13, 38, 60, 105, 180, 300','Насосы 1Д 200х90, 315х71, 630х90, 630х125, 1250х125','Торцевое уплотнение, закрытый тип']},
+    {k:'arm',s:'Запорная арматура',f:'Производство запорной арматуры',b:'n',img:'',w:KOR,n:'Задвижка ЗМС 80х35ХЛ собственной конструкции, выпуск с 2021 года.',l:['Рабочее давление 35 МПа','Проход 80 мм, фланцы по ГОСТ 28919-91','Уплотнение затвора «металл по металлу»','Герметичность класса А, масса до 174 кг']},
+    {k:'tool',s:'Буровой инструмент',f:'Производство и ремонт бурового инструмента',b:'n',img:'11',x:880,w:KOR,n:'В том числе нарезка лицензионных резьбовых соединений. Официальный лицензиат ТМК.',l:['Переводники, патрубки, муфты из магнитных и немагнитных сплавов','Резьбы API, ГОСТ: бурильная труба, НКТ, обсадная труба','Контроль резьбы на проекторе MITUTOYO','Дефектоскопия бурильной трубы, в том числе с выездом']},
+    {k:'vmp',s:'Вышко­строение',f:'Вышкостроение',b:'n',img:'03',x:740,w:['Хаятдинов Ильгиз Ирнасович','начальник вышко-монтажного производства','+7 3496 334502',''],n:'Полный цикл строительства буровых установок для разведочных и эксплуатационных скважин.',l:['БУ 5000/ЭК-БМЧ, БУ 4000/250 ЭК-БМ, БУ-3Д 76, БУ-3Э 76','БУ 3000 ЭУК, БУ 2500 ДГУ, БУ 2500 ДЭП','IRI-1700/270, ZJ-50 DBS, Bentec HR-4500, БУ-6000/400 «Арктика»','Передвижки и стаскивания в пределах кустовых площадок','Замена оборудования в процессе бурения','Монтаж верхнего привода Tesco','Модернизация систем очистки Derrick, M-I Swaco, Bentec, Kem-Tron']},
+    {k:'prod',s:'Изделия на заказ',f:'Изготовление продукции',b:'n',img:'12',x:1000,w:KOR,n:'Более 4000 наименований и машиностроительная продукция по индивидуальным заказам.',l:['Оборудование устья скважин муфтового типа ОУС','Оборудование клиньевого типа ОКК','Нефтепромысловое и буровое оборудование, инструмент']},
+    {k:'exp',s:'Экспер­тиза',f:'Экспертиза промыш\u00adленной безопасности',b:'n',img:'',w:NIK,n:'Лицензия № ДЭ-00-014820. Эксперты Э4 ТУ, Э12 ТУ, Э4 ЗС первой и третьей категории.',l:['Оборудование для бурения и эксплуатации скважин','Оборудование для освоения и ремонта скважин','Промысловые трубопроводы','Компрессорные и насосные станции','Сбор и подготовка нефти и газа']},
+    {k:'ndt',s:'Контроль металла',f:'Лаборатория неразру\u00adшающего контроля',b:'n',img:'08',x:700,w:NIK,n:'Свидетельство об аттестации № 58А140892.',l:['Радиационный контроль','Ультразвуковой','Магнитопорошковый','Проникающими веществами','Вибродиагностический','Визуальный и измерительный']},
+    {k:'fire',s:'Пожарная защита',f:'Монтаж и ремонт средств пожарной безопасности',b:'n',img:'',w:['Гаврилюк Сергей Николаевич','начальник участка пожарно-охранной сигнализации','+7 3496 499805',''],n:'Лицензия № 89-Б/00211.',l:['Пожарная и охранно-пожарная сигнализация','Оповещение и эвакуация при пожаре','Диспетчеризация и пусконаладка']},
+    {k:'pvo',s:'ПВО и фонтанная',f:'Ремонт противо\u00adвыбросового оборудования и фонтанной арматуры',b:'u',img:'06',x:660,w:NU,n:'Ремонт и входной контроль, гидравлические испытания давлением до 105 МПа.',l:['Превенторы ППГ, ПУГ, ПДМ, ПГПМ','Переводники, обратные клапаны, КШЦ, КШЗ, КОБШ','Задвижки ЗМС и ЗМГ любых типоразмеров','Манифольд МПБ, блок задвижек','Фонтанная арматура, колонные головки']},
+    {k:'el',s:'Энерге­тика',f:'Ремонт и сервис энергетического оборудования',b:'u',img:'',w:NU,n:'Мощности цеха: до 1500 единиц оборудования в год.',l:['Электродвигатели до 100 кВт, капитальный и текущий ремонт','Высоковольтное оборудование 100–1500 кВт','Шкафы управления ШУ, РЩ, РП, АВР','Сварочное оборудование, агрегаты АДД','Мобильные КРУ, КТП, ЯКНО','Силовые трансформаторы 63–3200 кВА']},
+    {k:'mk',s:'Металл и изделия',f:'Металло\u00adобработка и изготовление продукции',b:'u',img:'09',x:930,w:NU,n:'Любые металлоконструкции и машиностроительная продукция по индивидуальным заказам.',l:['Оборудование устья скважины ОУС1, ОУС1ХВ, ОУС2ХВ','Переводники, катушки переходные, обратные клапаны','Блок-здания, блок-ёмкости, контейнеры','Площадки, балконы верхового, анкерные опоры','Лестницы, мостки, рамы, сани, транспортёры шнековые']}
+  ],BN={n:'Ноябрьск',u:'Новый Уренгой'},B='n',cur=null;
+  D.forEach(function(d){d.h=d.f;d.f=d.f.replace(/\u00ad/g,'')});
+  var comb=$('#comb');
+  D.forEach(function(d,i){var b=document.createElement('button');b.type='button';b.innerHTML='<i></i><span></span>';b.lastChild.textContent=d.s;b.setAttribute('aria-label',d.f);d.el=b;d.t=0;b.onclick=function(){pick(d,true)};comb.appendChild(b)});
+  var wr=document.createElementNS(NS,'svg');wr.setAttribute('class','wrench');wr.setAttribute('viewBox','-150 -150 300 300');wr.setAttribute('aria-hidden','true');
+  wr.innerHTML='<defs><linearGradient id="wg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CFEBFB"/><stop offset=".5" stop-color="#3FB0EC"/><stop offset="1" stop-color="#0070BA"/></linearGradient></defs><g fill="url(#wg)" transform="rotate(38)"><path d="M66 -15L330 -20C346 -20 352 -46 378 -46C396 -46 406 -36 408 -22L372 -14V14L408 22C406 36 396 46 378 46C352 46 346 20 330 20L66 15Z"/><path fill="#005C9B" d="M96 -6L318 -9V9L96 6Z"/></g><path fill="url(#wg)" fill-rule="evenodd" d="M-75 0A75 75 0 1 0 75 0A75 75 0 1 0 -75 0Z'+P(hexPts(58.5,-90))+'"/>';
+  comb.appendChild(wr);
+  // раскладка сот: 4-5-4 на широком, 3-2-3-2-3 на телефоне
+  function lay(){var W=comb.clientWidth;if(!W)return;var rows=W<600?[3,2,3,2,3]:[4,5,4],mx=Math.max.apply(0,rows),g=W<600?5:8,w=(W-(mx-1)*g)/mx,h=w/.866,st=h*.75+g*.866,i=0;
+    rows.forEach(function(n,r){for(var c=0;c<n;c++){var d=D[i++],x=(mx-n)*(w+g)/2+c*(w+g),y=r*st;d.x0=x;d.y0=y;d.el.style.cssText='left:'+x+'px;top:'+y+'px;width:'+w+'px;height:'+h+'px'}});
+    comb.style.height=(rows.length-1)*st+h+'px';comb._w=w;comb._h=h}
+  lay();new ResizeObserver(lay).observe(comb);
+  function has(d){return d.b.indexOf(B)>=0}
+  function li(ul,a){ul.textContent='';a.forEach(function(t){var e=document.createElement('li');e.textContent=t;ul.appendChild(e)})}
+  function fillDir(){var s=$('#f-dir');s.textContent='';D.filter(has).forEach(function(d){var o=document.createElement('option');o.textContent=d.f;o.value=d.f;s.appendChild(o)})}
+  function pick(d,act){
+    cur=d;D.forEach(function(x){x.el.setAttribute('aria-pressed',x===d)});
+    if(act){d.t+=60;d.el.firstChild.style.transform='rotate('+d.t+'deg)';
+      if(!KIT.REDUCED){var w=comb._w*2.62;wr.style.width=wr.style.height=w+'px';wr.style.left=d.x0+comb._w/2-w/2+'px';wr.style.top=d.y0+comb._h/2-w/2+'px';
+        wr.animate([{opacity:0,transform:'rotate(-72deg) scale(1.12)'},{opacity:1,transform:'rotate(-60deg)',offset:.18},{opacity:1,transform:'none',offset:.78},{opacity:0,transform:'scale(1.1)'}],{duration:1400,easing:'cubic-bezier(.6,0,.3,1)'})}
+      if(innerWidth<=900){var r=$('#panel').getBoundingClientRect();if(r.top>innerHeight*.62)setTimeout(function(){scrollBy({top:r.top-innerHeight*.4,behavior:KIT.REDUCED?'auto':'smooth'})},KIT.REDUCED?0:900)}}
+    var wch=B==='u'?NU:d.w;
+    $('#p-where').textContent=BN[B];$('#p-h').textContent=d.h;$('#p-note').textContent=d.n;
+    $('#p-pic').hidden=!d.img;if(d.img){$('#p-img').src='img/ph/'+d.img+'.webp';$('#p-img').style.objectPosition=((d.x-173)/12.54).toFixed(1)+'% 50%'}
+    li($('#p-ul'),d.l.slice(0,5));$('#p-more').hidden=d.l.length<=5;$('#p-more').open=false;$('#p-sum').textContent='Ещё '+(d.l.length-5);li($('#p-ul2'),d.l.slice(5));
+    $('#p-who').innerHTML='<b></b><span></span><br><a class="num"></a>';var p=$('#p-who');p.children[0].textContent=wch[0];p.children[1].textContent=wch[1];p.children[3].textContent=wch[2]+(wch[3]?', '+wch[3]:'');p.children[3].href='tel:'+wch[2].replace(/ /g,'');
+    $('#f-base').value=BN[B];fillDir();$('#f-dir').value=d.f;
+  }
+  function setBase(b,keep){B=b;$$('[data-base]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.base===b)});D.forEach(function(d){d.el.disabled=!has(d)});pick(keep||(cur&&has(cur)?cur:D.filter(has)[0]),true)}
+  $$('[data-base]').forEach(function(x){x.onclick=function(){setBase(x.dataset.base)}});
+  $('#f-base').onchange=function(){setBase(this.selectedIndex?'u':'n')};$('#f-dir').onchange=function(){var v=this.value;pick(D.filter(function(d){return d.f===v})[0])};
+  D.forEach(function(d){d.el.disabled=!has(d)});pick(D[0]);
+  // поиск по перечням с сайта
+  $('#q').addEventListener('input',function(){
+    var q=this.value.trim().toLowerCase().replace(/ё/g,'е'),box=$('#hits'),out=[];box.textContent='';D.forEach(function(d){d.el.classList.remove('hit')});if(q.length<2)return;
+    D.forEach(function(d){[d.f].concat(d.l).forEach(function(t,i){if(t.toLowerCase().replace(/ё/g,'е').replace(/­/g,'').indexOf(q)>=0){out.push([d,t,i]);d.el.classList.add('hit')}})});
+    out.slice(0,6).forEach(function(o){var b=document.createElement('button');b.type='button';b.textContent=o[1]+' · '+(o[0].b==='u'?'Новый Уренгой':o[0].b==='n'?'Ноябрьск':'обе базы');b.onclick=function(){if(!has(o[0]))setBase(o[0].b[0],o[0]);else pick(o[0],true);if(o[2])$('#f-eq').value=o[1]};box.appendChild(b)});
+    if(!out.length){var p=document.createElement('span');p.textContent='В перечне не нашлось. Опишите оборудование в заявке, ответим, берём ли в ремонт.';box.appendChild(p);$('#f-eq').value=this.value}
+  });
+
+  /* ---------- письма: стопка, выбранное сверху ---------- */
+  var L=[['33','РН‑Пурнефтегаз','2021'],['34','Тюменнефтегаз','2021'],['32','Газпромнефть‑Ямал',''],['29','Нафтагаз‑Бурение',''],['30','СГК‑Бурение, Стрежевская экспедиция','2017'],['31','СГК‑Бурение, Нефтеюганская экспедиция','2017'],['27','Газпромнефть‑Ноябрьскнефтегаз',''],['22','Газпромнефть‑Хантос','2014'],['20','Газпромнефть‑Муравленко',''],['26','Буровая Строительная Компания','']],ord=L.map(function(_,i){return i});
+  var pile=$('#pile'),orgs=$('#orgs');
+  L.forEach(function(l,i){var im=document.createElement('img');im.src='img/ph/'+l[0]+'.webp';im.alt='Отзыв на бланке: '+l[1];im.loading='lazy';im.width=761;im.height=1076;l.im=im;pile.appendChild(im);
+    var b=document.createElement('button');b.type='button';b.innerHTML='<b style="font-weight:600"></b><span class="num"></span>';b.firstChild.textContent=l[1];b.lastChild.textContent=l[2];b.onclick=function(){top(i)};l.b=b;orgs.appendChild(b)});
+  function place(){ord.forEach(function(i,p){var im=L[i].im;im.style.zIndex=20-p;im.style.setProperty('--a',p?((i*37%9)-4)*.9+'deg':'0deg');im.style.setProperty('--dx',p?((i*53%11)-5)*3+'px':'0px');im.style.setProperty('--dy',p?Math.min(p,5)*3+'px':'0px');im.style.visibility=p>6?'hidden':'';L[i].b.setAttribute('aria-pressed',!p)})}
+  function top(i){if(ord[0]===i)return;var old=L[ord[0]].im;ord=[i].concat(ord.filter(function(x){return x!==i}));
+    if(KIT.REDUCED)return place();L[i].im.style.visibility='';L[i].im.style.transition='none';L[i].im.classList.add('away');place();void L[i].im.offsetWidth;L[i].im.style.transition='';L[i].im.classList.remove('away')}
+  place();pile.style.cursor='pointer';pile.onclick=function(){top(ord[ord.length-1])};
+});
+</script>
+</body>
+</html>

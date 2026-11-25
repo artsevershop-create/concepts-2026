@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>НУГРК — ремонт и освоение скважин, Новый Уренгой</title>
+<meta name="description" content="Концепция редизайна сайта ООО «Новоуренгойская Геологоразведочная Компания»: капитальный и текущий ремонт, освоение скважин, ГНКТ на месторождениях ЯНАО.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/playfair-display-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--ink:#1B4796;--ink-d:#10295C;--snow:#F3F6F9;--ice:#DFE8F0;--sand:#DCC39A;--ochre:#B0702A;--ochre-d:#8A5216;--wood:#C69F6C;--wood-d:#8F6A3D;--coal:#20242B;
+  --bg:var(--snow);--fg:var(--coal);--muted:#59636F;--accent:var(--ink);--accent-h:var(--ink-d);--r:2px;
+  --f-display:"Playfair Display",Georgia,serif;--f-text:"Onest",system-ui,sans-serif;--hdr-h:104px;
+  --mm:repeating-linear-gradient(0deg,rgba(27,71,150,.16) 0 1px,transparent 1px 60px),repeating-linear-gradient(90deg,rgba(27,71,150,.16) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(27,71,150,.07) 0 1px,transparent 1px 12px),repeating-linear-gradient(90deg,rgba(27,71,150,.07) 0 1px,transparent 1px 12px)}
+h1,h2,h3,.pf{font-family:var(--f-display);font-variant-numeric:lining-nums}
+h1,h2{font-weight:700;color:var(--ink);letter-spacing:-.015em}
+h2{font-size:clamp(36px,4.5vw,66px);line-height:1.04}
+h3{font-weight:700;line-height:1.15;letter-spacing:-.005em}
+.lead{font-size:clamp(18px,1.4vw,21px);line-height:1.5}
+/* шапка */
+.hdr{background:#fff;border-bottom:1px solid rgba(27,71,150,.22)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.6vw,42px)}
+.hdr img{height:90px;width:auto}
+.hdr nav{display:flex;gap:clamp(16px,2.1vw,34px);margin-left:auto}
+.hdr nav a{text-decoration:none;padding:12px 0;position:relative}
+.hdr nav a::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:2px;background:var(--ochre);transform:scaleX(0);transform-origin:0 50%;transition:transform .35s var(--e-smooth)}
+.hdr nav a:hover::after{transform:none}
+.hdr .tel{font-weight:600;color:var(--ink);text-decoration:none;display:grid;align-content:center;min-height:44px}
+/* первый экран: лист журнала */
+.hero{position:relative;padding-top:var(--hdr-h);min-height:min(100svh,980px);display:grid;grid-template-rows:1fr auto;overflow:clip;isolation:isolate;background:linear-gradient(180deg,#FDFDFC,#F3F6F9)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--mm);-webkit-mask:linear-gradient(100deg,#000 0,transparent 46%);mask:linear-gradient(100deg,#000 0,transparent 46%)}
+.hero-p{position:absolute;z-index:-1;right:max(-40px,calc(50% - 900px));bottom:78px;width:min(66vw,1080px);mix-blend-mode:multiply;-webkit-mask:linear-gradient(180deg,transparent 0,#000 13%),linear-gradient(90deg,transparent 2%,#000 30% 88%,transparent);-webkit-mask-composite:source-in;mask:linear-gradient(180deg,transparent 0,#000 13%) intersect,linear-gradient(90deg,transparent 2%,#000 30% 88%,transparent)}
+.hero-p img{width:100%;height:auto}
+.hero-t{width:100%;align-self:center;padding-block:clamp(24px,4vh,48px)}
+h1{font-size:clamp(44px,6.3vw,98px);line-height:.99;max-width:7.2em}
+.hero .lead{margin-top:clamp(18px,2.6vh,28px);max-width:25em}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(20px,3vh,32px)}
+.cta .btn--ghost{background:rgba(255,255,255,.72);color:var(--ink)}
+.hero-f{display:flex;flex-wrap:wrap;gap:10px clamp(24px,3.4vw,54px);margin-top:clamp(22px,3.6vh,42px)}
+.hero-f div{display:flex;align-items:center;gap:12px}
+.hero-f b{font:700 clamp(38px,3.8vw,58px)/1 var(--f-display);font-variant-numeric:lining-nums;color:var(--ochre-d)}
+.hero-f span{font-size:16px;line-height:1.25}
+.core-strip{position:relative;height:116px}
+.core-strip::before{content:"";position:absolute;inset:auto 0 -2px;height:26px;background:linear-gradient(180deg,rgba(16,41,92,.28),transparent)}
+.core-strip canvas{position:relative;width:100%;height:100%}
+@media (prefers-reduced-motion:no-preference){
+  .js .core-strip canvas{animation:roll 2.6s var(--e-smooth) both}
+  .js .hero-p img{animation:sett 2.6s var(--e-smooth) both}
+  .js h1{animation:ink 1.3s var(--e-smooth) both}
+}
+@keyframes roll{from{transform:translateX(34%)}}
+@keyframes sett{from{transform:scale(1.06) translateY(1.5%)}}
+@keyframes ink{from{transform:translateY(.16em)}}
+/* керновый ящик */
+.box-s{background:linear-gradient(180deg,#E8EEF4,#F3F6F9 50%)}
+.box-h{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:18px 60px;align-items:end}
+.box-h p{color:var(--muted)}
+.box-g{display:grid;grid-template-columns:minmax(0,1.72fr) minmax(0,1fr);gap:clamp(20px,2.4vw,40px);margin-top:clamp(28px,3.6vw,54px);align-items:start}
+.box{background:linear-gradient(90deg,#B58C59,#D0AB78 4%,#C69F6C 60%,#AC8450);padding:14px;border-radius:4px;box-shadow:0 26px 44px -18px rgba(16,41,92,.42),inset 0 0 0 1px rgba(70,44,14,.5)}
+.tray+.tray{margin-top:12px}
+.tray>h3{font-size:19px;color:#33210A;padding:2px 4px 6px;display:flex;justify-content:space-between;gap:12px}
+.lane{display:flex;gap:4px;padding:14px 8px 8px;background:linear-gradient(180deg,#5B3F1E,#856238 26%,#74552E 82%,#573C1C);border-radius:3px;box-shadow:inset 0 6px 12px rgba(40,22,2,.6)}
+.fr{position:relative;flex:var(--w) 1 0;min-width:0;height:84px;transition:transform .5s var(--e-smooth),filter .4s;outline-offset:2px}
+.fr canvas{width:100%;height:100%}
+.fr span{position:absolute;left:0;right:0;top:50%;width:max-content;margin-inline:auto;translate:0 -50%;max-width:calc(100% - 10px);padding:2px 6px 3px;background:#FBF8F0;color:#20242B;font:500 13px/1.12 var(--f-text);text-align:center;box-shadow:0 1px 3px rgba(40,22,2,.5);rotate:var(--rt);hyphens:auto}
+.fr:hover,.fr[aria-pressed=true]{z-index:3}
+.fr:hover{transform:translateY(-8px)}
+.fr[aria-pressed=true]{transform:translateY(-13px) scale(1.05);filter:drop-shadow(0 16px 10px rgba(40,22,2,.5))}
+.fr[aria-pressed=true] span{background:var(--ink);color:#fff}
+.spec{position:sticky;top:calc(var(--hdr-h) + 14px)}
+.spec-c{height:clamp(150px,15vw,214px);cursor:grab;touch-action:pan-x;user-select:none;filter:drop-shadow(0 26px 20px rgba(16,41,92,.34))}
+.spec-c:active{cursor:grabbing}
+.spec-c canvas{width:100%;height:100%}
+.tag{margin-top:34px;background:#fff;padding:26px 28px 28px;box-shadow:inset 0 0 0 1.5px var(--ink),inset 0 0 0 5px #fff,inset 0 0 0 6px rgba(27,71,150,.4);position:relative}
+.tag::before{content:"";position:absolute;left:50%;top:-35px;width:1.5px;height:36px;background:var(--ochre)}
+.tag::after{content:"";position:absolute;left:50%;top:9px;width:14px;height:14px;translate:-50% 0;border-radius:50%;background:var(--snow);box-shadow:inset 0 0 0 2px var(--ochre)}
+.tag small{display:block;margin-top:8px;font-size:15px;color:var(--muted)}
+.tag h3{font-size:clamp(26px,2.2vw,34px);color:var(--ink);margin-top:2px}
+.tag ul{margin-top:14px}
+.tag li{border-top:1px solid rgba(27,71,150,.25);padding:9px 0;line-height:1.4;font-size:16px}
+.tag .btn{width:100%;margin-top:10px}
+/* бригады */
+.crews{background:#fff}
+.crews-g{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(28px,5vw,90px);align-items:start}
+.crews figure img{width:100%;height:auto}
+.crews figcaption{font-size:15px;color:var(--muted);margin-top:10px}
+.cr li{display:grid;grid-template-columns:2.1em minmax(0,1fr);gap:4px 22px;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(27,71,150,.25);font-size:18px}
+.cr{margin-top:26px;border-top:2px solid var(--ink)}
+.cr b{font:700 clamp(56px,6vw,92px)/.9 var(--f-display);font-variant-numeric:lining-nums;color:var(--ink)}
+.cr h3{font-size:clamp(23px,1.9vw,29px)}
+.cr p{color:var(--muted);line-height:1.45;margin-top:4px}
+.pair{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;margin-top:30px;align-items:end}
+/* база */
+.base{padding-bottom:0}
+.base-h{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px 60px;align-items:end}
+.pano{margin-top:clamp(26px,3.4vw,50px)}
+.pano img{width:100%;height:auto;min-height:240px;object-fit:cover}
+.gauge{background:var(--ink-d);color:#F1F5FA;--muted:#B7C6DE;margin-top:clamp(40px,5vw,80px);padding-block:clamp(52px,6vw,100px)}
+.gauge-g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,90px);align-items:center}
+.gauge h2{color:#fff;font-size:clamp(32px,3.6vw,54px)}
+.sh{margin-top:28px}
+.sh button{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;width:100%;text-align:left;padding:20px 0;border-top:1px solid rgba(255,255,255,.28);align-items:baseline}
+.sh button:last-child{border-bottom:1px solid rgba(255,255,255,.28)}
+.sh b{font:700 clamp(23px,2vw,30px)/1.15 var(--f-display)}
+.sh em{font:700 clamp(22px,2vw,30px)/1 var(--f-display);font-style:normal;font-variant-numeric:lining-nums;color:var(--sand);white-space:nowrap}
+.sh span{grid-column:1/3;color:var(--muted);line-height:1.45;display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--e-smooth)}
+.sh span i{overflow:hidden;font-style:normal}
+.sh [aria-pressed=true] span{grid-template-rows:1fr}
+.sh [aria-pressed=true] b{color:var(--sand)}
+.dial{width:100%;height:auto;max-width:520px;margin-inline:auto;overflow:visible}
+.dial .nd{transform-box:view-box;transform-origin:250px 250px;transform:rotate(calc(var(--a)*1deg));transition:transform 1.4s cubic-bezier(.3,1.5,.5,1)}
+.dial .arc{transition:stroke-dashoffset 1.2s var(--e-smooth),stroke-dasharray 1.2s var(--e-smooth)}
+.labs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,56px);margin-top:clamp(40px,4.6vw,72px)}
+.labs h3{font-size:clamp(22px,1.8vw,27px);color:var(--sand)}
+.labs p{margin-top:8px;color:#DDE6F2;line-height:1.5}
+.fleet{display:grid;grid-template-columns:1.1fr 1fr 1fr;background:linear-gradient(180deg,#fff,var(--snow));padding:clamp(20px,3vw,50px) var(--gutter) 0;gap:10px}
+.fleet img{width:100%;height:auto;mix-blend-mode:multiply}
+.fleet p{grid-column:1/-1;text-align:center;color:var(--muted);padding:6px 0 clamp(30px,4vw,60px)}
+[data-img]{overflow:clip}
+/* записи */
+.log{background:var(--ice)}
+.log-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,90px);align-items:center}
+.log figure{margin-left:calc(-1*max(var(--gutter),50vw - var(--wrap)/2))}
+.log figure img{width:100%;aspect-ratio:1/1.02;object-fit:cover}
+.log ol{margin-top:28px}
+.log li{display:grid;grid-template-columns:8.2em minmax(0,1fr);gap:20px;padding:16px 0;border-top:1px solid rgba(27,71,150,.35);line-height:1.45}
+.log time{font:600 18px/1.4 var(--f-display);font-variant-numeric:lining-nums;color:var(--ochre-d)}
+/* вахта */
+.life-g{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,5vw,90px);align-items:center}
+.life figure img{width:100%;height:auto}
+.life p{margin-top:16px}
+.vac{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:24px}
+.vac li{border:1.5px solid var(--ink);color:var(--ink);padding:9px 14px;font-weight:500;line-height:1.25}
+/* заявка */
+.req{background:var(--ink);color:#fff;--muted:#D4E0F3;--line:rgba(255,255,255,.5);--accent:var(--sand);--accent-h:#EFDDBE;--on-accent:#2B1C05}
+.req h2{color:#fff}
+.req-g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,110px)}
+.req form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-content:start}.req .full{grid-column:1/-1}
+.who{margin-top:26px}
+.who li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 20px;align-items:center;border-top:1px solid rgba(255,255,255,.3);min-height:52px}
+.who a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-weight:600}
+.who a:hover{text-decoration:underline;text-underline-offset:5px}
+.done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;margin:16px 0}.done dt{color:var(--muted)}
+.done h3{font-size:30px}
+.ftr{background:var(--ink-d);color:#C9D6EA;padding:30px 0 38px;font-size:15px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:12px 60px;justify-content:space-between}
+@media (max-width:1240px){.hdr .tel{display:none}.fr span{font-size:12px;padding-inline:4px}}
+@media (max-width:1100px){.box-g{grid-template-columns:minmax(0,1fr)}.spec{position:static}.lane{overflow-x:auto;scrollbar-width:thin;scrollbar-color:#D0AB78 transparent;padding-top:26px;padding-bottom:12px;-webkit-overflow-scrolling:touch}.fr{flex:var(--w) 0 calc(118px + var(--w)*22px)}.fr span{font-size:15px}
+  .tray .spec{margin:18px 4px 10px}.tray .spec-c{height:112px}.tray .tag{margin-top:24px}.tray .tag::before{height:26px;top:-25px}}
+@media (max-width:900px){
+  :root{--hdr-h:76px}
+  .hdr img{height:68px}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:var(--mm),#fff;flex-direction:column;gap:4px;padding:26px var(--gutter);font:700 32px/1.15 var(--f-display);color:var(--ink);visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  [data-burger]{margin-left:auto;color:var(--ink)}
+  .hero{min-height:0}
+  .hero-t{padding:56px var(--gutter) 24px}
+  .hero-p{position:relative;right:auto;bottom:auto;width:calc(100% + 30px);margin:2px -15px -8px;order:1}.cta{order:2}.hero-f{order:3}
+  .hero .wrap{display:flex;flex-direction:column}
+  .cta .btn{flex:1 1 100%}
+  .hero-f{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.hero-f div{display:block}
+  .hero-f span{font-size:15px;display:block;margin-top:4px}
+  .core-strip{height:84px}
+  .box-h,.crews-g,.base-h,.gauge-g,.labs,.log-g,.life-g,.req-g{grid-template-columns:minmax(0,1fr)}
+  .box-s .wrap{padding-inline:10px}.box-h,.box-s h2,.box-h p{padding-inline:8px}
+  .box{padding:10px}
+  .tag{padding:26px 18px 18px}
+  .crews figure.pt{max-width:300px}
+  .pair,.fleet{grid-template-columns:minmax(0,1fr)}
+  .fleet{gap:14px}
+  .log figure{margin:0 calc(-1*var(--gutter))}
+  .log li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .req form{grid-template-columns:minmax(0,1fr)}
+  .who li{grid-template-columns:minmax(0,1fr);padding:6px 0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="НУГРК, на главную"><img src="img/logo.png" alt="Новоуренгойская геологоразведочная компания, капитальный ремонт скважин" width="650" height="640"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#box">Работы</a><a href="#crews">Бригады</a><a href="#base">База и&nbsp;цехи</a><a href="#log">Хроника</a><a href="#life">Вакансии</a><a href="#req">Контакты</a></nav>
+  <a class="tel num" href="tel:+73494931570">+7 (3494) 93-15-70</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-t">
+    <h1>Полный цикл ремонта и&nbsp;освоения скважин</h1>
+    <p class="lead">Новоуренгойская геологоразведочная компания. Основана 9&nbsp;августа 2012&nbsp;года в&nbsp;Новом Уренгое, работает на&nbsp;месторождениях ЯНАО.</p>
+    <div class="cta"><a class="btn" data-magnetic href="#req">Обсудить ремонт</a><a class="btn btn--ghost" href="#box">Открыть керновый ящик</a></div>
+    <div class="hero-f"><div><b class="num">9</b><span>бригад<br>КРС</span></div><div><b class="num">2</b><span>звена<br>освоения</span></div><div><b class="num">1</b><span>флот<br>ГНКТ</span></div></div>
+    <div class="hero-p"><img src="img/ph/03.webp" alt="Подъёмный агрегат НУГРК на шасси «Урал», мачта поднята над скважиной" width="1680" height="1260" fetchpriority="high"></div>
+  </div>
+  <div class="core-strip" aria-hidden="true"><canvas id="strip"></canvas></div>
+</section>
+
+<section class="sec box-s" id="box"><div class="wrap">
+  <div class="box-h"><h2 data-split>Керновый ящик наших работ</h2><p class="lead">Каждый образец в&nbsp;ящике – вид работ. Достаньте образец, чтобы прочитать этикетку.</p></div>
+  <div class="box-g">
+    <div class="box" id="bx"></div>
+    <div class="spec" id="spec">
+      <div class="spec-c" id="specc" aria-hidden="true"><canvas></canvas></div>
+      <div class="tag" aria-live="polite"><small id="t-g"></small><h3 id="t-h"></h3><ul id="t-l"></ul><a class="btn" href="#req" id="t-b">Обсудить эту работу</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec crews" id="crews"><div class="wrap crews-g">
+  <figure class="pt"><div data-img><img src="img/ph/02.webp" alt="Подъёмная установка МБУ-140 с поднятой мачтой" loading="lazy" width="1200" height="1800"></div><figcaption>Подъёмная установка МБУ‑140</figcaption></figure>
+  <div>
+    <h2 data-split>Кто выходит на&nbsp;скважину</h2>
+    <ul class="cr">
+      <li><b class="num">4</b><div><h3>бригады КРС, тяжёлые</h3><p>Передвижные подъёмные агрегаты МБУ‑125 (140)&nbsp;т</p></div></li>
+      <li><b class="num">5</b><div><h3>бригад КРС</h3><p>Передвижные подъёмные агрегаты УПА‑60/80 и&nbsp;УБРС‑80</p></div></li>
+      <li><b class="num">2</b><div><h3>звена освоения</h3><p>Освоение скважин, сопровождение работ флотами ГРП и&nbsp;ГНКТ</p></div></li>
+      <li><b class="num">1</b><div><h3>флот ГНКТ</h3><p>Гибкие трубы: промывка, азотное освоение, геофизика</p></div></li>
+    </ul>
+    <div class="pair"><figure data-img><img src="img/ph/06.webp" alt="Подъёмный агрегат МБУ-125 на базе" loading="lazy" width="690" height="400"></figure><figure data-img><img src="img/ph/07.webp" alt="Установка ГНКТ на кустовой площадке, вид сверху" loading="lazy" width="620" height="414"></figure></div>
+  </div>
+</div></section>
+
+<section class="sec base" id="base">
+  <div class="wrap">
+    <div class="base-h"><h2 data-split>Своя база в&nbsp;Новом Уренгое</h2><p class="lead">Производственная и&nbsp;транспортная базы рядом с&nbsp;объектами, на&nbsp;Промысловой, 27/10. Растворы глушения на&nbsp;основе KCl, CaCl₂ и&nbsp;BaSO₄ готовим сами.</p></div>
+    <figure class="pano" data-img><img src="img/ph/11.webp" alt="Производственная база НУГРК с воздуха" loading="lazy" width="1900" height="584"></figure>
+  </div>
+  <div class="gauge"><div class="wrap">
+    <div class="gauge-g">
+      <div><h2 data-split>Под каким давлением проверяем</h2>
+        <div class="sh" id="sh">
+          <button type="button" aria-pressed="true" data-lo="0" data-hi="60"><b>Трубный цех</b><em class="num">до 60&nbsp;МПа</em><span><i>Опрессовка всех типов обсадных труб. Ультразвуковая и&nbsp;магнитно‑порошковая дефектоскопия, ремонт резьб на&nbsp;станках 1Н983 и&nbsp;1А983, ремонт винтовых забойных двигателей и&nbsp;гидравлических ключей, изготовление аварийного инструмента.</i></span></button>
+          <button type="button" aria-pressed="false" data-lo="32" data-hi="105"><b>Тампонажный цех</b><em class="num">32–105&nbsp;МПа</em><span><i>Цементировочные агрегаты с&nbsp;поршневыми и&nbsp;плунжерными насосами для бригад КРС и&nbsp;освоения. Ремонт силовых агрегатов, насосов и&nbsp;ППДУ.</i></span></button>
+          <button type="button" aria-pressed="false" data-lo="0" data-hi="105"><b>ПРЦБО</b><em class="num">до 105&nbsp;МПа</em><span><i>Прокатно‑ремонтный цех бурового оборудования: ремонт и&nbsp;гидравлическое испытание запорной арматуры и&nbsp;противовыбросового оборудования.</i></span></button>
+        </div></div>
+      <svg class="dial" id="dial" viewBox="0 0 500 500" role="img" aria-label="Манометр со шкалой до 120 МПа показывает давление выбранного цеха"></svg>
+    </div>
+    <div class="labs">
+      <div><h3>Лаборатория цементных растворов</h3><p>Вязкость, плотность, фильтрация, время загустевания и&nbsp;прочность цемента. Для скважин с&nbsp;температурой на&nbsp;забое до&nbsp;95&nbsp;°C, нагрев проб до&nbsp;105&nbsp;°C.</p></div>
+      <div><h3>Звено свинчивания</h3><p>Цифровая фиксация моментов свинчивания труб НКТ и&nbsp;обсадных колонн, калибровка резьб, шаблонировка спецшаблонами.</p></div>
+      <div><h3>Автотранспортный цех</h3><p>ГСМ, вода, трубы, негабарит, мобилизация бригад, отсыпка приустьевых площадок, перевозка вахт.</p></div>
+    </div>
+  </div></div>
+  <div class="fleet"><img src="img/ph/27.webp" alt="Синий «Урал» с цементировочным агрегатом" loading="lazy" width="1680" height="1259"><img src="img/ph/26.webp" alt="Бело-синий «Урал» тампонажного цеха" loading="lazy" width="1680" height="1260"><img src="img/ph/05.webp" alt="Подъёмный агрегат НУГРК в транспортном положении" loading="lazy" width="1680" height="1260"><p>Техника НУГРК на&nbsp;базе и&nbsp;в&nbsp;дороге</p></div>
+</section>
+
+<section class="sec log" id="log"><div class="wrap log-g">
+  <figure data-img><img src="img/ph/04.webp" alt="Зимнее утро на промысле: вид с рабочей площадки на заснеженный куст" loading="lazy" width="1680" height="1260"></figure>
+  <div><h2 data-split>Хроника</h2>
+    <ol>
+      <li><time>9 августа 2012</time><span>ООО «НУГРК» основано в&nbsp;Новом Уренгое.</span></li>
+      <li><time>1 января 2021</time><span>Победа в&nbsp;тендере на&nbsp;услуги ТКРС для АО «Арктикгаз».</span></li>
+      <li><time>15 октября 2022</time><span>Победа в&nbsp;закупке услуг ТКРС и&nbsp;освоения скважин в&nbsp;ООО «Газпромнефть‑Заполярье». Договор на&nbsp;5&nbsp;лет.</span></li>
+      <li><time>1 ноября 2022</time><span>Формируем ещё одно звено освоения с&nbsp;утеплёнными замерными ёмкостями арктического исполнения.</span></li>
+      <li><time>29 ноября 2022</time><span>Восьмая бригада КРС вышла на&nbsp;Песцовое месторождение с&nbsp;установкой МБУ‑140.</span></li>
+    </ol></div>
+</div></section>
+
+<section class="sec life" id="life"><div class="wrap life-g">
+  <div><h2 data-split>Где живёт вахта</h2>
+    <p class="lead">Большая часть сотрудников приезжает издалека, поэтому на&nbsp;территории предприятия стоят общежития гостиничного типа и&nbsp;столовая. На&nbsp;удалённых объектах работают мобильные столовые в&nbsp;вагон‑домах.</p>
+    <p>Спортивный комплекс с&nbsp;залами для волейбола и&nbsp;мини‑футбола, тренажёры, бассейн и&nbsp;сауна. Медицинское страхование, корпоративный транспорт, служебная связь, льготное питание.</p>
+    <ul class="vac" aria-label="Кого ищем"><li>Бурильщик КРС</li><li>Помощник бурильщика КРС</li><li>Мастер КРС</li><li>Электромонтёр по&nbsp;ремонту электрооборудования</li></ul>
+    <p>Отдел кадров: <a class="num" href="tel:+73494931664">+7 (3494) 93-16-64</a></p></div>
+  <figure data-img><img src="img/ph/10.webp" alt="Здание Новоуренгойской геологоразведочной компании зимой" loading="lazy" width="1680" height="946"></figure>
+</div></section>
+
+<section class="sec req" id="req"><div class="wrap req-g">
+  <div><h2 data-split>Кому звонить</h2>
+    <ul class="who">
+      <li><span>Приёмная</span><a class="num" href="tel:+73494931570">+7 (3494) 93-15-70</a></li>
+      <li><span>Главный инженер</span><a class="num" href="tel:+73494244251">24-42-51</a></li>
+      <li><span>Отдел кадров</span><a class="num" href="tel:+73494931664">93-16-64</a></li>
+      <li><span>Юридический отдел</span><a class="num" href="tel:+73494931663">93-16-63</a></li>
+      <li><span>Служба ОТ, ПБ и&nbsp;ООС</span><a class="num" href="tel:+73494931564">93-15-64</a></li>
+      <li><span>Почта</span><a href="mailto:office@nugrk.ru">office@nugrk.ru</a></li>
+    </ul></div>
+  <form data-demo-form>
+    <label class="field full"><span>Вид работ</span><select name="Вид работ" id="f-w"></select></label>
+    <label class="field"><span>Месторождение, скважина</span><input name="Объект" autocomplete="off"></label>
+    <label class="field"><span>Когда нужна бригада</span><input name="Срок" autocomplete="off"></label>
+    <label class="field"><span>Компания и&nbsp;имя</span><input name="Контакт" required autocomplete="organization"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить запрос</button>
+    <div class="done full" role="status"><h3>Запрос на&nbsp;office@nugrk.ru</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+  </form>
+</div></section>
+</main>
+<footer class="ftr"><div class="wrap"><span>ООО «Новоуренгойская Геологоразведочная Компания», 629306, ЯНАО, г.&nbsp;Новый Уренгой, ул.&nbsp;Промысловая, дом&nbsp;27/10</span><span>Член СРО. ISO&nbsp;9001, ISO&nbsp;14001, OHSAS&nbsp;18001</span></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73494931570">Позвонить</a><a class="btn" href="#req">Запрос</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+  /* ── породы: детерминированный шум, наклонные слои дают на цилиндре синусоиду ── */
+  function h2(x,y,s){var n=Math.imul(x,374761393)+Math.imul(y,668265263)+Math.imul(s,1274126177);n=Math.imul(n^n>>>13,1274126177);return ((n^n>>>16)>>>0)/4294967296}
+  function vn(x,y,py,s){var xi=Math.floor(x),yi=Math.floor(y),u=x-xi,v=y-yi;u=u*u*(3-2*u);v=v*v*(3-2*v);var y0=((yi%py)+py)%py,y1=(y0+1)%py,a=h2(xi,y0,s),b=h2(xi+1,y0,s),c=h2(xi,y1,s),d=h2(xi+1,y1,s);return a+(b-a)*u+(c-a)*v+(a-b-c+d)*u*v}
+  var R=[ /* два цвета, частота слоёв, зерно, особенность */
+    {a:[222,196,152],b:[188,146,92],f:.055,g:.20},            // песчаник
+    {a:[96,100,108],b:[58,62,70],f:.16,g:.07},                // аргиллит
+    {a:[186,170,146],b:[128,118,108],f:.11,g:.11},            // алевролит
+    {a:[44,44,50],b:[16,17,22],f:.06,g:.10,k:'coal'},         // уголь
+    {a:[214,216,212],b:[172,178,180],f:.03,g:.08,k:'vein'},   // известняк
+    {a:[176,160,136],b:[140,118,92],f:.03,g:.16,k:'peb'},     // конгломерат
+    {a:[150,98,48],b:[96,58,28],f:.07,g:.22},                 // нефтенасыщенный песчаник
+    {a:[140,156,150],b:[98,118,118],f:.09,g:.06,k:'vein'}     // глина
+  ];
+  function tex(r,w,h,s,sc){
+    var c=document.createElement('canvas');c.width=w;c.height=h;var x=c.getContext('2d'),im=x.createImageData(w,h),D=im.data,o=R[r],dip=(8+h2(s,1,9)*16)*sc,ph=h2(s,2,9)*6.28,L=8,py=Math.max(2,Math.round(h/(16*sc)));
+    for(var j=0;j<h;j++){var off=dip*Math.cos(j/h*6.283+ph);for(var i=0;i<w;i++){
+      var X=i/sc,Y=j/sc,b=(X+off/sc),n=vn(i/(16*sc),j*py/h,py,s),
+        t=vn(b*o.f*3+n*.9,3.5,L,s+1)*.6+vn(b*o.f*9+n*.6,1.5,L,s+2)*.4;t=t<.38?0:t>.62?1:(t-.38)/.24;
+      var g=(h2(i,j,s)-.5)*o.g*150+(vn(i/(2.2*sc),j*Math.round(h/(2.2*sc))/h,Math.round(h/(2.2*sc)),s+3)-.5)*o.g*110,m=1;
+      var cr=o.a[0]+(o.b[0]-o.a[0])*t+g,cg=o.a[1]+(o.b[1]-o.a[1])*t+g,cb=o.a[2]+(o.b[2]-o.a[2])*t+g*.85;
+      if(o.k==='vein'){var v=Math.abs(vn(i/(26*sc)+n*1.2,j*Math.max(2,py>>1)/h,Math.max(2,py>>1),s+5)-.5);if(v<.02){cr+=50;cg+=50;cb+=48}}
+      if(o.k==='coal'){var q=vn(i/(5*sc),j*py*3/h,py*3,s+6);if(q>.8){cr+=70;cg+=74;cb+=84}if(q<.12){cr-=14;cg-=14;cb-=12}}
+      if(o.k==='peb'){var cs=15*sc,ny=Math.max(2,Math.round(h/cs)),cx=i/cs,cy=j*ny/h,bd=9,bi=0;for(var a=-1;a<2;a++)for(var e=-1;e<2;e++){var gx=Math.floor(cx)+a,gy=Math.floor(cy)+e,wy=((gy%ny)+ny)%ny,dx=gx+h2(gx,wy,s)-cx,dy=gy+h2(gx,wy,s+7)-cy,dd=dx*dx+dy*dy;if(dd<bd){bd=dd;bi=h2(gx,wy,s+8)}}if(bd<.17){var z=1-bd/.17;cr=150+bi*85+z*14+g*.4;cg=132+bi*80+z*14+g*.4;cb=112+bi*74+z*14+g*.4}else if(bd<.23){cr*=.72;cg*=.72;cb*=.72}}
+      var p=(j*w+i)*4;D[p]=cr;D[p+1]=cg;D[p+2]=cb;D[p+3]=255}}
+    x.putImageData(im,0,0);return c;
+  }
+  function edge(x,W,H,s,j){x.beginPath();var n=9,i;for(i=0;i<=n;i++)x.lineTo(h2(i,s,3)*j,H*i/n);for(i=n;i>=0;i--)x.lineTo(W-h2(i,s,4)*j,H*i/n);x.closePath();x.clip()}
+  /* цилиндр: строка экрана → строка развёртки через arcsin */
+  function core(cv,T,rot,s,jag){
+    var r=cv.getBoundingClientRect(),dp=Math.min(2,devicePixelRatio||1),W=cv.offsetWidth,H=cv.offsetHeight;if(W<4||H<4)return;
+    var w=Math.round(W*dp),h=Math.round(H*dp);if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h}
+    var x=cv.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,w,h);x.save();if(jag)edge(x,w,h,s,jag*dp);
+    for(var y=0;y<h;y++){var v=Math.asin((2*y+1)/h-1)/Math.PI,k=((v*.5+rot)%1+1)%1;x.drawImage(T,0,Math.min(T.height-1,Math.floor(k*T.height)),T.width,1,0,y,w,1)}
+    var g=x.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(10,14,28,.62)');g.addColorStop(.14,'rgba(10,14,28,.16)');g.addColorStop(.3,'rgba(255,255,255,.30)');g.addColorStop(.46,'rgba(255,255,255,0)');g.addColorStop(.74,'rgba(10,10,20,.28)');g.addColorStop(1,'rgba(8,8,18,.8)');x.fillStyle=g;x.fillRect(0,0,w,h);
+    x.restore();
+  }
+  /* ── полоса керна на первом экране ── */
+  (function(){
+    var cv=$('#strip'),T,tw=0;
+    function mk(){var W=cv.offsetWidth;if(W<20)return;tw=W;T=document.createElement('canvas');T.width=Math.min(1600,W);T.height=Math.round(cv.offsetHeight*3.14);var x=T.getContext('2d'),seq=[0,6,1,2,0,5,3,4,7,0,2],px=0,k=0,m=Math.max(5,Math.round(W/150));for(k=0;k<m;k++){var w=Math.round(T.width/m*(.7+h2(k,5,5)*.6));if(k===m-1)w=T.width-px;var t=tex(seq[k%seq.length],w+2,T.height,k+40,1.35);x.drawImage(t,px,0);px+=w;if(px>=T.width)break}paint()}
+    function paint(){if(T)core(cv,T,scrollY/1500,1,0)}
+    new ResizeObserver(function(){if(Math.abs(cv.offsetWidth-tw)>8)mk()}).observe(cv);mk();
+    if(!KIT.REDUCED){var tk=false,on=true;KIT.onView(cv,function(v){on=v});addEventListener('scroll',function(){if(on&&!tk){tk=true;requestAnimationFrame(function(){tk=false;paint()})}},{passive:true})}
+  })();
+  /* ── ящик: страница «Услуги» ── */
+  var B=[['Капитальный ремонт',[
+      ['Крепь и&nbsp;водопритоки','Цементная крепь и водопритоки',0,['Изоляция обводнённых интервалов и пластов полимерами и цементом','Восстановление либо наращивание цементного кольца'],1.2],
+      ['Колонна','Герметичность эксплуатационной колонны',1,['Тампонированием','Спуском потайной обсадной колонны меньшего диаметра','Частичной заменой колонны'],.9],
+      ['Устье','Устьевое оборудование',6,['Замена части или полная смена фонтанной ёлки и трубной головки','Восстановление герметичности межколонного пространства'],.8],
+      ['Аварии','Ликвидация аварий',3,['Извлечение подземного аварийного оборудования','Очистка забоя от инородных предметов','Замена повреждённых деталей колонны, ремонт устья','Восстановление после обрушения труб и штанг, обрыва каротажного кабеля'],.95],
+      ['Горизонты','Изоляция продуктивных горизонтов',2,['Возврат к выше- и нижележащим горизонтам, разобщение пластов','Внедрение либо извлечение пакеров-отсекателей'],1.05]]],
+    ['Капитальный ремонт и исследования',[
+      ['Призабойная зона','Обработка призабойной зоны',5,['Модифицированные кислотные обработки','Сопровождение гидроразрыва пласта (ГРП)'],1.15],
+      ['Исследования','Исследование скважин',4,['Детализация геологического разреза','Оценка технического состояния'],1],
+      ['Перевод','Перевод скважин',7,['Под нагнетательные','Под отбор технической воды','В пьезометрические, наблюдательные'],.9],
+      ['Консервация','Консервация и ликвидация',0,['Консервация и расконсервация скважин','Восстановление после ранее проведённых работ по ликвидации','Ликвидация, в том числе установкой ликвидационных мостов'],1],
+      ['Вертлюг','Силовой вертлюг Ventury Tech‑250',1,['Фрезерование пакеров и аварийного оборудования','Точная настройка крутящего момента и скорости вращения КНБК'],.9]]],
+    ['Текущий ремонт',[
+      ['Насосы УЭЦН','Замена насосов',6,['В скважинах, эксплуатирующихся УЭЦН'],1],
+      ['Пробки','Очистка забоев и подъёмных колонн',2,['От пробок из песка, засоления, скоплений гидратов и парафинов'],.85],
+      ['НКТ','Замена негерметичных НКТ',1,['Насосно-компрессорные трубы','Испытание вновь поставленных комплектующих'],.8],
+      ['Межколонка','Межколонное пространство',4,['Ликвидация негерметичности восстановлением (наращиванием) цементного кольца','Другие методы при наличии приёмистости'],1.15],
+      ['Отложения','Эксплуатационная колонна',5,['Очистка от отложений','Укрепление призабойной зоны пласта'],1.05]]],
+    ['Освоение и ГНКТ',[
+      ['После МГРП','Освоение после МГРП',0,['Очистка призабойной зоны от продуктов бурения и ГРП','Вывод газовой или газоконденсатной скважины на режим'],1],
+      ['Азот','Азотное освоение с ГНКТ',7,['Освоение скважины азотным методом с помощью гибких труб','Промывка после гидравлического разрыва пласта'],.75],
+      ['Гидраты','Гидратные пробки и отложения',4,['Устранение гидратных пробок','Очистка ствола и забоя от посторонних отложений'],.9],
+      ['Приток','Приток и приёмистость',6,['Обработка призабойной зоны физико-химическими методами','Обработка для увеличения приёмистости','Укрепление призабойной зоны'],.85],
+      ['Геофизика','Геофизические исследования',2,['С применением автономных геофизических приборов','Установка трубных отсекателей и другого оборудования'],1],
+      ['Премиум‑резьба','Премиальные резьбовые соединения',5,['Свинчивание, развинчивание, спуск и подъём обсадных колонн и НКТ','Контроль моментов свинчивания','Обслуживание гидравлических ключей'],1.1]]]];
+  var bx=$('#bx'),spec=$('#spec'),sc=$('#specc canvas'),all=[],cur=null,BT=null,rot=0,vel=.00012,sel=$('#f-w');
+  B.forEach(function(g,gi){
+    var t=document.createElement('div'),og=document.createElement('optgroup');t.className='tray';t.innerHTML='<h3></h3><div class="lane"></div>';t.firstChild.textContent=g[0];og.label=g[0];sel.appendChild(og);
+    g[1].forEach(function(f,i){
+      var b=document.createElement('button'),sd=gi*17+i*5+3,op=document.createElement('option');b.type='button';b.className='fr';b.setAttribute('aria-pressed','false');b.setAttribute('aria-label',f[1]);b.style.setProperty('--w',f[4]);b.style.setProperty('--rt',((h2(sd,7,1)-.5)*5).toFixed(1)+'deg');b.innerHTML='<canvas></canvas><span aria-hidden="true"></span>';b.lastChild.innerHTML=f[0];
+      op.textContent=f[1];op.value=f[1];og.appendChild(op);
+      var o={b:b,f:f,g:g[0],s:sd,tray:t,cv:b.firstChild,rot:h2(sd,1,1)};all.push(o);
+      var tm;b.addEventListener('click',function(){pick(o,true)});b.addEventListener('focus',function(){if(b.matches(':focus-visible'))pick(o)});
+      b.addEventListener('pointerenter',function(e){if(e.pointerType!=='mouse')return;spin(o);tm=setTimeout(function(){pick(o)},140)});b.addEventListener('pointerleave',function(){clearTimeout(tm)});
+      t.lastChild.appendChild(b);
+    });
+    bx.appendChild(t);
+  });
+  function one(o){if(!o.T)o.T=tex(o.f[2],Math.max(60,o.cv.offsetWidth),264,o.s,1.1);core(o.cv,o.T,o.rot,o.s,7)}
+  var gen=0;function paintAll(){var id=++gen,i=0;(function s(){if(id!==gen)return;if(i<all.length){one(all[i++]);setTimeout(s,0)}})()}
+  function spin(o){if(KIT.REDUCED||o.sp||!o.T)return;o.sp=1;var t0=performance.now(),r0=o.rot;(function s(t){var p=Math.min(1,Math.max(0,(t-t0)/1100));o.rot=r0+(1-Math.pow(1-p,3))*.5;core(o.cv,o.T,o.rot,o.s,7);if(p<1)requestAnimationFrame(s);else o.sp=0})(t0)}
+  function pick(o,click){
+    if(cur!==o){cur=o;all.forEach(function(q){q.b.setAttribute('aria-pressed',q===o)});
+      $('#t-g').textContent=o.g;$('#t-h').textContent=o.f[1];var l=$('#t-l');l.textContent='';o.f[3].forEach(function(s){var li=document.createElement('li');li.textContent=s;l.appendChild(li)});
+      BT=null;vel=.0011;drawBig()}
+    if(click&&innerWidth<=1100){o.tray.appendChild(spec);drawBig()}
+    if(click)spin(o);
+  }
+  function drawBig(){if(!cur||!sc.offsetWidth)return;if(!BT){var k=Math.min(1,330/sc.offsetWidth);BT=cur.BT=cur.BT||tex(cur.f[2],Math.round(sc.offsetWidth*k),Math.round(sc.offsetHeight*3.14*k),cur.s,2.2*k)}core(sc,BT,rot,cur.s,16)}
+  $('#t-b').addEventListener('click',function(){sel.value=cur.f[1]});
+  KIT.raf(sc,function(t,dt){vel+=(.00006-vel)*.03;if(!drag)rot+=vel*dt*.6;drawBig()},30);
+  var drag=false,ly=0;sc.parentNode.addEventListener('pointerdown',function(e){drag=true;ly=e.clientY;sc.parentNode.setPointerCapture(e.pointerId)});
+  sc.parentNode.addEventListener('pointermove',function(e){if(!drag)return;rot-=(e.clientY-ly)/520;ly=e.clientY;if(KIT.REDUCED||KIT.still)drawBig()});
+  ['pointerup','pointercancel'].forEach(function(n){sc.parentNode.addEventListener(n,function(){drag=false})});
+  pick(all[6]);if(innerWidth<=1100)all[6].tray.appendChild(spec);
+  var lw=0;new ResizeObserver(function(){if(Math.abs(bx.clientWidth-lw)<2)return;lw=bx.clientWidth;if(innerWidth>1100&&spec.parentNode!==bx.parentNode)bx.parentNode.appendChild(spec);all.forEach(function(o){o.T=o.BT=null});paintAll();BT=null;drawBig()}).observe(bx);
+  /* ── манометр ── */
+  var D=$('#dial'),MAX=120,A0=-135,A1=135,s='';
+  function pt(a,r){var q=(a-90)*Math.PI/180;return (250+r*Math.cos(q)).toFixed(1)+' '+(250+r*Math.sin(q)).toFixed(1)}
+  var C=2*Math.PI*206,arcL=C*.75;
+  s+='<circle cx="250" cy="250" r="238" fill="none" stroke="#DCC39A" stroke-width="5"/><circle cx="250" cy="250" r="226" fill="#0B1F49" stroke="rgba(255,255,255,.25)"/>';
+  s+='<circle class="arc" cx="250" cy="250" r="206" fill="none" stroke="#B0702A" stroke-width="20" transform="rotate(135 250 250)"/>';
+  for(var v=0;v<=MAX;v+=2){var a=A0+(A1-A0)*v/MAX,big=v%20===0;s+='<path d="M'+pt(a,216)+'L'+pt(a,big?184:v%10?206:196)+'" stroke="#F1F5FA" stroke-width="'+(big?3:1.4)+'"/>';if(big){var p=pt(a,160).split(' ');s+='<text x="'+p[0]+'" y="'+(+p[1]+9)+'" text-anchor="middle" font-family="Playfair Display" font-weight="700" font-size="27" fill="#F1F5FA" style="font-variant-numeric:lining-nums">'+v+'</text>'}}
+  s+='<text x="250" y="345" text-anchor="middle" font-family="Onest" font-size="21" fill="#B7C6DE">МПа</text><g class="nd"><path d="M250 58l9 192h-18Z" fill="#DCC39A"/><path d="M250 250v48" stroke="#DCC39A" stroke-width="9"/></g><circle cx="250" cy="250" r="17" fill="#DCC39A"/><circle cx="250" cy="250" r="6" fill="#0B1F49"/>';
+  D.innerHTML=s;var arc=D.querySelector('.arc');
+  function set(b){$$('#sh button').forEach(function(o){o.setAttribute('aria-pressed',o===b)});var lo=+b.dataset.lo,hi=+b.dataset.hi,L=arcL*(hi-lo)/MAX;arc.style.strokeDasharray=L+' '+C;arc.style.strokeDashoffset=-arcL*lo/MAX;D.style.setProperty('--a',A0+(A1-A0)*hi/MAX)}
+  $$('#sh button').forEach(function(b){b.addEventListener('click',function(){set(b)})});
+  if(KIT.REDUCED)set($('#sh button'));else{arc.style.strokeDasharray='0 '+C;D.style.setProperty('--a',A0);var io=new IntersectionObserver(function(e){if(e[e.length-1].isIntersecting){io.disconnect();set($('#sh button'))}},{threshold:.4});io.observe(D)}
+});
+</script>
+</body>
+</html>

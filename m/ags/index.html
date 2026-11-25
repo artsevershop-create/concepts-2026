@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Арктик Газ Сервис — гидроразрыв пласта, ГРП и МГРП</title>
+<meta name="description" content="Концепция редизайна сайта ООО «Арктик Газ Сервис»: ГРП и МГРП, два собственных флота, более 2250 скважино-операций, база в Радужном.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/wix-madefor-display-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/ph/02.webp" as="image">
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--night:#05141F;--night-2:#0B2436;--ice:#E4EFF6;--snow:#F6FAFD;--ink:#06202F;--brand:#0B82B4;--brand-d:#07658D;--sand:#F3B13C;
+  --bg:var(--snow);--fg:var(--ink);--muted:#48616F;--accent:var(--brand-d);--accent-h:#044863;--r:6px;--line:rgba(6,44,66,.18);
+  --f-display:"Wix Madefor Display",system-ui,sans-serif;--f-text:"Wix Madefor Display",system-ui,sans-serif;--f-num:"JetBrains Mono",ui-monospace,monospace;--hdr-h:84px;--wrap:1360px;--sec:clamp(72px,9vw,144px)}
+[data-theme=night]{--bg:var(--night);--fg:#EAF6FC;--muted:#9DB7C6;--line:rgba(150,210,240,.2);--accent:#2BB3EA;background:var(--night);color:var(--fg)}
+body{font-size:17px;line-height:1.55}
+img{height:auto}[data-img]{overflow:hidden}
+h1,h2,h3{font-weight:700;letter-spacing:-.035em;line-height:1.03}
+h2{font-size:clamp(34px,4.5vw,70px);max-width:14em}
+.n{font-family:var(--f-num);font-variant-numeric:tabular-nums;letter-spacing:-.05em;white-space:nowrap}
+.lead{font-size:clamp(18px,1.45vw,21px);line-height:1.5}
+/* шапка */
+.hdr{background:var(--snow);border-bottom:1px solid var(--line)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.4vw,40px)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;font-weight:700;font-size:18px;line-height:1.1;letter-spacing:-.02em}
+.brand img{height:62px;width:auto}
+.hdr nav{display:flex;gap:clamp(16px,2vw,34px);margin-left:auto;font-weight:500}
+.hdr nav a{text-decoration:none;padding:12px 0;border-bottom:2px solid transparent;transition:border-color .25s}
+.hdr nav a:hover{border-color:var(--brand)}
+.hdr .tel{text-decoration:none;font-weight:600;padding:12px 0}
+/* первый экран: снег сверху, пласт снизу */
+.hero{position:relative;padding-top:var(--hdr-h);min-height:min(100svh,940px);display:grid;grid-template-rows:1fr auto;isolation:isolate;overflow:clip;background:var(--ice)}
+.hero>img{position:absolute;z-index:-2;inset:var(--hdr-h) 0 0;width:100%;height:calc(100% - var(--hdr-h));object-fit:cover;object-position:50% 100%}
+.hero::before{content:"";position:absolute;z-index:-1;inset:var(--hdr-h) 0 0;background:linear-gradient(0deg,rgba(228,239,246,.96) 20%,rgba(228,239,246,.72) 42%,rgba(228,239,246,0) 64%)}
+.hero-in{align-self:end;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px clamp(28px,4vw,70px);align-items:end;padding-block:24px 40px;width:100%}
+h1{font-size:clamp(44px,5.9vw,94px);letter-spacing:-.045em;line-height:.96}
+.hero .lead{max-width:27em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.cta .btn--ghost{background:rgba(255,255,255,.75)}
+.facts{background:var(--night);color:#EAF6FC}
+.facts .wrap{display:grid;grid-template-columns:1.1fr 1.25fr .85fr .9fr}
+.facts div div{padding:20px 20px 22px 0}
+.facts b{display:block;font:600 clamp(28px,3.1vw,48px)/1 var(--f-num);letter-spacing:-.07em}
+.facts b i{font-style:normal;color:var(--sand)}
+.facts span{display:block;margin-top:6px;font-size:16px;line-height:1.3;color:#A9C4D3}
+@media (prefers-reduced-motion:no-preference){
+  .js .hero>img{animation:down 3s var(--e-smooth) both}
+  .js h1 span{display:inline-block;animation:crack 1.4s var(--e-strike) both;animation-delay:calc(var(--n)*.14s)}
+}
+@keyframes down{from{transform:scale(1.14) translateY(-3%)}}
+@keyframes crack{from{clip-path:inset(0 0 -10% 60%);transform:translateX(-.14em)}to{clip-path:inset(0 -5% -10% 0)}}
+/* трещина */
+.frac{position:relative;overflow:clip}
+.rock{position:relative;height:clamp(520px,66svh,720px)}
+.rock canvas{position:absolute;inset:0;width:100%;height:100%}
+.rock .wrap{position:relative;padding-top:clamp(40px,4vw,64px);pointer-events:none}
+.rock p{margin-top:16px;max-width:32em;color:#BBD3E0}
+.pult{background:var(--night-2);border-top:1px solid var(--line)}
+.pult .wrap{display:grid;grid-template-columns:auto minmax(0,.9fr) minmax(0,1.5fr);gap:20px clamp(24px,3.4vw,56px);align-items:center;padding-block:26px}
+.hold{width:138px;height:138px;border-radius:50%;position:relative;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;font-weight:700;font-size:17px;line-height:1.15;color:#06202F;
+  background:radial-gradient(circle at 38% 30%,#FFD98C,var(--sand) 46%,#C98818);transition:transform .15s}
+.hold::before{content:"";position:absolute;inset:-11px;border-radius:50%;background:conic-gradient(var(--sand) calc(var(--p,0)*1turn),rgba(150,210,240,.18) 0);mask:radial-gradient(closest-side,transparent calc(100% - 6px),#000 calc(100% - 5px));-webkit-mask:radial-gradient(closest-side,transparent calc(100% - 6px),#000 calc(100% - 5px))}
+.hold:active,.hold.on{transform:scale(.95)}
+.sl span{display:block;margin-bottom:6px;color:#BBD3E0}
+.sl input{width:100%;height:44px;margin:0;accent-color:var(--sand)}
+.say{min-height:3.1em;font-weight:500;line-height:1.4;margin-top:10px}
+.lamps{display:flex;gap:8px;margin-top:8px}
+.lamps i{flex:1;height:8px;border-radius:4px;background:rgba(150,210,240,.18);transition:background-color .4s}
+.lamps i.on{background:var(--sand)}.lamps i.go{background:#2BB3EA}
+.chart{position:relative}
+.chart canvas{width:100%;height:150px}
+.chart small{position:absolute;font:500 14px/1 var(--f-num);color:#9DB7C6;letter-spacing:-.03em}
+.chart small:nth-of-type(1){left:10px;top:8px}.chart small:nth-of-type(2){right:8px;bottom:8px}
+.again{min-height:44px;text-decoration:underline;text-underline-offset:4px;color:#EAF6FC}
+/* технологии */
+.tech-g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,90px);margin-top:clamp(26px,3.4vw,52px);align-items:start}
+.tl{border-top:2px solid var(--ink)}
+.tl label{display:grid;grid-template-columns:30px minmax(0,1fr);gap:16px;align-items:center;min-height:62px;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:clamp(18px,1.55vw,23px);line-height:1.25;font-weight:500;letter-spacing:-.015em;transition:padding .4s var(--e-smooth),color .25s}
+.tl input{appearance:none;-webkit-appearance:none;width:26px;height:26px;margin:0;border:2px solid var(--brand);border-radius:50%;background:radial-gradient(circle,var(--brand) 0 0) 50%/0 0 no-repeat;transition:background-size .3s var(--e-smooth)}
+.tl input:checked{background-size:14px 14px;border-radius:50%;background-image:radial-gradient(circle,var(--brand) 66%,transparent 70%)}
+.tl label:hover,.tl label.cur{color:var(--brand-d);padding-left:10px}
+.core{position:sticky;top:calc(var(--hdr-h) + 18px);background:var(--night);color:#EAF6FC;border-radius:var(--r);overflow:hidden}
+.core canvas{width:100%;height:clamp(300px,46svh,470px)}
+.core div{padding:18px 22px 22px;display:flex;gap:14px 20px;min-height:136px;align-items:center;justify-content:space-between;border-top:1px solid rgba(150,210,240,.2)}
+.core b{flex:1;font-size:20px;line-height:1.2;letter-spacing:-.02em}
+.core .btn{flex:none;background:var(--sand);color:#06202F}.core .btn::before{background:#FFD07A}
+/* операция */
+.op{background:var(--ice)}
+.op svg{width:100%;height:auto;margin-top:clamp(26px,4vw,56px);overflow:visible}
+.op .cv{fill:none;stroke:var(--brand);stroke-width:4;stroke-linejoin:round;stroke-linecap:round}
+.op-tabs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));border-top:2px solid var(--ink)}
+.op-tabs button{min-height:64px;text-align:left;font:600 clamp(20px,1.9vw,30px)/1 var(--f-num);letter-spacing:-.08em;padding:12px 6px 12px 10px;border-left:1px solid var(--line);color:var(--muted);transition:background-color .3s,color .3s}
+.op-tabs [aria-selected=true]{background:var(--ink);color:#fff}
+.op-tabs button:not([aria-selected=true]):hover{color:var(--ink);background:#fff}
+.op-d{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px clamp(28px,5vw,90px);align-content:start;min-height:270px;padding-top:34px}
+.op-d h3{font-size:clamp(26px,2.8vw,44px)}
+.op-d li{padding:9px 0;border-bottom:1px solid var(--line);font-size:18px;line-height:1.4}
+/* флот */
+.fleet-h{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px clamp(28px,5vw,90px);align-items:end}
+.fleet-p{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(10px,1.4vw,20px);margin-top:clamp(26px,4vw,56px)}
+.fleet-p img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.fleet-p{height:clamp(400px,43vw,640px);grid-template-rows:minmax(0,1fr)}.fleet-p>div{min-height:0;height:100%}.fleet-p figure{min-height:0;height:100%}.fleet-p div{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,1fr);gap:inherit}
+.kitlist{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:30px clamp(28px,5vw,90px);margin-top:clamp(36px,4.6vw,72px)}
+.kitlist ol li{display:flex;gap:18px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);font-size:clamp(19px,1.7vw,25px);line-height:1.25;font-weight:600;letter-spacing:-.02em}
+.kitlist ol li span{margin-left:auto;font-family:var(--f-num);font-weight:600;color:var(--sand);letter-spacing:-.06em;white-space:nowrap}
+.kitlist h3{font-size:clamp(22px,1.8vw,28px);margin-bottom:14px}
+.vol li{padding:10px 0 12px}
+.vol p{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.vol b{font:600 clamp(22px,2vw,30px)/1.1 var(--f-num);letter-spacing:-.06em;white-space:nowrap}
+.vol i{display:block;height:12px;margin-top:8px;border-radius:6px;background:var(--brand);width:var(--w);transform-origin:0 50%}
+.vol i.s{background:var(--sand)}
+.aux{margin-top:24px;color:var(--muted);line-height:1.6}
+/* география */
+.geo{position:relative}
+.geo-g{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,90px);align-items:start}
+.fields{margin-top:30px;font-weight:700;font-size:clamp(28px,4vw,60px);line-height:1.12;letter-spacing:-.04em;color:var(--brand-d)}
+.fields span{white-space:nowrap}.fields span:not(:last-child)::after{content:" / ";color:#9FC4D6;font-weight:400}
+.geo figure img{width:100%;aspect-ratio:4/3.1;object-fit:cover;border-radius:var(--r)}
+.cl li{padding:12px 0;border-bottom:1px solid var(--line);font-weight:500}
+.cl{margin-top:24px;border-top:2px solid var(--ink)}
+/* заявка */
+.req-g{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,90px)}
+.mode{display:flex;gap:8px;margin-top:30px}
+.mode button{min-height:54px;padding:8px 26px;border-radius:var(--r);font-weight:600;background:var(--night-2);color:#BBD3E0;transition:background-color .3s,color .3s}
+.mode [aria-pressed=true]{background:#EAF6FC;color:var(--ink)}
+.req form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.req form [hidden]{display:none!important}
+.req .full{grid-column:1/-1}.req .field>span,.req .agree{font-size:16px}
+.req .btn{background:var(--sand);color:#06202F}.req .btn::before{background:#FFD07A}
+.req .done{grid-column:1/-1;border:1px solid var(--line);border-radius:var(--r);padding:28px}.req .done h3{font-size:36px}
+.req dl{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr);gap:8px 20px;margin:18px 0}.req dt{color:var(--muted)}
+.cts{margin-top:34px;display:grid;gap:4px}
+.cts a{font:600 clamp(22px,2.2vw,32px)/1.2 var(--f-num);letter-spacing:-.06em;text-decoration:none;min-height:46px;display:inline-flex;align-items:center}
+.cts a:hover{color:var(--sand)}
+.cts p{color:var(--muted);margin-top:8px;max-width:24em}
+.ftr{border-top:1px solid var(--line);padding:26px 0}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:10px 40px;justify-content:space-between;color:var(--muted);font-size:16px}
+.ftr a{color:var(--fg);display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:1180px) and (min-width:901px){.hdr .tel,.brand span{display:none}}
+@media (max-width:900px){
+  :root{--hdr-h:70px}
+  .brand img{height:50px}.hdr .tel{display:none}.brand{font-size:17px}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:var(--snow);flex-direction:column;gap:0;padding:20px var(--gutter);font-size:30px;font-weight:700;letter-spacing:-.03em;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  [data-burger]{margin-left:auto}
+  .hero{min-height:0}
+  .hero>img{height:360px;object-position:28% 40%}
+  .hero::before{inset:var(--hdr-h) 0 auto;height:361px;background:linear-gradient(0deg,var(--ice) 2%,rgba(228,239,246,0) 44%)}
+  .hero-in{grid-template-columns:minmax(0,1fr);padding-block:290px 28px}
+  h1{font-size:clamp(40px,11.4vw,64px)}
+  .cta .btn{flex:1 1 100%}
+  .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.facts div div{padding:14px 10px 14px 0}.facts b{font-size:30px}
+  .rock{height:600px}.rock p{font-size:17px;padding-right:38px}
+  .pult .wrap{grid-template-columns:auto minmax(0,1fr);gap:18px 30px;padding-block:28px}
+  .hold{width:118px;height:118px;margin:8px}
+  .chart{grid-column:1/-1}.chart canvas{height:120px}
+  .say{grid-column:1/-1}
+  .tech-g,.op-d,.fleet-h,.fleet-p,.kitlist,.geo-g,.req-g{grid-template-columns:minmax(0,1fr)}
+  .core{top:calc(var(--hdr-h) + 6px);order:-1;z-index:2}.core canvas{height:170px}.core div{min-height:104px;padding:10px 16px}.core b{font-size:16px}.core .btn{padding-inline:1.2em}
+  .op-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}.op-tabs button{border-bottom:1px solid var(--line)}
+  .op svg{display:none}.op-tabs{margin-top:26px}
+  .fleet-p{height:auto;grid-template-rows:none}.fleet-p>div{height:auto}.fleet-p>figure{height:auto}.fleet-p div figure{height:auto}.fleet-p div{grid-template:auto/repeat(2,minmax(0,1fr))}.fleet-p div figure{aspect-ratio:4/3}.op-d{min-height:0}
+  .kitlist ol li{flex-wrap:wrap;gap:4px 14px}
+  .req form{grid-template-columns:minmax(0,1fr)}
+  .mode button{flex:1;padding:8px 10px}
+  .fields span{white-space:normal}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a class="brand" href="#main"><img src="img/logo.png" alt="AGS" width="560" height="460"><span>Арктик<br>Газ Сервис</span></a>
+  <nav data-menu aria-label="Основное меню"><a href="#tech">Технологии</a><a href="#op">Как работаем</a><a href="#fleet">Флот</a><a href="#geo">Где работали</a><a href="#req">Контакты</a></nav>
+  <a class="tel n" href="tel:+73466839030">+7 (34668) 39030</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <img src="img/ph/02.webp" alt="Флот ГРП на заснеженной кустовой площадке, вид сверху" width="1920" height="1080" fetchpriority="high">
+  <div class="wrap hero-in">
+    <h1><span style="--n:0">Гидроразрыв</span> <span style="--n:1">пласта в&nbsp;полной</span> <span style="--n:2">автономии</span></h1>
+    <div><p class="lead">Два собственных мобильных комплекса ГРП с&nbsp;персоналом. Трудноизвлекаемые запасы, дальние месторождения, вахта. База в&nbsp;Радужном.</p>
+      <div class="cta"><a class="btn" data-magnetic href="#req">Обсудить скважину</a><a class="btn btn--ghost" href="#frac">Создать давление</a></div></div>
+  </div>
+  <div class="facts"><div class="wrap">
+    <div><b><i>&gt;</i>2250</b><span>скважино-операций ГРП</span></div>
+    <div><b><i>&gt;</i>15&#8239;000</b><span>л.&nbsp;с., средняя мощность флота</span></div>
+    <div><b><i>&gt;</i>13</b><span>лет опыта</span></div>
+    <div><b>126</b><span>сотрудников</span></div>
+  </div></div>
+</section>
+
+<section class="frac" id="frac" data-theme="night">
+  <div class="rock"><canvas id="rock" role="img" aria-label="Схема: горизонтальный ствол в пласте, по стадиям растут ветвистые трещины и заполняются проппантом"></canvas>
+    <div class="wrap"><h2>Держите давление, и&nbsp;пласт раскроется</h2><p>Жидкость под давлением образует в&nbsp;породе трещины. Проппант фиксирует их, и&nbsp;по&nbsp;каналам идёт нефть.</p></div></div>
+  <div class="pult"><div class="wrap">
+    <button class="hold" id="hold" type="button">Давление</button>
+    <div><label class="sl"><span>Или ползунком</span><input type="range" id="press" min="0" max="100" value="0"></label><div class="lamps" id="lamps" aria-hidden="true"></div><p class="say" id="say" role="status"></p></div>
+    <div class="chart"><canvas id="chart" aria-hidden="true"></canvas><small>давление</small><small>время</small></div>
+  </div></div>
+</section>
+
+<section class="sec" id="tech"><div class="wrap">
+  <h2 data-split>Десять технологий ГРП</h2>
+  <div class="tech-g">
+    <div class="tl" id="tl" role="group" aria-label="Технологии ГРП"></div>
+    <div class="core"><canvas id="core" role="img" aria-label="Схема выбранной технологии"></canvas><div><b id="core-t"></b><a class="btn" href="#req">В&nbsp;запрос</a></div></div>
+  </div>
+</div></section>
+
+<section class="sec op" id="op"><div class="wrap">
+  <h2 data-split>Операция по&nbsp;шагам</h2>
+  <svg viewBox="0 0 1360 170" aria-hidden="true"><path d="M0 168H1360" stroke="#06202F" stroke-opacity=".25"/><path class="cv" id="cv" d="M0 160H170C230 160 250 150 340 150H400C470 150 480 132 510 130C525 60 540 46 555 46C566 46 570 78 590 80C640 84 650 150 680 152H850C880 152 885 10 905 10C922 10 925 44 945 48C990 56 1060 46 1140 56C1170 60 1176 140 1200 150C1240 160 1300 160 1360 160"/><circle id="dot" r="9" fill="#F3B13C" stroke="#06202F" stroke-width="3"/></svg>
+  <div class="op-tabs" id="ops" role="tablist" aria-label="Шаги операции"></div>
+  <div class="op-d" id="opd" role="tabpanel" aria-live="polite"><h3 id="op-h"></h3><ul id="op-u"></ul></div>
+</div></section>
+
+<section class="sec" id="fleet" data-theme="night"><div class="wrap">
+  <div class="fleet-h"><h2 data-split>Вся техника своя</h2><p class="lead" style="color:#BBD3E0;max-width:32em">Не&nbsp;зависим от&nbsp;субподрядчиков, сами решаем вопросы мобилизации и&nbsp;демобилизации. Ремонт и&nbsp;производство оборудования ГРП на&nbsp;собственной базе в&nbsp;Радужном.</p></div>
+  <div class="fleet-p"><figure data-img><img src="img/ph/16.webp" alt="Насосные установки флота ГРП на снегу на рассвете" loading="lazy" width="1312" height="882"></figure>
+    <div><figure data-img><img src="img/ph/08.webp" alt="Пульт станции контроля ГРП" loading="lazy" width="1312" height="984"></figure><figure data-img><img src="img/ph/07.webp" alt="Насосная установка высокого давления на шасси Mercedes-Benz" loading="lazy" width="1312" height="984"></figure></div></div>
+  <div class="kitlist">
+    <div><h3>Флот ГРП</h3><ol>
+      <li>Станция контроля ГРП</li><li>Смесительная установка, блендер</li><li>Насосы высокого давления<span>&gt;15&#8239;000 л. с.</span></li><li>Подача химических добавок</li><li>Гидратация геля</li><li>Подача проппанта на&nbsp;полуприцепе</li><li>Подача проппанта на&nbsp;шасси Mercedes&#8209;Benz</li></ol></div>
+    <div><h3>Вода и&nbsp;тепло с&nbsp;собой</h3><ul class="vol">
+      <li><p><span>Быстровозводимый бассейн</span><b>1200 м³</b></p><i data-line style="--w:100%"></i></li>
+      <li><p><span>Ёмкостной парк</span><b>800 м³</b></p><i data-line style="--w:66.7%"></i></li>
+      <li><p><span>Автоцистерны</span><b>85 м³</b></p><i data-line style="--w:7.1%"></i></li>
+      <li><p><span>Нагрев воды</span><b>1800–2700 кВт</b></p><i class="s" data-line style="--w:100%"></i></li></ul>
+      <p class="aux">Генераторы, спутниковая связь, автокран, ППДУ, топливозаправщик, вахтовый автобус и&nbsp;вагон&#8209;ресторан тоже в&nbsp;составе комплекса.</p></div>
+  </div>
+</div></section>
+
+<section class="sec geo" id="geo"><div class="wrap geo-g">
+  <div><h2 data-split>Где уже работали</h2>
+    <p class="fields"><span>Тагринское</span> <span>Ярактинское</span> <span>Верхнетирское</span> <span>Аянское</span> <span>Западно&#8209;Аянское</span> <span>Марковское</span> <span>Большетирское</span></p>
+    <p style="margin-top:22px;max-width:36em;color:var(--muted)">И&nbsp;другие месторождения. Сейчас работа сосредоточена преимущественно в&nbsp;Восточной Сибири. Подряд получаем по&nbsp;итогам тендеров, большинство заказчиков постоянные.</p></div>
+  <div><figure data-img><img src="img/ph/17.webp" alt="Флот ГРП на горизонте заснеженного поля" loading="lazy" width="1312" height="875"></figure>
+    <ul class="cl"><li>Иркутская нефтяная компания</li><li>Варьеганнефть</li><li>ИНК‑Запад</li><li>ИНК‑НЕФТЕГАЗГЕОЛОГИЯ</li><li>Тихоокеанский терминал</li></ul></div>
+</div></section>
+
+<section class="sec req" id="req" data-theme="night"><div class="wrap req-g">
+  <div><h2 data-split id="rq-h">Обсудить операцию</h2>
+    <div class="mode" role="group" aria-label="Кто пишет"><button type="button" data-mode="z" aria-pressed="true">Заказчик</button><button type="button" data-mode="s" aria-pressed="false">Соискатель</button></div>
+    <div class="cts"><a href="tel:+73466839030">+7 (34668) 39030</a><a href="tel:+73466839040">+7 (34668) 39040</a><a href="mailto:ags.llc@mail.ru">ags.llc@mail.ru</a><p>628462, г.&nbsp;Радужный, 1&nbsp;мкрн., д.&nbsp;43, оф.&nbsp;1064</p></div></div>
+  <form data-demo-form id="form">
+    <input type="hidden" name="Обращение" id="f-mode" value="Заказчик">
+    <label class="field full" data-for="z"><span>Технологии</span><textarea name="Технологии" id="f-tech" rows="2"></textarea></label>
+    <label class="field" data-for="z"><span>Месторождение, куст</span><input name="Месторождение" autocomplete="off"></label>
+    <label class="field" data-for="z"><span>Скважина</span><select name="Скважина"><option>Горизонтальная</option><option>Наклонно‑направленная</option><option>Вертикальная</option></select></label>
+    <label class="field" data-for="s" hidden><span>Желаемая должность</span><input name="Должность" autocomplete="off" disabled></label>
+    <label class="field" data-for="s" hidden><span>Стаж в&nbsp;ГРП, виды оборудования</span><input name="Стаж" autocomplete="off" disabled></label>
+    <label class="field" data-for="s" hidden><span>Водительские категории, допуски</span><input name="Допуски" autocomplete="off" disabled></label>
+    <label class="field" data-for="s" hidden><span>Готовность к&nbsp;вахте</span><select name="Вахта" disabled><option>Да</option><option>Нет</option></select></label>
+    <label class="field"><span>Имя, компания</span><input name="Контакт" required autocomplete="name"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить</button>
+    <div class="done" role="status"><h3>Письмо собрано</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+  </form>
+</div></section>
+</main>
+<footer class="ftr" data-theme="night"><div class="wrap"><span>© 2024 ООО «Арктик Газ Сервис»</span><a class="link" href="mailto:ags.llc@mail.ru">ags.llc@mail.ru</a></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73466839030">Позвонить</a><a class="btn" href="#req">Запрос</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))},DPR=Math.min(2,devicePixelRatio||1);
+  function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+  // ветвистая трещина: отрезки с «временем» появления. Один и тот же seed даёт один и тот же рисунок
+  function tree(seed,len,dir,o){
+    o=o||{};var r=rng(seed),S=[],mx=0;
+    (function grow(x,y,a,l,t,w,dep){var n=Math.max(2,Math.round(l/8)),i;
+      for(i=0;i<n;i++){a+=(r()-.5)*(o.wild||.62);a+=(dir-a)*(dep?.05:.16);var x1=x+Math.cos(a)*8,y1=y+Math.sin(a)*8,ww=w*(1-i/n*.75);
+        S.push({x:x,y:y,X:x1,Y:y1,t:t,T:t+8,w:ww,k:r(),q:r()});t+=8;mx=Math.max(mx,t);x=x1;y=y1;
+        if(dep<3&&i>0&&r()<(o.br||.3))grow(x,y,a+(r()<.5?-1:1)*(.35+r()*.75),l*(.28+r()*.34)*(1-i/n*.45),t,ww*.7,dep+1)}
+    })(0,0,dir,len,0,o.w||3.8,0);
+    S.mx=mx;return S;
+  }
+  function strokeTree(c,S,g,col,glow,mul){var d=g*S.mx,b,i,s,u;
+    for(b=0;b<3;b++){c.strokeStyle=b?col:glow;c.lineCap='round';
+      for(i=0;i<S.length;i++){s=S[i];if(s.t>=d)continue;u=Math.min(1,(d-s.t)/8);
+        if(b===2&&s.w<1.3)continue;c.lineWidth=(b===0?s.w*4.2+5:b===1?s.w+.5:s.w*.42)*(mul||1);if(b===2)c.strokeStyle='#F1FBFF';
+        c.beginPath();c.moveTo(s.x,s.y);c.lineTo(s.x+(s.X-s.x)*u,s.y+(s.Y-s.y)*u);c.stroke()}}
+  }
+  function dotTree(c,S,f,col,dens,rad){var d=f*S.mx,i,s;c.fillStyle=col;for(i=0;i<S.length;i++){s=S[i];if(s.t>d||s.k>dens)continue;c.beginPath();c.arc(s.x+(s.q-.5)*s.w*1.4,s.y+(s.k-.4)*3,rad*(.7+s.q*.6),0,7);c.fill()}}
+  function fit(cv){var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return null;if(cv.width!==Math.round(w*DPR)||cv.height!==Math.round(h*DPR)){cv.width=Math.round(w*DPR);cv.height=Math.round(h*DPR);return{w:w,h:h,fresh:true}}return{w:w,h:h}}
+  function layers(c,w,h,top,yb,th,seed){ // порода: пологие слои и пласт-коллектор
+    var r=rng(seed),i,x,y=top,g=c.createLinearGradient(0,0,0,h);g.addColorStop(0,'#0B2A3E');g.addColorStop(.5,'#072031');g.addColorStop(1,'#041019');c.fillStyle=g;c.fillRect(0,0,w,h);
+    for(i=0;i<16;i++){y+=h*(.03+r()*.055);if(y>h)break;var a=r()*6,m=4+r()*10;c.beginPath();for(x=0;x<=w+12;x+=12)c.lineTo(x,y+Math.sin(x/w*4+a)*m);c.lineTo(w,h);c.lineTo(0,h);c.fillStyle=i%2?'rgba(120,195,230,.055)':'rgba(0,0,0,.16)';c.fill();c.lineWidth=1;c.strokeStyle='rgba(140,205,235,.13)';c.stroke()}
+    var G=c.createLinearGradient(0,yb-th,0,yb+th);G.addColorStop(0,'rgba(43,150,200,0)');G.addColorStop(.5,'rgba(43,150,200,.32)');G.addColorStop(1,'rgba(43,150,200,0)');c.fillStyle=G;c.fillRect(0,yb-th,w,th*2);
+    for(i=0;i<w*th/190;i++){var px=r()*w,py=yb+(r()+r()-1)*th;c.fillStyle='rgba(170,222,245,'+(.06+r()*.2)+')';c.fillRect(px,py,1.4,1.4)}
+  }
+
+  /* ---------- пульт: давление, стадии, график ---------- */
+  var rock=$('#rock'),chart=$('#chart'),bg=document.createElement('canvas'),fin=document.createElement('canvas'),V=null,N=7,st,hold=false,target=0,p=0,log=[],acc=0,lastSay='';
+  function geom(){
+    var z=fit(rock);if(!z)return false;if(V&&!z.fresh)return true;
+    var w=z.w,h=z.h,mob=w<700;N=mob?5:7;V={w:w,h:h,yb:h*(mob?.7:.7),toe:w*.05,heel:w*(mob?.8:.84),x:w*(mob?.92:.93),L:h*(mob?.21:.27),xs:[],tr:[]};
+    for(var i=0;i<N;i++){V.xs.push(V.toe+20+(V.heel-V.toe-30)*i/(N-1));V.tr.push([tree(101+i*17,V.L*(.74+(i*37%10)/34)*(!mob&&i<3?.76:1),-Math.PI/2),tree(507+i*29,V.L*(.6+(i*53%10)/30),Math.PI/2)])}
+    [bg,fin].forEach(function(k){k.width=rock.width;k.height=rock.height});
+    var c=bg.getContext('2d');c.setTransform(DPR,0,0,DPR,0,0);layers(c,w,h,0,V.yb,V.L*1.15,7);
+    c.lineCap='round';c.lineJoin='round';[[13,'#03101A'],[9,'#7FA7BC'],[5,'#D6EAF4'],[2,'#0B82B4']].forEach(function(a){c.lineWidth=a[0];c.strokeStyle=a[1];c.beginPath();c.moveTo(V.x,-10);c.lineTo(V.x,V.yb-90);c.quadraticCurveTo(V.x,V.yb,V.x-90,V.yb);c.lineTo(V.toe,V.yb);c.stroke()});
+    for(i=0;i<N;i++){c.fillStyle='#03101A';c.fillRect(V.xs[i]-9,V.yb-9,18,18);c.fillStyle='#2BB3EA';c.fillRect(V.xs[i]-6,V.yb-6,12,12)}
+    redoFin();return true;
+  }
+  function stamp(i){var c=fin.getContext('2d');c.setTransform(DPR,0,0,DPR,0,0);c.save();c.translate(V.xs[i],V.yb);V.tr[i].forEach(function(S){strokeTree(c,S,1,'#59C8F4','rgba(43,179,234,.10)');dotTree(c,S,1,'#F3B13C',.8,1.9)});c.restore()}
+  function redoFin(){var c=fin.getContext('2d');c.setTransform(1,0,0,1,0,0);c.clearRect(0,0,fin.width,fin.height);if(st)for(var i=0;i<Math.min(st.i,N);i++)stamp(i)}
+  function reset(i){st={i:i,g:0,f:0,broken:false};log=[];p=0;target=0;$('#press').value=0;if(V)redoFin();lamps();say()}
+  function lamps(){var b=$('#lamps');if(b.children.length!==N){b.textContent='';for(var k=0;k<N;k++)b.appendChild(document.createElement('i'))}[].forEach.call(b.children,function(e,k){e.className=k<st.i?'on':k===st.i&&st.g>0?'go':''})}
+  function say(){var t=st.i>=N?'Все стадии закреплены проппантом, каналы для нефти открыты.':st.g>=1?'Проппант закрепляет трещину.':st.broken?(p>.42?'Порода раскрылась, трещина растёт.':'Давление упало, рост остановился.'):p>.12?'Давление растёт.':'Нажмите и держите кнопку: насосы начнут закачку.';
+    if(t!==lastSay){lastSay=t;$('#say').textContent=t;if(st.i>=N){var b=document.createElement('button');b.className='again';b.type='button';b.textContent='Повторить';b.onclick=function(){reset(0)};$('#say').append(' ',b)}}}
+  function step(dt){
+    var tg=hold?1:target;if(st.i>=N)tg=0;if(st.broken&&st.g<1)tg=Math.min(tg,.76);if(st.g>=1)tg*=.5;
+    p+=(tg-p)*Math.min(1,dt/1000*1.7);
+    if(st.i<N){
+      if(!st.broken&&p>.8){st.broken=true;p=.62}
+      if(st.broken&&st.g<1&&p>.42)st.g=Math.min(1,st.g+dt/1000*(p-.3)*.95);
+      if(st.g>=1){st.f+=dt/1000*.75;if(st.f>=1){stamp(st.i);st.i++;st.g=0;st.f=0;st.broken=false;p*=.5}}
+    }
+    acc+=dt;if(acc>55){acc=0;log.push(p+(p>.05?Math.sin(log.length*1.7)*.008+Math.sin(log.length*.61)*.008:0));if(log.length>240)log.shift()}
+    $('#hold').style.setProperty('--p',p.toFixed(3));lamps();say();
+  }
+  function draw(){
+    if(!geom())return;var c=rock.getContext('2d');c.setTransform(1,0,0,1,0,0);c.drawImage(bg,0,0);c.drawImage(fin,0,0);c.setTransform(DPR,0,0,DPR,0,0);
+    if(st.i<N){var x=V.xs[st.i];
+      if(p>.04){var R=c.createRadialGradient(x,V.yb,0,x,V.yb,40+p*120);R.addColorStop(0,'rgba(120,215,255,'+p*.5+')');R.addColorStop(1,'rgba(43,179,234,0)');c.fillStyle=R;c.fillRect(x-170,V.yb-170,340,340)}
+      c.save();c.translate(x,V.yb);V.tr[st.i].forEach(function(S){if(st.g>0)strokeTree(c,S,st.g,'#7FDBFF','rgba(60,190,245,.13)',.75+p*.4);if(st.f>0)dotTree(c,S,st.f,'#F3B13C',.8,1.9)});c.restore();
+      c.strokeStyle='#F3B13C';c.lineWidth=2;c.beginPath();c.arc(x,V.yb,15,0,7);c.stroke()}
+    var z=fit(chart);if(!z)return;var k=chart.getContext('2d');k.setTransform(DPR,0,0,DPR,0,0);k.clearRect(0,0,z.w,z.h);k.strokeStyle='rgba(150,210,240,.13)';k.lineWidth=1;for(var i=0;i<=4;i++){k.beginPath();k.moveTo(0,.5+i*(z.h-1)/4);k.lineTo(z.w,.5+i*(z.h-1)/4);k.stroke()}for(i=0;i<=12;i++){k.beginPath();k.moveTo(.5+i*(z.w-1)/12,0);k.lineTo(.5+i*(z.w-1)/12,z.h);k.stroke()}
+    if(log.length>1){var dx=z.w/240;k.beginPath();log.forEach(function(v,j){k.lineTo(j*dx,z.h-8-v*(z.h-26))});k.strokeStyle='#F3B13C';k.lineWidth=2.5;k.lineJoin='round';k.stroke();k.lineTo((log.length-1)*dx,z.h);k.lineTo(0,z.h);k.fillStyle='rgba(243,177,60,.12)';k.fill();k.fillStyle='#F3B13C';k.beginPath();k.arc((log.length-1)*dx,z.h-8-log[log.length-1]*(z.h-26),4.5,0,7);k.fill()}
+  }
+  st={i:1,g:0,f:0,broken:false};geom();reset(1);
+  if(KIT.REDUCED){ // без анимации: ползунок сразу показывает, сколько стадий раскрыто
+    $('#hold').hidden=true;var show=function(v){var t=v/100*N;st.i=Math.floor(t);st.g=st.i<N?t-st.i:0;redoFin();p=v/100;draw();lamps();$('#say').textContent='Двигайте ползунок: стадии раскрываются по очереди.'};$('#press').value=45;$('#press').oninput=function(){show(+this.value)};new ResizeObserver(function(){show(+$('#press').value)}).observe(rock);
+  }else{
+    KIT.raf(rock,function(t,dt){step(Math.min(dt,60));draw()});new ResizeObserver(draw).observe(rock);
+    var H=$('#hold'),on=function(e){if(e.cancelable&&e.type!=='keydown')e.preventDefault();hold=true;H.classList.add('on');H.focus({preventScroll:true})},off=function(){hold=false;H.classList.remove('on')};
+    H.addEventListener('pointerdown',function(e){try{H.setPointerCapture(e.pointerId)}catch(_){}on(e)});['pointerup','pointercancel','lostpointercapture','blur'].forEach(function(n){H.addEventListener(n,off)});H.addEventListener('contextmenu',function(e){e.preventDefault()});
+    H.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();if(!e.repeat)on(e)}});H.addEventListener('keyup',off);
+    $('#press').addEventListener('input',function(){target=this.value/100});
+  }
+
+  /* ---------- технологии: перечень с сайта, схема меняется ---------- */
+  var T=[['Кислотные ГРП','acid'],['Кислотно‑проппантные ГРП','acidp'],['Кислотно‑проппантные ГРП с гуаро‑боратной системой','gel'],['ГРП по технологии Frac Clean','clean'],['ГРП с добавлением азота','n2'],['Пенные ГРП','foam'],['МГРП на горизонтальных и наклонно‑направленных скважинах с разными компоновками','multi'],['Высокоскоростные ГРП','fast'],['ГРП с пакером чашечного типа','pack'],['МГРП с применением ГНКТ','coil']];
+  var core=$('#core'),cur=0,gr=KIT.REDUCED?1:0;
+  function drawCore(){
+    var z=fit(core);if(!z)return;var c=core.getContext('2d'),w=z.w,h=z.h,k=T[cur][1],multi=k==='multi'||k==='coil';c.setTransform(DPR,0,0,DPR,0,0);layers(c,w,h,0,h*.5,h*.3,23);
+    var pipe=function(x0,y0,x1,y1){c.lineCap='butt';[[18,'#03101A'],[13,'#7FA7BC'],[8,'#D6EAF4'],[3,'#0B82B4']].forEach(function(a){c.lineWidth=a[0];c.strokeStyle=a[1];c.beginPath();c.moveTo(x0,y0);c.lineTo(x1,y1);c.stroke()})};
+    var col={acid:'#B9F08A',acidp:'#B9F08A',gel:'#6BE3C6',clean:'#A9E9FF',n2:'#8FD8FF',foam:'#E3F6FF',multi:'#59C8F4',fast:'#59C8F4',pack:'#59C8F4',coil:'#59C8F4'}[k],pts=multi?[.16,.34,.52,.7,.88]:[0];
+    if(multi)pipe(0,h*.5,w,h*.5);else pipe(w*.5,0,w*.5,h);
+    pts.forEach(function(q,j){[0,1].forEach(function(s){
+      var dir=multi?(s?1:-1)*Math.PI/2:(s?0:Math.PI),len=multi?h*.3:Math.min(w*.42,h*.8)*(k==='fast'?1.08:.86),S=tree(61+j*13+s*7,len,dir,{wild:k==='fast'?.34:k==='acid'?.95:.6,br:k==='fast'?.16:k==='acid'||k==='acidp'?.36:.28,w:k==='gel'?5.4:k==='fast'?2.8:3.8});
+      c.save();c.translate(multi?w*q:w*.5,h*.5);strokeTree(c,S,Math.max(0,Math.min(1,multi?gr*2-j*.22:gr)),col,k==='gel'?'rgba(107,227,198,.2)':'rgba(43,179,234,.11)');
+      var f=Math.max(0,gr*1.4-.4);
+      if(k==='acidp'||k==='gel'||k==='multi'||k==='pack'||k==='coil'||k==='fast')dotTree(c,S,Math.min(1,f),'#F3B13C',k==='fast'?.5:.85,2.2);
+      if(k==='n2'||k==='foam'){c.lineWidth=1.2;c.strokeStyle='rgba(234,246,252,.85)';S.forEach(function(g){if(g.t<f*S.mx&&g.k<(k==='foam'?.9:.34)){c.beginPath();c.arc(g.x+(g.q-.5)*12,g.y+(g.k-.5)*12,k==='foam'?1.6+g.q*3:3+g.q*5,0,7);c.stroke()}})}
+      c.restore()})});
+    if(k==='pack')[-.2,.2].forEach(function(d){c.fillStyle='#F3B13C';var y=h*(.5+d),s=d<0?1:-1;c.beginPath();c.moveTo(w*.5-26,y-10*s);c.lineTo(w*.5+26,y-10*s);c.lineTo(w*.5+10,y+14*s);c.lineTo(w*.5-10,y+14*s);c.fill()});
+    if(k==='coil'){c.strokeStyle='#F3B13C';c.lineWidth=4;c.beginPath();c.moveTo(w,h*.5);c.lineTo(w*(.88-.72*gr),h*.5);c.stroke()}
+  }
+  function setCore(i){if(i===cur&&gr>0&&$('#core-t').textContent)return;cur=i;gr=KIT.REDUCED?1:.02;$('#core-t').textContent=T[i][0];$$('#tl label').forEach(function(l,j){l.classList.toggle('cur',j===i)});drawCore()}
+  T.forEach(function(t,i){var l=document.createElement('label'),n=document.createElement('input'),s=document.createElement('span');n.type='checkbox';s.textContent=t[0];l.append(n,s);
+    n.addEventListener('change',function(){setCore(i);$('#f-tech').value=$$('#tl input').map(function(x,j){return x.checked?T[j][0]:''}).filter(Boolean).join('; ')});
+    l.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')setCore(i)});n.addEventListener('focus',function(){setCore(i)});$('#tl').appendChild(l)});
+  setCore(0);if(!KIT.REDUCED)KIT.raf(core,function(t,dt){if(gr<1&&dt){gr=Math.min(1,gr+dt/1500);drawCore()}});
+  new ResizeObserver(drawCore).observe(core);
+  $('.core .btn').addEventListener('click',function(){if(!$('#f-tech').value)$('#f-tech').value=T[cur][0]});
+
+  /* ---------- шаги операции ---------- */
+  var O=[['I','Математическое моделирование',['Дизайн процесса ГРП','Согласование дизайна с заказчиком']],['II','Испытание реагентов и проверка оборудования',['Реагенты для проведения операции','Блендеры, технологические линии, насосные агрегаты, манифольды']],['III','Подготовка на скважине',['Обсуждение плана работ на кусте с участием всех работников','Ограждение зоны работ, расстановка оборудования по схеме','Обвязка трубопроводами, ёмкостями и скважиной','Опрессовка затрубного пространства и устья','Приготовление рабочей жидкости']],['IV','Мини‑ГРП',['С применением персонала, техники и химических реагентов']],['V','Анализ мини‑ГРП',['Согласование редизайна с заказчиком']],['VI','Согласованный ГРП',['Производство ГРП с применением персонала, оборудования и материалов']],['VII','Контроль процесса',['Руководит операцией супервайзер','Станция контроля фиксирует параметры','Наблюдение за расходомерами']],['VIII','Анализ проведённого ГРП',['Расчёт материального баланса','Сравнение фактических объёмов жидкости, химикатов и проппанта с показаниями расходомеров','Отчёт о выполненной работе']]];
+  var ob=$('#ops'),cv=$('#cv'),dot=$('#dot'),len=cv.getTotalLength(),dx=85,raf=0;
+  function at(x){var a=0,b=len,m,q;for(var i=0;i<18;i++){m=(a+b)/2;q=cv.getPointAtLength(m);if(q.x<x)a=m;else b=m}return q}
+  function go(x){cancelAnimationFrame(raf);if(KIT.REDUCED){dx=x;var q=at(x);dot.setAttribute('cx',q.x);dot.setAttribute('cy',q.y);return}(function s(){dx+=(x-dx)*.1;var q=at(dx);dot.setAttribute('cx',q.x);dot.setAttribute('cy',q.y);if(Math.abs(x-dx)>.5)raf=requestAnimationFrame(s)})()}
+  function op(i){$$('#ops button').forEach(function(b,j){b.setAttribute('aria-selected',i===j);b.tabIndex=i===j?0:-1});$('#op-h').textContent=O[i][1];var u=$('#op-u');u.textContent='';O[i][2].forEach(function(t){var l=document.createElement('li');l.textContent=t;u.appendChild(l)});go(85+i*170)}
+  O.forEach(function(o,i){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-controls','opd');b.textContent=o[0];b.setAttribute('aria-label',o[0]+'. '+o[1]);b.onclick=function(){op(i)};b.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){var n=(i+d+8)%8;op(n);ob.children[n].focus()}});ob.appendChild(b)});op(0);
+
+  /* ---------- форма: заказчик или соискатель ---------- */
+  $$('[data-mode]').forEach(function(b){b.onclick=function(){var m=b.dataset.mode;$$('[data-mode]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});$('#f-mode').value=b.textContent;$('#rq-h').textContent=m==='s'?'Анкета на вахту':'Обсудить операцию';$$('[data-for]').forEach(function(l){var off=l.dataset.for!==m;l.hidden=off;l.querySelector('input,select,textarea').disabled=off})}});
+});
+</script>
+</body>
+</html>

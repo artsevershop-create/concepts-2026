@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Талспецстрой — строительство объектов ТЭК в ХМАО и ЯНАО с 1999 года</title>
+<meta name="description" content="Концепция редизайна сайта ООО «Талспецстрой», Нягань: кустовые основания, дороги и мосты, карьеры, трубопроводы и инженерные сети. Более 300 объектов, более 800 единиц техники.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/oswald-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--snow:#F5F7F9;--sky:#CBD6E4;--sand:#E2C79B;--sand-2:#CFAB74;--peat:#2B231A;--blue:#0B5AA6;--orange:#F59A1B;--ink:#1B2430;
+  --bg:var(--snow);--fg:var(--ink);--muted:#566273;--accent:var(--blue);--accent-h:#073F77;--r:4px;
+  --f-display:"Oswald","Arial Narrow",sans-serif;--f-text:"Roboto Condensed","Arial Narrow",sans-serif;--hdr-h:92px;--wrap:1360px}
+body{font-size:19px;line-height:1.5}
+h1,h2,h3{font-weight:500;letter-spacing:-.012em;line-height:1.08}
+h2{font-size:clamp(36px,4.7vw,74px)}
+.grain{background-image:radial-gradient(rgba(110,74,22,.22) .7px,transparent 1.1px),radial-gradient(rgba(255,246,225,.6) .8px,transparent 1.2px),radial-gradient(rgba(90,58,14,.14) .8px,transparent 1.2px);background-size:7px 5px,11px 13px,17px 9px;background-position:0 0,4px 6px,3px 2px}
+figure{overflow:clip}.mbar{background:var(--bg)}
+/* шапка */
+.hdr{background:#fff;border-bottom:1px solid rgba(27,36,48,.1)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.4vw,40px)}
+.hdr img{height:68px;width:auto}
+.hdr nav{display:flex;gap:clamp(16px,2.2vw,36px);margin-left:auto}
+.hdr nav a{text-decoration:none;padding:12px 0;min-height:44px;background:linear-gradient(var(--orange),var(--orange)) 0 calc(100% - 8px)/0 3px no-repeat;transition:background-size .35s var(--e-smooth)}
+.hdr nav a:hover{background-size:100% 3px}
+.hdr .tel{font-weight:600;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+/* первый экран: небо снимка продолжается вверх, заголовок в нём */
+.hero{position:relative;padding-top:var(--hdr-h);background:linear-gradient(180deg,#F5F7F9 0,#DDE5EE 26%,#CAD5E3 52%);overflow:clip;isolation:isolate}
+.hero-t{padding-top:clamp(20px,3.6vh,40px);position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1fr);gap:20px 40px;align-items:center}
+h1{font-size:clamp(41px,6.35vw,96px);max-width:11.6em;line-height:1.02}
+.hero-s{max-width:27em}
+.hero-s p{font-size:clamp(18px,1.45vw,21px);line-height:1.45}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.cta .btn--ghost{background:rgba(255,255,255,.82)}
+.hero-p{position:relative;margin-top:clamp(-70px,-3.4vw,-10px);z-index:1;line-height:0}
+.hero-p img{width:100%;height:auto;min-height:340px;object-fit:cover;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%);mask-image:linear-gradient(180deg,transparent 0,#000 22%)}
+.facts{background-color:var(--sand);position:relative;z-index:2;margin-top:clamp(-140px,-6.8vw,-30px)}
+.facts::before{content:"";position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:34px;background:var(--sand);clip-path:polygon(0 62%,7% 34%,15% 52%,24% 12%,33% 44%,44% 26%,55% 58%,66% 30%,78% 50%,88% 18%,100% 46%,100% 100%,0 100%)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 30px;padding-block:18px 24px}
+.facts div div{display:flex;align-items:baseline;gap:14px}
+.facts b{font:500 clamp(34px,3.6vw,56px)/1 var(--f-display)}
+.facts span{line-height:1.2}
+@media (prefers-reduced-motion:no-preference){
+  .js .hero-p img{animation:pour 2.2s var(--e-smooth) both}
+  .js h1 span{display:inline-block;animation:settle 1.2s var(--e-smooth) both;animation-delay:calc(var(--n)*.1s)}
+  .js .facts::before{animation:heap 1.6s .2s var(--e-smooth) both;transform-origin:50% 100%}
+}
+@keyframes pour{from{transform:translateY(46px)}}
+@keyframes settle{from{transform:translateY(-.34em)}}
+@keyframes heap{from{transform:scaleY(0)}}
+/* площадка растёт слоями */
+.site{background:linear-gradient(180deg,var(--sand) 0,#EFE3CC 260px,var(--snow) 760px)}
+.site-h{padding-top:clamp(56px,6vw,96px)}
+.site-h p{max-width:34em;margin-top:18px;color:#4B4336;font-size:clamp(18px,1.4vw,21px)}
+.site-g{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:clamp(20px,3vw,56px);align-items:start;max-width:1560px;margin-inline:auto;padding-inline:max(var(--gutter),calc(50% - 680px)) 22px}
+.scene{position:sticky;top:0;height:100svh;display:grid;align-content:center;grid-column:2;grid-row:1}
+.scene svg{width:100%;height:auto;max-height:82svh;overflow:visible}
+.steps{grid-column:1;grid-row:1}
+.step{min-height:74svh;display:flex;flex-direction:column;justify-content:center;gap:14px;opacity:.28;transition:opacity .5s}
+.step.on{opacity:1}
+.step h3{font-size:clamp(28px,2.7vw,44px)}
+.step .obj{border-left:6px solid var(--orange);padding:2px 0 2px 18px}
+.step .obj b{display:block;font:500 clamp(40px,4.2vw,68px)/1.05 var(--f-display);color:var(--blue)}
+.step .obj span{display:block;margin-top:8px;color:var(--muted);line-height:1.35;max-width:26em}
+.add{align-self:flex-start;min-height:48px;padding:0 18px;border:2px solid var(--blue);border-radius:var(--r);color:var(--blue);font-weight:600;background:#fff;transition:background-color .25s,color .25s}
+.add[aria-pressed=true]{background:var(--blue);color:#fff}
+.ruler{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.ruler a{width:44px;height:44px;display:grid;place-items:center}
+.ruler a::before{content:"";width:100%;height:8px;background:#C9BFAE;transition:background-color .4s,transform .4s var(--e-smooth);transform-origin:50% 100%}
+.ruler a.past::before{background:var(--sand-2)}
+.ruler a.cur::before{background:var(--orange);transform:scaleY(2.6)}
+/* состояния слоёв */
+.e{transition:transform .95s var(--e-smooth),opacity .55s;transition-delay:calc(var(--i,0)*26ms);transform-box:fill-box;transform-origin:50% 100%}
+.e.drop{transform:translateY(-70px);opacity:0}
+.e.grow{transform:scaleY(0)}
+.e.fade{opacity:0}
+.e.draw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s var(--e-smooth);transition-delay:calc(var(--i,0)*90ms)}
+.e.in{transform:none;opacity:1;stroke-dashoffset:0}
+.e.cut{transform:none;opacity:1}
+.e.cut.gone{transform:scaleY(0);opacity:0}
+/* объекты: полоса */
+.obs{padding-block:clamp(40px,5vw,80px) 0;background:var(--snow);overflow:clip}
+.obs-h{display:flex;flex-wrap:wrap;gap:24px 60px;align-items:end;justify-content:space-between}
+.modes{display:flex;gap:26px}
+.modes button{min-height:48px;font:500 clamp(19px,1.5vw,24px)/1 var(--f-display);color:var(--muted);border-bottom:4px solid transparent;transition:color .25s,border-color .25s}
+.modes [aria-selected=true]{color:var(--ink);border-color:var(--orange)}
+.strip{--u:clamp(210px,19vw,290px);display:flex;align-items:flex-end;gap:10px;overflow-x:auto;overscroll-behavior-x:contain;padding:60px max(var(--gutter),calc(50vw - 680px)) 0;margin-top:20px;scrollbar-width:none;cursor:grab;min-height:300px;background:linear-gradient(0deg,#D9C096 0 104px,transparent 104px)}
+.strip::-webkit-scrollbar{display:none}
+.strip.drag{cursor:grabbing}.strip.drag button{pointer-events:none}
+.ob{flex:none;min-width:136px;display:grid;justify-items:center;text-align:center;position:relative}
+.ob svg{overflow:visible;transition:transform .5s var(--e-smooth);transform-origin:50% 100%}
+.ob .g{fill:url(#sandg)}
+.ob .yr{height:104px;display:grid;align-content:center;gap:6px;font:500 20px/1 var(--f-display);color:#4A3517}
+.ob .yr small{font:400 16px/1.15 var(--f-text);max-width:8.5em}
+.ob[aria-selected=true] .yr{color:var(--ink);font-weight:700}
+.ob[aria-selected=true] .yr::before{content:"";position:absolute;bottom:0;left:50%;width:14px;height:14px;background:var(--orange);transform:translate(-50%,50%) rotate(45deg)}
+.ob:hover svg{transform:scaleY(1.05)}
+.ob[aria-selected=true] .g{fill:url(#sandb)}
+.pass{background:var(--peat);color:#F6EEDF;position:relative}
+.pass .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px 70px;padding-block:40px 46px;min-height:270px;align-items:start}
+.pass b.v{display:block;font:500 clamp(46px,6.2vw,100px)/1 var(--f-display);color:var(--orange)}
+.pass .v small{font-size:.4em;margin-left:.2em}
+.pass .per{color:#CDBFA6}
+.pass h3{font-size:clamp(23px,2vw,31px);line-height:1.2}
+.pass dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 24px;margin-top:18px}
+.pass dt{color:#CDBFA6}
+.ctl{display:flex;gap:8px;margin-top:18px}
+.ctl button{width:52px;height:52px;border:1.5px solid rgba(246,238,223,.4);border-radius:var(--r);font-size:24px;transition:background-color .25s}
+.ctl button:hover{background:rgba(246,238,223,.14)}
+/* техника */
+.fleet{background:#E9EEF3;padding-top:clamp(56px,7vw,110px);overflow:clip}
+.fleet-h{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:20px 70px;align-items:end;position:relative;z-index:2}
+.fleet-h p{max-width:34em}
+.fleet-p{margin-top:6px;line-height:0}
+.fleet-p img{width:100%;height:auto;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 82%,transparent);mask-image:linear-gradient(180deg,transparent 0,#000 12%,#000 82%,transparent);min-height:250px;object-fit:cover}
+.rack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px clamp(24px,4vw,70px);padding-block:clamp(10px,2vw,26px) clamp(56px,6vw,96px)}
+.rack dt{font:500 clamp(24px,2vw,31px)/1.1 var(--f-display);color:var(--blue)}
+.rack dd{margin-top:6px;color:var(--muted)}
+.makers{grid-column:1/-1;border-top:2px solid var(--ink);padding-top:20px;font:500 clamp(22px,2.35vw,36px)/1.3 var(--f-display)}
+/* безопасность */
+.safe{background:var(--snow)}
+.safe-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,90px);align-items:center}
+.safe figure img{width:100%;max-width:560px;height:auto}
+.safe figcaption{font-size:16px;color:var(--muted);margin-top:10px}
+.safe ul{margin-top:30px}
+.safe li{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr);gap:6px 24px}
+.safe li b{font:500 22px/1.25 var(--f-display)}
+.aw{margin-top:30px;background-color:var(--sand);padding:24px 28px}
+.aw p+p{margin-top:8px}
+/* заявка */
+.req{background:#B9C3CF;position:relative;overflow:clip;padding-block:var(--sec) 0}
+.req-g{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(26px,5vw,90px);position:relative;z-index:2;align-items:start}
+.req form{background:#fff;padding:clamp(20px,2.6vw,42px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;border-radius:var(--r)}
+.full{grid-column:1/-1}
+.chips{border:0;margin:0;padding:0;min-width:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips legend{font-size:14px;color:var(--muted);margin-bottom:8px;padding:0}
+.chips label{position:relative;cursor:pointer}
+.chips input{position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chips span{display:inline-flex;align-items:center;min-height:44px;padding:6px 14px;border:1.5px solid var(--line);border-radius:var(--r);font-size:17px;line-height:1.2;transition:background-color .2s,color .2s}
+.chips input:checked+span{background:var(--blue);border-color:var(--blue);color:#fff}
+.chips input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.req dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 20px;margin:16px 0}.req dt{color:var(--muted)}
+.req-p{margin-top:clamp(-190px,-11vw,-60px);line-height:0}
+.req-p img{width:100%;height:auto;min-height:260px;object-fit:cover;object-position:80% 50%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 46%);mask-image:linear-gradient(180deg,transparent 0,#000 46%)}
+/* контакты */
+.con-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,90px);align-items:start}
+.con img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:50% 0}
+.con li{border-top:2px solid var(--ink);padding:14px 0 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;align-items:center}
+.con li b{font:500 24px/1.2 var(--f-display)}
+.con li span{grid-column:1;color:var(--muted);font-size:17px}
+.con li a{grid-column:2;grid-row:1/3;min-height:48px;display:inline-flex;align-items:center;font-weight:600;text-decoration:none;text-align:right}
+.con li a:hover{color:var(--blue)}
+.con address{font-style:normal;margin-top:20px}
+.ftr{background:var(--peat);color:#CDBFA6;padding:28px 0;font-size:16px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:10px 50px;justify-content:space-between;align-items:center}
+.con address a{display:inline-flex;min-height:44px;align-items:center}
+.ftr a{color:#F6EEDF;min-height:44px;display:inline-flex;align-items:center}
+@media (min-width:901px) and (max-height:800px){.hero-p img{height:54svh;object-position:50% 70%}}
+@media (max-width:900px){
+  :root{--hdr-h:70px}
+  body{font-size:18px}
+  .hdr img{height:50px}.hdr .tel{display:none}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:#fff;flex-direction:column;gap:0;padding:18px var(--gutter);font:500 34px/1.2 var(--f-display);visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  [data-burger]{margin-left:auto}
+  .hero-t{grid-template-columns:minmax(0,1fr);padding-top:46px}
+  .cta .btn{flex:1 1 100%}
+  .hero-p{margin-top:-30px}
+  .hero-p img{height:380px;object-position:20% 50%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%);mask-image:linear-gradient(180deg,transparent 0,#000 16%)}
+  .facts{margin-top:-30px}
+  .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 18px}
+  .facts div div{display:block}.facts span{display:block;margin-top:4px;font-size:17px}
+  .site-g{display:block;padding:0}
+  .scene{height:auto;top:0;z-index:3;background:linear-gradient(180deg,#EFE3CC,#F2EADB 88%,rgba(242,234,219,0));padding:calc(var(--hdr-h) + 4px) 0 14px}
+  .scene svg{max-height:38svh}
+  .ruler{gap:4px;margin-top:0;padding-inline:var(--gutter)}.ruler a{flex:1;width:auto}
+  .site{background:#EFE3CC}
+  .steps{padding:0 var(--gutter) 40px}
+  .step{min-height:44svh;justify-content:flex-start;padding:18px 0}
+  .obs-h{display:block}.modes{margin-top:22px;gap:20px;justify-content:space-between}
+  .pass .wrap,.fleet-h,.safe-g,.req-g,.con-g{grid-template-columns:minmax(0,1fr)}
+  .pass dl,.req dl{grid-template-columns:minmax(0,1fr);gap:2px}.pass dd,.req dd{margin-bottom:10px}
+  .rack{grid-template-columns:minmax(0,1fr);gap:20px}
+  .fleet-p img{object-position:50% 50%}
+  .safe li{grid-template-columns:minmax(0,1fr)}
+  .req form{grid-template-columns:minmax(0,1fr)}
+  .con li{grid-template-columns:minmax(0,1fr)}.con li a{grid-column:1;grid-row:auto;text-align:left}
+  .req-p{margin-top:-40px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="Талспецстрой, на главную"><img src="img/logo.png" alt="Талспецстрой" width="472" height="412"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#site">Виды работ</a><a href="#objects">Объекты</a><a href="#fleet">Техника</a><a href="#safe">Безопасность</a><a href="#contacts">Контакты</a></nav>
+  <a class="tel num" href="tel:+73467220729">+7 (34672) 2-07-29</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-t">
+    <h1><span style="--n:0">Строим объекты ТЭК&nbsp;</span> <span style="--n:1">от&nbsp;болота до&nbsp;ввода</span> <span style="--n:2">в&nbsp;эксплуатацию</span></h1>
+    <div class="hero-s"><p>Подрядная строительная компания из&nbsp;Нягани. С&nbsp;1999&nbsp;года строим и&nbsp;реконструируем промышленные объекты топливно-энергетического комплекса.</p>
+    <div class="cta"><a class="btn" data-magnetic href="#req">Обсудить объект</a><a class="btn btn--ghost" href="#objects">Что уже построено</a></div></div>
+  </div>
+  <div class="hero-p"><img src="img/ph/22.webp" alt="Экскаваторы грузят самосвалы Талспецстроя в карьере" width="1600" height="600" fetchpriority="high"></div>
+  <div class="facts grain"><div class="wrap">
+    <div><b class="num">1999</b><span>год основания</span></div>
+    <div><b class="num">300+</b><span>построенных объектов</span></div>
+    <div><b class="num">800+</b><span>единиц техники в&nbsp;автопарке</span></div>
+    <div><b class="num">1000+</b><span>сотрудников</span></div>
+  </div></div>
+</section>
+
+<section class="site" id="site">
+  <div class="wrap site-h"><h2 data-split>Площадка растёт слоями</h2><p>Полный комплекс работ: от&nbsp;проекта до&nbsp;ввода. Отметьте нужные слои, они попадут в&nbsp;запрос.</p></div>
+  <div class="site-g">
+    <div class="scene"><svg id="iso" viewBox="146 76 1000 772" role="img" aria-label="Схема: участок болота шаг за шагом становится площадкой с дорогой, мостом, сооружениями и сетями"></svg><nav class="ruler" id="ruler" aria-label="Слои площадки"></nav></div>
+    <div class="steps" id="steps"></div>
+  </div>
+</section>
+
+<section class="obs" id="objects">
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><linearGradient id="sandg" x1="0" x2="1" y1="0" y2=".3"><stop offset=".2" stop-color="#E9D0A3"/><stop offset=".62" stop-color="#C69F66"/><stop offset="1" stop-color="#9E7A45"/></linearGradient><linearGradient id="sandb" x1="0" x2="1" y1="0" y2=".3"><stop offset=".2" stop-color="#FFC465"/><stop offset=".62" stop-color="#F0921A"/><stop offset="1" stop-color="#B9640A"/></linearGradient></defs></svg>
+  <div class="wrap obs-h"><h2 data-split>Объекты в&nbsp;кубометрах, километрах и&nbsp;гектарах</h2>
+    <div class="modes" role="tablist" aria-label="Показатель"><button role="tab" data-mode="m3" aria-selected="true">Песок и насыпи</button><button role="tab" data-mode="km" aria-selected="false">Дороги и сети</button><button role="tab" data-mode="ha" aria-selected="false">Лес</button></div></div>
+  <div class="strip" id="strip" role="listbox" aria-label="Реализованные объекты" tabindex="-1"></div>
+  <div class="pass grain" id="pass" aria-live="polite"><div class="wrap"><div><b class="v num"></b><span class="per"></span><div class="ctl"><button type="button" data-go="-1" aria-label="Предыдущий объект">←</button><button type="button" data-go="1" aria-label="Следующий объект">→</button></div></div><div><h3></h3><dl><dt>Заказчик</dt><dd class="cu"></dd><dt>Что сделано</dt><dd class="wk"></dd></dl></div></div></div>
+</section>
+
+<section class="fleet" id="fleet">
+  <div class="wrap fleet-h"><h2 data-split>Более 800 единиц своей техники</h2><p>Вся техника оснащена программами спутникового мониторинга. Работаем автономно: вахтовые городки, столовые, медпункты и&nbsp;спортзалы стоят прямо на&nbsp;участках.</p></div>
+  <div class="fleet-p"><img src="img/ph/23.webp" alt="Три бульдозера Талспецстроя на снегу" width="1600" height="600" loading="lazy"></div>
+  <div class="wrap"><dl class="rack">
+    <div><dt>Землеройная</dt><dd>Бульдозеры, экскаваторы</dd></div>
+    <div><dt>Грузоподъёмная</dt><dd>Автокраны, манипуляторы, погрузчики</dd></div>
+    <div><dt>Дорожная</dt><dd>Грейдеры, катки, самосвалы</dd></div>
+    <div><dt>Транспортная</dt><dd>Автобусы, вездеходы, легковые автомобили</dd></div>
+    <div><dt>Специальная</dt><dd>Топливозаправщики, тралы, дизельные электростанции, передвижные мастерские, водовозки</dd></div>
+    <div><dt>Лесной комплекс</dt><dd>Валочно-пакетирующие машины, скидеры, трелевочные тракторы, мульчеры</dd></div>
+    <p class="makers">Caterpillar, John Deere, Volvo, Liebherr, Hyundai, MAN, Toyota</p>
+  </dl></div>
+</section>
+
+<section class="sec safe" id="safe"><div class="wrap safe-g">
+  <figure data-img><img src="img/ph/31.webp" alt="Отработка спасения на высоте с манекеном на учебных лесах" width="768" height="1024" loading="lazy"></figure>
+  <div><h2 data-split>Жизнь и здоровье ценим выше результатов</h2>
+    <ul>
+      <li><b>На&nbsp;дороге</b><span>Система помощи водителю Mobileye, ГЛОНАСС, тахографы, двусторонние видеорегистраторы, датчики Антислип</span></li>
+      <li><b>На&nbsp;участке</b><span>Модульные фельдшерские пункты, медицинский персонал круглосуточно</span></li>
+      <li><b>В&nbsp;классе</b><span>Собственный обучающий класс с&nbsp;лицензионными программами</span></li>
+      <li><b>В&nbsp;лаборатории</b><span>Сертифицированная строительная лаборатория работает прямо на&nbsp;объектах, к&nbsp;каждому проекту прикреплён специалист контроля качества</span></li>
+    </ul>
+    <div class="aw grain"><p>Победитель конкурса РСПП «Лидеры российского бизнеса» 2018&nbsp;года за&nbsp;достижения в&nbsp;области охраны труда.</p><p>Победитель конкурсов «Эко-Лидер» среди подрядчиков «Газпромнефть-Ямал» и&nbsp;«Газпромнефть-Заполярье», 2019.</p></div>
+  </div>
+</div></section>
+
+<section class="req" id="req"><div class="wrap req-g">
+  <div><h2 data-split>Расскажите, что&nbsp;строим</h2><p style="margin-top:18px;max-width:24em">Выберите виды работ и&nbsp;грунт. Запрос придёт на&nbsp;tss@talspecstroi.ru.</p></div>
+  <form data-demo-form>
+    <fieldset class="chips full" id="chips"><legend>Виды работ</legend></fieldset><input type="hidden" name="Виды работ" id="f-w">
+    <label class="field"><span>Грунт и&nbsp;условия</span><select name="Условия"><option>Болотистая местность</option><option>Вечномёрзлые грунты</option><option>Скальные грунты</option><option>Другое</option></select></label>
+    <label class="field"><span>Месторождение, участок</span><input name="Объект" autocomplete="off"></label>
+    <label class="field"><span>Компания и имя</span><input name="Контакт" required autocomplete="organization"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить запрос</button>
+    <div class="done full" role="status"><h3>Так запрос придёт в&nbsp;Талспецстрой</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+  </form>
+</div><div class="req-p"><img src="img/ph/24.webp" alt="Каток, автогрейдер и экскаватор на отсыпке площадки" width="1600" height="600" loading="lazy"></div></section>
+
+<section class="sec con" id="contacts"><div class="wrap con-g">
+  <figure data-img><img src="img/ph/16.webp" alt="Здание Талспецстроя в Нягани, собрание перед входом" width="1920" height="1440" loading="lazy"></figure>
+  <div><h2 data-split style="margin-bottom:28px">Кому звонить</h2>
+    <ul>
+      <li><b>Приёмная</b><span>Заказчикам и&nbsp;партнёрам</span><a class="num" href="tel:+73467220729">+7 (34672) 2-07-29</a></li>
+      <li><b>Служба по&nbsp;подбору персонала</b><span>Вакансии</span><a class="num" href="tel:+73467220729,144">доб. 144</a></li>
+      <li><b>Кадровое делопроизводство</b><span>Документы сотрудников</span><a class="num" href="tel:+73467220729,175">доб. 175</a></li>
+      <li><b>Кадровая логистика</b><span>Дорога на&nbsp;вахту</span><a class="num" href="tel:+73467220729,111">доб. 111</a></li>
+    </ul>
+    <address>ХМАО – Югра, г.&nbsp;Нягань, ул.&nbsp;Лазарева, д.&nbsp;12, корп.&nbsp;1<br><a class="link" href="mailto:tss@talspecstroi.ru">tss@talspecstroi.ru</a></address>
+  </div>
+</div></section>
+</main>
+<footer class="ftr"><div class="wrap"><span>ООО «Талспецстрой», Нягань</span><a href="tel:+73467220729" class="num">+7 (34672) 2-07-29</a><a href="mailto:tss@talspecstroi.ru">tss@talspecstroi.ru</a></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73467220729">Позвонить</a><a class="btn" href="#req">Запрос</a></div>
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+/* ---------- изометрия ---------- */
+var svg=$('#iso'),U=33,NS='http://www.w3.org/2000/svg';
+function P(x,y,z){return [560+(x-y)*.866*U,205+(x+y)*.5*U-(z||0)*U]}
+function pt(a){return a.map(function(p){var q=P(p[0],p[1],p[2]);return q[0].toFixed(1)+','+q[1].toFixed(1)}).join(' ')}
+function poly(a,f,o){return '<polygon points="'+pt(a)+'" fill="'+f+'"'+(o||'')+'/>'}
+function box(x,y,z,dx,dy,dz,c){var X=x+dx,Y=y+dy,Z=z+dz;return poly([[x,Y,z],[X,Y,z],[X,Y,Z],[x,Y,Z]],c[1])+poly([[X,y,z],[X,Y,z],[X,Y,Z],[X,y,Z]],c[2])+poly([[x,y,Z],[X,y,Z],[X,Y,Z],[x,Y,Z]],c[0])}
+// насыпь с откосом s
+function pad(x,y,z,dx,dy,dz,s,c){var X=x+dx,Y=y+dy,Z=z+dz;return poly([[x-s,Y+s,z],[X+s,Y+s,z],[X,Y,Z],[x,Y,Z]],c[1])+poly([[X+s,y-s,z],[X+s,Y+s,z],[X,Y,Z],[X,y,Z]],c[2])+poly([[x,y,Z],[X,y,Z],[X,Y,Z],[x,Y,Z]],c[0])}
+function line(a,c,w,o){return '<polyline points="'+pt(a)+'" fill="none" stroke="'+c+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round"'+(o||'')+'/>'}
+var out=[];
+function g(cls,step,i,inner){out.push('<g class="e '+cls+'" data-s="'+step+'" style="--i:'+(i||0)+'">'+inner+'</g>')}
+function raw(s){out.push(s)}
+function fir(x,y,h,c){var p=P(x,y,0),X=p[0],Y=p[1],H=h*U,w=H*.3;return '<path d="M'+X+' '+(Y-H)+'l'+w*.62+' '+H*.5+'h-'+w*.22+'l'+w*.62+' '+H*.4+'h-'+w*2.04+'l'+w*.62+' -'+H*.4+'h-'+w*.22+'z" fill="'+c[0]+'"/><path d="M'+X+' '+(Y-H)+'l'+w*.62+' '+H*.5+'h-'+w*.22+'l'+w*.62+' '+H*.4+'h-'+w*1.02+'z" fill="'+c[1]+'"/><rect x="'+(X-2)+'" y="'+(Y-H*.1)+'" width="4" height="'+H*.1+'" fill="#4b3623"/>'}
+var W=20,D=14;
+// грунт: мох, торф, суглинок
+raw(poly([[0,D,-1.9],[W,D,-1.9],[W,D,-.75],[0,D,-.75]],'#9A8467')+poly([[W,0,-1.9],[W,D,-1.9],[W,D,-.75],[W,0,-.75]],'#7F6A50')+poly([[0,D,-.75],[W,D,-.75],[W,D,0],[0,D,0]],'#4A3A28')+poly([[W,0,-.75],[W,D,-.75],[W,D,0],[W,0,0]],'#382B1D')+poly([[0,0,0],[W,0,0],[W,D,0],[0,D,0]],'#A7A46F'));
+[[2,2,1.5,.9],[11,12.2,2,.9],[16.6,11.6,1.4,.7],[8,1,1.2,.5],[12.6,5.4,2,1.2],[15.4,8,1.2,.8],[9.6,8.2,1.2,.7],[2,7,1.2,.6]].forEach(function(b){var p=P(b[0],b[1],0);raw('<ellipse cx="'+p[0]+'" cy="'+p[1]+'" rx="'+b[2]*U+'" ry="'+b[3]*U*.6+'" fill="#8FA9B4"/><ellipse cx="'+(p[0]-4)+'" cy="'+(p[1]-3)+'" rx="'+b[2]*U*.7+'" ry="'+b[3]*U*.34+'" fill="#B4C9D1"/>')});
+// речка
+raw(poly([[4.1,0,0],[5.5,0,0],[5.2,4,0],[5.7,9,0],[5.3,14,0],[3.9,14,0],[4.2,9,0],[3.8,4,0]],'#7F9FB0')+poly([[4.4,0,0],[5.1,0,0],[4.8,4,0],[5.3,9,0],[4.9,14,0],[4.3,14,0],[4.6,9,0],[4.2,4,0]],'#A6C0CC'));
+var G=['#5C7448','#465B37'],G2=['#6A7F4E','#50653C'];
+// лес на границе сзади
+[[.6,.8],[1.6,.5],[2.8,.7],[3.3,2.2],[.8,2.8],[6.6,.6],[9.6,.5],[12,.6],[14.2,.5],[17,.6],[18.6,.8],[19.3,2.6],[19.4,4.6]].forEach(function(t,i){raw(fir(t[0],t[1],1.7+(i%3)*.35,i%2?G:G2))});
+// проект: разбивка
+[[7.4,1.6,18.6,1.6],[18.6,1.6,18.6,9.6],[18.6,9.6,7.4,9.6],[7.4,9.6,7.4,1.6],[0,4.6,7.4,4.6],[0,6.6,7.4,6.6]].forEach(function(l,i){out.push('<polyline class="e draw" data-s="0" pathLength="1" style="--i:'+i+'" points="'+pt([[l[0],l[1]],[l[2],l[3]]])+'" fill="none" stroke="#0B5AA6" stroke-width="3.5"/>')});
+[[7.4,1.6],[18.6,1.6],[18.6,9.6],[7.4,9.6],[0.2,4.6],[0.2,6.6]].forEach(function(q,i){g('drop',0,6+i,line([[q[0],q[1],0],[q[0],q[1],1]],'#0B5AA6',3)+poly([[q[0],q[1],1],[q[0]+.7,q[1],.82],[q[0],q[1],.64]],'#F59A1B'))});
+// лес под вырубку
+var cut=[];for(var y=2.1;y<9.6;y+=1.25)for(var x=7.9;x<18.6;x+=1.3)cut.push([x+((y*7)%1)*.5,y+((x*5)%1)*.5]);
+[[1,4.9],[2.3,5.4],[3.2,5],[6.2,5.2],[6.9,6.1],[1.6,6.2]].forEach(function(q){cut.push(q)});
+cut.sort(function(a,b){return a[0]+a[1]-b[0]-b[1]}).forEach(function(t,i){out.push('<g class="e cut" data-c="1" style="--i:'+i*.45+'">'+fir(t[0],t[1],1.2+(i*37%10)*.07,i%2?G:G2)+'</g>')});
+// лежнёвка
+for(var k=0;k<34;k++){var lx=.1+k*.225;if(lx>4&&lx<5.55)continue;g('drop',1,k,box(lx,4.8,0,.17,1.6,.13,['#B98A55','#8F6536','#74502A']))}
+[0,1,2].forEach(function(r){for(var c=0;c<4-r;c++)g('drop',1,20+r*4+c,box(8.2,10.15+c*.3+r*.15,r*.24,2.4,.26,.24,['#C79A62','#E2BC85','#8F6536']))});
+// карьер и намыв
+function heap(x,y,w,h,s,i){var a=P(x,y,0),b=P(x,y,h),r=w*U;g('grow',s,i,'<path d="M'+(a[0]-r)+' '+a[1]+' Q'+(a[0]-r*.5)+' '+(b[1]+h*U*.3)+' '+b[0]+' '+b[1]+' Q'+(a[0]+r*.55)+' '+(b[1]+h*U*.36)+' '+(a[0]+r)+' '+a[1]+' A'+r+' '+r*.5+' 0 0 1 '+(a[0]-r)+' '+a[1]+'Z" fill="#E5CB9C"/><path d="M'+b[0]+' '+b[1]+' Q'+(a[0]+r*.55)+' '+(b[1]+h*U*.36)+' '+(a[0]+r)+' '+a[1]+' A'+r+' '+r*.5+' 0 0 1 '+(a[0]+r*.1)+' '+(a[1]+r*.49)+' Q'+(a[0]+r*.3)+' '+(a[1]-h*U*.2)+' '+b[0]+' '+b[1]+'Z" fill="#C39B60"/>')}
+g('fade',2,0,poly([[.3,8.2,.02],[3.6,8.2,.02],[3.6,13.6,.02],[.3,13.6,.02]],'#D9BC8A'));
+heap(1.5,9.4,1.2,1.7,2,2);heap(2.5,11,1.5,2.3,2,5);heap(1.4,12.3,1.1,1.4,2,9);
+// экскаватор у карьера
+g('drop',2,14,box(2.9,9,0,.5,1,.28,['#3b3a38','#2a2927','#1d1c1b'])+box(2.7,8.9,.28,.95,.95,.5,['#FFB84A','#F59A1B','#C97608'])+box(3.1,9.1,.78,.4,.5,.4,['#DCE6EE','#9FB4C4','#7C93A5'])+line([[2.9,9.3,.7],[2.5,9.9,2.1],[2.1,10.5,1.5]],'#F59A1B',7)+line([[2.1,10.5,1.5],[2.2,10.7,1.05]],'#3b3a38',9));
+// насыпь куста: три слоя
+var SD=[['#E6CFA2','#CDAA72','#B08C55'],['#EAD5AB','#D2B07A','#B5925B'],['#F0DDB7','#D8B783','#BB985F']];
+[0,1,2].forEach(function(n){g('grow',3,n*9,pad(8-.0+n*.12,2.2+n*.12,n*.36,10-n*.24,6.8-n*.24,.36,.22,SD[n]))});
+var T=1.08;// верх насыпи
+g('fade',3,30,poly([[13.6,2.9,T],[17.6,2.9,T],[17.6,4.6,T],[13.6,4.6,T]],'#8A6E45')+poly([[13.9,3.2,T],[17.3,3.2,T],[17.3,4.4,T],[13.9,4.4,T]],'#3F4A50')+line([[13.6,2.9,T],[17.6,2.9,T],[17.6,4.6,T],[13.6,4.6,T],[13.6,2.9,T]],'#B5925B',2));
+// дорога и мост
+[[0,4],[5.6,8]].forEach(function(r,i){g('grow',4,i*6,pad(r[0]+.05,4.9,.1,r[1]-r[0]-.1,1.4,.42,.12,['#D9C7A4','#B99B68','#A3865A']))});
+g('grow',4,10,poly([[7.2,5,.52],[8.6,5,T],[8.6,6.2,T],[7.2,6.2,.52]],'#E2CFA9'));
+[[4.15,5],[4.15,6.1],[5.35,5],[5.35,6.1],[4.75,5],[4.75,6.1]].forEach(function(q,i){g('drop',4,14+i*3,line([[q[0],q[1],-.3],[q[0],q[1],.5]],'#59636E',6))});
+g('drop',4,34,box(3.85,4.85,.42,1.85,1.5,.16,['#C8D0D8','#8E99A5','#75818D']));
+g('drop',4,40,line([[3.85,6.35,.9],[5.7,6.35,.9]],'#F59A1B',4)+line([[3.9,6.35,.58],[3.9,6.35,.9]],'#6b7681',3)+line([[4.8,6.35,.58],[4.8,6.35,.9]],'#6b7681',3)+line([[5.65,6.35,.58],[5.65,6.35,.9]],'#6b7681',3));
+// самосвалы: место в порядке отрисовки
+raw('<g id="trucks"></g>');
+// площадочные сооружения
+for(var a=0;a<4;a++)for(var b=0;b<5;b++)g('drop',5,a*5+b,box(8.7+b*.86,5+a*.86,T,.8,.8,.07,['#C9CED3','#A2A9B0','#8B939B']));
+var hp=P(15.6,7,T+.06);
+g('drop',5,22,box(14.1,5.6,T,3,3,.06,['#BFC5CB','#9AA2AA','#838C95'])+'<ellipse cx="'+hp[0]+'" cy="'+hp[1]+'" rx="'+1.4*U+'" ry="'+.8*U+'" fill="none" stroke="#fff" stroke-width="4"/>'+line([[15.1,6.4,T+.07],[15.1,7.6,T+.07]],'#fff',5)+line([[16.1,6.4,T+.07],[16.1,7.6,T+.07]],'#fff',5)+line([[15.1,7,T+.07],[16.1,7,T+.07]],'#fff',5));
+[[8.9,2.7],[10.4,2.7],[11.9,2.7]].forEach(function(q,i){g('drop',5,26+i*4,box(q[0],q[1],T,1.1,1.7,.18,['#A9B0B7','#868F97','#6E7780'])+box(q[0]+.08,q[1]+.08,T+.18,.94,1.54,.95,['#E9EEF3','#2E7CC6','#0B5AA6']))});
+[[8.4,8.6],[17.5,2.6]].forEach(function(q,i){g('drop',5,40+i*4,line([[q[0],q[1],T],[q[0],q[1],T+3.4]],'#5B6672',4)+box(q[0]-.18,q[1]-.18,T+3.4,.36,.36,.16,['#FFE2A6','#F59A1B','#C97608']))});
+// сети: ВЛ и трубопровод
+var poles=[[.4,3.4],[6.6,3.4],[7.9,1.9],[13,1.5],[18.6,1.5]];
+poles.forEach(function(q,i){g('drop',6,i*5,line([[q[0],q[1],0],[q[0],q[1],3.6]],'#7A3B32',5)+line([[q[0]-.5,q[1]-.25,3.2],[q[0]+.5,q[1]+.25,3.2]],'#7A3B32',4))});
+for(var w=0;w<poles.length-1;w++)[-.45,.45].forEach(function(o,j){var A=P(poles[w][0]+o,poles[w][1]+o/2,3.2),B=P(poles[w+1][0]+o,poles[w+1][1]+o/2,3.2);out.push('<path class="e draw" data-s="6" pathLength="1" style="--i:'+(6+w*2+j)+'" d="M'+A+'Q'+(A[0]+B[0])/2+' '+((A[1]+B[1])/2+20)+' '+B+'" fill="none" stroke="#39424d" stroke-width="1.6"/>')});
+[[19.6,11.4],[17.6,11.4],[15.6,11.4],[13.6,11.4],[11.6,11.4]].forEach(function(q,i){g('drop',6,10+i*3,line([[q[0],q[1],0],[q[0],q[1],.7]],'#59636E',6))});
+[['#083F77',15],['#0B5AA6',11],['#6FB0EA',3]].forEach(function(s,i){out.push('<polyline class="e draw" data-s="6" pathLength="1" style="--i:'+(8+i)+'" points="'+pt([[20,11.4,.8],[10.6,11.4,.8],[10.6,9.6,.8],[10.6,9.0,1.35],[10.6,7.2,1.35]])+'" fill="none" stroke="'+s[0]+'" stroke-width="'+s[1]+'" stroke-linejoin="round"'+(i==2?' transform="translate(-2,-3)"':'')+'/>')});
+// лес спереди
+[[6.8,12.8],[7.6,11.4],[9.4,13.3],[12.2,13],[14.4,13.4],[16.4,13],[18.4,13.2],[19.3,12.4],[19.5,9],[6.4,9.6]].forEach(function(t,i){raw(fir(t[0],t[1],1.6+(i%3)*.3,i%2?G:G2))});
+svg.innerHTML=out.join('');
+// самосвал носом вдоль x
+var tr=$('#trucks');function truck(){var e=document.createElementNS(NS,'g');e.innerHTML=box(0,5.2,.5,1.5,.75,.2,['#333','#2a2a2a','#1e1e1e'])+box(0,5.2,.7,1,.75,.42,['#E6CFA2','#C6473C','#9E2F27'])+box(1.04,5.2,.6,.46,.75,.62,['#E4584B','#D03B30','#A22C24'])+poly([[1.5,5.28,.9],[1.5,5.88,.9],[1.5,5.88,1.14],[1.5,5.28,1.14]],'#BFD4E2');tr.appendChild(e);return e}
+var trk=[truck(),truck()],cur=0,o0=P(0,0,0);tr.style.transition='opacity .6s';
+KIT_READY(function(){KIT.raf(svg,function(t){trk.forEach(function(e,i){var p=((t/13000)+i*.5)%1,v=-.2+p*8.1,q=P(v,0,v>7?Math.min(.56,(v-7)*.45):0);e.setAttribute('transform','translate('+(q[0]-o0[0]).toFixed(1)+','+(q[1]-o0[1]).toFixed(1)+')');e.style.opacity=p<.04?p/.04:p>.95?(1-p)/.05:1})})});
+function KIT_READY(f){window.KIT?f():document.addEventListener('kit:ready',f)}
+function setStep(n){cur=n;$$('.e[data-s]',svg).forEach(function(e){e.classList.toggle('in',+e.dataset.s<=n)});$$('.e[data-c]',svg).forEach(function(e){e.classList.toggle('gone',+e.dataset.c<=n)});tr.style.opacity=n>=2?1:0;
+  // разбивка видна, пока её не закрыла насыпь
+  $$('.step').forEach(function(s,i){s.classList.toggle('on',i===n)});$$('#ruler a').forEach(function(a,i){a.className=i===n?'cur':i<n?'past':''})}
+/* ---------- шаги: виды работ и объект к каждому ---------- */
+var ST=[
+ [['Подготовка инженерно-проектной документации'],'Проект и разбивка','','',''],
+ [['Заготовка и вырубка леса','Лежневые дороги и вдольтрассовые проезды'],'Вырубка леса и&nbsp;лежнёвый настил','59,7 км','лежневого настила вдольтрассового проезда и&nbsp;315&nbsp;га вырубки на&nbsp;трубопроводе «Пур-Пе – Самотлор»'],
+ [['Разработка сухоройных карьеров','Гидронамыв грунта'],'Сухоройные карьеры и&nbsp;гидронамыв','2 582 000 м³','песка в&nbsp;штабель, карьер №&nbsp;1 Новопортовского месторождения, июнь–декабрь 2016'],
+ [['Кустовые основания'],'Кустовое основание','1 416 279 м³','земляных работ на&nbsp;площадке УКПГ Новопортовского месторождения'],
+ [['Дороги и мостовые переходы'],'Дороги и&nbsp;мостовые переходы','Малый Ем-Еган','Мост на&nbsp;дороге Нях – Ивдель – Обь – ЦПС: забивка свай, балки пролётного строения, монолитные ригели, барьерное ограждение'],
+ [['Площадочные сооружения'],'Площадочные сооружения','4 площадки','вертолётные, из&nbsp;плит ПДН, с&nbsp;оборудованием и&nbsp;благоустройством, для&nbsp;Новопортовского месторождения'],
+ [['Трубопроводы и инженерные сети'],'Трубопроводы и&nbsp;инженерные сети','47,7 км','воздушных линий 10&nbsp;кВ на&nbsp;кустах Кондинского месторождения и&nbsp;19,84&nbsp;км нефтесборных сетей на&nbsp;участке «Пойма»']
+];
+var WORKS=['Площадочные сооружения','Кустовые основания','Дороги и мостовые переходы','Разработка сухоройных карьеров','Гидронамыв грунта','Заготовка и вырубка леса','Лежневые дороги и вдольтрассовые проезды','Строительная механизация','Трубопроводы и инженерные сети','Подготовка инженерно-проектной документации'];
+var chips=$('#chips');WORKS.forEach(function(w){var l=document.createElement('label');l.innerHTML='<input type="checkbox"><span></span>';l.firstChild.value=w;l.lastChild.textContent=w;chips.appendChild(l)});
+function sync(){var on=$$('input:checked',chips).map(function(c){return c.value});$('#f-w').value=on.join(', ');$$('.add').forEach(function(b){var all=ST[b.dataset.i][0].every(function(w){return on.indexOf(w)>-1});b.setAttribute('aria-pressed',all);b.textContent=all?'В запросе':'Добавить в запрос'})}
+chips.addEventListener('change',sync);
+ST.forEach(function(s,i){var d=document.createElement('article');d.className='step';d.id='st'+i;d.innerHTML='<h3>'+s[1]+'</h3>'+(s[2]?'<p class="obj"><b class="num">'+s[2]+'</b><span>'+s[3]+'</span></p>':'<p>Готовим инженерно-проектную документацию и&nbsp;ведём объект до&nbsp;ввода. Техника с&nbsp;системами ГЛОНАСС и&nbsp;TOPCON.</p>')+'<button type="button" class="add" data-i="'+i+'">Добавить в запрос</button>';$('#steps').appendChild(d);
+ var a=document.createElement('a');a.href='#st'+i;a.setAttribute('aria-label',s[1].replace(/&nbsp;/g,' '));$('#ruler').appendChild(a)});
+$('#steps').addEventListener('click',function(e){var b=e.target.closest('.add');if(!b)return;var on=b.getAttribute('aria-pressed')!=='true';$$('input',chips).forEach(function(c){if(ST[b.dataset.i][0].indexOf(c.value)>-1)c.checked=on});sync()});
+sync();setStep(0);
+var mob=matchMedia('(max-width:900px)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setStep(+e.target.id.slice(2))})},{rootMargin:mob?'-76% 0px -23% 0px':'-50% 0px -49% 0px'});
+$$('.step').forEach(function(s){io.observe(s)});
+/* ---------- объекты: раздел «Реализованные проекты» talspecstroi.ru ---------- */
+var O={m3:[
+['2007','Июнь 2007 – октябрь 2008',1820000,'Добыча песка гидромеханизированным способом, карьер № 63 Каменной площади','ОАО «ТНК-Нягань»','Песок 1 820 000 м³','Карьер № 63'],
+['2009','Январь – декабрь 2009',281371,'Кустовая площадка № 32 и автодорога куст № 127 – куст № 27, участок «Пойма» Каменной площади','ОАО «ТНК-Нягань», НГДП Каменное','Земляное полотно 281 371 м³, щебёночное основание, укрепление откосов георешёткой 64 872 м², оцинкованное ограждение 2,6 км','Куст № 32'],
+['2010','Май – октябрь 2010',625000,'Бардагонский карьер в Свободненском районе Амурской области','ООО «Инжпромстрой»','Добыча песка гидромеханизированным способом, 625 000 м³','Бардагонский карьер'],
+['2011','Январь 2011 – декабрь 2012',119593,'Дорога и кустовая площадка № 50, Ем-Ёговский + Пальяновский ЛУ','ОАО «ТНК-Нягань»','Вырубка леса, земляное полотно 119 593 м³, лежневый настил, щебёночное основание','Куст № 50'],
+['2012','Март – апрель 2012',200000,'Кустовая площадка на Восточно-Мессояхском участке, Тазовский район ЯНАО','Генподрядчик ООО «Севертрансстрой»','Насыпь 200 000 м³ на вечномёрзлых грунтах, вскрышные работы, разработка карьера, амбары с теплогидроизоляцией','Мессояха'],
+['2013','Январь – май 2013',1000000,'Новопортовское месторождение: ЦПС, кусты 1 и 2, ПСП на Мысе Каменном','ООО «Газпромнефть-Развитие»','Карьер буровзрывным способом, 1 000 тыс. м³ песка в штабель, вечномёрзлые грунты','ПСП, Мыс Каменный'],
+['2012','Октябрь 2012 – август 2014',148000,'Дорога и кустовая площадка № 177а, Ем-Ёговский + Пальяновский ЛУ','ОАО «ТНК-Нягань»','Земляное полотно 148 000 м³, шламовый амбар, щебёночное основание с геосинтетикой','Куст № 177а'],
+['2014','Март 2014 – декабрь 2015',442570,'База сервисных организаций Новопортовского месторождения','ООО «Газпром нефть Новый Порт»','Насыпь из привозного песка 442 570 м³ с заменой торфа, покрытия проездов, электроснабжение и освещение 1,12 км, ограждение 950 м','База сервиса'],
+['2014','Ноябрь 2014 – декабрь 2015',1416279,'Инженерная подготовка площадки УКПГ и линейных объектов Новопортовского месторождения','ООО «Газпром нефть Новый Порт»','Земляные работы 1 416 279 м³, буровзрывная разработка 134 371 м³, четыре вертолётные площадки','УКПГ, Новый Порт'],
+['2015','Май – декабрь 2015',1877000,'Карьер песка № 4, Новопортовское месторождение','ООО «Газпром нефть Новый Порт»','Вскрышные работы, добыча песка в штабель 1 877 000 м³','Карьер № 4'],
+['2015','Сентябрь 2015 – апрель 2016',1646121,'Автомобильная дорога «Причал Цингалы – ОБП Кондинское»','АО «НК «Конданефть»','Участки 9,62 и 13,335 км, лежневый проезд 3,2 км, отсыпка 1 646 121 м³','Цингалы – Кондинское'],
+['2016','Январь – декабрь 2016',875000,'Карьер ЕП-2 на Ем-Еговской площади','АО «РН-Няганьнефтегаз»','Вскрышные работы, добыча и заготовка грунта 875 000 м³','Карьер ЕП-2'],
+['2016','Январь – апрель 2016',463517,'ЦПС Новопортовского месторождения, 2 этап','ООО «Газпромнефть-Ямал»','Насыпь 463 517 м³ с возкой до 13 км, теплоизоляция из полистирольных плит 28 800 м²','ЦПС, 2 этап'],
+['2016','Июнь – декабрь 2016',2582000,'Карьер песка № 1, Новопортовское месторождение','ООО «Газпром нефть Новый Порт»','Вскрышные работы, добыча песка в штабель 2 582 000 м³','Карьер № 1'],
+['2016','Август – декабрь 2016',840000,'Карьер песка № 29, Новопортовское месторождение','ООО «Газпромнефть-Ямал»','Вскрышные работы, добыча песка в штабель 840 000 м³','Карьер № 29'],
+['2018','Февраль – декабрь 2018',300000,'Куст скважин № 8.2 и дорога к нему, Новопортовское НГКМ','ООО «Газпромнефть-Ямал»','Насыпь 300 000 м³ с возкой до 10 км, шламовый амбар 12 000 м³, дорога с отсыпкой 50 000 м³','Куст № 8.2'],
+['2018','Июль – декабрь 2018',209000,'Инженерная подготовка проездов и площадок Тазовского месторождения','ООО «Газпромнефть-Развитие»','Отсыпка 209 000 м³ на болотистой местности, шламовый амбар 11 040 м²','Тазовское']],
+km:[
+['2009','Январь – май 2009',19.84,'Нефтесборные сети на кустах № 30, 31, 32 и разведочных скважин № 552, 566, участок «Пойма»','ОАО «ТНК-Нягань»','Нефтесборные сети Ø 530×8, 19,84 км','Сети, «Пойма»'],
+['2009','Июнь 2009 – сентябрь 2010',10.8,'Нефтепровод Сковородино – граница КНР','ОАО «Промстрой»','Наружные сети пожаротушения, канализации, водо- и теплоснабжения 10,8 км, кабельная эстакада 289 т, скальные грунты','Сковородино – КНР'],
+['2010','Май 2010 – февраль 2011',59.7,'Трубопроводная система НПС «Пур-Пе» – ЛПДС «Самотлор»','ООО «КСУ «Сибнефтепроводстрой»','Вдольтрассовый проезд: лежневый настил 59,7 км и грунтовые модули 3,5 км, частично через болото','Пур-Пе – Самотлор'],
+['2016','Сентябрь 2016 – февраль 2018',29,'Кусты скважин № 1, 1а, 3, 4, 6 Кондинского месторождения','АО «НК «Конданефть»','Воздушные линии 10 кВ, 29 км','ВЛ 10 кВ, кусты 1–6'],
+['2016','Сентябрь 2016 – апрель 2018',18.7,'Кусты скважин № 2, 2а, 5, 7, 9 Кондинского месторождения','АО «НК «Конданефть»','Воздушные линии 10 кВ, 18,7 км','ВЛ 10 кВ, кусты 2–9'],
+['2017','Март – ноябрь 2017',3.9,'Автодорога к кусту скважин № 126, Ем-Еговский + Пальяновский ЛУ','АО «РН-Няганьнефтегаз»','Автодорога 3,9 км, отсыпка 49 171 м³','Дорога к кусту 126'],
+['2017','Апрель – октябрь 2017',5.008,'Куст скважин № 451, Каменный (западная часть) ЛУ','АО «РН-Няганьнефтегаз»','Воздушная линия 6 кВ, 5,008 км','ВЛ 6 кВ, куст 451'],
+['2017','Апрель 2017 – январь 2019',2.454,'Автодорога к кусту скважин № 131, Ем-Еговский + Пальяновский ЛУ','АО «РН-Няганьнефтегаз»','Автодорога 2,454 км, отсыпка 24 706 м³','Дорога к кусту 131']],
+ha:[
+['2009','Декабрь 2009 – декабрь 2010',315,'Трубопроводная система НПС «Пур-Пе» – ЛПДС «Самотлор»','ООО «КСУ «Сибнефтепроводстрой»','Вырубка леса 315 га','Пур-Пе – Самотлор'],
+['2011','Декабрь 2011 – июнь 2012',241,'ТС «Заполярье – НПС «Пур-Пе»','ООО «Транснефтьстрой»','Вырубка полосы отвода трассы и площадок 241 га, расчистка от лесопорубочных остатков','Заполярье – Пур-Пе'],
+['2017','Март – апрель 2017',207.73,'Тальцийское месторождение: дорога, трубопроводы, водоводы, площадки скважин','ООО «РН-Уватнефтегаз»','Комплекс работ по вырубке леса 207,73 га','Тальцийское'],
+['2018','Январь – март 2018',373.5,'Куст скважин № 1 Немчиновского месторождения','ООО «РН-Уватнефтегаз»','Вырубка 373,5 га, лежневый настил 13 320 м², земляные работы 81 000 м³, болотистая местность','Немчиновское'],
+['2018','Февраль – март 2018',20.23,'Куст скважин № 3 Косухинского месторождения','ООО «РН-Уватнефтегаз»','Вырубка 20,23 га, лежневый настил 18 802 м², болотистая местность','Косухинское'],
+['2018','Февраль – март 2018',8.28,'ВЖК Тямкинского месторождения','ООО «РН-Уватнефтегаз»','Вырубка 8,28 га, лежневый настил 300 м², земляные работы 26 000 м³','Тямкинское']]};
+var UN={m3:'м³',km:'км',ha:'га'},mode='m3',sel=0,strip=$('#strip'),R=document.documentElement;
+var nb=function(s){return s.replace(/ (м³|м²|км|га|т|кВ|м)(?=[\s,.]|$)/g,' $1').replace(/№ /g,'№ ').replace(/(^|\s)(и|в|с|на|до|из|от) /gi,'$1$2 ')};
+function glyph(v,max){
+ if(mode==='m3'){var k=Math.sqrt(v/max),w=Math.max(34,k*270),h=w*.5;return '<svg width="'+w+'" height="'+h+'" viewBox="0 0 270 135" preserveAspectRatio="none" aria-hidden="true"><path class="g" d="M0 135C38 118 78 62 128 6q8-8 17 0c48 54 84 110 125 129z"/><path d="M137 4c30 46 22 92 6 131h127C228 116 192 60 145 6z" fill="#5a3b10" opacity=".16"/></svg>'}
+ if(mode==='km'){var H=30+v/max*190;return '<svg width="96" height="'+H+'" viewBox="0 0 96 100" preserveAspectRatio="none" aria-hidden="true"><path class="g" d="M0 100 34 0h28l34 100z"/><path d="M48 4v92" stroke="#fff" stroke-width="3" stroke-dasharray="9 9" vector-effect="non-scaling-stroke"/></svg>'}
+ var n=Math.max(1,Math.round(v/10)),c=Math.max(3,Math.ceil(Math.sqrt(n)*1.5)),s='';for(var i=0;i<n;i++){var r=Math.floor(i/c),x=(i%c)*26+(r%2?13:0),y=-r*26;s+='<path class="g tr" d="M'+(x+13)+' '+(y-42)+'l13 42h-26z"/>'}var rows=Math.ceil(n/c);return '<svg width="'+(c*26+13)+'" height="'+(rows*26+18)+'" viewBox="0 '+(-rows*26-18)+' '+(c*26+13)+' '+(rows*26+18)+'" aria-hidden="true"><g>'+s+'</g></svg>'}
+function show(i,scroll){var L=O[mode];sel=(i+L.length)%L.length;var o=L[sel];$$('.ob',strip).forEach(function(b,j){b.setAttribute('aria-selected',j===sel);b.tabIndex=j===sel?0:-1;if(j===sel&&scroll)strip.scrollTo({left:b.offsetLeft-strip.clientWidth/2+b.offsetWidth/2,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})});
+ $('#pass .v').innerHTML=o[2].toLocaleString('ru-RU',{maximumFractionDigits:3})+'<small>'+UN[mode]+'</small>';$('#pass .per').textContent=o[1];$('#pass h3').textContent=nb(o[3]);$('#pass .cu').textContent=o[4];$('#pass .wk').textContent=nb(o[5])}
+function build(){strip.textContent='';strip.scrollLeft=0;var L=O[mode],max=Math.max.apply(0,L.map(function(o){return o[2]}));L.forEach(function(o,i){var b=document.createElement('button');b.type='button';b.className='ob';b.setAttribute('role','option');b.innerHTML=glyph(o[2],max)+'<span class="yr num">'+o[0]+'<small>'+o[6]+'</small></span>';b.setAttribute('aria-label',o[0]+': '+o[3]);b.addEventListener('click',function(){show(i)});strip.appendChild(b)});var big=L.map(function(o){return o[2]}).indexOf(max);show(big);if(strip.scrollWidth>strip.clientWidth)show(big,true)}
+strip.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;e.preventDefault();show(sel+k,true);$$('.ob',strip)[sel].focus({preventScroll:true})});
+$$('[data-go]').forEach(function(b){b.addEventListener('click',function(){show(sel+ +b.dataset.go,true)})});
+$$('[data-mode]').forEach(function(b){b.addEventListener('click',function(){mode=b.dataset.mode;$$('[data-mode]').forEach(function(x){x.setAttribute('aria-selected',x===b)});build()})});
+// перетаскивание мышью
+var dn=null;strip.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse')dn=[e.clientX,strip.scrollLeft]});addEventListener('pointermove',function(e){if(!dn)return;var d=e.clientX-dn[0];if(Math.abs(d)>6)strip.classList.add('drag');strip.scrollLeft=dn[1]-d});addEventListener('pointerup',function(){dn=null;setTimeout(function(){strip.classList.remove('drag')},0)});
+build();
+});
+</script>
+</body>
+</html>

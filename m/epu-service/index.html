@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ЭПУ Сервис — производство и сервис установок ЭЦН, Когалым</title>
+<meta name="description" content="Концепция редизайна сайта ООО «ЭПУ Сервис»: вентильные двигатели, центробежные и винтовые насосы, ремонт и обслуживание УЭЦН.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/geologica-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--paper:#EFF2F4;--white:#fff;--ink:#14191E;--steel:#1B2229;--steel-2:#28313A;--red:#DB2B36;--red-d:#C01F2A;--blue:#5E7285;
+  --bg:var(--paper);--fg:var(--ink);--muted:#4E5C69;--accent:var(--red);--accent-h:#A9141F;--r:2px;--line:rgba(30,52,72,.2);
+  --f-display:"Geologica",system-ui,sans-serif;--f-text:"Roboto Condensed",Arial,sans-serif;--hdr-h:78px;--wrap:1360px;--sec:clamp(72px,9vw,140px)}
+[data-theme=night]{--bg:var(--steel);--fg:#EEF2F5;--muted:#A8B4BF;--line:rgba(220,232,242,.2);background:var(--steel);color:var(--fg)}
+body{font-size:18px;line-height:1.5}
+img{height:auto}[data-img]{overflow:hidden}
+h1,h2,h3{font-weight:640;letter-spacing:-.032em;line-height:1.02}
+h2{font-size:clamp(34px,4.3vw,66px);max-width:15em}
+.lead{font-size:clamp(19px,1.5vw,22px);line-height:1.45}
+.btn{font-size:18px;font-weight:600}
+/* миллиметровка чертёжного стола */
+.sheet{background:
+  linear-gradient(rgba(44,78,106,.075) 1px,transparent 1px) 0 0/100% 120px,linear-gradient(90deg,rgba(44,78,106,.075) 1px,transparent 1px) 50% 0/120px 100%,
+  linear-gradient(rgba(44,78,106,.035) 1px,transparent 1px) 0 0/100% 24px,linear-gradient(90deg,rgba(44,78,106,.035) 1px,transparent 1px) 50% 0/24px 100%,var(--paper)}
+/* шапка */
+.hdr{background:#fff;border-bottom:1px solid var(--line)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.6vw,44px)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;font:640 22px/1 var(--f-display);letter-spacing:-.03em;white-space:nowrap;min-height:48px}
+.brand img{height:52px;width:auto}
+.hdr nav{display:flex;gap:clamp(16px,2vw,34px);margin-left:auto;font-size:18px}
+.hdr nav a{text-decoration:none;padding:12px 0;background:linear-gradient(var(--red),var(--red)) 0 calc(100% - 8px)/0 2px no-repeat;transition:background-size .35s var(--e-smooth)}
+.hdr nav a:hover{background-size:100% 2px}
+.hdr .tel{font-weight:600;text-decoration:none;white-space:nowrap;padding:12px 0}
+/* первый экран */
+.hero{padding-top:var(--hdr-h);min-height:min(100svh,920px);display:grid;grid-template-rows:1fr auto auto;overflow:clip}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:24px clamp(28px,3vw,56px);align-items:center;padding-block:clamp(18px,3vh,44px) clamp(16px,2.4vh,36px)}
+h1{font-size:clamp(42px,5vw,80px)}
+h1 em{font-style:normal;color:var(--red)}
+.hero .lead{margin-top:24px;max-width:31em;color:#2C3843}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cta .btn--ghost{background:#fff}
+.shaft-ph{position:relative;margin:0 10px 26px 0}
+.shaft-ph img{width:100%;aspect-ratio:8/5;object-fit:cover;object-position:34% 50%}
+.shaft-ph::before,.shaft-ph::after{content:"";position:absolute;border:solid var(--ink);opacity:.55}
+.shaft-ph::before{left:0;right:0;bottom:-18px;height:10px;border-width:0 1px;background:linear-gradient(var(--ink),var(--ink)) 0 50%/100% 1px no-repeat}
+.shaft-ph::after{top:0;bottom:0;right:-18px;width:10px;border-width:1px 0;background:linear-gradient(var(--ink),var(--ink)) 50% 0/1px 100% no-repeat}
+.bar-col{position:relative;height:clamp(112px,11.6vw,176px)}
+.bar-col svg{position:absolute;left:50%;top:0;height:100%;width:auto;max-width:none;aspect-ratio:1900/190;translate:-50% 0;overflow:visible}
+.dims{padding-block:16px 20px}
+.dims .wrap{display:grid;grid-template-columns:1.25fr 1fr 1.2fr;gap:0}
+.dim{border-left:1px solid var(--ink);padding:0 18px;position:relative}
+.dim:last-child{border-right:1px solid var(--ink)}
+.dim::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--ink);opacity:.5}
+.dim b{position:relative;display:inline-block;background:var(--paper);padding:0 12px 0 0;margin-left:0;font:640 clamp(26px,2.5vw,38px)/1 var(--f-display);letter-spacing:-.03em;top:-6px}
+.dim span{display:block;font-size:17px;line-height:1.3;color:#34414D;margin-top:2px}
+@media (prefers-reduced-motion:no-preference){
+  .js .bar-col svg{animation:run 2.6s var(--e-smooth) both}
+  .js h1 span{display:block;animation:set 1.2s var(--e-smooth) both;animation-delay:calc(var(--n)*.12s)}
+  .js .shaft-ph img{animation:open 1.5s var(--e-strike) both}
+}
+h1 span{display:block}
+@keyframes run{from{transform:translateX(-26%)}}
+@keyframes set{from{transform:translateX(-.35em)}}
+@keyframes open{from{clip-path:inset(0 0 0 72%)}}
+/* разборная колонна */
+.col-s{padding-block:clamp(64px,7vw,110px) 0;background:#fff;position:relative}
+.col-g{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:0 clamp(24px,5vw,90px);margin-top:clamp(18px,2vw,34px)}
+.stage{position:sticky;top:var(--hdr-h);height:calc(100svh - var(--hdr-h));display:grid;grid-template:minmax(0,1fr)/minmax(0,1fr);justify-items:center;padding:14px 0}
+.stage svg{height:100%;width:100%;min-height:0;overflow:visible}
+.stage .kit{position:absolute;left:0;top:30px;display:grid;gap:2px;font-size:17px;line-height:1.25;color:var(--muted);max-width:11em}
+.stage .kit b{font:640 25px/1.1 var(--f-display);letter-spacing:-.03em;color:var(--ink)}
+.out{transition:transform 1.1s var(--e-smooth);cursor:pointer}
+.out.off{transform:translateX(116px)}
+.gone{display:none}
+.axis{stroke:var(--red);stroke-dasharray:16 5 3 5;stroke-width:1}
+.steps>li{min-height:72svh;display:grid;align-content:center;padding-block:30px;border-top:1px solid var(--line)}
+.steps>li:first-child{border-top:0}
+.steps h3{font-size:clamp(30px,3.3vw,50px)}
+.steps p{margin-top:16px;max-width:33em}
+.spec{margin-top:24px;max-width:600px}
+.spec div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line)}
+.spec dt{color:var(--muted)}
+.spec dd{font:600 clamp(20px,1.7vw,25px)/1.15 var(--f-display);letter-spacing:-.02em;text-align:right}
+.steps .link{justify-self:start;margin-top:22px;padding:10px 0;font-weight:600}
+/* стальной остров */
+.drive{padding-block:var(--sec);overflow:clip}
+.drive-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px clamp(28px,5vw,90px);align-items:end}
+.drive-top p{color:#C6D0D9;max-width:33em}
+.rot{margin-top:clamp(28px,4vw,56px);position:relative}
+.rot svg{width:100%;height:auto;overflow:visible}
+.rot-ui{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px clamp(20px,3vw,48px);align-items:center;margin-top:10px;border-block:1px solid var(--line);padding:18px 0}
+.rot-ui .pm{display:flex;gap:8px}
+.rot-ui .pm button{width:56px;height:56px;font:500 30px/1 var(--f-display);border:1.5px solid rgba(220,232,242,.4);transition:background-color .25s,border-color .25s}
+.rot-ui .pm button:hover{background:var(--red);border-color:var(--red)}
+.rot-ui .kw{font:640 clamp(30px,4vw,60px)/1 var(--f-display);letter-spacing:-.035em}
+.rot-ui .kw i{font-style:normal;color:#93A1AE;font-weight:400}
+.rot-ui small{display:block;font-size:17px;color:var(--muted);max-width:21em}
+.vs{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(28px,5vw,90px);margin-top:clamp(48px,6vw,96px);align-items:center}
+.vs figure img{width:100%;aspect-ratio:1/1;max-height:560px;object-fit:cover;object-position:60% 50%}
+.vs table{width:100%;border-collapse:collapse;margin-top:26px}
+.vs th,.vs td{text-align:left;vertical-align:top;padding:14px 12px 14px 0;border-bottom:1px solid var(--line);font-weight:400}
+.vs thead th{font:640 20px/1.2 var(--f-display);letter-spacing:-.02em}
+.vs thead th:nth-child(2){color:#FF6B74}
+.vs tbody th{color:var(--muted);width:36%}
+.vs td{font:600 clamp(19px,1.6vw,24px)/1.2 var(--f-display);letter-spacing:-.02em}
+.vs td:last-child{color:#93A1AE;font-weight:400}
+/* сервис */
+.srv-g{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:30px clamp(28px,5vw,90px);align-items:end}
+.srv-g figure img{width:100%;aspect-ratio:1280/500;object-fit:cover}
+.war b{display:block;font:640 clamp(96px,14vw,220px)/.82 var(--f-display);letter-spacing:-.065em;color:var(--red)}
+.war span{display:block;margin-top:18px;font-size:20px;line-height:1.35;max-width:23em}
+.way{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(28px,5vw,90px);margin-top:clamp(36px,5vw,72px)}
+.way h3{font-size:clamp(24px,2.1vw,32px);padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.way li{padding:11px 0;border-bottom:1px solid var(--line)}
+.rent{margin-top:26px;padding:22px 0;display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;justify-content:space-between}
+.rent p{font:500 clamp(20px,1.8vw,26px)/1.25 var(--f-display);letter-spacing:-.02em;max-width:30em}
+/* подбор */
+.pick-g{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(28px,4vw,72px);margin-top:clamp(26px,3.4vw,52px);align-items:start}
+.well{background:#fff;border:1px solid var(--line);padding:clamp(14px,1.6vw,26px);position:sticky;top:calc(var(--hdr-h) + 14px)}
+.well svg{width:100%;height:auto;max-height:44svh}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px}
+.well .say{min-height:3em;margin-top:8px;font-size:17px;line-height:1.35}
+.ser{display:grid;gap:0;margin-top:8px}
+.ser button{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.5fr);gap:14px;align-items:baseline;width:100%;min-height:46px;padding:9px 12px;text-align:left;border-top:1px solid var(--line);transition:background-color .25s,color .25s}
+.ser button b{font:600 18px/1.2 var(--f-display);letter-spacing:-.02em;white-space:nowrap}
+.ser button span{min-width:0;font-size:16px;line-height:1.25;color:var(--muted)}
+.ser button[disabled]{opacity:.45;cursor:default;text-decoration:line-through;text-decoration-thickness:1px}
+.ser button[aria-pressed=true]{background:var(--ink);color:#fff}.ser button[aria-pressed=true] span{color:#C6D0D9}
+.ser button:not([disabled]):not([aria-pressed=true]):hover{background:#F4DEDF}
+.pick form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+.pick .full{grid-column:1/-1}
+.field input,.field select,.field textarea{background:#fff;border-color:rgba(30,52,72,.32)}
+.field>span{font-size:16px}
+.agree{font-size:16px}
+.done{border:2px solid var(--ink);background:#fff;padding:28px;grid-column:1/-1}
+.done h3{font-size:34px}.done dl{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr);gap:8px 20px;margin:18px 0}.done dt{color:var(--muted)}
+/* история */
+.hist{background:#fff}
+.tl{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin-top:clamp(36px,5vw,70px);border-top:2px solid var(--ink)}
+.tl li{position:relative;padding:24px 18px 0 0}
+.tl li::before{content:"";position:absolute;left:0;top:-12px;width:2px;height:22px;background:var(--ink)}
+.tl li.hot::before{background:var(--red);width:6px}
+.tl b{display:block;font:640 clamp(24px,2.2vw,34px)/1.05 var(--f-display);letter-spacing:-.03em}
+.tl .hot b{color:var(--red-d)}
+.tl span{display:block;margin-top:10px;font-size:17px;line-height:1.36;color:#35424E}
+/* площадки */
+.geo-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,90px);align-items:start}
+.geo figure img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:66% 50%}
+.geo .ppl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+.geo .ppl b{display:block;font:640 clamp(26px,2.7vw,42px)/1 var(--f-display);letter-spacing:-.035em}
+.geo .ppl span{font-size:16px;line-height:1.3;color:var(--muted);display:block;margin-top:6px}
+.places{border-top:2px solid var(--ink)}
+.places li{border-bottom:1px solid var(--line)}
+.places button{display:flex;justify-content:space-between;align-items:baseline;gap:16px;width:100%;min-height:58px;padding:12px 0;text-align:left}
+.places button b{font:600 clamp(22px,2vw,30px)/1.1 var(--f-display);letter-spacing:-.03em;transition:color .25s,transform .4s var(--e-smooth)}
+.places button span{color:var(--muted);font-size:17px}
+.places button:hover b,.places [aria-expanded=true] b{color:var(--red-d);transform:translateX(8px)}
+.places .d{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--e-smooth)}
+.places .d>div{overflow:hidden;visibility:hidden;transition:visibility .5s}
+.places .open .d{grid-template-rows:1fr}.places .open .d>div{visibility:visible}
+.places .d p{padding:0 0 10px;max-width:34em}
+.places .d a{display:inline-flex;align-items:center;min-height:44px;margin-right:22px;font-weight:600}
+.ftr{padding:30px 0 34px;border-top:1px solid var(--line);background:#fff}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:10px 50px;justify-content:space-between;font-size:17px;color:var(--muted)}
+.ftr a{color:var(--ink);display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:1180px) and (min-width:901px){.hdr .tel{display:none}}
+@media (max-width:900px){
+  :root{--hdr-h:66px}
+  .brand img{height:42px}.brand{font-size:20px;gap:10px}.hdr .tel{display:none}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:#fff;flex-direction:column;gap:2px;padding:20px var(--gutter);font:640 30px/1.2 var(--f-display);letter-spacing:-.03em;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  [data-burger]{margin-left:auto}
+  .hero{min-height:0}
+  .hero-in{grid-template-columns:minmax(0,1fr);padding-block:46px 8px}
+  h1{font-size:clamp(38px,11.2vw,60px)}
+  .cta .btn{flex:1 1 100%}
+  .shaft-ph{margin-top:12px}
+  .shaft-ph img{aspect-ratio:8/4.4;object-position:30% 50%}
+  .bar-col{height:104px}
+  .bar-col svg{left:auto;right:-30px;translate:0 0}
+  .dims .wrap{grid-template-columns:minmax(0,1fr);gap:18px}
+  .dim,.dim:last-child{border-right:0}.dim::before{top:13px}
+  .dim b{font-size:30px;top:0}
+  .drive-top,.vs,.srv-g,.way,.pick-g,.geo-g{grid-template-columns:minmax(0,1fr)}
+  .col-g{grid-template-columns:104px minmax(0,1fr);gap:0 14px}
+  .steps h3{font-size:25px}.spec dd{font-size:19px}
+  .stage{margin-left:calc(var(--gutter)*-.5);padding:10px 0 72px;justify-items:start}
+  .stage svg{width:112px;height:100%}
+  .stage .kit{display:none}
+  .out.off{transform:translateX(-94px)}
+  .steps>li{min-height:82svh}
+  .spec div{grid-template-columns:minmax(0,1fr);gap:2px}.spec dd{text-align:left}
+  .steps p{font-size:18px}
+  .rot{margin-inline:calc(var(--gutter)*-1);overflow:hidden}
+  .rot svg{width:100%}
+  .rot-ui{grid-template-columns:minmax(0,1fr);margin-inline:var(--gutter);gap:16px}
+  .vs table,.vs thead,.vs tbody,.vs tr{display:block}
+  .vs thead{display:none}
+  .vs tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .vs tbody th{grid-column:1/-1;width:auto;padding:0;border:0}
+  .vs td{padding:0;border:0}.vs td::before{content:attr(data-l);display:block;font:400 15px/1.3 var(--f-text);letter-spacing:0;color:#FF6B74}.vs td:last-child::before{color:#93A1AE}
+  .vs figure{order:2}.vs figure img{aspect-ratio:4/3}
+  .way h3{margin-top:26px}
+  .duo{grid-template-columns:minmax(0,1fr)}.well{position:relative;top:0}.ser button{grid-template-columns:minmax(0,1fr);gap:2px;padding:10px 8px}
+  .pick form{grid-template-columns:minmax(0,1fr)}
+  .tl{grid-template-columns:minmax(0,1fr);border-top:0;border-left:2px solid var(--ink)}
+  .tl li{padding:0 0 26px 22px}.tl li::before{left:-12px;top:12px;width:22px;height:2px}.tl li.hot::before{width:22px;height:6px;top:10px}
+  .rent .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a class="brand" href="#main"><img src="img/logo.png" alt="Логотип ЭПУ Сервис" width="220" height="216"><span>ЭПУ Сервис</span></a>
+  <nav data-menu aria-label="Основное меню"><a href="#column">Продукция</a><a href="#drive">Вентильный привод</a><a href="#service">Сервис</a><a href="#select">Подбор</a><a href="#places">Площадки</a></nav>
+  <a class="tel num" href="tel:+73466748910">+7 (34667) 4-89-10</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero sheet">
+  <div class="wrap hero-in">
+    <div>
+      <h1><span style="--n:0">Погружные установки:</span><span style="--n:1"><em>от&nbsp;чертежа</em></span><span style="--n:2"><em>до&nbsp;скважины</em></span></h1>
+      <p class="lead">Производим полнокомплектные УЭЦН, ремонтируем их и&nbsp;обслуживаем на&nbsp;месторождениях. Головная площадка в&nbsp;Когалыме.</p>
+      <div class="cta"><a class="btn" data-magnetic href="#select">Подобрать под&nbsp;скважину</a><a class="btn btn--ghost" href="#column">Разобрать установку</a></div>
+    </div>
+    <figure class="shaft-ph"><img src="img/ph/07.webp" alt="Валы и фланцы погружных секций на стеллаже" width="1280" height="500" fetchpriority="high"></figure>
+  </div>
+  <div class="bar-col" aria-hidden="true"><svg id="bar" viewBox="0 0 1900 190"></svg></div>
+  <div class="dims"><div class="wrap">
+    <div class="dim"><b class="num">21 000</b><span>и&nbsp;более установок ЭЦН на&nbsp;обслуживании</span></div>
+    <div class="dim"><b class="num">1983</b><span>год образования предприятия</span></div>
+    <div class="dim"><b class="num">365 суток</b><span>гарантия на&nbsp;оборудование после ремонта</span></div>
+  </div></div>
+</section>
+
+<section class="col-s" id="column"><div class="wrap">
+  <h2 data-split>Установка по&nbsp;узлам</h2>
+  <div class="col-g">
+    <div class="stage" aria-hidden="true"><div class="kit"><b id="kit-n">УЭЦН</b><span id="kit-t">с вентильным двигателем</span></div><svg id="col" viewBox="0 0 330 960"></svg></div>
+    <ol class="steps" id="steps">
+      <li data-k="su" data-kit="УЭЦН|с вентильным двигателем"><h3>Станция управления</h3><p>Задаёт режим вентильного двигателя: сам по&nbsp;себе, без преобразователя частоты, он не&nbsp;работает. Станции рассчитаны на&nbsp;открытый воздух, исполнение УХЛ1, и&nbsp;ведут как центробежные, так и&nbsp;винтовые насосы.</p>
+        <dl class="spec"><div><dt>Типы</dt><dd class="num">СУВД‑080, 160, 315</dd></div><div><dt>Двигатель ВД, до</dt><dd class="num">150 кВт</dd></div><div><dt>КПД при номинальном токе</dt><dd class="num">не&nbsp;менее 0,95</dd></div></dl><a class="link" href="#select" data-ask="Станция управления СУВД">Запросить станцию</a></li>
+      <li data-k="pump" data-kit="УЭЦН|с вентильным двигателем"><h3>Электро&shy;центробежный насос</h3><p>Откачивает пластовую жидкость из&nbsp;нефтяной скважины в&nbsp;составе установки. Газосепараторы, входные модули и&nbsp;гидрозащиту к&nbsp;нему тоже делаем сами.</p>
+        <dl class="spec"><div><dt>Производительность линейки</dt><dd class="num">25–1000 м³/сут</dd></div></dl><a class="link" href="#select" data-ask="Электроцентробежный насос">Запросить насос</a></li>
+      <li data-k="vd" data-kit="УЭЦН|с вентильным двигателем"><h3>Вентильный двигатель</h3><p>Синхронный двигатель с&nbsp;постоянными магнитами на&nbsp;роторе. Присоединительные размеры подходят к&nbsp;стандартным гидрозащитам и&nbsp;кабельным муфтам, поэтому он встаёт в&nbsp;обычную установку.</p>
+        <dl class="spec"><div><dt>Диаметр корпуса, мм</dt><dd class="num">81, 92, 117, 143, 185</dd></div><div><dt>Наибольшая мощность в&nbsp;каталоге</dt><dd class="num">600 кВт, ВДМ‑3.0‑143</dd></div><div><dt>Частота вращения, серии 92 и&nbsp;117</dt><dd class="num">500–4200 об/мин</dd></div></dl><a class="link" href="#select" data-ask="Погружной вентильный двигатель">Запросить двигатель</a></li>
+      <li data-k="ad" data-kit="УЭЦН|с асинхронным двигателем"><h3>Асинхронный двигатель</h3><p>Трёхфазный короткозамкнутый маслонаполненный двигатель серии ПЭД для привода центробежных насосов. Исполнение односекционное.</p>
+        <dl class="spec"><div><dt>Диаметр корпуса</dt><dd class="num">117 мм</dd></div><div><dt>Мощность</dt><dd class="num">12–125 кВт</dd></div></dl><a class="link" href="#select" data-ask="Погружной асинхронный двигатель ПЭД">Запросить ПЭД</a></li>
+      <li data-k="pcp" data-kit="УЭВН|с винтовым насосом"><h3>Винтовой насос</h3><p>Для тяжёлой нефти: меньше страдает от&nbsp;песка, лучше наполняется, короче по&nbsp;длине. Обойма из&nbsp;эластомера с&nbsp;повышенной абразивной стойкостью. Поток стабилен и&nbsp;пропорционален числу оборотов.</p>
+        <dl class="spec"><div><dt>Рекомендуемая частота вращения</dt><dd class="num">50–400 об/мин</dd></div></dl><a class="link" href="#select" data-ask="Винтовой насос">Запросить винтовой насос</a></li>
+      <li data-k="opu" data-kit="УЭВН|с винтовым насосом"><h3>Опорный узел</h3><p>Стоит между винтовым насосом и&nbsp;гидрозащитой. Принимает осевые и&nbsp;радиальные силы насоса и&nbsp;передаёт крутящий момент: пять упорных роликовых подшипников внутри, вал в&nbsp;масле.</p>
+        <dl class="spec"><div><dt>Осевая нагрузка, не&nbsp;более</dt><dd class="num">6000 кг</dd></div><div><dt>Номинальный момент</dt><dd class="num">1000 Н·м</dd></div><div><dt>Рабочая частота вращения</dt><dd class="num">0–1500 об/мин</dd></div><div><dt>Диаметр, длина, масса</dt><dd class="num">96 мм, 3320 мм, 125 кг</dd></div></dl><a class="link" href="#select" data-ask="Опорный узел ОПУ‑96В5ТА">Запросить ОПУ‑96В5ТА</a></li>
+    </ol>
+  </div>
+</div></section>
+
+<section class="drive" id="drive" data-theme="night"><div class="wrap">
+  <div class="drive-top"><h2 data-split>Мощность набирается секциями ротора</h2><p class="lead">Секция универсальна для двигателей с&nbsp;одним числом полюсов и&nbsp;даёт около 8&nbsp;кВт. Добавьте секции на&nbsp;вал и&nbsp;посмотрите, какой получится двигатель.</p></div>
+  <div class="rot"><svg id="rot" viewBox="0 0 1360 210" role="img" aria-label="Ротор вентильного двигателя, собранный из секций с постоянными магнитами"></svg>
+    <div class="rot-ui"><div class="pm"><button type="button" id="rm" aria-label="Снять секцию">−</button><button type="button" id="rp" aria-label="Добавить секцию">+</button></div>
+      <output class="kw num" id="kw" aria-live="polite"></output><small>Для двигателя на&nbsp;32&nbsp;кВт нужны четыре секции. Роторы выпускаются в&nbsp;основном 8‑, 6‑ и&nbsp;4‑полюсные.</small></div></div>
+  <div class="vs">
+    <figure data-img><img src="img/ph/05.webp" alt="Статор погружного двигателя: медная обмотка внутри корпуса" loading="lazy" width="1280" height="500"></figure>
+    <div><h3 style="font-size:clamp(28px,2.8vw,42px)">Вентильный и&nbsp;асинхронный рядом</h3>
+      <table><thead><tr><td></td><th scope="col">Вентильный</th><th scope="col">Асинхронный</th></tr></thead><tbody>
+        <tr><th scope="row">КПД</th><td class="num" data-l="Вентильный">91–92&nbsp;%</td><td class="num" data-l="Асинхронный">83,5–84,5&nbsp;%</td></tr>
+        <tr><th scope="row">Перегрев</th><td class="num" data-l="Вентильный">20–25&nbsp;°C</td><td class="num" data-l="Асинхронный">40–45&nbsp;°C</td></tr>
+        <tr><th scope="row">Пусковой ток</th><td data-l="Вентильный">не&nbsp;выше рабочего</td><td data-l="Асинхронный">в&nbsp;5–7&nbsp;раз выше при прямом пуске</td></tr>
+        <tr><th scope="row">Длина активной части</th><td data-l="Вентильный">короче минимум вдвое</td><td data-l="Асинхронный">при той&nbsp;же мощности длиннее</td></tr>
+      </tbody></table></div>
+  </div>
+</div></section>
+
+<section class="sec" id="service"><div class="wrap">
+  <div class="srv-g">
+    <div><h2 data-split>Полный цикл ремонта и&nbsp;обслуживания УЭЦН</h2><figure data-img style="margin-top:clamp(24px,3vw,44px)"><img src="img/ph/06.webp" alt="Участок ремонта погружных двигателей: рабочие места с намоточными барабанами" loading="lazy" width="1280" height="500"></figure></div>
+    <p class="war"><b class="num" data-count>365</b><span>суток гарантии. После ремонта оборудование соответствует характеристикам завода&#8209;изготовителя, стендовые испытания подтверждает протокол.</span></p>
+  </div>
+  <div class="way">
+    <div><h3>В&nbsp;сервисном центре</h3><ul><li>Центробежные и&nbsp;винтовые насосы</li><li>Газосепараторы, диспергаторы, входные модули</li><li>Гидрозащита</li><li>Асинхронные и&nbsp;вентильные двигатели, капитальный ремонт статоров</li><li>Станции управления и&nbsp;трансформаторы ТМПН, ТМПНГ</li><li>Погружной кабель, термовставки до&nbsp;230&nbsp;°C</li></ul></div>
+    <div><h3>На&nbsp;месторождении</h3><ul><li>Транспортировка до&nbsp;скважины и&nbsp;обратно</li><li>Установка и&nbsp;замена наземного оборудования</li><li>Монтаж и&nbsp;демонтаж УЭЦН</li><li>Запуск, вывод на&nbsp;режим, сопровождение эксплуатации</li><li>Диагностика и&nbsp;планово&#8209;предупредительный ремонт</li><li>Удалённый мониторинг и&nbsp;управление, супервайзинг</li></ul></div>
+  </div>
+  <div class="rent"><p>Установки целиком и&nbsp;отдельные узлы даём в&nbsp;аренду, прокат и&nbsp;во&nbsp;временное владение.</p><a class="btn" href="#select" data-ask="Аренда УЭЦН">Запросить аренду</a></div>
+</div></section>
+
+<section class="sec sheet pick" id="select"><div class="wrap">
+  <h2 data-split>Что войдёт в&nbsp;вашу скважину</h2>
+  <div class="pick-g">
+    <div class="well"><div class="duo"><label class="field"><span>Насос</span><select form="form" name="Насос" id="f-pump"><option>Центробежный (УЭЦН)</option><option>Винтовой (УЭВН)</option></select></label><label class="field"><span>Внутренний диаметр колонны, мм</span><input form="form" name="Внутренний диаметр колонны, мм" id="f-d" type="number" inputmode="decimal" min="60" max="400" step="0.1"></label></div><svg id="well" viewBox="-135 -128 270 256" role="img" aria-label="Сечение обсадной колонны и корпусов двигателей в одном масштабе"></svg><p class="say" id="say" role="status"></p><div class="ser" id="ser" aria-label="Серии двигателей"></div></div>
+    <form data-demo-form id="form">
+      <label class="field full"><span>Температура в&nbsp;скважине, °C</span><input name="Температура, °C" id="f-t" type="number" inputmode="decimal" min="0" max="300"></label>
+      <label class="field"><span>Дебит жидкости, м³/сут</span><input name="Дебит, м³/сут" id="f-q" type="number" inputmode="decimal" min="0"></label>
+      <label class="field"><span>Напор, м</span><input name="Напор, м" type="number" inputmode="decimal" min="0"></label>
+      <label class="field full"><span>Что нужно</span><input name="Что нужно" id="f-ask" autocomplete="off"></label>
+      <label class="field full"><span>Куда направить</span><select name="Площадка" id="f-place"></select></label>
+      <label class="field"><span>Компания и&nbsp;имя</span><input name="Контакт" required autocomplete="organization"></label>
+      <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+      <input type="hidden" name="Серия двигателя" id="f-ser"><input type="hidden" name="Исполнение по температуре" id="f-ex">
+      <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+      <button class="btn full" data-magnetic>Отправить инженеру</button>
+      <div class="done" role="status"><h3>Запрос собран</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+    </form>
+  </div>
+</div></section>
+
+<section class="sec hist"><div class="wrap">
+  <h2 data-split>Вентильный привод для&nbsp;нефти начинался здесь</h2>
+  <ol class="tl">
+    <li><b class="num">1994</b><span>«ЛУКОЙЛ» и&nbsp;«Аэроэлектрик» подписали протокол о&nbsp;создании приводов УЭЦН на&nbsp;вентильных двигателях</span></li>
+    <li class="hot"><b class="num">1996</b><span>Патент и&nbsp;действующий макетный образец первого в&nbsp;мире погружного вентильного двигателя</span></li>
+    <li><b class="num">1998</b><span>Опытные образцы испытаны в&nbsp;скважинах «ЛУКОЙЛ — Западная Сибирь» и&nbsp;«РИТЭК»</span></li>
+    <li class="hot"><b class="num">17.03.2002</b><span>Запущена первая скважина с&nbsp;УЭЦН и&nbsp;нашим вентильным двигателем</span></li>
+    <li><b class="num">12.10.2003</b><span>Первая скважина с&nbsp;УЭВН на&nbsp;низкооборотном вентильном приводе</span></li>
+    <li><b class="num">2015</b><span>«ЛУКОЙЛ» решил внедрить вентильные приводы на&nbsp;всём фонде с&nbsp;УЭЦН и&nbsp;УЭВН</span></li>
+  </ol>
+</div></section>
+
+<section class="sec geo" id="places" style="padding-top:0;background:#fff"><div class="wrap geo-g">
+  <div><h2 data-split>Семь площадок</h2>
+    <figure data-img style="margin-top:28px"><img src="img/ph/08.webp" alt="Производственная площадка ЭПУ Сервис, вид сверху" loading="lazy" width="1280" height="500"></figure>
+    <div class="ppl"><div><b class="num">3400+</b><span>сотрудников</span></div><div><b class="num">≈ 400</b><span>единиц собственной техники</span></div><div><b class="num">12 000+</b><span>человек обучил свой учебный центр с&nbsp;2000&nbsp;года</span></div></div></div>
+  <ul class="places" id="pl"></ul>
+</div></section>
+</main>
+<footer class="ftr"><div class="wrap"><span>ООО «ЭПУ Сервис», 628483, ХМАО – Югра, г.&nbsp;Когалым, ул.&nbsp;Октябрьская, д.&nbsp;10</span><span><a class="link num" href="tel:+73466748910">+7 (34667) 4-89-10</a> &nbsp; <a class="link" href="mailto:epupriemnaya@lukoil.com">epupriemnaya@lukoil.com</a></span></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73466748910">Позвонить</a><a class="btn" href="#select">Подбор</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))},f=function(n){return n.toFixed(1)};
+
+  /* ---------- детали установки: внутренности крутятся, корпус снимается. Ось x=0, y вниз ---------- */
+  var DEF='<defs><linearGradient id="gS"><stop offset="0" stop-color="#6E7C88"/><stop offset=".24" stop-color="#E9EEF2"/><stop offset=".5" stop-color="#A9B5BF"/><stop offset=".82" stop-color="#5D6A75"/><stop offset="1" stop-color="#8C99A4"/></linearGradient>'+
+    '<linearGradient id="gR"><stop offset="0" stop-color="#8E0F19"/><stop offset=".26" stop-color="#F0525C"/><stop offset=".52" stop-color="#DB2B36"/><stop offset=".84" stop-color="#82101A"/><stop offset="1" stop-color="#B51C27"/></linearGradient>'+
+    '<linearGradient id="gD"><stop offset="0" stop-color="#0D1115"/><stop offset=".3" stop-color="#37424C"/><stop offset=".6" stop-color="#1F272E"/><stop offset="1" stop-color="#0B0E11"/></linearGradient>'+
+    '<linearGradient id="gW"><stop offset="0" stop-color="#85929D"/><stop offset=".35" stop-color="#fff"/><stop offset="1" stop-color="#7C8994"/></linearGradient></defs>';
+  function R(x,y,w,h,fill,extra){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+fill+'" '+(extra||'')+'/>'}
+  // корпус с фланцами и болтами на концах
+  function shell(y,l,w,g){var s=R(-w+5,y,w*2-10,12,g)+R(-w+5,y+l-12,w*2-10,12,g)+R(-w,y+10,w*2,l-20,g),i;
+    for(i=0;i<3;i++)s+=R(-w+10+i*(w*2-28)/2,y+1,8,8,'#2B343C')+R(-w+10+i*(w*2-28)/2,y+l-9,8,8,'#2B343C');
+    return s+'<path d="M'+(-w)+' '+(y+10)+'h'+w*2+'M'+(-w)+' '+(y+l-10)+'h'+w*2+'" stroke="#14191E" stroke-opacity=".55"/><rect x="'+(-w)+'" y="'+(y+10)+'" width="'+w*2+'" height="'+(l-20)+'" fill="none" stroke="#14191E" stroke-opacity=".5"/>'}
+  var IN={
+    pump:function(y,l,w){var s=R(-w+7,y+6,w*2-14,l-12,'url(#gD)'),j;for(j=y+18;j<y+l-20;j+=26)s+='<path d="M'+(-w+8)+' '+(j+20)+'L-13 '+(j+6)+'H13L'+(w-8)+' '+(j+20)+'" fill="none" stroke="#8FA0AE" stroke-width="2"/>';return s+'<path class="d1" fill="none" stroke="#E8EEF3" stroke-width="3"/>'+R(-7,y,14,l,'url(#gW)')},
+    sep:function(y,l,w){return R(-w+7,y+6,w*2-14,l-12,'url(#gD)')+'<path class="d1" fill="none" stroke="#C3CED7" stroke-width="5"/>'+R(-7,y,14,l,'url(#gW)')},
+    prot:function(y,l,w){return R(-w+7,y+6,w*2-14,l-12,'url(#gD)')+'<path d="M-9 '+(y+16)+'C'+(-w)+' '+(y+30)+' '+(-w)+' '+(y+l-30)+' -9 '+(y+l-16)+'M9 '+(y+16)+'C'+w+' '+(y+30)+' '+w+' '+(y+l-30)+' 9 '+(y+l-16)+'" fill="none" stroke="#DB2B36" stroke-width="3.5"/>'+R(-8,y,16,l,'url(#gW)')+'<path class="d1" fill="none" stroke="#56636F" stroke-width="2"/>'},
+    vd:function(y,l,w){return R(-w+7,y+6,w*2-14,l-12,'#B9763A')+R(-w+16,y+10,w*2-32,l-20,'url(#gD)')+'<path class="d1" fill="#DB2B36"/><path class="d2" fill="#C9D3DB"/>'+R(-8,y,16,12,'url(#gW)')+R(-8,y+l-12,16,12,'url(#gW)')},
+    ad:function(y,l,w){return R(-w+7,y+6,w*2-14,l-12,'#B9763A')+R(-w+16,y+10,w*2-32,l-20,'url(#gD)')+'<path class="d1" fill="none" stroke="#A7B4BF" stroke-width="3"/>'+R(-8,y,16,12,'url(#gW)')+R(-8,y+l-12,16,12,'url(#gW)')},
+    pcp:function(y,l,w){return R(-w+7,y+6,w*2-14,l-12,'#0F1418')+'<path class="d2" fill="none" stroke="#3A454F" stroke-width="9"/><path class="d1" fill="none" stroke="#B9C5CE" stroke-width="24" stroke-linecap="round"/><path class="d3" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>'},
+    opu:function(y,l,w){var s=R(-w+7,y+6,w*2-14,l-12,'url(#gD)')+R(-9,y,18,l,'url(#gW)'),i;for(i=0;i<5;i++)s+=R(-w+9,y+30+i*15,w*2-18,3,'#8FA0AE');return s+'<path class="d1" fill="#E8EEF3"/><path class="d2" fill="#DB2B36"/>'}
+  };
+  var SPIN={
+    pump:function(q,y,l,w,t){var d='',j,k,a,x,c=0;for(j=y+18;j<y+l-20;j+=26,c++)for(k=0;k<6;k++){a=t+k*1.0472+c*.3;if(Math.sin(a)>0){x=Math.cos(a)*(w-11);d+='M'+f(x*.35)+' '+(j+6)+'L'+f(x)+' '+(j+18)}}q.d1.setAttribute('d',d)},
+    sep:function(q,y,l,w,t){var d='',j;for(j=0;j<4;j++){var o=((t*8+j*26)%(l-20)+(l-20))%(l-20);d+='M'+(-w+10)+' '+f(y+10+o)+'L'+(w-10)+' '+f(Math.min(y+l-8,y+22+o))}q.d1.setAttribute('d',d)},
+    prot:function(q,y,l,w,t){var d='',j,o=((t*5)%16+16)%16;for(j=y+o;j<y+l-8;j+=16)d+='M-8 '+f(j)+'L8 '+f(j+8);q.d1.setAttribute('d',d)},
+    vd:function(q,y,l,w,t){var a1='',a2='',r=w-18,k,a,x1,x2,j,n=Math.max(1,Math.round((l-24)/64)),h=(l-24)/n;
+      for(j=0;j<n;j++)for(k=0;k<8;k++){a=t+k*.7854+j*.12;if(Math.sin(a+.34)>.02){x1=Math.cos(a)*r;x2=Math.cos(Math.min(a+.68,Math.ceil((a+.001)/Math.PI)*Math.PI))*r;var s='M'+f(x1)+' '+f(y+14+j*h)+'H'+f(x2)+'V'+f(y+10+(j+1)*h)+'H'+f(x1)+'Z';if(k%2)a2+=s;else a1+=s}}
+      q.d1.setAttribute('d',a1);q.d2.setAttribute('d',a2)},
+    ad:function(q,y,l,w,t){var d='',r=w-18,k,a;for(k=0;k<18;k++){a=t+k*.349;if(Math.sin(a)>0&&Math.sin(a+.5)>0)d+='M'+f(Math.cos(a)*r)+' '+(y+14)+'L'+f(Math.cos(a+.5)*r)+' '+(y+l-14)}q.d1.setAttribute('d',d)},
+    pcp:function(q,y,l,w,t){var d='',e='',g='',j;for(j=y+16;j<=y+l-16;j+=6){var x=Math.sin(j*.055-t)*13;d+=(d?'L':'M')+f(x)+' '+j;g+=(g?'L':'M')+f(x-5)+' '+j;e+=(e?'L':'M')+f(-w+14+Math.sin(j*.0275)*6)+' '+j}
+      for(j=y+16;j<=y+l-16;j+=6)e+=(j===y+16?'M':'L')+f(w-14+Math.sin(j*.0275)*6)+' '+j;q.d1.setAttribute('d',d);q.d2.setAttribute('d',e);q.d3.setAttribute('d',g)},
+    opu:function(q,y,l,w,t){var d='',e='',i,k,a;for(i=0;i<5;i++)for(k=0;k<8;k++){a=t*.6+k*.785+i*.4;if(Math.sin(a)>0){var x=Math.cos(a)*(w-16);d+='M'+f(x-4)+' '+(y+34+i*15)+'h8v9h-8z'}}
+      for(k=0;k<6;k++){a=t*.6+k*1.047;if(Math.sin(a)>0){var x2=Math.cos(a)*(w-18);e+='M'+f(x2-5)+' '+(y+12)+'h10v12h-10zM'+f(x2-5)+' '+(y+l-30)+'h10v12h-10z'}}q.d1.setAttribute('d',d);q.d2.setAttribute('d',e)}
+  };
+  var G={pump:'gS',sep:'gS',prot:'gS',vd:'gR',ad:'gR',pcp:'gS',opu:'gS'},SKIN={pump:function(y,l,w){var s='',j;for(j=y+38;j<y+l-30;j+=52)s+='M'+(-w)+' '+j+'h'+w*2;return '<path d="'+s+'" stroke="#14191E" stroke-opacity=".16"/>'},
+    sep:function(y,l,w){var s='',i,j;for(j=0;j<3;j++)for(i=0;i<3;i++)s+='<ellipse cx="'+(-w*.55+i*w*.55)+'" cy="'+(y+24+j*(l-48)/2)+'" rx="6" ry="4" fill="#14191E"/>';return s},
+    vd:function(y,l,w){return R(-w*.45,y+l*.42,w*.5,l*.2,'#fff','opacity=".9"')},ad:function(){return ''},pcp:function(){return ''},prot:function(){return ''},opu:function(y,l,w){return '<path d="M'+(-w)+' '+(y+l*.62)+'h'+w*2+'" stroke="#14191E" stroke-opacity=".3"/>'}};
+  function part(svg,k,y,l,w,cls){
+    var g=document.createElementNS('http://www.w3.org/2000/svg','g');g.setAttribute('class',cls||'');
+    g.innerHTML='<g class="in">'+IN[k](y,l,w)+'</g><g class="out" data-k="'+k+'">'+shell(y,l,w,'url(#'+G[k]+')')+SKIN[k](y,l,w)+'</g>';svg.appendChild(g);
+    var q={};g.querySelectorAll('[class^=d]').forEach(function(e){q[e.getAttribute('class')]=e});
+    var p={k:k,g:g,out:g.querySelector('.out'),spin:function(t){SPIN[k](q,y,l,w,t)}};p.spin(.4);return p;
+  }
+
+  /* ---------- герой: установка лежит на стенде, окна в корпусах открыты ---------- */
+  var bar=$('#bar');bar.innerHTML=DEF+'<g transform="translate(0 95) rotate(-90)"><g id="bg"></g></g>';
+  var bg=$('#bg'),hp=[];
+  bg.innerHTML='<path class="axis" d="M0 -200V2100"/>'+R(-17,-400,34,470,'url(#gS)')+R(-17,-400,34,470,'none','stroke="#14191E" stroke-opacity=".5"');
+  [['pump',66,620,52],['sep',690,150,48],['prot',844,250,50],['vd',1098,620,56]].forEach(function(a){hp.push(part(bg,a[0],a[1],a[2],a[3]))});
+  // вместо снятых корпусов — вырезы: корпус обрезан по длине
+  hp.forEach(function(p,i){var b=[[130,610],[0,0],[880,1060],[1180,1560]][i];if(b[1]){var id='c'+i;bg.insertAdjacentHTML('beforeend','<clipPath id="'+id+'"><path clip-rule="evenodd" d="M-80 -500H80V2400H-80ZM-70 '+b[0]+'C-30 '+(b[0]+14)+' 20 '+(b[0]-14)+' 70 '+b[0]+'V'+b[1]+'C20 '+(b[1]+14)+' -30 '+(b[1]-14)+' -70 '+b[1]+'Z"/></clipPath>');p.out.setAttribute('clip-path','url(#'+id+')')}});
+  bg.insertAdjacentHTML('beforeend',R(-38,1716,76,60,'url(#gR)')+R(-30,1774,60,40,'url(#gR)')+'<path d="M-64 -400C-64 300 -66 900 -62 1120" fill="none" stroke="#14191E" stroke-width="9"/><path d="M-64 -400C-64 300 -66 900 -62 1120" fill="none" stroke="#5E7285" stroke-width="3"/>');
+  KIT.raf(bar,function(t){hp.forEach(function(p){p.spin(.4+t*.0011)})});
+
+  /* ---------- вертикальная колонна ---------- */
+  var col=$('#col'),P={},act='su',MOB=innerWidth<=900;
+  if(MOB)col.setAttribute('viewBox','34 0 172 960');
+  var CAB=MOB?'M-82 96L-58 122V630':'M170 96V62C170 48 120 52 62 70L58 96V630',X=MOB?-120:120,X2=MOB?74:86;
+  col.innerHTML=DEF+'<path d="'+(MOB?'M0 96H200':'M14 96H370')+'" stroke="#14191E" stroke-width="1.5"/><path d="M50 96l-10 10M80 96l-10 10'+(MOB?'':'M240 96l-10 10M270 96l-10 10M300 96l-10 10M330 96l-10 10')+'" stroke="#14191E" stroke-opacity=".5"/><g transform="translate(120 0)"><path class="axis" d="M0 20V950"/><g id="cg"></g></g>';
+  var cg=$('#cg');
+  cg.innerHTML='<g id="su" style="cursor:pointer"><path d="'+CAB+'" fill="none" stroke="#14191E" stroke-width="5"/><path id="cab" d="'+CAB+'" fill="none" stroke="#DB2B36" stroke-width="2.4" stroke-dasharray="10 12"/><g id="sub">'+R(X,18,X2,78,'url(#gS)')+R(X+10,28,26,20,'#14191E')+R(X+44,28,22,4,'#14191E')+R(X+44,38,22,4,'#14191E')+'<circle cx="'+(X+18)+'" cy="72" r="6" fill="#DB2B36"/><path d="M'+(X+34)+' 72h30" stroke="#14191E" stroke-width="3"/><rect x="'+X+'" y="18" width="'+X2+'" height="78" fill="none" stroke="#14191E" stroke-opacity=".6"/></g></g>'+
+    R(-24,56,48,40,'url(#gS)')+R(-44,66,88,10,'url(#gS)')+R(-14,20,28,40,'url(#gS)')+R(-16,96,32,76,'url(#gS)')+R(-16,96,32,76,'none','stroke="#14191E" stroke-opacity=".5"');
+  var W=44;
+  P.pump=part(cg,'pump',168,252,W);P.sep=part(cg,'sep',424,74,W-3);
+  P.pcp=part(cg,'pcp',168,186,W);P.opu=part(cg,'opu',358,140,W-2);
+  P.prot=part(cg,'prot',502,104,W-2);
+  P.vd=part(cg,'vd',610,150,W+2);P.ad=part(cg,'ad',610,320,W+2);
+  function show(k,kit){
+    act=k;var pcp=k==='pcp'||k==='opu',ad=k==='ad';
+    P.pump.g.classList.toggle('gone',pcp);P.sep.g.classList.toggle('gone',pcp);P.pcp.g.classList.toggle('gone',!pcp);P.opu.g.classList.toggle('gone',!pcp);
+    P.vd.g.classList.toggle('gone',ad);P.ad.g.classList.toggle('gone',!ad);
+    requestAnimationFrame(function(){Object.keys(P).forEach(function(n){P[n].out.classList.toggle('off',n===k||(k==='pump'&&n==='sep'))})});
+    $('#sub').style.filter=k==='su'?'drop-shadow(0 0 0 #DB2B36) drop-shadow(0 6px 10px rgba(219,43,54,.5))':'none';
+    if(kit){$('#kit-n').textContent=kit.split('|')[0];$('#kit-t').textContent=kit.split('|')[1]}
+  }
+  var steps=$$('#steps>li');
+  // при уменьшенной анимации меняется только узел, без вращения
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)show(e.target.dataset.k,e.target.dataset.kit)})},{rootMargin:'-46% 0px -46% 0px'});
+  steps.forEach(function(s){io.observe(s)});show('su');
+  col.addEventListener('click',function(e){var o=e.target.closest('[data-k]'),k=o?o.dataset.k:e.target.closest('#su')?'su':'';if(k==='sep')k='pump';if(k==='prot')return;var li=$('#steps>li[data-k="'+k+'"]');if(li){var y=li.getBoundingClientRect().top+scrollY-(innerHeight-li.offsetHeight)/2;KIT.lenis?KIT.lenis.scrollTo(y):scrollTo({top:y,behavior:KIT.REDUCED?'auto':'smooth'})}});
+  KIT.raf(col,function(t){var a=.4+t*.0016;Object.keys(P).forEach(function(n){if(n===act||(act==='pump'&&n==='sep'))P[n].spin(n==='pcp'?a*.6:a)});$('#cab').setAttribute('stroke-dashoffset',f(-t*.02))});
+
+  /* ---------- ротор из секций ---------- */
+  var rot=$('#rot'),n=4,MAX=12,rp=[];
+  rot.innerHTML=DEF+'<g transform="translate(0 100) rotate(-90)"><path class="axis" d="M0 -40V1400" style="stroke:#FF6B74"/>'+R(-11,-40,22,1440,'url(#gW)')+'<g id="rg"></g></g><g id="rd" stroke="#A8B4BF" fill="none"></g>';
+  var rg=$('#rg');
+  for(var i=0;i<MAX;i++)(function(i){var g=document.createElementNS('http://www.w3.org/2000/svg','g'),y=40+i*107;g.innerHTML='<g class="sec1">'+R(-62,y,124,101,'url(#gD)')+'<path class="a" fill="#DB2B36"/><path class="b" fill="#C9D3DB"/>'+R(-66,y-2,132,6,'#5D6A75')+R(-66,y+97,132,6,'#5D6A75')+'</g>';rg.appendChild(g);
+    var s=g.firstChild,a=g.querySelector('.a'),b=g.querySelector('.b');s.style.transition='transform .9s cubic-bezier(.22,1,.36,1),opacity .5s';
+    rp.push({g:s,spin:function(t){SPIN.vd({d1:a,d2:b},y-10,121,80,t+i*.16)}})})(i);
+  function setN(){rp.forEach(function(p,i){var on=i<n;p.g.style.transform=on?'none':'translateY('+(1500-i*40)+'px)';p.g.style.opacity=on?1:0});
+    var x=40+n*107-6;$('#rd').innerHTML='<path d="M40 178v22M'+x+' 178v22M40 190H'+x+'"/>';
+    var w=n%10===1&&n!==11?'секция':n%10>1&&n%10<5&&(n<10||n>20)?'секции':'секций';
+    $('#kw').innerHTML=n+'&nbsp;<i>'+w+'</i> × 8&nbsp;<i>=</i> '+n*8+'&nbsp;кВт'}
+  $('#rp').onclick=function(){n=Math.min(MAX,n+1);setN()};$('#rm').onclick=function(){n=Math.max(1,n-1);setN()};
+  setN();rp.forEach(function(p){p.spin(.4)});KIT.raf(rot,function(t){rp.forEach(function(p,i){if(i<n)p.spin(.4+t*.0012)})});
+
+  /* ---------- подбор: корпуса двигателей и минимальные диаметры колонн с сайта ---------- */
+  var S=[{n:'ВДМ‑6.0‑81',d:81,c:88,p:'20–100 кВт, колонна от 88 мм',u:0},{n:'ВДМ‑3.0‑92',d:92,c:112,p:'10–90 кВт, колонна от 112 мм',u:0},{n:'ВДМ‑3.0‑117',d:117,c:123.7,p:'12–250 кВт, колонна от 123,7 мм',u:0},{n:'ВДМ‑3.0‑143',d:143,c:160.5,p:'32–600 кВт, колонна от 160,5 мм',u:0},{n:'ВДМ‑3.0‑185',d:185,c:0,p:'50–450 кВт, колонну уточнит инженер',u:0},
+    {n:'ВВДМ‑0.5‑117',d:117,c:123.7,p:'45–700 Н·м, колонна от 123,7 мм',u:1},{n:'ВВДМ‑0.5‑185',d:185,c:0,p:'300–3000 Н·м, колонну уточнит инженер',u:1}];
+  var sel=null;
+  function fits(s,D){return !D||(s.c?D>=s.c:D>s.d)}
+  function pick(auto){
+    var u=$('#f-pump').selectedIndex,D=parseFloat($('#f-d').value)||0,T=parseFloat($('#f-t').value),Q=parseFloat($('#f-q').value),list=S.filter(function(s){return s.u===u}),ok=list.filter(function(s){return fits(s,D)});
+    if(auto||!sel||sel.u!==u||!fits(sel,D))sel=D?ok[ok.length-1]||null:null;
+    var box=$('#ser');box.textContent='';
+    list.forEach(function(s){var b=document.createElement('button');b.type='button';b.innerHTML='<b class="num">'+s.n+'</b><span class="num">'+s.p+'</span>';b.disabled=!fits(s,D);b.setAttribute('aria-pressed',s===sel);b.onclick=function(){sel=s;pick();var x=[].slice.call(box.children)[list.indexOf(s)];x&&x.focus({preventScroll:true})};box.appendChild(b)});
+    // сечение: 1 мм = 1 единица, при больших колоннах уменьшаем
+    var k=Math.min(1,236/Math.max(D,200)),v='<path d="M-132 0H132M0 -126V126" class="axis" stroke-opacity=".5"/>';
+    if(D)v+='<circle r="'+f(D/2*k+5)+'" fill="#D5DDE3"/><circle r="'+f(D/2*k)+'" fill="#fff" stroke="#14191E"/>';
+    list.slice().reverse().forEach(function(s){if(sel&&s.d<sel.d)return;v+='<circle r="'+f(s.d/2*k)+'" fill="'+(s===sel?'#DB2B36':'none')+'" stroke="'+(s===sel?'#8E0F19':fits(s,D)?'#14191E':'#9AA7B2')+'" stroke-dasharray="'+(s===sel?'':'4 3')+'"/>'});
+    if(sel)v+='<circle r="'+f(sel.d*.3*k)+'" fill="#B9763A"/><circle r="'+f(sel.d*.22*k)+'" fill="#1B2229"/><circle r="'+f(sel.d*.08*k)+'" fill="#E9EEF2"/><text y="'+f(sel.d*.42*k)+'" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">'+sel.d+'</text>';
+    else list.forEach(function(s,i){var a=-.95+i*.42,r=s.d/2*k,x=Math.cos(a)*r,y=Math.sin(a)*r;v+='<path d="M'+f(x)+' '+f(y)+'L'+f(Math.cos(a)*100)+' '+f(Math.sin(a)*100)+'" stroke="#14191E" stroke-width=".6"/><circle cx="'+f(x)+'" cy="'+f(y)+'" r="2" fill="#DB2B36"/><text x="'+f(Math.cos(a)*100+4)+'" y="'+f(Math.sin(a)*100+4)+'" font-size="11" font-weight="600" fill="#14191E">'+s.d+'</text>'});
+    if(D){var r=D/2*k;v+='<path d="M'+f(-r)+' 0V122M'+f(r)+' 0V122M'+f(-r)+' 118H'+f(r)+'" stroke="#14191E" stroke-width=".7" fill="none"/><rect x="-24" y="111" width="48" height="13" fill="#fff"/><text y="122" text-anchor="middle" font-size="12" font-weight="600" fill="#14191E">'+String(D).replace('.',',')+' мм</text>'}
+    $('#well').innerHTML=v;
+    var ex='';if(T||T===0)ex=T<=120?'1 или 2 (до 120 °C)':T<=150?'3 или 4 (до 150 °C)':T<=200?'5 или 6 (до 200 °C)':'';
+    var m=!D?'Введите внутренний диаметр колонны: проверим, какие корпуса двигателей в неё проходят.':ok.length?'Проходят серии: '+ok.map(function(s){return s.n}).join(', ')+'.':'Для такой колонны серийного корпуса в каталоге нет. Отправьте параметры инженеру.';
+    if(ex)m+=' Исполнение по температуре '+ex+'.';else if(T>200)m+=' Температура выше каталожных 200 °C, нужен ответ инженера.';
+    if(!u&&Q&&(Q<25||Q>1000))m+=' Линейка центробежных насосов рассчитана на 25–1000 м³/сут.';
+    $('#say').textContent=m;$('#f-ser').value=sel?sel.n:'';$('#f-ex').value=ex;
+  }
+  ['f-pump','f-d'].forEach(function(id){$('#'+id).addEventListener('input',function(){pick(true)})});['f-t','f-q'].forEach(function(id){$('#'+id).addEventListener('input',function(){pick()})});pick();
+  $$('[data-ask]').forEach(function(a){a.addEventListener('click',function(){$('#f-ask').value=a.dataset.ask;$('#f-pump').selectedIndex=/Винтов|Опорн/.test(a.dataset.ask)?1:0;pick(true)})});
+
+  /* ---------- площадки ---------- */
+  [['Когалым','производственная площадка','628483, ХМАО – Югра, г. Когалым, ул. Октябрьская, дом 10','+7 (34667) 4-89-10'],['Покачи','сервисный центр','628661, ХМАО – Югра, г. Покачи, Промзона','+7 (34669) 3-91-32'],['Лангепас','сервисный центр','628672, ХМАО – Югра, г. Лангепас, ул. Белорусское шоссе, владение 3','+7 (34669) 3-09-35'],['Урай','сервисный центр','628285, ХМАО – Югра, г. Урай, Промбаза, проезд №1, подъезд 49','+7 (34676) 4-41-38'],['Усинск','филиал','169710, Республика Коми, г. Усинск, ул. Транспортная, дом 7/1','+7 (82144) 5-78-78'],['Нурлат','филиал','423040, Республика Татарстан, г. Нурлат, ул. Гиматдинова, 74А','+7 (84345) 3-10-20'],['Пермь','сервисный центр','618703, Пермский край, г. Добрянка, п. Полазна, Транспортный переулок дом 1','+7 (34265) 4-01-04']].forEach(function(p,i){
+    var li=document.createElement('li');li.innerHTML='<button type="button" aria-expanded="'+(i===0)+'"><b>'+p[0]+'</b><span>'+p[1]+'</span></button><div class="d"><div><p>'+p[2]+'</p><a class="num" href="tel:'+p[3].replace(/[^+\d]/g,'')+'">'+p[3]+'</a><a href="#select">Написать сюда</a></div></div>';
+    if(!i)li.className='open';
+    li.firstChild.onclick=function(){var o=li.classList.contains('open');$$('#pl li').forEach(function(x){x.classList.remove('open');x.firstChild.setAttribute('aria-expanded',false)});if(!o){li.classList.add('open');li.firstChild.setAttribute('aria-expanded',true)}};
+    li.querySelector('a[href="#select"]').addEventListener('click',function(){$('#f-place').selectedIndex=i});
+    $('#pl').appendChild(li);var o=document.createElement('option');o.textContent=p[0]+', '+p[1];$('#f-place').appendChild(o)});
+});
+</script>
+</body>
+</html>

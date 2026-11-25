@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ЕПРС — ремонт и освоение скважин, техосмотр транспорта, Нижневартовск</title>
+<meta name="description" content="Концепция редизайна сайта АО «Ермаковское предприятие по ремонту скважин»: ТКРС, РИР, глушение скважин и техосмотр транспортных средств всех категорий.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/alumni-sans-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--n0:#03081F;--n1:#081B4A;--n2:#0C3A68;--teal:#0E5E66;--aur:#2BC08A;--sun:#FFE800;--indigo:#21157A;--green:#007A3E;--day:#F1F7F3;
+  --bg:var(--n1);--fg:#F2F8FF;--muted:#B5C9E0;--line:rgba(200,225,255,.26);--accent:var(--sun);--accent-h:#FFF59A;--on-accent:#15104F;--r:10px;
+  --f-display:"Alumni Sans",Impact,sans-serif;--f-text:"Golos Text",system-ui,sans-serif;--hdr-h:84px}
+body{background:var(--n1)}
+h1,h2,h3{font-family:var(--f-display);font-weight:750;letter-spacing:-.01em;line-height:.92}
+h2{font-size:clamp(46px,5.9vw,92px)}
+h3{font-size:clamp(28px,2.4vw,38px);line-height:1}
+.lead{font-size:clamp(18px,1.4vw,21px);line-height:1.5}
+/* шапка */
+.hdr{background:linear-gradient(180deg,rgba(3,8,31,.92),rgba(3,8,31,0))}
+.hdr.is-solid{background:#050F30}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.6vw,42px)}
+.hdr img{width:96px;height:66px;object-fit:cover}
+.hdr nav{display:flex;gap:clamp(16px,2.1vw,34px);margin-left:auto;font-weight:500}
+.hdr nav a{text-decoration:none;padding:12px 0;border-bottom:2px solid transparent;transition:border-color .3s,color .3s}
+.hdr nav a:hover{border-color:var(--sun);color:var(--sun)}
+.hdr .tel{font-weight:600;text-decoration:none;display:grid;align-content:center;min-height:44px}
+/* первый экран: полярная ночь */
+.hero{position:relative;min-height:min(100svh,1000px);padding-top:var(--hdr-h);display:grid;overflow:clip;isolation:isolate;
+  background:linear-gradient(180deg,#02031A 0,#04093A 24%,#081E66 41%,#0C4580 49%,#128A86 54.5%,#0F5A66 56.6%,#040A30 58%,#030823 78%,#1A1A28 92%,#262430 100%)}
+.aur{position:absolute;z-index:-3;left:-10%;right:20%;top:36%;height:24%;background:radial-gradient(38% 90% at 26% 96%,rgba(64,230,150,.75),transparent 70%),radial-gradient(34% 80% at 62% 98%,rgba(190,225,80,.5),transparent 72%),radial-gradient(60% 70% at 48% 100%,rgba(20,160,170,.7),transparent 75%);transform-origin:50% 100%;-webkit-mask:linear-gradient(#000 88%,transparent 92%);mask:linear-gradient(#000 88%,transparent 92%)}
+.hill{position:absolute;z-index:-2;left:0;width:100%;top:56%;height:6%;color:#040A2E}
+.hill svg{width:100%;height:100%}
+.hero-p{position:absolute;z-index:-1;right:0;top:0;bottom:0;aspect-ratio:1767/2650;max-width:100vw}
+.hero-p img{width:100%;height:100%;object-fit:cover;object-position:60% 100%;-webkit-mask:linear-gradient(90deg,transparent,#000 34%);mask:linear-gradient(90deg,transparent,#000 34%)}
+.stars{position:absolute;z-index:-1;left:65.5%;top:6.7%;width:0;height:0;overflow:visible}
+.stars g{transform-origin:0 0}
+.hero-t{width:100%;display:grid;grid-template-rows:1fr auto;padding-block:clamp(20px,5vh,64px) clamp(24px,4vh,44px);gap:26px}
+.hero-x{max-width:min(800px,58vw);align-self:start}
+h1{font-size:clamp(58px,8.3vw,134px);line-height:.86;text-shadow:0 2px 24px rgba(2,4,30,.5)}
+.hero .lead{margin-top:clamp(14px,10.5vh,104px);max-width:31em;text-shadow:0 1px 12px rgba(2,4,30,.8)}
+.facts{display:flex;flex-wrap:wrap;gap:8px clamp(22px,3vw,48px);margin-top:clamp(14px,2.4vh,26px)}
+.facts div{display:flex;align-items:center;gap:10px;line-height:1.2;font-size:16px}
+.facts b{font:750 clamp(42px,4vw,62px)/.9 var(--f-display);color:var(--sun)}
+.ways{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:14px;max-width:min(800px,60vw)}
+.way{display:grid;gap:6px;align-content:end;min-height:148px;padding:20px 24px 22px;text-decoration:none;border-radius:var(--r);transition:transform .45s var(--e-smooth),background-color .3s}
+.way b{font:750 clamp(32px,2.9vw,46px)/.95 var(--f-display)}
+.way span{font-size:16px;line-height:1.35}
+.way--n{background:#0B2A66;box-shadow:inset 0 0 0 1.5px rgba(160,205,255,.55)}
+.way--n:hover{background:#113B86;transform:translateY(-4px)}
+.way--d{background:var(--sun);color:#15104F}
+.way--d:hover{background:#FFF27A;transform:translateY(-4px)}
+@media (prefers-reduced-motion:no-preference){
+  .js .stars g{animation:pole 420s linear infinite}
+  .js .aur{animation:aur 15s ease-in-out infinite alternate}
+  .js .hero-p img{animation:rise 3s var(--e-smooth) both}
+  .js .way{animation:up 1.2s var(--e-smooth) both}.js .way+.way{animation-delay:.12s}
+}
+@keyframes pole{to{transform:rotate(-360deg)}}
+@keyframes aur{from{transform:scaleY(.82) translateX(-2%)}to{transform:scaleY(1.14) translateX(3%)}}
+@keyframes rise{from{transform:scale(1.04);transform-origin:60% 100%}}
+@keyframes up{from{transform:translateY(30px)}}
+/* прожектор */
+.scene-s{background:#02040F;position:relative}
+.scene{position:relative;height:min(100svh,69.4vw);min-height:640px;overflow:clip;touch-action:pan-y;--R:21vw;cursor:crosshair;user-select:none}
+.cam{position:absolute;left:0;bottom:0;width:100%;aspect-ratio:1500/1040}
+.cam img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cam .dark{filter:brightness(.34) saturate(.75)}
+.cam::after{content:"";position:absolute;inset:0;background:rgba(6,28,84,.34);pointer-events:none}
+.cam .lit{z-index:1;filter:brightness(1.22);-webkit-mask:radial-gradient(circle var(--R) at var(--x,30%) var(--y,40%),#000 0,#000 48%,transparent 100%);mask:radial-gradient(circle var(--R) at var(--x,30%) var(--y,40%),#000 0,#000 48%,transparent 100%)}
+.cam svg{position:absolute;inset:0;width:100%;height:100%;z-index:2;overflow:visible;pointer-events:none}
+.hot{position:absolute;z-index:3;width:48px;height:48px;translate:-50% -50%;border-radius:50%}
+.hot::before{content:"";position:absolute;inset:16px;border-radius:50%;background:var(--sun);opacity:.5;transition:opacity .4s,transform .4s var(--e-smooth)}
+.hot::after{content:"";position:absolute;inset:5px;border-radius:50%;border:2px solid var(--sun);opacity:0;transform:scale(.4);transition:opacity .4s,transform .5s var(--e-smooth)}
+.hot.on::before{opacity:1}.hot.on::after{opacity:1;transform:none}
+.scene-h{position:absolute;z-index:4;left:40.5%;top:clamp(88px,10vh,120px);width:min(43%,620px);pointer-events:none}
+.scene-h h2{font-size:clamp(40px,4.4vw,70px);text-shadow:0 0 30px #000}
+.card{margin-top:20px;border-left:3px solid var(--sun);padding:2px 0 2px 20px;min-height:150px;pointer-events:auto}
+.card h3{color:var(--sun)}
+.card p{margin-top:8px;line-height:1.45;max-width:30em;text-shadow:0 0 12px #000,0 0 24px #000}
+.card a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--sun)}
+.keys{display:flex;flex-wrap:wrap;gap:8px;padding-block:18px 26px}
+.keys button{min-height:46px;padding:6px 18px;border-radius:var(--r);box-shadow:inset 0 0 0 1.5px rgba(160,205,255,.5);font-weight:500;transition:background-color .3s,color .3s}
+.keys [aria-pressed=true]{background:var(--sun);color:#15104F;box-shadow:none}
+.all{display:none}
+/* РИР и глушение */
+.rir{background:linear-gradient(180deg,#02040F,#081B4A 22%,#0C3A68)}
+.rir-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(30px,5vw,90px);align-items:center}
+.rir .two{display:flex;gap:clamp(26px,4vw,64px);margin-top:26px;flex-wrap:wrap}
+.rir .two b{display:block;font:750 clamp(62px,7.4vw,116px)/.84 var(--f-display);color:var(--sun)}
+.rir .two span{font-size:16px;color:var(--muted)}
+.rir p{margin-top:22px;max-width:34em}
+.lamps{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:clamp(5px,.8vw,12px)}
+.lamps i{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#FFF9C4 0,var(--sun) 38%,rgba(255,232,0,.18) 66%,transparent 72%);transition:opacity .6s;transition-delay:calc(var(--i)*14ms)}
+.lamps i.off{background:rgba(150,195,255,.22)}
+.js .lamps:not(.in) i:not(.off){opacity:.12}
+.lamps-c{margin-top:16px;font-size:16px;color:var(--muted)}
+.kill{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(30px,5vw,90px);margin-top:clamp(56px,7vw,110px);padding-top:clamp(30px,3.4vw,50px);border-top:1px solid var(--line)}
+.kill h3{font-size:clamp(34px,3.6vw,56px)}
+.kill p{line-height:1.55}.kill p+p{margin-top:12px}
+.salt{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:20px;font:700 clamp(30px,3vw,46px)/1 var(--f-display);color:#8FE5C4}
+.salt sub{font-size:.6em}
+/* география и парк: рассвет */
+.geo{background:linear-gradient(180deg,#0C3A68 0,#0E5E7A 320px,#0F7681 720px);padding-block:clamp(30px,3vw,50px) 0;overflow:clip}
+.rir{padding-bottom:clamp(50px,5vw,80px)}
+.geo-h{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:20px 60px;align-items:end}
+.proj{display:flex;flex-wrap:wrap;gap:4px clamp(22px,2.6vw,42px);margin-top:clamp(26px,3vw,46px);font:700 clamp(38px,4.7vw,74px)/1.08 var(--f-display)}
+.proj li{display:flex;align-items:center;gap:.22em;transition:color .3s}
+.proj li::before{content:"";width:.2em;height:.2em;border-radius:50%;background:var(--sun);box-shadow:0 0 0 .07em rgba(255,232,0,.25),0 0 .5em .12em rgba(255,232,0,.5)}
+.proj li:hover{color:var(--sun)}
+.cust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px clamp(18px,2.4vw,40px);margin-top:clamp(34px,4vw,64px)}
+.cust li{border-top:2px solid rgba(255,255,255,.55);padding-top:14px;line-height:1.4}
+.cust b{display:block;font:700 clamp(24px,2vw,31px)/1.05 var(--f-display);margin-bottom:6px}
+.yard{position:relative;margin-top:clamp(40px,4vw,64px);padding-top:120px;background:linear-gradient(180deg,#0F7681 0,#9AD3AF 18%,#F0E49B 48%,#FFF1A8 100%)}
+.yard img{width:min(100%,1320px);height:auto;margin-left:auto;-webkit-mask:linear-gradient(90deg,transparent,#000 16%);mask:linear-gradient(90deg,transparent,#000 16%)}
+.yard ul{position:absolute;left:max(var(--gutter),calc(50% - var(--wrap)/2));top:130px;display:flex;gap:clamp(22px,3.4vw,56px);color:#10205A}
+.yard b{display:block;font:750 clamp(50px,5.6vw,88px)/.86 var(--f-display)}
+.yard span{font-size:16px;line-height:1.25;font-weight:500}
+/* техосмотр: день */
+.to{background:var(--sun);color:#1B1267;--fg:#1B1267;--muted:#3B3276;--line:rgba(27,18,103,.4);--accent:#1B1267;--accent-h:#0B0640;--on-accent:#fff}
+.to-g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(30px,5vw,90px);align-items:start}
+.to h2{max-width:8em}
+.to .lead{margin-top:18px;max-width:30em}
+.cat{border:0;padding:0;margin:30px 0 0;min-width:0}
+.cat legend{font-weight:600;margin-bottom:10px;padding:0}
+.cat div{display:flex;flex-wrap:wrap;gap:8px}
+.cat label{position:relative;cursor:pointer}
+.cat input{position:absolute;opacity:0;inset:0}
+.cat span{display:grid;place-items:center;min-width:76px;height:66px;border-radius:var(--r);border:2px solid #1B1267;font:750 34px/1 var(--f-display);transition:background-color .25s,color .25s,transform .3s var(--e-smooth)}
+.cat label:hover span{transform:translateY(-3px)}
+.cat :checked+span{background:#1B1267;color:var(--sun)}
+.cat :focus-visible+span{outline:3px solid var(--green);outline-offset:3px}
+.day{margin-top:30px}
+.day h3{font-size:30px}
+.bar{position:relative;height:56px;margin-top:14px;border-radius:var(--r);background:rgba(27,18,103,.12)}
+.bar i{position:absolute;top:0;bottom:0;left:calc(var(--a)*1%);width:calc((var(--b) - var(--a))*1%);background:#1B1267;border-radius:var(--r);transition:left .7s var(--e-smooth),width .7s var(--e-smooth)}
+.bar-t{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 20px;margin-top:10px;font-weight:500}
+.docs{margin-top:28px;padding-top:22px;border-top:2px solid rgba(27,18,103,.35);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 34px}
+.docs b{display:block;font:750 24px/1.1 var(--f-display);margin-bottom:6px}
+.docs a{display:inline-flex;min-height:44px;align-items:center;font-weight:600}
+.to form{background:#FFF9B8;border-radius:18px;padding:clamp(22px,2.4vw,38px);display:grid;gap:16px;position:sticky;top:calc(var(--hdr-h) + 14px)}
+.to form .field input{background:#fff}
+.to form h3{font-size:clamp(34px,3vw,46px)}
+.done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;margin:16px 0}.done dt{color:var(--muted)}
+.done h3{font-size:34px}
+[data-img]{overflow:clip;border-radius:var(--r)}
+/* вахта */
+.job{background:var(--day);color:#0B2540;--fg:#0B2540;--muted:#4A6075;--line:rgba(11,37,64,.2);--accent:var(--green);--accent-h:#005C2E;--on-accent:#fff}
+.job-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(28px,4.4vw,80px);align-items:start}
+.job figure img{width:100%;height:auto;border-radius:var(--r)}
+.job .lead{margin:18px 0 24px}
+.tabs{display:flex;border:2px solid var(--green);border-radius:var(--r);overflow:hidden;width:max-content;max-width:100%}
+.tabs button{min-height:50px;padding:0 clamp(14px,2vw,28px);font-weight:600}
+.tabs [aria-selected=true]{background:var(--green);color:#fff}
+.pay li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline;line-height:1.3}
+.pay b{font:700 clamp(22px,1.8vw,27px)/1 var(--f-display);white-space:nowrap}
+.pay i{grid-column:1/3;position:relative;height:10px;border-radius:5px;background:rgba(11,37,64,.09)}
+.pay i::before{content:"";position:absolute;top:0;bottom:0;left:calc(var(--a)*1%);width:calc((var(--b) - var(--a))*1%);border-radius:5px;background:linear-gradient(90deg,#00A357,#8BD83A);transition:left .6s var(--e-smooth),width .6s var(--e-smooth)}
+.pay li.no{opacity:.62}.pay li.no i::before{opacity:0}
+.hr{margin-top:24px;display:grid;gap:4px}
+.hr a{display:inline-flex;min-height:44px;align-items:center;font-weight:600;width:max-content;max-width:100%}
+/* заявка */
+.req{background:linear-gradient(180deg,#081B4A,#03081F)}
+.req-g{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,110px)}
+.req form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-content:start}.req .full{grid-column:1/-1}
+.who{margin-top:26px;display:grid;gap:2px}
+.who li{display:grid;grid-template-columns:7em minmax(0,1fr);gap:14px;align-items:center;min-height:50px;border-top:1px solid var(--line)}
+.who span{color:var(--muted)}
+.who a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+.ftr{background:#03081F;border-top:1px solid var(--line);color:var(--muted);padding:28px 0 36px;font-size:15px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:10px 60px;justify-content:space-between}
+@media (max-width:1180px){.hdr .tel{display:none}.scene-h{left:38%;width:56%}}
+@media (max-width:900px){
+  :root{--hdr-h:70px}
+  .hdr{background:#050F30}.hdr img{width:80px;height:55px}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:linear-gradient(180deg,#050F30,#0C3A68);flex-direction:column;gap:2px;padding:24px var(--gutter);font:700 42px/1.1 var(--f-display);visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  [data-burger]{margin-left:auto}
+  .hero{min-height:0;background:linear-gradient(180deg,#02031A 0,#030728 100%)}
+  .aur,.hill,.stars{display:none}
+  .hero-p{position:relative;width:100%;aspect-ratio:390/520;z-index:-1;margin-bottom:-134px}.hero .lead{margin-top:14px}.rir h2{font-size:38px}.scene-h h2{font-size:42px}
+  .hero-p img{object-position:60% 85%;-webkit-mask:linear-gradient(180deg,#000 66%,transparent);mask:linear-gradient(180deg,#000 66%,transparent)}
+  .hero-t{padding-block:0 28px;gap:22px}
+  .hero-x,.ways{max-width:none}
+  .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.facts div{display:block;font-size:15px}.facts b{display:block;margin-bottom:4px}
+  .ways{grid-template-columns:minmax(0,1fr);gap:10px}.way{min-height:104px;padding:16px 20px}
+  .scene{height:640px;min-height:0;--R:125px}
+  .cam{width:auto;height:490px;-webkit-mask:linear-gradient(transparent,#000 14%);mask:linear-gradient(transparent,#000 14%)}
+  .scene-h{position:relative;left:0;top:0;width:auto;padding:54px var(--gutter) 0}
+  .scene-h .card{display:none}
+  .card-m{padding:22px var(--gutter) 0}
+  .keys{padding-block:14px 40px}
+  .rir-g,.kill,.geo-h,.to-g,.job-g,.req-g{grid-template-columns:minmax(0,1fr)}
+  .cust{grid-template-columns:minmax(0,1fr)}
+  .yard{padding-top:110px}.yard ul{position:static;padding:0 var(--gutter) 18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .yard span{font-size:15px;display:block;margin-top:4px}
+  .cat span{min-width:64px;height:58px;font-size:30px}
+  .docs{grid-template-columns:minmax(0,1fr)}
+  .to form{position:static}
+  .pay li{grid-template-columns:minmax(0,1fr)}.pay i{grid-column:1}
+  .tabs{width:100%}.tabs button{flex:1;padding:0 6px}
+  .req form{grid-template-columns:minmax(0,1fr)}
+  .mbar .btn{padding-inline:8px;font-size:16px;white-space:nowrap}.mbar .btn--ghost{background:#0B2A66;color:#fff}
+}
+@media (min-width:901px){.card-m{display:none}}
+@media (prefers-reduced-motion:reduce){
+  .cam .lit{-webkit-mask:none;mask:none;filter:none}.cam::after{display:none}
+  .scene-h .card,.card-m,.cam svg{display:none}.hot::before{opacity:1}
+  .all{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:26px 40px;padding-bottom:60px}.all h3{color:var(--sun)}.all p{margin-top:8px}.keys{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="ЕПРС, на главную"><img src="img/logo.png" alt="ЕПРС" width="560" height="560"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#light">Ремонт скважин</a><a href="#rir">РИР и&nbsp;глушение</a><a href="#geo">География</a><a href="#to">Техосмотр</a><a href="#job">Работа</a><a href="#req">Контакты</a></nav>
+  <a class="tel num" href="tel:+73466311616">+7 (3466) 31-16-16</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="aur" aria-hidden="true"></div>
+  <div class="hill" aria-hidden="true"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="currentColor" d="M0 18l60-5 40 4 70-9 60 7 90-11 80 8 70-4 110 7 90-9 120 8 100-6 130 9 110-8 130 6 180 2V60H0Z"/></svg></div>
+  <div class="hero-p"><svg class="stars" id="stars" aria-hidden="true"><g></g></svg><img src="img/ph/02.webp" alt="Подъёмная установка ЕПРС ночью под северным сиянием" width="1767" height="2650" fetchpriority="high"></div>
+  <div class="wrap hero-t">
+    <div class="hero-x">
+      <h1>Ремонт скважин от&nbsp;Самотлора до&nbsp;Таймыра</h1>
+      <p class="lead">Ермаковское предприятие по&nbsp;ремонту скважин. С&nbsp;1999&nbsp;года: текущий и&nbsp;капитальный ремонт, освоение, РИР, глушение.</p>
+      <div class="facts"><div><b class="num">210+</b>бригад<br>ТКРС</div><div><b class="num">261+</b>подъёмных<br>агрегатов</div><div><b class="num">3500+</b>операций<br>РИР</div></div>
+    </div>
+    <div class="ways">
+      <a class="way way--n" href="#req"><b>Заказать ремонт скважины</b><span>Для нефтегазовых компаний</span></a>
+      <a class="way way--d" href="#to"><b>Пройти техосмотр</b><span>Транспорт всех категорий</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="scene-s" id="light" aria-label="Работы ЕПРС на подъёмной установке">
+  <div class="scene" id="scene">
+    <div class="cam" id="cam">
+      <img class="dark" src="img/ph/01.webp" alt="" width="1920" height="1331" loading="lazy">
+      <img class="lit" src="img/ph/01.webp" alt="Ночная смена: подъёмный агрегат ЕПРС на шасси КрАЗ, мачта, станок-качалка" width="1920" height="1331" loading="lazy">
+      <svg aria-hidden="true"><path id="lead" fill="none" stroke="#FFE800" stroke-width="1.5" stroke-dasharray="2 6" opacity=".8"/></svg>
+    </div>
+    <div class="scene-h"><h2>Наведите прожектор на&nbsp;установку</h2><div class="card" aria-live="polite"><h3></h3><p></p><a href="#req">Обсудить ремонт</a></div></div>
+  </div>
+  <div class="card-m"><div class="card" aria-live="polite"><h3></h3><p></p><a href="#req">Обсудить ремонт</a></div></div>
+  <div class="wrap"><div class="keys" id="keys" role="group" aria-label="Узлы установки"></div><div class="all" id="all"></div></div>
+</section>
+
+<section class="sec rir" id="rir"><div class="wrap">
+  <div class="rir-g">
+    <div><h2 data-split>Ремонтно‑изоляционные работы</h2>
+      <div class="two"><div><b class="num">3500+</b><span>операций РИР выполнено</span></div><div><b class="num">95+</b><span>процентов, успешность РИР все эти годы</span></div></div>
+      <p>Участок РИР создан в&nbsp;2006&nbsp;году при собственных бригадах КРС. С&nbsp;2012&nbsp;года работают флоты РИР со&nbsp;спецтехникой и&nbsp;станцией контроля цементирования.</p></div>
+    <div><div class="lamps" id="lamps" role="img" aria-label="Из ста огней горят девяносто пять: успешность РИР более 95 процентов"></div><p class="lamps-c">Горят 95 огней из&nbsp;100</p></div>
+  </div>
+  <div class="kill">
+    <div><h3>Жидкости глушения готовим на&nbsp;месте</h3><div class="salt"><span>NaCl</span><span>KCl</span><span>CaCl<sub>2</sub></span></div></div>
+    <div><p>Растворно‑солевые узлы на&nbsp;Ермаковском и&nbsp;Пермяковском месторождениях, блоки приготовления раствора на&nbsp;Самотлорском и&nbsp;Мессояхском. Мощности хватает, чтобы полностью обеспечить бригады.</p><p>Сертифицированная соль отечественного производства. Жидкость отпускаем через фильтры тонкой очистки, до&nbsp;нужной плотности разбавляем перед наливом в&nbsp;транспорт.</p></div>
+  </div>
+</div></section>
+
+<section class="sec geo" id="geo">
+  <div class="wrap">
+    <div class="geo-h"><h2 data-split>Где горят наши огни</h2><p class="lead">ХМАО‑Югра, ЯНАО, Тюменская, Томская и&nbsp;Омская области, Республика Коми и&nbsp;Красноярский край. Десять проектов.</p></div>
+    <ul class="proj"><li>Самотлорский</li><li>Нижневартовский</li><li>Восточный</li><li>Таймырский</li><li>Уватский</li><li>Усть‑Тегусский</li><li>Ямальский</li><li>Печорский</li><li>Новопортовский</li><li>Мессояхский</li></ul>
+    <ul class="cust" aria-label="Заказчики">
+      <li><b>Самотлорнефтегаз</b>Самотлорское месторождение</li>
+      <li><b>РН‑Уватнефтегаз</b>Усть‑Тегусское, Кальчинское, Тямкинское, Протазановское, Южно‑Петьегское, Радонежское</li>
+      <li><b>РН‑Юганскнефтегаз</b>Угутско‑Киняминская группа месторождений</li>
+      <li><b>Газпром нефть и&nbsp;ННК</b>Дочерние общества ПАО&nbsp;«Газпром&nbsp;нефть», АО&nbsp;«Независимая нефтегазовая компания»</li>
+    </ul>
+  </div>
+  <div class="yard"><ul aria-label="Парк техники"><li><b class="num">261+</b><span>подъёмных агрегатов</span></li><li><b class="num">1080+</b><span>колёсной техники</span></li><li><b class="num">970+</b><span>прицепной техники</span></li></ul><img src="img/ph/07.webp" alt="База ЕПРС: ряды агрегатов, КамАЗов и спецтехники" loading="lazy" width="1200" height="600"></div>
+</section>
+
+<section class="sec to" id="to"><div class="wrap to-g">
+  <div><h2 data-split>Техосмотр всех категорий</h2>
+    <p class="lead">Оператор техосмотра №&nbsp;12264 в&nbsp;реестре. Есть передвижная диагностическая станция.</p>
+    <fieldset class="cat"><legend>Категория транспорта</legend><div id="cat"></div></fieldset>
+    <div class="day"><h3 id="day-h"></h3><div class="bar" aria-hidden="true"><i></i><i></i></div><div class="bar-t num" style="white-space:normal"><span id="day-a"></span><span id="day-b"></span></div></div>
+    <div class="docs">
+      <div><b>Возьмите с&nbsp;собой</b>Документ, удостоверяющий личность, и&nbsp;свидетельство о&nbsp;регистрации или паспорт транспортного средства.</div>
+      <div><b>Куда ехать</b>Нижневартовский район, Самотлорское месторождение нефти, строение №&nbsp;6<br><a class="num" href="tel:+79125318813">+7 (912) 531-88-13</a><br><a href="mailto:osmotr-samotlor@eprs-nv.ru">osmotr-samotlor@eprs-nv.ru</a></div>
+    </div></div>
+  <form data-demo-form>
+    <h3>Записаться на&nbsp;техосмотр</h3>
+    <input type="hidden" name="Категория" id="f-cat">
+    <label class="field"><span>Марка и&nbsp;госномер</span><input name="Автомобиль" required autocomplete="off"></label>
+    <label class="field"><span>Удобный день</span><input name="День" type="date"></label>
+    <label class="field"><span>Имя</span><input name="Имя" required autocomplete="name"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+    <button class="btn" id="to-b">Записаться</button>
+    <div class="done" role="status"><h3>Запись на&nbsp;osmotr-samotlor@eprs-nv.ru</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+  </form>
+</div></section>
+
+<section class="sec job" id="job"><div class="wrap job-g">
+  <div><h2 data-split>Работа вахтой</h2>
+    <p class="lead">Зарплата на&nbsp;руки за&nbsp;30&nbsp;дней вахты. Трудоустройство только через отдел кадров.</p>
+    <figure data-img><img src="img/ph/06.webp" alt="Двое рабочих ЕПРС на площадке подъёмного агрегата" loading="lazy" width="1080" height="720"></figure>
+    <div class="hr"><a href="mailto:rabota.eprs@eprs-nv.ru">rabota.eprs@eprs-nv.ru</a><a class="num" href="tel:+79227667013">+7 (922) 766-70-13</a><span class="num" style="white-space:normal">+7 (3466) 31-03-43, доб. 159, 161</span></div></div>
+  <div><div class="tabs" role="tablist" aria-label="Регион вахты"><button role="tab" aria-selected="true" data-reg="0">ХМАО</button><button role="tab" aria-selected="false" data-reg="1">ЯНАО</button><button role="tab" aria-selected="false" data-reg="2">Новопортовский</button></div>
+    <ul class="pay" id="pay"></ul></div>
+</div></section>
+
+<section class="sec req" id="req"><div class="wrap req-g">
+  <div><h2 data-split>Заказать ремонт скважины</h2>
+    <ul class="who">
+      <li><span>Приёмная</span><a class="num" href="tel:+73466311616">+7 (3466) 31-16-16</a></li>
+      <li><span>Факс</span><b class="num">+7 (3466) 63-43-11</b></li>
+      <li><span>Почта</span><a href="mailto:sekretar@eprs-nv.ru">sekretar@eprs-nv.ru</a></li>
+      <li><span>Техосмотр</span><a class="num" href="tel:+79125318813">+7 (912) 531-88-13</a></li>
+    </ul></div>
+  <form data-demo-form>
+    <label class="field full"><span>Вид работ</span><select name="Вид работ" id="f-w"><option>Капитальный ремонт скважин</option><option>Текущий ремонт скважин</option><option>Освоение скважин</option><option>РИР и ликвидация негерметичности колонн</option><option>Приготовление жидкостей глушения и глушение</option></select></label>
+    <label class="field"><span>Месторождение, куст</span><input name="Объект" autocomplete="off"></label>
+    <label class="field"><span>Когда нужна бригада</span><input name="Срок" autocomplete="off"></label>
+    <label class="field"><span>Компания и&nbsp;имя</span><input name="Контакт" required autocomplete="organization"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить запрос</button>
+    <div class="done full" role="status"><h3>Запрос на&nbsp;sekretar@eprs-nv.ru</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+  </form>
+</div></section>
+</main>
+<footer class="ftr"><div class="wrap"><span>АО «Ермаковское предприятие по&nbsp;ремонту скважин», 628606, ХМАО – Югра, г.&nbsp;Нижневартовск, ул.&nbsp;2П‑2 Юго‑Западный промышленный узел, 97, стр.&nbsp;3, пан.&nbsp;25</span><span class="num">ИНН 8603093264, ОГРН 1028600946450</span></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="#req">Ремонт скважин</a><a class="btn" href="#to">Техосмотр</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+  /* ── звёздные треки вокруг полюса, как на снимке; набор постоянный ── */
+  (function(){var g=$('#stars g'),s='',r=230,k=1;function rnd(){k=(k*16807)%2147483647;return k/2147483647}
+    for(var i=0;i<64;i++){r=230+i*17;var L=2*Math.PI*r,a=rnd()*360,l=30+rnd()*70;s+='<circle r="'+r+'" fill="none" stroke="'+(rnd()>.25?'#9FC4FF':'#FFF3C0')+'" stroke-width="1.3" opacity="'+(.25+rnd()*.5).toFixed(2)+'" stroke-dasharray="'+l.toFixed(0)+' '+(L/3-l).toFixed(0)+'" transform="rotate('+a.toFixed(0)+')"/>'}g.innerHTML=s})();
+  /* ── прожектор ── x, y в процентах снимка; тексты: страницы услуг eprs-nv.ru */
+  var P=[
+    [29,27,'Мачта и талевый блок','Капитальный ремонт. Агрегат АПР‑80 держит постоянную максимальную нагрузку на талевом блоке 80 тонн.',0],
+    [33,52,'Опора мачты','Задняя опора мачты АПР‑80 сделана отдельно: нагрузка в процессе работы не передаётся на шасси агрегата.',0],
+    [21.6,64,'Рабочая площадка','210+ бригад ТКРС. Бригады оперативно переориентируем между капитальным и текущим ремонтом, работаем и в режиме автономии.',0],
+    [13,58,'Станок‑качалка','Текущий ремонт и освоение нефтяных и газовых скважин.',1],
+    [26,70,'Устье и колонна','РИР и ликвидация негерметичности эксплуатационных колонн: более 3500 операций, успешность более 95%.',3],
+    [40,60,'Агрегат','АПР‑80 разработан на ЕлАЗе по техническому заданию ЕПРС и запущен в серию. Работает при температуре от −45 до +40 °C.',0],
+    [91.5,90,'Аутригеры','Передние и задние аутригеры выставляют агрегат: быстрый монтаж и демонтаж на скважине.',0]
+  ],scene=$('#scene'),cam=$('#cam'),lit=$('.lit'),lead=$('#lead'),keys=$('#keys'),all=$('#all'),hots=[],kb=[],cards=$$('.card'),act=-1;
+  P.forEach(function(p,i){
+    var h=document.createElement('button');h.type='button';h.className='hot';h.style.left=p[0]+'%';h.style.top=p[1]+'%';h.setAttribute('aria-label',p[2]);h.tabIndex=-1;cam.appendChild(h);hots.push(h);
+    var b=document.createElement('button');b.type='button';b.textContent=p[2];b.setAttribute('aria-pressed','false');keys.appendChild(b);kb.push(b);
+    [h,b].forEach(function(e){e.addEventListener('click',function(ev){ev.stopPropagation();hold=performance.now()+9000;go(i)})});
+    b.addEventListener('focus',function(){if(b.matches(':focus-visible')){hold=performance.now()+9000;go(i)}});
+    var a=document.createElement('div');a.innerHTML='<h3></h3><p></p>';a.firstChild.textContent=p[2];a.lastChild.textContent=p[3];all.appendChild(a);
+  });
+  var x=0,y=0,tx=0,ty=0,W=0,H=0,sw=0,sh=0,hold=0,ai=0,at=0,camX=0,mob=false;
+  function size(){W=cam.offsetWidth;H=cam.offsetHeight;sw=scene.clientWidth;sh=scene.clientHeight;mob=innerWidth<=900;if(act<0&&W){x=tx=P[0][0]/100*W;y=ty=P[0][1]/100*H;show(0)}paint()}
+  function go(i){tx=P[i][0]/100*W;ty=P[i][1]/100*H;show(i);ai=i;if(KIT.REDUCED||KIT.still){x=tx;y=ty;paint()}}
+  function show(i){if(i===act)return;act=i;hots.forEach(function(h,j){h.classList.toggle('on',j===i)});kb.forEach(function(b,j){b.setAttribute('aria-pressed',j===i)});cards.forEach(function(c){c.children[0].textContent=P[i][2];c.children[1].textContent=P[i][3]})}
+  function paint(){
+    if(!W)return;lit.style.setProperty('--x',x.toFixed(1)+'px');lit.style.setProperty('--y',y.toFixed(1)+'px');
+    if(mob){camX=Math.max(0,Math.min(W-sw,x-sw/2));cam.style.transform='translateX('+(-camX).toFixed(1)+'px)'}else cam.style.transform='';
+    if(!mob&&act>=0){var r=cards[0].getBoundingClientRect(),c=cam.getBoundingClientRect(),hx=P[act][0]/100*W,hy=P[act][1]/100*H,cx=r.left-c.left,cy=r.top-c.top+18;
+      if(hx>cx+40){cx=r.left-c.left+Math.min(r.width*.7,300);cy=r.bottom-c.top+4}lead.setAttribute('d','M'+hx+' '+hy+'L'+cx+' '+cy)}
+  }
+  function near(){var b=-1,m=1e9,R=mob?90:W*.11;P.forEach(function(p,i){var d=Math.hypot(p[0]/100*W-tx,p[1]/100*H-ty);if(d<m){m=d;b=i}});if(m<R)show(b)}
+  function aim(e){var r=cam.getBoundingClientRect();tx=e.clientX-r.left;ty=Math.max(0,Math.min(H,e.clientY-r.top));hold=performance.now()+4500;near();if(KIT.still||KIT.REDUCED){x=tx;y=ty;paint()}}
+  var down=false,lx=0,ly=0;
+  scene.addEventListener('pointermove',function(e){if(e.target.closest('.card'))return;if(e.pointerType==='mouse')return aim(e);if(!down)return;
+    tx=Math.max(0,Math.min(W,tx+(e.clientX-lx)*1.5));ty=Math.max(H*.1,Math.min(H*.95,ty+(e.clientY-ly)*1.2));lx=e.clientX;ly=e.clientY;hold=performance.now()+5000;near();if(KIT.still||KIT.REDUCED){x=tx;y=ty;paint()}});
+  scene.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse')return;down=true;lx=e.clientX;ly=e.clientY;hold=performance.now()+5000});
+  ['pointerup','pointercancel','pointerleave'].forEach(function(n){scene.addEventListener(n,function(){down=false})});
+  new ResizeObserver(size).observe(scene);size();
+  if(!KIT.REDUCED)KIT.raf(scene,function(t,dt){
+    var now=performance.now();if(now>hold){at+=dt;if(at>3600){at=0;ai=(ai+1)%P.length;go(ai)}}else at=0;
+    var k=1-Math.pow(.0022,dt/1000);if(Math.abs(tx-x)+Math.abs(ty-y)<.4)return;x+=(tx-x)*k*.55;y+=(ty-y)*k*.55;paint();
+  },40);
+  cards.forEach(function(c){c.querySelector('a').addEventListener('click',function(){$('#f-w').selectedIndex=P[act][4]})});
+  /* ── огни РИР ── */
+  var L=$('#lamps'),s='';for(var i=0;i<100;i++)s+='<i style="--i:'+i+'"'+(i>94?' class="off"':'')+'></i>';L.innerHTML=s;
+  if(KIT.REDUCED)L.classList.add('in');else{var io=new IntersectionObserver(function(e){if(e[e.length-1].isIntersecting){L.classList.add('in');io.disconnect()}},{threshold:.4});io.observe(L)}
+  /* ── техосмотр: область аккредитации и график со страницы услуги ── */
+  var C=['L','M1','N1','M2','N2','M3','N3','O1','O2','O3','O4'],bar=$$('.bar i');
+  function cat(c){
+    var fri=c==='M2'||c==='M3',seg=fri?[9,13,14,17]:[8.5,12.5,14,17.5],pc=function(h){return (h-8)/10*100};
+    $('#day-h').textContent=fri?'Категория '+c+': по пятницам':'Категория '+c+': график работы';
+    $('#day-a').textContent=fri?'с 9:00 до 17:00':'с 8:30 до 17:30';$('#day-b').textContent=fri?'обед 13:00–14:00':'обед 12:30–14:00';
+    bar.forEach(function(b,i){b.style.setProperty('--a',pc(seg[i*2]));b.style.setProperty('--b',pc(seg[i*2+1]))});
+    $('#f-cat').value=c;$('#to-b').textContent='Записать категорию '+c;
+  }
+  C.forEach(function(c){var l=document.createElement('label');l.innerHTML='<input type="radio" name="c"><span></span>';l.lastChild.textContent=c;l.firstChild.checked=c==='M1';l.firstChild.addEventListener('change',function(){cat(c)});$('#cat').appendChild(l)});cat('M1');
+  /* ── зарплаты: страница «Вакансии» ── */
+  var J=[['Помощник бурильщика КРС, ПРС 5 разряда',[130482,175985],[170851,222165],[190519,222162]],['Бурильщик КРС 6 разряда',[165210,208581],[202413,245345],[226239,245342]],['Бурильщик КРС 7 разряда',[182927,224196],[222028,261069],[248368,261072]],['Машинист подъёмника 6 разряда',[147401,198086],[175577,226041],[195312,226032]],['Машинист подъёмника 7 разряда',[173009,211946],[207674,244093],[232294,244088]],['Мастер по ремонту скважин',[191230,240668],[260810,311684],[288278,311622]],['Оператор по подготовке скважин к ремонту',[126245,142138],[195551,214166],null],['Водитель автомобиля (бензовоз)',[193418,258211],[231687,300054],[294169,319382]],['Машинист крана автомобильного',[193418,273100],[231687,300054],[294169,319382]]],pay=$('#pay');
+  J.forEach(function(j){var li=document.createElement('li');li.innerHTML='<span></span><b class="num"></b><i aria-hidden="true"></i>';li.firstChild.textContent=j[0];pay.appendChild(li)});
+  function reg(n){J.forEach(function(j,i){var li=pay.children[i],v=j[n+1];li.classList.toggle('no',!v);li.children[1].textContent=v?v[0].toLocaleString('ru-RU')+' – '+v[1].toLocaleString('ru-RU')+' ₽':'не указана';if(v){li.children[2].style.setProperty('--a',(v[0]-1e5)/2300);li.children[2].style.setProperty('--b',(v[1]-1e5)/2300)}})}
+  $$('[data-reg]').forEach(function(b){b.addEventListener('click',function(){$$('[data-reg]').forEach(function(o){o.setAttribute('aria-selected',o===b)});reg(+b.dataset.reg)})});reg(0);
+});
+</script>
+</body>
+</html>

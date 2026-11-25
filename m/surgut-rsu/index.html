@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Сургутское РСУ — резервуары, нефтепроводы и ремонтные муфты П-1 – П-6</title>
+<meta name="description" content="Концепция редизайна сайта ООО «Сургутское РСУ»: строительство и капитальный ремонт РВС до 20 000 м³, нефтепроводов до 1220 мм, собственное производство ремонтных муфт.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/alumni-sans-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--snow:#F1F4F6;--ice:#DDE5EB;--blue:#0060AA;--blue-2:#004A86;--rust:#9A4526;--rust-d:#34170D;--ember:#E9A06F;--ink:#1D1A18;
+  --bg:var(--snow);--fg:var(--ink);--muted:#5C5A59;--accent:var(--blue);--accent-h:var(--blue-2);--r:0px;
+  --f-display:"Alumni Sans","Arial Narrow",sans-serif;--f-text:"Onest",system-ui,sans-serif;--hdr-h:92px;--wrap:1360px;--sec:clamp(64px,8vw,122px)}
+h1,h2,h3{letter-spacing:-.012em;line-height:.92}
+h1,h2{font-weight:300}
+h2{font-size:clamp(54px,8vw,136px)}
+h3{font-weight:600;font-size:clamp(28px,2.3vw,38px);line-height:1}
+figure{overflow:clip}.mbar{background:var(--bg)}
+/* шапка */
+.hdr{background:#fff}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.4vw,40px)}
+.hdr img{height:78px;width:auto}
+.hdr nav{display:flex;gap:clamp(16px,2.2vw,38px);margin-left:auto}
+.hdr nav a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center;border-bottom:2px solid transparent;transition:border-color .3s}
+.hdr nav a:hover{border-color:var(--rust)}
+.call{position:relative}
+.call summary{list-style:none;cursor:pointer;min-height:52px;padding:0 24px;display:flex;align-items:center;background:var(--blue);color:#fff;font-weight:600}
+.call summary::-webkit-details-marker{display:none}
+.call div{position:absolute;right:0;top:calc(100% + 10px);width:390px;background:#fff;border:2px solid var(--blue);padding:6px 22px;z-index:20}
+.call a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;min-height:52px;text-decoration:none;border-bottom:1px solid var(--line);font-size:16px}
+.call a:last-child{border:0;color:var(--blue);font-weight:600}
+.call a b{font-weight:600}.call a:hover b{color:var(--blue)}
+/* первый экран: масштаб */
+.hero{position:relative;margin-top:var(--hdr-h);height:calc(100svh - var(--hdr-h));min-height:640px;max-height:960px;overflow:clip;color:#fff;background:#12508F;isolation:isolate;display:grid;grid-template-rows:auto 1fr auto}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 72%;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,44,88,.86) 0,rgba(6,44,88,.58) 38%,rgba(6,44,88,0) 62%),linear-gradient(0deg,rgba(30,12,6,.96) 0,rgba(30,12,6,.78) 15%,rgba(30,12,6,0) 36%)}
+.hero .wrap{width:100%}
+h1{padding-top:clamp(20px,3.6vh,44px);display:grid;grid-template-columns:max-content max-content;justify-content:space-between;gap:0 40px;font-size:clamp(30px,2.9vw,48px);font-weight:400;line-height:1}
+h1 b{display:block;font:300 clamp(96px,15.6vw,262px)/.8 var(--f-display);letter-spacing:-.035em;font-variant-numeric:lining-nums}
+h1 small{font-size:.24em;letter-spacing:0;margin-left:.1em}
+.hero-b{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 50px;align-items:end;padding-bottom:30px}
+.hero-b p{font-size:clamp(18px,1.4vw,21px);max-width:34em;line-height:1.45}
+.hero-b .cta{display:flex;gap:12px}
+.hero .btn--ghost{background:rgba(30,12,6,.4)}
+@media (prefers-reduced-motion:no-preference){.js .hero>img{animation:lift 3s var(--e-smooth) both}.js h1 b{animation:up 1.5s var(--e-smooth) both}.js h1 span+span b{animation-delay:.12s}}
+@keyframes lift{from{transform:scale(1.09) translateY(3%);transform-origin:50% 100%}}
+@keyframes up{from{transform:translateY(.22em) scaleY(.86);transform-origin:0 100%}}
+/* муфта */
+.muf{background:linear-gradient(180deg,var(--snow),var(--ice));padding-top:clamp(48px,4.6vw,76px);overflow:clip}
+.muf-h{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:18px 60px;align-items:end}
+.muf-h h2{font-size:clamp(50px,6.6vw,108px)}.muf-h p{max-width:34em}
+.types{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin-top:20px;border-bottom:2px solid var(--blue)}
+.types button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:8px 12px 12px;min-height:94px;line-height:1.25;font-size:16px;color:var(--muted);position:relative;transition:color .25s,background-color .25s;vertical-align:top}
+.types b{display:block;white-space:nowrap;font:300 clamp(40px,3.6vw,62px)/.95 var(--f-display);color:var(--ink);letter-spacing:-.02em}
+.types [aria-selected=true]{background:var(--blue);color:#fff}.types [aria-selected=true] b{color:#fff}
+@media (hover:hover){.types button:not([aria-selected=true]):hover{background:#fff}}
+.pipe{position:relative;margin-top:6px}
+.pipe svg{width:100%;height:auto;min-height:300px}
+.pipe .p{transition:transform .95s var(--e-strike)}
+.pipe .p.r{transition-delay:.42s}
+.pipe svg.open .p{transition:none}
+.pipe svg.open .p.t{transform:translateY(-92px)}.pipe svg.open .p.b{transform:translateY(92px)}
+.pipe .w{transition:opacity .5s 1.25s}.pipe svg.open .w{opacity:0;transition:none}
+.pipe .fl{transform:scaleX(1);transform-box:fill-box;transform-origin:0 50%;transition:transform 1.7s 1.35s linear}.pipe svg.open .fl{transform:scaleX(0);transition:none}
+.pipe .nn{transition:opacity .5s 1.5s}.pipe svg.open .nn{opacity:0;transition:none}
+.pipe svg.still .p,.pipe svg.still .w,.pipe svg.still .fl,.pipe svg.still .nn{transition:none}
+.flow{stroke-dasharray:60 70;animation:flow 7s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-1300}}
+.passp{background:var(--blue);color:#fff}
+.passp .wrap{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.1fr) minmax(0,.9fr);gap:30px clamp(26px,4vw,70px);padding-block:38px 46px;align-items:start}
+.passp.in2 .wrap>*{animation:pin .7s var(--e-smooth) both}
+.passp.in2 .wrap>*:nth-child(2){animation-delay:.1s}
+@keyframes pin{from{transform:translateY(40px);opacity:0}}
+.passp .ty{font:200 clamp(110px,12.4vw,206px)/.78 var(--f-display);letter-spacing:-.04em;white-space:nowrap}
+.passp .ty+p{font-weight:600;font-size:19px;margin-top:18px}
+.passp .use{margin-top:8px;color:#D3E4F3;font-size:17px;line-height:1.5}
+.passp h3{font-size:26px;color:#BFD9EF;font-weight:500}
+.parts li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;align-items:center;min-height:46px;border-bottom:1px solid rgba(255,255,255,.25)}
+.parts i{font:600 19px/1 var(--f-text);font-style:normal;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:15px}
+.passp .how{margin-top:16px;color:#D3E4F3;font-size:16px;line-height:1.5}
+.set{display:grid;gap:16px}
+.set label{display:grid;gap:4px}
+.set label span{display:flex;justify-content:space-between;align-items:baseline;gap:10px;color:#D3E4F3}
+.set output{font:300 54px/.9 var(--f-display);color:#fff;white-space:nowrap}
+.set input{width:100%;height:44px;margin:0;accent-color:#fff;cursor:pointer}
+.set dl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;font-size:16px}.set dt{color:#D3E4F3}.set dd{text-align:right}
+.passp .btn{background:#fff;color:var(--blue);width:100%}.passp .btn::before{background:var(--ice)}
+.qc{background:var(--snow);padding-block:clamp(48px,6vw,90px)}
+.qc .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.qc img{width:100%;max-width:820px;height:auto}
+.qc h3{font-weight:300;font-size:clamp(38px,4vw,66px);line-height:.95}
+.qc p{margin-top:16px;max-width:34em}
+/* резервуары */
+.rvs{background:var(--rust-d);color:#F6EBE4;position:relative;overflow:clip}
+.rvs-p{position:relative;line-height:0}
+.rvs-p img{width:100%;height:min(82svh,860px);object-fit:cover;object-position:50% 40%}
+.rvs-p::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(52,23,13,0) 42%,var(--rust-d) 98%)}
+.rvs-h{position:relative;z-index:2;margin-top:clamp(-250px,-17vw,-110px);display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.rvs-h p{max-width:44em;color:#E5CFC2;margin-top:8px;font-size:clamp(17px,1.35vw,20px)}
+.rvs-g{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(28px,4vw,70px);padding-block:clamp(40px,5vw,80px) var(--sec);align-items:center}
+.rvs figure img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.swi{display:flex;gap:28px;justify-content:center}
+.swi button{min-height:50px;font:500 clamp(24px,2vw,32px)/1 var(--f-display);color:#D9B7A4;border-bottom:3px solid transparent;transition:color .25s}
+.swi [aria-selected=true]{color:#fff;border-color:var(--ember)}
+.dial{--d:min(620px,44vw);position:relative;width:var(--d);height:var(--d);margin:34px auto 0}
+.dial svg{position:absolute;inset:6%;width:88%;height:88%;transition:transform 1.1s var(--e-smooth)}
+.dial .rot{position:absolute;inset:0;transition:transform 1.1s var(--e-smooth)}
+.dial .rot button{position:absolute;left:50%;top:50%;width:46px;height:46px;margin:-23px;border-radius:50%;display:grid;place-items:center;background:var(--rust-d);border:2px solid var(--rust);font-weight:600;font-size:16px;transform:rotate(var(--a)) translateY(calc(var(--d)/-2 + 24px)) rotate(calc(var(--a)*-1));transition:background-color .3s,border-color .3s,color .3s}
+.dial .rot button span{display:block;transition:transform 1.1s var(--e-smooth);transform:rotate(var(--k,0deg))}
+.dial .rot button:hover{border-color:var(--ember)}
+.dial .rot [aria-current=step]{background:var(--ember);border-color:var(--ember);color:var(--rust-d)}
+.core{position:absolute;inset:27%;display:grid;place-content:center;text-align:center;gap:12px;z-index:2}
+.core b{font:400 clamp(25px,2.3vw,38px)/1.05 var(--f-display);text-wrap:balance}
+.core span{font-size:15px;line-height:1.4;color:#E5CFC2}
+.arr{display:flex;gap:10px;justify-content:center;margin-top:18px}
+.arr button{width:56px;height:56px;border:1.5px solid rgba(246,235,228,.4);font-size:24px;transition:background-color .25s}.arr button:hover{background:rgba(246,235,228,.12)}
+/* нефтепроводы */
+.oil{background:var(--snow)}
+.oil-g{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,4vw,70px);align-items:start;margin-top:clamp(28px,4vw,56px)}
+.oil figure img{width:100%;height:auto}
+.oil .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:16px}
+.oil ul li{padding:16px 0;border-top:1px solid var(--line);line-height:1.45}
+.oil ul li:first-child{border:0;padding-top:0}
+.oil h3{margin:34px 0 14px;color:var(--rust)}
+.oil .jobs li{font-weight:500}
+/* услуги */
+.svc{background:var(--ice);overflow:clip}
+.svc-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.86fr);gap:clamp(28px,5vw,80px)}
+.svc ul{columns:2;column-gap:40px;margin-top:34px}
+.svc li{break-inside:avoid;padding:11px 0;border-bottom:1px solid rgba(29,26,24,.16);line-height:1.4}
+.svc figure{align-self:stretch;position:relative;min-height:460px;margin-right:calc(50% - 50vw)}
+.svc figure{margin-right:min(0px,calc((1360px - 100vw)/2))}
+.svc figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:64% 50%}
+/* вакансии */
+.vac h2{max-width:8em}
+.vac-g{columns:3;column-gap:clamp(24px,3.4vw,60px);margin-top:clamp(28px,4vw,56px)}
+.vac-g button{break-inside:avoid;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;text-align:left;min-height:62px;padding:8px 0;border-bottom:1px solid var(--line);line-height:1.3;transition:color .2s}
+.vac-g b{font:400 34px/1 var(--f-display);color:var(--rust);white-space:nowrap}
+.vac-g button:hover{color:var(--blue)}
+.vac p{margin-top:22px;color:var(--muted)}
+/* кому звонить */
+.who{background:var(--blue);color:#fff}
+.who-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,90px);align-items:center;margin-top:clamp(24px,3vw,44px)}
+.who ul button{width:100%;text-align:left;min-height:52px;padding:8px 0 8px 0;border-bottom:1px solid rgba(255,255,255,.28);font-size:19px;transition:padding .35s var(--e-smooth),background-color .25s}
+.who [aria-pressed=true]{background:#fff;color:var(--blue);padding-left:18px;font-weight:600}
+.who .nu{font:200 clamp(64px,11.8vw,196px)/.86 var(--f-display);letter-spacing:-.03em;text-decoration:none;display:block;white-space:nowrap}
+.who .nu span{display:inline-block;animation:dig .5s var(--e-smooth) both;animation-delay:calc(var(--i)*18ms)}
+@keyframes dig{from{transform:translateY(.32em);opacity:0}}
+.who .ext{font:300 clamp(32px,3vw,52px)/1 var(--f-display);margin-top:14px;min-height:1em;color:#CFE3F4}
+.who .ml{margin-top:16px;min-height:48px}
+.who .ml a{min-height:44px;display:inline-flex;align-items:center}
+.who address{font-style:normal;margin-top:20px;color:#D3E4F3;max-width:30em}
+/* заявка */
+.req-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,90px);align-items:start}
+.req form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.full{grid-column:1/-1}
+.req .field :is(input,select,textarea){background:#fff}
+.done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 20px;margin:16px 0}.done dt{color:var(--muted)}
+.ftr{background:var(--rust-d);color:#E5CFC2;padding:28px 0;font-size:16px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:8px 50px;justify-content:space-between;align-items:center}
+.ftr a{color:#fff;min-height:44px;display:inline-flex;align-items:center}
+@media (max-width:1100px) and (min-width:901px){.hdr nav{gap:14px;font-size:16px}}
+@media (max-width:900px){
+  :root{--hdr-h:74px}
+  .hdr img{height:60px}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:#fff;flex-direction:column;gap:0;padding:16px var(--gutter);font:400 40px/1.2 var(--f-display);visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s;margin:0}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  .hdr nav a{min-height:60px}
+  .call{margin-left:auto}.call summary{padding:0 16px;min-height:46px;font-size:16px}
+  .call div{position:fixed;left:0;right:0;top:var(--hdr-h);width:auto;border-width:2px 0}
+  .hero{height:auto;min-height:calc(100svh - var(--hdr-h));max-height:none}
+  .hero>img{object-position:46% 100%}
+  .hero::before{background:linear-gradient(180deg,rgba(6,44,88,.9) 0,rgba(6,44,88,.62) 46%,rgba(6,44,88,0) 66%),linear-gradient(0deg,rgba(30,12,6,.95) 0,rgba(30,12,6,.72) 24%,rgba(30,12,6,0) 46%)}
+  h1{grid-template-columns:minmax(0,1fr);gap:14px;padding-top:50px;font-size:27px}
+  h1 b{font-size:clamp(92px,28vw,130px)}
+  .hero-b{grid-template-columns:minmax(0,1fr);padding-top:230px}
+  .hero-b .cta{flex-direction:column}
+  .muf-h,.passp .wrap,.qc .wrap,.rvs-g,.oil-g,.svc-g,.who-g,.req-g{grid-template-columns:minmax(0,1fr)}
+  .types{display:flex;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--gutter)*-1);padding-left:var(--gutter);scroll-snap-type:x proximity}
+  .types button{flex:0 0 148px;scroll-snap-align:center}
+  .passp .ty{font-size:128px}
+  .done dl,.set dl{grid-template-columns:minmax(0,1fr) auto}
+  .done dl{grid-template-columns:minmax(0,1fr)}
+  .rvs-p img{height:64svh}
+  .rvs-h{margin-top:-120px}
+  .rvs figure{order:2}
+  .dial{--d:min(354px,calc(100vw - 36px))}.dial .rot button{width:44px;height:44px;margin:-22px;font-size:15px}
+  .dial.many .rot button{width:40px;height:40px;margin:-20px;font-size:14px}
+  .core{inset:21%;gap:8px}.core b{font-size:25px}.core span{font-size:14px;line-height:1.3}
+  .svc ul,.vac-g{columns:1}
+  .svc figure{margin:0 calc(var(--gutter)*-1);min-height:320px}
+  .req form{grid-template-columns:minmax(0,1fr)}
+  .who .nu{font-size:min(19vw,78px)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="Сургутское РСУ, на главную"><img src="img/logo.png" alt="Сургутское ремонтно-строительное управление" width="560" height="560"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#muf">Муфты</a><a href="#rvs">Резервуары</a><a href="#oil">Нефтепроводы</a><a href="#svc">Услуги</a><a href="#vac">Вакансии</a></nav>
+  <details class="call"><summary>Кому звонить</summary><div>
+    <a href="tel:+73462769035"><span>Заказать работы</span><b class="num">+7 (3462) 76-90-35</b></a>
+    <a href="tel:+73462774903"><span>Приёмная</span><b class="num">+7 (3462) 77-49-03</b></a>
+    <a href="tel:+73462774855"><span>Устроиться на работу</span><b class="num">+7 (3462) 77-48-55</b></a>
+    <a href="#who"><span>Бухгалтерия, снабжение, сварщик, лаборатория</span></a></div></details>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+<main id="main">
+<section class="hero">
+  <img src="img/ph/09.webp" alt="Стальной резервуар и секции кровли на площадке строительства" width="1280" height="960" fetchpriority="high">
+  <div class="wrap"><h1><span>Строим и&nbsp;ремонтируем резервуары до&nbsp;<b class="num">20&nbsp;000<small>м³</small></b></span><span>и&nbsp;нефтепроводы диаметром до&nbsp;<b class="num">1220<small>мм</small></b></span></h1></div>
+  <div></div>
+  <div class="wrap hero-b"><p>Сургутское ремонтно-строительное управление работает с&nbsp;1998&nbsp;года. Более 1500&nbsp;человек, своя база 54&nbsp;844&nbsp;м² и&nbsp;собственный цех ремонтных муфт.</p><div class="cta"><a class="btn" data-magnetic href="#muf">Подобрать муфту</a><a class="btn btn--ghost" href="#req">Обсудить объект</a></div></div>
+</section>
+
+<section class="muf" id="muf">
+  <div class="wrap">
+    <div class="muf-h"><h2 data-split>Муфта под&nbsp;дефект</h2><p>Постоянный ремонт нефтепроводов продукцией собственного производства по&nbsp;ТУ&nbsp;1469-001-48731007-10. Выберите тип, диаметр и&nbsp;стенку.</p></div>
+    <div class="types" role="tablist" aria-label="Тип муфты" id="types"></div>
+  </div>
+  <div class="pipe"><svg id="pipe" role="img" aria-label="Нефтепровод в разрезе с установленной муфтой"></svg></div>
+  <div class="passp" id="passp"><div class="wrap">
+    <div><div class="ty" id="ty"></div><p id="nm"></p><p class="use" id="use"></p></div>
+    <div><h3>Конструкция муфты</h3><ol class="parts" id="parts"></ol><p class="how" id="how"></p></div>
+    <div class="set">
+      <label><span>Диаметр трубы <output id="od" class="num"></output></span><input type="range" id="d" min="159" max="1220" value="720" aria-label="Диаметр трубы, мм"></label>
+      <label><span>Толщина стенки <output id="ow" class="num"></output></span><input type="range" id="w" min="7" max="18" value="12" aria-label="Толщина стенки, мм"></label>
+      <dl id="ex"></dl>
+      <a class="btn" href="#req" id="ask">Запросить муфту</a>
+    </div>
+  </div></div>
+  <div class="qc"><div class="wrap"><figure data-img><img src="img/ph/33.webp" alt="Передвижная лаборатория у трубы и трубоукладчиков" loading="lazy" width="945" height="380"></figure>
+    <div><h3>Каждое изделие с&nbsp;паспортом</h3><p>Заключение лицензированной лаборатории неразрушающего контроля и&nbsp;сертификаты на&nbsp;материалы. Продукция имеет сертификат соответствия, разрешение на&nbsp;применение и&nbsp;внесена в&nbsp;реестр ОАО&nbsp;«АК&nbsp;«Транснефть».</p></div></div></div>
+</section>
+
+<section class="rvs" id="rvs" data-theme="night">
+  <div class="rvs-p"><img src="img/ph/03.webp" alt="Монтаж стенки двух резервуаров внутри обвалования" loading="lazy" width="1500" height="1125"></div>
+  <div class="wrap">
+    <div class="rvs-h"><h2 data-split>От&nbsp;1&nbsp;000 до&nbsp;20&nbsp;000&nbsp;м³</h2><p>Возводим новые и&nbsp;реконструируем резервуары вертикальные стальные с&nbsp;полной заменой металлоконструкций. Основной метод рулонирование: стенки, днища и&nbsp;понтоны приходят на&nbsp;площадку рулонами. Есть опыт монтажа полистовым методом.</p></div>
+    <div class="rvs-g">
+      <figure data-img><img src="img/ph/02.webp" alt="Двое рабочих у рулона стенки высотой в несколько человеческих ростов" loading="lazy" width="1125" height="1500"></figure>
+      <div>
+        <div class="swi" role="tablist" aria-label="Вид работ"><button role="tab" data-r="rep" aria-selected="true">Капитальный ремонт</button><button role="tab" data-r="bld" aria-selected="false">Строительство</button></div>
+        <div class="dial" id="dial"><svg viewBox="-200 -200 400 400" aria-hidden="true" id="roof"></svg><div class="rot" id="rot"></div><div class="core" aria-live="polite"><b id="ct"></b><span id="cs"></span></div></div>
+        <div class="arr"><button type="button" data-st="-1" aria-label="Предыдущий этап">←</button><button type="button" data-st="1" aria-label="Следующий этап">→</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec oil" id="oil"><div class="wrap">
+  <h2 data-split>Магистральные и&nbsp;промысловые нефтепроводы</h2>
+  <div class="oil-g">
+    <div><figure data-img><img src="img/ph/06.webp" alt="Колонна трубоукладчиков опускает нефтепровод в зимнюю траншею" loading="lazy" width="1500" height="1125"></figure>
+      <div class="two"><figure data-img><img src="img/ph/18.webp" alt="Зафутерованная труба на снегу у трубоукладчиков" loading="lazy" width="1024" height="576"></figure><figure data-img><img src="img/ph/17.webp" alt="Бригада стыкует участок нефтепровода в котловане" loading="lazy" width="1024" height="576"></figure></div></div>
+    <div>
+      <ul><li>Устранение дефектов по&nbsp;композитно-муфтовой технологии без приварки к&nbsp;телу трубы</li><li>Устранение дефектов приварными ремонтными конструкциями</li><li>Электрохимическая защита трубопроводов</li><li>Вдольтрассовые проезды и&nbsp;лежнёвки, отсыпка на&nbsp;заболоченной местности</li></ul>
+      <h3>Наши работы</h3>
+      <ul class="jobs"><li>Переходы через водные преграды нефтепровода 1220×19&nbsp;мм, «Нефтепровод СГП 346–433&nbsp;км Ду-1200»</li><li>Замена участка основной нитки нефтепровода «Холмогоры – Клин»</li><li>Протаскивание трубопровода в&nbsp;пробуренную и&nbsp;расширенную скважину</li><li>Укладка дюкера через реку Гатилова</li><li>Замена кольцевого фундамента РВС</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec svc" id="svc"><div class="wrap svc-g">
+  <div><h2 data-split>Ещё строим и&nbsp;ремонтируем</h2>
+    <ul><li>Строительство, капитальный ремонт и&nbsp;реконструкция НПС</li><li>Капремонт технологического оборудования НПС</li><li>Камеры приёма-пуска очистных устройств (КППОУ)</li><li>Линии электропередачи</li><li>Антенно-мачтовые сооружения любой сложности</li><li>Системы пожаротушения: монтаж и&nbsp;пусконаладка</li><li>Электротехнические установки: монтаж и&nbsp;пусконаладка</li><li>Железобетонные и&nbsp;бетонные конструкции</li><li>Гидроизоляция строительных сооружений</li><li>Антикоррозийная защита конструкций и&nbsp;оборудования</li><li>Теплоизоляция конструкций, трубопроводов, оборудования</li><li>Наружные сети канализации</li><li>Контроль качества сварных соединений</li></ul></div>
+  <figure><img src="img/ph/07.webp" alt="Узел трубопровода на площадке, вид сверху" loading="lazy" width="1500" height="1000"></figure>
+</div></section>
+
+<section class="sec vac" id="vac"><div class="wrap">
+  <h2 data-split>Вакансии с&nbsp;зарплатой</h2>
+  <div class="vac-g" id="vac-l"></div>
+  <p>Отдел кадров: <a class="link num" href="tel:+73462774855">+7 (3462) 77-48-55</a>, <a class="link" href="mailto:srsuok@yandex.ru">srsuok@yandex.ru</a>. Суммы в&nbsp;рублях, как в&nbsp;открытых вакансиях.</p>
+</div></section>
+
+<section class="sec who" id="who"><div class="wrap">
+  <h2 data-split>Кому звонить</h2>
+  <div class="who-g"><ul id="who-l"></ul><div aria-live="polite"><a class="nu num" id="nu"></a><p class="ext" id="ext"></p><p class="ml" id="ml"></p><address>Сургутский район, пос.&nbsp;Солнечный, Заводская промзона, производственная база №&nbsp;2. Пн&nbsp;–&nbsp;Пт, 8:00–17:00</address></div></div>
+</div></section>
+
+<section class="sec req" id="req"><div class="wrap req-g">
+  <div><h2 data-split>Заявка</h2><p style="margin-top:18px;max-width:24em;color:var(--muted)">Рассчитаем стоимость и&nbsp;подготовим коммерческое предложение.</p></div>
+  <form data-demo-form>
+    <label class="field"><span>Тема</span><select name="Тема" id="f-t"><option>Ремонтные муфты</option><option>Резервуар: строительство</option><option>Резервуар: капитальный ремонт</option><option>Нефтепровод</option><option>Другие работы</option><option>Вакансия</option></select></label>
+    <label class="field"><span>Количество или объём</span><input name="Количество или объём"></label>
+    <label class="field full"><span>Подробности</span><textarea name="Подробности" id="f-d"></textarea></label>
+    <label class="field"><span>Компания и имя</span><input name="Контакт" required autocomplete="organization"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить заявку</button>
+    <div class="done full" role="status"><h3>Так заявка придёт в&nbsp;Сургутское РСУ</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+  </form>
+</div></section>
+</main>
+<footer class="ftr"><div class="wrap"><span>ООО «Сургутское РСУ», пос.&nbsp;Солнечный Сургутского района</span><a class="num" href="tel:+73462769035">+7 (3462) 76-90-35</a><a href="mailto:info@surgutrsu.ru">info@surgutrsu.ru</a></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="#who">Кому звонить</a><a class="btn" href="#req">Заявка</a></div>
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+/* ---------- муфты: surgut-rsu.ru/mufty/ ---------- */
+var GA='Полуобечайки свариваются между собой продольными швами, под них ложатся подкладные пластины',RN='. Технологические кольца и обечайка привариваются кольцевыми швами к стенке трубопровода.';
+var M=[
+ {t:'П-1',n:'Композитная муфта',u:'Ремонт по методу композитно-муфтового ремонта, без приварки к трубе и без вывода трубопровода из эксплуатации.',p:[['Полуобечайка',2],['Входной и выходной патрубки',2],['Установочные болты',0],['Контрольные болты',0]],h:'Две стальные полумуфты сваривают между собой, торцы закрывают герметиком, через патрубки закачивают композитный раствор на основе эпоксидного компаунда.',x:[['Зазор','6–40 мм'],['Отверждение','24 часа'],['Прочность и долговечность','не менее 30 лет']],k:'pit'},
+ {t:'П-2',n:'Муфта обжимная приварная',u:'Ремонт металла труб и сварных соединений.',p:[['Технологические полукольца',4],['Полуобечайки',2]],h:'Полуобечайки свариваются между собой, технологические кольца и обечайка привариваются к стенке трубопровода.',x:[],k:'pit'},
+ {t:'П-3',n:'Муфта галтельная',u:'Постоянный ремонт кольцевых сварных швов.',p:[['Полукольцо с галтелью',2],['Пластина подкладная',2]],h:GA+', чтобы муфта не сплавилась со стенкой трубопровода.',x:[],k:'seam'},
+ {t:'П-4',n:'Муфта галтельная с короткой полостью',u:'Постоянный ремонт кольцевых сварных швов с заполнением антикоррозийной жидкостью.',p:[['Полукольцо центральное с галтелью',2],['Полукольцо технологическое',4],['Пластина подкладная',8],['Пробка',2]],h:GA+RN,x:[],k:'seam'},
+ {t:'П-5(У)',n:'Муфта сварная галтельная удлинённая',u:'Постоянный ремонт кольцевых сварных швов.',p:[['Полукольцо центральное с галтелью',2],['Полукольцо технологическое',4],['Пластина подкладная',8]],h:GA+RN,x:[],k:'seam'},
+ {t:'П-6',n:'Муфта удлинённая галтельная',u:'Постоянный ремонт гофр с заполнением антикоррозийной жидкостью.',p:[['Полукольцо центральное с галтелью',2],['Полукольцо технологическое',4],['Пластина подкладная',8],['Пробка',2]],h:GA+RN,x:[],k:'gofr'}];
+var nb=function(s){return s.replace(/(^|\s)(и|в|с|на|до|по|из|к|под|без|со|не) /gi,'$1$2 ').replace(/(\d) (мм|км|час|лет)/g,'$1 $2')};
+var svg=$('#pipe'),cur=0,mob=matchMedia('(max-width:900px)').matches,C=250,X=720;
+svg.setAttribute('viewBox',mob?'452 12 536 476':'0 18 1440 464');
+function draw(anim){
+ var m=M[cur],D=+$('#d').value,W=+$('#w').value,R=56+(D-159)/1061*62,w=9+(W-7)/11*11,o=[],e=Math.exp;
+ var bump=m.k==='gofr'?function(x){return 19*e(-Math.pow((x-694)/19,2))+16*e(-Math.pow((x-748)/19,2))}:function(){return 0};
+ var pit=m.k==='pit'?function(x){var q=1-Math.pow((x-X)/52,2);return q>0?w*.58*q*(.82+.18*Math.sin(x/4.3)):0}:function(){return 0};
+ var seam=m.k==='seam'?function(x){return 7*e(-Math.pow((x-X)/11,2))}:function(){return 0};
+ var L=392,Q=1048,xs=[];for(var x=L;x<=Q;x+=4)xs.push(x);
+ function wall(s){var a=xs.map(function(x){return x+','+(C+s*(R+bump(x)+seam(x)-(s<0?pit(x):0))).toFixed(1)}),b=xs.slice().reverse().map(function(x){return x+','+(C+s*(R-w+bump(x)-seam(x)*.45)).toFixed(1)});return '<polygon points="'+a.concat(b).join(' ')+'" fill="url(#hw)" stroke="#4d210f" stroke-width="1.6"/>'}
+ o.push('<defs><linearGradient id="st" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2d140b"/><stop offset=".16" stop-color="#86401f"/><stop offset=".34" stop-color="#D28B5C"/><stop offset=".5" stop-color="#A9572F"/><stop offset=".8" stop-color="#5b2914"/><stop offset="1" stop-color="#25100a"/></linearGradient><linearGradient id="oi" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1a0f0a"/><stop offset=".45" stop-color="#3b2416"/><stop offset="1" stop-color="#140b07"/></linearGradient><linearGradient id="mb" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4C97DB"/><stop offset="1" stop-color="#0E5FA8"/></linearGradient><pattern id="hw" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#C8733F"/><path d="M0 0v9" stroke="#7c3a1b" stroke-width="2.4"/></pattern><pattern id="hm" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="8" height="8" fill="#3E8BD0"/><path d="M0 0v8" stroke="#0A4E90" stroke-width="2"/></pattern><pattern id="hr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="8" height="8" fill="#7FB4E2"/><path d="M0 0v8" stroke="#2566A0" stroke-width="2"/></pattern></defs>');
+ // нефть и стенки
+ o.push('<polygon fill="url(#oi)" points="'+xs.map(function(x){return x+','+(C-R+w*.6-bump(x)).toFixed(1)}).concat(xs.slice().reverse().map(function(x){return x+','+(C+R-w*.6+bump(x)).toFixed(1)})).join(' ')+'"/><rect x="'+(L-40)+'" y="'+(C-R+2)+'" width="60" height="'+(2*R-4)+'" fill="#2a1a10"/><rect x="'+(Q-20)+'" y="'+(C-R+2)+'" width="60" height="'+(2*R-4)+'" fill="#2a1a10"/>');
+ [-.5,0,.5].forEach(function(k,i){o.push('<path class="flow" d="M'+(L-100)+' '+(C+k*(R-w)*1.05)+'H'+(Q+100)+'" stroke="#7a4d30" stroke-width="3" stroke-linecap="round" style="animation-duration:'+(6+i*1.4)+'s"/>')});
+ o.push(wall(-1)+wall(1));
+ if(m.k==='seam')o.push('<path d="M'+(X-2)+' '+(C-R-5)+'l5 '+(w*.35)+'-4 '+(w*.3)+'3 '+(w*.25)+'" fill="none" stroke="#1d0a04" stroke-width="2.6"/>');
+ // наружные участки трубы с волнистым срезом
+ var wav=function(x,d){return 'M'+x+' '+(C-R-1)+'C'+(x+d*34)+' '+(C-R*.5)+' '+(x-d*30)+' '+(C-R*.1)+' '+x+' '+C+'S'+(x-d*26)+' '+(C+R*.62)+' '+x+' '+(C+R)};
+ o.push('<path d="'+wav(L,1)+'H-40V'+(C-R)+'Z" fill="url(#st)"/><path d="'+wav(Q,1)+'H1480V'+(C-R)+'Z" fill="url(#st)"/><path d="'+wav(L,1)+'" fill="none" stroke="#2d140b" stroke-width="3"/><path d="'+wav(Q,1)+'" fill="none" stroke="#2d140b" stroke-width="3"/>');
+ [120,250,1210,1340].forEach(function(x){o.push('<rect x="'+x+'" y="'+(C-R-2)+'" width="7" height="'+(2*R+4)+'" fill="#2d140b" opacity=".34"/>')});
+ // муфта
+ var T=24,nums=[];
+ [-1,1].forEach(function(s){
+  var Y=function(d){return (C+s*(R+d)).toFixed(1)},cl=s<0?'t':'b';
+  function rect(x0,x1,d0,d1,f,c){return '<path d="M'+x0+' '+Y(d0)+'H'+x1+'V'+Y(d1)+'H'+x0+'Z" fill="'+f+'" stroke="#083B6B" stroke-width="1.6" class="'+(c||'')+'"/>'}
+  function weld(x,dir,d){return '<path class="w" d="M'+x+' '+Y(0)+'L'+(x+dir*15)+' '+Y(0)+'L'+x+' '+Y(d)+'Z" fill="#F4B24E" stroke="#A1560C" stroke-width="1.2"/>'}
+  function arch(x0,x1,xa,xb,h){var r=20,p='M'+x0+' '+Y(5)+'H'+(xa-r)+'C'+(xa-4)+' '+Y(5)+' '+(xa-r+8)+' '+Y(h)+' '+(xa+8)+' '+Y(h)+'H'+(xb-8)+'C'+(xb+r-8)+' '+Y(h)+' '+(xb+4)+' '+Y(5)+' '+(xb+r)+' '+Y(5)+'H'+x1+'V'+Y(5+T)+'H'+(xb+r+6)+'C'+(xb+18)+' '+Y(5+T)+' '+(xb+16)+' '+Y(h+T)+' '+(xb-4)+' '+Y(h+T)+'H'+(xa+4)+'C'+(xa-16)+' '+Y(h+T)+' '+(xa-18)+' '+Y(5+T)+' '+(xa-r-6)+' '+Y(5+T)+'H'+x0+'Z';return '<path d="'+p+'" fill="url(#hm)" stroke="#083B6B" stroke-width="1.6"/>'}
+  function pl(x0,x1){return rect(x0,x1,0,5,'#F0C48A')}
+  var g='',ring='';
+  if(cur===0){var G=20,a=494,b=946;
+   g='<rect class="fl" x="'+(a+16)+'" y="'+Math.min(Y(0),Y(G))+'" width="'+(b-a-32)+'" height="'+G+'" fill="#B9C6A8"/>'+(s<0?'<path class="fl" d="'+(function(){var q='M'+(X-52)+' '+Y(0);for(var x=X-52;x<=X+52;x+=4)q+='L'+x+' '+(C-R+pit(x)).toFixed(1);return q+'Z'})()+'" fill="#B9C6A8"/>':'')+rect(a,a+16,0,G,'#59636B')+rect(b-16,b,0,G,'#59636B')+rect(a,b,G,G+T,'url(#hm)');
+   [a+50,b-50].forEach(function(x){g+='<path d="M'+(x-5)+' '+Y(2)+'H'+(x+5)+'V'+Y(G+T+14)+'H'+(x-5)+'ZM'+(x-12)+' '+Y(G+T+14)+'H'+(x+12)+'V'+Y(G+T+24)+'H'+(x-12)+'Z" fill="#7d8790" stroke="#2c343a"/>'});
+   [X-90,X+90].forEach(function(x){g+='<path d="M'+(x-4)+' '+Y(G)+'H'+(x+4)+'V'+Y(G+T+8)+'H'+(x-4)+'ZM'+(x-9)+' '+Y(G+T+8)+'H'+(x+9)+'V'+Y(G+T+15)+'H'+(x-9)+'Z" fill="#B9C0C6" stroke="#2c343a"/>'});
+   var px=s>0?a+130:b-130;g+='<path d="M'+(px-15)+' '+Y(G+T-1)+'H'+(px+15)+'V'+Y(G+T+38)+'H'+(px-15)+'ZM'+(px-21)+' '+Y(G+T+38)+'H'+(px+21)+'V'+Y(G+T+46)+'H'+(px-21)+'Z" fill="url(#mb)" stroke="#083B6B"/>';
+   if(s<0)nums=[[X,-(G+T/2),1],[px,-(G+T+64),2],[a+50,-(G+T+42),3],[X-90,-(G+T+36),4]];
+  }else if(cur===1){g=rect(540,900,2,2+T,'url(#hm)');ring=rect(474,536,2,2+T,'url(#hr)')+rect(904,966,2,2+T,'url(#hr)')+weld(474,-1,T)+weld(966,1,T)+'<path class="w" d="M533 '+Y(T+2)+'H907" stroke="none"/><path class="w" d="M534 '+Y(T+5)+'L538 '+Y(1)+'L542 '+Y(T+5)+'ZM898 '+Y(T+5)+'L902 '+Y(1)+'L906 '+Y(T+5)+'Z" fill="#F4B24E" stroke="#A1560C"/>';if(s<0)nums=[[505,-(T+30),1],[620,-(T+30),2]];
+  }else{
+   var cfg={2:[600,840,X-24,X+24,22],3:[590,850,X-26,X+26,26],4:[548,892,X-30,X+30,24],5:[536,904,X-112,X+112,46]}[cur],liq=cur===3||cur===5;
+   if(liq)g+='<path class="w" d="M'+(function(){var q=[];for(var x=cfg[2]-14;x<=cfg[3]+14;x+=4)q.push(x+' '+Y(bump(x)+seam(x)));return q.join('L')})()+'L'+(cfg[3]-4)+' '+Y(cfg[4]-1)+'H'+(cfg[2]+4)+'Z" fill="#7FC3B5" opacity=".9"/>';
+   g+=pl(cfg[0]+6,cfg[2]-30)+pl(cfg[3]+30,cfg[1]-6)+arch(cfg[0],cfg[1],cfg[2],cfg[3],cfg[4]);
+   if(liq)g+='<path d="M'+(X-8)+' '+Y(cfg[4]+4)+'H'+(X+8)+'V'+Y(cfg[4]+T+4)+'H'+(X-8)+'ZM'+(X-15)+' '+Y(cfg[4]+T+2)+'H'+(X+15)+'V'+Y(cfg[4]+T+14)+'H'+(X-15)+'Z" fill="#B9C0C6" stroke="#2c343a"/>';
+   if(cur>2){ring=rect(cfg[0]-66,cfg[0]-4,5,5+T,'url(#hr)')+pl(cfg[0]-60,cfg[0]-10)+rect(cfg[1]+4,cfg[1]+66,5,5+T,'url(#hr)')+pl(cfg[1]+10,cfg[1]+60)+weld(cfg[0]-66,-1,T)+weld(cfg[1]+66,1,T)}
+   if(s<0){nums=[[cfg[2]-(cur===5?-20:10),-(cfg[4]+T+26),1]];if(cur===2)nums.push([cfg[1]-28,-(T+34),2]);else{nums.push([cfg[0]-35,-(T+36),2],[cfg[1]-30,-(T+36),3]);if(liq)nums.push([X,-(cfg[4]+T+36),4])}}
+  }
+  o.push('<g class="p '+cl+'">'+g+'</g>');if(ring)o.push('<g class="p r '+cl+'">'+ring+'</g>');
+ });
+ o.push('<g class="nn">'+nums.map(function(n){var y=C-R+n[1];return (n[2]===1&&cur===0?'':'<path d="M'+n[0]+' '+y+'v26" stroke="#1D1A18" stroke-width="1.4"/>')+'<circle cx="'+n[0]+'" cy="'+y+'" r="14" fill="#fff" stroke="#0060AA" stroke-width="2"/><text x="'+n[0]+'" y="'+(y+5.5)+'" text-anchor="middle" font-family="Onest,sans-serif" font-weight="700" font-size="16" fill="#0060AA">'+n[2]+'</text>'}).join('')+'</g>');
+ svg.classList.toggle('still',!anim);svg.classList.toggle('open',!!anim);svg.innerHTML=o.join('');
+ if(anim){svg.getBoundingClientRect();setTimeout(function(){svg.classList.remove('open')},420)}
+}
+function pass(){var m=M[cur],D=$('#d').value,W=$('#w').value;$('#ty').textContent=m.t;$('#nm').textContent=m.n;$('#use').textContent=nb(m.u);$('#how').textContent=nb(m.h);
+ $('#parts').innerHTML=m.p.map(function(p,i){return '<li><i>'+(i+1)+'</i><span>'+p[0]+'</span>'+(p[1]?'<b class="num">'+p[1]+' шт.</b>':'')+'</li>'}).join('');
+ $('#ex').innerHTML=[['Рабочее давление','до 7 МПа']].concat(m.x).map(function(r){return '<dt>'+r[0]+'</dt><dd class="num">'+nb(r[1]).replace(' ',' ')+'</dd>'}).join('')}
+function sz(){$('#od').textContent=$('#d').value+' мм';$('#ow').textContent=$('#w').value+' мм'}
+function sel(i,anim){cur=i;$$('#types button').forEach(function(b,j){b.setAttribute('aria-selected',j===i);b.tabIndex=j===i?0:-1;if(j===i&&mob&&anim){var p=b.parentNode;p.scrollTo({left:b.offsetLeft-p.clientWidth/2+74,behavior:'smooth'})}});pass();draw(anim&&!KIT.REDUCED);if(anim){var q=$('#passp');q.classList.remove('in2');q.offsetWidth;if(!KIT.REDUCED)q.classList.add('in2')}}
+M.forEach(function(m,i){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.innerHTML='<b>'+m.t+'</b>'+['Композитная','Обжимная приварная','Галтельная','Галтельная, короткая полость','Приварная удлинённая','Удлинённая галтельная'][i];b.addEventListener('click',function(){sel(i,true)});$('#types').appendChild(b)});
+$('#types').addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;e.preventDefault();sel((cur+k+6)%6,true);$$('#types button')[cur].focus()});
+['d','w'].forEach(function(id){$('#'+id).addEventListener('input',function(){sz();draw(false)})});
+$('#ask').addEventListener('click',function(){$('#f-t').value='Ремонтные муфты';$('#f-d').value='Муфта '+M[cur].t+' ('+M[cur].n.toLowerCase()+'), диаметр '+$('#d').value+' мм, стенка '+$('#w').value+' мм'});
+sz();
+function KR(f){window.KIT?f():document.addEventListener('kit:ready',f)}
+KR(function(){sel(0,false);
+ // первое обжатие, когда труба въехала в экран
+ if(!KIT.REDUCED){var done=false;svg.classList.remove('still');svg.classList.add('open');new IntersectionObserver(function(e,io){if(e[0].isIntersecting&&!done){done=true;io.disconnect();setTimeout(function(){svg.classList.remove('open')},250)}},{threshold:.45}).observe(svg)}
+});
+/* ---------- резервуар: этапы по кругу ---------- */
+var R={rep:[['Подготовительные работы',''],['Техническое диагностирование',''],['Проект ремонта','Разработка и согласование'],['Проект производства работ','Разработка и согласование'],['Ремонтные работы','Дефекты без замены элементов, дополнительные элементы жёсткости, замена элементов, исправление геометрии'],['Антикоррозийная защита',''],['Контроль качества',''],['Гидравлические испытания','На прочность, устойчивость и герметичность'],['Документация и приёмка в эксплуатацию','']],
+bld:[['Демонтажные работы','Полный демонтаж с оборудованием и трубопроводами'],['Земляные работы','Планировка, отсыпка'],['Основание и фундамент',''],['Бурение под опоры',''],['Монолитные конструкции','Опалубка, арматура, бетон'],['Монтаж металлоконструкций',''],['Сварочно-монтажные работы',''],['Технологическое оборудование','И технологические трубопроводы'],['Пожаротушение и канализация',''],['Антикоррозия и изоляция',''],['Контроль качества',''],['Гидравлические испытания',''],['Электромонтаж и автоматизация','Кабельные трассы, электрооборудование'],['Пусконаладка',''],['Обвалование','Восстановление'],['Благоустройство','Уборка мусора, территория']]};
+var roof='<circle r="196" fill="#6E2E17"/><circle r="196" fill="none" stroke="#C8733F" stroke-width="6"/>';for(var i=0;i<48;i++){var a=i*Math.PI/24,c=Math.cos(a),s=Math.sin(a);roof+='<path d="M'+c*122+' '+s*122+'L'+c*192+' '+s*192+'" stroke="'+(i%2?'#8d3f21':'#B5633A')+'" stroke-width="'+(i%2?2:3.4)+'"/>'}
+[146,170].forEach(function(r){roof+='<circle r="'+r+'" fill="none" stroke="#8d3f21" stroke-width="2"/>'});roof+='<circle r="124" fill="#34170D" stroke="#C8733F" stroke-width="3"/>';$('#roof').innerHTML=roof;
+var rm='rep',ri=0,turn=0;
+function step(i){var L=R[rm],n=L.length,prev=ri;ri=(i+n)%n;var df=ri-prev;if(df>n/2)df-=n;if(df<-n/2)df+=n;turn-=df*360/n;$('#rot').style.transform='rotate('+turn+'deg)';$('#rot').style.setProperty('--k',-turn+'deg');$('#roof').style.transform='rotate('+turn+'deg)';
+ $$('#rot button').forEach(function(b,j){j===ri?b.setAttribute('aria-current','step'):b.removeAttribute('aria-current')});$('#ct').textContent=nb(L[ri][0]);$('#cs').textContent=nb(L[ri][1])}
+function ring(){var L=R[rm];ri=0;turn=0;$('#dial').classList.toggle('many',L.length>12);$('#rot').innerHTML=L.map(function(s,i){return '<button type="button" style="--a:'+i*360/L.length+'deg" aria-label="'+(i+1)+'. '+s[0]+'"><span class="num">'+(i+1)+'</span></button>'}).join('');step(0)}
+$('#rot').addEventListener('click',function(e){var b=e.target.closest('button');if(b)step($$('#rot button').indexOf(b))});
+$$('[data-st]').forEach(function(b){b.addEventListener('click',function(){step(ri+ +b.dataset.st)})});
+$$('[data-r]').forEach(function(b){b.addEventListener('click',function(){rm=b.dataset.r;$$('[data-r]').forEach(function(x){x.setAttribute('aria-selected',x===b)});ring()})});ring();
+/* ---------- вакансии: surgut-rsu.ru/company/vacancy/ ---------- */
+[['Машинист экскаватора','до 240 000'],['Дефектоскопист','до 190 000'],['Производители работ','до 180 000'],['Геодезист','до 165 000'],['Машинист трубоукладчика','от 150 000'],['Машинист крана автомобильного','от 150 000'],['Водитель','до 150 000'],['Инженер ОПП (ПТО)','до 130 000'],['Мастера строительных и монтажных работ','до 120 000'],['Токарь','115 000'],['Машинист компрессора 5–6 р.','110 000'],['Вальцовщик','110 000'],['Монтажник технологических трубопроводов','до 100 000'],['Маляр','99 000'],['Слесарь-инструментальщик','99 000'],['Изолировщик','до 90 000'],['Газорезчик','до 90 000'],['Машинист ДЭС','от 85 000']].forEach(function(v){var b=document.createElement('button');b.type='button';b.innerHTML='<span></span><b class="num"></b>';b.firstChild.textContent=v[0];b.lastChild.textContent=v[1].replace(/ /g,' ');b.addEventListener('click',function(){$('#f-t').value='Вакансия';$('#f-d').value='Вакансия: '+v[0];var t=$('#req');KIT.lenis?KIT.lenis.scrollTo(t,{offset:-70}):t.scrollIntoView()});$('#vac-l').appendChild(b)});
+/* ---------- кому звонить ---------- */
+var WH=[['Заказать работы или муфту','76-90-35','','info@surgutrsu.ru'],['Приёмная','77-49-03','','bov3101@yandex.ru'],['Отдел кадров','77-48-55','и 77-48-54','srsuok@yandex.ru'],['Снабжение (ОМТС)','77-48-58','','srsu.omts@mail.ru'],['Бухгалтерия','77-48-53','',''],['Расчётный отдел','77-48-50','',''],['Главный сварщик','77-48-66','добавочный 140',''],['Главный механик','77-48-66','добавочный 157',''],['Лаборатория неразрушающего контроля','77-48-66','добавочный 131','']];
+function who(i){var w=WH[i],ext=/доб/.test(w[2])?','+w[2].replace(/\D/g,''):'';$$('#who-l button').forEach(function(b,j){b.setAttribute('aria-pressed',j===i)});var n=$('#nu');n.href='tel:+73462'+w[1].replace(/\D/g,'')+ext;n.setAttribute('aria-label','+7 3462 '+w[1]);n.innerHTML='<small style="display:block;font-size:.4em;letter-spacing:0;line-height:1.1">+7 (3462)</small>'+w[1].split('').map(function(c,k){return '<span aria-hidden="true" style="--i:'+k+'">'+c+'</span>'}).join('');$('#ext').textContent=w[2];$('#ml').innerHTML=w[3]?'<a class="link" href="mailto:'+w[3]+'">'+w[3]+'</a>':''}
+WH.forEach(function(w,i){var l=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=w[0];b.addEventListener('click',function(){who(i)});l.appendChild(b);$('#who-l').appendChild(l)});who(0);
+// меню телефонов закрывается кликом мимо и по Esc
+var dt=$('.call');document.addEventListener('click',function(e){if(dt.open&&(!dt.contains(e.target)||e.target.closest('a')))dt.open=false});addEventListener('keydown',function(e){if(e.key==='Escape'&&dt.open){dt.open=false;$('summary',dt).focus()}});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ЯмалТрансАвто — спецтехника и грузоперевозки, Новый Уренгой</title>
+<meta name="description" content="Концепция редизайна сайта ООО «ЯмалТрансАвто»: более 400 единиц техники, негабарит, вахтовые перевозки, опасные грузы, ГСМ, дорожно-строительная техника. Новый Уренгой и Тарко-Сале.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--snow:#F4F8FB;--ice:#DFEBF4;--sky:#4C84BE;--ink:#14202C;--or:#F4731C;--or-d:#DB5C08;--green:#70B840;--green-d:#35700F;--dusk:#1D3550;
+  --bg:var(--snow);--fg:var(--ink);--muted:#4D6072;--accent:var(--or);--accent-h:#FF8B3A;--on-accent:#14202C;--r:10px;--wrap:1300px;
+  --f-display:"Rubik",system-ui,sans-serif;--f-text:"Onest",system-ui,sans-serif;--hdr-h:84px;--sec:clamp(72px,8.4vw,132px)}
+[data-theme=night]{--bg:var(--dusk);--fg:#F1F7FC;--muted:#AFC4D8;--line:rgba(220,236,250,.22);background:var(--bg);color:var(--fg)}
+img{height:auto}[data-img]{overflow:clip}
+h1,h2,h3{font-weight:700;letter-spacing:-.03em;line-height:1}
+h2{font-size:clamp(36px,4.7vw,72px)}
+h3{font-size:clamp(23px,1.9vw,28px);letter-spacing:-.015em;line-height:1.12}
+.lead{font-size:clamp(18px,1.4vw,21px);line-height:1.5;color:var(--muted);max-width:35em}
+:focus-visible{outline-color:var(--green-d)}
+/* шапка */
+.hdr{background:#fff;color:var(--ink)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(16px,2.2vw,36px)}
+.hdr img{height:58px;width:auto}
+.hdr nav{display:flex;gap:clamp(16px,2vw,32px);margin-left:auto;font-weight:500;font-size:16px}
+.hdr nav a{text-decoration:none;padding:12px 0;white-space:nowrap;background:repeating-linear-gradient(90deg,var(--or) 0 10px,transparent 10px 15px) 0 calc(100% - 6px)/0 3px no-repeat;transition:background-size .45s var(--e-smooth)}
+.hdr nav a:hover{background-size:100% 3px}
+.hdr .tel{display:grid;text-decoration:none;font-weight:600;white-space:nowrap;line-height:1.25}
+.hdr .tel small{font-weight:400;font-size:13px;color:var(--muted)}
+
+/* первый экран: Урал входит в снег */
+.hero{position:relative;padding-top:var(--hdr-h);overflow:clip;isolation:isolate}
+.hero-pic{position:relative;height:max(45vw,min(calc(100svh - var(--hdr-h) - 140px),880px));background:#4C84BE;overflow:clip}
+.hero-pic>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 5%}
+.hero-pic::before{content:"";position:absolute;inset:0 0 34%;z-index:1;background:linear-gradient(180deg,rgba(20,58,110,.72),rgba(20,58,110,.28) 56%,rgba(20,58,110,0))}
+.hero canvas{position:absolute;inset:auto 0 0;width:100%;height:62%;z-index:3;pointer-events:none}
+.drift{position:absolute;left:0;right:0;bottom:-2px;z-index:2;width:100%;height:clamp(54px,7vw,120px)}
+h1{position:absolute;z-index:2;left:0;right:0;top:clamp(20px,2.2vw,42px);font-size:clamp(44px,5.9vw,108px);color:#fff;line-height:.95}
+h1 span{display:block}
+.hero-sheet{position:relative;z-index:4;display:grid;grid-template-columns:minmax(0,1.15fr) auto;gap:20px 60px;align-items:center;padding-block:6px 40px}
+.hero-sheet .lead{color:var(--ink);font-weight:500;max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-facts{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,auto) 1fr;gap:0 clamp(28px,4vw,64px);font-size:16px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+.hero-facts b{font:700 26px/1 var(--f-display);color:var(--ink);margin-right:.35em;letter-spacing:-.02em}
+@media (prefers-reduced-motion:no-preference){
+  .js .hero-pic>img{animation:roll 3s var(--e-smooth) both}
+  .js h1 span{animation:haul 1.3s var(--e-smooth) both}.js h1 span+span{animation-delay:.14s}
+  .js .drift path:nth-child(1){animation:dr 2.4s var(--e-smooth) both}
+}
+@keyframes roll{from{transform:scale(1.05) translateX(-2.2%)}}
+@keyframes haul{from{transform:translateX(-.35em)}}
+@keyframes dr{from{transform:translateY(50%)}}
+
+/* колонна */
+.conv{padding-top:clamp(40px,4vw,64px)}
+.conv-h{display:grid;grid-template-columns:auto minmax(0,27em);justify-content:space-between;gap:18px 60px;align-items:end}
+.filt{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.filt button{min-height:48px;padding:8px 18px;border-radius:99px;background:#fff;box-shadow:inset 0 0 0 1.5px #B9CBDA;font-weight:500;font-size:16px;transition:background-color .25s,box-shadow .25s}
+.filt button:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.filt button[aria-pressed=true]{background:var(--ink);color:#fff;box-shadow:none}
+.yard{position:relative;margin-top:26px;height:clamp(330px,32vw,480px);overflow:hidden;background:linear-gradient(#A9CBE8 0,#D9E7EF 42%,#F8E5CF 58%)}
+.yard>svg{position:absolute;inset:0;width:100%;height:100%}
+.yard canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.scr{position:absolute;inset:0;overflow-x:auto;overflow-y:hidden;z-index:2;scrollbar-width:thin;scrollbar-color:#6E8AA3 transparent;overscroll-behavior-x:contain}
+.lane{position:relative;height:100%;min-width:100%;overflow:hidden}
+.veh{position:absolute;left:0;bottom:22.4%;text-align:left;will-change:transform}
+.veh svg{display:block;overflow:visible;max-width:none}
+.veh .nm{position:absolute;left:0;top:calc(100% + 10px);width:max-content;font-weight:600;font-size:15px;line-height:1.25;color:#1E3347;max-width:190px}
+.veh .beam{opacity:0;transition:opacity .5s}
+.veh[aria-pressed=true] .beam{opacity:1}
+.veh[aria-pressed=true] .nm{color:#8A3600;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:5px}
+.veh .boom{transition:transform 1.4s var(--e-smooth)}
+.veh:focus-visible{outline-offset:6px;border-radius:6px}
+.arrows{position:absolute;z-index:5;right:var(--gutter);top:18px;display:flex;gap:8px}
+.arrows button{width:48px;height:48px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.arrows button:hover{background:var(--or)}
+.arrows svg{width:20px}
+.card{background:#fff;box-shadow:inset 0 5px 0 var(--or)}
+.card .wrap{display:grid;grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:24px clamp(28px,5vw,80px);padding-block:40px 48px;align-items:center}
+.card .pic{border-radius:var(--r);overflow:hidden;background:linear-gradient(#C9DFF0,#F2F7FA 72%,#fff 72%);aspect-ratio:478/320;display:grid}
+.card .pic img{width:100%;height:100%;object-fit:cover}
+.card .pic svg{place-self:center;width:84%;height:auto;max-height:78%}
+.card h3{font-size:clamp(28px,2.8vw,42px);letter-spacing:-.025em}
+.card p{margin-top:14px;font-size:18px;max-width:38em}
+.card ul{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:16px;color:var(--muted);font-size:16px}
+.card li::before{content:"";display:inline-block;width:14px;height:3px;background:var(--green);margin-right:9px;vertical-align:.28em}
+.card .btn{margin-top:24px}
+
+/* негабарит */
+.over{background:var(--or);--muted:#4A2406;--line:rgba(20,32,44,.35);overflow:clip}
+.over-h{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px 60px;align-items:center}
+.over-h figure{border-radius:var(--r);overflow:hidden}.over-h img{width:100%}
+.over h2{font-size:clamp(38px,5vw,80px);letter-spacing:-.04em}
+.over .lead{color:#26180B;margin-top:24px}
+.steps{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:clamp(44px,5vw,76px)}
+.steps::before{content:"";position:absolute;left:calc(var(--gutter)*-1);right:-50vw;top:13px;height:20px;background:repeating-linear-gradient(115deg,var(--ink) 0 20px,#FFD9BD 20px 40px)}
+.steps li{position:relative;padding:58px 26px 0 0}
+.steps b{display:block;font:700 clamp(19px,1.6vw,23px)/1.15 var(--f-display);letter-spacing:-.015em}
+.steps span{display:block;margin-top:8px;font-size:16px;line-height:1.4;color:#26180B}
+.haul{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px;margin-top:clamp(44px,5vw,72px);align-items:start}
+.haul figure{overflow:hidden;border-radius:var(--r)}
+.haul img{width:100%}
+.haul figure:nth-child(1){grid-column:1/5}.haul figure:nth-child(2){grid-column:5/9}
+.what{grid-column:9/13;align-self:end;font-size:19px;line-height:1.5;border-top:2px solid var(--ink);padding-top:18px}
+.what b{font-weight:700}
+
+/* карта */
+.geo{background:var(--ice);overflow:clip}
+.geo-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:34px clamp(30px,5vw,80px);align-items:center}
+.geo ul{margin-top:28px;border-top:1px solid var(--line)}
+.geo li{padding:15px 0;border-bottom:1px solid var(--line)}
+.geo li b{font:700 22px/1.2 var(--f-display)}.geo li span{display:block;color:var(--muted);font-size:16px;margin-top:4px}
+.map{position:relative}
+.map svg{width:100%;height:auto;overflow:visible}
+.map .rt{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s var(--e-smooth)}
+.map .rt.on{stroke-dashoffset:0}
+.map button{position:absolute;transform:translate(-50%,-50%);min-height:44px;min-width:44px;font:600 clamp(15px,1.4vw,20px)/1 var(--f-display);display:flex;align-items:center;white-space:nowrap}
+.map button i{width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--ink);flex:none;transition:background-color .25s}
+.map button[aria-pressed=true] i,.map button:hover i{background:var(--or)}
+.map button.base i{background:var(--green);border-radius:4px}
+.map button span{position:absolute;left:calc(50% + 18px);top:50%;transform:translateY(-50%)}
+.map button.l span{left:auto;right:calc(50% + 18px)}
+.map button.kk span{left:auto;top:-26px;right:0;transform:none;text-align:right;white-space:normal;width:8em;line-height:1.05;top:auto;bottom:calc(50% + 14px)}
+.map button.t span{left:50%;top:-6px;transform:translate(-50%,-50%)}
+
+/* продажа */
+.sale-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px 60px;align-items:end}
+.sale table{width:100%;border-collapse:collapse;margin-top:26px;font-variant-numeric:tabular-nums}
+.sale th{text-align:left;font-weight:500;font-size:15px;color:var(--muted);padding:10px 16px 10px 0;border-bottom:2px solid var(--ink)}
+.sale td{padding:13px 16px 13px 0;border-bottom:1px solid var(--line);font-size:17px}
+.sale td:first-child{font:600 19px/1.25 var(--f-display);letter-spacing:-.01em}
+.sale td.pr{font-weight:600;white-space:nowrap;text-align:right}.sale th.pr{text-align:right;padding-right:0}
+.sale td:last-child{text-align:right;padding-right:0}
+.sale .ask{min-height:44px;padding:0 18px;border-radius:99px;box-shadow:inset 0 0 0 1.5px #B9CBDA;font-weight:500;font-size:15px}
+.sale .ask:hover{background:var(--or);box-shadow:none}
+.sale tr.off{display:none}
+.all{margin-top:24px}
+
+/* доверие */
+.trust-g{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px clamp(36px,6vw,100px)}
+.trust h2{max-width:10em}
+.part{margin-top:34px;columns:2;column-gap:40px}
+.part li{break-inside:avoid;padding:13px 0;border-top:1px solid var(--line);font:500 19px/1.3 var(--f-display);letter-spacing:-.01em}
+.lic{border-left:5px solid var(--green);padding-left:28px}
+.lic ul{margin-top:18px;display:grid;gap:14px;font-size:17px;color:var(--muted)}
+.lic li b{color:var(--fg);font-weight:600}
+
+/* заявка */
+.req{background:#fff}
+.mini{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px 26px;min-height:130px;padding:26px clamp(18px,3vw,40px) 22px;border-radius:var(--r) var(--r) 0 0;background:linear-gradient(#C6DDEF,#EEF4F8 70%)}
+.mini p{align-self:center;font-size:18px}
+.mini div{display:grid;gap:8px}
+.mini svg{height:auto;overflow:visible}
+.mini .q{display:flex;align-items:center;gap:4px;font-weight:600;font-size:15px}
+.mini .q button{width:44px;height:44px;border-radius:50%;background:#fff;font-size:22px;line-height:1}
+.mini .q button:hover{background:var(--or)}
+.mini .q span{min-width:22px;text-align:center}
+.req-b{background:var(--ink);--fg:#F1F7FC;--muted:#AFC4D8;--line:rgba(220,236,250,.26);color:var(--fg);border-radius:0 0 var(--r) var(--r);padding:clamp(24px,3.4vw,48px);display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:34px clamp(28px,5vw,80px)}
+.req-b h2{font-size:clamp(34px,3.7vw,56px)}
+.who{margin-top:26px;display:grid;gap:18px;font-size:17px}
+.who span{display:block;color:var(--muted);font-size:15px}
+.who a{display:inline-block;padding:5px 0;text-decoration:none;font:600 20px/1.3 var(--f-display)}
+.who a:hover{color:var(--or)}
+.req form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-content:start}
+.req .full{grid-column:1/-1}
+.req .done h3{font-size:34px}.req .done{grid-column:1/-1}.req .done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 22px;margin:18px 0}.req .done dt,.req .done p{color:var(--muted)}
+.ftr{padding:34px 0 44px;background:#fff;color:var(--muted);font-size:15px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:12px 48px;justify-content:space-between}
+.kit-tag{bottom:auto;top:calc(var(--hdr-h) + 12px)}
+@media (max-width:1180px){.hdr .tel{display:none}}
+@media (max-width:900px){
+  :root{--hdr-h:70px}
+  .hdr img{height:46px}[data-burger]{margin-left:auto}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:#fff;flex-direction:column;gap:2px;padding:20px var(--gutter);font:700 30px/1.2 var(--f-display);letter-spacing:-.02em;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  .hero-pic{height:128vw;max-height:560px}
+  .hero-pic>img{object-position:72% 100%;top:auto;height:82%}
+  .hero-pic{background:linear-gradient(#3A6FAE,#5B94CB 40%)}
+  .hero-pic::before{inset:0 0 40%;background:linear-gradient(180deg,#3A6FAE 22%,rgba(58,111,174,.4) 50%,rgba(58,111,174,0))}
+  h1{top:54px;font-size:clamp(42px,12vw,60px)}
+  .hero-sheet{grid-template-columns:minmax(0,1fr);padding-top:14px}
+  .cta .btn{flex:1 1 100%}
+  .hero-facts{grid-template-columns:minmax(0,1fr);gap:10px}
+  .conv-h,.card .wrap,.over-h,.geo-g,.trust-g,.req-b{grid-template-columns:minmax(0,1fr)}
+  .filt{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(var(--gutter)*-1);padding:2px var(--gutter) 6px;scrollbar-width:none}
+  .filt button{flex:none}
+  .yard{height:300px}.arrows{display:none}
+  .steps{grid-template-columns:minmax(0,1fr);padding-left:44px}
+  .steps::before{left:0;right:auto;top:0;bottom:0;width:18px;height:auto}
+  .steps li{padding:0 0 26px}
+  .haul{gap:12px}.haul figure:nth-child(1){grid-column:1/7}.haul figure:nth-child(2){grid-column:7/13}.what{grid-column:1/13}
+  .sale thead{display:none}
+  .sale tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 14px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .sale td{border:0;padding:0;text-align:left}.sale td:first-child{grid-column:1/-1}.sale td.yr{color:var(--muted);font-size:16px;grid-column:1}.sale td.cl{display:none}.sale td.pr{grid-column:1;text-align:left}.sale td:last-child{grid-column:2;grid-row:2/4;align-self:center}
+  .part{columns:1}
+  .req form{grid-template-columns:minmax(0,1fr)}
+  .map{margin:10px 0}.map button span{font-size:14px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="ЯмалТрансАвто, на главную"><img src="img/logo.png" alt="ООО «ЯмалТрансАвто»" width="560" height="201"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#conv">Техника</a><a href="#over">Негабарит</a><a href="#geo">Где работаем</a><a href="#sale">Продажа техники</a><a href="#trust">Лицензии</a><a href="#req">Контакты</a></nav>
+  <a class="tel num" href="tel:+73494939657">8 (3494) 93-96-57<small>диспетчерская, круглосуточно</small></a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-pic">
+    <img src="img/ph/02.webp" alt="Белый Урал с красной автоцистерной на снежной площадке ЯмалТрансАвто" width="1920" height="1440" fetchpriority="high">
+    <h1><span class="wrap"><span>Наше дело&nbsp;—</span><span>дело техники</span></span></h1>
+    <canvas id="poz" aria-hidden="true"></canvas>
+    <svg class="drift" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#DCE8F1" d="M0 60c120-34 230-6 350 8s190-26 300-20 150 40 270 30 190-48 300-44 150 26 220 22v66H0Z"/><path fill="#F4F8FB" d="M0 92c150-30 260-22 380-8s230 2 330-10 180 26 300 18 200-34 300-22 100 14 130 12v40H0Z"/></svg>
+  </div>
+  <div class="wrap hero-sheet">
+    <p class="lead">Перевозим грузы, бригады и&nbsp;негабарит, даём спецтехнику с&nbsp;водителем по&nbsp;всему ЯНАО и&nbsp;западу Красноярского края. Машины проходят ежедневное ТО&nbsp;и&nbsp;приспособлены к&nbsp;холоду.</p>
+    <div class="cta"><a class="btn" data-magnetic href="#conv">Собрать колонну</a><a class="btn btn--ghost num" href="tel:+73494939657">8 (3494) 93-96-57</a></div>
+    <div class="hero-facts num"><span><b>400+</b>единиц техники</span><span><b>245</b>водителей в&nbsp;штате</span><span><b>2008</b>работаем с&nbsp;этого года</span></div>
+  </div>
+</section>
+
+<section class="conv" id="conv">
+  <div class="wrap">
+    <div class="conv-h"><h2 data-split>Соберите колонну</h2><p class="lead">Выберите задачу: подходящие машины выстроятся на&nbsp;зимнике. Нажмите на&nbsp;машину, чтобы добавить её в&nbsp;заявку.</p></div>
+    <div class="filt" role="group" aria-label="Задача" id="filt"></div>
+  </div>
+  <div class="yard" id="yard">
+    <svg viewBox="0 0 1440 440" preserveAspectRatio="xMidYMax slice" aria-hidden="true" id="land"></svg>
+    <div class="scr" id="scr" tabindex="0" aria-label="Колонна техники, прокручивается по горизонтали"><div class="lane" id="lane"></div></div>
+    <canvas id="snow" aria-hidden="true"></canvas>
+    <div class="arrows"><button type="button" aria-label="Назад по колонне" data-d="-1"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M13 3 5 10l8 7"/></svg></button><button type="button" aria-label="Вперёд по колонне" data-d="1"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m7 3 8 7-8 7"/></svg></button></div>
+  </div>
+  <div class="card" id="card" aria-live="polite"><div class="wrap"><div class="pic" id="c-pic"></div><div><h3 id="c-t"></h3><p id="c-p"></p><ul id="c-l"></ul><button class="btn" type="button" id="c-add">Добавить в&nbsp;заявку</button></div></div></div>
+</section>
+
+<section class="sec over" id="over"><div class="wrap">
+  <div class="over-h"><div><h2 data-split>Негабарит: от&nbsp;разрешения до&nbsp;разгрузки</h2><p class="lead">Составляем удобный маршрут, сами оформляем и&nbsp;получаем разрешения, отвечаем за&nbsp;безопасность на&nbsp;всём пути.</p></div><figure data-img><img src="img/ph/27.webp" alt="Тягач везёт крупногабаритную ёмкость по раскисшей дороге" width="800" height="450" loading="lazy"></figure></div>
+  <ol class="steps">
+    <li><b>Разрешения</b><span>собираем пакет документов для&nbsp;транспортировки</span></li>
+    <li><b>Страхование</b><span>страхуем груз</span></li>
+    <li><b>Погрузка и&nbsp;крепёж</b><span>готовим груз, крепим, выполняем такелаж</span></li>
+    <li><b>Сопровождение</b><span>ГИБДД и&nbsp;конвой машинами прикрытия</span></li>
+    <li><b>Доставка</b><span>везём по&nbsp;удобному маршруту и&nbsp;разгружаем</span></li>
+  </ol>
+  <div class="haul">
+    <figure data-img><img src="img/ph/23.webp" alt="КамАЗ с длинномерной трубой на прицепе" width="800" height="450" loading="lazy"></figure>
+    <figure data-img><img src="img/ph/24.webp" alt="КрАЗ с блоком оборудования на трале" width="800" height="450" loading="lazy"></figure>
+    <p class="what"><b>Возим</b> строительные и&nbsp;модульные конструкции, большие ёмкости, трубы, <span class="num">ж/д</span>&nbsp;вагоны, бытовки, экскаваторы и&nbsp;бульдозеры, катера и&nbsp;станки.</p>
+  </div>
+</div></section>
+
+<section class="sec geo" id="geo"><div class="wrap geo-g">
+  <div>
+    <h2 data-split>Новый Уренгой и&nbsp;Тарко‑Сале</h2>
+    <p class="lead" style="margin-top:20px">Работаем по&nbsp;ЯНАО и&nbsp;всей западной части Красноярского края. Нажмите на&nbsp;город, и&nbsp;он&nbsp;попадёт в&nbsp;заявку.</p>
+    <ul>
+      <li><b>Новый Уренгой</b><span>головная база, пр-д Сварщиков, 3. Пн–пт с&nbsp;8:00 до&nbsp;18:00, диспетчерская круглосуточно</span></li>
+      <li><b>Тарко‑Сале</b><span>подразделение компании</span></li>
+      <li><b>Свои мастерские и&nbsp;мойки</b><span>если машина встала, ремонтируем или&nbsp;меняем узел сразу</span></li>
+    </ul>
+  </div>
+  <div class="map" id="map"><svg viewBox="0 0 640 420" aria-hidden="true">
+    <path d="M30 20C20 130 40 190 30 250s50 90 90 100M118 10c30 60-10 110 20 160s90 60 100 120" fill="none" stroke="#B4CFE3" stroke-width="20" stroke-linecap="round"/><path d="M330 10c-20 70 40 90 30 150s-40 90-20 150 60 60 60 110" fill="none" stroke="#BFD6E7" stroke-width="11" stroke-linecap="round"/>
+    <g fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"><path d="M451 110 290 160 62 69M451 110 493 216 404 372M493 216M451 110 600 64"/></g>
+    <g fill="none" stroke="#14202C" stroke-width="5" stroke-linecap="round"><path class="rt" pathLength="1" data-to="Надым" d="M451 110 290 160"/><path class="rt" pathLength="1" data-to="Салехард" d="M451 110 290 160 62 69"/><path class="rt" pathLength="1" data-to="Тарко-Сале" d="M451 110 493 216"/><path class="rt" pathLength="1" data-to="Ноябрьск" d="M451 110 493 216 404 372"/><path class="rt" pathLength="1" data-to="Красноярский край" d="M451 110 600 64"/></g>
+  </svg></div>
+</div></section>
+
+<section class="sec sale" id="sale"><div class="wrap">
+  <div class="sale-h"><h2 data-split>Продаём свою технику</h2><p class="lead">Реализуем машины из&nbsp;собственного парка, бывшие в&nbsp;эксплуатации. Работаем с&nbsp;юридическими и&nbsp;физическими лицами.</p></div>
+  <div class="filt" role="group" aria-label="Вид техники" id="s-filt"></div>
+  <table><thead><tr><th>Модель</th><th>Год выпуска</th><th>Цвет</th><th class="pr">Цена, ₽</th><th class="pr"><span class="sr">Действие</span></th></tr></thead><tbody id="s-body"></tbody></table>
+  <button class="btn btn--ghost all" type="button" id="s-all">Показать всю технику</button>
+</div></section>
+
+<section class="sec trust" id="trust" data-theme="night"><div class="wrap trust-g">
+  <div>
+    <h2 data-split>С&nbsp;нами работают</h2>
+    <ul class="part"><li>АО «Арктикгаз»</li><li>ПАО «Геотек Сейсморазведка»</li><li>ООО «Газпром добыча Ямбург»</li><li>Уренгойский филиал ООО «Газпром энерго»</li><li>АО «Газпром центрэнергогаз»</li><li>ООО «Газпром переработка»</li><li>ООО «Газпром добыча Ноябрьск»</li><li>ООО «Газпром НГХК»</li><li>АО «Ачимгаз»</li></ul>
+  </div>
+  <div class="lic"><h3>Лицензии и&nbsp;допуски</h3><ul>
+    <li><b>Отходы I–IV классов опасности:</b> сбор, транспортирование, обработка, утилизация, обезвреживание, размещение</li>
+    <li><b>Взрывопожароопасные и&nbsp;химически опасные</b> производственные объекты: эксплуатация</li>
+    <li><b>Перевозки:</b> лицензия на&nbsp;осуществление деятельности</li>
+    <li><b>Медицинская деятельность:</b> лицензии компании</li>
+    <li><b>Технический осмотр:</b> аттестат аккредитации оператора</li>
+    <li>Спецтранспорт не&nbsp;старше 2012&nbsp;года выпуска, с&nbsp;контролем ГЛОНАСС и&nbsp;GPS</li>
+  </ul></div>
+</div></section>
+
+<section class="sec req" id="req"><div class="wrap">
+  <div class="mini" id="mini" aria-live="polite"></div>
+  <div class="req-b">
+    <div>
+      <h2>Заявка диспетчеру</h2>
+      <div class="who">
+        <div><span>Диспетчерская технологическая служба, круглосуточно</span><a class="num" href="tel:+73494939657">8 (3494) 93-96-57</a><br><a href="mailto:dispet4ers@yamaltransavto.ru">dispet4ers@yamaltransavto.ru</a></div>
+        <div><span>Офис, пн–пт с&nbsp;8:00 до&nbsp;18:00</span><a class="num" href="tel:+73494939656">8 (3494) 93-96-56</a><br><a href="mailto:info@yamaltransavto.ru">info@yamaltransavto.ru</a></div>
+        <div><span>Технический осмотр, ежедневно с&nbsp;8:00 до&nbsp;19:00. 1‑й&nbsp;км автодороги Новый Уренгой — Коротчаево</span><a class="num" href="tel:+79129109891">+7 912 910‑98‑91</a></div>
+      </div>
+    </div>
+    <form id="rf" data-demo-form>
+      <input type="hidden" name="Техника" id="f-veh">
+      <label class="field full"><span>Задача или&nbsp;груз</span><textarea name="Задача или груз" id="f-task" style="min-height:84px"></textarea></label>
+      <label class="field"><span>Откуда</span><input name="Откуда" autocomplete="off"></label>
+      <label class="field"><span>Куда</span><input name="Куда" id="f-to" autocomplete="off"></label>
+      <label class="field"><span>Когда нужна техника</span><input name="Когда" autocomplete="off"></label>
+      <label class="field"><span>Компания</span><input name="Компания" autocomplete="organization"></label>
+      <label class="field"><span>Имя</span><input name="Имя" autocomplete="name" required></label>
+      <label class="field"><span>Телефон</span><input name="Телефон" type="tel" autocomplete="tel" required></label>
+      <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+      <button class="btn full" type="submit">Отправить диспетчеру</button>
+      <div class="done" role="status"><h3>Заявка готова</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+    </form>
+  </div>
+</div></section>
+</main>
+<footer class="ftr"><div class="wrap"><span>ООО «ЯмалТрансАвто». 629306, ЯНАО, г.&nbsp;Новый Уренгой, пр-д Сварщиков, д.&nbsp;3</span><span>Образовано в&nbsp;конце 2008&nbsp;года на&nbsp;базе транспортного цеха ООО «Ямалгеофизика»</span></div></footer>
+<div class="mbar"><a class="btn" href="#req" id="mb">Заявка диспетчеру</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+'use strict';
+var $=function(i){return document.getElementById(i)},R=KIT.REDUCED,MOB=innerWidth<900;
+
+/* ─── машины: 20 единиц = 1 м, земля y=0, нос справа ─── */
+var K='#14202C';
+function W(x,r){r=r||12;return '<g class="w" data-x="'+x+'" data-r="'+r+'"><circle cx="'+x+'" cy="'+-r+'" r="'+r+'" fill="#1A2027"/><circle cx="'+x+'" cy="'+-r+'" r="'+r*.52+'" fill="#93A3B0"/><path d="M'+(x-r*.42)+' '+-r+'h'+r*.84+'M'+x+' '+(-r-r*.42)+'v'+r*.84+'" stroke="#4A5966" stroke-width="2"/></g>'}
+function frame(a,b,y){return '<path d="M'+a+' '+(y||-20)+'h'+(b-a)+'v5h-'+(b-a)+'z" fill="#2B343D"/>'}
+function beam(x,y){return '<path class="beam" d="M'+x+' '+y+'L'+(x+90)+' -2 '+(x+150)+' -2 '+x+' '+(y-4)+'Z" fill="#FFE9A8" opacity=".9"/>'}
+function cabK(x,c){return beam(x+45,-26)+'<path d="M'+x+' -20V-62q0-5 5-5h31q5 0 6 5l4 24v18z" fill="'+c+'"/><path d="M'+(x+20)+' -61h16l4 20H'+(x+20)+'z" fill="#BFD9E8"/><path d="M'+(x+16)+' -62v40" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/><path d="M'+(x+34)+' -32h12v12h-12z" fill="rgba(0,0,0,.28)"/><path d="M'+(x+2)+' -22h45v8h-45z" fill="#222A32"/><circle cx="'+(x+44)+'" cy="-26" r="2.6" fill="#FFE9A8"/><path d="M'+(x+10)+' -67h7v-5h-7z" fill="#F4731C"/>'}
+function cabU(x,c){return beam(x+72,-32)+'<path d="M'+x+' -22V-62q0-6 6-6h19q4 0 6 4l9 21h24q9 1 9 10v11z" fill="'+c+'"/><path d="M'+(x+9)+' -62h14l8 19H'+(x+9)+'z" fill="#BFD9E8"/><path d="M'+(x+66)+' -42h7v18h-7z" fill="#222A32"/><path d="M'+(x+36)+' -22q2-13 16-13t16 13z" fill="rgba(0,0,0,.3)"/><path d="M'+(x+2)+' -22h74v6h-74z" fill="#222A32"/><circle cx="'+(x+71)+'" cy="-31" r="2.6" fill="#FFE9A8"/><path d="M'+(x+10)+' -68h7v-5h-7z" fill="#F4731C"/><path d="M'+(x+36)+' -36h26" stroke="rgba(0,0,0,.35)" stroke-width="2"/>'}
+function pipes(a,b,y){var o='';for(var j=0;j<3;j++)for(var i=0;i<3-j;i++)o+='<path d="M'+a+' '+(y-5-j*8)+'H'+b+'" stroke="'+(i%2?'#3B4650':'#55626D')+'" stroke-width="8"/>';return o}
+function dozer(x,y,s){return '<g transform="translate('+x+' '+y+') scale('+s+')"><path d="M14 0h66q14 0 14-12t-14-12H14Q0-24 0-12T14 0z" fill="#252C33"/><path d="M14-4h66q9 0 9-8t-9-8H14q-9 0-9 8t9 8z" fill="none" stroke="#6D7A85" stroke-width="2" stroke-dasharray="5 4"/><path d="M6-24h78v-20H46V-72H18v28H6z" fill="#F0B323"/><path d="M22-68h18v22H22z" fill="#BFD9E8"/><path d="M78-30h26v-18l8 2q-4 20 4 46h-10l-6-18H78z" fill="#D99B12"/><path d="M60-44v-14h5v14" fill="#3B4650"/></g>'}
+var V=[
+{id:'tral',n:'Тягач с тралом',len:332,g:['over','cargo'],h:80,ph:'18',p:'Везём тяжеловесы, крупногабарит и негабарит: конструкции, ёмкости, трубы, вагончики, экскаваторы и бульдозеры.',l:['разрешения и страхование','сопровождение ГИБДД','машины прикрытия'],
+ s:'<path d="M8-16 0-62l8-1 12 44z" fill="#1C5FA8"/><path d="M10-24h166l20-18h58v8h-50L184-16H10z" fill="#1C5FA8"/>'+dozer(52,-24,.86)+frame(196,262)+W(28,9)+W(50,9)+W(72,9)+W(212)+W(240)+cabU(256,'#C9BE94')+W(308)},
+{id:'bort',n:'Тягач с бортовым полуприцепом',len:306,g:['cargo'],h:76,ph:'34',p:'Возим оборудование и материалы по ЯНАО и западу Красноярского края. Подбираем тоннаж и маршрут, готовим документы, груз можно отследить на всех этапах.',l:['погрузка и разгрузка','хранение груза'],
+ s:pipes(10,236,-38)+'<path d="M0-38h244v12H0z" fill="#8C9AA6"/><path d="M0-38h244M30-38v12M70-38v12M110-38v12M150-38v12M190-38v12" stroke="#5F6C77" stroke-width="2"/>'+frame(0,262,-26)+W(28)+W(56)+W(206)+W(234)+cabK(256,'#F0631A')+W(282)},
+{id:'crane',n:'Автокран',len:228,g:['lift'],h:100,ph:'32',p:'Грузоподъёмная техника для подъёма, монтажа и погрузочно-разгрузочных работ любого вида. Подбираем кран под конкретную задачу.',l:['с машинистом','регулярное ТО на своей станции'],
+ s:frame(0,190)+'<path d="M0-28h160v8H0z" fill="#B98408"/><path d="M0-20h10v10H0zM104-20h10v10h-10z" fill="#222A32"/>'+W(40)+W(68)+cabK(170,'#F0B323')+W(190)+'<path d="M18-48h60v20H18z" fill="#F0B323"/><path d="M62-66h30l6 22v14H62z" fill="#F0B323"/><path d="M76-62h14l4 16H76z" fill="#BFD9E8"/><g class="boom" style="transform-origin:34px -54px"><path d="M26-62 230-84v10L28-46z" fill="#E0A314"/><path d="M110-71 230-84v10L112-60z" fill="#F7C948"/><path d="M226-76v14" stroke="#222A32" stroke-width="2"/><path d="M222-62h8v8h-8z" fill="#C0281B"/></g>'},
+{id:'prm',n:'Передвижная мастерская с манипулятором',len:170,g:['lift'],h:84,ph:'31',p:'Ремонтная мастерская на шасси с гидроманипулятором. Выезжает туда, где сломалось оборудование.',l:['спецтранспорт с ГЛОНАСС и GPS'],
+ s:frame(0,140)+'<path d="M34-84h80v62H34z" fill="#EEF3F7"/><path d="M34-52h80v12H34z" fill="#3B8BD0"/><path d="M62-74h16v14H62z" fill="#8FB7D3"/><path d="M4-26h26v6H4z" fill="#6D7A85"/><path d="M14-26V-66l16 18" fill="none" stroke="#1C5FA8" stroke-width="6"/>'+W(40)+W(68)+cabK(122,'#E9572B')+W(146)},
+{id:'dump',n:'Самосвал',len:184,g:['road','cargo'],h:78,ph:'06',p:'Доставит к месту материалы для подготовки, строительства и ремонта дорог.',l:['проходит по зимнику и бездорожью'],
+ s:frame(8,130)+'<path d="M0-70 12-26h94l6-40 18-12H96l-4 8z" fill="#1F3FA0"/><path d="M26-64l4 34M50-64l2 34M74-64v34" stroke="#16307C" stroke-width="3"/>'+W(30)+W(60)+cabU(108,'#1F3FA0')+W(160)},
+{id:'akn',n:'Нефтепромысловая цистерна АКН',len:180,g:['liq'],h:84,p:'Автоцистерны АКН, шламовозы, цистерны для технической и питьевой воды.',l:['техника не старше 2012 года','ГЛОНАСС и GPS'],
+ s:frame(4,130)+'<path d="M14-72h76q12 0 12 22T90-28H14Q2-28 2-50t12-22z" fill="#C4261C"/><path d="M30-72v44M56-72v44M82-72v44" stroke="#9E1A12" stroke-width="3"/><path d="M4-44q-8 0-6-18t30-18h14" fill="none" stroke="#222A32" stroke-width="5"/><path d="M50-80h16v8H50z" fill="#9E1A12"/>'+W(28)+W(58)+cabU(104,'#F2F6F9')+W(156)},
+{id:'fuel',n:'Бензовоз',len:302,g:['liq'],h:76,ph:'20',p:'Продаём и доставляем ГСМ и светлые нефтепродукты оптом и в розницу по согласованному графику. Перевозим опасные грузы любого класса.',l:['допуски у водителя и машины','топливо по ГОСТ'],
+ s:'<path d="M14-74h206q16 0 16 22t-16 22H14Q0-30 0-52t14-22z" fill="#F0631A"/><path d="M60-74v44M120-74v44M180-74v44" stroke="#C24A0A" stroke-width="3"/><path d="M0-52h236" stroke="#FFD9BD" stroke-width="3"/><path d="M40-78h20v4H40zM100-78h20v4h-20zM160-78h20v4h-20z" fill="#222A32"/>'+frame(0,262,-30)+frame(200,262)+W(28)+W(56)+W(206)+W(234)+cabK(254,'#F0631A')+W(280)},
+{id:'vahta',n:'Вахтовый автобус',len:166,g:['people'],h:86,p:'Возим бригады газовщиков, нефтяников, монтажников, строителей и инженеров. Можно перевезти много людей сразу.',l:['маршрут и документы готовим сами'],
+ s:frame(0,140)+'<path d="M0-84h112v60H0z" fill="#F4731C"/><path d="M0-40h112v5H0z" fill="#fff"/><path d="M10-76h18v22H10zM34-76h18v22H34zM58-76h18v22H58zM82-76h14v50H82z" fill="#BFD9E8"/>'+W(28)+W(58)+cabK(118,'#F4731C')+W(142)},
+{id:'uaz',n:'Оперативный автомобиль',len:96,g:['people'],h:40,ph:'33',p:'Срочно привезём руководителя или специалиста в любой указанный пункт. Отечественная или иностранная машина, по желанию.',l:['лицензии на перевозку пассажиров'],
+ s:beam(94,-18)+'<path d="M0-12V-34q2-3 6-4h12l4-4h36q5 0 8 4l8 12 16 3q6 2 6 8v7z" fill="#2B343D"/><path d="M8-34h20v10H6zM32-36h24l7 12H32z" fill="#BFD9E8"/><path d="M0-14h96v5H0z" fill="#14202C"/>'+W(20,9)+W(76,9)},
+{id:'trec',n:'Вездеход ТРЭКОЛ 6×6',len:122,g:['people','road'],h:56,p:'Машины на шинах низкого давления: ТРЭКОЛ 6×6 и «Хищник‑39043». Там, где дороги нет.',l:['шины низкого давления'],
+ s:beam(118,-30)+'<path d="M0-22V-52q0-4 5-4h70q5 0 8 5l8 15 22 4q6 1 6 7v5z" fill="#F0631A"/><path d="M8-50h18v13H8zM32-50h18v13H32zM56-50h18l8 13H56z" fill="#BFD9E8"/>'+W(20,15)+W(58,15)+W(98,15)},
+{id:'doz',n:'Бульдозер',len:118,g:['road'],h:72,ph:'25',p:'Бульдозеры, бульдозеры-экскаваторы и каток для укатки щебня. Оперативно доставим в указанное место.',l:['с машинистом'],s:dozer(0,0,1)},
+{id:'exc',n:'Экскаватор',len:176,g:['road'],h:96,p:'Экскаваторы и экскаваторы-погрузчики для земляных и дорожных работ.',l:['доставка на объект'],
+ s:'<path d="M14 0h76q14 0 14-12t-14-12H14Q0-24 0-12T14 0z" fill="#252C33"/><path d="M14-4h76q9 0 9-8t-9-8H14q-9 0-9 8t9 8z" fill="none" stroke="#6D7A85" stroke-width="2" stroke-dasharray="5 4"/><path d="M4-28h86v-24H62v-22H30v22H4z" fill="#F0631A"/><path d="M62-70h20l6 18v24H62z" fill="#F0631A"/><path d="M66-66h14l5 16H66z" fill="#BFD9E8"/><g class="boom" style="transform-origin:72px -36px"><path d="M68-38 108-92l34 12" fill="none" stroke="#DB5C08" stroke-width="9"/><path d="M142-80 160-30" stroke="#DB5C08" stroke-width="7"/><path d="M150-34h22q4 20-12 24-14-6-10-24z" fill="#3B4650"/></g>'},
+{id:'mix',n:'Автобетоносмеситель',len:184,g:['road','liq'],h:84,p:'Автобетоносмесители на шасси: готовят и везут строительные смеси.',l:['спецтранспорт с ГЛОНАСС и GPS'],
+ s:frame(4,130)+'<path d="M10-34 18-70q4-8 14-8l48 8q16 6 18 22t-14 16L26-28z" fill="#E8EDF1"/><path d="M30-76 46-30M56-74 68-32" stroke="#F4731C" stroke-width="6"/><path d="M0-84h22v10H4z" fill="#55626D"/><path d="M8-72 0-26" stroke="#55626D" stroke-width="5"/>'+W(30)+W(60)+cabU(108,'#F0631A')+W(160)},
+{id:'ppua',n:'ППУА 1600/100, УМП‑350',len:178,g:['liq'],h:80,p:'Передвижная паровая установка ППУА 1600/100 и моторный подогреватель УМП‑350: прогреть оборудование на морозе.',l:['спецтранспорт с ГЛОНАСС и GPS'],
+ s:frame(4,130)+'<path d="M2-72h96v48H2z" fill="#5C7A3C"/><path d="M12-60h26v24H12zM46-60h44M46-52h44M46-44h44" fill="#4A6530" stroke="#3C5326" stroke-width="3"/><path d="M60-72v-14h14v14" fill="#3B4650"/>'+W(28)+W(58)+cabU(102,'#5C7A3C')+W(154)}
+];
+var G=[['all','Вся колонна'],['cargo','Перевезти груз'],['over','Негабарит'],['lift','Поднять'],['people','Люди'],['liq','Жидкости и ГСМ'],['road','Дорога и стройка']];
+function svg(v,s,cls){return '<svg class="'+(cls||'')+'" width="'+(v.len*s)+'" height="'+((v.h+6)*s)+'" viewBox="0 '+-(v.h+4)+' '+v.len+' '+(v.h+6)+'" aria-hidden="true">'+v.s+'</svg>'}
+/* фон зимника */
+(function(){var o='<circle cx="1120" cy="196" r="34" fill="#FFF3DC"/><circle cx="1120" cy="196" r="78" fill="#FFF3DC" opacity=".35"/>',p='M0 262',x=0,i=0;while(x<1450){var w=6+i*29%9,h=10+i*47%24;p+='L'+x+' '+(252-h)+'L'+(x+w/2)+' '+(254-h*.3);x+=w;i++}
+ o+='<path d="'+p+'L1440 270H0Z" fill="#7E9DB8" opacity=".75"/><path d="M0 258q360-16 720 0t720-6v190H0Z" fill="#EAF2F8"/><path d="M0 300q400-14 760-4t680-6v160H0Z" fill="#F7FAFC"/><path d="M0 328h1440v24H0z" fill="#CFDFEB"/><path d="M0 334h1440M0 346h1440" stroke="#AFC5D7" stroke-width="3" stroke-dasharray="26 5"/>';
+ for(i=0;i<9;i++)o+='<path d="M'+(60+i*170)+' 328v-46" stroke="#4D6072" stroke-width="3"/><path d="M'+(56+i*170)+' 282h8v9h-8z" fill="#F4731C"/>';
+ $('land').innerHTML=o})();
+/* ─── колонна ─── */
+var S=MOB?.95:1.64,gap=MOB?34:60,lane=$('lane'),scr=$('scr'),cur='all',sel=null;
+V.forEach(function(v){var b=document.createElement('button');b.type='button';b.className='veh';b.setAttribute('aria-pressed','false');b.innerHTML=svg(v,S)+'<span class="nm">'+v.n+'</span>';b.onclick=function(){pick(v,true)};v.el=b;v.w=Math.max(v.len*S,MOB?120:150);v.x=-900;v.wh=[].slice.call(b.querySelectorAll('.w'));b.style.width=v.w+'px';lane.appendChild(b);put(v)});
+function put(v){v.el.style.transform='translateX('+v.x.toFixed(1)+'px)';v.wh.forEach(function(w){w.setAttribute('transform','rotate('+(v.x/(w.dataset.r*S)*57.3%360).toFixed(1)+' '+w.dataset.x+' '+-w.dataset.r+')')})}
+function ease(p){return p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2}
+var run=0;
+function line(g,instant){
+  cur=g;var t=++run,vw=scr.clientWidth,m=V.filter(function(v){return g==='all'||v.g.indexOf(g)>-1}),pad=MOB?20:Math.max(20,(vw-1300)/2),tot=m.reduce(function(a,v){return a+v.w+gap},-gap),wid=Math.max(vw,tot+pad*2),x=tot+pad*2<vw?(vw-tot)/2:pad,old=scr.scrollLeft;
+  lane.style.width=wid+'px';
+  m.slice().reverse().forEach(function(){});
+  V.forEach(function(v){v.from=v.x-old;v.on=m.indexOf(v)>-1});scr.scrollLeft=0;
+  m.forEach(function(v){v.to=x;x+=v.w+gap;if(!v.vis)v.from=v.to-vw-200});
+  var out=V.filter(function(v){return !v.on&&v.vis}),sh=Math.max(wid,vw)+60-Math.min.apply(0,out.map(function(v){return v.from}));
+  V.forEach(function(v){if(!v.on)v.to=v.vis?v.from+sh:v.from;v.el.tabIndex=v.on?0:-1;if(v.on)v.el.style.visibility='';v.vis=v.on});
+  function set(p1){V.forEach(function(v,i){var p=Math.min(1,Math.max(0,p1*1.35-(v.on?(m.length-m.indexOf(v))*.018:0)));v.x=v.from+(v.to-v.from)*ease(p);put(v)})}
+  function end(){V.forEach(function(v){v.x=v.to;put(v);if(!v.on)v.el.style.visibility='hidden'})}
+  if(R||instant)return end();
+  var t0=performance.now();(function s(n){if(t!==run)return;var p=Math.min(1,Math.max(0,(n-t0)/2400));set(p);p<1?requestAnimationFrame(s):end()})(t0);
+}
+function pick(v,user){
+  sel=v;V.forEach(function(q){q.el.setAttribute('aria-pressed',q===v);var bm=q.el.querySelector('.boom');if(bm)bm.style.transform=q===v?'rotate('+(q.id==='crane'?-30:-8)+'deg)':''});
+  $('c-pic').innerHTML=v.ph?'<img src="img/ph/'+v.ph+'.webp" alt="'+v.n+' компании ЯмалТрансАвто" loading="lazy">':svg(v,1.4);
+  $('c-t').textContent=v.n;$('c-p').textContent=v.p;$('c-l').innerHTML=v.l.map(function(x){return '<li>'+x+'</li>'}).join('');addLbl();
+  if(user){var l=v.to-(scr.clientWidth-v.w)/2;scr.scrollTo({left:Math.max(0,l),behavior:R?'auto':'smooth'});if(MOB){var r=$('card').getBoundingClientRect();if(r.top>innerHeight-260)scrollBy({top:r.top-innerHeight+420,behavior:R?'auto':'smooth'})}}
+}
+G.forEach(function(g){var b=document.createElement('button');b.type='button';b.textContent=g[1];b.setAttribute('aria-pressed',g[0]===cur);b.onclick=function(){[].forEach.call($('filt').children,function(c){c.setAttribute('aria-pressed',c===b)});line(g[0]);var f=V.find(function(v){return g[0]==='all'||v.g.indexOf(g[0])>-1});pick(f);if(b.scrollIntoView&&MOB)b.scrollIntoView({block:'nearest',inline:'center',behavior:R?'auto':'smooth'})};$('filt').appendChild(b)});
+[].forEach.call(document.querySelectorAll('.arrows button'),function(b){b.onclick=function(){scr.scrollBy({left:b.dataset.d*scr.clientWidth*.7,behavior:R?'auto':'smooth'})}});
+var seen=R;if(R)line('all',true);else KIT.onView($('yard'),function(v){if(v&&!seen){seen=true;line('all')}},{threshold:.3});
+/* перетаскивание мышью */
+(function(){var d=0,sx,sl,mv;scr.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;d=1;mv=0;sx=e.clientX;sl=scr.scrollLeft});addEventListener('pointermove',function(e){if(!d)return;if(Math.abs(e.clientX-sx)>5)mv=1;scr.scrollLeft=sl-(e.clientX-sx)});addEventListener('pointerup',function(){d=0});scr.addEventListener('click',function(e){if(mv){e.stopPropagation();e.preventDefault();mv=0}},true)})();
+var rz,lw=innerWidth;addEventListener('resize',function(){if(innerWidth===lw)return;lw=innerWidth;clearTimeout(rz);rz=setTimeout(function(){if(seen)line(cur,true)},200)});
+/* ─── заявка ─── */
+var cart={},ask='';
+function addLbl(){var n=cart[sel.id]||0;$('c-add').textContent=n?'В заявке: '+n+'. Добавить ещё':'Добавить в заявку'}
+function draw(){var ids=V.filter(function(v){return cart[v.id]}),m=$('mini');m.textContent='';
+  if(!ids.length&&!ask){m.innerHTML='<p>Пока пусто. Добавьте машины из колонны или просто опишите задачу.</p>'}
+  ids.forEach(function(v){var d=document.createElement('div');d.innerHTML=svg(v,MOB?.5:.62)+'<span class="q"><button type="button" aria-label="Убрать: '+v.n+'">−</button><span class="num">'+cart[v.id]+'</span><button type="button" aria-label="Ещё: '+v.n+'">+</button></span>';var b=d.querySelectorAll('button');b[0].onclick=function(){cart[v.id]--;draw()};b[1].onclick=function(){cart[v.id]++;draw()};m.appendChild(d)});
+  if(ask){var p=document.createElement('p');p.textContent='Покупка: '+ask;m.appendChild(p)}
+  $('f-veh').value=ids.map(function(v){return v.n+' × '+cart[v.id]}).concat(ask?['покупка: '+ask]:[]).join(', ');
+  var c=ids.reduce(function(a,v){return a+cart[v.id]},0);$('mb').textContent=c?'Заявка: машин '+c:'Заявка диспетчеру';if(sel)addLbl()}
+$('c-add').onclick=function(){cart[sel.id]=(cart[sel.id]||0)+1;draw()};
+pick(V[0]);draw();
+/* ─── карта ─── */
+var C=[['Новый Уренгой',451,110,'base t'],['Тарко-Сале',493,216,'base l'],['Надым',290,160,'t'],['Салехард',62,69,''],['Ноябрьск',404,372,'l'],['Красноярский край',600,64,'kk']];
+C.forEach(function(c){var b=document.createElement('button');b.type='button';b.className=c[3];b.style.left=c[1]/6.4+'%';b.style.top=c[2]/4.2+'%';b.innerHTML='<i></i><span>'+c[0]+'</span>';b.style.justifyContent='center';b.setAttribute('aria-label','Куда: '+c[0]);b.setAttribute('aria-pressed','false');b.onclick=function(){go(c[0]);$('f-to').value=c[0]};$('map').appendChild(b);c.b=b});
+function go(n){[].forEach.call(document.querySelectorAll('.rt'),function(r){r.classList.toggle('on',r.dataset.to===n)});C.forEach(function(c){c.b.setAttribute('aria-pressed',c[0]===n)})}
+var gs=false;KIT.onView($('map'),function(v){if(v&&!gs){gs=true;go('Салехард')}},{threshold:.5});
+/* ─── продажа: список с действующего сайта ─── */
+var T=[['КамАЗ 43118, седельный тягач',2007,'серый',1100000,'t'],['КамАЗ 53504-46',2014,'оранжевый',2200000,'t'],['КамАЗ 53504-46',2014,'оранжевый',2000000,'t'],['КамАЗ 65221',2012,'оранжевый',3200000,'t'],['КамАЗ 44108-24',2012,'синий',2200000,'t'],['Урал 5757-0000010-04, седельный тягач',2007,'бежевый',900000,'t'],['Урал 542362-0011, седельный тягач',2004,'',2200000,'t'],['Седельный тягач 596012',2008,'',1000000,'t'],['КрАЗ 6446-0000010, седельный тягач',2001,'жёлтый',750000,'t'],['КрАЗ 260В',1988,'зелёный',450000,'t'],['МАЗ 64229, седельный тягач',1997,'коричневый',600000,'t'],['МАЗ 5247Г, полуприцеп',1995,'зелёный',380000,'t'],['КЗКТ-9101, полуприцеп',1993,'зелёный',380000,'t'],
+['КамАЗ 55111',1993,'жёлтый',900000,'s'],['Scania P380CB6X4EHZ',2008,'',3200000,'s'],['Scania P380CB6X4EHZ',2008,'',3200000,'s'],['Scania P380CB6X4EHZ',2008,'',3200000,'s'],['БЦМ-53 на шасси Volvo',2007,'',3200000,'s'],['Урал 4320 КС457171',2008,'',3200000,'s'],['ГАЗ-53 КО 603Б1',1992,'',420000,'s'],['Автобетоносмеситель 58141А на шасси Урал',2012,'',2200000,'s'],['Урал 55571, автобетоносмеситель',2008,'',1900000,'s'],['ЗИЛ-131033 УМП-350',1995,'',550000,'s'],['Урал 43203, фургон ВМ',1986,'',380000,'s'],
+['Б-10МБ.0121-2В4, трактор с бульдозерным оборудованием',2008,'жёлтый',2300000,'d'],['Б-10М.0101-ЕН',2012,'',2100000,'d'],['Бульдозер Caterpillar D9N',1991,'',15000000,'d'],['Doosan Solar 255LC-V, экскаватор',2012,'оранжевый',5800000,'d'],['Doosan DX340 LCA',2013,'',7100000,'d'],['Автогрейдер ДЗ-98В.00110',2010,'',4100000,'d'],['К-702МВА УДМ2',2011,'',3200000,'d'],['Кировец К-703МА-12-04',2007,'',2500000,'d'],
+['ПАЗ 4230-01, автобус',2007,'белый',515000,'b'],['ЛАЗ А1414Т, автобус',2003,'белый',515000,'b'],['ГАЗ-32213',2011,'белый',380000,'b'],['Урал 3255101','','',620000,'b'],['ТРЭКОЛ-39294',2010,'',2200000,'b']];
+var SG=[['','Все'],['t','Тягачи и прицепы'],['s','Спецтехника на шасси'],['d','Бульдозеры, экскаваторы'],['b','Автобусы, вездеходы']],sg='',full=false,rows=T.map(function(r){var tr=document.createElement('tr');tr.innerHTML='<td>'+r[0]+'</td><td class="yr">'+(r[1]||'')+'</td><td class="cl">'+(r[2]||'')+'</td><td class="pr">'+r[3].toLocaleString('ru-RU')+(MOB?' ₽':'')+'</td><td><button class="ask" type="button">Спросить</button></td>';tr.querySelector('button').onclick=function(){ask=r[0]+(r[1]?', '+r[1]+' г.':'');draw();var y=$('req');KIT.lenis?KIT.lenis.scrollTo(y,{offset:-70}):y.scrollIntoView({behavior:R?'auto':'smooth'})};$('s-body').appendChild(tr);return tr});
+function sale(){var n=0;rows.forEach(function(tr,i){var ok=(!sg||T[i][4]===sg);if(ok)n++;tr.classList.toggle('off',!ok||(!full&&!sg&&n>8))});$('s-all').style.display=full||sg?'none':'';$('s-all').textContent='Показать всю технику: '+T.length}
+SG.forEach(function(g){var b=document.createElement('button');b.type='button';b.textContent=g[1];b.setAttribute('aria-pressed',g[0]===sg);b.onclick=function(){sg=g[0];[].forEach.call($('s-filt').children,function(c){c.setAttribute('aria-pressed',c===b)});sale()};$('s-filt').appendChild(b)});
+$('s-all').onclick=function(){full=true;sale()};sale();
+/* ─── снег ─── */
+function drift(cv,n,op){var c=cv.getContext('2d'),w,h,P=[];
+  function size(){var d=Math.min(2,devicePixelRatio||1);w=cv.clientWidth;h=cv.clientHeight;if(!w||!h)return;cv.width=w*d;cv.height=h*d;c.setTransform(d,0,0,d,0,0);P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*w,y:h*(.2+.8*Math.pow(Math.random(),.6)),v:.02+Math.random()*.06,r:.6+Math.random()*1.5,a:Math.random()*6})}
+  size();addEventListener('resize',size);
+  KIT.raf(cv,function(t,dt){if(!w||!h)return;c.clearRect(0,0,w,h);c.fillStyle='#fff';P.forEach(function(p){p.x-=p.v*dt;p.a+=dt*.001;if(p.x<-10)p.x=w+10;c.globalAlpha=op*(.4+.6*p.y/h);c.beginPath();c.ellipse(p.x,p.y+Math.sin(p.a)*5,p.r*2.6,p.r,-.12,0,7);c.fill()})})}
+drift($('poz'),MOB?36:80,.75);drift($('snow'),MOB?30:70,.8);
+/*done*/$('rf').addEventListener('submit',function(){var o=this.querySelector('.done');setTimeout(function(){o.scrollIntoView({block:'center',behavior:R?'auto':'smooth'})},30)});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js');try{var v=JSON.parse(localStorage.getItem('ndm-vi')||'null');if(v&&v.on){var r=document.documentElement;r.classList.add('vi','vi-'+v.c,'vi-s'+v.s);if(!v.i)r.classList.add('vi-noimg')}}catch(e){}</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Аэропорт Надым имени В.С. Черномырдина — рейсы недели, регистрация, услуги пассажирам</title>
+<meta name="description" content="Концепция редизайна сайта АО «Надымское авиапредприятие»: рейсы недели из Надыма, путь пассажира до трапа, комната матери и ребёнка, сопровождение, VIP-зал.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/finlandica-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--night:#060D18;--night2:#0C1B2A;--teal:#12333A;--amber:#FFC24A;--green:#46E39A;--red:#FF5A47;--blue:#134A9A;--ice:#ECF2F6;--ink:#0A1626;
+  --bg:var(--ice);--fg:var(--ink);--muted:#4C5D72;--accent:var(--blue);--accent-h:#0C3573;--r:3px;--hdr-h:78px;
+  --f-display:"Finlandica",system-ui,sans-serif;--f-text:"Finlandica",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+[data-theme=night]{--bg:var(--night);--fg:#F0F6FA;--muted:#A3B4C4;--line:rgba(200,225,240,.2);--accent:var(--amber);--on-accent:#1A1203;--accent-h:#FFD888;background:var(--bg);color:var(--fg)}
+body{font-size:18px;line-height:1.5}
+img{height:auto}[hidden]{display:none!important}.num{font-variant-numeric:normal}
+h1,h2,h3{font-weight:700;letter-spacing:-.015em}
+h2{font-size:clamp(38px,5vw,76px);line-height:.98}
+h3{font-size:clamp(23px,1.9vw,30px);line-height:1.1}
+.t{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.lead{font-size:clamp(18px,1.4vw,21px);line-height:1.45}
+.btn{font-size:18px}
+/* шапка */
+.hdr{color:#F0F6FA;background:rgba(6,13,24,.0)}
+.hdr.is-solid,.hdr.is-open{background:var(--night)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(16px,2.2vw,36px)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;line-height:1.1;font-size:17px;font-weight:600}
+.brand img{height:32px;width:auto}
+.brand small{display:block;font-size:15px;font-weight:400;color:#B9C9D6}
+.hdr nav{display:flex;gap:clamp(14px,1.7vw,28px);margin-left:auto}
+.hdr nav a{text-decoration:none;padding:12px 0;position:relative}
+.hdr nav a::after{content:"";position:absolute;left:50%;bottom:4px;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:var(--amber);box-shadow:0 0 14px 3px rgba(255,194,74,.65);transform:scale(0);transition:transform .3s var(--e-smooth)}
+.hdr nav a:hover::after,.hdr nav a:focus-visible::after{transform:none}
+.eye{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 16px;border:1.5px solid rgba(240,246,250,.5);border-radius:99px;white-space:nowrap;font-size:16px}
+.eye svg{width:24px;height:24px}
+/* первый экран */
+.hero{position:relative;overflow:clip;min-height:min(100svh,960px);display:flex;flex-direction:column;background:linear-gradient(180deg,#071019 0,#0B2027 26%,#0E2A30 52%,#060D18 80%)}
+.hero-ph{position:absolute;left:0;right:0;top:clamp(150px,20svh,196px);height:auto;aspect-ratio:1920/625}
+.hero-ph img{width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 34%,#000 88%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 34%,#000 88%,transparent 100%)}
+.hero-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,13,24,.8) 0,rgba(6,13,24,.5) 30%,rgba(6,13,24,0) 52%);-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 40%,#000 80%,transparent);mask-image:linear-gradient(180deg,transparent 0,#000 40%,#000 80%,transparent)}
+#rw0{position:absolute;left:0;right:0;bottom:0;width:100%;height:calc(100% - clamp(150px,20svh,196px) - 30.4vw);min-height:230px;-webkit-mask-image:linear-gradient(180deg,#000 52%,transparent 80%);mask-image:linear-gradient(180deg,#000 52%,transparent 80%)}
+.hero .wrap{width:100%;position:relative;z-index:2}
+.say{padding-top:calc(var(--hdr-h) + clamp(28px,5.2svh,58px))}
+h1{font-size:clamp(48px,7vw,112px);line-height:.9;max-width:7.2em;letter-spacing:-.025em}
+.say .lead{margin-top:20px;max-width:25em;color:#DCE8EF}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.cta .btn--ghost{background:rgba(6,13,24,.5)}
+.facts{margin-top:auto;padding-bottom:26px}
+.facts dl{display:grid;grid-template-columns:1fr 1.15fr 1fr 1.2fr;gap:0 24px;border-top:1px solid rgba(240,246,250,.28);padding-top:16px;background:linear-gradient(180deg,rgba(6,13,24,.0),rgba(6,13,24,.65))}
+.facts div{display:flex;flex-direction:column-reverse;justify-content:flex-end}
+.facts dd{font-size:clamp(21px,1.9vw,29px);font-weight:600;line-height:1.15}
+.facts dd{padding:8px 0 2px}.facts dd a{text-decoration:none;display:inline-block;margin:-8px 0;padding:8px 0}
+.facts dt{font-size:16px;line-height:1.3;color:#B9C9D6}
+@media (prefers-reduced-motion:no-preference){
+  .js .hero-ph{animation:ap 2.6s var(--e-smooth) backwards}
+  .js h1 span{display:inline-block;animation:up 1.1s var(--e-smooth) backwards;animation-delay:calc(var(--n)*.1s)}
+}
+@keyframes ap{from{transform:translateY(34px) scale(1.04)}}
+@keyframes up{from{transform:translateY(.2em)}}
+/* рейсы недели */
+.fl{padding-block:clamp(60px,6.5vw,104px)}
+.fl-h{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,330px);gap:20px 32px;align-items:end}
+.seg{display:inline-flex;border:1.5px solid var(--ink)}
+.seg button{min-height:52px;padding:0 22px;font-weight:600;transition:background-color .25s,color .25s}
+.seg [aria-selected=true]{background:var(--ink);color:#fff}
+.fl .field input{background:#fff;border-color:rgba(10,22,38,.4)}
+.fl .field>span{font-size:16px}
+.wk{width:100%;border-collapse:collapse;margin-top:34px;table-layout:fixed}
+.wk th{font-weight:500;text-align:left;padding:0}
+.wk thead th{font-size:17px;color:var(--muted);padding:0 0 12px;border-bottom:2px solid var(--ink)}
+.wk thead th.now{color:var(--ink);font-weight:700}
+.wk thead th.now::after{content:"сегодня";font-weight:400;font-size:15px;margin-left:8px;color:var(--blue)}
+.wk tbody th{font-size:clamp(20px,1.75vw,27px);font-weight:600;line-height:1.1;padding:10px 12px 10px 0}
+.wk td,.wk tbody th{border-bottom:1px solid var(--line);height:74px;vertical-align:middle;position:relative}
+.wk td:not(:has(button))::before{content:"";position:absolute;left:6px;top:50%;width:5px;height:5px;border-radius:50%;background:rgba(10,22,38,.2)}
+.wk td button{width:calc(100% - 6px);min-height:58px;padding:6px 8px;text-align:left;border-radius:3px;display:block;transition:background-color .25s,color .25s}
+.wk td b{display:block;font:500 clamp(19px,1.6vw,24px)/1.1 var(--mono);letter-spacing:-.05em}
+.wk td small{display:block;font-size:15px;color:var(--muted);transition:color .25s}
+.wk td button:hover{background:#D7E4F2}
+.wk td [aria-pressed=true],.wk td [aria-pressed=true]:hover{background:var(--ink);color:var(--amber)}
+.wk [aria-pressed=true] small{color:#E6D9BC}
+.wk .d{display:none}
+.by{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:22px;align-items:center}
+.by button{min-height:52px;padding:6px 16px;border:1.5px solid rgba(10,22,38,.35);border-radius:3px;text-align:left;line-height:1.2;font-size:17px;transition:background-color .25s,color .25s}
+.by button b{font:500 17px var(--mono);letter-spacing:-.04em;margin-right:6px}
+.by button:hover{background:#D7E4F2}.by [aria-pressed=true],.by [aria-pressed=true]:hover{background:var(--ink);color:var(--amber);border-color:var(--ink)}
+.src{margin-top:18px;font-size:16px;color:var(--muted);max-width:60em}
+.none{margin-top:30px;padding:26px;background:#fff;border-left:8px solid var(--red);font-size:20px}
+.none[hidden]{display:none}
+.pick{margin-top:28px;background:var(--night);color:#F0F6FA;padding:clamp(22px,2.6vw,40px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) auto;gap:20px clamp(24px,4vw,70px);align-items:center;position:relative;overflow:clip}
+.pick::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:radial-gradient(circle at 12px 4px,var(--amber) 2.5px,rgba(255,194,74,.3) 4px,transparent 6px) 0 0/48px 8px}
+.pick h3{font-size:clamp(28px,3vw,46px)}
+.pick p{color:#B9C9D6}
+.pick .tm{display:flex;gap:10px 18px;align-items:baseline;font-size:clamp(32px,3.5vw,54px);line-height:1}
+.pick .tm i{flex:none;width:clamp(30px,4vw,70px);height:3px;background:var(--amber);align-self:center}
+.pick .reg{font-size:19px;color:#fff;margin-top:10px}
+/* путь пассажира: глиссада */
+.path{position:relative;overflow:clip}
+.rw{position:sticky;top:0;height:100svh;margin-bottom:-100svh;overflow:hidden}
+.rw canvas{width:100%;height:100%}
+.rw .wrap{position:absolute;inset:0;pointer-events:none}
+.path-t{position:absolute;left:var(--gutter);top:calc(var(--hdr-h) + 34px);max-width:8em}
+.papi{position:absolute;left:var(--gutter);bottom:38px;display:grid;gap:2px;pointer-events:auto}
+.papi a{text-shadow:0 0 10px #050B14,0 0 4px #050B14;display:flex;align-items:center;gap:16px;min-height:46px;text-decoration:none;color:#B9C9D6;font-size:19px;transition:color .3s}
+.papi i{width:17px;height:17px;border-radius:50%;background:#50251F;box-shadow:inset 0 0 0 1.5px rgba(255,90,71,.6);transition:background-color .5s,box-shadow .5s}
+.papi .on{color:#fff}
+.papi .on i{background:var(--amber);box-shadow:0 0 22px 5px rgba(255,194,74,.6)}
+.papi .ok i{background:#fff;box-shadow:0 0 24px 6px rgba(220,240,255,.7)}
+.papi span:last-child{font:400 16px var(--mono);color:#8FA3B5;margin-left:6px}
+.steps{position:relative;z-index:2;padding-top:calc(var(--hdr-h) + 40px);padding-bottom:22svh}
+.step{margin-left:auto;width:min(620px,48%);margin-bottom:26svh;background:#0B1725;border-left:6px solid var(--amber);padding:clamp(24px,2.6vw,40px)}
+.step:last-child{margin-bottom:0}
+.step h3{font-size:clamp(32px,3.2vw,48px)}
+.step>p{margin-top:12px;color:#C3D2DE}
+.step .when{margin-top:16px;padding:14px 0;border-block:1px solid var(--line);color:#fff;font-size:20px;line-height:1.35}
+.step .when b{color:var(--amber);font-weight:600}
+.step ul{margin-top:14px}
+.chk{display:flex;gap:16px;align-items:flex-start;min-height:48px;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer;line-height:1.38}
+.chk input{flex:none;appearance:none;width:26px;height:26px;margin:0;border:2px solid #7F95A8;border-radius:50%;cursor:pointer;transition:background-color .3s,box-shadow .3s,border-color .3s}
+.chk input:checked{background:var(--green);border-color:var(--green);box-shadow:0 0 18px 3px rgba(70,227,154,.55)}
+.chk input:checked+span{color:#9FB0BF}
+.step .warn{margin-top:18px;padding:16px 18px;background:var(--red);color:#1A0603;font-weight:600;line-height:1.35}
+.apron{position:relative;background:var(--night)}
+.apron img{width:100%;aspect-ratio:1920/560;object-fit:cover;object-position:50% 100%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 46%);mask-image:linear-gradient(180deg,transparent 0,#000 46%)}
+/* помощь */
+.help-a{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,4.5vw,80px);align-items:center;margin-top:clamp(30px,4vw,60px)}
+.help-b{display:grid;grid-template-columns:minmax(0,4.4fr) minmax(0,4.2fr) minmax(0,4.4fr);gap:clamp(26px,3.4vw,60px);margin-top:clamp(40px,5vw,84px);align-items:start}
+.help figure{overflow:hidden}
+.help-a img{width:100%;aspect-ratio:1920/1040;object-fit:cover;object-position:44% 50%}
+.help-b img{width:100%;aspect-ratio:1/1.06;object-fit:cover;object-position:62% 50%;scale:1.09}
+.help ul{margin-top:16px}
+.help li{padding:10px 0;border-top:1px solid var(--line)}
+.help .tel{margin-top:14px;font-weight:600}
+.help a{display:inline-flex;min-height:44px;align-items:center}
+/* задержка */
+.late{background:var(--amber);color:#1A1203;--line:rgba(26,18,3,.35);--muted:#4E3B0C}
+.late-g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,5vw,100px);align-items:end}
+.late output{display:block;font-size:clamp(76px,11vw,176px);line-height:.82;font-weight:700;letter-spacing:-.04em;margin-top:26px}
+.late output small{font-size:.26em;letter-spacing:0;font-weight:500;margin-left:.2em}
+.late input[type=range]{appearance:none;width:100%;height:48px;margin-top:14px;background:linear-gradient(#1A1203,#1A1203) 0 50%/100% 4px no-repeat;cursor:grab}
+.late input::-webkit-slider-thumb{appearance:none;width:44px;height:44px;border-radius:50%;background:#1A1203;border:10px solid #FFF3D6}
+.late input::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#1A1203;border:10px solid #FFF3D6}
+.late li{padding:18px 0;border-top:2px solid #1A1203;display:grid;grid-template-columns:8.5em minmax(0,1fr);gap:20px;opacity:.68;transition:opacity .4s}
+.late li.on{opacity:1}
+.late li b{font-size:21px;line-height:1.2}
+.late li.on b::before{content:"";display:inline-block;width:14px;height:14px;border-radius:50%;background:#1A1203;margin-right:10px}
+.late .fine{margin-top:22px;font-size:17px;max-width:44em}
+/* об аэропорте */
+.ab figure{overflow:hidden}.ab figure img{width:100%;aspect-ratio:2000/560;object-fit:cover;object-position:50% 40%}
+.ab-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,100px);margin-top:clamp(28px,4vw,56px)}
+.big{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+.big b{font-size:clamp(58px,8vw,124px);line-height:.9;letter-spacing:-.04em;font-weight:700;color:var(--blue)}
+.yr li{display:grid;grid-template-columns:5.2em minmax(0,1fr);gap:18px;padding:14px 0;border-top:1px solid var(--line)}
+.yr b{font-size:22px}
+.co{margin-top:26px;display:flex;flex-wrap:wrap;gap:4px 28px}
+.co a{min-height:44px;display:inline-flex;align-items:center}
+/* заявка и контакты */
+.rq-g{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(32px,6vw,110px);align-items:start}
+.rq form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.full{grid-column:1/-1}
+.rq .field>span,.agree{font-size:16px}
+.rq input[type=date]{color-scheme:dark}.rq .field input,.rq .field select,.rq .field textarea{border-color:rgba(200,225,240,.45)}
+.done{grid-column:1/-1;border:2px solid var(--amber);padding:26px}
+.done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 18px;margin:16px 0}.done dt{color:var(--muted)}.done dd{overflow-wrap:anywhere}
+.ph{margin-top:30px}
+.ph li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0 18px;align-items:center;border-top:1px solid var(--line);min-height:56px;padding:4px 0}
+.ph a{font-weight:600;min-height:44px;display:inline-flex;align-items:center;text-decoration:none}
+.ftr{border-top:1px solid var(--line);padding:30px 0 40px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:12px 56px;justify-content:space-between;font-size:16px;color:var(--muted)}
+/* версия для слабовидящих */
+.vibar{display:none}
+html.vi .vibar{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;padding:14px var(--gutter);background:#000;color:#fff;font-size:20px;position:relative;z-index:120}
+.vibar div{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.vibar button{min-height:48px;min-width:48px;padding:0 14px;border:2px solid #fff;color:#fff;font-size:20px}
+.vibar [aria-pressed=true]{background:#fff;color:#000}
+html.vi{--bg:#fff;--fg:#000;--muted:#000;--line:#000;--accent:#000;--accent-h:#333;--on-accent:#fff;--ink:#000;--blue:#000}
+html.vi-n{--bg:#000;--fg:#fff;--muted:#fff;--line:#fff;--accent:#fff;--accent-h:#ddd;--on-accent:#000;--ink:#fff;--blue:#fff}
+html.vi-b{--bg:#9DD1FF;--fg:#063462;--muted:#063462;--line:#063462;--accent:#063462;--accent-h:#02203f;--on-accent:#9DD1FF;--ink:#063462;--blue:#063462}
+html.vi [data-theme=night]{--bg:#fff;--fg:#000;--muted:#000;--line:#000;--accent:#000;--on-accent:#fff;background:var(--bg)!important;color:var(--fg)!important}
+html.vi-n [data-theme=night]{--bg:#000;--fg:#fff;--muted:#fff;--line:#fff;--accent:#fff;--on-accent:#000}
+html.vi-b [data-theme=night]{--bg:#9DD1FF;--fg:#063462;--muted:#063462;--line:#063462;--accent:#063462;--on-accent:#9DD1FF}
+html.vi h1{font-size:clamp(34px,8.4vw,74px)!important}html.vi .apron{display:none}html.vi .papi i{box-shadow:none!important;background:var(--fg)!important}
+html.vi .pick .btn{background:var(--fg)!important;color:var(--bg)!important}
+html.vi [data-header]{position:static;transform:none}
+html.vi :is(header,main,footer,section,.hero,.late,.pick,.step,.hdr,.none,.mbar,form,nav,.facts dl){background:var(--bg)!important;color:var(--fg)!important}
+html.vi :is(h1,h2,h3,p,li,dt,dd,a,b,small,span,td,th,label,output,summary,button,input,select,textarea):not(.vibar *):not(.btn){color:var(--fg)!important}
+html.vi.vi.vi main button[aria-pressed=true],html.vi.vi.vi .seg [aria-selected=true],html.vi.vi.vi .btn{background:var(--fg)!important;color:var(--bg)!important}
+html.vi.vi.vi main [aria-pressed=true] *{color:var(--bg)!important}
+html.vi .btn::before{display:none}
+html.vi canvas,html.vi .kit-tag,html.vi .hero-ph::after,html.vi .pick::after{display:none!important}
+html.vi-noimg main img{display:none!important}
+html.vi .hero{min-height:0}html.vi .hero-ph{position:static;order:3;aspect-ratio:auto;margin:24px var(--gutter)}html.vi .hero-ph img{mask-image:none;-webkit-mask-image:none;height:auto}
+html.vi .hero .say{padding-top:30px}
+html.vi .hdr .wrap{height:auto;flex-wrap:wrap;padding-block:16px}
+html.vi .hdr .brand img{background:#000;padding:4px 8px;border-radius:3px}
+html.vi .rw{position:static;height:auto;margin:0}html.vi .rw .wrap,html.vi .path-t,html.vi .papi{position:static}html.vi .rw .wrap{padding-block:40px 0}html.vi .papi{margin-top:20px}
+html.vi .steps{padding-block:30px 60px}html.vi .step{width:auto;margin:0 0 40px;border:2px solid var(--fg)}
+html.vi .chk input{border-color:var(--fg)}html.vi .chk input:checked{background:var(--fg);box-shadow:none}
+html.vi .late li{opacity:1}
+html.vi .warn{background:var(--fg)!important;color:var(--bg)!important}
+html.vi main *{letter-spacing:.02em!important;animation:none!important}
+html.vi :is(.late-g,.ab-g,.rq-g,.help-a,.help-b,.pick,.fl-h,.facts dl){grid-template-columns:minmax(0,1fr)!important}
+html.vi :is(main,.ftr){zoom:1.2}html.vi-s2 :is(main,.ftr){zoom:1.45}
+html.vi h1{max-width:none}
+html.vi [data-reveal],html.vi [data-split] .w>span,html.vi [data-img]>*{opacity:1!important;transform:none!important;clip-path:none!important}
+html.vi .field input,html.vi .field select,html.vi .field textarea{border-color:var(--fg)!important;background:var(--bg)!important}
+html.vi .facts{margin-top:30px}
+html.vi .mbar{display:none}
+
+@media (max-width:1180px){.hdr .brand small{display:none}.hdr nav{gap:14px;font-size:17px}.eye span{display:none}.eye{padding:0 12px}}
+@media (max-width:900px){
+  :root{--hdr-h:66px}
+  .brand img{height:26px}.brand small{display:block}.hdr .wrap{gap:10px}
+  .eye{margin-left:auto;border-color:transparent;padding:0 8px;min-width:48px;justify-content:center}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:var(--night);flex-direction:column;gap:2px;padding:24px var(--gutter);font-size:30px;font-weight:600;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  html.vi .hdr nav{display:none}html.vi .hdr nav.is-open{display:flex;inset:0;height:100svh;z-index:200}
+  .hero{min-height:0}
+  .say{padding-top:4px}
+  h1{font-size:clamp(52px,15.5vw,68px)}
+  .cta .btn{flex:1 1 100%}
+  .hero-ph{position:relative;top:auto;aspect-ratio:auto;height:228px;margin-top:calc(var(--hdr-h) - 20px)}
+  .hero-ph img{object-position:74% 50%}
+  .hero-ph::after{display:none}
+  #rw0{position:relative;height:104px;min-height:0;margin-top:-18px;display:block;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}
+  .hero-ph img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent 0,#000 22%,#000 86%,transparent)}
+  .facts{padding-bottom:30px}
+  .facts dl{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 16px}
+  .facts dd{font-size:19px}
+  .fl-h,.pick,.late-g,.ab-g,.rq-g,.help-a,.help-b{grid-template-columns:minmax(0,1fr)}
+  .seg{display:flex}.seg button{flex:1}
+  .wk,.wk tbody{display:block}.wk thead{display:none}
+  .wk tr{display:flex;flex-wrap:wrap;gap:8px;padding:16px 0 18px;border-bottom:1px solid var(--line)}
+  .wk tr[hidden]{display:none}
+  .wk tbody th{flex:1 0 100%;height:auto;border:0;padding:0;font-size:24px}
+  .wk td{height:auto;border:0}.wk td:not(:has(button)){display:none}
+  .wk td button{width:auto;min-width:104px;border:1.5px solid rgba(10,22,38,.35);padding:8px 12px}
+  .wk .d{display:block;font-size:16px}
+  .by button{flex:1 1 100%}
+  .pick .btn{width:100%}
+  .rw{height:36svh;margin-bottom:0;z-index:3;top:0;border-bottom:1px solid var(--line);background:var(--night)}
+  .path-t{top:auto;bottom:64px;font-size:34px;max-width:none}
+  .papi{bottom:4px;right:var(--gutter);grid-template-columns:repeat(4,auto);justify-content:space-between;gap:0}
+  .papi a{font-size:16px;gap:6px;min-height:52px;flex-direction:column;justify-content:center;line-height:1.1}.papi i{width:13px;height:13px}.papi span:last-child{display:none}
+  .steps{padding-top:26px;padding-bottom:60px}
+  .step{width:auto;margin-bottom:26px;padding:22px 18px 24px;scroll-margin-top:calc(36svh + 20px)}
+  .late li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .apron img{aspect-ratio:16/11;object-position:78% 100%}
+  .ab figure img{aspect-ratio:16/10;object-position:30% 50%}
+  .yr li{grid-template-columns:4.4em minmax(0,1fr);gap:12px}
+  .rq form{grid-template-columns:minmax(0,1fr)}
+  .done dl{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<div class="vibar" role="region" aria-label="Настройки версии для слабовидящих"><div>Размер <button type="button" data-vs="1">А</button><button type="button" data-vs="2">А+</button></div><div>Цвет <button type="button" data-vc="w">чёрный на белом</button><button type="button" data-vc="n">белый на чёрном</button><button type="button" data-vc="b">синий на голубом</button></div><div><button type="button" data-vi-img>Изображения</button><button type="button" data-vi>Обычная версия</button></div></div>
+<header class="hdr" data-header><div class="wrap">
+  <a class="brand" href="#main" aria-label="Аэропорт Надым, на главную"><img src="img/logo.png" alt="Логотип Надымского авиапредприятия" width="180" height="100"><span>Аэропорт Надым<small>имени В.С. Черномырдина</small></span></a>
+  <nav data-menu aria-label="Основное меню"><a href="#flights">Рейсы</a><a href="#path">Путь до трапа</a><a href="#help">Помощь</a><a href="#late">Задержка</a><a href="#about">Аэропорт</a><a href="#ask">Контакты</a></nav>
+  <button class="eye" type="button" data-vi aria-label="Версия для слабовидящих"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12Z"/><circle cx="12" cy="12" r="3.4"/></svg><span>Для слабовидящих</span></button>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero" data-theme="night">
+  <div class="hero-ph"><img src="img/ph/03.webp" alt="Здание аэропорта Надым зимней ночью, над ним северное сияние" width="1920" height="625" fetchpriority="high"></div>
+  <canvas id="rw0" aria-hidden="true"></canvas>
+  <div class="wrap say">
+    <h1><span style="--n:0">Из&nbsp;Надыма</span> <span style="--n:1">в&nbsp;семь городов</span></h1>
+    <p class="lead">Москва, Санкт‑Петербург, Екатеринбург, Тюмень, Уфа, Омск и&nbsp;Новосибирск. Выберите рейс: покажем, к&nbsp;какому часу быть на&nbsp;регистрации.</p>
+    <div class="cta"><a class="btn" data-magnetic href="#flights">Выбрать рейс</a><a class="btn btn--ghost" href="https://airtickets.avianadym.ru" target="_blank" rel="noopener">Купить билет</a></div>
+  </div>
+  <div class="facts wrap"><dl>
+    <div><dt>работает аэровокзал</dt><dd class="num">7:00–18:30</dd></div>
+    <div><dt>справочная аэропорта</dt><dd class="num"><a href="tel:+73499545002">+7 (3499) 545‑002</a></dd></div>
+    <div><dt>до аэропорта и&nbsp;бесплатной парковки</dt><dd>автобусы №&nbsp;2, 4А</dd></div>
+    <div><dt>расписание рейсов, чат‑бот в&nbsp;MAX</dt><dd><a href="https://max.ru/avia_yanao_bot" target="_blank" rel="noopener">«Авиасообщение ЯНАО»</a></dd></div>
+  </dl></div>
+</section>
+
+<section class="fl" id="flights"><div class="wrap">
+  <div class="fl-h"><h2 data-split>Рейсы недели</h2>
+    <div class="seg" role="tablist" aria-label="Направление"><button role="tab" data-dir="o" aria-selected="true">Вылет</button><button role="tab" data-dir="i" aria-selected="false">Прилёт</button></div>
+    <label class="field"><span>Рейс или направление</span><input id="q" type="search" autocomplete="off" placeholder="Тюмень, YC 174, S7"></label></div>
+  <table class="wk"><thead id="wk-h"></thead><tbody id="wk-b"></tbody></table>
+  <div class="by" id="by"></div>
+  <p class="none" id="none" hidden>Такого рейса на&nbsp;табло нет. Уточните в&nbsp;справочной <a class="num" href="tel:+73499545002">+7&nbsp;(3499)&nbsp;545‑002</a> или в&nbsp;чат‑боте <a href="https://max.ru/avia_yanao_bot" target="_blank" rel="noopener">«Авиасообщение ЯНАО»</a> в&nbsp;MAX.</p>
+  <div class="pick" aria-live="polite"><div><p id="p-d"></p><h3 id="p-c"></h3><p class="reg" id="p-r"></p></div><div class="tm t"><span id="p-a"></span><i></i><span id="p-b"></span></div><a class="btn" data-theme="night" style="background:var(--amber);color:#1A1203" href="#path" id="p-go">Мой путь до&nbsp;трапа</a></div>
+  <p class="src">Табло аэропорта на&nbsp;25&nbsp;ноября 2026&nbsp;года. Время местное для&nbsp;каждого аэропорта. Расписание рекламное, возможны изменения: перед выездом проверьте <a href="https://www.avianadym.ru/tablo/passengers_Vilet.php" target="_blank" rel="noopener">онлайн‑табло</a>.</p>
+</div></section>
+
+<section class="path" id="path" data-theme="night">
+  <div class="rw"><canvas id="rw1" aria-hidden="true"></canvas><div class="wrap"><h2 class="path-t">Путь до&nbsp;трапа</h2>
+    <nav class="papi" id="papi" aria-label="Этапы"><a href="#s0"><i></i><span>До&nbsp;вылета</span><span></span></a><a href="#s1"><i></i><span>Регистрация</span><span></span></a><a href="#s2"><i></i><span>Досмотр</span><span></span></a><a href="#s3"><i></i><span>Посадка</span><span></span></a></nav></div></div>
+  <div class="steps wrap">
+    <article class="step" id="s0"><h3>До вылета</h3>
+      <p>В&nbsp;аэропорту возможны ограничения мобильного интернета. Всё важное держите при&nbsp;себе.</p>
+      <ul>
+        <li><label class="chk"><input type="checkbox"><span>Документы для&nbsp;поездки со&nbsp;мной</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Билет сохранён скриншотом или распечатан</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Статус рейса проверен на&nbsp;сайте авиакомпании или аэропорта</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Место багажа не&nbsp;тяжелее 30&nbsp;кг и&nbsp;не&nbsp;больше 203&nbsp;см в&nbsp;сумме трёх измерений, упаковка исправна</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Норма ручной клади моего перевозчика известна: она не&nbsp;меньше 5&nbsp;кг</span></label></li>
+      </ul></article>
+    <article class="step" id="s1"><h3>Регистрация</h3>
+      <p class="when" data-when>Начинается за&nbsp;<b>1,5–2&nbsp;часа</b> до&nbsp;вылета, заканчивается не&nbsp;позднее чем за&nbsp;<b>40&nbsp;минут</b>. Открыть её заново нельзя.</p>
+      <ul>
+        <li><label class="chk"><input type="checkbox"><span>Три стойки в&nbsp;левом крыле зала регистрации, на&nbsp;табло указан мой рейс</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Паспорт в&nbsp;руках: с&nbsp;электронным билетом нужен только он</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Багаж сдан, бирка сохранена до&nbsp;прилёта</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Посадочный талон на&nbsp;бумаге</span></label></li>
+      </ul>
+      <p class="warn">Электронные посадочные талоны на&nbsp;экране телефона в&nbsp;аэропорту Надым не&nbsp;принимаются. Талон распечатают на&nbsp;стойке вашего рейса.</p></article>
+    <article class="step" id="s2"><h3>Досмотр</h3>
+      <p>Первый этаж зала вылета, после регистрации и&nbsp;оформления багажа. Кто отказался от&nbsp;досмотра, к&nbsp;полёту не&nbsp;допускается.</p>
+      <ul>
+        <li><label class="chk"><input type="checkbox"><span>В&nbsp;ручной клади нет ножей, ножниц, бритвенных лезвий, спиц и&nbsp;маникюрных наборов</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Нет топоров, резаков, ледорубов, мечей и&nbsp;сабель</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Запасные батареи, пауэрбанки и&nbsp;электронные сигареты не&nbsp;в&nbsp;багаже, а&nbsp;в&nbsp;ручной клади: полностью выключены и&nbsp;упакованы</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Оружие заявлено при&nbsp;бронировании и&nbsp;регистрации</span></label></li>
+      </ul></article>
+    <article class="step" id="s3"><h3>Посадка</h3>
+      <p>После досмотра вы ждёте в&nbsp;стерильной зоне. Посадку объявят по&nbsp;громкой связи и&nbsp;на&nbsp;табло: перевозчик, номер рейса, направление, выход.</p>
+      <ul>
+        <li><label class="chk"><input type="checkbox"><span>Посадочный талон наготове</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>Номер выхода на&nbsp;посадку с&nbsp;табло</span></label></li>
+        <li><label class="chk"><input type="checkbox"><span>До&nbsp;трапа везёт перронный автобус с&nbsp;сотрудниками аэропорта</span></label></li>
+      </ul></article>
+  </div>
+</section>
+
+<figure class="apron"><img src="img/ph/11.webp" alt="Перрон аэропорта Надым: самолёты, трап и перронный автобус" width="1920" height="625" loading="lazy"></figure>
+
+<section class="sec help" id="help"><div class="wrap">
+  <h2 data-split>Если нужна помощь</h2>
+  <div class="help-a"><figure data-img><img src="img/ph/05.webp" alt="Зал регистрации аэропорта Надым: стойки, окно информации, лестница на второй этаж" width="1920" height="625" loading="lazy"></figure>
+    <div><h3>Сопровождение и&nbsp;амбулифт</h3><p style="margin-top:12px">Пассажирам с&nbsp;инвалидностью и&nbsp;пожилым помогают от&nbsp;парковки до&nbsp;места в&nbsp;салоне. Услуга бесплатная.</p>
+      <ul><li>Скажите авиакомпании не&nbsp;менее чем за&nbsp;48&nbsp;часов до&nbsp;вылета</li><li>Пандус и&nbsp;кнопка вызова у&nbsp;центрального входа, комната для&nbsp;маломобильных пассажиров на&nbsp;первом этаже</li><li>Оперативная смена: <a class="num" href="tel:+73499545000">545‑000</a>, доб.&nbsp;416, 401</li></ul>
+      <a class="btn" style="margin-top:18px" href="#ask">Заказать сопровождение</a></div></div>
+  <div class="help-b">
+    <div data-reveal><h3>Комната матери и&nbsp;ребёнка</h3><ul><li>Второй этаж зала вылета, 7:00–18:30, бесплатно</li><li>Дети до&nbsp;7&nbsp;лет, дети с&nbsp;ограниченными возможностями до&nbsp;14&nbsp;лет, женщины на&nbsp;второй половине беременности</li><li>Нужна справка здравпункта. В&nbsp;«Комнату Заботы» пеленать и&nbsp;кормить можно без&nbsp;неё</li><li><a class="num" href="tel:+73499545000">545‑000</a>, доб.&nbsp;405</li></ul></div>
+    <figure data-img><img src="img/ph/33.webp" alt="VIP-зал: кожаные диваны, стойка" width="740" height="400" loading="lazy"></figure>
+    <div data-reveal><h3>VIP‑зал</h3><ul><li>Отдельный вход в&nbsp;правой части зала регистрации №&nbsp;2</li><li>На&nbsp;вылет открыт за&nbsp;1&nbsp;час 30&nbsp;минут до&nbsp;рейса, на&nbsp;прилёт за&nbsp;30&nbsp;минут до&nbsp;посадки самолёта</li><li>Оплатите не&nbsp;позднее чем за&nbsp;15&nbsp;часов до&nbsp;вылета. Дети до&nbsp;2&nbsp;лет бесплатно</li><li><a class="num" href="tel:+73499545000">545‑000</a>, доб.&nbsp;419, 416</li></ul></div>
+  </div>
+</div></section>
+
+<section class="sec late" id="late"><div class="wrap late-g">
+  <div><h2 data-split>Рейс задержан</h2><label for="hrs" style="display:block;margin-top:22px;font-size:20px">Сколько уже ждёте</label><output id="hrs-o" for="hrs">3<small>часа</small></output><input id="hrs" type="range" min="0" max="10" step="1" value="3"></div>
+  <div><ul>
+    <li data-h="0"><b>Сразу</b><span>Информация о&nbsp;задержке и&nbsp;её причинах, хранение багажа, комната матери и&nbsp;ребёнка для&nbsp;пассажира с&nbsp;ребёнком до&nbsp;7&nbsp;лет</span></li>
+    <li data-h="2"><b>Больше 2 часов</b><span>Два телефонных звонка или два письма по&nbsp;электронной почте, прохладительные напитки</span></li>
+    <li data-h="4"><b>Больше 4 часов</b><span>Горячее питание, дальше каждые шесть часов днём и&nbsp;каждые восемь ночью</span></li>
+    <li data-h="6"><b>Больше 6 часов</b><span>Гостиница: если ждать больше восьми часов днём или больше шести ночью. Довезут туда и&nbsp;обратно</span></li>
+  </ul><p class="fine">Всё это бесплатно. Если не&nbsp;предоставили, обращайтесь к&nbsp;авиаперевозчику или в&nbsp;Новоуренгойскую транспортную прокуратуру: <a class="num" href="tel:+79028200699">8&nbsp;902&nbsp;820‑06‑99</a>, круглосуточно.</p></div>
+</div></section>
+
+<section class="sec ab" id="about"><div class="wrap">
+  <figure data-img><img src="img/ph/02.webp" alt="Аэропорт Надым сейчас и в старой чёрно-белой съёмке" width="1920" height="657" loading="lazy"></figure>
+  <div class="ab-g">
+    <div><h2 data-split>С&nbsp;1969 года у&nbsp;Полярного круга</h2><p class="lead" style="margin-top:20px;color:var(--muted)">Один из&nbsp;старейших аэропортов страны принимает все виды самолётов, включая тяжёлые авиалайнеры.</p>
+      <p class="big" style="margin-top:30px"><b class="num" data-count>235 015</b><span>пассажиров за&nbsp;2024&nbsp;год</span></p></div>
+    <div><ul class="yr">
+      <li><b class="num">1969</b><span>начало истории аэропорта</span></li>
+      <li><b class="num">1980</b><span>Надымский объединённый авиаотряд</span></li>
+      <li><b class="num">2006</b><span>1&nbsp;февраля образовано Надымское авиапредприятие</span></li>
+      <li><b class="num">2025</b><span>III&nbsp;место в&nbsp;номинации «Лучший “малый” аэропорт» на&nbsp;выставке инфраструктуры гражданской авиации</span></li></ul>
+      <h3 style="margin-top:34px">Авиакомпаниям</h3><p style="margin-top:8px;color:var(--muted)">Приём и&nbsp;выпуск воздушных судов, инженерно‑авиационное обслуживание, наземные услуги, организация перевозок.</p>
+      <p class="co"><a class="link" href="https://www.avianadym.ru/Aeroport/companies.php" target="_blank" rel="noopener">Договор и&nbsp;прейскурант</a><a class="link" href="https://www.avianadym.ru/Aeroport/uslugi_aeroport.php" target="_blank" rel="noopener">Услуги и&nbsp;нормативы</a></p></div>
+  </div>
+</div></section>
+
+<section class="sec rq" id="ask" data-theme="night"><div class="wrap rq-g">
+  <div><h2 data-split>Заказать сопровождение</h2><p class="lead" style="margin-top:18px;color:var(--muted)">Заявка придёт на&nbsp;nap_sop_c@mail.ru. Авиакомпанию предупредите не&nbsp;менее чем за&nbsp;48&nbsp;часов до&nbsp;вылета.</p>
+    <ul class="ph">
+      <li><span>Справочная</span><a class="num" href="tel:+73499545002">+7 (3499) 545‑002</a></li>
+      <li><span>Многоканальный, справочная доб.&nbsp;402</span><a class="num" href="tel:+73499545000">+7 (3499) 545‑000</a></li>
+      <li><span>Здравпункт</span><span class="num">доб. 440, 443</span></li>
+      <li><span>Приёмная</span><a class="num" href="tel:+73499545001">+7 (3499) 545‑001</a></li>
+      <li><span>Почта</span><a href="mailto:oao_nap@mail.ru">oao_nap@mail.ru</a></li>
+      <li><span>629735, ЯНАО, Надым, р‑н Аэропорт, стр.&nbsp;7</span></li>
+    </ul></div>
+  <form data-demo-form>
+    <label class="field"><span>Рейс</span><select name="Рейс" id="f-fl"></select></label>
+    <label class="field"><span>Дата вылета</span><input name="Дата" type="date" required></label>
+    <label class="field full"><span>Какая помощь нужна</span><select name="Помощь"><option>Сопровождение по аэропорту</option><option>Кресло-коляска</option><option>Амбулифт</option><option>Встретить у автомобиля</option><option>Помощь при прилёте</option></select></label>
+    <label class="field full"><span>Своё кресло (габариты, батарея), костыли, собака‑проводник</span><textarea name="Подробности"></textarea></label>
+    <label class="field"><span>Имя пассажира</span><input name="Имя" required autocomplete="name"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить заявку</button>
+    <div class="done" role="status"><h3>Так заявка придёт дежурной смене</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+  </form>
+</div></section>
+</main>
+<footer class="ftr" data-theme="night"><div class="wrap"><span>АО «Надымское авиапредприятие»<br>ИНН 8903025610, ОГРН 1068903001265</span><span>629735, ЯНАО, Надымский район, Надым,<br>р‑н Аэропорт, стр. 7</span></div></footer>
+<div class="mbar" data-theme="night"><a class="btn btn--ghost" href="tel:+73499545002">Справочная</a><a class="btn" href="#flights">Выбрать рейс</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))},root=document.documentElement;
+
+  /* ---------- версия для слабовидящих ---------- */
+  var V={on:false,s:1,c:'w',i:0};try{V=JSON.parse(localStorage.getItem('ndm-vi'))||V}catch(e){}
+  function vi(){root.classList.remove('vi','vi-w','vi-n','vi-b','vi-s1','vi-s2','vi-noimg');if(V.on){root.classList.add('vi','vi-'+V.c,'vi-s'+V.s);if(!V.i)root.classList.add('vi-noimg')}
+    $$('[data-vs]').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.vs===V.s)});$$('[data-vc]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.vc===V.c)});$('[data-vi-img]').setAttribute('aria-pressed',!!V.i);$('.eye').setAttribute('aria-pressed',V.on);
+    KIT.still=V.on;document.dispatchEvent(new Event('kit:still'));if(KIT.lenis)KIT.lenis[V.on?'stop':'start']();
+    try{localStorage.setItem('ndm-vi',JSON.stringify(V))}catch(e){}dispatchEvent(new Event('resize'))}
+  $$('[data-vi]').forEach(function(b){b.addEventListener('click',function(){V.on=!V.on;vi();scrollTo(0,0);(V.on?$('.vibar button'):$('.eye')).focus({preventScroll:true})})});
+  $$('[data-vs]').forEach(function(b){b.addEventListener('click',function(){V.s=+b.dataset.vs;vi()})});
+  $$('[data-vc]').forEach(function(b){b.addEventListener('click',function(){V.c=b.dataset.vc;vi()})});
+  $('[data-vi-img]').addEventListener('click',function(){V.i=V.i?0:1;vi()});
+
+  /* ---------- рейсы: табло avianadym.ru на 25.11.2026 ---------- */
+  var DN=['Пн','Вт','Ср','Чт','Пт','Сб','Вс'],DF=['понедельник','вторник','среда','четверг','пятница','суббота','воскресенье'];
+  // [рейс, направление, вылет, прилёт, дни 1–7]
+  var R={o:[['YC 174','Москва, Домодедово','09:40','11:20',[1]],['YC 174','Москва, Домодедово','10:35','12:10',[4]],['YC 174','Москва, Домодедово','09:50','11:30',[6]],['YC 877','Санкт‑Петербург','09:10','10:40',[2,6]],['YC 212','Екатеринбург','10:15','12:15',[2,4]],['YC 148','Тюмень','16:05','17:50',[2,4]],['YC 148','Тюмень','17:40','19:20',[6]],['YC 148','Тюмень','16:10','17:50',[7]],['S7 7084','Новосибирск','09:20','13:20',[2,5]],['YC 248','Уфа','17:40','20:25',[3]],['YC 248','Уфа','10:35','13:05',[6]],['YC 617','Омск','10:20','13:10',[7]]],
+    i:[['YC 173','Москва, Домодедово','03:35','08:40',[1]],['YC 173','Москва, Домодедово','03:45','09:00',[4]],['YC 173','Москва, Домодедово','03:25','08:30',[6]],['YC 878','Санкт‑Петербург','02:50','08:10',[2,6]],['YC 211','Екатеринбург','13:15','15:10',[2,4]],['YC 147','Тюмень','07:40','09:20',[2,4,7]],['YC 147','Тюмень','08:00','09:40',[6]],['S7 7083','Новосибирск','08:20','08:35',[2,5]],['YC 247','Уфа','14:15','16:40',[3,6]],['YC 618','Омск','14:10','15:10',[7]]]};
+  var ONE={o:[['ГЗП 9669','Бованенково','11:00','12:20','25 ноября'],['ЯЛ 92','Кутопьюган, Нори, Ныда','10:00','11:55','25 ноября'],['ЯЛ 94','Ныда, Нори, Кутопьюган','10:00','12:00','26 ноября'],['ГЗП 914','Москва, Внуково','18:00','19:20','29 ноября']],
+    i:[['ЯЛ 92','Кутопьюган, Нори, Ныда','12:00','12:50','25 ноября'],['ГЗП 9670','Бованенково','16:00','17:20','25 ноября'],['ЯЛ 94','Ныда, Нори, Кутопьюган','12:05','12:50','26 ноября'],['ГЗП 913','Москва, Внуково','11:00','16:00','29 ноября']]};
+  var dir='o',today=(new Date().getDay()+6)%7,sel=null;
+  function tm(t,m){var a=t.split(':'),x=(+a[0]*60+ +a[1]-m+1440)%1440;return String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0')}
+  function pick(f,when,btn){sel=f;$$('.wk button,.by button').forEach(function(b){b.setAttribute('aria-pressed',b===btn)});
+    $('#p-d').textContent='Рейс '+f[0]+', '+when;$('#p-c').textContent=dir==='o'?'Надым – '+f[1]:f[1]+' – Надым';$('#p-a').textContent=f[2];$('#p-b').textContent=f[3];
+    var o=dir==='o';$('#p-r').textContent=o?'Регистрация откроется с '+tm(f[2],120)+' до '+tm(f[2],90)+', закроется не позднее '+tm(f[2],40):'Багаж выдают в первом зале регистрации, приготовьте багажную бирку';
+    $('#p-go').hidden=!o;
+    if(o){$('[data-when]').innerHTML='';var w=$('[data-when]');w.append('Рейс '+f[0]+', '+f[1]+', вылет '+f[2]+'. Регистрация начнётся между ');var b1=document.createElement('b'),b2=document.createElement('b');b1.textContent=tm(f[2],120)+' и '+tm(f[2],90);b2.textContent=tm(f[2],40);w.append(b1,', закончится не позднее ',b2,'. Открыть её заново нельзя.');
+      var s=$('#f-fl'),v=f[0]+', '+f[1];[].forEach.call(s.options,function(p){if(p.value===v)s.value=v})}}
+  function build(){
+    var h='<tr><th scope="col" style="width:22%">Город</th>';DN.forEach(function(d,i){h+='<th scope="col"'+(i===today?' class="now"':'')+'>'+d+'</th>'});$('#wk-h').innerHTML=h+'</tr>';
+    var B=$('#wk-b');B.textContent='';var cities=[];R[dir].forEach(function(f){if(cities.indexOf(f[1])<0)cities.push(f[1])});var first=null,best=99;
+    cities.forEach(function(c){var tr=document.createElement('tr'),th=document.createElement('th');th.scope='row';th.textContent=c;tr.appendChild(th);tr.dataset.k=c;
+      DN.forEach(function(d,i){var td=document.createElement('td'),f=R[dir].filter(function(x){return x[1]===c&&x[4].indexOf(i+1)>=0})[0];
+        if(f){tr.dataset.k+=' '+f[0];var b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',false);b.innerHTML='<span class="d">'+DF[i]+'</span><b>'+(dir==='o'?f[2]:f[3])+'</b><small>'+f[0]+'</small>';b.setAttribute('aria-label',c+', '+DF[i]+', рейс '+f[0]+', '+f[2]+' – '+f[3]);b.onclick=function(){pick(f,DF[i],b)};td.appendChild(b);
+          var dist=(i-today+7)%7;if(dist<best){best=dist;first=function(){pick(f,DF[i],b)}}}
+        tr.appendChild(td)});B.appendChild(tr)});
+    var by=$('#by');by.innerHTML='<span>По датам</span>';ONE[dir].forEach(function(f){var b=document.createElement('button');b.type='button';b.dataset.k=f[0]+' '+f[1];b.innerHTML='<b></b><span></span>';b.firstChild.textContent=(dir==='o'?f[2]:f[3]);b.lastChild.textContent=f[1]+', '+f[4];b.onclick=function(){pick(f,f[4],b)};by.appendChild(b)});
+    if(first)first();filter();
+  }
+  function norm(s){return s.toLowerCase().replace(/ё/g,'е').replace(/[\s‑–,-]/g,'')}
+  function filter(){var q=norm($('#q').value),n=0;$$('#wk-b tr,#by button').forEach(function(e){var ok=!q||norm(e.dataset.k).indexOf(q)>=0;e.hidden=!ok;if(ok)n++});$('#none').hidden=n>0;$('.wk').style.display=$$('#wk-b tr').some(function(e){return !e.hidden})?'':'none';$('#by').style.display=$$('#by button').some(function(e){return !e.hidden})?'':'none'}
+  $('#q').addEventListener('input',filter);
+  $$('[data-dir]').forEach(function(b){b.addEventListener('click',function(){dir=b.dataset.dir;$$('[data-dir]').forEach(function(x){x.setAttribute('aria-selected',x===b)});build()})});
+  (function(){var seen={},s=$('#f-fl');R.o.concat(ONE.o).forEach(function(f){var v=f[0]+', '+f[1];if(seen[v])return;seen[v]=1;var o=document.createElement('option');o.textContent=v;o.value=v;s.appendChild(o)})})();
+  build();
+
+  /* ---------- полоса в перспективе ---------- */
+  function sprite(col){var s=document.createElement('canvas');s.width=s.height=64;var c=s.getContext('2d'),g=c.createRadialGradient(32,32,0,32,32,32);g.addColorStop(0,'rgba(255,255,255,1)');g.addColorStop(.1,'rgba('+col+',1)');g.addColorStop(.3,'rgba('+col+',.32)');g.addColorStop(1,'rgba('+col+',0)');c.fillStyle=g;c.fillRect(0,0,64,64);return s}
+  var SP={w:sprite('235,244,255'),a:sprite('255,194,74'),g:sprite('70,227,154'),r:sprite('255,80,60'),b:sprite('90,150,255')};
+  function Runway(cv,o){
+    var c=cv.getContext('2d'),W=0,H=0,L=o.len,self={cam:o.cam,h:o.h,fy:o.fy,fx:o.fx,lit:1,stars:0},li=[],k;
+    for(k=0;k<=L;k+=30){li.push([-24,k,k>L-600?'a':'w',1]);li.push([24,k,k>L-600?'a':'w',1])}
+    for(k=30;k<L;k+=30)li.push([0,k,'w',.5]);
+    for(k=-21;k<=21;k+=4.2){li.push([k,0,'g',.8]);li.push([k,L,'r',.8])}
+    for(k=1;k<=10;k++){li.push([0,-60*k,'w',.9,k]);li.push([-3,-60*k,'w',.6,k]);li.push([3,-60*k,'w',.6,k])}
+    li.sort(function(a,b){return b[1]-a[1]});
+    var st=[];for(k=0;k<90;k++)st.push([(Math.sin(k*127.1)*43758.5%1+1)%1,(Math.sin(k*311.7)*23421.6%1+1)%1,.5+((k*7)%10)/9]);
+    function size(){var r=cv.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;if(W<20||H<20)return;cv.width=W*d;cv.height=H*d;c.setTransform(d,0,0,d,0,0)}
+    self.draw=function(t){if(W<20){size();if(W<20)return}t=t||0;c.clearRect(0,0,W,H);
+      var f=Math.max(W,H)*o.f,hz=H*self.fy,cx=W*(typeof self.fx==='function'?self.fx():self.fx);
+      if(o.sky){var g=c.createLinearGradient(0,0,0,hz+40);g.addColorStop(0,'#050B15');g.addColorStop(.6,'#0A1E29');g.addColorStop(1,'#17414A');c.fillStyle=g;c.fillRect(0,0,W,hz+1);
+        c.globalAlpha=.3+.7*self.stars;st.forEach(function(s){c.fillStyle='#DCEBFF';c.fillRect(s[0]*W,s[1]*hz*.92,s[2],s[2])});c.globalAlpha=1;
+        var gg=c.createLinearGradient(0,hz*.18,0,hz);gg.addColorStop(0,'rgba(70,227,154,0)');gg.addColorStop(.6,'rgba(70,227,154,1)');gg.addColorStop(1,'rgba(70,227,154,0)');c.fillStyle=gg;var sw=Math.max(5,W/150);for(k=0;k*sw<W;k++){var u=k*sw/W,al=Math.pow(Math.max(0,Math.sin(u*7.4+Math.sin(u*3.1+t/7000)*1.6+t/11000)),2)*(.75+.25*Math.sin(k*.9+t/900));if(al<.02)continue;c.globalAlpha=al*(.11+.16*self.stars);c.fillRect(k*sw,hz*(.06+.1*Math.sin(u*9+t/5000)),sw+.6,hz*.92)}c.globalAlpha=1;
+        var gr=c.createLinearGradient(0,hz,0,H);gr.addColorStop(0,'#1B3A42');gr.addColorStop(.5,'#12262F');gr.addColorStop(1,'#0A1620');c.fillStyle=gr;c.fillRect(0,hz,W,H-hz);var hg=c.createRadialGradient(cx,hz,0,cx,hz,W*.42);hg.addColorStop(0,'rgba(255,205,120,.28)');hg.addColorStop(.35,'rgba(80,190,170,.16)');hg.addColorStop(1,'rgba(40,120,120,0)');c.fillStyle=hg;c.fillRect(0,0,W,H)}
+      function P(x,z){var d=z-self.cam;if(d<6)return null;var s=f/d;return [cx+x*s,hz+self.h*s,s]}
+      // полотно
+      var z0=Math.max(0,self.cam+8),a=P(-26,z0),b=P(26,z0),e=P(26,L),q=P(-26,L);if(a&&e&&z0<L){c.fillStyle='rgba(16,24,33,.92)';c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(b[0],b[1]);c.lineTo(e[0],e[1]);c.lineTo(q[0],q[1]);c.fill()}
+      c.fillStyle='rgba(225,236,245,.2)';for(k=0;k<L;k+=60){var m1=P(-.7,k),m2=P(.7,k),m3=P(.7,k+30),m4=P(-.7,k+30);if(m1&&m3&&k>self.cam+22){c.beginPath();c.moveTo(m1[0],m1[1]);c.lineTo(m2[0],m2[1]);c.lineTo(m3[0],m3[1]);c.lineTo(m4[0],m4[1]);c.fill()}}
+      c.globalCompositeOperation='lighter';var run=Math.floor(t/110)%16;
+      li.forEach(function(l){var p=P(l[0],l[1]);if(!p||p[0]<-40||p[0]>W+40||p[1]>H+40)return;var z=l[1]/L,al=l[3]*(z<=self.lit?1:.2)*Math.min(1,.32+260/(l[1]-self.cam+60));
+        if(l[4])al*=(10-l[4])===run?1:.5;
+        var r=Math.max(3,Math.min(17,p[2]*1.5))*(l[4]&&(10-l[4])===run?1.8:1);c.globalAlpha=Math.min(1,al);c.drawImage(SP[l[2]],p[0]-r*1.6,p[1]-r*1.6,r*3.2,r*3.2)});
+      c.globalAlpha=1;c.globalCompositeOperation='source-over'};
+    addEventListener('resize',function(){size();self.draw(0)});size();return self;
+  }
+  var A=Runway($('#rw0'),{len:1800,cam:20,h:8,fy:.05,fx:function(){return innerWidth>900?.46:.5},f:.4,step:30});A.lit=1;
+  KIT.raf($('#rw0'),function(t){A.cam=20+(t*.0075)%60;A.draw(t)},30);
+
+  var sec=$('#path'),Bz=Runway($('#rw1'),{len:2400,cam:-300,h:8,fy:.42,fx:function(){return innerWidth>900?.27:.5},f:.46,sky:1}),steps=$$('.step'),papi=$$('#papi a'),cur=-1,tp=0,sp=0;
+  function state(){var r=sec.getBoundingClientRect(),mob=innerWidth<=900,line=mob?innerHeight*.66:innerHeight*.5;tp=Math.min(1,Math.max(0,-r.top/Math.max(1,r.height-innerHeight)));
+    var n=0;steps.forEach(function(s,i){if(s.getBoundingClientRect().top<line)n=i});
+    if(n!==cur){cur=n;papi.forEach(function(a,i){a.classList.toggle('on',i===n);a[i===n?'setAttribute':'removeAttribute']('aria-current','step')})}}
+  function cam(){var p=sp,u=Math.max(0,(p-.8)/.2);Bz.cam=-300+p*2030+u*u*260;Bz.h=8+u*u*70;Bz.fy=(innerWidth>900?.42:.3)+u*u*.16;Bz.lit=Math.min(1.02,.16+p*1.15);Bz.stars=u}
+  var tk=false;addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;state();if(KIT.REDUCED)return})}},{passive:true});
+  state();sp=KIT.REDUCED?.35:tp;cam();
+  KIT.raf($('#rw1'),function(t){if(!KIT.REDUCED){sp+=(tp-sp)*.1}cam();Bz.draw(t)},36);
+  // чек-лист: отметки живут в браузере посетителя
+  var bx=$$('.chk input'),saved=[];try{saved=JSON.parse(localStorage.getItem('ndm-chk')||'[]')}catch(e){}
+  bx.forEach(function(b,i){b.checked=!!saved[i];b.addEventListener('change',prog)});
+  function prog(){steps.forEach(function(s,i){var a=[].slice.call(s.querySelectorAll('input')),n=a.filter(function(x){return x.checked}).length;papi[i].classList.toggle('ok',n===a.length);papi[i].lastChild.textContent=n+' из '+a.length});try{localStorage.setItem('ndm-chk',JSON.stringify(bx.map(function(b){return b.checked?1:0})))}catch(e){}}
+  prog();
+
+  /* ---------- задержка ---------- */
+  var h=$('#hrs');function late(){var v=+h.value,o=$('#hrs-o'),m=v%10;o.innerHTML=v+'<small>'+(v===0||v>4?'часов':v===1?'час':'часа')+'</small>';$$('#late li').forEach(function(l){var d=+l.dataset.h;l.classList.toggle('on',d===0||v>d)})}
+  h.addEventListener('input',late);late();
+  if(V.on)vi();else $('.eye').setAttribute('aria-pressed',false);
+});
+</script>
+</body>
+</html>

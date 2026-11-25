@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Салехардский речной порт — перевозка, перевалка и хранение грузов на Оби</title>
+<meta name="description" content="Концепция редизайна сайта АО «Салехардский речной порт»: перевозка нефтепродуктов и генеральных грузов, перевалка, тяжеловесы до 500 т, щебень и песок, Салехард и Лабытнанги.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/jost-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--navy:#184070;--deep:#0E1F33;--river:#1C6A70;--river-d:#0F444E;--fog:#E7EEED;--ice:#F8FBFA;--buoy:#D22E1E;--rust:#A34D37;
+  --bg:var(--fog);--fg:#102338;--muted:#4C6071;--accent:var(--buoy);--accent-h:#A92013;--r:4px;--wrap:1280px;
+  --f-display:"Jost",system-ui,sans-serif;--f-text:"Golos Text",system-ui,sans-serif;--hdr-h:88px;--sec:clamp(76px,9vw,140px)}
+[data-theme=night]{--bg:var(--deep);--fg:#EEF5F4;--muted:#A5B9C3;--line:rgba(220,240,240,.2);background:var(--bg);color:var(--fg)}
+img{height:auto}[data-img]{overflow:clip}
+h1,h2,h3{font-weight:600;letter-spacing:-.022em;line-height:1}
+h2{font-size:clamp(38px,5.2vw,80px)}
+h3{font-size:clamp(24px,2vw,30px)}
+.lead{font-size:clamp(18px,1.45vw,21px);line-height:1.5;color:var(--muted);max-width:36em}
+.orn{display:block;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='16' fill='none' stroke='%23D22E1E' stroke-width='1.6'%3E%3Cpath d='M0 15 12 3l12 12L36 3l12 12M12 3V0M36 3V0M6 15l6-6 6 6M30 15l6-6 6 6M24 15V8l-4-4M24 8l4-4'/%3E%3C/svg%3E") 0 0/48px 16px repeat-x}
+
+/* шапка */
+.hdr{background:#fff;color:var(--fg)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.4vw,40px)}
+.hdr img{height:60px;width:auto}
+.hdr nav{display:flex;gap:clamp(16px,2vw,34px);margin-left:auto;font-weight:500;font-size:16px}
+.hdr nav a{text-decoration:none;padding:12px 0;position:relative;white-space:nowrap}
+.hdr nav a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='10' fill='none' stroke='%23D22E1E' stroke-width='2'%3E%3Cpath d='M0 6q6-6 12 0t12 0'/%3E%3C/svg%3E") 0 0/24px 10px repeat-x;clip-path:inset(0 100% 0 0);transition:clip-path .4s var(--e-smooth)}
+.hdr nav a:hover::after{clip-path:inset(0)}
+.hdr .tel{text-decoration:none;font-weight:600;white-space:nowrap}
+
+/* первый экран */
+.hero{position:relative;isolation:isolate;background:var(--deep);color:#fff;padding-top:var(--hdr-h)}
+.hero-pic{position:absolute;inset:var(--hdr-h) 0 0;z-index:-1;overflow:clip}.hero{overflow:clip}
+.hero-pic img{position:absolute;top:0;left:17%;width:100%;max-width:none;height:100%;object-fit:cover;object-position:100% 62%}
+.hero-pic img+img{left:-83%;transform:scaleX(-1)}
+.hero-pic::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(9,30,62,.55) 0,rgba(9,30,62,.3) 36%,rgba(9,30,62,0) 58%)}
+.hero-pic::after{content:"";position:absolute;inset:auto 0 0;height:34%;background:linear-gradient(0deg,var(--deep) 12%,rgba(14,31,51,0))}
+.hero-in{min-height:min(calc(100svh - var(--hdr-h) - 128px),800px);display:flex;flex-direction:column;justify-content:center;padding-block:clamp(36px,6vh,72px)}
+h1{font-size:clamp(50px,7.2vw,118px);line-height:.94;letter-spacing:-.035em;max-width:7em}
+.hero .lead{color:#E6EFF6;margin-top:28px;max-width:24em}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.mist{position:absolute;inset:auto -20% 18%;height:46%;background:radial-gradient(40% 60% at 72% 70%,rgba(236,244,246,.85),rgba(236,244,246,0) 70%),radial-gradient(34% 46% at 38% 80%,rgba(236,244,246,.6),rgba(236,244,246,0) 70%);opacity:0;pointer-events:none}
+.hero-facts{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.22)}
+.hero-facts div{padding:22px 20px 30px 0}
+.hero-facts b{display:block;font:600 clamp(34px,3.6vw,54px)/1 var(--f-display);letter-spacing:-.02em}
+.hero-facts span{display:block;margin-top:8px;font-size:16px;line-height:1.35;color:#C4D3DE}
+@media (prefers-reduced-motion:no-preference){
+  .js .hero-pic{animation:come 3.2s var(--e-smooth) both;transform-origin:70% 70%}
+  .js .mist{animation:mist 3.4s ease-out both}
+  .js h1 span{display:block;animation:rise 1.2s var(--e-smooth) both}.js h1 span+span{animation-delay:.12s}
+}
+h1 span{display:block}
+@keyframes come{from{transform:scale(1.06)}}
+@keyframes mist{from{opacity:.95;transform:translateX(-4%)}to{opacity:0;transform:translateX(10%)}}
+@keyframes rise{from{transform:translateY(.16em)}}
+.floes{display:block;width:100%;height:clamp(54px,6vw,92px);background:var(--deep);overflow:hidden;margin-bottom:-1px}
+.floes svg{width:max(2400px,166vw);max-width:none;height:100%}
+@media (prefers-reduced-motion:no-preference){.floes svg{animation:drift 90s linear infinite alternate}}
+@keyframes drift{to{transform:translateX(calc(100vw - 100%))}}
+
+/* погрузка */
+.load{background:linear-gradient(var(--fog),#D3E2E3 62%);padding-top:clamp(44px,4vw,64px)}
+.load-h{display:grid;grid-template-columns:auto minmax(0,30em);justify-content:space-between;gap:24px 60px;align-items:end}
+.cargo{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;position:relative;z-index:2;border:0;padding:0;min-width:0}
+.opt{position:relative;display:inline-flex}
+.opt input{position:absolute;inset:0;opacity:0;margin:0;width:100%;height:100%;cursor:pointer}
+.opt span{display:flex;align-items:center;min-height:48px;padding:8px 18px;border:1.5px solid var(--navy);border-radius:var(--r);font-weight:500;font-size:16px;line-height:1.2;background:rgba(255,255,255,.55);transition:background-color .25s,color .25s}
+.opt:hover span{background:#fff}
+.opt input:checked+span{background:var(--navy);color:#fff}
+.opt input:focus-visible+span{outline:3px solid var(--accent);outline-offset:3px}
+.dock{position:relative;margin-top:10px;overflow:hidden}
+.dock svg{width:100%;height:auto;max-height:640px;display:block}
+.dock-say{position:absolute;right:var(--gutter);top:24px;width:min(330px,26vw);background:var(--ice);padding:20px 22px;border-left:4px solid var(--buoy);border-radius:var(--r)}
+.dock-say p{font-size:16px;line-height:1.45}
+.dock-say .row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;font-size:15px;color:var(--muted)}
+.more{min-height:44px;padding:0 16px;border-radius:var(--r);background:var(--rust);color:#fff;font-weight:600;font-size:15px;transition:background-color .2s}
+.more:hover{background:#853A27}.more:disabled{background:#8D9CA4;cursor:default}
+.bill{background:#073039;color:#fff;--fg:#fff;--muted:#B4D0D1;--line:rgba(255,255,255,.34)}
+.bill .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.6fr) auto;gap:24px 40px;align-items:end;padding-block:30px 44px}
+.bill fieldset{border:0;padding:0;margin:0;min-width:0}
+.bill legend,.bill .lg{font:600 22px/1.1 var(--f-display);padding:0;margin-bottom:14px}
+.svc{display:flex;flex-wrap:wrap;gap:8px}
+.bill .opt span{background:transparent;border-color:rgba(255,255,255,.5)}
+.bill .opt:hover span{background:rgba(255,255,255,.12)}
+.bill .opt input:checked+span{background:#fff;color:var(--deep)}
+.route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+
+/* два берега */
+.banks{background:var(--ice)}
+.banks-g{display:grid;grid-template-columns:minmax(0,1fr) clamp(220px,26vw,380px) minmax(0,1fr);gap:0 clamp(20px,3vw,48px);align-items:stretch}
+.banks{overflow:clip}.bank{padding-block:var(--sec)}.bank h2{font-size:clamp(42px,5vw,76px)}
+.bank>p{color:var(--muted);margin-top:14px;max-width:24em}
+.bank dl{margin-top:30px;border-top:1px solid var(--line)}
+.bank dl div{display:grid;grid-template-columns:7.2em minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.bank dt{white-space:nowrap;font:600 clamp(24px,1.9vw,28px)/1.05 var(--f-display);color:var(--navy)}
+.bank dd{font-size:17px;line-height:1.45}
+.rv{position:relative;min-height:560px}
+.rv svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.mooring{margin-top:34px}
+.mooring img{width:100%;max-width:600px;border-radius:var(--r)}
+figcaption{font-size:15px;color:var(--muted);margin-top:10px}
+
+/* флот */
+.fleet .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 60px}
+.ships{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(44px,5vw,76px) 24px;margin-top:clamp(36px,4vw,64px)}
+.ship{position:relative;margin:0}
+.ship .pic{overflow:hidden;border-radius:var(--r)}
+.ship img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.4s var(--e-smooth)}
+.ship:hover img{transform:scale(1.035)}
+.ship:nth-child(1){grid-column:1/8}.ship:nth-child(2){grid-column:8/13;margin-top:18%}.ship:nth-child(3){grid-column:2/7}
+.ship b{display:block;font:600 clamp(40px,5.4vw,84px)/.8 var(--f-display);letter-spacing:-.02em;margin-top:-.42em;position:relative;margin-left:.18em;text-shadow:0 0 24px rgba(14,31,51,.55)}
+.ship figcaption{margin:14px 0 0 2px;font-size:16px}
+.others{grid-column:8/13;align-self:end;border-top:1px solid var(--line)}
+.others li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+.others li b{font:600 26px/1.1 var(--f-display)}.others li span{color:var(--muted);text-align:right}
+.tank{margin-top:clamp(60px,7vw,110px);display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:30px 60px;align-items:start}
+.tank svg{height:auto;overflow:visible;margin-top:26px}.tank figure+figure{margin-top:30px}.tank figcaption b{font:600 28px/1 var(--f-display);color:var(--fg);margin-right:14px}.tank figcaption{margin:0;font-size:17px}
+.tank .lead{margin-top:16px}
+.owners{margin-top:clamp(56px,6vw,96px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 60px;border-top:1px solid var(--line);padding-top:30px}
+.owners ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.owners li{font-size:17px;line-height:1.45;color:var(--muted)}
+.owners li b{display:block;font:600 26px/1.1 var(--f-display);color:var(--fg);margin-bottom:8px}
+
+/* тяжеловесы */
+.heavy{background:var(--fog)}
+.heavy-g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.heavy h2{grid-column:1/13;font-size:clamp(46px,8.6vw,138px);letter-spacing:-.04em;line-height:.9;margin-bottom:clamp(16px,2vw,34px)}
+.heavy h2 em{font-style:normal;color:var(--buoy)}
+.heavy .big{grid-column:1/9}.heavy .big img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 78%;border-radius:var(--r)}
+.heavy .side{grid-column:9/13;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.heavy .side img{width:100%;border-radius:var(--r)}
+.heavy .tale{grid-column:1/13;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 40px;margin-top:20px}
+.tale p{font-size:17px}.tale b{display:block;font:600 30px/1.1 var(--f-display);color:var(--navy);margin-bottom:10px}
+
+/* щебень */
+.gravel{background:#D9E3E1;overflow:clip}
+.gravel-g{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px clamp(30px,5vw,84px);align-items:stretch}
+.gravel .frac{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.frac button{min-height:52px;min-width:88px;padding:0 16px;border:1.5px solid var(--navy);border-radius:var(--r);font:600 20px/1 var(--f-display);font-variant-numeric:tabular-nums;transition:background-color .2s,color .2s}
+.frac button[aria-pressed=true]{background:var(--navy);color:#fff}
+.heap{position:relative;margin-top:22px;border-bottom:2px solid var(--fg)}
+.heap canvas{width:100%;height:clamp(260px,30vw,400px)}
+.ruler{position:relative;display:flex;justify-content:space-between;font-size:14px;color:var(--muted);padding-top:8px}
+.gravel .after{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;margin-top:22px}
+.gravel .shot{display:flex;flex-direction:column;justify-content:space-between;gap:26px}
+.gravel .shot img{width:100%;border-radius:var(--r)}
+.bags{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 60px;margin-top:clamp(48px,5vw,80px);padding-top:30px;border-top:2px solid var(--fg)}
+.specs{border-top:1px solid var(--line);font-size:16px}
+.specs div{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid var(--line)}
+.specs dt{color:var(--muted)}.specs dd{text-align:right;font-weight:500}
+
+/* документы */
+.docs{background:var(--ice)}
+.docs ul{margin-top:clamp(28px,3vw,48px);border-top:2px solid var(--navy)}
+.docs a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .4s var(--e-smooth),color .2s}
+.docs a:hover{padding-left:18px;color:var(--buoy)}
+.docs b{font:500 clamp(21px,2vw,29px)/1.2 var(--f-display)}
+.docs a span{display:block;font-size:16px;color:var(--muted);margin-top:4px}
+.docs i{font-style:normal;font-weight:600;font-size:15px;padding:8px 14px;border:1.5px solid currentColor;border-radius:var(--r)}
+
+/* заявка и контакты */
+.req-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px clamp(30px,6vw,100px)}
+.who{margin-top:34px;border-top:1px solid var(--line)}
+.who li{padding:14px 0;border-bottom:1px solid var(--line)}
+.who span{display:block;font-size:15px;color:var(--muted)}
+.who a{display:inline-block;padding:6px 0;font:500 22px/1.3 var(--f-display);text-decoration:none}
+.who a:hover{text-decoration:underline;text-underline-offset:5px}
+.req form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-content:start}
+.req .full{grid-column:1/-1}
+.sum{grid-column:1/-1;border:1.5px dashed rgba(220,240,240,.4);border-radius:var(--r);padding:20px 22px}
+.sum dl,.req .done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 22px;font-size:17px}
+.sum dt,.req .done dt{color:var(--muted)}
+.req .done{grid-column:1/-1;border:1px solid var(--line);padding:28px}.req .done h3{margin-bottom:18px}.req .done p{margin-top:18px;color:var(--muted)}
+.ftr{border-top:1px solid var(--line);padding:30px 0 44px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:14px 60px;justify-content:space-between;font-size:15px;color:var(--muted)}
+.ftr a{color:var(--fg)}
+.kit-tag{bottom:auto;top:calc(var(--hdr-h) + 12px)}
+
+@media (max-width:1180px){.hdr .tel{display:none}}
+@media (max-width:900px){
+  :root{--hdr-h:72px}
+  .hdr img{height:46px}
+  [data-burger]{margin-left:auto}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:#fff;flex-direction:column;gap:2px;padding:20px var(--gutter);font:600 32px/1.2 var(--f-display);visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  .hero-pic{inset:var(--hdr-h) 0 auto;height:78vw}
+  .hero-pic img{left:0;object-position:66% 70%}.hero-pic img+img{display:none}
+  .hero-pic::before{display:none}.hero-pic::after{height:40%}
+  .hero-in{min-height:0;padding-top:70vw;padding-bottom:30px;justify-content:flex-start}
+  h1{font-size:clamp(46px,13.4vw,72px)}
+  .hero .lead{margin-top:18px}.cta{margin-top:24px}.cta .btn{flex:1 1 100%}
+  .hero-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-facts div{padding:16px 12px 16px 0}
+  .load-h,.banks-g,.tank,.owners,.gravel-g,.req-g,.bill .wrap,.heavy .tale{grid-template-columns:minmax(0,1fr)}
+  .cargo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:24px}
+  .opt{display:flex}.opt span{width:100%;padding:8px 12px;font-size:15.5px}
+  .dock{display:flex;flex-direction:column}
+  .dock-say{position:static;width:auto;margin:0;border-radius:0;border-left:0;border-top:4px solid var(--buoy)}
+  .svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .route{grid-template-columns:minmax(0,1fr)}
+  .bill .btn{width:100%}
+  .rv{min-height:0;height:170px;margin:0 calc(var(--gutter)*-1)}.rv svg{inset:auto;left:50%;top:50%;width:170px;height:104vw;max-width:none;transform:translate(-50%,-50%) rotate(90deg)}.bank{padding-block:64px 44px}
+  .bank dl div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .ship:nth-child(n){grid-column:1/13;margin-top:0}.others{grid-column:1/13}
+  .owners ul{grid-template-columns:minmax(0,1fr)}
+  .heavy .big,.heavy .side{grid-column:1/13}
+  .gravel .shot img{max-width:none}
+  .req form{grid-template-columns:minmax(0,1fr)}
+  .bags{grid-template-columns:minmax(0,1fr)}
+  .docs a{grid-template-columns:minmax(0,1fr)}.docs i{justify-self:start}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="Салехардский речной порт, на главную"><img src="img/logo.png" alt="Салехардский речной порт, группа компаний Межрегионфлот" width="560" height="167"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#load">Погрузка</a><a href="#banks">Грузовые районы</a><a href="#fleet">Флот</a><a href="#gravel">Щебень и песок</a><a href="#docs">Документы</a><a href="#req">Контакты</a></nav>
+  <a class="tel num" href="tel:+73492241611">8 (34922) 4-16-11</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-pic" aria-hidden="true"><img src="img/ph/10.webp" alt="" width="1600" height="900" fetchpriority="high"><img src="img/ph/10.webp" alt="" width="1600" height="900"><div class="mist"></div></div>
+  <div class="wrap">
+    <div class="hero-in">
+      <h1><span>Порт на&nbsp;обоих</span> <span>берегах Оби</span></h1>
+      <p class="lead">Перевозим топливо, генеральные и&nbsp;нерудные грузы. Плавучими кранами разгружаем суда в&nbsp;любом населённом пункте округа, даже там, где нет причала.</p>
+      <div class="cta"><a class="btn" data-magnetic href="#load">Собрать заявку</a><a class="btn btn--ghost" href="#docs">Тарифы на&nbsp;2026 год</a></div>
+    </div>
+    <div class="hero-facts">
+      <div><b class="num">6</b><span>портальных кранов</span></div>
+      <div><b class="num">5</b><span>плавучих кранов</span></div>
+      <div><b class="num">около 20</b><span>судов своего флота</span></div>
+      <div><b class="num">до 500 т</b><span>тяжеловесы и&nbsp;негабарит</span></div>
+    </div>
+  </div>
+</section>
+<div class="floes" aria-hidden="true"><svg id="floes" viewBox="0 0 2400 90" preserveAspectRatio="none"></svg></div>
+
+<section class="load" id="load" aria-labelledby="load-t">
+  <div class="wrap">
+    <div class="load-h"><h2 id="load-t" data-split>Что грузим сегодня?</h2><p class="lead">Выберите груз, и&nbsp;кран поставит его в&nbsp;судно. Из&nbsp;выбранного сложится заявка на&nbsp;перевозку или перевалку.</p></div>
+    <fieldset class="cargo"><legend class="sr">Груз</legend>
+      <label class="opt"><input type="radio" name="Груз" form="reqf" value="Генеральные грузы" data-k="general" checked><span>Генеральные грузы</span></label>
+      <label class="opt"><input type="radio" name="Груз" form="reqf" value="Щебень и песок" data-k="bulk"><span>Щебень и песок</span></label>
+      <label class="opt"><input type="radio" name="Груз" form="reqf" value="Песок в биг-бэгах" data-k="bags"><span>Песок в&nbsp;биг-бэгах</span></label>
+      <label class="opt"><input type="radio" name="Груз" form="reqf" value="Тяжеловес, негабарит" data-k="heavy"><span>Тяжеловес, негабарит</span></label>
+      <label class="opt"><input type="radio" name="Груз" form="reqf" value="Техника" data-k="roro"><span>Техника</span></label>
+      <label class="opt"><input type="radio" name="Груз" form="reqf" value="Нефтепродукты" data-k="oil"><span>Нефтепродукты</span></label>
+    </fieldset>
+  </div>
+  <div class="dock">
+    <svg id="dock" viewBox="-130 44 1460 530" role="img" aria-label="Схема погрузки у причала: кран, груз и судно"></svg>
+    <div class="dock-say"><p id="say" aria-live="polite">Портальные краны до&nbsp;27&nbsp;т, плавучие до&nbsp;32&nbsp;т. Возим по&nbsp;Обь‑Иртышскому бассейну своим флотом.</p>
+      <div class="row"><span>На&nbsp;борту: <b class="num" id="cnt">0</b></span><button class="more" id="more" type="button">Ещё подъём</button></div></div>
+  </div>
+  <div class="bill"><div class="wrap">
+    <fieldset><legend>Что сделать с&nbsp;грузом</legend><div class="svc">
+      <label class="opt"><input type="checkbox" name="Услуга" form="reqf" value="Перевозка" checked><span>Перевозка</span></label>
+      <label class="opt"><input type="checkbox" name="Услуга" form="reqf" value="Погрузка и выгрузка"><span>Погрузка, выгрузка</span></label>
+      <label class="opt"><input type="checkbox" name="Услуга" form="reqf" value="Перевалка"><span>Перевалка</span></label>
+      <label class="opt"><input type="checkbox" name="Услуга" form="reqf" value="Хранение"><span>Хранение</span></label>
+    </div></fieldset>
+    <div><p class="lg">Маршрут и&nbsp;вес</p><div class="route">
+      <label class="field"><span>Откуда</span><input name="Откуда" form="reqf" list="pts" autocomplete="off"></label>
+      <label class="field"><span>Куда</span><input name="Куда" form="reqf" list="pts" autocomplete="off"></label>
+      <label class="field"><span>Вес, тонн</span><input name="Вес, тонн" form="reqf" inputmode="decimal" autocomplete="off"></label>
+    </div><datalist id="pts"><option>Салехард<option>Лабытнанги<option>Новый Порт</datalist></div>
+    <a class="btn" href="#req">К&nbsp;заявке</a>
+  </div></div>
+</section>
+
+<section class="banks" id="banks"><div class="wrap">
+  <div class="banks-g">
+    <div class="bank" data-reveal>
+      <h2>Лабытнанги</h2><p>Левый берег Оби, Обской причал. Основная промышленная зона порта.</p>
+      <dl>
+        <div><dt>до 27 т</dt><dd>портальные краны: вагоны, автомобили, суда разных классов</dd></div>
+        <div><dt>до 500 т</dt><dd>усиленная площадка под подъёмное устройство для тяжеловесов</dd></div>
+        <div><dt>Ро‑Ро</dt><dd>выгрузка своим ходом и&nbsp;эстакады для съезда техники</dd></div>
+        <div><dt>Ж/д</dt><dd>подъездные пути для&nbsp;быстрой перевалки</dd></div>
+        <div><dt>1 склад</dt><dd>открытый: ограда, видеонаблюдение, пропускной режим</dd></div>
+      </dl>
+    </div>
+    <div class="rv" aria-hidden="true"><svg viewBox="0 0 380 760" preserveAspectRatio="none" id="rv"></svg></div>
+    <div class="bank" data-reveal>
+      <h2>Салехард</h2><p>Правый берег реки Полуй. Причальные стенки порта тянутся вдоль воды.</p>
+      <dl>
+        <div><dt>до 25 т</dt><dd>краны грузового района</dd></div>
+        <div><dt>Ро‑Ро</dt><dd>выгрузка барж своим ходом и&nbsp;такелажным способом</dd></div>
+        <div><dt>2 склада</dt><dd>открытые: ограда, видеонаблюдение, пропускной режим</dd></div>
+      </dl>
+      <figure class="mooring"><img src="img/ph/20.webp" alt="Портальные краны и суда у причальной стенки порта" width="639" height="295" loading="lazy"></figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec fleet" id="fleet" data-theme="night"><div class="wrap">
+  <div class="top"><h2 data-split>Буксиры с&nbsp;именами на&nbsp;рубке</h2><p class="lead">Флот ходит по&nbsp;внутренним водным путям Обь‑Иртышского бассейна. Ремонт флота ведём с&nbsp;получением признания Российского Речного Регистра.</p></div>
+  <div class="ships">
+    <figure class="ship" data-reveal><div class="pic"><img src="img/ph/07.webp" alt="Буксир-толкач РТ-657 у берега" width="1600" height="1200" loading="lazy"></div><b>РТ‑657</b><figcaption>проект 1741А, 600&nbsp;л.&nbsp;с.</figcaption></figure>
+    <figure class="ship" data-reveal><div class="pic"><img src="img/ph/06.webp" alt="Буксир-толкач РТ-442 на реке" width="1600" height="1200" loading="lazy"></div><b>РТ‑442</b><figcaption>проект 911В, 300&nbsp;л.&nbsp;с.</figcaption></figure>
+    <figure class="ship" data-reveal><div class="pic"><img src="img/ph/09.webp" alt="Буксир-толкач РТ-695 у берега" width="1600" height="1052" loading="lazy"></div><b>РТ‑695</b><figcaption>проект 1741А, 600&nbsp;л.&nbsp;с.</figcaption></figure>
+    <ul class="others" data-reveal>
+      <li><b>ОТА‑980</b><span>проект 758Б, 800&nbsp;л.&nbsp;с.</span></li>
+      <li><b>РТ‑396, РТ‑426</b><span>проект 911В, 300&nbsp;л.&nbsp;с.</span></li>
+      <li><b>МП‑1106, МП‑1109</b><span>аппарельные баржи для&nbsp;техники, Обская губа</span></li>
+      <li><b>СПК‑32/25</b><span>тяжеловесный кран</span></li>
+      <li><b>Несамоходный флот</b><span>проекты 352.136.1, Р‑56, 81108, 942М</span></li>
+    </ul>
+  </div>
+  <div class="tank">
+    <div><h3>До 25&nbsp;000&nbsp;т топлива в&nbsp;посёлки округа за&nbsp;навигацию</h3><p class="lead">Два самоходных судна для нефтепродуктов. На&nbsp;чертеже они в&nbsp;одном масштабе.</p></div>
+    <div>
+      <figure><figcaption><b>ТН‑672</b>65,6&nbsp;м, 560&nbsp;т, налив 80&nbsp;м³/ч</figcaption><svg style="width:100%" viewBox="0 -12 730 150" aria-hidden="true"><g fill="none" stroke="#EEF5F4" stroke-width="2" stroke-linejoin="round"><path d="M6 96 18 130H690L722 88H650l-8-8H230l-8 8H6Z" fill="#17324A"/><path d="M30 88V34h104v54M44 34V14h56v20M152 88V58h44v30M62 14V-8M260 80v-10h360v10M300 70v10M380 70v10M460 70v10M540 70v10"/><path d="M46 46h14v10H46zM72 46h14v10H72zM98 46h14v10H98z" fill="#EEF5F4" stroke="none"/><path d="M8 118H706" stroke="#D22E1E" stroke-width="3"/></g></svg></figure>
+      <figure><figcaption><b>ОС‑7</b>42&nbsp;м, 121,5&nbsp;т, налив 30&nbsp;м³/ч</figcaption><svg style="width:64%" viewBox="0 0 468 124" aria-hidden="true"><g fill="none" stroke="#EEF5F4" stroke-width="2" stroke-linejoin="round"><path d="M4 88 12 118H440L466 82H404l-6-6H168l-6 6H4Z" fill="#17324A"/><path d="M22 82V40h84v42M34 40V22h42v18M54 22V4M196 76v-8h184v8"/><path d="M34 52h12v9H34zM56 52h12v9H56zM78 52h12v9H78z" fill="#EEF5F4" stroke="none"/><path d="M6 108H452" stroke="#D22E1E" stroke-width="3"/></g></svg></figure>
+    </div>
+  </div>
+  <div class="owners"><h3>Судам других владельцев</h3><ul>
+    <li><b>ДОК 350&nbsp;т</b>ремонтное обслуживание судов</li>
+    <li><b>Приём</b>подсланевые воды, ТБО, хозфекальные воды</li>
+    <li><b>Вода</b>заправка питьевой водой</li>
+  </ul></div>
+</div></section>
+
+<section class="sec heavy" id="heavy"><div class="wrap heavy-g">
+  <h2 data-split>Тяжеловесы <em>до&nbsp;500&nbsp;тонн</em></h2>
+  <figure class="big" data-img><img src="img/ph/08.webp" alt="Тягачи с крупногабаритным аппаратом съезжают с баржи на песчаный берег" width="1600" height="1200" loading="lazy"></figure>
+  <div class="side">
+    <p class="lead">В&nbsp;2011&nbsp;году на&nbsp;грузовом районе Лабытнанги построили усиленную площадку и&nbsp;в&nbsp;том&nbsp;же году подняли с&nbsp;судна «река‑море» на&nbsp;баржу три единицы массой около 300&nbsp;т каждая.</p>
+    <figure><img src="img/ph/19.webp" alt="Подъёмное устройство и портальный кран перегружают аппарат с судна" width="600" height="450" loading="lazy"><figcaption>Подъёмное устройство на&nbsp;усиленной площадке</figcaption></figure>
+  </div>
+  <div class="tale">
+    <p data-reveal><b>Более 10&nbsp;тыс.&nbsp;км</b>Порт участвовал в&nbsp;первой международной перевозке по&nbsp;Северному морскому пути из&nbsp;Южной Кореи в&nbsp;Казахстан.</p>
+    <p data-reveal><b>Новый Порт</b>С&nbsp;2016&nbsp;года в&nbsp;селе работает наше подразделение: оно помогает компаниям на&nbsp;Новопортовском месторождении.</p>
+    <p data-reveal><b>Необорудованный берег</b>Доставляем и&nbsp;выгружаем стройматериалы и&nbsp;инертные грузы там, где причала нет.</p>
+  </div>
+</div></section>
+
+<section class="sec gravel" id="gravel"><div class="wrap gravel-g">
+  <div>
+    <h2 data-split>Щебень и&nbsp;песок</h2>
+    <p class="lead" style="margin-top:22px">Щебень отгружаем на&nbsp;грузовых районах в&nbsp;Лабытнанги и&nbsp;Салехарде, а&nbsp;также в&nbsp;речных и&nbsp;морских портах округа. Посмотрите, чем отличаются фракции.</p>
+    <div class="frac" role="group" aria-label="Фракция щебня" id="frac"></div>
+    <div class="heap"><canvas id="heap" role="img" aria-label="Куча щебня выбранной фракции в масштабе линейки"></canvas></div>
+    <div class="ruler num" id="ruler" aria-hidden="true"></div>
+    <div class="after"><a class="btn" href="#req" id="fr-go">Заказать щебень 20–40</a><span id="fr-t" class="lead">Линейка под щебнем показывает миллиметры.</span></div>
+  </div>
+  <div class="shot">
+    <figure data-img><img src="img/ph/12.webp" alt="Портальный кран с грейфером над щебнем на берегу" width="821" height="1095" loading="lazy"></figure>
+  </div>
+</div>
+<div class="wrap"><div class="bags"><div><h3>Песок в&nbsp;биг‑бэгах</h3><p class="lead" style="margin:10px 0 18px;font-size:17px">Свой речной карьер на&nbsp;реке Собь. Мешки удобны, когда нельзя выгрузить навалом или на&nbsp;одном судне идут разные грузы.</p></div><dl class="specs num"><div><dt>Вес</dt><dd>1000 кг</dd></div><div><dt>Габариты</dt><dd>100×100×130 см</dd></div><div><dt>Насыпная плотность</dt><dd>1,449 т/м³</dd></div><div><dt>Стандарт</dt><dd>ГОСТ 8736‑2014, II класс</dd></div></dl></div></div></section>
+
+<section class="sec docs" id="docs"><div class="wrap">
+  <h2 data-split>Документы для клиентов</h2>
+  <ul>
+    <li><a href="https://salport.ru/Upload/files/tarif2026.pdf" target="_blank" rel="noopener"><div><b>Тарифы на&nbsp;2026&nbsp;год</b><span>на&nbsp;услуги, оказываемые АО&nbsp;«СхРП»</span></div><i>Открыть PDF</i></a></li>
+    <li><a href="https://salport.ru/Upload/files/Заявка%20на%20оказание%20услуг.pdf" target="_blank" rel="noopener"><div><b>Заявка на&nbsp;оказание услуг</b><span>бланк, если удобнее заполнить на&nbsp;бумаге</span></div><i>Открыть PDF</i></a></li>
+    <li><a href="https://salport.ru/Upload/files/forma_dogovora.pdf" target="_blank" rel="noopener"><div><b>Форма договора</b><span>на&nbsp;оказание услуг</span></div><i>Открыть PDF</i></a></li>
+    <li><a href="https://salport.ru/Upload/files/poryadok2023.pdf" target="_blank" rel="noopener"><div><b>Порядок оказания услуг</b><span>погрузка, выгрузка, хранение, перевалка и&nbsp;перевозка грузов</span></div><i>Открыть PDF</i></a></li>
+    <li><a href="https://salport.ru/Upload/files/информация%20о%20тв.pdf" target="_blank" rel="noopener"><div><b>Техническая возможность порта</b><span>информация о&nbsp;мощности АО&nbsp;«СхРП»</span></div><i>Открыть PDF</i></a></li>
+  </ul>
+</div></section>
+
+<section class="sec req" id="req" data-theme="night"><div class="wrap req-g">
+  <div>
+    <h2 data-split>Заявка и&nbsp;контакты</h2>
+    <ul class="who">
+      <li><span>Перевозки и&nbsp;перевалка: отдел грузовой и&nbsp;коммерческой работы</span><a class="num" href="tel:+73492241611,116">8 (34922) 4-16-11, доб. 116</a></li>
+      <li><span>Приёмная</span><a class="num" href="tel:+73492241611">8 (34922) 4-16-11</a><br><a href="mailto:info@shrp.ru">info@shrp.ru</a></li>
+      <li><span>Поставщикам: отдел снабжения</span><a class="num" href="tel:+73492241164">8 (34922) 4-11-64</a></li>
+      <li><span>Отдел кадров</span><a class="num" href="tel:+73492241611,142">8 (34922) 4-16-11, доб. 142</a><br><a href="https://trudvsem.ru/vacancy/search?page=0&amp;companyCode=1028900509615" target="_blank" rel="noopener">Вакансии на «Работе России»</a></li>
+    </ul>
+  </div>
+  <form id="reqf" data-demo-form>
+    <div class="sum"><dl id="sum" aria-live="polite"></dl></div>
+    <input type="hidden" name="Фракция" id="fr-h" value="">
+    <label class="field"><span>Организация</span><input name="Организация" autocomplete="organization" required></label>
+    <label class="field"><span>Контактное лицо</span><input name="Контактное лицо" autocomplete="name" required></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" autocomplete="tel" required></label>
+    <label class="field"><span>Когда нужна перевозка</span><input name="Когда" autocomplete="off"></label>
+    <label class="field full"><span>О&nbsp;грузе: габариты, количество мест, условия</span><textarea name="О грузе"></textarea></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+    <button class="btn full" type="submit">Отправить заявку в&nbsp;порт</button>
+    <div class="done" role="status"><h3>Заявка собрана</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+  </form>
+</div>
+<div class="wrap" style="margin-top:clamp(60px,7vw,100px)"><span class="orn" aria-hidden="true"></span></div>
+<footer class="ftr" style="border:0"><div class="wrap"><span>АО «Салехардский речной порт». 629007, ЯНАО, г.&nbsp;Салехард, ул.&nbsp;Ленина, д.&nbsp;7, а/я&nbsp;32</span><span><a href="tel:+73492241611" class="num">8 (34922) 4-16-11</a> · <a href="mailto:info@shrp.ru">info@shrp.ru</a></span></div></footer>
+</section>
+</main>
+<div class="mbar"><a class="btn" href="#req">Заявка на&nbsp;груз</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+'use strict';
+var $=function(i){return document.getElementById(i)},R=KIT.REDUCED,f1=function(n){return n.toFixed(1)};
+
+/* льдины на стыке воды и берега */
+(function(){var s=3,r=function(){s=(s*16807)%2147483647;return s/2147483647},o='<path d="M0 90V62';
+  for(var x=0;x<2400;){var w=40+r()*130,y=54+r()*18;o+='L'+f1(x)+' '+f1(y)+'L'+f1(x+w*.9)+' '+f1(y-4+r()*10);x+=w}
+  o+='L2400 60V90Z" fill="#E7EEED"/>';
+  for(var i=0;i<46;i++){var cx=r()*2400,cy=6+r()*46,k=(10+r()*34)*(.45+cy/60),n=6,p=[];for(var j=0;j<n;j++){var a=j/n*6.283+r()*.5;p.push(f1(cx+Math.cos(a)*k)+','+f1(cy+Math.sin(a)*k*.26))}
+    o+='<polygon points="'+p.join(' ')+'" fill="'+(r()>.5?'#E7EEED':'#C6D8DC')+'" opacity="'+(.35+cy/80).toFixed(2)+'"/>'}
+  $('floes').innerHTML=o})();
+
+/* ─── сцена погрузки ─── */
+var dock=$('dock'),STEEL='#9C4A35',DARK='#5E2A1F',wy=470;
+function pipes(x,y,n,s){var o='';s=s||1;for(var j=0;j<2;j++)for(var i=0;i<n-j;i++)o+='<rect x="'+(x-46*s)+'" y="'+(y-9-j*9)*1+'" width="'+92*s+'" height="8" rx="4" fill="'+(i%2?'#B9C7CC':'#CBD6D9')+'" stroke="#667983" stroke-width="1"/>';return o+'<path d="M'+(x-26)+' '+y+'v-18M'+(x+26)+' '+y+'v-18" stroke="#B98A4E" stroke-width="5"/>'}
+var UNIT={ /* груз на крюке: точка подвеса в (0,0), низ груза на y=62 */
+  general:'<path d="M0 0-40 42M0 0 40 42" stroke="#22303c" stroke-width="1.6" fill="none"/><g transform="translate(0 62)">'+pipes(0,0,3)+'</g>',
+  bags:'<path d="M0 0-13 24M0 0 13 24" stroke="#22303c" stroke-width="1.6"/><path d="M-19 24q19-7 38 0l2 36q-21 5-42 0Z" fill="#F4F1E6" stroke="#8c8a7c" stroke-width="1.4"/><path d="M-17 36h34M-18 48h36" stroke="#184070" stroke-width="2"/>',
+  heavy:'<path d="M0-12-56 22M0-12 56 22M-56 22H56" stroke="#22303c" stroke-width="2.4" fill="none"/><path d="M-70 8h140q16 27 0 54h-140q-16-27 0-54Z" fill="#EDF2F2" stroke="#6d7f88" stroke-width="1.6"/><path d="M-44 8v54M44 8v54" stroke="#6d7f88" stroke-width="1.4"/><rect x="-14" y="-2" width="28" height="11" fill="#CBD6D9" stroke="#6d7f88"/>',
+  bulk:''
+};
+function grab(open,full){var k=open?15:7;return '<path d="M0 0v12" stroke="#22303c" stroke-width="2"/><path d="M-12 12h24l4 12h-32Z" fill="#473b36"/><path d="M0 24-18 26-24 48-'+k+' 62 0 40Z" fill="#5c4a42"/><path d="M0 24 18 26 24 48 '+k+' 62 0 40Z" fill="#6b574d"/>'+(full?'<path d="M-20 30Q0 14 20 30Z" fill="#8C979A"/>':'')}
+function truck(){return '<g id="trk"><path d="M-150-26h118v8h-118z" fill="#8d2b22"/><path d="M-146-64h92q14 19 0 38h-92q-12-19 0-38Z" fill="#EDF2F2" stroke="#6d7f88" stroke-width="1.4"/><path d="M-30-54h34l12 22v16h-46z" fill="#E36A1F"/><path d="M-10-50h12l9 18h-21z" fill="#CFE3EA"/><path d="M-36-22h54v6h-54z" fill="#33383d"/>'+[-140,-122,-104,-60,-24,6].map(function(x){return '<circle cx="'+x+'" cy="-8" r="8" fill="#1c2227"/><circle cx="'+x+'" cy="-8" r="3" fill="#97a3a8"/>'}).join('')+'</g>'}
+var far='';for(var i=0,x=-420;x<1640;i++){var w=8+(i*37%13),h=9+(i*53%17);far+='L'+x+' '+(400-h)+'L'+(x+w/2)+' '+(404-h*.4);x+=w}
+function farCrane(x,s,fl){return '<g transform="translate('+x+' 402) scale('+(fl?-s:s)+' '+s+')" opacity=".55"><path d="M-22 0-14-40H14L22 0M-10-40V-96M10-40V-96M-30-58H12v18h-42ZM0-96 4-130 60-210 112-168M60-210 8-140" fill="none" stroke="#57808a" stroke-width="5"/></g>'}
+dock.innerHTML=
+ '<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE8E8"/><stop offset=".75" stop-color="#EFF4F2"/></linearGradient><linearGradient id="wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E7D81"/><stop offset="1" stop-color="#073039"/></linearGradient><linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EFF4F2" stop-opacity="0"/><stop offset="1" stop-color="#EFF4F2"/></linearGradient></defs>'+
+ '<path d="M-420 420V396'+far+'V420Z" fill="#9DB9BA"/>'+farCrane(840,.62)+farCrane(930,.52,1)+farCrane(1090,.6)+farCrane(300,.44,1)+farCrane(180,.5)+farCrane(1240,.5,1)+farCrane(20,.56,1)+
+ '<rect x="-400" y="330" width="2000" height="100" fill="url(#fg)"/>'+
+ '<rect x="-400" y="418" width="2000" height="300" fill="#6FA3A4"/>'+
+ '<path id="w0" fill="#4A8D90"/>'+
+ '<g id="crane"></g>'+
+ '<g id="v"><g id="barge"><path d="M560 446H904L886 512H592Z" fill="#7E2E24"/><path d="M560 446H904l-5 16H566Z" fill="#33414A"/><path d="M566 440h330v7H566z" fill="#4b5a63"/><g stroke="#fff" stroke-width="2" opacity=".85"><path d="M588 470v8M588 484v8M594 477h-6"/></g><g id="deck"></g>'+
+   '<g transform="translate(902 0)"><path d="M4 440H150L138 506H22Z" fill="#1F2B36"/><path d="M4 440h146l-3 12H7Z" fill="#10181f"/><path d="M2 452V396h16v56M22 452V404h10v48" fill="#2b3a46"/><path d="M44 440V402h92v38ZM54 402V372h54v30Z" fill="#F6F8F8" stroke="#7f919b" stroke-width="1.5"/><path d="M60 378h42v14H60z" fill="#254a5c"/><path d="M54 414h10v9H54zM74 414h10v9H74zM94 414h10v9H94z" fill="#254a5c"/><path d="M122 402V376h14v26" fill="#1F2B36"/><path d="M122 382h14v7h-14z" fill="#D22E1E"/><path d="M82 372V330M70 344h24" stroke="#5c6d77" stroke-width="3"/></g></g>'+
+ '<g id="ramp"><path d="M560 446H930L912 512H592Z" fill="#274457"/><path d="M560 446H930l-5 14H566Z" fill="#16293a"/><path d="M604 440h320v7H604z" fill="#3f5c6d"/><path id="flap" d="M606 442 506 426v7l100 16Z" fill="#b7822f"/><g id="rdeck"></g></g>'+
+ '<g id="tanker"><path d="M556 440H930L906 506H586Z" fill="#17324A"/><path d="M560 452H926l-5 14H566Z" fill="#B0332A"/><path d="M570 432h250v9H570z" fill="#dbe4e6"/><path d="M600 432v-10h190v10M620 432v-18M700 432v-18M770 432v-18" stroke="#6c7f88" stroke-width="5" fill="none"/><path d="M826 440V384h86v56ZM836 384v-28h54v28Z" fill="#F6F8F8" stroke="#7f919b" stroke-width="1.5"/><path d="M842 362h42v13h-42z" fill="#254a5c"/><path d="M836 400h10v9h-10zM858 400h10v9h-10zM880 400h10v9h-10z" fill="#254a5c"/><path d="M862 356v-40" stroke="#5c6d77" stroke-width="3"/></g></g>'+
+ '<path id="hose" d="M500 428C520 330 600 330 634 420" fill="none" stroke="#1d2328" stroke-width="9" stroke-linecap="round"/><path id="flow" d="M500 428C520 330 600 330 634 420" fill="none" stroke="#E9B44C" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="4 20"/>'+
+ '<path id="w1" fill="url(#wat)" opacity=".93"/><path id="w2" fill="none" stroke="#BFDADA" stroke-width="2" opacity=".5"/>'+
+ '<g id="quay"><path d="M-400 430H520V720H-400Z" fill="#33414A"/><path d="M-400 430H528v14H-400z" fill="#7C8B90"/>'+Array.apply(0,Array(46)).map(function(_,i){return '<path d="M'+(516-i*20)+' 444V720" stroke="#26323A" stroke-width="7"/>'}).join('')+'<path d="M-400 430H520" stroke="#E8EEEE" stroke-width="3"/><path d="M372 430h138" stroke="#1c2429" stroke-width="5"/><path d="M470 430v-9h12v9M300 430v-9h12v9" stroke="#1c2429" stroke-width="6"/><path d="M520 452v54" stroke="#D22E1E" stroke-width="8"/><path d="M520 466v12M520 490v10" stroke="#fff" stroke-width="8"/><g id="pile"></g></g>'+
+ '<g id="front"></g><g id="trkbox"></g><g id="buoy"><path d="M1096 480 1104 430h12l8 50Z" fill="#D22E1E"/><path d="M1100 456h21l2 11h-25z" fill="#fff"/><path d="M1110 430v-14" stroke="#8a1c10" stroke-width="4"/></g>';
+var S={base:440,cr:-420,c:-1,r:190,h:250,sway:0},kind='general',hook='',cnt=0,deck=0,sink=0,vx=0,veh=null;
+var taper=function(a,b,w1,w2){var dx=b[0]-a[0],dy=b[1]-a[1],l=Math.hypot(dx,dy)||1,nx=-dy/l,ny=dx/l;return 'M'+f1(a[0]+nx*w1)+' '+f1(a[1]+ny*w1)+'L'+f1(b[0]+nx*w2)+' '+f1(b[1]+ny*w2)+'L'+f1(b[0]-nx*w2)+' '+f1(b[1]-ny*w2)+'L'+f1(a[0]-nx*w1)+' '+f1(a[1]-ny*w1)+'Z'};
+function draw(){
+  var b=S.base,X=function(o){return b+o*S.c},r=S.r,pk=[X(.42*r),62+(r-190)*.12],tip=[X(r),112+(r-190)*.2],heel=[X(18),298],ma=[X(-18),158],hw=26+Math.abs(S.c)*30,hx=X(-26),o='';
+  if(b>-200){
+    o+='<path d="M'+(b-58)+' 430 '+(b-36)+' 332H'+(b+36)+'L'+(b+58)+' 430M'+(b-50)+' 396H'+(b+50)+'M'+(b-46)+' 396 '+b+' 336 '+(b+46)+' 396" fill="none" stroke="'+DARK+'" stroke-width="9" stroke-linejoin="round"/><path d="M'+(b-70)+' 424h24v10h-24zM'+(b+46)+' 424h24v10h-24z" fill="#1c2429"/><path d="M'+(b-42)+' 324h84v10h-84z" fill="'+DARK+'"/>';
+    o+='<path d="'+taper([X(-4),300],[X(-16),150],11,7)+'" fill="'+DARK+'"/>';
+    o+='<path d="'+taper([X(-16),150],[X(-62),168],5,11)+'" fill="'+DARK+'"/>';
+    o+='<path d="M'+f1(hx-hw)+' 284h'+f1(hw*2)+'v40h-'+f1(hw*2)+'z" fill="'+STEEL+'"/><path d="M'+f1(hx-hw)+' 297h'+f1(hw*2)+'M'+f1(hx-hw)+' 310h'+f1(hw*2)+'" stroke="'+DARK+'" stroke-width="1.6"/>';
+    o+='<path d="M'+f1(X(34)-13)+' 296h26v28h-26z" fill="#DCE8EA" stroke="'+DARK+'" stroke-width="4"/>';
+    o+='<path d="'+taper(pk,ma,4,5)+'" fill="'+DARK+'"/>';
+    o+='<path d="'+taper(heel,[X(.45*r),70+(r-190)*.125],10,7)+'" fill="'+STEEL+'"/>';
+    o+='<path d="'+taper([X(.34*r),58+(r-190)*.1],[tip[0],tip[1]],10,5)+'" fill="'+STEEL+'"/>';
+  }
+  if(S.cr>-400){var k=S.cr,t2=[k+S.r2,74],hl=[k+26,382];
+    o+='<path d="M'+(k-66)+' 404h132q16 13 0 26h-132q-16-13 0-26Z" fill="#23292e"/><path d="M'+(k-70)+' 360h112v42h-112z" fill="#C0281B"/><path d="M'+(k-118)+' 366h50v34h-50z" fill="#8F1C12"/><path d="M'+(k+14)+' 364h26v24h-26z" fill="#DCE8EA"/>';
+    o+='<path d="'+taper(hl,t2,9,6)+'" fill="none" stroke="#C0281B" stroke-width="4"/>';
+    for(var q=0;q<14;q++){var m=function(z,d){var px=hl[0]+(t2[0]-hl[0])*z,py=hl[1]+(t2[1]-hl[1])*z,l=Math.hypot(t2[0]-hl[0],t2[1]-hl[1]);return f1(px-(t2[1]-hl[1])/l*d)+' '+f1(py+(t2[0]-hl[0])/l*d)};o+='<path d="M'+m(q/14,-8)+'L'+m((q+1)/14,8)+'" stroke="#C0281B" stroke-width="2.4"/>'}
+    o+='<path d="M'+(k-96)+' 366 '+(k-60)+' 190 '+f1(t2[0])+' 74M'+(k-60)+' 190 '+(k+6)+' 372" fill="none" stroke="#7d1a11" stroke-width="3"/>';
+    tip=t2;
+  }
+  var hx0=tip[0]+S.sway,hy=S.h;
+  if(S.base>-200||S.cr>-400)o+='<path d="M'+f1(tip[0]-3)+' '+f1(tip[1])+'L'+f1(hx0-3)+' '+f1(hy)+'M'+f1(tip[0]+3)+' '+f1(tip[1])+'L'+f1(hx0+3)+' '+f1(hy)+'" stroke="#22303c" stroke-width="1.5"/><path d="M'+f1(hx0-7)+' '+f1(hy-12)+'h14v14h-14z" fill="#22303c"/><g transform="translate('+f1(hx0)+' '+f1(hy)+')">'+hook+'</g>';
+  $('crane').innerHTML=o;
+}
+var ease=function(p){return p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2},tok=0;
+function tween(ms,to,t){return new Promise(function(res){
+  var from={},k;for(k in to)from[k]=S[k];
+  var ap=function(p){for(var k in to)S[k]=from[k]+(to[k]-from[k])*p;S.sway=('c' in to||'r' in to)?-Math.sin(p*Math.PI)*16*(to.c>from.c||to.r>from.r?1:-1):S.sway*.9;draw();vess()};
+  if(R){ap(1);S.sway=0;return res()}
+  var t0=performance.now();(function s(n){if(t!==tok)return;var p=Math.min(1,Math.max(0,(n-t0)/ms));ap(ease(p));p<1?requestAnimationFrame(s):res()})(t0)})}
+var VES={general:'barge',bulk:'barge',bags:'barge',heavy:'barge',roro:'ramp',oil:'tanker'},curV='barge';
+S.vx=0;S.sink=0;S.trk=-220;S.pour=0;
+function vess(){
+  var y=S.sink+(R?0:Math.sin(wt/900)*1.2);
+  ['barge','ramp','tanker'].forEach(function(n){$(n).style.display=n===curV?'':'none'});
+  $('v').setAttribute('transform','translate('+f1(S.vx)+' '+f1(y)+')');
+  var hs=kind==='oil'&&S.pour>0;$('hose').style.display=$('flow').style.display=hs?'':'none';
+  if(kind==='roro'){var tx=S.trk,ty=tx<500?430:tx<606?430+(tx-500)/106*12:442;$('trkbox').setAttribute('transform','translate('+f1(tx)+' '+f1(ty+(tx>606?S.sink:0))+')')}
+}
+function onDeck(){ /* груз на палубе */
+  var o='',i,x;
+  for(i=0;i<deck;i++){x=636+i*62;
+    if(kind==='general')o+='<g transform="translate('+(620+(i%2)*112)+' '+(440-Math.floor(i/2)*18)+')">'+pipes(0,0,3)+'</g>';
+    if(kind==='bags')o+='<g transform="translate('+(630+i*56)+' 380)">'+UNIT.bags.replace(/<path d="M0 0[^>]*>/,'')+'</g>';
+    if(kind==='heavy')o+='<g transform="translate('+(690)+' 378)">'+UNIT.heavy.replace(/<path d="M0-12[^>]*>/,'')+'</g>';
+    if(kind==='bulk')o+='<path d="M'+(590+i*56)+' 441q'+(52)+' -'+(58)+' 104 0Z" fill="'+(i%2?'#8C979A':'#7C878B')+'"/>'}
+  $('deck').innerHTML=o;$('cnt').textContent=deck;
+}
+function pile(){var o='';
+  if(kind==='general')o='<g transform="translate(250 430)">'+pipes(0,0,3)+'</g><g transform="translate(150 430)">'+pipes(0,0,4)+'</g><g transform="translate(150 412)">'+pipes(0,0,3)+'</g>';
+  if(kind==='bulk')o='<path d="M90 430q80-112 160-116 78 8 120 116Z" fill="#8C979A"/><path d="M150 430q60-70 120-76 56 10 82 76Z" fill="#7C878B"/>';
+  if(kind==='bags')for(var i=0;i<4;i++)o+='<g transform="translate('+(250-i*46)+' 370)">'+UNIT.bags.replace(/<path d="M0 0[^>]*>/,'')+'</g>';
+  if(kind==='heavy')o=deck?'':'<g transform="translate(252 368)">'+UNIT.heavy.replace(/<path d="M0-12[^>]*>/,'')+'</g>';
+  $('pile').innerHTML=o}
+var slot={general:[620,732,620,732],bags:[630,686,742,798],bulk:[642,698,754,810],heavy:[690]},busy=false;
+function lift(t){
+  busy=true;$('more').disabled=true;
+  var i=deck,k=kind,x=slot[k][i],g=k==='bulk',hv=k==='heavy',dy=k==='general'?(i>1?18:0):0,up=k==='heavy'?240:230;
+  var go=function(cR,wait){return hv?tween(wait,{r2:cR},t):tween(wait,{c:cR<0?-1:1,r:Math.abs(cR)},t)};
+  var src=hv?252-S.cr:-190,dst=hv?x-S.cr:x-S.base,low=g?318:368;
+  hook=g?grab(true):'';
+  return go(src,700).then(function(){return tween(800,{h:low},t)}).then(function(){
+    hook=g?grab(false,true):UNIT[k];if(hv){$('pile').innerHTML=''}
+    return tween(900,{h:up},t)}).then(function(){return go(dst,hv?2600:2000)}).then(function(){return tween(950,{h:(hv||k==='bags'||k==='general'?378:340)-dy+S.sink},t)}).then(function(){
+    deck++;onDeck();hook=g?grab(true):'';return tween(900,{h:up,sink:S.sink+(hv?14:5)},t)}).then(function(){return hv?tween(1400,{r2:src},t):go(-190,1700)}).then(function(){busy=false;$('more').disabled=deck>=slot[k].length;pile()});
+}
+function start(k){
+  var t=++tok,first=!cnt++;S.sway=0;hook=k==='bulk'?grab(true):'';
+  kind=k;var need=VES[k],p=Promise.resolve();busy=true;$('more').disabled=true;
+  p=p.then(function(){return (first||need===curV&&deck===0&&S.vx===0)?0:tween(900,{vx:760,h:200},t)}).then(function(){
+    curV=need;deck=0;S.sink=0;S.pour=0;S.trk=-220;onDeck();$('trkbox').innerHTML=k==='roro'?truck():'';$('rdeck').innerHTML='';pile();vess();
+    var j=[];if(S.vx)j.push(tween(1100,{vx:0},t));if(k!=='heavy'){if(S.cr>-400)j.push(tween(1100,{cr:-420},t));if(S.base<440)j.push(tween(1500,{base:440},t))}return Promise.all(j)});
+  if(k==='heavy')p=p.then(function(){return tween(1300,{base:-260,h:250},t)}).then(function(){S.r2=190;return tween(1500,{cr:400},t)});
+  if(k==='oil')p=p.then(function(){return tween(700,{c:-1,r:190,h:220},t)}).then(function(){S.pour=.01;return tween(4200,{pour:1,sink:13},t)}).then(function(){$('cnt').textContent='налив';busy=false});
+  else if(k==='roro')p=p.then(function(){return tween(500,{c:-1,r:190,h:200},t)}).then(function(){return tween(3800,{trk:800},t)}).then(function(){deck=1;$('cnt').textContent=1;return tween(700,{sink:9},t)}).then(function(){busy=false});
+  else p=p.then(function(){return lift(t)});
+}
+var SAY={general:'Портальные краны до 27 т, плавучие до 32 т. Возим по Обь‑Иртышскому бассейну своим флотом.',bulk:'Песок из своего карьера на реке Собь, щебень пяти фракций. Выгружаем на причал или на берег.',bags:'Биг‑бэг весит 1000 кг. Затариваем речной песок и любой другой сыпучий материал.',heavy:'До 500 т на усиленной площадке в Лабытнанги. Так грузили три единицы по 300 т.',roro:'Аппарельные баржи МП‑1106 и МП‑1109 берут любую технику в условиях Обской губы.',oil:'До 25 000 т топлива в посёлки округа за навигацию. Танкер ТН‑672 и теплоход ОС‑7.'};
+SAY.heavy='До 500 т на усиленной площадке в Лабытнанги. Здесь перегрузили три единицы массой около 300 т каждая.';
+/* вода */
+var wt=0;
+function wave(id,y,a,l,s,line){var d='M-400 '+y;for(var x=-400;x<=1600;x+=40)d+='L'+x+' '+f1(y+Math.sin(x/l+wt/s)*a);$(id).setAttribute('d',line?d:d+'V720H-400Z')}
+function water(t){wt=t;wave('w0',440,2.2,70,900);wave('w1',wy+6,3,90,700);wave('w2',wy+26,2.4,60,-800,1);$('buoy').setAttribute('transform','rotate('+f1(Math.sin(t/1100)*3)+' 1110 480)');$('flow').setAttribute('stroke-dashoffset',-t/18%24);if(!busy||kind==='oil'||kind==='roro')vess()}
+function vb(){dock.setAttribute('viewBox',innerWidth<900?'170 30 800 560':'-130 44 1460 530')}
+vb();addEventListener('resize',vb);pile();onDeck();draw();vess();KIT.raf(dock,water);
+var seen=false;KIT.onView(dock,function(v){if(v&&!seen){seen=true;start('general')}},{threshold:.35});
+document.querySelectorAll('input[name="Груз"]').forEach(function(r){r.addEventListener('change',function(){seen=true;$('say').textContent=SAY[r.dataset.k];$('more').style.visibility=/oil|roro/.test(r.dataset.k)?'hidden':'';start(r.dataset.k)})});
+$('more').onclick=function(){if(!busy&&deck<(slot[kind]||[]).length)lift(tok)};
+
+/* ─── сводка заявки ─── */
+var form=$('reqf');
+function sum(){var m={};new FormData(form).forEach(function(v,k){if(/^(Груз|Услуга|Откуда|Куда|Вес, тонн|Фракция)$/.test(k)&&v.trim())m[k]=m[k]?m[k]+', '+v.toLowerCase():v});
+  var dl=$('sum');dl.textContent='';['Груз','Фракция','Услуга','Откуда','Куда','Вес, тонн'].forEach(function(k){if(!m[k])return;var a=document.createElement('dt'),b=document.createElement('dd');a.textContent=k;b.textContent=m[k];dl.append(a,b)})}
+document.addEventListener('input',sum);document.addEventListener('change',sum);sum();
+
+/* ─── река между берегами ─── */
+var RP='M110 -20C40 150 210 260 130 430S40 640 120 800H300C230 650 236 570 296 496 340 446 396 430 400 420 372 410 350 396 332 350 312 290 220 130 270 -20Z',rip='';for(var ri=0;ri<70;ri++){var rx=40+ri*97%330,ry=ri*61%840-40;rip+='<path d="M'+rx+' '+ry+'q7-5 14 0t14 0"/><path d="M'+rx+' '+(ry-840)+'q7-5 14 0t14 0"/>'}
+$('rv').innerHTML='<defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1C6A70"/><stop offset="1" stop-color="#2F8587"/></linearGradient></defs><path d="'+RP+'" fill="url(#rg)"/><clipPath id="rc"><path d="'+RP+'"/></clipPath><g clip-path="url(#rc)"><g id="cur" fill="none" stroke="#CFE9E6" stroke-width="1.6" stroke-linecap="round" opacity=".5">'+rip+'</g></g><path id="fr" d="M150 400 305 372" stroke="#fff" stroke-width="2" stroke-dasharray="3 7" fill="none"/><g id="bt"><path d="M-22-6H16l10 6-10 6H-22Z" fill="#fff"/><path d="M-18-4h14v8h-14z" fill="#D22E1E"/></g>';
+KIT.raf($('rv'),function(t){$('cur').setAttribute('transform','translate(0 '+f1(t/60%840)+')');var p=(1-Math.cos(t/5200))/2,x=158+p*138;$('bt').setAttribute('transform','translate('+f1(x)+' '+f1(398-p*24)+') rotate(-10)'+(Math.sin(t/5200)<0?' scale(-1 1)':''))});
+
+/* ─── фракции щебня: камни в масштабе линейки ─── */
+var FR=[[0,10],[5,20],[20,40],[40,70],[70,150]],cv=$('heap'),cx=cv.getContext('2d'),cur=2,stones=[],t0=0,drawn=false;
+function lay(){var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;var d=Math.min(2,devicePixelRatio||1);cv.width=w*d;cv.height=h*d;cx.setTransform(d,0,0,d,0,0);
+  var mm=w/(innerWidth<900?380:600),a=FR[cur][0],b=FR[cur][1],sd=7+cur,r=function(){sd=(sd*16807)%2147483647;return sd/2147483647},top=new Float32Array(Math.ceil(w)+1),list=[],lim=[2600,1700,620,230,70][cur];
+  for(var i=0;i<lim;i++){var D=(Math.max(a,1.6)+(b-Math.max(a,1.6))*Math.pow(r(),1.3))*mm,rad=D/2,best=-1,bh=1e9;
+    for(var k=0;k<14;k++){var u=(r()+r()+r())/3,px=w*.5+(u-.5)*w*1.15;if(px<rad||px>w-rad)continue;var m=0;for(var q=Math.max(0,px-rad*.7|0);q<=Math.min(w,px+rad*.7);q+=2)if(top[q]>m)m=top[q];var cost=m+Math.abs(px-w/2)*.5;if(cost<bh){bh=cost;best=px;var bm=m}}
+    if(best<0||bm+D*.9>h*.97||bm>h*1.05*(1-Math.abs(best-w/2)/(w/2)))continue;
+    for(q=Math.max(0,best-rad|0);q<=Math.min(w,best+rad);q++){var e=(q-best)/rad,hh=bm+rad*.62+rad*.8*Math.sqrt(Math.max(0,1-e*e));if(hh>top[q])top[q]=hh}
+    var pts=[],n=6+(r()*4|0);for(k=0;k<n;k++){var an=k/n*6.283+r()*.4,rr=rad*(.8+r()*.24);pts.push([Math.cos(an)*rr,Math.sin(an)*rr*.9])}
+    list.push({x:best,y:h-bm-rad*.66,p:pts,c:['#8A9699','#77848A','#9AA5A6','#6A767C','#A3A69F'][r()*5|0],d:i/lim*900})}
+  stones=list;
+  var rl=$('ruler'),o='',step=innerWidth<900?100:100,tot=innerWidth<900?380:600;for(i=0;i<tot;i+=step)o+='<span style="position:absolute;left:'+(i/tot*100)+'%">'+i+(i?'':'&nbsp;мм')+'</span>';rl.innerHTML=o;rl.style.height='30px'}
+function paint(el){var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;cx.clearRect(0,0,w,h);
+  for(var i=0;i<stones.length;i++){var s=stones[i],p=Math.min(1,Math.max(0,(el-s.d)/420));if(p<=0)continue;var y=s.y-(1-p*p)*h;cx.beginPath();for(var k=0;k<s.p.length;k++)cx[k?'lineTo':'moveTo'](s.x+s.p[k][0],y+s.p[k][1]);cx.closePath();cx.fillStyle=s.c;cx.fill();if(cur>0){cx.lineWidth=cur>2?1.4:.7;cx.strokeStyle='rgba(20,36,48,.5)';cx.stroke()}}}
+function pour(){lay();var t=++t0;if(R)return paint(9999);var s=performance.now();(function f(n){if(t!==t0)return;paint(n-s);if(n-s<1500)requestAnimationFrame(f)})(s)}
+FR.forEach(function(f,i){var b=document.createElement('button');b.type='button';b.textContent=f[0]+'–'+f[1];b.setAttribute('aria-pressed',i===cur);b.onclick=function(){cur=i;[].forEach.call($('frac').children,function(x,j){x.setAttribute('aria-pressed',j===i)});$('fr-go').textContent='Заказать щебень '+b.textContent;pour()};$('frac').appendChild(b)});
+KIT.onView(cv,function(v){if(v&&!drawn){drawn=true;pour()}},{threshold:.2});
+var rz;addEventListener('resize',function(){if(!drawn)return;clearTimeout(rz);rz=setTimeout(function(){lay();paint(9999)},200)});
+$('fr-go').onclick=function(){$('fr-h').value='Щебень '+FR[cur][0]+'–'+FR[cur][1];var x=document.querySelector('[data-k=bulk]');if(!x.checked){x.checked=true;x.dispatchEvent(new Event('change',{bubbles:true}))}sum()};
+/*done*/$('reqf').addEventListener('submit',function(){var o=this.querySelector('.done');setTimeout(function(){o.scrollIntoView({block:'center',behavior:R?'auto':'smooth'})},30)});
+});
+</script>
+</body>
+</html>

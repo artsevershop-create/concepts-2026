@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ИНКОМнефть — ремонт скважин и зарезка боковых стволов, Нижневартовск</title>
+<meta name="description" content="Концепция редизайна сайта АО «ИНКОМнефть»: текущий и капитальный ремонт, освоение скважин, зарезка боковых стволов в ХМАО и ЯНАО. Учебный центр и автошкола.">
+<link rel="icon" href="img/logo.svg">
+<link rel="preload" href="../../kit/fonts/montserrat-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--green:#009846;--lacq:#00753A;--lacq-d:#004A26;--cop:#AF7E39;--cop-l:#D9A860;--cop-d:#7B531C;--paper:#F3ECDB;--paper-2:#E9DFC8;--ink:#2B2A29;
+  --bg:var(--paper);--fg:var(--ink);--muted:#665F52;--accent:var(--lacq);--accent-h:var(--lacq-d);--r:12px;
+  --f-display:"Montserrat",system-ui,sans-serif;--f-text:"Commissioner",system-ui,sans-serif;--hdr-h:88px}
+h1,h2,h3{font-weight:800;letter-spacing:-.035em;line-height:1.02}
+h2{font-size:clamp(34px,4.6vw,68px)}
+.lead{font-size:clamp(18px,1.4vw,21px);line-height:1.5}
+/* шапка */
+.hdr{background:#fff;color:var(--ink)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(16px,2.2vw,36px)}
+.hdr img{height:68px;width:auto}
+.seg{display:flex;border:2px solid var(--ink);border-radius:var(--r);overflow:hidden;font:700 15px/1 var(--f-display);letter-spacing:-.01em}
+.seg a{min-height:44px;padding:0 18px;display:flex;align-items:center;text-decoration:none;white-space:nowrap;transition:background-color .3s,color .3s}
+.seg a+a{border-left:2px solid var(--ink)}
+.seg a:hover{background:var(--paper)}
+.seg [aria-current=true]{background:var(--lacq);color:#fff}
+.seg a+a[aria-current=true]{background:var(--cop-l);color:var(--ink)}
+.hdr nav{display:flex;gap:clamp(16px,2vw,32px);margin-left:auto;font-weight:500;white-space:nowrap}
+.hdr nav a{text-decoration:none;padding:12px 0;box-shadow:inset 0 -2px 0 transparent;transition:box-shadow .3s}
+.hdr nav a:hover{box-shadow:inset 0 -2px 0 var(--cop)}
+.hdr nav .seg-m{display:none}
+.hdr .tel{font-weight:700;text-decoration:none;white-space:nowrap;min-width:8.6em;text-align:right;line-height:1.25;min-height:44px;display:grid;align-content:center}
+.hdr .tel small{display:block;font-weight:400;font-size:13px;line-height:1.2;color:var(--muted)}
+/* первый экран: лак */
+.hero{position:relative;color:#FFFBF0;padding-top:var(--hdr-h);min-height:min(100svh,960px);display:grid;grid-template-rows:1fr auto;overflow:clip;isolation:isolate;
+  background:radial-gradient(120% 70% at 78% -12%,#2FB873 0,#0A9A4D 22%,transparent 60%),linear-gradient(176deg,#008A43 0,#00753A 48%,#005A2C 100%)}
+.hero::before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(101deg,transparent 38%,rgba(255,255,255,.10) 38.2%,rgba(255,255,255,.03) 52%,transparent 52.2%)}
+.hero-t{width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,430px);gap:24px clamp(24px,4vw,72px);align-items:center;padding-block:clamp(24px,4.4vh,56px)}
+h1{font-size:clamp(39px,6.1vw,96px);font-weight:900;line-height:.98}
+h1 span{display:block}
+.hero .lead{margin-top:clamp(16px,2.4vh,28px);max-width:33em}
+.doors{display:grid;gap:6px;justify-items:center}
+.door{display:grid;place-content:center;text-align:center;text-decoration:none;color:var(--ink);min-height:112px;width:100%;clip-path:polygon(0 0,100% 0,calc(100% - 34px) 100%,34px 100%);background:#FFFBF0;padding:10px 46px;transition:background-color .35s,transform .5s var(--e-smooth)}
+.door b{font:800 clamp(24px,2vw,31px)/1.05 var(--f-display);letter-spacing:-.03em}
+.door span{font-size:16px;line-height:1.35;margin-top:4px}
+.door+.door{width:calc(100% - 80px);background:var(--cop-l);padding-inline:40px}
+.door:hover{transform:translateY(4px)}
+.door:focus-visible{outline-offset:-10px;outline-color:var(--ink)}
+.hero-b{position:relative;display:flex;align-items:flex-end}
+.shot{position:relative;flex:none;width:min(79vw,1400px);aspect-ratio:1170/352;clip-path:polygon(0 0,100% 0,calc(100% - 8.5%) 100%,0 100%);overflow:hidden;background:#EEF0F0}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:0 46%}
+.facts{flex:1;align-self:center;min-width:0;padding:0 var(--gutter) 0 0;display:grid;gap:22px;margin-left:-3.2vw;justify-items:end;text-align:right}
+.facts b{display:block;font:800 clamp(26px,2.5vw,40px)/1 var(--f-display);letter-spacing:-.04em;color:#FFE2B0}
+.facts span{font-size:16px;line-height:1.3;display:block;margin-top:4px}
+@media (prefers-reduced-motion:no-preference){
+  .js .shot img{animation:drive 2.2s var(--e-smooth) both}
+  .js .door{animation:drop 1.1s var(--e-smooth) both}.js .door+.door{animation-delay:.14s}
+  .js h1 span{animation:slide 1.2s var(--e-smooth) both}.js h1 span+span{animation-delay:.1s}
+}
+@keyframes drive{from{transform:translateX(-7%) scale(1.02)}}
+@keyframes drop{from{transform:translateY(-26px)}}
+@keyframes slide{from{transform:translateX(-.3em)}}
+/* профиль ствола */
+.bore{position:relative;background:
+  repeating-linear-gradient(0deg,transparent 0 47px,rgba(43,42,41,.055) 47px 48px),repeating-linear-gradient(90deg,transparent 0 47px,rgba(43,42,41,.055) 47px 48px),var(--paper);overflow:clip}
+.bore .stage{position:relative;height:1650px}
+.bore svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.bore-h{position:absolute;left:max(var(--gutter),calc(50% - var(--wrap)/2));top:clamp(64px,7vw,110px);width:min(50vw,700px)}
+.bore-h p{margin-top:20px;max-width:27em;color:var(--muted)}
+.st{position:absolute;width:340px}
+.st h3{font-size:clamp(21px,1.75vw,27px);line-height:1.12}
+.st p{font-size:16px;line-height:1.4;color:var(--muted);margin-top:8px}
+.st a{display:inline-flex;align-items:center;min-height:44px;margin-top:4px;font-weight:600;color:var(--lacq);text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 80%/100% 1px no-repeat;transition:background-size .4s var(--e-smooth)}
+.st a:hover{background-size:0 1px}
+.st::before{content:"";position:absolute;top:15px;width:56px;height:2px;background:var(--ink);transform-origin:var(--from) 50%;transition:transform .6s var(--e-smooth)}
+.st.r::before{right:calc(100% + 14px);--from:0%}
+.st.l{text-align:right}.st.l::before{left:calc(100% + 14px);--from:100%}
+.st.b::before,.st.t::before{display:none}
+@media (prefers-reduced-motion:no-preference){
+  .js .st>*{opacity:0;transform:translateX(var(--dx,-24px));transition:opacity .7s .15s,transform .9s .15s var(--e-smooth),background-size .4s}
+  .js .st.l>*{--dx:24px}
+  .js .st:not(.on)::before{transform:scaleX(0)}
+  .js .st.on>*{opacity:1;transform:none}
+}
+/* парк */
+.park{background:linear-gradient(180deg,#00592D,#004223);color:#FFFBF0;--muted:#BBD8C5}
+.park-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,88px);align-items:center}
+.park .n{font:900 clamp(92px,13.4vw,220px)/.8 var(--f-display);letter-spacing:-.06em;color:#FFE2B0;display:block}
+.park h2{font-size:clamp(28px,2.9vw,44px);margin-top:20px}
+.park p{margin-top:18px;max-width:30em;color:#E3F0E6}
+.lot canvas{width:100%;height:auto;aspect-ratio:30/17;touch-action:pan-y;cursor:crosshair}
+.lot figcaption{margin-top:12px;font-size:15px;color:var(--muted)}
+.base{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.base li{border:2px solid rgba(255,251,240,.55);border-radius:var(--r);padding:9px 16px;font-weight:600}
+.cust{position:absolute;right:max(var(--gutter),calc(50% - var(--wrap)/2));bottom:110px;width:min(34vw,480px);display:grid;gap:10px;border-top:5px solid var(--ink);padding-top:20px}
+.cust span{color:var(--muted)}
+.cust b{font:800 clamp(24px,2.5vw,38px)/1.1 var(--f-display);letter-spacing:-.03em}
+/* медные таблички */
+.aw{background:var(--ink);color:#F6EEDD;--muted:#B9AF9B}
+.aw h2{max-width:13em}
+.plates{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;margin-top:clamp(32px,4.4vw,64px)}
+.plate{position:relative;border-radius:8px;padding:clamp(26px,3vw,46px) clamp(26px,3vw,46px) clamp(30px,3vw,44px);color:#2A1B06;display:flex;flex-direction:column;gap:12px;justify-content:flex-end;min-height:250px;overflow:hidden;
+  background:linear-gradient(var(--a,118deg),#A06D2B 0,#C9944B 18%,#E6BE7F 33%,#C9964F 52%,#DDB071 74%,#B4803A 100%);box-shadow:inset 0 0 0 2px rgba(255,236,200,.4),inset 0 0 0 10px rgba(66,40,8,.22)}
+.plate::before{content:"";position:absolute;inset:0;pointer-events:none;--g:radial-gradient(circle,#4c300b 0 3px,#f3d7a4 3.5px 5px,transparent 5.5px);background:var(--g) 0 0/44px 44px no-repeat,var(--g) 100% 0/44px 44px no-repeat,var(--g) 0 100%/44px 44px no-repeat,var(--g) 100% 100%/44px 44px no-repeat}
+.plate::after{content:"";position:absolute;inset:-20% -60%;background:linear-gradient(100deg,transparent 44%,rgba(255,247,225,.5) 50%,transparent 56%);transform:translateX(calc(var(--s,-.4)*100%));transition:transform 1.2s var(--e-smooth);pointer-events:none}
+.plate.in::after,.plate:hover::after{--s:.45}
+.plate h3{font-size:clamp(23px,2.1vw,33px);line-height:1.08}
+.plate p{font-weight:500;line-height:1.4}
+.plate:nth-child(1){grid-column:1/8;grid-row:1/3;min-height:440px}.plate:nth-child(1) h3{font-size:clamp(30px,3.7vw,56px)}
+.plate:nth-child(2),.plate:nth-child(3){grid-column:8/13}.plate:nth-child(4){grid-column:1/13;min-height:0}
+.iso{margin-top:28px;color:var(--muted);max-width:48em}
+/* учебный центр */
+.edu{background:#FFFBF0}
+.edu-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px clamp(28px,5vw,88px);align-items:end}
+.edu-i{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 22px}
+.edu-i dt{color:var(--muted)}.edu-i dd a{font-weight:700;display:inline-flex;align-items:center;min-height:44px;margin-block:-8px}
+.tabs{display:flex;gap:6px;margin-top:clamp(30px,4vw,56px);border-bottom:2px solid var(--ink)}
+.tabs button{min-height:54px;padding:0 clamp(14px,2vw,30px);font:700 clamp(16px,1.3vw,19px)/1.15 var(--f-display);letter-spacing:-.02em;border-radius:var(--r) var(--r) 0 0;background:var(--paper)}
+.tabs [aria-selected=true]{background:var(--cop-l)}
+.edu-g{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,4vw,72px);margin-top:26px;align-items:start}
+.cr{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:4px 16px;align-items:center;min-height:64px;padding:13px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.cr input{width:24px;height:24px;margin:0;accent-color:var(--lacq)}
+.cr b{font-weight:600;font-size:18px;line-height:1.3}
+.cr .pr{font:700 19px/1 var(--f-display);letter-spacing:-.02em}
+.cr .br{grid-column:2/4;display:flex;align-items:center;gap:12px;font-size:15px;line-height:1.3;color:var(--muted)}
+.cr .br i{display:flex;height:12px;width:calc(var(--w)*52%);flex:none;border-radius:6px;overflow:hidden;background:var(--lacq)}
+.cr .br i::after{content:"";width:calc(var(--pr)*100%);margin-left:auto;background:var(--cop-l)}
+.cr:has(:checked){background:linear-gradient(90deg,var(--paper),transparent)}
+.key{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:14px;font-size:15px;color:var(--muted)}
+.key[hidden]{display:none}
+.key span::before{content:"";display:inline-block;width:22px;height:12px;border-radius:6px;background:var(--c);margin-right:8px}
+.edu form,.req form{display:grid;gap:16px}
+.edu form{background:var(--paper);border:2px solid var(--ink);border-radius:20px;padding:clamp(20px,2.2vw,34px);position:sticky;top:calc(var(--hdr-h) + 16px)}
+.edu form h3{font-size:28px}
+.edu .field input{background:#FFFDF6;border-color:rgba(43,42,41,.45)}
+.pick{font-weight:600;line-height:1.35}.pick small{display:block;font-weight:400;font-size:15px;color:var(--muted)}
+.done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;margin:16px 0}.done dt{color:var(--muted)}
+.done h3{font-size:28px}
+/* заявка */
+.req{background:linear-gradient(172deg,#007F3E,#00582B);color:#FFFBF0;--muted:#DDEFE2;--line:rgba(255,251,240,.5);--accent:var(--cop-l);--accent-h:#FFE2B0;--on-accent:#2A1B06}
+.req-g{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,110px)}
+.req form{grid-template-columns:repeat(2,minmax(0,1fr))}.req .full{grid-column:1/-1}
+.chips{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px;min-width:0}
+.chips legend{font-size:14px;color:var(--muted);margin-bottom:8px;padding:0}
+.chips label{position:relative;cursor:pointer}
+.chips input{position:absolute;opacity:0;inset:0}
+.chips span{display:flex;align-items:center;min-height:44px;padding:7px 15px;border-radius:var(--r);border:1.5px solid var(--line);font-size:16px;line-height:1.2;transition:background-color .25s,color .25s}
+.chips :checked+span{background:#FFE2B0;color:#2A1B06;border-color:#FFE2B0}
+.chips :focus-visible+span{outline:3px solid #FFE2B0;outline-offset:2px}
+.who{margin-top:34px;display:grid;gap:20px}
+.who b{display:block;font:700 19px/1.2 var(--f-display)}
+.who a{display:inline-flex;min-height:44px;align-items:center}
+.ftr{background:var(--ink);color:#D9CFBB;padding:34px 0 40px;font-size:15px}
+.ftr .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 60px}
+.ftr .num{white-space:normal}
+@media (max-width:1180px){.hdr nav{gap:16px;font-size:16px}.hdr .tel{display:none}}
+@media (max-width:900px){
+  :root{--hdr-h:72px}
+  .hdr img{height:54px}.hdr>.wrap>.seg{display:none}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:#fff;flex-direction:column;gap:2px;padding:22px var(--gutter);font:800 27px/1.1 var(--f-display);letter-spacing:-.03em;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  .hdr nav .seg-m{display:grid;gap:8px;margin-bottom:18px}.seg-m a{padding:16px 18px!important;border-radius:var(--r);background:var(--lacq);color:#fff}.seg-m a+a{background:var(--cop-l);color:var(--ink)}
+  [data-burger]{margin-left:auto}
+  .hero{min-height:0}
+  .hero-t{grid-template-columns:minmax(0,1fr);padding-block:54px 26px}
+  .door{min-height:96px;padding-inline:36px}.door span{font-size:15px}.door+.door{width:calc(100% - 60px)}
+  .hero-b{display:block}
+  .shot{width:100%;aspect-ratio:390/262;clip-path:polygon(0 0,100% 0,90% 100%,0 100%)}
+  .shot img{object-position:26% 46%}
+  .facts{margin:0;padding:22px var(--gutter) 26px;grid-template-columns:repeat(2,minmax(0,1fr));justify-items:start;text-align:left;gap:14px}.facts b{font-size:22px;white-space:nowrap}
+  .bore .stage{height:auto;padding:56px var(--gutter) 70px}
+  .bore-h{position:static;width:auto;margin-bottom:38px}
+  .st,.st.l{position:relative;width:auto;left:auto!important;top:auto!important;text-align:left;padding:0 0 26px 52px;min-height:120px}
+  .st::before{display:none}
+  .st.side{padding:0 56px 26px 0}
+  .st.side.first{margin-top:150px}
+  .st.art{margin-top:60px;padding:22px 0 0;border-top:2px solid var(--ink);min-height:0}
+  .cust{position:static;width:auto;margin-top:44px}
+  .park-g,.edu-top,.edu-g,.req-g{grid-template-columns:minmax(0,1fr)}
+  .lot canvas{aspect-ratio:20/21}
+  .plates{grid-template-columns:minmax(0,1fr)}.plate:nth-child(n){grid-column:auto;grid-row:auto;min-height:210px}
+  .edu-i{grid-template-columns:minmax(0,1fr);gap:0}.edu-i dd{margin-bottom:12px}
+  .tabs button{flex:1;padding:8px 6px;font-size:16px}
+  .cr .br i{width:calc(var(--w)*46%)}
+  .edu form{position:static}
+  .req form,.ftr .wrap{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="ИНКОМнефть, на главную"><img src="img/logo.svg" alt="ИНКОМнефть" width="989" height="790"></a>
+  <div class="seg"><a href="#bore" data-route="field" aria-current="true">Промысел</a><a href="#edu" data-route="edu">Учебный центр</a></div>
+  <nav data-menu aria-label="Основное меню"><div class="seg-m"><a href="#bore">Промысел</a><a href="#edu">Учебный центр</a></div><a href="#bore">Работы</a><a href="#park">Парк и&nbsp;базы</a><a href="#awards">Награды</a><a href="#req">Контакты</a></nav>
+  <a class="tel num" id="tel" href="tel:+73466457570"><small>Приёмная</small>(3466) 45-75-70</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-t">
+    <div>
+      <h1><span>Ремонт скважин</span> <span>и&nbsp;боковые стволы</span></h1>
+      <p class="lead">АО «ИНКОМнефть» из&nbsp;Нижневартовска. Капитальный и&nbsp;текущий ремонт, освоение после бурения, зарезка боковых стволов.</p>
+    </div>
+    <div class="doors">
+      <a class="door" href="#bore"><b>Промысел</b><span>ремонт, освоение, боковые стволы</span></a>
+      <a class="door" href="#edu"><b>Учебный центр</b><span>курсы и&nbsp;автошкола</span></a>
+    </div>
+  </div>
+  <div class="hero-b">
+    <div class="shot" id="shot"><img src="img/ph/03.webp" alt="Зелёный КрАЗ с подъёмной установкой ИНКОМнефти, бригада у фонтанной арматуры" width="1170" height="390" fetchpriority="high"></div>
+    <div class="facts">
+      <div><b class="num">более 40&nbsp;лет</b><span>в&nbsp;нефтегазовой промышленности</span></div>
+      <div><b>ХМАО, ЯНАО</b><span>регионы работы</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bore" id="bore"><div class="stage" id="stage">
+  <svg id="svg" aria-hidden="true"></svg>
+  <div class="bore-h"><h2 data-split>По&nbsp;стволу до&nbsp;нового забоя</h2><p class="lead">Ствол уходит вниз, через окно в&nbsp;колонне и&nbsp;вбок. На&nbsp;каждом участке своя работа.</p></div>
+  <ol id="sts">
+    <li class="st l" data-p="v1"><h3>Текущий ремонт скважин</h3><a href="#req" data-work="Текущий ремонт">Обсудить</a></li>
+    <li class="st l" data-p="v2"><h3>Капитальный ремонт скважин</h3><a href="#req" data-work="Капитальный ремонт">Обсудить</a></li>
+    <li class="st r" data-p="w"><h3>Вырезка окна</h3><p>С&nbsp;помощью силового вертлюга. Инженерное и&nbsp;технологическое сопровождение работ.</p><a href="#req" data-work="Вырезка окна">Обсудить</a></li>
+    <li class="st l side first" data-p="s1"><h3>Зарезка боковых стволов</h3><a href="#req" data-work="Зарезка боковых стволов">Обсудить</a></li>
+    <li class="st r side" data-p="s2"><h3>Нормализация забоя</h3><p>В&nbsp;эксплуатационных колоннах малого диаметра, винтовыми забойными двигателями в&nbsp;комплекте с&nbsp;долотом.</p><a href="#req" data-work="Нормализация забоя">Обсудить</a></li>
+    <li class="st t side" data-p="s3"><h3>Освоение скважин после бурения</h3><a href="#req" data-work="Освоение после бурения">Обсудить</a></li>
+    <li class="st b side" data-p="s4"><h3>Освоение и&nbsp;исследование азотной установкой</h3><a href="#req" data-work="Азотная установка">Обсудить</a></li>
+    <li class="st b art" data-p="art"><h3>Подземный ремонт артезианских скважин</h3><a href="#req" data-work="Артезианские скважины">Обсудить</a></li>
+  </ol>
+  <div class="cust" id="cust"><span>Основные заказчики</span><b>ПАО «НК&nbsp;Роснефть»</b><b>ПАО «Газпром&nbsp;нефть»</b><b>АО «ННК»</b></div>
+</div></section>
+
+<section class="sec park" id="park"><div class="wrap">
+  <div class="park-g">
+    <div><b class="n num" data-count>600</b><h2>и&nbsp;больше единиц автоспецтехники в&nbsp;парке</h2>
+      <p>В&nbsp;регионах работы у&nbsp;нас собственные производственные базы: обслуживаем бригады ТКРС и&nbsp;ЗБС, автоспецтехнику и&nbsp;нефтепромысловое оборудование.</p>
+      <ul class="base" aria-label="Что есть на базах"><li>АБК</li><li>Общежитие</li><li>РММ</li><li>БПО</li><li>Оборудование и&nbsp;инструмент</li></ul></div>
+    <figure class="lot"><canvas id="lot" role="img" aria-label="Стоянка, вид сверху: 600 машин"></canvas><figcaption>На&nbsp;этой стоянке 600&nbsp;машин. Проведите по&nbsp;ней: включатся фары.</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="sec aw" id="awards"><div class="wrap">
+  <h2 data-split>Награды от&nbsp;заказчиков и&nbsp;округа</h2>
+  <div class="plates">
+    <article class="plate" data-reveal><h3>Лучшая компания капитального ремонта скважин</h3><p>ТНК-ВР, по&nbsp;итогам работы <span class="num">2011–2012</span>&nbsp;гг. За&nbsp;охрану труда и&nbsp;безопасное производство, модернизацию и&nbsp;стабильно высокие показатели операционной деятельности.</p></article>
+    <article class="plate" data-reveal style="--a:74deg"><h3>I&nbsp;место по&nbsp;ОТ, ПБ и&nbsp;ООС</h3><p>ОАО «Самотлорнефтегаз». Звание партнёра в&nbsp;области охраны труда, промышленной безопасности и&nbsp;охраны окружающей среды.</p></article>
+    <article class="plate" data-reveal style="--a:146deg"><h3>Золотая медаль</h3><p>Конкурс «100 лучших организаций России. Экология и&nbsp;промышленная безопасность», Санкт‑Петербург, 2010.</p></article>
+    <article class="plate" data-reveal style="--a:98deg"><h3>Лучшая бригада текущего и&nbsp;капитального ремонта скважин</h3><p>Бригада №&nbsp;33, мастер Мирзаахмедов Бахтиёржон Кахаржанович. Диплом III&nbsp;степени, Ноябрьск, 2012.</p></article>
+  </div>
+  <p class="iso">Действуют системы менеджмента качества, экологического менеджмента и&nbsp;менеджмента безопасности труда и&nbsp;охраны здоровья.</p>
+</div></section>
+
+<section class="sec edu" id="edu"><div class="wrap">
+  <div class="edu-top">
+    <h2 data-split>Учебный центр и&nbsp;автошкола</h2>
+    <dl class="edu-i"><dt>Телефон</dt><dd><a class="num" href="tel:+73466415046">(3466) 41-50-46</a></dd><dt>Адрес</dt><dd>Нижневартовск, ул.&nbsp;Мира, 36, помещение 1015</dd><dt>Часы</dt><dd>пн–чт 8:00–17:30, пт 8:00–12:00</dd><dt>Форма</dt><dd>очная, группы собираем по&nbsp;мере поступления заявок</dd></dl>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Направление обучения"><button role="tab" aria-selected="true" data-tab="auto">Автошкола</button><button role="tab" aria-selected="false" data-tab="prof">Рабочие программы</button><button role="tab" aria-selected="false" data-tab="ot">Охрана труда</button></div>
+  <div class="edu-g">
+    <div><div id="crs" role="tabpanel" aria-live="polite"></div><div class="key" id="key"><span style="--c:var(--lacq)">теория</span><span style="--c:var(--cop-l)">практика</span></div></div>
+    <form data-demo-form>
+      <h3>Записаться</h3>
+      <p class="pick" id="pick"></p><input type="hidden" name="Программа" id="f-crs">
+      <label class="field"><span>Имя</span><input name="Имя" required autocomplete="name"></label>
+      <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+      <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+      <button class="btn">Отправить в&nbsp;учебный центр</button>
+      <div class="done" role="status"><h3>Заявка в&nbsp;учебный центр</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+    </form>
+  </div>
+</div></section>
+
+<section class="sec req" id="req"><div class="wrap req-g">
+  <div><h2 data-split>Заявка на&nbsp;работы</h2>
+    <div class="who">
+      <div><b>Приёмная</b><a class="link num" href="tel:+73466457570">(3466) 45-75-70</a><br><a class="link" href="mailto:info@inkomneft.ru">info@inkomneft.ru</a></div>
+      <div><b>Диспетчер</b><a class="link num" href="tel:+73466457495">(3466) 45-74-95</a></div>
+      <div><b>Факс</b><span class="num">(3466) 43-49-56</span></div>
+      <div><b>Офис</b>628611, Нижневартовск, ул.&nbsp;Мира, 60, А, 34</div>
+    </div></div>
+  <form data-demo-form>
+    <fieldset class="chips full" id="chips"><legend>Какие работы нужны</legend></fieldset>
+    <label class="field"><span>Регион</span><select name="Регион"><option>ХМАО</option><option>ЯНАО</option></select></label>
+    <label class="field"><span>Месторождение, куст</span><input name="Объект" autocomplete="off"></label>
+    <label class="field"><span>Компания и&nbsp;имя</span><input name="Контакт" required autocomplete="organization"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+    <button class="btn full" data-magnetic>Отправить заявку</button>
+    <div class="done full" role="status"><h3>Заявка на&nbsp;info@inkomneft.ru</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+  </form>
+</div></section>
+</main>
+<footer class="ftr"><div class="wrap"><span>АО «Инвестиционная нефтяная компания» (АО&nbsp;«ИНКОМнефть»), 628611, ХМАО – Югра, г.&nbsp;Нижневартовск, ул.&nbsp;Мира, 60, А, 34</span><span class="num">ИНН 8620001545, КПП 860301001, р/с 40702810500000001074 в&nbsp;АО БАНК «Ермак» г.&nbsp;Нижневартовск, к/с 30101810000000000742, БИК 047169742</span></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73466457570">Позвонить</a><a class="btn" href="#req">Заявка</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+  /* ── боковой ствол: путь строится по размеру секции, начало под фонтанной арматурой на фото ── */
+  var stage=$('#stage'),svg=$('#svg'),sts=$$('.st'),P=null,tab=[],tip,len=0,nodes=[];
+  function build(){
+    var W=stage.clientWidth,H=stage.clientHeight,mob=innerWidth<=900,sh=$('#shot').getBoundingClientRect(),x0,yw,d,pos,casing,k=mob?.62:1,C='#2B2A29',art='',side;
+    if(W<50||H<50)return;
+    var hw=26*k;
+    if(!mob){
+      x0=Math.min(W-430,Math.round(sh.left+sh.width*.771));yw=670;
+      var xe=Math.max(90,W*.085),ye=1500,mx=x0-W*.2,my=1085;
+      d='M'+x0+' -40V'+yw+'C'+x0+' '+(yw+190)+','+(x0-W*.07)+' '+(my-120)+','+mx+' '+my+'S'+(xe+W*.2)+' '+(ye-70)+','+xe+' '+ye;
+      casing=[0,1010];side=-1;
+      pos={v1:360,v2:505,w:yw+30,s1:905,s2:1140,s3:1270,s4:1440};
+      var ax=Math.min(W-70,x0+W*.2);
+      art='<path d="M'+(ax-15)+' 0V250M'+(ax+15)+' 0V250" stroke="'+C+'" stroke-width="4"/><path d="M'+ax+' 0V258" stroke="#009846" stroke-width="10"/><path d="M'+(ax-34)+' 268h68M'+(ax-22)+' 280h44M'+(ax-10)+' 292h20" stroke="#009846" stroke-width="3" stroke-linecap="round"/>';
+      pos.art=[ax,300];
+    }else{
+      x0=34;side=1;var Y=function(n){return sts[n].offsetTop+14},xr=W-34,yt=Y(3)-70;
+      yw=Y(2)+70;
+      d='M'+x0+' '+(Y(0)-34)+'V'+(yw+10)+'C'+x0+' '+(yw+150)+','+xr+' '+(yt-70)+','+xr+' '+(yt+60)+'V'+(Y(6)+50)+'q0 78 -78 78H'+(W*.2);
+      casing=[Y(0)-34,yt+30];
+      pos={v1:Y(0),v2:Y(1),w:Y(2),s1:Y(3),s2:Y(4),s3:Y(5),s4:Y(6)};
+    }
+    var a=x0+side*hw,b=x0-side*hw;
+    var cas='<path d="M'+a+' '+casing[0]+'V'+(yw-6)+'M'+a+' '+(yw+150*k)+'V'+casing[1]+'M'+b+' '+casing[0]+'V'+casing[1]+'" stroke="'+C+'" stroke-width="'+(5*k)+'" fill="none"/><path d="M'+x0+' '+(yw+170*k)+'V'+casing[1]+'" stroke="'+C+'" stroke-width="2" stroke-dasharray="3 9" opacity=".55"/>';
+    var wedge='<path d="M'+(x0+side*hw*.8)+' '+(yw+150*k)+'H'+(x0-side*hw*.86)+'V'+(yw-34*k)+'Q'+(x0-side*hw*.5)+' '+(yw+80*k)+' '+(x0+side*hw*.8)+' '+(yw+150*k)+'Z" fill="#AF7E39" stroke="'+C+'" stroke-width="2"/>';
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.innerHTML=cas+art+[['#007A3B',38],['#0FA655',28],[C,15],['#E0B574',10]].map(function(s){return '<path class="p" d="'+d+'" fill="none" stroke="'+s[0]+'" stroke-width="'+s[1]*k+'"/>'}).join('')+wedge+'<g id="nd"></g><g id="tip"><g transform="scale('+k+')"><path d="M-24-30H24L19 4H-19Z" fill="#AF7E39" stroke="'+C+'" stroke-width="3"/><path d="M-22 4H22L13 24l-6 9-7-9-7 9-6-9Z" fill="'+C+'"/></g></g>';
+    P=[].slice.call(svg.querySelectorAll('.p'));len=P[0].getTotalLength();tip=svg.querySelector('#tip');
+    P.forEach(function(p){p.style.strokeDasharray=len+' '+(len+200)});
+    tab=[];for(var i=0;i<=400;i++){var q=P[0].getPointAtLength(len*i/400);tab.push([q.x,q.y])}
+    nodes=[];var nd='';
+    sts.forEach(function(s){
+      var v=pos[s.dataset.p],x,y,i=0;if(v==null){nodes.push(null);return}
+      if(v[0]){x=v[0];y=v[1];nodes.push(-1)}
+      else{while(i<400&&tab[i][1]<v)i++;x=tab[i][0];y=tab[i][1];nodes.push(i);nd+='<circle class="n" cx="'+x+'" cy="'+y+'" r="'+11*k+'" fill="#FFFBF0" stroke="'+C+'" stroke-width="4"/>'}
+      if(mob)return;
+      var w=s.offsetWidth,l,t=y-15,c=s.classList;
+      if(v[0]){l=Math.min(x-60,W-w-32);t=y+10}
+      else if(c.contains('r'))l=x+92;else if(c.contains('l'))l=x-92-w;
+      else if(c.contains('t')){l=x-w+20;t=y-150}else{l=x-30;t=y+58}
+      s.style.left=Math.max(32,l)+'px';s.style.top=t+'px';
+    });
+    svg.querySelector('#nd').innerHTML=nd;draw();
+  }
+  function draw(){
+    if(!P)return;var y=innerHeight*(innerWidth<=900?.8:.66)-stage.getBoundingClientRect().top,i=0;
+    if(KIT.REDUCED||y>tab[400][1])i=400;else while(i<400&&tab[i][1]<y)i++;
+    P.forEach(function(p){p.style.strokeDashoffset=(len*(1-i/400)).toFixed(1)});
+    var a=tab[Math.max(0,i-3)],b=tab[Math.max(1,i)];
+    tip.setAttribute('transform','translate('+b[0].toFixed(1)+' '+b[1].toFixed(1)+') rotate('+(Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI-90).toFixed(1)+')');
+    var c=svg.querySelectorAll('.n'),q=0;
+    sts.forEach(function(s,j){var n=nodes[j];s.classList.toggle('on',n==null||n<=i);if(n>=0&&n!=null)c[q++].setAttribute('fill',n<=i?'#E0B574':'#FFFBF0')});
+  }
+  var tick=false,vis=false;KIT.onView(stage,function(v){vis=v;if(v)draw()},{rootMargin:'30% 0px'});
+  addEventListener('scroll',function(){if(vis&&!tick){tick=true;requestAnimationFrame(function(){tick=false;draw()})}},{passive:true});
+  new ResizeObserver(build).observe(stage);document.fonts&&document.fonts.ready.then(build);
+  /* ── стоянка: 600 машин ── */
+  (function(){
+    var c=$('#lot'),x=c.getContext('2d'),W,H,cols,rows,mx=-999,my=-999,p=KIT.REDUCED?1:0,id=0;
+    function size(){var r=c.getBoundingClientRect();if(r.width<20)return;var dp=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;c.width=W*dp;c.height=H*dp;x.setTransform(dp,0,0,dp,0,0);cols=W<520?20:30;rows=600/cols;paint()}
+    function paint(){
+      if(!W)return;x.clearRect(0,0,W,H);var cw=W/cols,ch=H/rows,w=cw*.74,h=ch*.6,R=Math.max(70,W*.13);
+      for(var i=0;i<600;i++){var a=i%cols,b=(i/cols)|0,k=Math.min(1,Math.max(0,p*1.9-b/rows*.9)),e=1-Math.pow(1-k,3);if(k<=0)continue;
+        var X=a*cw+(cw-w)/2-(1-e)*W*(.3+a/cols*.2),Y=b*ch+(ch-h)/2,D=Math.hypot(X+w/2-mx,Y+h/2-my),g=D<R?1-D/R:0,v=(i*7919%13)/13;
+        if(g>0){x.fillStyle='rgba(255,226,160,'+(g*.55).toFixed(2)+')';x.beginPath();x.moveTo(X+w,Y+h*.2);x.lineTo(X+w+cw*1.1,Y-h*.3);x.lineTo(X+w+cw*1.1,Y+h*1.3);x.lineTo(X+w,Y+h*.8);x.fill()}
+        x.fillStyle=g>.15?'#D9A860':'hsl(149,'+(58+v*18)+'%,'+(31+v*13)+'%)';x.fillRect(X,Y,w*.68,h);
+        x.fillStyle=g>.15?'#FFE9BF':'hsl(147,52%,'+(56+v*12)+'%)';x.fillRect(X+w*.74,Y+h*.06,w*.26,h*.88);}
+    }
+    function q(){if(!id)id=requestAnimationFrame(function(){id=0;paint()})}
+    new ResizeObserver(size).observe(c);
+    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;q()});
+    c.addEventListener('pointerleave',function(){mx=my=-999;q()});
+    if(p<1){var io=new IntersectionObserver(function(es){if(es[es.length-1].isIntersecting){io.disconnect();var t0=performance.now();(function s(t){p=Math.min(1,Math.max(0,(t-t0)/2200));paint();if(p<1)requestAnimationFrame(s)})(t0)}},{threshold:.25});io.observe(c)}
+  })();
+  /* ── заявка: виды работ ── */
+  $$('[data-work]').forEach(function(a){var l=document.createElement('label');l.innerHTML='<input type="checkbox" name="Работы"><span></span>';l.firstChild.value=a.dataset.work;l.lastChild.textContent=a.dataset.work;$('#chips').appendChild(l);a.addEventListener('click',function(){l.firstChild.checked=true});a.setAttribute('aria-label','Обсудить: '+a.dataset.work)});
+  /* ── курсы: страницы «Платные образовательные услуги» и «Образование» ── */
+  var K={auto:[['Категория «В»','208/206 ч','148 ч теории, 60/58 ч практики',208,60/208,'60 000 ₽'],['Категория «С»','262 ч','186 ч теории, 76 ч практики',262,76/262,'60 000 ₽'],['Категория «СЕ»','47 ч','19 ч теории, 28 ч практики',47,28/47,'60 000 ₽'],['Категория «D»','314 ч','210 ч теории, 104 ч практики',314,104/314,'60 000 ₽']],
+    prof:[['Стропальщик, 80 часов','80 ч','',80,0,'3 000 ₽'],['Стропальщик, 160 часов','160 ч','',160,0,'5 500 ₽'],['Первая помощь пострадавшим на производстве','20 ч','',20,0,'1 000 ₽']],
+    ot:[['Обучение по охране труда (программа А)'],['Безопасные методы при воздействии вредных и (или) опасных производственных источников опасностей (программа Б)'],['Безопасные методы и приёмы работ повышенной опасности (программа В)'],['Использование средств индивидуальной защиты'],['Первая помощь пострадавшим, 16 часов']]};
+  function pick(r){var p=$('#pick');p.innerHTML='<span></span><small></small>';p.firstChild.textContent=r[0];p.lastChild.textContent=r[5]?r[1]+', '+r[5]:'Стоимость подскажут в учебном центре';$('#f-crs').value=(r[4]?'Водитель, ':'')+r[0]+(r[5]?', '+r[5]:'')}
+  function list(t){
+    var box=$('#crs');box.textContent='';$('#key').hidden=t!=='auto';
+    K[t].forEach(function(r,i){var l=document.createElement('label');l.className='cr';
+      l.innerHTML='<input type="radio" name="crs"'+(i?'':' checked')+'><b></b><span class="pr num">'+(r[5]||'')+'</span>'+(r[3]?'<span class="br"><i style="--w:'+(r[3]/314).toFixed(3)+';--pr:'+r[4].toFixed(3)+'"></i><span>'+(r[2]||r[1])+'</span></span>':'');
+      l.children[1].textContent=r[0];l.firstChild.addEventListener('change',function(){pick(r)});box.appendChild(l)});
+    pick(K[t][0]);
+  }
+  $$('[data-tab]').forEach(function(b){b.addEventListener('click',function(){$$('[data-tab]').forEach(function(o){o.setAttribute('aria-selected',o===b)});list(b.dataset.tab)})});list('auto');
+  /* ── два маршрута в шапке ── */
+  new IntersectionObserver(function(es){var e=es[es.length-1].isIntersecting,t=$('#tel');$$('[data-route]').forEach(function(a){a.setAttribute('aria-current',(a.dataset.route==='edu')===e)});t.href=e?'tel:+73466415046':'tel:+73466457570';t.innerHTML=e?'<small>Учебный центр</small>(3466) 41-50-46':'<small>Приёмная</small>(3466) 45-75-70'},{rootMargin:'-45% 0px -45% 0px'}).observe($('#edu'));
+});
+</script>
+</body>
+</html>

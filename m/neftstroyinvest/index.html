@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Нефтьстройинвест — кустовые основания, дороги, перевозки и флот, Нижневартовск</title>
+<meta name="description" content="Концепция редизайна сайта ЗАО «Нефтьстройинвест»: строительство кустовых оснований, дорожное строительство, транспортные услуги и речной флот в Югре.">
+<link rel="icon" href="img/logo.svg">
+<link rel="preload" href="../../kit/fonts/geologica-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--ink:#191C45;--ink-2:#262A60;--ink-3:#3A3F7D;--lav:#A9ACD0;--silver:#E4E5EC;--paper:#F5F5F8;--red:#CF1420;
+  --bg:var(--paper);--fg:var(--ink);--muted:#5A5D7C;--accent:var(--red);--accent-h:#A50E18;--r:0px;
+  --f-display:"Geologica",system-ui,sans-serif;--f-text:"Golos Text",system-ui,sans-serif;--hdr-h:96px}
+h1,h2,h3{font-weight:700;letter-spacing:-.035em;line-height:1.04}
+h2{font-size:clamp(34px,4.6vw,72px)}
+figure{overflow:clip}.mbar{background:var(--bg)}
+.hdr{background:var(--ink);color:#fff}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.6vw,44px);max-width:none}
+.hdr img{height:80px;width:auto}
+.hdr nav{display:flex;gap:clamp(16px,2.4vw,40px);margin-left:auto}
+.hdr nav a,.hdr .tel{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.hdr nav a{box-shadow:inset 0 -2px transparent;transition:box-shadow .3s}
+.hdr nav a:hover{box-shadow:inset 0 -2px var(--red)}
+.hdr .tel{font:600 18px var(--f-display)}
+/* грани: четыре входа */
+.stage{position:relative;margin-top:var(--hdr-h);height:calc(100svh - var(--hdr-h));min-height:640px;max-height:1000px;background:#fff;overflow:clip}
+.top{position:absolute;left:0;top:0;width:45%;height:60%;padding:clamp(22px,3.6vh,44px) 0 0 var(--gutter);z-index:4;pointer-events:none}
+.top>*{pointer-events:auto}
+h1{font-size:clamp(30px,3.15vw,52px);max-width:12.2em}
+.top p{margin-top:14px;max-width:27em;color:var(--muted);font-size:17px;line-height:1.5}
+.find{position:relative;margin-top:18px;width:min(460px,92%)}
+.find input{width:100%;height:56px;padding:0 18px 0 50px;border:2px solid var(--ink);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='none' stroke='%23191C45' stroke-width='2.4'%3E%3Ccircle cx='9' cy='9' r='7'/%3E%3Cpath d='m14.5 14.5 6 6'/%3E%3C/svg%3E") 16px 50% no-repeat;font-size:17px;border-radius:0}
+.find input:focus{outline:3px solid var(--red);outline-offset:0}
+.find ul{position:absolute;left:0;right:0;top:100%;background:#fff;border:2px solid var(--ink);border-top:0;max-height:320px;overflow:auto;z-index:9}
+.find li{padding:11px 16px;cursor:pointer;line-height:1.35;font-size:16px;border-top:1px solid var(--line);min-height:48px}
+.find li small{display:block;color:var(--muted);font-size:14px}
+.find li[aria-selected=true],.find li:hover{background:var(--silver)}
+.find mark{background:none;color:var(--red);font-weight:600}
+.face{position:absolute;inset:0;width:100%;height:100%;text-align:left;color:#fff;background:var(--c);transition:filter .45s}
+.f-build{--c:#23265A;clip-path:polygon(0% 64%,41% 55%,41% 55%,34% 100%,0% 100%)}
+.f-road{--c:#34386F;clip-path:polygon(41.3% 55%,66% 49.5%,66% 49.5%,63% 100%,34.3% 100%)}
+.f-haul{--c:#DADCE6;color:var(--ink);clip-path:polygon(47% 0%,100% 0%,100% 41.6%,66% 49%,41.2% 54.5%)}
+.f-sea{--c:#191C45;clip-path:polygon(66.3% 49.4%,100% 42%,100% 42%,100% 100%,63.3% 100%)}
+.art{position:absolute;overflow:hidden}
+.art svg,.art img{width:100%;height:100%;object-fit:cover;display:block}
+.f-build .art{left:0;top:54%;width:42%;height:46%}
+.f-build .art img{object-position:60% 40%;width:106%;max-width:none;height:108%;margin:-2% -3%}
+.f-road .art{left:33%;top:48%;width:34%;height:52%}
+.f-haul .art{left:40%;top:0;width:60%;height:56%}
+.f-haul .art img{object-position:0 34%}
+.f-sea .art{left:62%;top:41%;width:38%;height:59%}
+.face .art svg,.face .art img{transition:transform 1s var(--e-smooth)}
+.lab{position:absolute;z-index:2;display:block}
+.lab b{display:block;font:700 clamp(23px,2.35vw,40px)/1.05 var(--f-display);letter-spacing:-.03em}
+.lab span{display:block;margin-top:8px;font-size:17px;line-height:1.35}
+.lab b::after{content:"";display:block;width:56px;height:6px;margin-top:12px;background:var(--red);transform-origin:0 50%;transition:transform .5s var(--e-smooth)}
+.f-build .lab{left:var(--gutter);bottom:34px}.f-road .lab{left:37.9%;bottom:34px;max-width:24%}.f-haul .lab{left:82.5%;top:34px;max-width:17%}.f-sea .lab{left:65.4%;bottom:34px;max-width:31%}
+.f-build .art::after,.f-road .art::after,.f-sea .art::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,20,54,.94) 8%,rgba(18,20,54,.5) 40%,transparent 70%)}
+.face:focus-visible{outline:0}.face:focus-visible .lab b{outline:3px solid var(--red);outline-offset:8px}
+@media (hover:hover){.face:hover{filter:brightness(1.1);z-index:2}.face:hover .art svg,.face:hover .art img{transform:scale(1.05)}.face:hover .lab b::after{transform:scaleX(2.4)}}
+@media (prefers-reduced-motion:no-preference){
+  .js .f-haul{animation:cutA 1.3s var(--e-strike) both}.js .f-build{animation:cutB 1.2s .12s var(--e-strike) both}.js .f-road{animation:cutC 1.2s .24s var(--e-strike) both}.js .f-sea{animation:cutD 1.2s .36s var(--e-strike) both}
+}
+@keyframes cutA{from{clip-path:polygon(60% 0%,100% 0%,100% 12%,80% 16%,58% 20%)}}
+@keyframes cutB{from{clip-path:polygon(0% 92%,12% 90%,12% 90%,10% 100%,0% 100%)}}
+@keyframes cutC{from{clip-path:polygon(46% 84%,58% 82%,58% 82%,57% 100%,44% 100%)}}
+@keyframes cutD{from{clip-path:polygon(90% 78%,100% 76%,100% 76%,100% 100%,89% 100%)}}
+/* раскрытая грань */
+#face{border:0;padding:0;margin:0;width:100vw;height:100dvh;max-width:none;max-height:none;color:#fff;background:var(--ink);overflow:hidden auto;overscroll-behavior:contain}
+#face::backdrop{background:transparent}
+#face .bgart{position:fixed;inset:0;pointer-events:none;transition:opacity .7s}
+#face.open .bgart{opacity:0}
+.pic{position:relative;height:clamp(230px,38vh,400px);margin-top:40px;clip-path:polygon(0 16%,100% 0,93% 100%,0 100%)}
+.pic .art{position:absolute;inset:0!important;width:100%!important;height:100%!important}.pic .art::after{display:none}.pic img{object-fit:cover;object-position:0 42%}
+.pic:empty{display:none}
+#face .shard{position:fixed;inset:0;pointer-events:none;background:linear-gradient(112deg,transparent 58%,rgba(255,255,255,.05) 58.1% 74%,transparent 74.1%),linear-gradient(68deg,transparent 40%,rgba(169,172,208,.07) 40.1% 62%,transparent 62.1%)}
+.in-f{position:relative;min-height:100%;max-width:1400px;margin-inline:auto;padding:22px var(--gutter) 50px;opacity:0;transform:translateY(16px);transition:opacity .4s,transform .6s var(--e-smooth)}
+#face.open .in-f{opacity:1;transform:none;transition-delay:.12s}
+.back{min-height:48px;display:inline-flex;gap:12px;align-items:center;font-weight:600}
+.back::before{content:"";width:22px;height:22px;background:linear-gradient(currentColor,currentColor) 50%/100% 2px no-repeat,linear-gradient(currentColor,currentColor) 50%/2px 100% no-repeat;transform:rotate(45deg)}
+.in-g{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,90px);margin-top:clamp(10px,2.4vh,30px);align-items:start}
+.in-f h2{font-size:clamp(38px,5vw,80px)}
+.br{margin-top:26px}
+.br h3{font-size:20px;letter-spacing:-.02em;color:var(--lav);font-weight:600}
+.br label{position:relative;display:flex;gap:16px;align-items:center;min-height:54px;padding:11px 0;border-bottom:1px solid rgba(169,172,208,.28);cursor:pointer;font-size:18px;line-height:1.35}
+.br input{appearance:none;flex:none;width:26px;height:26px;margin:0;border:2px solid var(--lav);clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%);cursor:pointer;background:transparent}
+.br input:checked{background:var(--red);border-color:var(--red)}
+.br input:focus-visible{outline:0}.br label:focus-within{background:rgba(255,255,255,.07)}
+#face form,.job form{display:grid;gap:14px}
+#face form{background:#fff;color:var(--ink);padding:clamp(20px,2.2vw,34px);clip-path:polygon(0 0,100% 0,100% calc(100% - 34px),calc(100% - 34px) 100%,0 100%);padding-bottom:46px}
+#face form h3{font-size:26px}
+.picked{font-size:16px;line-height:1.4;color:var(--muted);min-height:1.4em}
+.picked b{color:var(--ink)}
+.done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;margin:14px 0}.done dt{color:var(--muted)}
+/* все услуги */
+.all{background:var(--paper);padding-bottom:clamp(60px,7vw,110px)}
+.all-g{display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:auto 1fr;margin-top:clamp(30px,4vw,60px)}
+.col{padding:0 clamp(14px,1.8vw,30px);position:relative}
+.col:first-child{padding-left:0}.col:nth-child(-n+2){grid-row:1/3}.col:nth-child(4){grid-column:3;margin-top:40px}
+.col+.col::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--lav);transform:skewX(-4deg)}
+.col>h3{font-size:clamp(23px,1.9vw,30px)}
+.col h4{margin:22px 0 2px;font:600 17px/1.3 var(--f-display);color:var(--red);letter-spacing:-.01em}
+.col button{width:100%;text-align:left;min-height:48px;padding:9px 0;line-height:1.35;border-bottom:1px solid var(--line);transition:color .2s,padding .3s var(--e-smooth)}
+.col button:hover{color:var(--red);padding-left:8px}
+/* специализация */
+.spec{background:var(--ink);color:#fff;overflow:clip}
+.spec-g{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:660px}
+.spec-t{padding:clamp(56px,7vw,120px) clamp(24px,4vw,70px) clamp(56px,7vw,120px) max(var(--gutter),calc(50vw - 660px));display:flex;flex-direction:column;justify-content:center;gap:26px}
+.spec-t p{color:#CFD0E4;max-width:32em}
+.spec dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px 26px;align-items:baseline;border-top:1px solid rgba(169,172,208,.35);padding-top:22px}
+.spec dt{font:700 clamp(26px,2.4vw,38px)/1.1 var(--f-display);letter-spacing:-.03em}
+.spec dd{color:#CFD0E4}
+.spec figure{clip-path:polygon(16% 0,100% 0,100% 100%,0 100%);position:relative}
+.spec figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 50%}
+/* допуски */
+.lic{background:linear-gradient(116deg,#fff 0 46%,var(--silver) 46.1% 78%,#D6D8E3 78.1%)}
+.lic-g{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(28px,5vw,90px);align-items:start}
+.lic h2{position:sticky;top:110px}
+.lic li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:4px 30px;padding:18px 0;border-top:2px solid var(--ink);align-items:baseline}
+.lic li b{font:600 clamp(19px,1.5vw,23px)/1.25 var(--f-display);letter-spacing:-.02em}
+.lic li span{color:var(--muted)}
+/* вахта */
+.job{background:var(--red);color:#fff;clip-path:polygon(0 46px,100% 0,100% calc(100% - 46px),0 100%);margin-block:-46px;padding-block:calc(var(--sec)*.75 + 46px);position:relative;z-index:2}
+.job-g{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,90px);align-items:start}
+.rig{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;border:0;padding:0;margin-inline:0;min-width:0}
+.rig legend{padding:0;margin-bottom:12px}
+.rig label{position:relative;cursor:pointer}
+.rig input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.rig span{display:flex;align-items:center;min-height:56px;padding:10px 20px;background:rgba(80,0,6,.32);font:600 clamp(17px,1.35vw,21px)/1.2 var(--f-display);clip-path:polygon(0 0,100% 0,100% 64%,calc(100% - 14px) 100%,0 100%);transition:background-color .25s,color .25s}
+.rig input:checked+span{background:#fff;color:var(--red)}
+.rig input:focus-visible+span{background:var(--ink)}
+.cond{margin-top:34px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px}
+.cond li{padding:12px 0;border-top:1px solid rgba(255,255,255,.45)}
+.job form{background:#fff;color:var(--ink);padding:clamp(20px,2.4vw,36px)}
+.job form h3{font-size:27px}
+/* контакты */
+.con{padding-top:calc(var(--sec) + 40px)}
+.con-g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,90px);align-items:center}
+.con figure{clip-path:polygon(0 0,100% 0,90% 100%,0 100%)}
+.con figure img{width:100%;height:auto;aspect-ratio:16/11;object-fit:cover;object-position:0 50%}
+.tabs{display:flex;flex-wrap:wrap;gap:4px 26px;margin-top:26px;border-bottom:2px solid var(--ink)}
+.tabs button{min-height:48px;font:600 17px var(--f-display);color:var(--muted);margin-bottom:-2px;border-bottom:5px solid transparent}
+.tabs [aria-selected=true]{color:var(--ink);border-color:var(--red)}
+.pan{padding-top:22px;min-height:230px}
+.pan p+p{margin-top:8px}
+.pan .big{font:700 clamp(27px,2.8vw,44px)/1.15 var(--f-display);letter-spacing:-.03em;text-decoration:none;display:inline-flex;min-height:48px;align-items:center}
+.pan .big:hover{color:var(--red)}
+.pan dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 22px;margin-top:8px}.pan dt{color:var(--muted)}
+.pan a.link{display:inline-flex;min-height:44px;align-items:center}
+.ftr{background:var(--ink);color:#CFD0E4;padding:26px 0;font-size:16px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:8px 50px;justify-content:space-between;align-items:center}
+.ftr a{color:#fff;min-height:44px;display:inline-flex;align-items:center}
+@media (max-width:900px){
+  :root{--hdr-h:76px}
+  .hdr img{height:62px}.hdr .tel{display:none}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:var(--ink);flex-direction:column;gap:0;padding:18px var(--gutter);font:600 27px/1.3 var(--f-display);visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  .hdr nav a{min-height:58px}
+  [data-burger]{margin-left:auto}
+  .stage{height:auto;min-height:0;max-height:none;background:var(--paper)}
+  .top{position:relative;width:auto;height:auto;padding:46px var(--gutter) 34px;z-index:5}
+  h1{font-size:32px}
+  .find{width:100%}
+  .face{position:relative;inset:auto;display:block;height:188px;margin-top:-22px}
+  .f-build,.f-road,.f-haul,.f-sea{clip-path:polygon(0% 12%,100% 0%,100% 0%,100% 88%,0% 100%)}
+  .f-haul{order:0;clip-path:polygon(0% 12%,100% 0%,100% 0%,100% 88%,0% 100%)}
+  .face .art{inset:0!important;width:100%!important;height:100%!important}
+  .f-haul .art{inset:0 0 0 35%!important;width:65%!important}.f-sea{height:236px}.f-sea .art{inset:-72px 0 auto!important;height:calc(100% + 20px)!important}.f-haul .art img{object-position:0 30%}
+  .face .lab,.f-haul .lab{left:var(--gutter);right:auto;top:auto;bottom:34px;max-width:74%}
+  .f-haul .lab{bottom:auto;top:36px;max-width:60%}
+  .f-haul .art::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#DADCE6 0,rgba(218,220,230,0) 30%);z-index:1}
+  .lab span{font-size:16px}.tabs{gap:4px 17px}.tabs button{font-size:16px;letter-spacing:-.02em}
+  .js .face{animation:none!important}
+  .in-g,.spec-g,.lic-g,.job-g,.con-g{grid-template-columns:minmax(0,1fr)}
+  .all-g{grid-template-columns:minmax(0,1fr);grid-template-rows:none;gap:40px}.col.col{padding:0;grid-row:auto;grid-column:auto;margin:0}.col+.col::before{display:none}
+  .spec-g{min-height:0}.spec-t{padding:60px var(--gutter)}.spec figure{height:320px;clip-path:polygon(0 12%,100% 0,100% 100%,0 100%);order:-1}
+  .spec dl{grid-template-columns:minmax(0,1fr);gap:2px}.spec dd{margin-bottom:12px}
+  .lic h2{position:static}.lic li{grid-template-columns:minmax(0,1fr)}
+  .cond{grid-template-columns:minmax(0,1fr)}
+  .pan dl,.done dl{grid-template-columns:minmax(0,1fr);gap:0}.pan dd,.done dd{margin-bottom:8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="Нефтьстройинвест, на главную"><img src="img/logo.svg" alt="ЗАО «Нефтьстройинвест»" width="168" height="187"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#all">Услуги</a><a href="#about">О компании</a><a href="#lic">Допуски</a><a href="#job">Вакансии</a><a href="#contacts">Контакты</a></nav>
+  <a class="tel num" href="tel:+73466634127">+7 (3466) 63-41-27</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+<main id="main">
+<section class="stage" id="stage">
+  <div class="top">
+    <h1>Кусты, дороги, грузы и&nbsp;флот для&nbsp;нефтяников Западной Сибири</h1>
+    <p>Наша специализация: инженерная подготовка кустовых оснований. Выберите задачу или найдите услугу.</p>
+    <div class="find"><label class="sr" for="q">Найти услугу</label><input id="q" type="search" placeholder="Мост, зимник, плавкран…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="ql" aria-autocomplete="list"><ul id="ql" role="listbox" hidden></ul></div>
+  </div>
+  <button type="button" class="face f-haul" data-f="haul"><span class="art"><img src="img/ph/04.webp" alt="" width="1920" height="1440" fetchpriority="high"></span><span class="lab"><b>Перевезти</b><span>Автотранспорт и&nbsp;спецтехника</span></span></button>
+  <button type="button" class="face f-build" data-f="build"><span class="art"><img src="img/ph/08.webp" alt="" width="810" height="420"></span><span class="lab"><b>Построить</b><span>Кусты скважин, мосты, ЛЭП</span></span></button>
+  <button type="button" class="face f-road" data-f="road"><span class="art" id="art-road"></span><span class="lab"><b>Проложить дорогу</b><span>Промысловые дороги, автомагистрали, зимники</span></span></button>
+  <button type="button" class="face f-sea" data-f="sea"><span class="art" id="art-sea"></span><span class="lab"><b>Доставить по&nbsp;воде</b><span>Обь-Иртышский бассейн, баржи до&nbsp;1000&nbsp;т, плавкраны 4–16&nbsp;т</span></span></button>
+</section>
+
+<section class="sec all" id="all"><div class="wrap">
+  <h2 data-split>Все услуги, четыре задачи</h2>
+  <div class="all-g" id="cols"></div>
+</div></section>
+
+<section class="spec" id="about"><div class="spec-g">
+  <div class="spec-t"><h2 data-split>Инженерная подготовка кустовых оснований</h2>
+    <p>Одна из&nbsp;ведущих подрядно-строительных компаний нефтегазовой отрасли Западной Сибири. Высокий уровень организации, мобильность, чёткое соблюдение сроков и&nbsp;качества работ.</p>
+    <dl><dt class="num">19.11.2009</dt><dd>дата регистрации ЗАО «Нефтьстройинвест»</dd><dt>СРО</dt><dd>член объединения «Союз Строителей Югры», в&nbsp;том числе для особо опасных, технически сложных и&nbsp;уникальных объектов</dd></dl></div>
+  <figure><img src="img/ph/03.webp" alt="Здание «Нефтьстройинвеста» в Нижневартовске" loading="lazy" width="1920" height="1440"></figure>
+</div></section>
+
+<section class="sec lic" id="lic"><div class="wrap lic-g">
+  <h2 data-split>Допуски, которые спросит заказчик</h2>
+  <ul>
+    <li data-reveal><b>ГОСТ Р ИСО 9001-2015</b><span>Система менеджмента качества</span></li>
+    <li data-reveal><b>ГОСТ Р ИСО 45001-2020</b><span>Безопасность труда и&nbsp;охрана здоровья</span></li>
+    <li data-reveal><b>ГОСТ Р ИСО 14001-2016</b><span>Экологический менеджмент</span></li>
+    <li data-reveal><b>СРО «Союз Строителей Югры»</b><span>Строительство, реконструкция, капитальный ремонт</span></li>
+    <li data-reveal><b>СРО АС «СтройПартнер»</b><span>Инженерные изыскания</span></li>
+    <li data-reveal><b class="num">№ ПМ-57-001651 (О)</b><span>Маркшейдерские работы, лицензия от&nbsp;12.08.2011</span></li>
+    <li data-reveal><b class="num">№ Л020-00117-86/00016863</b><span>Обращение с&nbsp;отходами I–IV класса опасности, лицензия от&nbsp;10.07.2012</span></li>
+    <li data-reveal><b class="num">№ Л041-01193-86/00288779</b><span>Медицинская деятельность, лицензия от&nbsp;09.08.2013</span></li>
+    <li data-reveal><b class="num">№ 2314</b><span>Свидетельство о&nbsp;состоянии измерений в&nbsp;дорожно-строительной лаборатории, 11.04.2012</span></li>
+  </ul>
+</div></section>
+
+<section class="job" id="job"><div class="wrap job-g">
+  <div><h2 data-split>Вахта за&nbsp;рулём и&nbsp;рычагами</h2>
+    <fieldset class="rig" id="rig"><legend>Выберите технику, требуются водители и&nbsp;машинисты</legend></fieldset>
+    <ul class="cond"><li>График 30/30, 11-часовой рабочий день</li><li>Работа на&nbsp;территории ХМАО и&nbsp;ЯНАО</li><li>Оформление по&nbsp;ТК РФ, белая зарплата и&nbsp;бонусы</li><li>Бесплатное трёхразовое горячее питание</li><li>Бесплатное жильё на&nbsp;время вахты</li><li>Фирменная спецодежда</li><li>Компенсация проезда (ж/д плацкарт)</li><li>Опыт по&nbsp;профессии не&nbsp;менее трёх лет</li></ul></div>
+  <form data-demo-form><h3>Отправить резюме</h3>
+    <label class="field"><span>Техника</span><input name="Техника" id="f-rig" readonly></label>
+    <label class="field"><span>Имя и&nbsp;город</span><input name="Имя и город" required autocomplete="name"></label>
+    <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+    <label class="field"><span>Стаж и&nbsp;категории</span><input name="Стаж и категории"></label>
+    <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+    <button class="btn" style="background:var(--ink)">Отправить резюме</button>
+    <div class="done" role="status"><h3>Так резюме придёт в&nbsp;отдел кадров</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+  </form>
+</div></section>
+
+<section class="sec con" id="contacts"><div class="wrap con-g">
+  <figure><img src="img/ph/05.webp" alt="Вход в административно-бытовой корпус «Нефтьстройинвеста» в Нижневартовске" loading="lazy" width="1920" height="1280"></figure>
+  <div><h2 data-split>Контакты</h2>
+    <div class="tabs" role="tablist" aria-label="Зачем обращаетесь"><button role="tab" aria-selected="true" data-p="a">Заказчику</button><button role="tab" aria-selected="false" data-p="b">Отправить груз</button><button role="tab" aria-selected="false" data-p="c">Бухгалтерии</button></div>
+    <div class="pan" data-pan="a"><a class="big num" href="tel:+73466634127">+7 (3466) 63-41-27</a><p>Пн – Пт, 8:00–17:00</p><p>Нижневартовск, ул.&nbsp;60&nbsp;лет Октября, Промзона, Панель&nbsp;25</p><p><a class="link" href="mailto:zaonv@mail.ru">zaonv@mail.ru</a></p></div>
+    <div class="pan" data-pan="b" hidden><dl><dt>Станция</dt><dd>«Нижневартовск-1» Свердловской железной дороги</dd><dt>Код станции</dt><dd class="num">798005</dd><dt>Получатель</dt><dd>ООО предприятие «ГиФ», код&nbsp;9122, ОКПО&nbsp;26155088</dd><dt>Платёжный счёт</dt><dd class="num">5787501</dd><dt>Грузополучатель</dt><dd>628600, Нижневартовск, ул.&nbsp;60&nbsp;лет Октября, Промзона, Панель&nbsp;25</dd></dl></div>
+    <div class="pan" data-pan="c" hidden><dl><dt>ИНН</dt><dd class="num">8605022050</dd><dt>КПП</dt><dd class="num">860501001</dd><dt>ОГРН</dt><dd class="num">1098605000658</dd><dt>Юридический адрес</dt><dd>628680, Мегион, ул.&nbsp;Южная, д.&nbsp;11, стр.&nbsp;1</dd></dl></div>
+  </div>
+</div></section>
+</main>
+<footer class="ftr"><div class="wrap"><span>ЗАО «Нефтьстройинвест», Нижневартовск</span><a class="num" href="tel:+73466634127">+7 (3466) 63-41-27</a><a href="mailto:zaonv@mail.ru">zaonv@mail.ru</a></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73466634127">Позвонить</a><a class="btn" href="#stage">Выбрать задачу</a></div>
+
+<dialog id="face" aria-labelledby="ft" data-lenis-prevent>
+  <div class="bgart" aria-hidden="true"></div><div class="shard" aria-hidden="true"></div>
+  <div class="in-f">
+    <button type="button" class="back">Назад к&nbsp;задачам</button>
+    <div class="in-g">
+      <div><h2 id="ft"></h2><div id="brs"></div><div class="pic" id="pic" aria-hidden="true"></div></div>
+      <form data-demo-form><h3>Заявка</h3>
+        <p class="picked" id="picked" aria-live="polite"></p><input type="hidden" name="Задача" id="f-task"><input type="hidden" name="Услуги" id="f-svc">
+        <label class="field"><span>Где объект или груз</span><input name="Место"></label>
+        <label class="field"><span>Компания и имя</span><input name="Контакт" required autocomplete="organization"></label>
+        <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+        <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+        <button class="btn">Отправить заявку</button>
+        <div class="done" role="status"><h3>Так заявка придёт на&nbsp;zaonv@mail.ru</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+      </form>
+    </div>
+  </div>
+</dialog>
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+/* услуги: раздел «Услуги» new.zaonsi.ru; восемь направлений сложены по задаче клиента */
+var F={
+ build:['Построить',[['Строительство',['Строительство кустовых оснований скважин нефтяных месторождений','Подготовка территории к строительству кустовых площадок, разрубка и расчистка коридоров коммуникаций','Очистка русел рек и мостовых переходов от навала деревьев','Устройство и содержание технологических переправ в зимнее и летнее время','Строительство и реконструкция мостовых сооружений','Строительство ЛЭП 6 кВ, 35 кВ, 110 кВ']],['Лесозаготовительные услуги',['Валка, трелёвка, складирование']],['Маркшейдерские услуги',['Маркшейдерские услуги']]]],
+ road:['Проложить дорогу',[['Дорожное строительство',['Строительство, ремонт и содержание внутрипромысловых автомобильных дорог','Строительство и ремонт автомагистралей федерального назначения','Строительство автозимников и ледовых переправ']],['Добыча песка',['Горноподготовительные работы по устройству карьеров','Гидромеханизированные работы по намыву песка']],['Строительно-дорожная лаборатория',['Услуги строительно-дорожной лаборатории']]]],
+ haul:['Перевезти',[['Транспортные услуги',['Перевозка грузов автотранспортом','Автотранспортные услуги спецтехникой']]]],
+ sea:['Доставить по воде',[['Услуги флота',['Перевозка грузов по Обь-Иртышскому бассейну буксировщиками с баржами до 1000 т','Погрузо-разгрузочные услуги плавкранами грузоподъёмностью 4–16 т']]]]};
+var nb=function(s){return s.replace(/(^|\s)(и|в|с|на|до|по|от) /g,'$1$2 ').replace(/(\d) (т|кВ)/g,'$1 $2').replace(/-/g,'-')};
+var ALL=[];Object.keys(F).forEach(function(k){F[k][1].forEach(function(b){b[1].forEach(function(s){ALL.push([s,b[0],k])})})});
+/* гранёный рисунок: сетка треугольников с детерминированным сдвигом вершин */
+function poly(w,h,nx,ny,col,seed){var s=seed,rnd=function(){s=(s*16807)%2147483647;return s/2147483647},P=[],o='';for(var j=0;j<=ny;j++){P[j]=[];for(var i=0;i<=nx;i++){var e=i===0||i===nx,f=j===0||j===ny;P[j][i]=[(i+(e?0:(rnd()-.5)*.9))*w/nx,(j+(f?0:(rnd()-.5)*.8))*h/ny]}}
+ for(j=0;j<ny;j++)for(i=0;i<nx;i++){var a=P[j][i],b=P[j][i+1],c=P[j+1][i+1],d=P[j+1][i];[[a,b,c],[a,c,d]].forEach(function(t){var cx=(t[0][0]+t[1][0]+t[2][0])/3,cy=(t[0][1]+t[1][1]+t[2][1])/3,k=col(cx/w,cy/h,rnd());o+='<path d="M'+t.map(function(p){return p[0].toFixed(1)+' '+p[1].toFixed(1)}).join('L')+'Z" fill="'+k+'" stroke="'+k+'" stroke-width=".8"/>'})}return o}
+function mix(a,b,t){t=Math.max(0,Math.min(1,t));return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
+function firs(list){return list.map(function(t){var x=t[0],y=t[1],h=t[2],w=h*.34;return '<path d="M'+x+' '+(y-h)+'L'+(x+w)+' '+y+'H'+x+'Z" fill="#2B2F66"/><path d="M'+x+' '+(y-h)+'L'+(x-w)+' '+y+'H'+x+'Z" fill="#4A4F90"/>'}).join('')}
+// дорога уходит к горизонту
+(function(){var w=600,h=520,sky=poly(w,210,7,3,function(x,y,r){return mix([150,154,200],[214,215,232],y*.9+r*.22)},77),land='<g transform="translate(0,200)">'+poly(w,320,8,5,function(x,y,r){return mix([88,93,150],[42,46,100],y*.75+r*.3)},311)+'</g>';
+ var T=[];for(var i=0;i<26;i++){var x=i*25+((i*37)%17);if(x>250&&x<360)continue;T.push([x,216+((i*13)%9),46+((i*29)%34)])}
+ $('#art-road').innerHTML='<svg viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky+land+firs(T)+'<path d="M296 206h26L560 520H60Z" fill="#C9B48C"/><path d="M296 206h12L300 520H60Z" fill="#DCC9A4"/><path d="M301 206h16L500 520H120Z" fill="#3B3F5E"/><path d="M301 206h8L310 520H120Z" fill="#4A4E72"/><g fill="#fff"><path d="M307 226h4l1 20h-6zM306 262h6l2 34h-10zM303 318h11l4 56h-19zM299 402h19l6 92h-31z"/></g></svg>'})();
+// река, буксир и баржа
+(function(){var w=640,h=540,sky=poly(w,190,7,3,function(x,y,r){return mix([120,125,180],[205,207,228],y+r*.18-.05)},19),sea='<g transform="translate(0,182)" id="sea">'+poly(w,358,10,8,function(x,y,r){return mix([128,140,196],[28,33,86],y*.8+r*.36-.06)},905)+'</g>';
+ var T=[];for(var i=0;i<30;i++)T.push([i*22+((i*31)%13),190+((i*7)%5),22+((i*23)%24)]);
+ $('#art-sea').innerHTML='<svg viewBox="0 0 640 540" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky+firs(T)+'<path d="M0 186h640v10L420 190 180 199 0 193z" fill="#6A6FA8"/>'+sea+'<g id="boat"><path d="M70 262h300l-16 34H92z" fill="#8E1019"/><path d="M70 262h300l-5 11H77z" fill="#CF1420"/><path d="M92 236h66v26H92z" fill="#DCC9A4"/><path d="M92 236h66l-14 12H92z" fill="#EDDDBB"/><path d="M168 226l58 10v26h-58z" fill="#C6A972"/><path d="M168 262l34-40 44 40z" fill="#E2CFA6"/><path d="M202 222l44 40h-32z" fill="#C6A972"/><path d="M252 240h96v22h-96z" fill="#A9ACD0"/><path d="M252 240h96v8h-96z" fill="#DADCEC"/><path d="M372 270h14" stroke="#191C45" stroke-width="4"/><path d="M386 254h112l20 8-22 36H398z" fill="#191C45"/><path d="M386 254h112l20 8H388z" fill="#3A3F7D"/><path d="M408 214h62v40h-62z" fill="#fff"/><path d="M446 214h24v40h-24z" fill="#D3D5E4"/><path d="M414 222h16v12h-16zM436 222h22v12h-22z" fill="#262A60"/><path d="M424 190h16v24h-16z" fill="#CF1420"/><path d="M482 254v-46" stroke="#191C45" stroke-width="3"/><path d="M60 300h480l-40 12H110z" fill="#fff" opacity=".22"/></g></svg>'})();
+KITR(function(){var b=$('#boat'),cells=$$('#sea path');KIT.raf($('#art-sea'),function(t){b.setAttribute('transform','translate('+(Math.sin(t/6000)*26).toFixed(1)+','+(Math.sin(t/1700)*2.2).toFixed(1)+')');for(var i=0;i<cells.length;i+=3)cells[i].style.opacity=(.86+.14*Math.sin(t/1500+i)).toFixed(2)},18)});
+function KITR(f){window.KIT?f():document.addEventListener('kit:ready',f)}
+/* все услуги */
+$('#cols').innerHTML=Object.keys(F).map(function(k){return '<div class="col"><h3>'+nb(F[k][0])+'</h3>'+F[k][1].map(function(b){return '<h4>'+nb(b[0])+'</h4>'+b[1].map(function(s){return '<button type="button" data-k="'+k+'" data-s="'+s+'">'+nb(s)+'</button>'}).join('')}).join('')+'</div>'}).join('');
+$('#cols').addEventListener('click',function(e){var b=e.target.closest('button');if(b)open(b.dataset.k,b.dataset.s)});
+/* раскрытие грани */
+var dlg=$('#face'),from=null,busy=false,opener=null;
+function clip(el){var r=el.getBoundingClientRect(),m=getComputedStyle(el).clipPath.match(/-?[\d.]+(?=%|px)/g).map(Number);var o=[];for(var i=0;i<m.length;i+=2)o.push([r.left+m[i]*r.width/100,r.top+m[i+1]*r.height/100]);return o}
+function str(a){return 'polygon('+a.map(function(p){return p[0].toFixed(1)+'px '+p[1].toFixed(1)+'px'}).join(',')+')'}
+function full(k){var W=innerWidth,H=innerHeight;return k==='haul'&&W>900?[[0,0],[W,0],[W,H],[W*.5,H],[0,H]]:[[0,0],[W,0],[W,0],[W,H],[0,H]]}
+function sync(){var c=$$('#brs input:checked').map(function(i){return i.value});$('#f-svc').value=c.join('; ');$('#picked').innerHTML=c.length?'Отмечено услуг: <b class="num">'+c.length+'</b>':'Отметьте услуги в&nbsp;списке или опишите задачу по&nbsp;телефону.'}
+function open(k,svc){if(busy||dlg.open)return;opener=document.activeElement;var el=$('.face[data-f='+k+']'),r=el.getBoundingClientRect();
+ // если грань не на экране (открыли из списка), раскрываем из нижнего края
+ from=r.bottom>0&&r.top<innerHeight?clip(el):[[innerWidth*.3,innerHeight],[innerWidth*.7,innerHeight],[innerWidth*.7,innerHeight],[innerWidth*.66,innerHeight],[innerWidth*.34,innerHeight]];
+ var art=$('.art',el).cloneNode(true),ar=$('.art',el).getBoundingClientRect();$$('[id]',art).forEach(function(n){n.removeAttribute('id')});art.removeAttribute('id');art.style.cssText='left:'+ar.left+'px;top:'+ar.top+'px;width:'+ar.width+'px;height:'+ar.height+'px';$('.bgart').replaceChildren(art);$('#pic').replaceChildren();if(k!=='build'){var pc=art.cloneNode(true);pc.removeAttribute('style');$('#pic').append(pc)}
+ $('#ft').textContent=F[k][0];$('#f-task').value=F[k][0];$('#brs').innerHTML=F[k][1].map(function(b){return '<div class="br"><h3>'+nb(b[0])+'</h3>'+b[1].map(function(s){return '<label><input type="checkbox" value="'+s+'"'+(s===svc?' checked':'')+'><span>'+nb(s)+'</span></label>'}).join('')+'</div>'}).join('');
+ $('form',dlg).classList.remove('sent');sync();dlg.style.background=getComputedStyle($('.face[data-f='+(k==='haul'?'build':k)+']')).backgroundColor;
+ document.documentElement.style.overflow='hidden';if(window.KIT&&KIT.lenis)KIT.lenis.stop();dlg.showModal();dlg.scrollTop=0;
+ if(svc){var c=$('#brs input:checked');c&&c.scrollIntoView({block:'center'})}
+ if(KIT.REDUCED){dlg.classList.add('open');return}
+ busy=true;requestAnimationFrame(function(){setTimeout(function(){dlg.classList.add('open')},260)});
+ dlg.animate([{clipPath:str(from)},{clipPath:str(full(k))}],{duration:780,easing:'cubic-bezier(.76,0,.24,1)'}).onfinish=function(){busy=false};dlg.dataset.k=k}
+function close(){if(busy)return;var end=function(){dlg.close();document.documentElement.style.overflow='';if(KIT.lenis)KIT.lenis.start();opener&&opener.focus({preventScroll:true})};
+ dlg.classList.remove('open');if(KIT.REDUCED||!from)return end();busy=true;dlg.animate([{clipPath:str(full(dlg.dataset.k))},{clipPath:str(from)}],{duration:620,easing:'cubic-bezier(.76,0,.24,1)',fill:'forwards'}).onfinish=function(){busy=false;end();this.cancel()}}
+$('#brs').addEventListener('change',sync);$('.back').addEventListener('click',close);dlg.addEventListener('cancel',function(e){e.preventDefault();close()});
+$$('.face').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.f)})});
+/* поиск */
+var q=$('#q'),ql=$('#ql'),hits=[],at=-1,ALIAS={'зимник':'автозимник','лэп':'лэп','кран':'плавкран','барж':'барж','щеб':'карьер','куст':'кустов','груз':'груз','вырубк':'разрубк','анализ':'лаборатор','геодез':'маркшейдер'};
+function find(){var v=q.value.trim().toLowerCase();if(v.length<2){ql.hidden=true;q.setAttribute('aria-expanded',false);return}
+ var w=[v];Object.keys(ALIAS).forEach(function(a){if(v.indexOf(a)===0)w.push(ALIAS[a])});
+ hits=ALL.filter(function(s){var t=(s[0]+' '+s[1]+' '+F[s[2]][0]).toLowerCase();return w.some(function(x){return t.indexOf(x)>-1})});at=-1;
+ ql.innerHTML=hits.length?hits.map(function(s,i){return '<li role="option" id="o'+i+'" data-i="'+i+'">'+s[0].replace(new RegExp('('+v.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','i'),'<mark>$1</mark>')+'<small>'+F[s[2]][0]+'</small></li>'}).join(''):'<li role="option" aria-disabled="true">Ничего не нашлось, позвоните: +7&nbsp;(3466)&nbsp;63-41-27</li>';
+ ql.hidden=false;q.setAttribute('aria-expanded',true)}
+function go(i){var s=hits[i];if(!s)return;ql.hidden=true;q.value='';q.setAttribute('aria-expanded',false);open(s[2],s[0])}
+q.addEventListener('input',find);q.addEventListener('keydown',function(e){if(ql.hidden)return;if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();at=(at+(e.key==='ArrowDown'?1:-1)+hits.length)%hits.length;$$('li',ql).forEach(function(l,i){l.setAttribute('aria-selected',i===at);if(i===at)l.scrollIntoView({block:'nearest'})});q.setAttribute('aria-activedescendant','o'+at)}else if(e.key==='Enter'){e.preventDefault();go(Math.max(at,0))}else if(e.key==='Escape'){ql.hidden=true}});
+ql.addEventListener('pointerdown',function(e){var l=e.target.closest('li[data-i]');if(l){e.preventDefault()}});ql.addEventListener('click',function(e){var l=e.target.closest('li[data-i]');if(l)go(+l.dataset.i)});q.addEventListener('blur',function(){setTimeout(function(){ql.hidden=true},150)});
+/* вакансии */
+['Вахтовый автобус','Автокран','ПРМ','Бульдозеры, экскаваторы, грейдеры, катки','Тяжеловозный полуприцеп (трал)','Топливозаправщики','Самосвалы'].forEach(function(t,i){var l=document.createElement('label');l.innerHTML='<input type="radio" name="rig"><span></span>';l.firstChild.value=t;l.lastChild.textContent=t;if(i===6)l.firstChild.checked=true;$('#rig').appendChild(l)});
+var fr=function(){$('#f-rig').value=$('#rig input:checked').value};$('#rig').addEventListener('change',fr);fr();
+/* контакты */
+$$('[data-p]').forEach(function(b){b.addEventListener('click',function(){$$('[data-p]').forEach(function(x){x.setAttribute('aria-selected',x===b)});$$('[data-pan]').forEach(function(p){p.hidden=p.dataset.pan!==b.dataset.p})})});
+});
+</script>
+</body>
+</html>

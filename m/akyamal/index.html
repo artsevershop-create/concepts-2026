@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Авиакомпания «Ямал» — вертолётные рейсы, тарифы «Морошка», заказ вертолёта</title>
+<meta name="description" content="Концепция редизайна сайта ООО «АК «Ямал»: карта вертолётных рейсов ЯНАО, тарифы с картой «Морошка», расписание, заказ вертолёта.">
+<link rel="icon" href="img/mark.png">
+<link rel="preload" href="../../kit/fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/ph/02.webp">
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--red:#E3000F;--red-d:#B8000C;--blue:#003C8C;--navy:#0B2148;--grey:#C6C8CA;--sky:#F3F5F9;--ice:#DDE8F2;--mor:#F08A24;
+  --bg:var(--sky);--fg:var(--navy);--muted:#51617F;--accent:var(--red);--accent-h:var(--red-d);--r:3px 22px 3px 22px;--hdr-h:82px;
+  --f-display:"Unbounded",system-ui,sans-serif;--f-text:"Golos Text",system-ui,sans-serif}
+[data-theme=night]{--bg:var(--blue);--fg:#fff;--muted:#C5D6EE;--line:rgba(255,255,255,.25);--accent:#fff;--on-accent:var(--blue);--accent-h:#DCE8F6;background:var(--bg);color:var(--fg)}
+h1,h2,h3{font-weight:300;letter-spacing:-.035em}
+h2{font-size:clamp(34px,4.5vw,66px);line-height:1.06}
+h3{font-weight:400;font-size:clamp(21px,1.7vw,26px);line-height:1.15;letter-spacing:-.03em}
+.lead{font-size:clamp(18px,1.4vw,21px);line-height:1.45}
+.u{font-family:var(--f-display);font-weight:300;letter-spacing:-.04em}
+.btn{font-size:17px}
+img{height:auto}[hidden]{display:none!important}
+/* шапка */
+.hdr{background:#fff;color:var(--navy);box-shadow:inset 0 -1px rgba(11,33,72,.1)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.6vw,44px)}
+.hdr img{height:50px;width:auto}
+.hdr nav{display:flex;gap:clamp(16px,2.1vw,34px);margin-left:auto;font-weight:500}
+.hdr nav a{text-decoration:none;padding:12px 0;position:relative}
+/* лепесток логотипа вместо подчёркивания */
+.hdr nav a::after{content:"";position:absolute;left:0;bottom:6px;width:30px;height:6px;background:var(--red);border-radius:0 6px 0 6px;transform:scaleX(0);transform-origin:0 100%;transition:transform .35s var(--e-smooth)}
+.hdr nav a:hover::after,.hdr nav a:focus-visible::after{transform:none}
+.hdr .tel{font-weight:600;text-decoration:none;white-space:nowrap}
+/* первый экран */
+.hero{position:relative;overflow:clip;min-height:min(100svh,980px);padding-top:var(--hdr-h);display:flex;flex-direction:column;background:#E4E8F1;isolation:isolate}
+.hero-ph{position:absolute;z-index:-1;left:0;right:0;top:calc(var(--hdr-h) - 3.9vw)}
+.hero-ph img{width:100%;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 99%);mask-image:linear-gradient(180deg,#000 72%,transparent 99%)}
+.hero-h{padding-top:clamp(26px,4.6svh,52px)}
+.hero-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,700px);gap:24px clamp(30px,5vw,90px);align-items:end;margin-top:auto;padding-bottom:26px}
+h1{font-size:clamp(36px,4vw,66px);line-height:1.04}
+.hero .lead{max-width:22em}
+.go{background:#fff;border-radius:3px 34px 3px 34px;padding:clamp(16px,1.5vw,22px);display:grid;grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr) auto;gap:12px 8px;align-items:end}
+.go .btn{padding-inline:1.2em}
+.field>span{font-size:16px}
+.go .field select,.pan .field select{background:#fff;border-color:rgba(11,33,72,.35);padding-right:8px}
+.swap{width:48px;height:52px;display:grid;place-items:center;color:var(--blue)}
+.swap svg{width:26px;transition:rotate .5s var(--e-smooth)}.swap:hover svg{rotate:180deg}
+.facts{border-top:1px solid rgba(11,33,72,.22);background:#DDE2ED}
+.facts .wrap{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:10px 40px;padding-block:18px 20px}
+.facts div div{display:flex;align-items:center;gap:16px;line-height:1.25}
+.facts b{font:300 clamp(34px,3.2vw,50px)/1 var(--f-display);letter-spacing:-.05em;color:var(--red)}
+.facts span{font-size:16px}
+@media (prefers-reduced-motion:no-preference){
+  .js .hero-ph img{animation:fly 2.8s var(--e-smooth) backwards}
+  .js h1 span{display:inline-block;animation:lift 1.2s var(--e-smooth) backwards;animation-delay:calc(var(--n)*.09s)}
+}
+@keyframes fly{from{transform:translate(3.4%,2.4%) scale(1.05)}}
+@keyframes lift{from{transform:translateY(.24em)}}
+/* карта */
+.map{background:linear-gradient(180deg,#E4E8F1 0,var(--sky) 220px);padding-block:clamp(56px,6vw,96px)}
+.map-g{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);grid-template-areas:"c p" "c q";grid-template-rows:auto 1fr;gap:0 clamp(20px,3vw,52px);margin-top:30px;align-items:start}
+.chart{grid-area:c;position:sticky;top:calc(var(--hdr-h) + 14px);background:#FAFBFD;border-radius:3px 60px 3px 60px;overflow:hidden}
+.chart svg{width:100%;height:auto;display:block}
+.water{fill:#CFDFEE}.river{fill:none;stroke:#CFDFEE;stroke-linecap:round;stroke-linejoin:round}
+.lake{fill:#E2EBF4}
+.polar{stroke:#9DB4D0;stroke-dasharray:3 9;stroke-width:1.6}
+.geo{font:400 19px var(--f-text);fill:#5E7CA3}
+.edge{fill:none;stroke:#003C8C;stroke-opacity:.2;stroke-width:1.6;transition:stroke-opacity .3s}
+.edge.on{stroke-opacity:.62}
+.route{fill:none;stroke:var(--red);stroke-width:4;stroke-linecap:round}
+.pt{cursor:pointer}
+.pt circle.h{fill:transparent}
+.pt circle.d{fill:#fff;stroke:var(--blue);stroke-width:3;transition:fill .25s,r .3s}
+.pt text{font:500 18px var(--f-text);fill:var(--navy);paint-order:stroke;stroke:#FAFBFD;stroke-width:5px;stroke-linejoin:round;transition:fill .25s}
+.pt.hub circle.d{fill:var(--blue)}
+.pt.far{opacity:.55}
+.pt.sel circle.d{fill:var(--red);stroke:var(--red)}
+.pt.sel text{fill:var(--red-d);font-weight:700}
+.pt:hover text{fill:var(--red-d)}
+.pt:focus{outline:0}.pt:focus-visible circle.d{stroke:#000;stroke-width:5}
+.rot{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){.rot{animation:rot .9s linear infinite}}
+@keyframes rot{to{transform:rotate(360deg)}}
+.map-h{display:flex;flex-wrap:wrap;gap:12px 50px;justify-content:space-between;align-items:end}.map-h .lead{color:var(--muted);max-width:25em}
+.pan{grid-area:p;background:#fff;border-radius:3px 34px 0 0;padding:clamp(18px,2vw,30px) clamp(18px,2vw,30px) 0}
+.pan2{grid-area:q;background:#fff;border-radius:0 0 3px 34px;padding:0 clamp(18px,2vw,30px) clamp(18px,2vw,30px)}
+.pan .ft{display:grid;grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr);gap:6px;align-items:end}
+.mor{display:flex;align-items:center;gap:14px;min-height:56px;margin-top:12px;cursor:pointer;font-weight:500}
+.mor input{appearance:none;flex:none;width:58px;height:32px;margin:0;border-radius:99px;background:#C9D2DF;position:relative;cursor:pointer;transition:background-color .3s}
+.mor input::after{content:"";position:absolute;left:4px;top:4px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .35s var(--e-smooth)}
+.mor input:checked{background:var(--mor)}.mor input:checked::after{transform:translateX(26px)}
+.ppl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;border-block:1px solid var(--line);padding:10px 0}
+.st{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:16px;line-height:1.2}
+.st span{display:flex;align-items:center}
+.st button{width:44px;height:44px;font-size:24px;line-height:1;color:var(--blue);border-radius:50%}
+.st button:hover{background:var(--ice)}
+.st output{min-width:1.4em;text-align:center;font-weight:600;font-size:18px}
+.sum{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin-top:16px}
+.sum b{font:300 clamp(38px,3.8vw,58px)/1 var(--f-display);letter-spacing:-.05em}
+.sum.m b{color:#A85200}
+.sum s{color:var(--muted);font-size:19px}
+.per{color:var(--muted);font-size:16px;line-height:1.4;margin-top:6px}
+.fls{margin-top:14px}
+.fls li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:12px 0;border-top:1px solid var(--line);line-height:1.3}
+.fls b{font-weight:600}
+.fls .tm{font:400 19px var(--f-display);letter-spacing:-.04em;white-space:nowrap}
+.fls small{font-size:16px;color:var(--muted);grid-column:1/-1}
+.fls .end :is(b,.tm){color:var(--muted)}
+.fls .end small{color:var(--red-d)}
+.kas{margin-top:12px;padding-top:14px;border-top:1px solid var(--line);font-size:17px;line-height:1.4}
+.kas a{font-weight:600;display:inline-block;padding:8px 0}
+.pan2 .btn{width:100%;margin-top:16px}
+.src{margin-top:18px;color:var(--muted);font-size:16px;max-width:60em}
+/* морошка */
+.mr{background:#FFF1DF;overflow:clip;position:relative}
+.mr-g{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(34px,6vw,110px);align-items:start}
+.six{display:flex;gap:clamp(6px,1vw,16px);margin-top:34px;flex-wrap:wrap}
+.six svg{width:clamp(44px,4.6vw,70px);height:auto}
+.mr ol{margin-top:34px;counter-reset:s}
+.mr ol li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:16px;padding:15px 0;border-top:1px solid rgba(11,33,72,.2)}
+.mr ol li::before{content:"";width:14px;height:22px;margin-top:3px;background:var(--mor);border-radius:0 14px 0 14px}
+.ref{background:#fff;border-radius:3px 46px 3px 46px;padding:clamp(22px,2.6vw,42px)}
+.ref .seg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:20px}
+.ref .seg button{min-height:62px;padding:8px 14px;border:1.5px solid rgba(11,33,72,.3);text-align:left;line-height:1.2;font-size:17px;border-radius:3px 16px 3px 16px;transition:background-color .25s,color .25s}
+.ref .seg button:hover{background:#FFF1DF}
+.ref .seg [aria-pressed=true]{background:var(--navy);color:#fff}
+.ref .pc{font:200 clamp(70px,9vw,132px)/.95 var(--f-display);letter-spacing:-.07em;color:#A85200;margin-top:22px}
+.ref p{margin-top:8px}
+/* работы и заказ */
+.ord{background:var(--blue)}
+.ord-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(34px,5vw,90px);align-items:start}
+.ord figure{border-radius:3px 80px 3px 80px;overflow:hidden}
+.ord figure img{width:100%}
+.ord .wk{margin-top:30px}
+.ord .wk button{width:100%;min-height:64px;text-align:left;border-top:1px solid var(--line);font:300 clamp(21px,2vw,30px)/1.15 var(--f-display);letter-spacing:-.04em;display:flex;align-items:center;gap:18px;padding:12px 0;transition:padding .4s var(--e-smooth)}
+.ord .wk button::before{content:"";flex:none;width:16px;height:26px;border:1.5px solid #fff;border-radius:0 16px 0 16px;transition:background-color .3s,border-color .3s}
+.ord .wk [aria-pressed=true]{padding-left:12px}.ord .wk [aria-pressed=true]::before{background:var(--red);border-color:var(--red)}
+.ord form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.full{grid-column:1/-1}
+.ord input[type=date]{color-scheme:dark}.ord .field input,.ord .field textarea{border-color:rgba(255,255,255,.5)}
+.agree{font-size:16px}
+.done{grid-column:1/-1;border:1.5px solid #fff;border-radius:3px 34px 3px 34px;padding:26px}
+.done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 18px;margin:16px 0}.done dt{color:var(--muted)}.done dd{overflow-wrap:anywhere}
+/* парк */
+.park-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,5vw,90px);align-items:end}
+.park .n{font:200 clamp(110px,17vw,260px)/.8 var(--f-display);letter-spacing:-.08em;color:var(--red);margin-left:-.05em}
+.fleet{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:clamp(6px,.9vw,14px);margin-top:clamp(24px,3vw,44px)}
+.fleet svg{width:100%;height:auto;overflow:visible;transition:transform .6s var(--e-smooth)}
+.fleet svg:hover{transform:translateY(-10px)}
+.types{display:flex;flex-wrap:wrap;gap:8px 34px;margin-top:26px;font:400 clamp(19px,1.7vw,26px)/1.2 var(--f-display);letter-spacing:-.04em}
+.cmp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3.4vw,60px);margin-top:clamp(36px,4.5vw,70px)}
+.cmp div{border-top:1.5px solid var(--navy);padding-top:18px}
+.cmp p{margin-top:10px;color:var(--muted)}
+/* в дорогу */
+.way{background:#fff}
+.way-g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(30px,5vw,90px);margin-top:clamp(28px,4vw,56px);align-items:start}
+.way dl div{display:grid;grid-template-columns:minmax(0,9.5em) minmax(0,1fr);gap:6px 26px;padding:18px 0;border-top:1px solid var(--line);align-items:baseline}
+.way dt{font:300 clamp(26px,2.5vw,38px)/1.05 var(--f-display);letter-spacing:-.05em;color:var(--blue)}
+.way figure{border-radius:3px 70px 3px 70px;overflow:hidden}
+.way figure img{width:100%}
+.way figure+figure{margin:clamp(16px,2vw,30px) 0 0 18%}
+/* новости */
+.nw-g{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,4.5vw,80px);margin-top:clamp(28px,4vw,56px);align-items:center}
+.nw figure{border-radius:3px 70px 3px 70px;overflow:hidden}
+.nw img{width:100%;aspect-ratio:4/2.7;object-fit:cover;object-position:50% 60%}
+.nw li{border-top:1px solid var(--line);padding:20px 0}
+.nw time{color:var(--muted);font-size:16px}
+.nw h3{margin-top:6px}.nw p{margin-top:8px;color:var(--muted)}
+.nw a{text-decoration-thickness:1px;text-underline-offset:5px}
+/* контакты */
+.ct{background:var(--navy)}
+.ct .top{display:flex;flex-wrap:wrap;gap:20px 60px;justify-content:space-between;align-items:end}
+.ct .big{font:300 clamp(30px,4vw,60px)/1.1 var(--f-display);letter-spacing:-.05em;text-decoration:none}
+.ct ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(24px,3.4vw,60px);margin-top:clamp(30px,4vw,56px)}
+.ct li{border-top:1px solid var(--line);padding:18px 0 24px;line-height:1.4}
+.ct li b{display:block;font:400 21px/1.2 var(--f-display);letter-spacing:-.04em;margin-bottom:8px}
+.ct li a{font-weight:600;display:inline-block;padding:9px 0}
+.ct p,.ct small{color:var(--muted);font-size:16px}
+.ftr{background:var(--navy);border-top:1px solid var(--line);padding:26px 0 36px}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:8px 44px;justify-content:space-between;font-size:16px;color:var(--muted)}
+.ftr a{color:#fff;display:inline-flex;min-height:44px;align-items:center}
+@media (min-width:1300px) and (min-aspect-ratio:17/10){.hero-ph{left:auto;width:min(100%,calc((min(100svh,980px) - var(--hdr-h))*1.78));-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 20%);mask-image:linear-gradient(90deg,transparent 0,#000 20%)}.hero-g{grid-template-columns:minmax(0,580px)}}
+@media (min-width:901px) and (max-width:1200px){.hdr .tel{display:none}.hdr nav{gap:18px;white-space:nowrap;font-size:17px}.pt text{font-size:22px}}
+@media (max-width:900px){
+  :root{--hdr-h:66px}
+  .hdr img{height:38px}.hdr .tel{display:none}[data-burger]{margin-left:auto}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:#fff;flex-direction:column;gap:2px;padding:24px var(--gutter);font:300 26px/1.2 var(--f-display);letter-spacing:-.04em;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  .hero{min-height:0}
+  .hero-ph{position:relative;top:0;height:300px;overflow:hidden}
+  .hero-ph img{height:100%;object-fit:cover;object-position:60% 45%;-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent);mask-image:linear-gradient(180deg,#000 80%,transparent)}
+  .hero-h{order:1;padding-top:4px}.hero-g{order:2;margin-top:14px}.facts{order:3}
+  .hero-g,.map-g,.mr-g,.ord-g,.park-g,.way-g,.nw-g{grid-template-columns:minmax(0,1fr)}
+  h1{font-size:clamp(36px,10.6vw,50px)}
+  .go,.pan .ft{grid-template-columns:minmax(0,1fr) 48px}
+  .go label:first-child,.pan .ft label:first-child{grid-column:1/-1}
+  .go .swap,.pan .ft .swap{grid-column:2;grid-row:2}
+  .go label:nth-of-type(2),.pan .ft label:nth-of-type(2){grid-column:1;grid-row:2}
+  .facts .wrap{grid-template-columns:minmax(0,1fr);gap:8px}
+  .facts b{min-width:2.6em}
+  .map-g{display:flex;flex-direction:column;align-items:stretch}.pan{order:-1;border-radius:3px 28px 0 0;padding-bottom:20px}.chart{position:relative;top:0}.pan2{border-radius:0 0 3px 28px}.ppl{grid-template-columns:minmax(0,1fr)}.go .btn{grid-column:1/-1}
+  .chart{border-radius:0}
+  .pt text{display:none;font-size:43px;stroke-width:12px}.pt.hub text,.pt.sel text{display:block}
+  .pt.quiet text{display:none}
+  .pt circle.d{stroke-width:5}.pt.sel circle.d{r:17px}
+  .edge{stroke-width:2.6}.route{stroke-width:8}.geo{font-size:36px}.geo.s{display:none}
+  .fleet{grid-template-columns:repeat(8,minmax(0,1fr))}
+  .cmp,.ct ul{grid-template-columns:minmax(0,1fr)}
+  .way dl div{grid-template-columns:minmax(0,1fr)}
+  .way figure+figure{margin-left:0}
+  .ord form{grid-template-columns:minmax(0,1fr)}
+  .done dl{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="heli" viewBox="0 0 64 34"><path d="M17 2h44M39 3v6" stroke="#0B2148" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M3 10 26 13c5-5 12-6 19-6 9 0 16 5 17 12 0 5-4 7-10 7H32c-6 0-9-5-12-9L4 14Z" fill="#fff" stroke="#003C8C" stroke-width="1.6"/><path d="M24 18h37c-1 5-4 8-10 8H32c-4 0-6-4-8-8Z" fill="#003C8C"/><path d="M1 6l6 9" stroke="#E3000F" stroke-width="2.4" stroke-linecap="round"/><path d="M50 10c5 1 8 4 9 8h-9Z" fill="#9CC3E6"/><path d="M34 26v5M53 26v5" stroke="#0B2148" stroke-width="2"/><circle cx="34" cy="31" r="2.4" fill="#0B2148"/><circle cx="53" cy="31" r="2.4" fill="#0B2148"/></symbol>
+</defs></svg>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="Авиакомпания «Ямал», на главную"><img src="img/logo.svg" alt="Ямал" width="385" height="144"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#map">Рейсы и&nbsp;тарифы</a><a href="#mor">Морошка</a><a href="#order">Заказ вертолёта</a><a href="#way">В&nbsp;дорогу</a><a href="#park">Компания</a><a href="#contacts">Контакты</a></nav>
+  <a class="tel num" href="tel:+73492225251">+7 (34922) 2‑52‑51</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-ph"><img src="img/ph/02.webp" alt="Вертолёт Ми-8Т авиакомпании «Ямал» в полёте, спасатель спускается на тросе" width="1920" height="1280" fetchpriority="high"></div>
+  <div class="wrap hero-h" style="width:100%"><h1><span style="--n:0">Вертолётом</span><br><span style="--n:1">по&nbsp;всему Ямалу</span></h1></div>
+  <div class="wrap hero-g" style="width:100%">
+    <p class="lead">Регулярные рейсы, санитарная авиация, поиск и&nbsp;спасение, тушение лесных пожаров. 100% территории округа.</p>
+    <form class="go" id="go"><label class="field"><span>Откуда</span><select data-from></select></label><button type="button" class="swap" data-swap aria-label="Поменять местами"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h19l-5-5M23 17H4l5 5"/></svg></button><label class="field"><span>Куда</span><select data-to></select></label><button class="btn">Рейсы и&nbsp;тариф</button></form>
+  </div>
+  <div class="facts"><div class="wrap"><div><b class="num">56</b><span>вертолётов<br>Ми‑8 в&nbsp;парке</span></div><div><b class="num">70+</b><span>экипажей с&nbsp;опытом<br>на&nbsp;Крайнем Севере</span></div><div><b class="num">20+</b><span>своих посадочных<br>площадок в&nbsp;округе</span></div></div></div>
+</section>
+
+<section class="map" id="map"><div class="wrap">
+  <div class="map-h"><h2 data-split>Куда летим</h2><p class="lead">Выберите пункты в&nbsp;списке или нажмите на&nbsp;карте: сначала вылет, потом прилёт.</p></div>
+  <div class="map-g">
+    <div class="chart"><svg id="chart" viewBox="-74 0 1080 1000" role="group" aria-label="Схема вертолётных линий ЯНАО"></svg></div>
+    <div class="pan" id="pan">
+      <div class="ft"><label class="field"><span>Откуда</span><select data-from></select></label><button type="button" class="swap" data-swap aria-label="Поменять местами"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h19l-5-5M23 17H4l5 5"/></svg></button><label class="field"><span>Куда</span><select data-to></select></label></div>
+      <label class="mor"><input type="checkbox" id="mor-on" role="switch"><span>У&nbsp;меня есть карта «Морошка»</span></label>
+      <div class="ppl"><div class="st">Взрослые<span><button type="button" data-n="a" data-d="-1" aria-label="Меньше взрослых">–</button><output id="n-a">1</output><button type="button" data-n="a" data-d="1" aria-label="Больше взрослых">+</button></span></div><div class="st"><em style="font-style:normal;white-space:nowrap">Дети<br>2–12&nbsp;лет</em><span><button type="button" data-n="c" data-d="-1" aria-label="Меньше детей">–</button><output id="n-c">0</output><button type="button" data-n="c" data-d="1" aria-label="Больше детей">+</button></span></div></div>
+      <div aria-live="polite"><p class="sum" id="sum"><b class="num"></b><s class="num"></s></p><p class="per" id="per"></p></div>
+    </div>
+    <div class="pan2" aria-live="polite"><ul class="fls" id="fls"></ul><div class="kas" id="kas"></div>
+      <a class="btn" data-magnetic href="https://booking.akyamal.ru/websky/#/search" target="_blank" rel="noopener">Найти билеты</a>
+    </div>
+  </div>
+  <p class="src" id="src"></p>
+</div></section>
+
+<section class="sec mr" id="mor"><div class="wrap mr-g">
+  <div><h2 data-split>6&nbsp;перелётов в&nbsp;год по&nbsp;карте «Морошка»</h2>
+    <div class="six" id="six" aria-hidden="true"></div>
+    <p class="lead" style="margin-top:26px;max-width:30em">Для владельцев Единой карты жителя Ямала с&nbsp;подтверждённой регистрацией в&nbsp;округе. Рейсы внутри ЯНАО, на&nbsp;сайте и&nbsp;в&nbsp;кассах авиакомпании.</p>
+    <ol><li>Выберите маршрут, дату и&nbsp;перелёт по&nbsp;карте «Морошка»</li><li>При вводе паспортных данных выберите программу «Морошка»</li><li>Система проверит постоянную регистрацию в&nbsp;ЯНАО</li><li>Появится льготный тариф</li></ol>
+    <a class="link" style="display:inline-block;padding:10px 0;margin-top:14px" href="https://ek.yanao.ru" target="_blank" rel="noopener">Как оформить карту: ek.yanao.ru</a>
+  </div>
+  <div class="ref"><h3>Обмен и&nbsp;возврат билета «Морошка»</h3>
+    <div class="seg" id="ref" role="group" aria-label="Когда меняете или сдаёте билет"><button type="button" data-p="0">За&nbsp;24&nbsp;часа и&nbsp;раньше</button><button type="button" data-p="10">От&nbsp;24 до&nbsp;3&nbsp;часов</button><button type="button" data-p="25">За&nbsp;3&nbsp;часа и&nbsp;меньше</button><button type="button" data-p="25">После вылета</button></div>
+    <div aria-live="polite"><p class="pc num" id="ref-p">0%</p><p id="ref-t" style="font-size:19px"></p></div>
+    <p style="color:var(--muted);margin-top:20px">Можно изменить дату, маршрут по&nbsp;тарифу «Морошка» изменить нельзя. Обмен в&nbsp;кассах АК&nbsp;«Ямал».</p>
+  </div>
+</div></section>
+
+<section class="sec ord" id="order" data-theme="night"><div class="wrap ord-g">
+  <div><h2 data-split>Заказ вертолёта</h2>
+    <figure data-img style="margin-top:34px"><img src="img/ph/07.webp" alt="Ми-8 авиакомпании «Ямал» над весенней лесотундрой" width="1024" height="683" loading="lazy"></figure></div>
+  <div>
+    <div class="wk" id="wk" role="group" aria-label="Вид работ"><button type="button" aria-pressed="true">Коммерческий рейс</button><button type="button" aria-pressed="false">Санитарная авиация</button><button type="button" aria-pressed="false">Поисково‑спасательные работы</button><button type="button" aria-pressed="false">Тушение лесных пожаров</button><button type="button" aria-pressed="false">Авиапатрулирование, доставка людей и&nbsp;грузов</button></div>
+    <p style="margin:26px 0 20px;color:var(--muted)">Перезвоним в&nbsp;течение 10&nbsp;минут, обсудим задачу и&nbsp;запланируем работы.</p>
+    <form data-demo-form>
+      <label class="field full"><span>Вид работ</span><input name="Вид работ" id="f-w" value="Коммерческий рейс"></label>
+      <label class="field"><span>Имя</span><input name="Имя" required autocomplete="name"></label>
+      <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+      <label class="field full"><span>Дата</span><input name="Дата" type="date"></label>
+      <label class="field full"><span>Откуда, куда, что везём</span><textarea name="Задача" id="f-m" required></textarea></label>
+      <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+      <button class="btn full" data-magnetic>Заказать вертолёт</button>
+      <div class="done" role="status"><h3>Так заявка придёт в АК «Ямал»</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+    </form>
+  </div>
+</div></section>
+
+<section class="sec park" id="park"><div class="wrap">
+  <div class="park-g"><p class="n num" aria-hidden="true">56</p><div><h2 data-split>вертолётов в&nbsp;парке авиакомпании</h2><p class="types"><span>Ми‑8МТВ‑1</span><span>Ми‑8Т</span><span>Ми‑8П</span><span>Ми‑8ПС</span></p></div></div>
+  <div class="fleet" id="fleet" aria-hidden="true"></div>
+  <div class="cmp">
+    <div><h3>Весь Ямал и&nbsp;часть Красноярского края</h3><p>Пять филиалов: Салехардский, Таркосалинский, Тазовский, Новоуренгойский и&nbsp;Тюменский. Больше 1000&nbsp;сотрудников.</p></div>
+    <div><h3>Своя инженерная служба</h3><p>База в&nbsp;Салехарде, линейные станции в&nbsp;Тарко‑Сале, Новом Уренгое и&nbsp;Тазовском. В&nbsp;2020&nbsp;году в&nbsp;Салехарде введён новый ангарный комплекс.</p></div>
+    <div><h3>Залы ожидания у&nbsp;площадок</h3><p>Салехард, Лабытнанги, Новый Уренгой, Тарко‑Сале, Тазовский, Газ‑Сале, Антипаюта, Сеяха, Ноябрьск (Ясный).</p></div>
+  </div>
+</div></section>
+
+<section class="sec way" id="way"><div class="wrap">
+  <h2 data-split>В&nbsp;дорогу</h2>
+  <div class="way-g">
+    <dl>
+      <div><dt>1&nbsp;час</dt><dd>За&nbsp;столько начинается регистрация. Заканчивается за&nbsp;40&nbsp;минут до&nbsp;вылета, потом досмотр.</dd></div>
+      <div><dt>20&nbsp;кг</dt><dd>Бесплатная норма ручной клади на&nbsp;пассажира. Не&nbsp;больше 2&nbsp;мест, каждое до&nbsp;203&nbsp;см в&nbsp;сумме трёх измерений.</dd></div>
+      <div><dt>сверх нормы</dt><dd>Бесплатно: рюкзак до&nbsp;3&nbsp;кг (30×20×28&nbsp;см), сумка или портфель, букет, верхняя одежда, детское питание на&nbsp;время полёта, костюм в&nbsp;портпледе.</dd></div>
+      <div><dt>дети</dt><dd>До&nbsp;2&nbsp;лет без&nbsp;места бесплатно, с&nbsp;местом за&nbsp;50%. От&nbsp;2 до&nbsp;12&nbsp;лет скидка 50%. Только со&nbsp;взрослым от&nbsp;18&nbsp;лет.</dd></div>
+      <div><dt>8&nbsp;кг</dt><dd>Мелкая собака или кошка в&nbsp;салоне вместе с&nbsp;контейнером: до&nbsp;115&nbsp;см в&nbsp;сумме измерений, высота до&nbsp;20&nbsp;см. Оплата по&nbsp;тарифу сверхнормативной ручной клади.</dd></div>
+      <div><dt>оружие</dt><dd>До&nbsp;3&nbsp;единиц и&nbsp;1000&nbsp;патронов весом до&nbsp;5&nbsp;кг. На&nbsp;регистрацию не&nbsp;позднее чем за&nbsp;1&nbsp;час 30&nbsp;минут.</dd></div>
+    </dl>
+    <div><figure data-img><img src="img/ph/08.webp" alt="Ми-8 на галечном берегу северной реки осенью" width="700" height="525" loading="lazy"></figure><figure data-img><img src="img/ph/09.webp" alt="Вид из вертолёта: тундра, ручьи и Полярный Урал" width="700" height="525" loading="lazy"></figure></div>
+  </div>
+</div></section>
+
+<section class="sec nw"><div class="wrap">
+  <h2 data-split>События компании</h2>
+  <div class="nw-g" style="grid-template-columns:minmax(0,1fr)">
+    <ul><li data-reveal><time datetime="2026-09-28">28 сентября 2026</time><h3>Экскурсия на&nbsp;вертолётной площадке в&nbsp;Новом Уренгое</h3><p>Начальные классы школы «Перспектива» познакомились с&nbsp;профессией пилота и&nbsp;обслуживанием вертолёта.</p></li>
+    <li data-reveal><time datetime="2026-07-07">7 июля 2026</time><h3>Тушение пожаров в&nbsp;округе</h3><p>Часть вертолётов оснащена водосливными устройствами, остальные патрулируют, везут людей и&nbsp;грузы к&nbsp;удалённым очагам.</p></li>
+    <li data-reveal><time datetime="2026-06-03">3 июня 2026</time><h3>Крылья России</h3><p><a href="https://akyamal.ru/news/krylya-rossii-/" target="_blank" rel="noopener">Читать новость</a></p></li></ul></div>
+</div></section>
+
+<section class="sec ct" id="contacts" data-theme="night" style="background:var(--navy)"><div class="wrap">
+  <div class="top"><h2 data-split>Филиалы</h2><a class="big num" href="tel:+73492225251">+7 (34922) 2‑52‑51</a></div>
+  <ul>
+    <li><b>Салехард</b>ул. Авиационная, 22<br><small>Пн–пт 8:00–17:30</small><br><a href="mailto:info@akyamal.ru">info@akyamal.ru</a></li>
+    <li><b>Тарко‑Сале</b>ул. Ленина, 40/а<br><small>8:00–17:30</small><br><a class="num" href="tel:+73499722500">8 (34997) 2‑25‑00</a></li>
+    <li><b>Тазовский и&nbsp;Газ‑Сале</b>ул. Северная, 3 и&nbsp;ул. Ямбургская, 6<br><small>8:00–17:30</small><br><a class="num" href="tel:+73494024700">8 (34940) 2‑47‑00, доб. 102</a></li>
+    <li><b>Новый Уренгой</b>район реки Ева‑Яха, северная промзона<br><small>8:00–18:30</small></li>
+    <li><b>Надым, представитель</b>Аэропорт<br><small>8:00–18:30</small><br><a class="num" href="tel:+79519966904">8 951 996‑69‑04</a></li>
+    <li><b>Тюмень и&nbsp;Москва</b>ул. Чернышевского, 1б; 4‑й&nbsp;Лесной пер., 4<br><small>Пн–пт 8:00–17:30</small></li>
+  </ul>
+</div></section>
+</main>
+<footer class="ftr" data-theme="night" style="background:var(--navy)"><div class="wrap"><span>ООО «Авиационная компания «Ямал»<br>Салехард, ул. Авиационная, 22</span><span><a class="link" href="mailto:info@akyamal.ru">info@akyamal.ru</a></span></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73492225251">Позвонить</a><a class="btn" href="#map">Рейсы и тариф</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))},NS='http://www.w3.org/2000/svg',rub=function(n){return n.toLocaleString('ru-RU',{minimumFractionDigits:n%1?2:0,maximumFractionDigits:2}).replace(/\s/g,' ')+' ₽'};
+  /* тарифы: страницы «Льготные тарифы» akyamal.ru. [взрослый, взр. Морошка, детский, дет. Морошка, кг, кг Морошка, приказ] */
+  var T={"Красноселькуп|Толька (Красноселькупская)":[5440,4180,2720,2090,54.4,41.8,1],"Надым|Ныда":[5503,4233,2751.5,2116.5,55.03,42.33,3],"Нори|Ныда":[2700,2077,1350,1038.5,27,20.77,3],"Кутопьюган|Нори":[3335,2565,1667.5,1282.5,33.35,25.65,3],"Кутопьюган|Надым":[5431,4178,2715.5,2089,54.31,41.78,3],"Надым|Нори":[3363,2587,1681.5,1293.5,33.63,25.87,3],"Кутопьюган|Ныда":[4484,3449,2242,1724.5,44.84,34.49,3],"Салехард|Яр-Сале":[9190,7060,4595,3530,91.9,70.6,0],"Салемал|Салехард":[5400,4160,2700,2080,54,41.6,0],"Панаевск|Салехард":[7380,5680,3690,2840,73.8,56.8,0],"Панаевск|Салемал":[1940,1490,970,745,19.4,14.9,0],"Панаевск|Яр-Сале":[1800,1390,900,695,18,13.9,0],"Салемал|Яр-Сале":[3760,2890,1880,1445,37.6,28.9,0],"Мужи|Салехард":[6920,5320,3460,2660,69.2,53.2,0],"Салехард|Шурышкары":[4390,3380,2195,1690,43.9,33.8,0],"Восяхово|Салехард":[6660,5120,3330,2560,66.6,51.2,0],"Восяхово|Шурышкары":[2370,1820,1185,910,23.7,18.2,0],"Мужи|Шурышкары":[2940,2260,1470,1130,29.4,22.6,0],"Восяхово|Мужи":[1060,810,530,405,10.6,8.1,0],"Белоярск|Салехард":[4220,3250,2110,1625,42.2,32.5,0],"Мыс Каменный|Салехард":[11200,8610,5600,4305,112,86.1,0],"Новый Порт|Салехард":[10110,7780,5055,3890,101.1,77.8,0],"Новый Порт|Яр-Сале":[6080,4680,3040,2340,60.8,46.8,0],"Мыс Каменный|Новый Порт":[3220,2480,1610,1240,32.2,24.8,0],"Мыс Каменный|Яр-Сале":[6080,4680,3040,2340,60.8,46.8,0],"Казым-Мыс|Салехард":[10160,7820,5080,3910,101.6,78.2,0],"Горки|Салехард":[8920,6860,4460,3430,89.2,68.6,0],"Горки|Мужи":[2590,1990,1295,995,25.9,19.9,0],"Горки|Казым-Мыс":[2190,1680,1095,840,21.9,16.8,0],"Казым-Мыс|Мужи":[4330,3330,2165,1665,43.3,33.3,0],"Овгорт|Салехард":[10010,7700,5005,3850,100.1,77,0],"Мужи|Овгорт":[3220,2480,1610,1240,32.2,24.8,0],"Питляр|Салехард":[4190,3220,2095,1610,41.9,32.2,0],"Мужи|Питляр":[3720,2860,1860,1430,37.2,28.6,0],"Горки|Питляр":[5400,4160,2700,2080,54,41.6,0],"Лопхари|Салехард":[10160,7820,5080,3910,101.6,78.2,0],"Лопхари|Мужи":[3520,2710,1760,1355,35.2,27.1,0],"Салехард|Сеяха":[13010,10010,6505,5005,130.1,100.1,0],"Мыс Каменный|Сеяха":[7980,6140,3990,3070,79.8,61.4,0],"Сеяха|Яр-Сале":[9210,7080,4605,3540,92.1,70.8,0],"Лабытнанги|Салехард":[2040,1560,1020,780,20.4,15.6,0],"Азовы|Салехард":[9920,7630,4960,3815,99.2,76.3,0],"Азовы|Горки":[1360,1050,680,525,13.6,10.5,0],"Азовы|Мужи":[2850,2190,1425,1095,28.5,21.9,0],"Красноселькуп|Тарко-Сале":[9960,7660,4980,3830,99.6,76.6,0],"Красноселькуп|Новый Уренгой":[10540,8110,5270,4055,105.4,81.1,0],"Тарко-Сале|Толька (Красноселькупская)":[9140,7030,4570,3515,91.4,70.3,0],"Новый Уренгой|Толька (Красноселькупская)":[9210,7080,4605,3540,92.1,70.8,0],"Новый Уренгой|Тазовский":[8920,6860,4460,3430,89.2,68.6,0],"Кутопьюган|Салехард":[13200,10150,6600,5075,132,101.5,0],"Кутопьюган|Салемал":[7540,5800,3770,2900,75.4,58,0],"Кутопьюган|Панаевск":[5390,4150,2695,2075,53.9,41.5,0],"Кутопьюган|Яр-Сале":[3810,2930,1905,1465,38.1,29.3,0],"Мыс Каменный|Новый Уренгой":[22730,17480,11365,8740,227.3,174.8,0],"Антипаюта|Салехард":[9020,6940,4510,3470,90.2,69.4,0],"Антипаюта|Новый Уренгой":[9020,6940,4510,3470,90.2,69.4,0],"Самбург|Тарко-Сале":[7800,6000,3900,3000,78,60,4],"Тарко-Сале|Халясавэй":[7800,6000,3900,3000,78,60,4],"Тарко-Сале|Толька (Пуровская)":[7800,6000,3900,3000,78,60,4],"Находка|Тазовский":[1538,1182,769,591,15.38,11.82,2],"Антипаюта|Тазовский":[4646,3574,2323,1787,46.46,35.74,2],"Гыда|Тазовский":[9396,7228,4698,3614,93.96,72.28,2],"Антипаюта|Находка":[3120,2400,1560,1200,31.2,24,2],"Антипаюта|Гыда":[6790,5222,3395,2611,67.9,52.22,2],"Гыда|Находка":[9158,7044,4579,3522,91.58,70.44,2]},ORD=['16 декабря 2025 года № 235‑т','16 декабря 2025 года № 236‑т','6 марта 2025 года № 23‑т','5 марта 2025 года № 21‑т','21 февраля 2025 года № 9‑т'];
+  /* расписание движения akyamal.ru на 25.11.2026: [рейс, обратный, остановки, дни, период, последний день, вылет, прилёт, обр. вылет, обр. прилёт] */
+  var X='в период межсезонья',TK='Толька (Красноселькупская)',TP='Толька (Пуровская)';
+  var S=[['ЯЛ‑50','ЯЛ‑51',['Салехард','Салемал','Панаевск','Яр-Сале'],'вт, сб','3 января – 29 декабря','2026-12-29','09:30','11:00','11:05','12:35'],['ЯЛ‑30','ЯЛ‑31',['Салехард','Яр-Сале'],'пн, пт','12 октября – 28 декабря','2026-12-28','10:40','11:30','11:40','12:30'],['ЯЛ‑52','ЯЛ‑53',['Салехард','Шурышкары','Восяхово','Мужи'],'вс','11 октября – 28 декабря','2026-12-28','10:30','11:35','11:40','12:45'],['ЯЛ‑18','ЯЛ‑19',['Салехард','Мужи'],'пн','12 октября – 7 декабря','2026-12-07','14:10','15:00','15:10','16:00'],['ЯЛ‑54','ЯЛ‑55',['Салехард','Белоярск'],'вт, сб',X,'','13:40','14:10','14:20','14:50'],['ЯЛ‑36','ЯЛ‑37',['Салехард','Мыс Каменный'],'пт','2 октября – 25 декабря','2026-12-25','09:20','11:20','11:50','13:50'],['ЯЛ‑58','ЯЛ‑59',['Салехард','Мужи','Горки','Казым-Мыс'],'вт','8 и 22 декабря','2026-12-22','10:10','11:50','12:00','13:40'],['ЯЛ‑60','ЯЛ‑61',['Салехард','Мужи','Овгорт'],'пн, чт','12 октября – 28 декабря','2026-12-28','10:30','11:55','12:00','13:25'],['ЯЛ‑62','ЯЛ‑63',['Салехард','Питляр','Мужи','Горки'],'ср, пт','14 октября – 30 декабря','2026-12-30','10:20','11:40','11:45','13:05'],['ЯЛ‑64','ЯЛ‑65',['Салехард','Яр-Сале','Новый Порт'],'вт',X,'','09:50','11:25','11:35','13:05'],['ЯЛ‑34','ЯЛ‑35',['Салехард','Новый Порт'],'пт','16 октября – 25 декабря','2026-12-25','09:50','11:20','11:50','13:20'],['ЯЛ‑66','ЯЛ‑67',['Салехард','Мужи','Лопхари'],'вт','13 октября – 29 декабря','2026-12-29','10:30','11:45','11:50','13:05'],['ЯЛ‑68','ЯЛ‑69',['Салехард','Яр-Сале','Мыс Каменный','Сеяха'],'пн, чт','1 октября – 28 декабря','2026-12-28','09:00','12:30','13:00','16:20'],['ЯЛ‑28','ЯЛ‑29',['Салехард','Сеяха'],'вт','6 октября – 29 декабря','2026-12-29','09:00','11:50','12:20','15:10'],['ЯЛ‑74','ЯЛ‑75',['Салехард','Мужи','Горки','Азовы'],'вс','11 октября – 20 декабря','2026-12-20','10:20','11:55','12:00','13:45'],['ЯЛ‑10','ЯЛ‑11',['Салехард','Салемал','Панаевск','Яр-Сале','Кутопьюган'],'пт, по датам','9 января – 18 сентября','2026-09-18','10:00','12:20','12:25','14:45'],['ЯЛ‑48','ЯЛ‑49',['Салехард','Антипаюта'],'ср','3 июня – 23 сентября','2026-09-23','10:00','13:10','13:50','17:00'],['ЯЛ‑44','ЯЛ‑45',['Новый Уренгой','Антипаюта'],'пн, пт','2 октября – 28 декабря','2026-12-28','10:30','12:50','13:30','15:50'],['ЯЛ‑41','ЯЛ‑40',['Новый Уренгой','Красноселькуп'],'вт, чт, сб','1 октября – 29 декабря','2026-12-29','12:00','13:35','09:00','10:35'],['ЯЛ‑72','ЯЛ‑73',['Тазовский','Новый Уренгой'],'вт',X,'','09:10','10:10','12:00','13:00'],['ЯЛ‑78','ЯЛ‑79',['Тарко-Сале',TK],'вт, чт, сб','1 октября – 29 декабря','2026-12-29','09:40','11:00','11:40','13:00'],['ЯЛ‑92','',['Надым','Кутопьюган','Нори','Ныда','Надым'],'по датам','30 ноября, 7, 14, 21 и 28 декабря','2026-12-28','10:00','12:50'],['ЯЛ‑94','',['Надым','Ныда','Нори','Кутопьюган','Надым'],'по датам','26 ноября, 3, 10, 17, 24 и 30 декабря','2026-12-30','10:00','12:50'],['ЯЛ‑93','',['Надым','Ныда','Кутопьюган','Надым'],'по датам','19 мая – 3 ноября','2026-11-03','10:00','12:00'],['ЯЛ‑90','ЯЛ‑91',['Красноселькуп',TK],'пн','12 января – 31 декабря','2026-12-31','09:00','10:15','11:00','12:15'],['ЯЛ‑88','ЯЛ‑89',['Тазовский','Находка','Антипаюта'],'пт','','','09:10','10:40','11:10','12:40'],['ЯЛ‑76','ЯЛ‑77',['Тазовский','Гыда'],'вт, чт','','','09:10','12:00','12:30','15:20'],['ЯЛ‑84','ЯЛ‑85',['Тазовский','Антипаюта'],'ср','','','09:10','10:40','11:10','12:40'],['ЯЛ‑81','ЯЛ‑80',['Тарко-Сале','Красноселькуп'],'пн, ср, пт','2 октября – 30 декабря','2026-12-30','09:00','10:20','11:00','12:20'],['ЯЛ‑38','ЯЛ‑39',['Новый Уренгой',TK],'вт','5 мая – 29 сентября','2026-09-29','09:00','11:10','12:00','14:10'],['ЯЛ‑56','ЯЛ‑57',['Салехард','Яр-Сале','Новый Порт','Мыс Каменный'],'пн, ср','1 октября – 30 декабря','2026-12-30','09:20','11:35','12:00','14:20'],['ЯЛ‑12','ЯЛ‑13',['Тарко-Сале','Самбург'],'по датам','7 мая – 17 ноября','2026-11-17','10:00','11:40','11:50','13:35'],['ЯЛ‑14','ЯЛ‑15',['Тарко-Сале','Халясавэй'],'по датам','8 декабря','2026-12-08','10:00','11:35','11:45','13:20'],['ЯЛ‑16','ЯЛ‑17',['Тарко-Сале',TP],'по датам','18 декабря','2026-12-18','10:00','11:30','12:30','14:00']];
+  [['','07:00','07:20','07:40','08:00'],['Д','08:30','08:50','09:10','09:30'],['Е','10:00','10:20','10:40','11:00'],['К','11:30','11:50','12:10','12:30'],['Л','13:15','13:35','13:55','14:15'],['Н','14:45','15:05','15:25','15:45'],['П','16:15','16:35','16:55','17:15'],['Р','17:45','18:05','18:25','18:45']].forEach(function(r){S.push(['ЯЛ‑70'+r[0],'ЯЛ‑71'+r[0],['Салехард','Лабытнанги'],'ежедневно',X,'',r[1],r[2],r[3],r[4]])});
+  /* кассы: «Офисы продаж» akyamal.ru */
+  var O={'Салехард':['Аэропорт, ул. Авиационная, 22','8 (349) 222‑52‑52, доб. 2200','+73492225252','ежедневно 8:00–18:30, перерыв 12:00–13:30'],'Лабытнанги':['ул. Школьная, 24'],'Тазовский':['ул. Северная, 3','8 (34940) 2‑19‑27','+73494021927','8:00–16:15, перерыв 12:00–13:30'],'Мужи':['ул. Советская, 2, вертодром','8 (34994) 21‑4‑57','+73499421457','9:00–16:00, сб выходной, вс к рейсу'],'Яр-Сале':['ул. Мира, 20, вертодром','8 (34996) 3‑11‑87','+73499631187','8:00–17:00'],'Новый Порт':['ул. Тундровая, 7Б','8 (34996) 24‑7‑44','+73499624744','пн, ср, пт 9:00–15:00, вт, чт 12:00–15:00'],'Сеяха':['ул. Совхозная, 17'],'Горки':['ул. Республики, 35, вертолётная площадка','8 (34994) 6‑16‑82','+73499461682'],'Мыс Каменный':['ул. Геологов, 45','8 (34996) 28‑1‑49','+73499628149'],'Антипаюта':['ул. Лётная, 1А','8 904 458‑17‑32','+79044581732','8:30–15:30, сб и вс выходные'],'Находка':['ул. Подгорная, 6А'],'Гыда':['посадочная площадка'],'Салемал':['ул. Первомайская, 21','8 (34996) 23‑0‑13','+73499623013'],'Азовы':['ул. Школьная, 21','8 (34994) 66‑3‑88','+73499466388'],'Панаевск':['ул. Новая, 13','8 (34996) 21‑1‑71','+73499621171'],'Питляр':['посадочная площадка'],'Овгорт':['ул. Строителей, 13','8 (34994) 67‑2‑14','+73499467214'],'Лопхари':['ул. Лесная, 14'],'Казым-Мыс':['посадочная площадка'],'Восяхово':['ул. Береговая, 30, администрация','8 (34994) 64‑3‑49','+73499464349'],'Шурышкары':['посадочная площадка','8 (34994) 62‑3‑38','+73499462338'],'Новый Уренгой':['Аэропорт, общий вход','8 (3494) 93‑63‑88','+73494936388','ежедневно 8:00–12:20'],'Надым':['Аэропорт','8 958 164‑48‑26','+79581644826','ежедневно 7:30–18:30, перерыв 12:30–13:30'],'Красноселькуп':['ул. Авиаторов, 7','8 (3493) 22‑23‑92','+73493222392','8:00–16:15, перерыв 12:00–13:00, сб к рейсу, вс выходной'],'Тарко-Сале':['ул. Ленина, 31, аэропорт','8 (3499) 72‑16‑06','+73499721606','8:00–16:00, перерыв 13:00–14:00, сб к рейсу, вс выходной'],'Белоярск':['посадочная площадка'],'Самбург':['посадочная площадка'],'Халясавэй':['посадочная площадка'],'Нори':['посадочная площадка'],'Ныда':['посадочная площадка'],'Кутопьюган':['посадочная площадка']};
+  O[TK]=['Аэропорт, 1 этаж','8 (3493) 23‑16‑64','+73493231664','8:00–16:00, перерыв 12:00–13:00, сб и вс выходные'];O[TP]=['посадочная площадка'];
+
+  /* ---------- карта: широта, долгота (приблизительно), сторона подписи ---------- */
+  var P={'Салехард':[66.53,66.6,'b',1],'Лабытнанги':[66.66,66.4,'l'],'Белоярск':[66.87,68.14,'t',0,-2],'Салемал':[66.78,68.95,'b',0,-3],'Панаевск':[66.74,70.09,'b',0,14],'Яр-Сале':[66.9,70.83,'t',0,2],'Новый Порт':[67.69,72.9,'l'],'Мыс Каменный':[68.47,73.59,'l'],'Сеяха':[70.16,72.52,'l'],'Мужи':[65.4,64.7,'r'],'Шурышкары':[65.91,65.37,'l'],'Восяхово':[65.64,64.98,'l'],'Питляр':[65.82,65.98,'r'],'Овгорт':[65.28,63.95,'l'],'Горки':[65.07,65.27,'r',0,-7],'Лопхари':[64.93,65.95,'r',0,8],'Азовы':[64.9,65.02,'l'],'Казым-Мыс':[64.72,65.66,'b'],'Кутопьюган':[66.4,71.15,'b',0,2],'Нори':[66.17,72.55,'r'],'Ныда':[66.63,72.95,'r'],'Надым':[65.53,72.52,'b',1],'Новый Уренгой':[66.08,76.63,'t',1],'Тазовский':[67.48,78.7,'r',1],'Находка':[67.86,77.55,'l'],'Антипаюта':[69.1,76.87,'r'],'Гыда':[70.89,78.46,'r'],'Тарко-Сале':[64.91,77.77,'l',1],'Самбург':[67,78.22,'r'],'Халясавэй':[63.39,78.4,'l'],'Красноселькуп':[65.7,82.47,'l',1]};
+  P[TK]=[63.99,82.08,'b'];P[TP]=[63.35,80.6,'r'];
+  function XY(la,lo){return [(lo-62.6)*46.3,(71.45-la)*116]}
+  function poly(a,close){return 'M'+a.map(function(p){var q=XY(p[0],p[1]);return q[0].toFixed(0)+' '+q[1].toFixed(0)}).join('L')+(close?'Z':'')}
+  // плавная линия через точки
+  function curve(a){var q=a.map(function(p){return XY(p[0],p[1])}),s='M'+q[0].map(Math.round).join(' ');for(var i=0;i<q.length-1;i++){var p0=q[i-1]||q[i],p1=q[i],p2=q[i+1],p3=q[i+2]||p2;s+='C'+[p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6,p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6,p2[0],p2[1]].map(Math.round).join(' ')}return s}
+  var svg=$('#chart'),el=function(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e};
+  // озёра тундры: детерминированная россыпь
+  var sd=7,rnd=function(){sd=(sd*16807)%2147483647;return sd/2147483647};for(var i=0;i<230;i++){el('ellipse',{class:'lake',cx:(-74+rnd()*1080).toFixed(0),cy:(rnd()*1000).toFixed(0),rx:(2+rnd()*9).toFixed(1),ry:(1.6+rnd()*5).toFixed(1),transform:''})}
+  // Карское море, Байдарацкая, Обская, Тазовская и Гыданская губы: схематично
+  el('path',{class:'water',d:curve([[71.8,60],[69.3,64.2],[68.45,65.6],[68.22,67.3],[68.5,68.5],[69.1,67.6],[69.8,66.9],[70.6,66.6],[71.9,67.4]])+'L-74 -60Z'});
+  el('path',{class:'water',d:curve([[71.9,72.7],[70.9,72.9],[70.1,72.75],[69.4,73.1],[68.6,73.5],[68,73.3],[67.6,72.75],[67.1,72],[66.72,71.2],[66.62,70.5],[66.5,71.3],[66.38,72.2],[66.4,72.8],[66.8,73.1],[67.3,73.9],[67.9,74.6],[68.5,75.1],[68.6,76.2],[68.2,76.7],[67.8,77.2],[67.5,78.1],[67.42,78.75],[67.62,78.7],[67.95,77.8],[68.4,77.2],[68.95,76.9],[69.1,76.4],[69.05,75.2],[69.5,74.5],[70.2,74.2],[71,74.1],[71.9,74.6]])+'Z'});
+  el('path',{class:'water',d:curve([[72,76.2],[71.4,77],[70.95,78.1],[70.86,78.45],[71.1,78.5],[71.5,78],[72,78.4]])+'Z'});
+  [[[[62.9,66],[63.7,65.2],[64.4,65.5],[64.8,65.7],[65.15,65.35],[65.6,65.25],[66,65.6],[66.5,66.65],[66.75,68],[66.72,69.2],[66.7,70.3]],13],[[[62.9,71.2],[64,71.7],[64.9,72.6],[65.5,72.35],[66.1,72.55],[66.4,72.4]],6],[[[62.9,76],[64,76.7],[64.9,77.9],[65.8,78.2],[66.9,78.3],[67.45,78.4]],9],[[[62.9,82.9],[63.9,82.2],[64.8,82],[65.7,82.5],[66.5,82.1],[66.9,80.6],[67.3,79.3],[67.5,78.7]],9],[[[65.1,61.5],[65.28,63.9],[65.35,64.8]],4]].forEach(function(r){el('path',{class:'river',d:curve(r[0]),'stroke-width':r[1]})});
+  var pc=XY(66.56,0)[1];el('path',{class:'polar',d:'M-74 '+pc+'H1010'});var gt=el('text',{class:'geo s',x:300,y:pc-9});gt.textContent='Полярный круг';
+  [[69.75,73.3,'Обская губа','s'],[70.6,63.4,'Карское море','k']].forEach(function(g){var q=XY(g[0],g[1]),t=el('text',{class:'geo '+g[3],x:q[0],y:q[1]});if(g[3]==='s'){t.setAttribute('transform','rotate(80 '+q[0]+' '+q[1]+')')}t.textContent=g[2]});
+  var keys=Object.keys(T),near={};keys.forEach(function(k){var a=k.split('|');(near[a[0]]=near[a[0]]||[]).push(a[1]);(near[a[1]]=near[a[1]]||[]).push(a[0])});
+  function arc(a,b){var p=XY(P[a][0],P[a][1]),q=XY(P[b][0],P[b][1]),dx=q[0]-p[0],dy=q[1]-p[1],l=Math.hypot(dx,dy),s=dx<0?-1:1,k=.17;return 'M'+p[0].toFixed(1)+' '+p[1].toFixed(1)+'Q'+((p[0]+q[0])/2+dy*k*s).toFixed(1)+' '+((p[1]+q[1])/2-dx*k*s).toFixed(1)+' '+q[0].toFixed(1)+' '+q[1].toFixed(1)}
+  var edges={};keys.forEach(function(k){var a=k.split('|');edges[k]=el('path',{class:'edge',d:arc(a[0],a[1])})});
+  var route=el('path',{class:'route',d:''}),pts={},from='Салехард',to='Яр-Сале',step=0;
+  var cities=Object.keys(P).sort(function(a,b){return a.localeCompare(b,'ru')});
+  cities.forEach(function(c){var q=XY(P[c][0],P[c][1]),g=el('g',{class:'pt'+(P[c][3]?' hub':''),tabindex:0,role:'button','aria-label':c}),sd=P[c][2];el('circle',{class:'h',cx:q[0],cy:q[1],r:20},g);el('circle',{class:'d',cx:q[0],cy:q[1],r:P[c][3]?8:5.5},g);
+    var t=el('text',{x:q[0]+(sd==='l'?-13:sd==='r'?13:0),y:q[1]+(sd==='t'?-14:sd==='b'?26:6)+(P[c][4]||0),'text-anchor':sd==='l'?'end':sd==='r'?'start':'middle'},g);t.textContent=c.replace('Красноселькупская','Краснос.');pts[c]=g;
+    var go=function(){if(step===1&&c!==from&&near[from].indexOf(c)>=0){to=c;step=0;set(true)}else{from=c;step=1;if(near[from].indexOf(to)<0)to=near[from].slice().sort()[0];set(false)}};
+    g.addEventListener('click',go);g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
+  // вертолёт, вид сверху: пять лопастей Ми-8
+  var fly=el('g',{});fly.style.pointerEvents='none';svg.insertBefore(fly,pts[cities[0]]);var sh=el('ellipse',{cx:0,cy:0,rx:26,ry:9,fill:'#0B2148',opacity:.16},fly),he=el('g',{},fly);
+  el('path',{d:'M-64 0 L-14 -5 L-14 5Z',fill:'#fff',stroke:'#003C8C','stroke-width':2},he);el('path',{d:'M-64 -9 L-58 9',stroke:'#E3000F','stroke-width':5,'stroke-linecap':'round'},he);el('path',{d:'M-26 0C-26 -12 -8 -14 12 -13C28 -12 36 -6 36 0C36 6 28 12 12 13C-8 14 -26 12 -26 0Z',fill:'#fff',stroke:'#003C8C','stroke-width':2.4},he);el('path',{d:'M16 -12C28 -11 36 -6 36 0C36 6 28 11 16 12C21 4 21 -4 16 -12Z',fill:'#003C8C'},he);el('path',{d:'M-20 -4H14V4H-20Z',fill:'#E3000F'},he);
+  var ro=el('g',{class:'rot'},he);el('circle',{cx:0,cy:0,r:52,fill:'#0B2148',opacity:.06},ro);for(i=0;i<5;i++)el('path',{d:'M0 -2.4H50V2.4H0Z',fill:'#0B2148',opacity:.72,transform:'rotate('+i*72+')'},ro);el('circle',{cx:0,cy:0,r:6,fill:'#0B2148'},ro);
+  var K=function(){return innerWidth<=900?1.05:.62},raf=0;
+  function place(p,len){var a=route.getPointAtLength(Math.max(0,p*len-1)),b=route.getPointAtLength(Math.min(len,p*len+1)),c=route.getPointAtLength(p*len),an=Math.atan2(b.y-a.y,b.x-a.x)*180/Math.PI,up=Math.sin(Math.PI*p),k=K()*(.8+.28*up);
+    fly.setAttribute('transform','translate('+c.x.toFixed(1)+' '+c.y.toFixed(1)+') scale('+k.toFixed(3)+')');he.setAttribute('transform','translate(0 '+(-16*up).toFixed(1)+') rotate('+an.toFixed(1)+')');sh.setAttribute('transform','translate('+(10*up).toFixed(1)+' '+(16*up).toFixed(1)+') rotate('+an.toFixed(1)+')');route.style.strokeDasharray=(p*len)+' '+len}
+  function flyTo(){cancelAnimationFrame(raf);route.setAttribute('d',arc(from,to));var len=route.getTotalLength();if(KIT.REDUCED||KIT.still){place(1,len);route.style.strokeDasharray='none';return}
+    var d=Math.min(5200,1500+len*5),t0=performance.now();(function s(n){var p=Math.min(1,Math.max(0,(n-t0)/d)),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;place(e,len);if(p<1)raf=requestAnimationFrame(s)})(t0)}
+
+  /* ---------- панель ---------- */
+  var moro=$('#mor-on'),cnt={a:1,c:0};
+  function fill(){$$('[data-from]').forEach(function(s){if(!s.options.length)cities.forEach(function(c){var o=document.createElement('option');o.textContent=o.value=c;s.appendChild(o)});s.value=from});
+    $$('[data-to]').forEach(function(s){s.textContent='';near[from].slice().sort(function(a,b){return a.localeCompare(b,'ru')}).forEach(function(c){var o=document.createElement('option');o.textContent=o.value=c;s.appendChild(o)});s.value=to})}
+  function fare(){return T[[from,to].sort().join('|')]}
+  function price(){var f=fare(),m=moro.checked?1:0,tot=cnt.a*f[m]+cnt.c*f[2+m],full=cnt.a*f[0]+cnt.c*f[2];$('#sum').classList.toggle('m',!!m);$('#sum b').textContent=rub(tot);$('#sum s').textContent=m?rub(full):'';
+    $('#per').textContent='Взрослый '+rub(f[m])+', детский '+rub(f[2+m])+', килограмм сверх нормы '+rub(f[4+m])+'. Тариф с НДС в одну сторону.';
+    $('#src').textContent='Льготный тариф утверждён приказом департамента тарифной политики, энергетики и ЖКК ЯНАО от '+ORD[f[6]]+'. Расписание с сайта авиакомпании на 25 ноября 2026 года. Положение пунктов на схеме приблизительное.';refund()}
+  function mins(a,b){var x=a.split(':'),y=b.split(':'),d=(y[0]*60+ +y[1])-(x[0]*60+ +x[1]);return (d>=60?Math.floor(d/60)+' ч ':'')+(d%60?d%60+' мин':'')}
+  function flights(){var out=[],now=new Date(),td=new Date(now.getTime()-now.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+    S.forEach(function(f){[[f[0],f[2],f[6],f[7]],f[1]?[f[1],f[2].slice().reverse(),f[8],f[9]]:null].forEach(function(v){if(!v)return;var i=v[1].indexOf(from),j=v[1].lastIndexOf(to);if(i<0||j<0||i>=j)return;out.push({no:v[0],days:f[3],per:f[4],end:f[5]&&f[5]<td,dep:i===0?v[2]:'',arr:j===v[1].length-1?v[3]:'',via:v[1].slice(i+1,j),st:v[1][0],fin:v[1][v[1].length-1],sd:v[2]})})});
+    out.sort(function(a,b){return (a.end?1:0)-(b.end?1:0)||(a.dep&&a.arr?0:1)-(b.dep&&b.arr?0:1)||a.via.length-b.via.length||(a.sd<b.sd?-1:1)});
+    var u=$('#fls');u.textContent='';out.forEach(function(f){var li=document.createElement('li');if(f.end)li.className='end';var b=document.createElement('b'),t=document.createElement('span'),s=document.createElement('small');b.textContent=f.no+', '+f.days;t.className='tm num';t.textContent=f.dep&&f.arr?f.dep+' – '+f.arr:f.dep?'вылет '+f.dep:f.arr?'прилёт '+f.arr:'';
+      var p=[];if(f.via.length)p.push('через '+f.via.join(', '));else if(f.dep&&f.arr)p.push('в пути '+mins(f.dep,f.arr));if(!f.dep||!f.arr)p.push('рейс '+f.st+' – '+f.fin);if(f.per)p.push(f.per);if(f.end)p.push('период закончился');s.textContent=p.join(' · ');li.append(b,t,s);u.appendChild(li)});
+    if(!out.length){var li=document.createElement('li');li.innerHTML='<small>В расписании на 25 ноября 2026 года рейса нет. Тариф действует, даты уточните в кассе.</small>';u.appendChild(li)}
+    var k=$('#kas'),o=O[from];k.textContent='';if(o){k.append('Касса, '+from+': '+o[0]+(o[3]?', ':'. '));if(o[3])k.append(o[3]+'. ');if(o[1]){var a=document.createElement('a');a.className='num';a.href='tel:'+o[2];a.textContent=o[1];k.append(a)}else k.append('Работает по расписанию рейсов.')}}
+  function set(doFly){fill();price();flights();
+    var ks=[from,to].sort().join('|');keys.forEach(function(k){edges[k].classList.toggle('on',k.split('|').indexOf(from)>=0)});
+    cities.forEach(function(c){pts[c].classList.toggle('sel',c===from||(c===to&&step===0));pts[c].classList.toggle('far',c!==from&&near[from].indexOf(c)<0);
+      // на телефоне подпись базового пункта не должна лезть на выбранный
+      var q=XY(P[c][0],P[c][1]),cl=[from,to].some(function(s){if(s===c)return false;var r=XY(P[s][0],P[s][1]);return Math.abs(r[0]-q[0])<330&&Math.abs(r[1]-q[1])<74});pts[c].classList.toggle('quiet',cl&&c!==from&&c!==to)});
+    if(doFly!==false)flyTo();else{cancelAnimationFrame(raf);route.setAttribute('d','');var q=XY(P[from][0],P[from][1]);fly.setAttribute('transform','translate('+q[0]+' '+q[1]+') scale('+K()*.8+')')}}
+  $$('[data-from]').forEach(function(s){s.addEventListener('change',function(){from=s.value;step=0;if(near[from].indexOf(to)<0)to=near[from].slice().sort()[0];set()})});
+  $$('[data-to]').forEach(function(s){s.addEventListener('change',function(){to=s.value;step=0;set()})});
+  $$('[data-swap]').forEach(function(b){b.addEventListener('click',function(){var x=from;from=to;to=x;step=0;set()})});
+  moro.addEventListener('change',price);
+  $$('[data-n]').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.n;cnt[k]=Math.min(9,Math.max(k==='a'?1:0,cnt[k]+ +b.dataset.d));$('#n-'+k).textContent=cnt[k];price()})});
+  $('#go').addEventListener('submit',function(e){e.preventDefault();var m=$('#map');if(KIT.lenis)KIT.lenis.scrollTo(m,{offset:-70});else m.scrollIntoView();setTimeout(flyTo,700)});
+
+  /* ---------- возврат «Морошки» ---------- */
+  var rp=0;function refund(){var f=fare();$('#ref-p').textContent=rp+'%';$('#ref-t').textContent=rp?'Сбор с билета '+from+' – '+to+' для взрослого: '+rub(Math.round(f[1]*rp)/100)+' от тарифа '+rub(f[1])+'.':'Обмен и возврат без сбора.'}
+  $$('#ref button').forEach(function(b,i){b.setAttribute('aria-pressed',i===0);b.addEventListener('click',function(){rp=+b.dataset.p;$$('#ref button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});refund()})});
+
+  /* ---------- иконки парка ---------- */
+  function icons(id,n){var h='';for(var i=0;i<n;i++)h+='<svg viewBox="0 0 64 34"><use href="#heli"/></svg>';$(id).innerHTML=h}
+  icons('#six',6);icons('#fleet',56);
+  $$('#wk button').forEach(function(b){b.addEventListener('click',function(){$$('#wk button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});$('#f-w').value=b.textContent.replace(/ /g,' ')})});
+  set(false);step=0;set(false);var seen=false;KIT.onView($('.chart'),function(v){if(v&&!seen){seen=true;set()}},{threshold:.25});
+});
+</script>
+</body>
+</html>

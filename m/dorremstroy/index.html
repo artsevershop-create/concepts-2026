@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ДорРемСтрой — содержание, ремонт и строительство дорог, Надым</title>
+<meta name="description" content="Концепция сайта ООО «ДорРемСтрой»: содержание, ремонт и строительство автомобильных дорог, дорожно-строительная техника. Надым.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/finlandica-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../kit/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--sign:#0B38A6;--sign-d:#072A80;--night:#06184A;--snow:#E7F1FA;--shade:#BFD3E8;--ink:#0B1F52;--red:#D8182B;--warn:#FFD024;
+  --bg:var(--snow);--fg:var(--ink);--muted:#43567F;--accent:var(--sign);--accent-h:#1450D6;--on-accent:#fff;--line:rgba(11,31,82,.28);--r:12px;--hdr-h:84px;--wrap:1280px;
+  --f-display:"Finlandica","Golos Text",sans-serif;--f-text:"Golos Text",system-ui,sans-serif;
+  --film:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='48.5'%3E%3Cpath d='M14 0v8M14 24.2v8M0 16.2 14 8l14 8.2M0 16.2v16.1M28 16.2v16.1M0 32.3l14 8.1 14-8.1M14 40.4v8.1M14 24.2 0 16.2M14 24.2l14-8M0 32.3l14-8.1 14 8.1' fill='none' stroke='%23fff' stroke-opacity='.1'/%3E%3C/svg%3E")}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;letter-spacing:-.01em;line-height:1}
+h2{font-size:clamp(38px,5vw,76px)}
+.lead{font-size:clamp(18px,1.45vw,21px);line-height:1.5}
+.btn{font:700 19px/1.2 var(--f-display);letter-spacing:.005em}
+.btn--w{background:#fff;color:var(--sign)}.btn--w::before{background:#CFE3FA}
+
+/* плёнка знака: соты и блик фар */
+.film{position:relative;background:var(--sign) var(--film);color:#fff;overflow:hidden}
+.film::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(460px circle at var(--gx,24%) var(--gy,-10%),rgba(190,220,255,.42),rgba(120,170,255,.12) 45%,transparent 72%);mix-blend-mode:screen}
+.rim{box-shadow:inset 0 0 0 7px var(--sign),inset 0 0 0 13px #fff;border-radius:26px}
+
+.hdr{background:#fff}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.6vw,46px)}
+.hdr .logo{display:flex;align-items:center;gap:14px;text-decoration:none;font:700 26px/1 var(--f-display);color:var(--sign)}
+.hdr .logo img{width:60px;height:60px}
+.hdr nav{display:flex;gap:clamp(16px,2.2vw,36px);margin-left:auto;font-size:17px;font-weight:500}
+.hdr nav a{text-decoration:none;padding:12px 0;border-bottom:4px solid transparent;transition:border-color .25s}
+.hdr nav a:hover{border-color:var(--sign)}
+.hdr .tel{font:700 22px/1 var(--f-display);text-decoration:none;color:var(--sign);min-height:44px;display:inline-flex;align-items:center}
+
+/* первый экран */
+.hero{position:relative;min-height:min(100svh,980px);padding-top:var(--hdr-h);overflow:clip;color:#fff;isolation:isolate;background:#072A80}
+.hero>svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.72fr) minmax(0,1fr);gap:clamp(28px,4vw,76px);align-items:start;padding-top:clamp(26px,5vh,52px)}
+.board{position:relative;z-index:1}
+.board h1{padding:13px;font-size:clamp(44px,5.7vw,86px);text-shadow:0 0 1px rgba(255,255,255,.4)}
+.board h1 a{display:grid;grid-template-columns:clamp(70px,8vw,124px) minmax(0,1fr);align-items:center;text-decoration:none;min-height:clamp(84px,12.4vh,122px);border-bottom:6px solid #fff;transition:background-color .3s}
+.board h1 a:hover{background:rgba(255,255,255,.12)}
+.board h1 svg{width:clamp(38px,4.2vw,62px);margin:auto;transition:transform .45s var(--e-smooth)}
+.board h1 a:hover svg{transform:translateY(-5px)}.board h1 a:nth-of-type(2):hover svg{transform:translateX(-6px)}.board h1 a:nth-of-type(3):hover svg{transform:translateX(6px)}
+.board h1 span.in{display:block;margin:16px;padding:.26em .5em .3em;background:#fff;color:var(--sign);border-radius:10px;font-size:.62em;text-align:center}
+.posts{position:relative;height:clamp(60px,15vh,150px);z-index:0}
+.posts i{position:absolute;top:-8px;bottom:0;width:22px;background:linear-gradient(90deg,#7F90A6,#E9F1F8 38%,#8CA0B8 78%,#5F7290)}
+.posts i:nth-child(1){left:20%}.posts i:nth-child(2){right:20%}
+.posts i::after{content:"";position:absolute;left:50%;bottom:-16px;width:150px;height:34px;translate:-50% 0;border-radius:50%;background:radial-gradient(closest-side,#fff 60%,rgba(255,255,255,0))}
+.hero .say{padding-top:clamp(6px,3vh,34px)}
+.hero .say .lead{font-family:var(--f-display);font-size:clamp(24px,2.5vw,38px);line-height:1.22;font-weight:500;text-wrap:balance}
+.cta{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:28px}
+.cta .btn{min-width:min(100%,290px)}
+.near{position:absolute;right:var(--gutter);top:calc(min(100svh,980px)*.43);width:128px;text-decoration:none;display:block;padding-bottom:104px}
+.near::before{content:"";position:absolute;left:50%;top:40%;bottom:0;width:13px;translate:-50% 0;background:linear-gradient(90deg,#7F90A6,#EAF2F9 38%,#8CA0B8 78%,#5F7290)}
+.near::after{content:"";position:absolute;left:50%;bottom:-11px;width:90px;height:22px;translate:-50% 0;border-radius:50%;background:radial-gradient(closest-side,#fff 60%,rgba(255,255,255,0))}
+.near svg{position:relative;width:128px;height:128px}
+.near span{display:block;position:relative;margin-top:6px;padding:8px 6px 9px;border-radius:8px;border:3px solid #fff;outline:3px solid var(--sign);font:600 15px/1.12 var(--f-display);text-align:center;color:#fff;width:150px;left:-11px;transition:background-color .25s}
+.near span::after{display:none}
+.near:hover span{background-color:#1450D6}
+.mdrift{display:none}
+.cat{animation:none}
+@media (prefers-reduced-motion:no-preference){
+  .js .hero .cat{animation:lit .7s var(--e-smooth) both;animation-delay:calc(.35s + var(--i)*.17s)}
+  .js .board .sweep{animation:sweep 2.4s .4s var(--e-smooth) both}
+  .js .board{animation:drop 1.2s var(--e-smooth) both;transform-origin:50% 120%}
+}
+.sweep{position:absolute;inset:-20% auto -20% 0;width:38%;background:linear-gradient(90deg,transparent,rgba(220,236,255,.55),transparent);transform:translateX(-140%) skewX(-18deg);pointer-events:none}
+@keyframes sweep{from{transform:translateX(-140%) skewX(-18deg)}to{transform:translateX(420%) skewX(-18deg)}}
+@keyframes lit{from{opacity:.12}to{opacity:1}}
+@keyframes drop{from{transform:translateY(-14px) rotate(-.7deg)}to{transform:none}}
+
+/* маршрут */
+.trip{position:relative;isolation:isolate;overflow:clip;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='420'%3E%3Cg fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' opacity='.55'%3E%3Cpath d='M40 70q70-26 150 0t160-6M470 140q60-20 120 2t120-8M90 250q90-30 170 0M420 300q70-24 150 2t130-4M20 380q60-18 120 0'/%3E%3C/g%3E%3Cg fill='none' stroke='%2398B9DC' stroke-width='3' stroke-linecap='round' opacity='.2'%3E%3Cpath d='M44 78q70-26 150 0t160-6M474 147q60-20 120 2t120-8M94 257q90-30 170 0M424 307q70-24 150 2t130-4M24 386q60-18 120 0'/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(180deg,#E7F1FA 0,#E1EDF9 30%,#CFE1F4 62%,#B9D2EC 84%)}
+#road{position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;overflow:visible;pointer-events:none}
+#road>path{fill:none;stroke-linecap:butt;stroke-linejoin:round}
+.refl{transition:opacity .5s}.refl .g{opacity:0;transition:opacity .6s}.refl.on .g{opacity:1}.refl .d{fill:#7F95B5;transition:fill .4s}.refl.on.l .d{fill:#fff}.refl.on.r .d{fill:#FF2B3E}
+.spray circle{opacity:0}
+@media (prefers-reduced-motion:no-preference){.mv .spray circle{animation:spray .9s linear infinite;animation-delay:calc(var(--i)*-.13s)}}
+@keyframes spray{0%{opacity:.95;transform:none}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(2.2)}}
+.stop{position:relative;z-index:1;min-height:min(92svh,860px);display:grid;align-items:center;padding-block:40px}
+.stop .wrap{width:100%;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+.stop.b .wrap{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+.stop .in{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(24px,3.4vw,60px);align-items:center}
+.stop.b .in{grid-column:2}
+.pole{position:relative;padding-bottom:120px}
+.pole svg{position:relative;z-index:1;width:100%;height:auto;overflow:visible}
+.pole::before{content:"";position:absolute;left:50%;top:60%;bottom:0;width:18px;translate:-50% 0;background:linear-gradient(90deg,#7F90A6,#EAF2F9 38%,#8CA0B8 78%,#5F7290)}
+.pole::after{content:"";position:absolute;left:50%;bottom:-18px;width:150px;height:38px;translate:-50% 0;border-radius:50%;background:radial-gradient(closest-side,#fff 58%,rgba(255,255,255,0))}
+.cast{position:absolute;left:52%;bottom:-6px;width:105%;height:18px;background:linear-gradient(90deg,rgba(94,135,182,.5),rgba(94,135,182,0));transform:rotate(9deg);transform-origin:0 50%}
+.stop h2{font-size:clamp(36px,3.9vw,60px)}
+.stop .ask{margin:14px 0 20px;color:var(--muted)}
+.flds{display:grid;gap:12px}
+.field>span{font-size:15px}
+.field input{background:#fff;border-width:2px}
+.take{margin-top:16px;width:100%}
+.take[aria-pressed=true]{background:#fff;color:var(--sign);box-shadow:inset 0 0 0 3px var(--sign)}
+.take[aria-pressed=true]::before{background:#DCE9F8}
+.take svg{width:22px;height:22px;flex:none;stroke:currentColor;stroke-width:4;fill:none}
+.take svg path+path{transition:transform .35s var(--e-smooth);transform-origin:12px 12px}
+.take[aria-pressed=true] svg path+path{transform:scaleY(0)}
+
+/* отзывы */
+.voice{position:relative;z-index:1;padding-block:clamp(70px,9vw,130px)}
+.voice .wrap{display:grid;grid-template-columns:minmax(0,.9fr) 290px minmax(0,1.1fr);gap:0;align-items:center}
+.lim{width:min(100%,330px)}
+.lim svg{width:100%;height:auto}
+.voice .cap{margin-top:20px;max-width:13em;font:500 clamp(20px,1.7vw,25px)/1.25 var(--f-display)}
+.plate{background:#fff;border-radius:16px;box-shadow:inset 0 0 0 6px #fff,inset 0 0 0 9px #0B1F52;padding:30px 34px}
+.plate+.plate{margin-top:18px}
+.plate:nth-child(2){margin-left:8%}.plate:nth-child(3){margin-right:14%}
+.plate p{font-size:clamp(18px,1.5vw,22px);line-height:1.4}
+.plate footer{margin-top:12px;color:var(--muted);font-size:16px}
+
+/* вывеска и контакты */
+.home{position:relative;z-index:1;padding-block:clamp(30px,4vw,60px) clamp(150px,20vw,300px)}
+.gantry{position:relative;max-width:1200px;margin-inline:auto;padding:13px;background:var(--sign);border-radius:26px}
+.gantry img{width:100%;height:auto;border-radius:14px;border:6px solid #fff}
+.gantry::before,.gantry::after{content:"";position:absolute;top:100%;width:24px;height:44px;background:linear-gradient(90deg,#7F90A6,#EAF2F9 38%,#8CA0B8 78%,#5F7290)}
+.gantry::before{left:5%}.gantry::after{right:5%}
+.home-g{display:grid;grid-template-columns:minmax(0,1fr) 310px minmax(0,1fr);padding-top:clamp(60px,6vw,96px);align-items:start;max-width:1200px;margin:auto}
+.home-g>div:last-child{grid-column:3}
+.home h2{font-size:clamp(34px,3.7vw,56px)}
+.home .ph{font:700 clamp(30px,3.1vw,46px)/1.1 var(--f-display);color:var(--sign);text-decoration:none;display:inline-flex;min-height:52px;align-items:center;white-space:nowrap}
+.home dl{margin-top:22px;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;font-size:16px}
+.home dt{color:var(--muted)}
+
+/* смета */
+.req{position:relative;z-index:1;color:#fff;--fg:#fff;--muted:#BBD0F2;--line:rgba(190,214,248,.45);padding-block:0 clamp(60px,8vw,120px)}
+.req::before{content:"";position:absolute;inset:-30vh 0 0;z-index:-1;background:linear-gradient(180deg,rgba(160,196,232,0) 0,#8DB8E6 10vh,#3B80CE 24vh,#0B3D9C 40vh,var(--night) 78vh)}
+.trip>.req{z-index:auto}
+.req .wrap{position:relative;z-index:1}
+.town{width:max-content;max-width:100%;margin:0 auto;background:#fff;color:#0B1226;border-radius:18px;box-shadow:inset 0 0 0 6px #fff,inset 0 0 0 11px #0B1226;padding:30px 64px 34px;font:700 clamp(46px,6vw,92px)/1 var(--f-display);position:relative;z-index:1}
+.town-p{position:relative;height:90px;width:min(420px,70%);margin:0 auto}
+.town-p i{position:absolute;top:-4px;bottom:0;width:20px;background:linear-gradient(90deg,#5F7290,#DCE8F4 38%,#7F90A6 78%,#45577A)}
+.town-p i+i{right:0}
+.form{padding:clamp(24px,3.6vw,60px)}
+.form h2{font-size:clamp(38px,4.6vw,68px)}
+.form form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(26px,4vw,70px);margin-top:28px;position:relative;z-index:1}
+.picks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.picks button{padding:14px 12px;min-width:0;border-radius:12px;display:flex;align-items:center;gap:14px;font:700 clamp(17px,1.45vw,21px)/1.1 var(--f-display);text-align:left;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35);transition:background-color .25s,box-shadow .25s}
+.picks button svg{width:84px;height:84px;flex:none}
+.picks button:hover{background:rgba(255,255,255,.1)}
+.picks [aria-pressed=true]{background:#fff;color:var(--sign);box-shadow:inset 0 0 0 4px #fff}
+.sum{margin-top:20px;border-top:5px solid #fff}
+.sum li{border-bottom:2px solid rgba(255,255,255,.35);padding:12px 0;line-height:1.35}
+.sum b{font:700 21px/1.2 var(--f-display);display:block}
+.sum .emp{color:var(--muted)}
+.form .flds{align-content:start}
+.form .field input,.form .field textarea{background:rgba(255,255,255,.08)}
+.form .field :is(input,textarea):focus{border-color:#fff}
+.form :focus-visible,.hero :focus-visible{outline-color:#fff}
+.form .agree input{accent-color:#fff}
+.form .done{grid-column:1/-1}
+.form .done h3{font-size:clamp(30px,3vw,44px)}
+.form .done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px 26px;margin:22px 0}.form .done dt,.form .done p{color:var(--muted)}
+.ftr{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px 40px;justify-content:space-between;padding-top:34px;color:#BBD0F2;font-size:15px}
+.mbar{background:#fff}
+
+@media (max-width:1180px){.hdr .tel{display:none}}
+@media (max-width:900px){
+  :root{--hdr-h:70px}
+  .hdr .logo img{width:50px;height:50px}.hdr .logo{font-size:23px}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:var(--sign) var(--film);color:#fff;flex-direction:column;gap:0;padding:24px var(--gutter);font:700 34px/1 var(--f-display);visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav a{padding:20px 0;border-bottom:3px solid rgba(255,255,255,.5)}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  [data-burger]{margin-left:auto;margin-right:-12px;color:var(--sign)}
+  .hero{min-height:0}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:0;padding-top:18px;padding-bottom:230px}
+  .board h1{font-size:clamp(32px,10.2vw,50px);padding:9px}
+  .near{display:none}.mdrift{display:block}.hero .btn--ghost{background:var(--sign);box-shadow:inset 0 0 0 2px #fff}
+  .board h1 a{min-height:82px;grid-template-columns:60px minmax(0,1fr);border-bottom-width:4px}
+  .board h1 span.in{margin:12px;white-space:nowrap;font-size:.6em}
+  .rim{border-radius:20px;box-shadow:inset 0 0 0 5px var(--sign),inset 0 0 0 9px #fff}
+  .posts{display:none}
+  .hero .say{padding-top:22px}
+  .cta{margin-top:18px}.cta .btn{width:100%}
+  .trip{background:linear-gradient(180deg,#E7F1FA 0,#E1EDF9 30%,#CFE1F4 62%,#B9D2EC 84%)}
+  .stop{min-height:0;padding-block:34px}
+  .stop .wrap,.stop.b .wrap,.voice .wrap,.home-g{grid-template-columns:minmax(0,1fr);padding-left:90px}
+  .stop .in,.stop.b .in{grid-column:1;grid-template-columns:minmax(0,1fr);gap:8px}
+  .pole{width:150px;padding-bottom:58px}
+  .pole::after{width:110px}.cast{display:none}
+  .stop .ask{margin:10px 0 16px}
+  .voice{padding-block:60px}.lim{width:190px}
+  .voice .wrap>*+*{margin-top:26px}.voice .gap{display:none}
+  .plate{padding:22px 22px}.plate:nth-child(n){margin-inline:0}
+  .home{padding-block:20px 260px}
+  .gantry{margin-inline:calc(var(--gutter)*-1 + 8px);padding:8px;border-radius:18px}.gantry img{border-width:4px;border-radius:11px}
+  .gantry::before,.gantry::after{width:14px;height:40px}
+  .home-g{padding-left:72px;padding-right:0;padding-top:66px;gap:26px}.home-g>div:last-child{grid-column:1}
+  .home dl{grid-template-columns:minmax(0,1fr);gap:2px}.home dd{margin-bottom:8px}
+  .town{padding:24px 44px 28px}
+  .form{margin-inline:calc(var(--gutter)*-1 + 8px);padding:30px 24px 34px}
+  .form form{grid-template-columns:minmax(0,1fr)}
+  .picks button{flex-direction:column;gap:8px;padding:14px 6px;text-align:center;font-size:17px}
+  .form .done dl{grid-template-columns:minmax(0,1fr);gap:2px}.form .done dd{margin-bottom:10px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <pattern id="hex" width="20" height="34.6" patternUnits="userSpaceOnUse"><path d="M10 0v5.8M10 17.3v5.8M0 11.5 10 5.8l10 5.7M0 11.5v11.6M20 11.5v11.6M0 23.1l10 5.7 10-5.7M10 28.8v5.8M10 17.3 0 11.5M10 17.3l10-5.8M0 23.1l10-5.8 10 5.8" fill="none" stroke="#fff" stroke-opacity=".16"/></pattern>
+  <!-- предписывающий круглый: содержание -->
+  <symbol id="s0" viewBox="0 0 200 200"><circle cx="100" cy="100" r="99" fill="#0B38A6"/><circle cx="100" cy="100" r="99" fill="url(#hex)"/><circle cx="100" cy="100" r="91" fill="none" stroke="#fff" stroke-width="6"/><g fill="#fff"><path d="M40 80h66v42H40z"/><path d="M110 88h24l16 20v14h-40z"/><path fill="#0B38A6" d="M118 94h13l10 13h-23z"/><path d="M152 84c16 10 18 32 10 52h-12c6-18 6-34 2-52z"/><path d="M36 124h118v7H36z"/><circle cx="60" cy="134" r="13"/><circle cx="88" cy="134" r="13"/><circle cx="132" cy="134" r="13"/></g><g fill="#0B38A6"><circle cx="60" cy="134" r="5"/><circle cx="88" cy="134" r="5"/><circle cx="132" cy="134" r="5"/></g><g stroke="#fff" stroke-width="5" stroke-linecap="round"><path d="M72 36v34M57 44.500l30 17M57 61.500l30-17"/><path d="M118 46v24M107.500 52l21 12M107.500 64l21-12" stroke-width="4"/></g></symbol>
+  <!-- временный треугольный: ремонт -->
+  <symbol id="s1" viewBox="0 0 200 200"><path d="M100 12 192 172c3 6 0 12-7 12H15c-7 0-10-6-7-12z" fill="#D8182B"/><path d="M100 46 166 160H34z" fill="#FFD024"/><g fill="#0B1226" stroke="#0B1226" stroke-linecap="round" stroke-linejoin="round"><circle cx="112" cy="86" r="8.500" stroke="none"/><path d="M106 98 98 124" stroke-width="13" fill="none"/><path d="M98 124l14 13 2 18M98 124l-10 15-2 16" stroke-width="8" fill="none"/><path d="M106 100 88 112l-10 12M104 104l-8 18-14 8" stroke-width="6" fill="none"/><path d="M94 104 68 142" stroke-width="4"/><path d="M72 136l-12 8 8 6z" stroke-width="3"/><path d="M128 155c6-12 14-18 20-12l8 12z" stroke="none"/></g></symbol>
+  <!-- дорога под мостом: строительство -->
+  <symbol id="s2" viewBox="0 0 200 200"><rect x="1" y="1" width="198" height="198" rx="20" fill="#0B38A6"/><rect x="1" y="1" width="198" height="198" rx="20" fill="url(#hex)"/><rect x="9" y="9" width="182" height="182" rx="14" fill="none" stroke="#fff" stroke-width="6"/><g fill="#fff"><path d="M86 88h10v94H58z"/><path d="M104 88h10l28 94h-38z"/><path d="M28 68h144v11H28z"/><path d="M52 79h16l-4 20H56zM148 79h-16l4 20h8z"/><path d="M92 34h16v34H92z"/><path d="M100 22l20 22H80z"/></g></symbol>
+  <!-- знак сервиса: техника -->
+  <symbol id="s3" viewBox="0 0 200 200"><rect x="14" y="1" width="172" height="198" rx="18" fill="#0B38A6"/><rect x="14" y="1" width="172" height="198" rx="18" fill="url(#hex)"/><rect x="22" y="9" width="156" height="182" rx="12" fill="none" stroke="#fff" stroke-width="5"/><rect x="38" y="30" width="124" height="126" rx="4" fill="#fff"/><g fill="#0B1226"><circle cx="66" cy="124" r="20"/><circle cx="134" cy="124" r="20"/><path d="M62 94h80l8 18H56z"/><path d="M84 54h44v6H84zM88 60h5v34h-5zM120 60h5v34h-5z"/><path d="M62 88h26v10H62zM122 80h20v16h-20z"/></g><circle cx="66" cy="124" r="6" fill="#fff"/><circle cx="134" cy="124" r="6" fill="#fff"/></symbol>
+  <radialGradient id="gw"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".25" stop-color="#EAF6FF" stop-opacity=".55"/><stop offset="1" stop-color="#BFE0FF" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gr"><stop offset="0" stop-color="#FF5A68" stop-opacity=".95"/><stop offset=".3" stop-color="#FF2B3E" stop-opacity=".45"/><stop offset="1" stop-color="#FF2B3E" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gc"><stop offset="0" stop-color="#fff"/><stop offset=".3" stop-color="#4FB4FF" stop-opacity=".6"/><stop offset="1" stop-color="#4FB4FF" stop-opacity="0"/></radialGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFEFC2" stop-opacity=".8"/><stop offset="1" stop-color="#FFEFC2" stop-opacity="0"/></linearGradient>
+</defs></svg>
+
+<header class="hdr" data-header><div class="wrap">
+  <a class="logo" href="#main"><img src="img/logo.png" alt="Логотип ДРС: мост и дорога" width="560" height="560">ДорРемСтрой</a>
+  <nav data-menu aria-label="Основное меню"><a href="#s-0">Содержание</a><a href="#s-1">Ремонт</a><a href="#s-2">Строительство</a><a href="#s-3">Техника</a><a href="#voice">Отзывы</a><a href="#home">Контакты</a></nav>
+  <a class="tel num" href="tel:+73499520867">+7 (3499) 52-08-67</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero" id="hero">
+  <svg id="land" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#062676"/><stop offset=".3" stop-color="#0A46AB"/><stop offset=".58" stop-color="#0D72CD"/><stop offset=".8" stop-color="#35A9EC"/><stop offset=".93" stop-color="#9DD8F6"/><stop offset="1" stop-color="#E9EEF2"/></linearGradient><radialGradient id="sun"><stop offset="0" stop-color="#FFF3DC"/><stop offset=".16" stop-color="#FFD7A6" stop-opacity=".95"/><stop offset=".45" stop-color="#FFC39B" stop-opacity=".5"/><stop offset="1" stop-color="#FFC39B" stop-opacity="0"/></radialGradient><linearGradient id="gs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6DCCB"/><stop offset=".12" stop-color="#D3E4F3"/><stop offset="1" stop-color="#E7F1FA"/></linearGradient></defs>
+    <rect y="-900" width="1440" height="901" fill="#062676"/><rect width="1440" height="664" fill="url(#sky)"/>
+    <ellipse cx="1070" cy="660" rx="640" ry="190" fill="url(#sun)"/><ellipse cx="1070" cy="650" rx="34" ry="270" fill="url(#sun)" opacity=".6"/>
+    <g id="trees"></g>
+    <path d="M0 662C240 640 420 668 700 656S1200 646 1440 660V900H0Z" fill="url(#gs)"/>
+    <path d="M0 720C300 690 520 742 860 716S1260 700 1440 730V900H0Z" fill="#E7F1FA"/>
+    <path d="M0 790C260 760 480 818 820 796S1260 770 1440 800V900H0Z" fill="#F4F9FD"/><path d="M0 862C260 846 620 884 900 862S1300 850 1440 872V900H0Z" fill="#E7F1FA"/>
+    <path d="M1066 652C1058 720 968 790 966 900H1194C1192 790 1086 720 1074 652Z" fill="#fff"/>
+    <path d="M1067.500 652C1060 720 996 790 994 900H1166C1164 790 1082 720 1073 652Z" fill="#26365E"/>
+    <path d="M1067.800 652C1061 720 1005 790 1003 900H1008C1010 792 1064 720 1068.600 652ZM1072.200 652C1078 720 1150 792 1152 900H1157C1155 790 1081 720 1073 652Z" fill="#fff"/>
+    <g fill="#fff"><path d="M1077 900h7l-.8-32h-5.200z"/><path d="M1076.500 838h5l-.8-24h-3.400zM1075.200 790h3.600l-.6-18h-2.400zM1073.800 752h2.600l-.5-13h-1.600zM1072.500 722h1.800l-.4-9h-1zM1071.300 698h1.200l-.3-7h-.7z"/></g>
+    <g id="cats"></g>
+    <g class="mdrift"><path d="M540 900V834C760 792 900 872 1070 842S1400 806 1600 842V900Z" fill="#fff"/><path d="M540 910V850C760 812 900 886 1070 858S1400 824 1600 858V910Z" fill="#E7F1FA"/></g>
+  </svg>
+  <div class="wrap">
+    <div>
+      <div class="board"><div class="film rim" data-film><h1><a href="#s-0"><svg viewBox="0 0 60 80" aria-hidden="true"><path d="M30 2 56 34H39v44H21V34H4z" fill="#fff"/></svg>Содержание</a><a href="#s-1"><svg viewBox="0 0 80 60" aria-hidden="true"><path d="M2 30 34 4v17h44v18H34v17z" fill="#fff"/></svg>Ремонт</a><a href="#s-2"><svg viewBox="0 0 80 60" aria-hidden="true"><path d="M78 30 46 4v17H2v18h44v17z" fill="#fff"/></svg>Строительство</a><span class="in">автомобильных дорог</span></h1><i class="sweep" aria-hidden="true"></i></div></div>
+      <div class="posts" aria-hidden="true"><i></i><i></i></div>
+    </div>
+    <a class="near" href="#s-3"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#s3"/></svg><span class="film">Дорожно-строительная техника</span></a>
+    <div class="say">
+      <p class="lead">Дорожно-строительная компания из&nbsp;города Надым</p>
+      <div class="cta"><a class="btn btn--w" data-magnetic href="#s-0">Собрать смету по&nbsp;пути</a><a class="btn btn--ghost" href="tel:+73499520867">Позвонить</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="trip" id="trip">
+  <svg id="road" aria-hidden="true"></svg>
+  <div id="stops"></div>
+
+  <section class="voice" id="voice" data-rx=".46"><div class="wrap">
+    <div><div class="lim"><svg viewBox="0 0 200 200" role="img" aria-label="Оценка 4,4"><circle cx="100" cy="100" r="99" fill="#fff"/><circle cx="100" cy="100" r="84" fill="none" stroke="#D8182B" stroke-width="28"/><text x="100" y="128" text-anchor="middle" font-family="Finlandica,sans-serif" font-weight="700" font-size="82" fill="#0B1226">4,4</text></svg></div><p class="cap">Наша оценка на&nbsp;Яндекс&nbsp;Картах, 3&nbsp;отзыва</p></div>
+    <div class="gap"></div>
+    <div>
+      <blockquote class="plate" style="margin:0" data-reveal><p>Ребята молодцы. Постоянно техника на&nbsp;дороге чистит от&nbsp;снега. Вовремя исполняет предписания. В&nbsp;любую погоду постоянно в&nbsp;работе</p><footer>Ахмед Ахмедов, 16&nbsp;ноября</footer></blockquote>
+      <blockquote class="plate" style="margin:18px 0 0" data-reveal><p>Великолепная организация.. хорошее руководство..</p><footer>Сергей Головин, 6&nbsp;апреля</footer></blockquote>
+      <blockquote class="plate" style="margin:18px 0 0" data-reveal><p>Хорошая организация...!</p><footer>Mr&nbsp;Mazur, 21&nbsp;января</footer></blockquote>
+    </div>
+  </div></section>
+
+  <section class="home" id="home" data-rx=".5"><div class="wrap">
+    <figure class="gantry"><img src="img/ph/02.webp" alt="Вывеска ООО «ДорРемСтрой» на фоне вечернего зимнего неба: г. Надым, проезд 13-й, строение 16/1" width="1200" height="429" loading="lazy"></figure>
+    <div class="home-g">
+      <div><h2 data-split>Надым, <span style="white-space:nowrap">13-й&nbsp;проезд,</span> строение&nbsp;16/1</h2><dl><dt>Организация</dt><dd>ООО «ДорРемСтрой»</dd><dt>ИНН</dt><dd class="num">8903035753</dd><dt>ОГРН</dt><dd class="num">1178901004611</dd></dl></div>
+      <div><a class="ph num" href="tel:+73499520867">+7 (3499) 52-08-67</a><div style="margin-top:14px"><a class="btn" data-magnetic href="https://wa.me/79519917250" rel="noopener">Написать в&nbsp;WhatsApp</a></div></div>
+    </div>
+  </div></section>
+
+  <section class="req" id="req"><div class="wrap">
+    <div id="finish" class="town" role="img" aria-label="Дорожный знак: Надым">Надым</div>
+    <div class="town-p" aria-hidden="true"><i></i><i></i></div>
+    <div class="film rim form" data-film>
+      <h2>Ваш маршрут сметы</h2>
+      <form data-demo-form>
+        <div><div class="picks" id="picks" role="group" aria-label="Что включить в смету"></div><ul class="sum" id="sum"></ul><div id="hid"></div></div>
+        <div class="flds">
+          <label class="field"><span>Что ещё важно</span><textarea name="Задача"></textarea></label>
+          <label class="field"><span>Компания и имя</span><input name="Контакт" required autocomplete="organization"></label>
+          <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+          <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+          <button class="btn btn--w">Запросить смету</button>
+        </div>
+        <div class="done" role="status"><h3>Так запрос придёт в&nbsp;ДорРемСтрой</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+      </form>
+    </div>
+    <footer class="ftr"><span>ООО «ДорРемСтрой», ЯНАО, Надым, <span style="white-space:nowrap">13-й&nbsp;проезд</span>, строение&nbsp;16/1</span><span class="num">ИНН 8903035753</span></footer>
+  </div></section>
+</div>
+</main>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73499520867">Позвонить</a><a class="btn" href="#req" id="mb">Смета</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))},NS='http://www.w3.org/2000/svg';
+  var el=function(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+  var sv=function(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e};
+  function rng(s){return function(){s=s*16807%2147483647;return s/2147483647}}
+  var MOB=function(){return innerWidth<=900};
+
+  /* ---------- пейзаж первого экрана ---------- */
+  (function(){var R=rng(19),t='';for(var i=0;i<130;i++){var x=R()*1440,h=10+R()*R()*38;if(Math.abs(x-1070)<26)continue;var w=h*.16;t+='<path d="M'+x.toFixed(0)+' '+(660-h).toFixed(0)+'l'+w.toFixed(1)+' '+h.toFixed(0)+'h'+(-2*w).toFixed(1)+'z" fill="'+(R()>.5?'#1D4A86':'#2E64A3')+'"/>'}$('#trees').innerHTML=t;
+    var c='';[[1057,1083,668,.22],[1052,1088,690,.32],[1040,1100,718,.45],[1016,1124,752,.62],[984,1158,796,.82],[958,1186,856,1.02]].forEach(function(p,i){[0,1].forEach(function(s){var x=p[s]+(s?10:-10)*p[3]*1.6,k=p[3];c+='<g class="cat" style="--i:'+(5-i)+'"><circle cx="'+x+'" cy="'+(p[2]-26*k)+'" r="'+26*k+'" fill="url(#'+(s?'gr':'gw')+')"/></g><path d="M'+(x-4*k)+' '+p[2]+'v'+(-38*k)+'l'+8*k+' '+(-5*k)+'v'+43*k+'z" fill="#fff"/><path d="M'+(x-4*k)+' '+(p[2]-20*k)+'l'+8*k+' '+(-6*k)+'v'+(-12*k)+'l'+(-8*k)+' '+6*k+'z" fill="#14213F"/><rect x="'+(x-2*k)+'" y="'+(p[2]-31*k)+'" width="'+4*k+'" height="'+8*k+'" fill="'+(s?'#FF2B3E':'#fff')+'"/>'})});$('#cats').innerHTML=c})();
+
+  function land(){$('#land').setAttribute('viewBox',MOB()?'590 0 960 900':'0 0 1440 900')}land();addEventListener('resize',land);
+
+  /* ---------- остановки ---------- */
+  var ST=[
+    {t:'Содержание дорог',s:'Содержание',a:'Укажите дорогу или территорию, которую нужно содержать.',f:['Дорога или территория','Протяжённость, км']},
+    {t:'Ремонт дорог',s:'Ремонт',a:'Укажите улицу или участок, где нужен ремонт.',f:['Улица, участок','Площадь, м²']},
+    {t:'Строительство дорог',s:'Строительство',a:'Укажите, откуда и куда пройдёт дорога.',f:['Откуда и куда','Протяжённость, км']},
+    {t:'Дорожно-строительная техника',s:'Техника',a:'Назовите машину и срок.',f:['Какая техника нужна','На какой срок']}],on=[false,false,false,false];
+  ST.forEach(function(s,i){
+    var sec=el('section','stop'+(i%2?' b':''));sec.id='s-'+i;sec.dataset.rx=i%2?'.19':i?'.82':'.75';
+    sec.innerHTML='<div class="wrap"><div class="in"><div class="pole"><span class="cast"></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#s'+i+'"/></svg></div><div><h2></h2><p class="ask"></p><div class="flds"></div><button type="button" class="btn take" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18"/><path d="M12 3v18"/></svg><span>Добавить в смету</span></button></div></div></div>';
+    $('h2',sec).textContent=s.t;$('.ask',sec).textContent=s.a;
+    s.in=s.f.map(function(n,k){var l=el('label','field'),p=el('input');p.autocomplete='off';if(/км|м²/.test(n))p.inputMode='decimal';l.append(el('span','',n),p);$('.flds',sec).appendChild(l);p.addEventListener('input',function(){if(p.value.trim()&&!on[i])set(i,true);else sum()});return p});
+    $('.take',sec).addEventListener('click',function(){set(i,!on[i])});$('#stops').appendChild(sec);
+    var b=el('button');b.type='button';b.innerHTML='<svg viewBox="0 0 200 200" aria-hidden="true"><use href="#s'+i+'"/></svg>';b.append(el('span','',s.s));b.setAttribute('aria-pressed','false');b.addEventListener('click',function(){set(i,!on[i])});$('#picks').appendChild(b)});
+  function set(i,v){on[i]=v;sum()}
+  function sum(){
+    var u=$('#sum'),h=$('#hid'),n=0;u.textContent='';h.textContent='';
+    ST.forEach(function(s,i){var tb=$('#s-'+i+' .take');tb.setAttribute('aria-pressed',on[i]);$('span',tb).textContent=on[i]?'В смете, убрать':'Добавить в смету';$('#picks').children[i].setAttribute('aria-pressed',on[i]);if(!on[i])return;n++;
+      var d=s.in.map(function(p,k){return p.value.trim()?s.f[k]+': '+p.value.trim():''}).filter(Boolean).join('; ');var li=el('li');li.append(el('b','',s.t));if(d)li.append(el('span','',d));u.appendChild(li);var q=el('input');q.type='hidden';q.name=s.t;q.value=d||'да';h.appendChild(q)});
+    if(!n)u.appendChild(el('li','emp','Отметьте знаками, что включить в смету.'));$('#mb').textContent=n?'Смета ('+n+')':'Смета';if(built)setTimeout(check,0)}
+
+  /* ---------- дорога через всю страницу ---------- */
+  var trip=$('#trip'),road=$('#road'),built=false,P,len=0,LUT=[],lay={},truck,refl=[],lastS=-1,hT=0,wT=0,R=75,mv;
+  function build(){
+    var W=trip.clientWidth,H=trip.offsetHeight,mob=MOB(),tr=trip.getBoundingClientRect().top+scrollY;if(W<20||H<20)return;hT=H;wT=W;R=mob?21:0;
+    var m=$('#land').getScreenCTM(),sx=mob?36:m?m.a*1080+m.e:W*.75,pts=[],f=$('#finish').getBoundingClientRect();
+    if(!R)R=Math.max(62,Math.min(96,m?m.a*86:80));pts.push([sx,0,0]);
+    $$('[data-rx]').forEach(function(s){var r=s.getBoundingClientRect(),t=r.top+scrollY-tr,x=mob?36:W*.5+(parseFloat(s.dataset.rx)-.5)*Math.min(W,1408);pts.push([x,t+r.height*(mob?.06:.34),t+r.height*(mob?.94:.66)])});
+    var d='M'+sx.toFixed(1)+' -2V'+(mob?10:40),y00=pts[0][1]=pts[0][2]=mob?10:40,px=sx,py=y00;pts.slice(1).forEach(function(p){var my=(py+p[1])/2;d+='C'+px.toFixed(1)+' '+my.toFixed(1)+' '+p[0].toFixed(1)+' '+my.toFixed(1)+' '+p[0].toFixed(1)+' '+p[1].toFixed(1)+'V'+p[2].toFixed(1);px=p[0];py=p[2]});
+    var fy=f.top+scrollY-tr+f.height*.5,my=(py+fy)/2;d+='C'+px.toFixed(1)+' '+my.toFixed(1)+' '+(W/2).toFixed(1)+' '+my.toFixed(1)+' '+(W/2).toFixed(1)+' '+fy.toFixed(1);
+    road.textContent='';road.setAttribute('viewBox','0 0 '+W+' '+H);
+    var k=R/74,mk=function(st,w,ex){var a={d:d,stroke:st,'stroke-width':w};for(var q in ex||{})a[q]=ex[q];return sv('path',a,road)};
+    // снег на дороге: колея
+    mk('#C9DBEC',R*2+14*k);mk('#DCE8F4',R*2);mk('#C6D8EA',R*1.18);mk('#DCE8F4',R*.86);
+    // расчищено: валы, асфальт, кромка, ось
+    lay.a=[mk('#A9C3DE',R*2+44*k),mk('#FFFFFF',R*2+34*k),mk('#26365E',R*2+2),mk('#FFFFFF',R*2-16*k),mk('#26365E',R*2-24*k),mk('#202E52',R*1.36),mk('#26365E',R*.86)];lay.c=mk('#FFFFFF',Math.max(2.5,7*k));
+    P=lay.c;len=P.getTotalLength();LUT=[];for(var s=0;s<=len;s+=8){var q=P.getPointAtLength(s);LUT.push(q.y)}
+    lay.a.forEach(function(p){p.style.strokeDasharray=len+' '+len});
+    // катафоты
+    refl=[];var g=sv('g',{},road),stp=mob?150:210;for(s=120;s<len-120;s+=stp)[-1,1].forEach(function(sd){var a=P.getPointAtLength(s),b=P.getPointAtLength(s+2),n=Math.hypot(b.x-a.x,b.y-a.y)||1,nx=-(b.y-a.y)/n,ny=(b.x-a.x)/n,o=R+34*k;var x=a.x+nx*o*sd,y=a.y+ny*o*sd,e=sv('g',{'class':'refl '+(sd<0?'r':'l')},g);sv('circle',{'class':'g',cx:x,cy:y,r:34*Math.max(.55,k),fill:'url(#'+(sd<0?'gr':'gc')+')'},e);sv('circle',{'class':'d',cx:x,cy:y,r:6*Math.max(.6,k),stroke:'#14213F','stroke-width':1.5},e);refl.push([s,e])});
+    // снегоуборочная машина, вид сверху, едет «вниз» (нос в +y)
+    truck=sv('g',{},road);var t=sv('g',{transform:'scale('+Math.max(.46,k*1.16).toFixed(3)+')'},truck);
+    sv('path',{d:'M-30 70 -92 330H92L30 70Z',fill:'url(#beam)','class':'beam'},t);
+    mv=sv('g',{'class':'spray'},t);var RR=rng(8);for(var i=0;i<14;i++){var c=sv('circle',{cx:-50-RR()*18,cy:84+RR()*14,r:3+RR()*6,fill:'#fff'},mv);c.style.cssText='--i:'+i+';--dx:'+(-30-RR()*50).toFixed(0)+'px;--dy:'+(-10-RR()*50).toFixed(0)+'px;transform-box:fill-box;transform-origin:center'}
+    t.insertAdjacentHTML('beforeend','<path d="M-34-88h68v10h-68zM-34 62h68v8h-68z" fill="#101B38"/><rect x="-33" y="-84" width="66" height="104" rx="5" fill="#F4F8FC" stroke="#0B1F52" stroke-width="2.5"/><path d="M-26-76h52v88h-52z" fill="#C8D9EA"/><path d="M-26-76h52l-8 14h-36zM-26 12h52l-8-14h-36z" fill="#A9C1DA"/><rect x="-29" y="-96" width="58" height="14" rx="3" fill="#0B38A6"/><path d="M-28-92l10 6M-12-92l10 6M4-92l10 6M18-92l8 5" stroke="#fff" stroke-width="3"/><rect x="-32" y="26" width="64" height="44" rx="8" fill="#0B38A6" stroke="#062676" stroke-width="2.5"/><path d="M-26 54h52l-5 11h-42z" fill="#9CD4FF"/><rect x="-22" y="32" width="44" height="7" rx="3" fill="#FFB020"/><circle cx="-14" cy="35.500" r="3.500" fill="#FFE9A8"/><circle cx="14" cy="35.500" r="3.500" fill="#FFE9A8"/><path d="M-20 70v14M20 70v14" stroke="#101B38" stroke-width="6"/><path d="M-66 80C-40 96 40 108 68 100l2 12C40 122-44 110-72 92Z" fill="#D8182B" stroke="#6E0A14" stroke-width="2"/><path d="M-46 89l12 6-2 11-12-5zM-10 99l14 3v11l-14-2zM28 104l14 0 1 11-14 1z" fill="#fff"/>');
+    built=true;lastS=-1;move();
+  }
+  function sAt(y){var a=0,b=LUT.length-1;while(a<b){var m=(a+b)>>1;if(LUT[m]<y)a=m+1;else b=m}return Math.min(len,a*8)}
+  var stopT;
+  function move(){
+    if(!built)return;var tr=trip.getBoundingClientRect().top,vy=innerHeight*(MOB()?.5:.56)-tr,s=KIT.REDUCED?len:Math.max(0,Math.min(len-170*Math.max(.5,R/74),sAt(vy)));
+    if(Math.abs(s-lastS)<.5)return;var fwd=s>=lastS;lastS=s;
+    var k=R/74,s0=s;s=Math.min(len,s+84*Math.max(.46,k*1.16));lay.a.forEach(function(p){p.style.strokeDashoffset=(len-s).toFixed(1)});
+    var da=34*k+6,gp=30*k+6,n=Math.floor(s/(da+gp)),arr=[];for(var i=0;i<n;i++)arr.push(da.toFixed(1),gp.toFixed(1));var rest=s-n*(da+gp);if(rest>1)arr.push(Math.min(rest,da).toFixed(1));else arr.push('0');arr.push((len+100).toFixed(0));lay.c.style.strokeDasharray=arr.join(' ');
+    s=s0;var a=P.getPointAtLength(s),b=P.getPointAtLength(Math.max(0,s-6)),ang=s<6?0:Math.atan2(a.y-b.y,a.x-b.x)*180/Math.PI-90;
+    truck.style.visibility=s<30?'hidden':'';truck.setAttribute('transform','translate('+a.x.toFixed(1)+' '+(a.y).toFixed(1)+') rotate('+ang.toFixed(2)+')');
+    refl.forEach(function(r){r[1].classList.toggle('on',r[0]<s+(KIT.REDUCED?1e6:190*k))});
+    if(fwd&&!KIT.REDUCED){truck.classList.add('mv');clearTimeout(stopT);stopT=setTimeout(function(){truck.classList.remove('mv')},260)}
+  }
+  var tick=false;addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(function(){tick=false;move()})}},{passive:true});
+  function check(){if(Math.abs(trip.offsetHeight-hT)>2||trip.clientWidth!==wT)build()}
+  sum();build();if(KIT.REDUCED&&truck)truck.style.display='none';
+  new ResizeObserver(function(){requestAnimationFrame(check)}).observe(trip);addEventListener('resize',function(){requestAnimationFrame(build)});if(document.fonts)document.fonts.ready.then(check);
+
+  /* ---------- блик фар на плёнке ---------- */
+  if(KIT.FINE&&!KIT.REDUCED)$$('[data-film]').forEach(function(f){f.addEventListener('pointermove',function(e){var r=f.getBoundingClientRect();f.style.setProperty('--gx',(e.clientX-r.left).toFixed(0)+'px');f.style.setProperty('--gy',(e.clientY-r.top).toFixed(0)+'px')})});
+});
+</script>
+</body>
+</html>

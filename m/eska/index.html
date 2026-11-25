@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ЭСКА, Энергосбытовая компания Аган — электроэнергия, тарифы и оплата, Радужный</title>
+<meta name="description" content="Концепция редизайна сайта ООО «Энергосбытовая компания Аган»: оплата, тарифы по месяцам, условия договора и контакты, Радужный, ХМАО – Югра.">
+<link rel="icon" href="img/logo.svg">
+<link rel="preload" href="../../kit/fonts/jost-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--blue:#2469FF;--blue-d:#1A50D0;--red:#D4250F;--night:#141935;--dusk:#2A2B52;--sun:#FF9A55;--peach:#FFD9BC;--snow:#F3F5FC;--ink:#141935;
+  --bg:var(--snow);--fg:var(--ink);--muted:#545C7A;--accent:var(--blue-d);--accent-h:#123A9E;--r:4px;--hdr-h:80px;
+  --f-display:"Jost",system-ui,sans-serif;--f-text:"Jost",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+[data-theme=night]{--bg:var(--night);--fg:#EEF1FF;--muted:#AEB5D6;--line:rgba(190,205,255,.2);--accent:#7FA8FF;--on-accent:#0B1130;--accent-h:#A9C4FF;background:var(--bg);color:var(--fg)}
+body{font-size:18px;line-height:1.5}
+h1,h2,h3{font-weight:500;letter-spacing:-.025em}
+h2{font-size:clamp(36px,4.6vw,68px);line-height:1.02}
+h3{font-size:clamp(23px,1.9vw,29px);line-height:1.15;letter-spacing:-.015em}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.btn{font-size:18px;font-weight:500}
+/* шапка */
+.hdr{background:var(--snow);color:var(--ink);box-shadow:inset 0 -1px rgba(20,25,53,.12)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.6vw,40px)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;font-weight:500;line-height:1.12;font-size:17px}
+.brand img{width:47px;height:58px;mix-blend-mode:multiply}
+.hdr nav{display:flex;gap:clamp(16px,2vw,32px);margin-left:auto}
+.hdr nav a{text-decoration:none;padding:12px 0;position:relative}
+.hdr nav a::after{content:"";position:absolute;left:0;right:0;bottom:9px;height:8px;border-bottom:2px solid var(--blue);border-radius:0 0 50% 50%/0 0 100% 100%;transform:scaleX(0);transition:transform .4s var(--e-smooth)}
+.hdr nav a:hover::after,.hdr nav a:focus-visible::after{transform:none}
+.hdr .lk{min-height:46px;padding:.5em 1.3em}
+/* первый экран */
+.hero{position:relative;padding-top:var(--hdr-h);isolation:isolate;overflow:clip;background:linear-gradient(180deg,var(--snow),var(--snow))}
+.sky{position:absolute;z-index:-2;inset:0 0 var(--sheet);background:
+  radial-gradient(90% 70% at 78% 104%,rgba(255,176,96,.95),rgba(255,150,85,.55) 32%,rgba(255,140,90,0) 70%),
+  linear-gradient(180deg,#1B2047 0,#2C2D57 34%,#544668 62%,#A0656A 86%,#D9865F 100%)}
+.hero{--sheet:214px}
+.hero-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,468px);gap:0 clamp(32px,5vw,84px);min-height:min(calc(100svh - var(--hdr-h)),800px);grid-template-rows:1fr auto}
+.say{padding:clamp(30px,5.2vh,56px) 0 190px;color:#fff}
+h1{font-size:clamp(44px,5.4vw,82px);line-height:.98;max-width:9.6em}
+.say .lead{margin-top:20px;max-width:27em;font-size:clamp(18px,1.4vw,20px);line-height:1.45;color:#E4E6F8}
+.role{display:inline-flex;margin-top:24px;border:1.5px solid rgba(255,255,255,.55);border-radius:99px;padding:4px;background:rgba(20,25,53,.35)}
+.role button{min-height:46px;padding:0 22px;border-radius:99px;color:#fff;font-weight:500;transition:background-color .3s,color .3s}
+.role [aria-selected=true]{background:#fff;color:var(--ink)}
+.role button:focus-visible{outline-color:#fff}
+.terms{height:calc(var(--sheet) - 8px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;align-items:start;position:relative;z-index:3}
+.term{position:relative;display:block;text-decoration:none;padding:34px 14px 14px 0;min-height:130px}
+.term svg{position:absolute;left:0;top:-34px;width:26px;height:58px;overflow:visible}
+.term b{display:block;font-weight:500;font-size:clamp(20px,1.65vw,25px);line-height:1.08;letter-spacing:-.015em;transition:color .25s}
+.term span{display:block;margin-top:7px;font-size:16px;line-height:1.3;color:var(--muted)}
+.term svg *{transition:fill .3s}
+.term:hover b,.term:focus-visible b{color:var(--blue-d)}
+.term:hover svg .d,.term:focus-visible svg .d{fill:var(--blue)}
+/* рамка с пропорциями знака */
+.win{grid-row:1/3;grid-column:2;align-self:center;position:relative;border:7px solid var(--blue);background:#fff;margin-block:26px 30px}
+.win img{width:100%;height:auto;aspect-ratio:650/600;object-fit:cover;border-bottom:7px solid var(--blue)}
+.win dl{position:relative;z-index:3;background:#fff;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:18px 8px 20px}
+.win dl div{padding:0 12px;display:flex;flex-direction:column-reverse;justify-content:flex-end}
+.win dl div+div{border-left:1px solid rgba(36,105,255,.35)}
+.win dd{font-size:clamp(32px,2.9vw,43px);line-height:1;font-weight:500;color:var(--red);letter-spacing:-.03em}
+.win dt{font-size:15px;line-height:1.25;color:var(--muted);margin-top:6px}
+#wires{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){
+  .js .win{animation:win 1.5s var(--e-smooth) backwards}
+  .js h1 span{display:inline-block;animation:ln 1.2s var(--e-smooth) both;animation-delay:calc(var(--n)*.08s)}
+}
+@keyframes win{from{clip-path:inset(0 0 22% 0);transform:translateY(26px)}}
+@keyframes ln{from{transform:translateY(.22em)}}
+/* рабочий стол */
+.work{padding-block:clamp(56px,4.5vw,72px) clamp(64px,7vw,110px)}
+.work-h{display:flex;flex-wrap:wrap;gap:22px 40px;justify-content:space-between;align-items:flex-end}
+.work .role{border-color:rgba(20,25,53,.25);background:#fff;margin:0}
+.work .role button{color:var(--ink)}
+.work .role [aria-selected=true]{background:var(--ink);color:#fff}
+.panel[hidden]{display:none}
+.due{margin-top:clamp(30px,4vw,56px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto);gap:10px 48px;align-items:end}
+.due p{font-size:clamp(23px,2.3vw,34px);line-height:1.2;letter-spacing:-.015em;max-width:24em}
+.due .left{text-align:right;white-space:nowrap}
+.due .left b{font-size:clamp(72px,9vw,136px);line-height:.8;font-weight:500;letter-spacing:-.05em;color:var(--blue-d)}
+.due .left span{font-size:20px;margin-left:10px;color:var(--muted)}
+.days{position:relative;margin-top:26px;height:124px}
+.days canvas,.days svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pay-g{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(30px,5vw,90px);margin-top:clamp(34px,4vw,60px);align-items:start}
+.ways li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;align-items:center;padding:22px 0;border-top:1.5px solid var(--ink)}
+.ways li:last-child{border-bottom:1.5px solid var(--ink)}
+.ways p{color:var(--muted);font-size:17px}
+.ways .btn{grid-row:1/3;grid-column:2}
+.ways .note{font-size:16px;margin-top:20px}
+.paynote{margin-top:18px;font-size:16px;color:var(--muted);max-width:38em}
+.deal summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;min-height:60px;font-size:20px;font-weight:500;line-height:1.25;padding:8px 0}
+.deal summary::-webkit-details-marker{display:none}
+.deal summary::after{content:"";flex:none;width:22px;height:22px;background:linear-gradient(var(--blue),var(--blue)) 50%/22px 2px no-repeat,linear-gradient(var(--blue),var(--blue)) 50%/2px 22px no-repeat;transition:transform .4s var(--e-smooth)}
+.deal [open] summary::after{transform:rotate(45deg)}
+.deal details{border-bottom:1px solid var(--line)}
+.deal details p{padding:0 40px 20px 0;color:var(--muted);font-size:17px}
+.deal .docs{display:flex;flex-wrap:wrap;gap:4px 28px;margin-top:20px;font-size:17px}
+.deal .docs a{min-height:44px;display:inline-flex;align-items:center}
+.deal h3{margin-bottom:10px}
+/* тарифы */
+.tar{margin-top:clamp(30px,4vw,56px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(28px,4vw,72px);align-items:stretch}
+.years{display:flex;flex-wrap:wrap;gap:0 4px}
+.years button{min-height:48px;min-width:56px;padding:0 4px;font:500 17px/1 var(--mono);letter-spacing:-.04em;color:var(--muted);border-bottom:3px solid transparent;transition:color .2s,border-color .2s}
+.years [aria-pressed=true]{color:var(--ink);border-color:var(--blue)}
+.months{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:22px;border:1.5px solid var(--ink);background:#fff}
+.months button{min-height:88px;padding:14px 16px;text-align:left;font-size:19px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 0 0 .5px rgba(20,25,53,.28);transition:background-color .25s,color .25s}
+.months button small{font-size:15px;color:var(--muted);transition:color .25s}
+.months button:hover:not([disabled]){background:#E3EBFF}
+.months [aria-pressed=true],.months [aria-pressed=true]:hover:not([disabled]){background:var(--blue-d);color:#fff}
+.months [aria-pressed=true] small{color:#DCE6FF}
+.months [disabled]{cursor:default;color:#7A809A;background:repeating-linear-gradient(-45deg,#fff 0 9px,#F0F2FA 9px 10px)}
+.months [disabled] small{color:#666D8A}
+.files{background:#fff;border:7px solid var(--blue);padding:clamp(20px,2vw,32px);display:flex;flex-direction:column}
+.files h3{font-size:clamp(26px,2.3vw,36px)}
+.files ul{margin-top:14px}
+.files li a{display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:58px;border-top:1px solid var(--line);text-decoration:none;font-size:19px;transition:color .2s,padding .35s var(--e-smooth)}
+.files li a:hover{color:var(--blue-d);padding-left:8px}
+.files li a i{font:500 15px var(--mono);font-style:normal;color:var(--red)}
+.files .more{margin-top:auto;padding-top:18px;font-size:16px;color:var(--muted)}
+/* схема */
+.net{overflow:clip;background:linear-gradient(180deg,#10142C,#1B2047 60%,#3B3560)}
+.net .lead{margin-top:18px;max-width:36em;color:var(--muted);font-size:19px}
+.net-g{position:relative;margin-top:clamp(36px,5vw,76px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,.62fr) minmax(0,1.05fr) minmax(0,1.25fr);gap:0 clamp(40px,6vw,104px);align-items:center}
+.net-g canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.col{position:relative;display:grid;gap:clamp(16px,2vw,30px)}
+.node{position:relative;padding-left:26px;line-height:1.2;font-size:clamp(18px,1.45vw,22px)}
+.node::before{content:"";position:absolute;left:0;top:.28em;width:13px;height:13px;border-radius:50%;background:var(--night);box-shadow:inset 0 0 0 2.5px var(--sun)}
+.col--m .node{padding:0 26px 0 0}.col--m .node::before{left:auto;right:0}
+@media (min-width:901px){.col--m,[data-col=s]{gap:64px}[data-col=s] .node{width:fit-content}}
+.col>small{font-size:16px;color:var(--muted);display:block}
+.hub{border:6px solid var(--blue);background:#fff;color:var(--red);aspect-ratio:261/190;display:grid;place-items:center;text-align:center;font-size:clamp(17px,1.3vw,20px);line-height:1.15;font-weight:500;padding:8px}
+.col--f{gap:0}
+.col--f .node{padding:11px 0 11px 30px;font-size:clamp(23px,2.1vw,32px);letter-spacing:-.02em;border-bottom:1px solid var(--line);transition:color .25s,padding .4s var(--e-smooth)}
+.col--f{border-left:6px solid var(--sun)}
+.col--f .node::before{top:50%;left:0;width:18px;height:2px;border-radius:0;box-shadow:none;background:var(--sun);transform-origin:0 50%;transition:transform .4s var(--e-smooth)}
+.col--f .node:hover::before{transform:scaleX(1.6)}
+.col--f .node:hover{color:#FFC79A;padding-left:42px}
+.buyers{margin-top:clamp(40px,5vw,72px);display:flex;flex-wrap:wrap;gap:10px 44px;align-items:baseline;font-size:clamp(20px,1.7vw,25px)}
+.buyers small{font-size:17px;color:var(--muted)}
+/* совет рынка и реквизиты */
+.mem{background:var(--peach)}
+.mem-g{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(32px,6vw,110px);align-items:start}
+.certs{position:relative;display:flex;gap:18px;align-items:flex-start}
+.certs a{display:block;flex:1;background:#fff;padding:8px;border:1px solid rgba(20,25,53,.18);transition:transform .5s var(--e-smooth)}
+.certs a:nth-child(2){margin-top:64px}
+.certs a:hover{transform:translateY(-8px)}
+.certs img{width:100%;height:auto}
+.facts li{padding:16px 0;border-top:1.5px solid var(--ink);font-size:18px;line-height:1.4}
+.facts b{display:block;font-size:clamp(25px,2.1vw,32px);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+.facts{margin-top:28px}
+.reqs{margin-top:clamp(44px,5vw,76px)}
+.reqs dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1.5px solid var(--ink);border-left:1px solid rgba(20,25,53,.3);margin-top:22px}
+.reqs dl div{border-right:1px solid rgba(20,25,53,.3);border-bottom:1px solid rgba(20,25,53,.3);padding:12px 16px 14px;position:relative}
+.reqs .w2{grid-column:span 2}
+.reqs dt{font-size:16px;color:#5C4A44}
+.reqs dd{font-family:var(--mono);font-size:clamp(16px,1.25vw,18px);letter-spacing:-.03em}
+.reqs button{display:block;width:100%;min-height:44px;text-align:left}
+.reqs button::after{content:"скопировать";font:400 15px var(--f-text);letter-spacing:0;color:#7A3413;margin-left:10px;text-decoration:underline;text-underline-offset:3px}
+.reqs button.ok::after{content:"скопировано";text-decoration:none;color:#14561F}
+/* контакты и вопрос */
+.ct-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(34px,6vw,110px);align-items:start}
+.hot{margin-top:26px;padding:22px 26px 24px;border:7px solid var(--blue);background:#fff}
+.hot a{display:block;text-decoration:none;font-size:clamp(32px,3.5vw,52px);line-height:1.1;letter-spacing:-.03em;font-weight:500}
+.hot p{color:var(--muted)}
+.ppl li{display:flex;flex-wrap:wrap;gap:2px 20px;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);line-height:1.3}
+.ppl a{min-height:44px;display:inline-flex;align-items:center;font-weight:500}
+.ppl small{display:block;font-size:16px;color:var(--muted)}
+.adr{margin-top:22px;color:var(--muted)}
+.adr a{color:var(--ink)}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.full{grid-column:1/-1}
+.field input,.field select,.field textarea{background:#fff;border-color:rgba(20,25,53,.35)}
+.field>span{font-size:16px}
+.agree{font-size:16px}
+.done{grid-column:1/-1;background:#fff;border:7px solid var(--blue);padding:26px}
+.done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 18px;margin:16px 0}.done dt{color:var(--muted)}.done dd{overflow-wrap:anywhere}
+.ftr{padding:34px 0 40px;background:linear-gradient(180deg,#1B2047,#141935)}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:14px 56px;justify-content:space-between;font-size:16px;color:var(--muted)}
+.ftr a{color:var(--fg);display:inline-flex;min-height:44px;align-items:center}
+@media (max-width:1100px){.net-g{gap:0 40px}.reqs dl{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-g{grid-template-columns:minmax(0,1fr) minmax(0,380px)}}
+@media (max-width:900px){
+  :root{--hdr-h:68px}
+  .brand img{width:40px;height:50px}.brand{font-size:16px}.hdr .lk{display:none}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:var(--snow);flex-direction:column;gap:2px;padding:24px var(--gutter);font-size:30px;font-weight:500;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  [data-burger]{margin-left:auto}
+  .hero{--sheet:0px}
+  .sky{inset:0 0 auto;height:calc(100% - var(--th,520px))}
+  .hero-g{grid-template-columns:minmax(0,1fr);grid-template-rows:none;min-height:0}
+  .say{padding:48px 0 26px}
+  h1{font-size:clamp(42px,12.2vw,56px)}
+  .role{display:flex}.role button{flex:1;padding:0 8px}
+  .win{grid-row:auto;grid-column:auto;margin:0}
+  .win dl{grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr) minmax(0,1fr)}.win dl div{padding:0 8px}.win dl{padding:16px 6px}.win dd{font-size:30px}
+  .terms{height:auto;grid-template-columns:minmax(0,1fr);padding:34px 0 20px;margin-left:38px}
+  .term{padding:14px 0 14px 44px;min-height:76px;border-bottom:1px solid var(--line)}
+  .term svg{left:6px;top:20px;width:22px;height:44px}
+  .term b{font-size:23px}.term span{margin-top:3px}
+  .due{grid-template-columns:minmax(0,1fr)}.due .left{text-align:left}
+  .days{height:110px}
+  .pay-g,.tar,.mem-g,.ct-g{grid-template-columns:minmax(0,1fr)}
+  .ways li{grid-template-columns:minmax(0,1fr)}.ways .btn{grid-row:auto;grid-column:auto;margin-top:10px}
+  .years{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter);scrollbar-width:none}
+  .years button{flex:none}
+  .months{grid-template-columns:repeat(3,minmax(0,1fr))}.months button{padding:10px 10px;font-size:17px;min-height:76px}
+  .net-g{grid-template-columns:minmax(0,1fr);gap:46px}
+  .col,.col--m{padding-left:0}.col--m .node{padding:0 0 0 26px}.col--m .node::before{left:0;right:auto}
+  .hub{aspect-ratio:auto;padding:18px;max-width:240px}
+  .buyers{flex-direction:column}
+  .certs{gap:12px}
+  .reqs dl{grid-template-columns:minmax(0,1fr)}.reqs .w2{grid-column:auto}
+  form{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a class="brand" href="#main" aria-label="ЭСКА, на главную"><img src="img/logo.svg" alt="Логотип ЭСКА" width="47" height="58"><span>Энергосбытовая<br>компания Аган</span></a>
+  <nav data-menu aria-label="Основное меню"><a href="#work" data-go="home">Оплата</a><a href="#work" data-go="org">Тарифы</a><a href="#net">О компании</a><a href="#req">Реквизиты</a><a href="#contacts">Контакты</a></nav>
+  <a class="btn lk" href="https://oooeska.ru/login.php" target="_blank" rel="noopener">Личный кабинет</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero" id="hero">
+  <div class="sky" aria-hidden="true"></div>
+  <div class="wrap hero-g">
+    <div class="say">
+      <h1><span style="--n:0">Закупаем</span> <span style="--n:1">и&nbsp;поставляем</span> <span style="--n:2">электроэнергию</span></h1>
+      <p class="lead">Покупаем электроэнергию и&nbsp;мощность на&nbsp;оптовом и&nbsp;розничном рынках и&nbsp;поставляем покупателям. Радужный, Югра.</p>
+      <div class="role" role="tablist" aria-label="Кто вы"><button role="tab" data-role="home" aria-selected="true">Я&nbsp;житель</button><button role="tab" data-role="org" aria-selected="false">Мы&nbsp;организация</button></div>
+    </div>
+    <figure class="win"><img id="pylon" src="img/ph/05.webp" alt="Опора и подстанция на закате зимой" width="650" height="600" fetchpriority="high">
+      <dl><div><dt>год основания</dt><dd>2004</dd></div><div><dt>месторождений нефти снабжаем</dt><dd>8</dd></div><div><dt>член Совета рынка с&nbsp;этого года</dt><dd>2010</dd></div></dl>
+    </figure>
+    <div class="terms" id="terms" aria-live="polite"></div>
+  </div>
+  <canvas id="wires" aria-hidden="true"></canvas>
+</section>
+
+<section class="work" id="work"><div class="wrap">
+  <div class="work-h"><h2 id="work-t">Оплатить до&nbsp;10‑го числа</h2><div class="role" role="tablist" aria-label="Кто вы"><button role="tab" data-role="home" aria-selected="true">Жителю</button><button role="tab" data-role="org" aria-selected="false">Организации</button></div></div>
+
+  <div class="panel" data-panel="home" role="tabpanel">
+    <div class="due"><p>Расчётный период — календарный месяц. За&nbsp;<span id="d-per">прошедший месяц</span> платите не&nbsp;позднее <b id="d-due">10‑го числа следующего месяца</b>.</p><p class="left" id="d-box"><b class="num" id="d-n">10</b><span id="d-w">число</span></p></div>
+    <div class="days" aria-hidden="true"><svg id="days" preserveAspectRatio="none"></svg></div>
+    <div class="pay-g">
+      <div>
+        <ul class="ways">
+          <li><h3>В личном кабинете</h3><p>Банковской картой VISA, MasterCard или МИР</p><a class="btn" data-magnetic href="https://oooeska.ru/login.php" target="_blank" rel="noopener">Оплатить картой</a></li>
+          <li><h3>В офисе ЭСКА</h3><p>Наличными: Радужный, микрорайон&nbsp;1, дом&nbsp;43, 5&nbsp;этаж</p></li>
+          <li><h3>В банке ВТБ</h3><p>В&nbsp;отделениях и&nbsp;банкоматах Банка ВТБ&nbsp;(ПАО)</p></li>
+        </ul>
+        <p class="paynote">Данные карты вы вводите на&nbsp;авторизационной странице банка. Если карта подключена к&nbsp;3D‑Secure, банк попросит подтверждение. Передача данных идёт с&nbsp;шифрованием SSL, шлюз сертифицирован по&nbsp;PCI&nbsp;DSS.</p>
+      </div>
+      <div class="deal" id="deal"><h3>Договор с&nbsp;физическими лицами</h3>
+        <details open><summary>Когда договор заключён</summary><p>В 00&nbsp;часов 00&nbsp;минут даты, с&nbsp;которой начинается период вашей первой оплаты, либо иной даты, предусмотренной законодательством. Срок неопределённый.</p></details>
+        <details><summary>По какой цене платить</summary><p>По регулируемым ценам (тарифам), которые устанавливает орган исполнительной власти субъекта РФ в&nbsp;области регулирования тарифов.</p></details>
+        <details><summary>Что оплачивает частный дом</summary><p>Электроэнергию в&nbsp;жилом помещении, на&nbsp;земельном участке и&nbsp;в&nbsp;надворных постройках.</p></details>
+        <details><summary>Категория надёжности</summary><p>Снабжение по&nbsp;договору идёт по&nbsp;третьей категории надёжности.</p></details>
+        <details><summary>Если появилась задолженность</summary><p>Ограничение подачи вводится по&nbsp;законодательству РФ. Расходы на&nbsp;ограничение и&nbsp;возобновление возмещаются в&nbsp;течение 5&nbsp;дней после требования об&nbsp;оплате.</p></details>
+        <details><summary>Можно ли отказаться от договора</summary><p>Да, в&nbsp;порядке, установленном законодательством РФ.</p></details>
+        <p class="docs"><a class="link" href="https://oooeska.ru/report/2024/Zashita_danih.PDF" target="_blank" rel="noopener">Защита персональных данных, PDF</a><a class="link" href="https://oooeska.ru/report/2024/Konfidencialnost.PDF" target="_blank" rel="noopener">Конфиденциальность, PDF</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" data-panel="org" role="tabpanel" hidden>
+    <div class="tar">
+      <div><div class="years" id="years" role="group" aria-label="Год"></div><div class="months" id="months" role="group" aria-label="Месяц"></div></div>
+      <div class="files" aria-live="polite"><h3 id="f-t"></h3><ul id="f-l"></ul><p class="more">Прогноз и&nbsp;факт за&nbsp;2009–2015&nbsp;годы: <a href="https://oooeska.ru/market.php" target="_blank" rel="noopener">архив тарифов</a></p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec net" id="net" data-theme="night"><div class="wrap">
+  <h2 data-split>От рынка до&nbsp;месторождения</h2>
+  <p class="lead">Предприятие создано для&nbsp;купли‑продажи электрической энергии и&nbsp;мощности на&nbsp;розничном и&nbsp;оптовом рынках по&nbsp;Федеральному закону от&nbsp;26&nbsp;марта 2003&nbsp;года №&nbsp;35‑ФЗ. Энергия идёт покупателям через сети трёх сетевых компаний.</p>
+  <div class="net-g" id="netg">
+    <canvas id="net-c" aria-hidden="true"></canvas>
+    <div class="col col--m" data-col="m"><div class="node">Оптовый рынок энергии и&nbsp;мощности</div><div class="node">Розничный рынок энергии и&nbsp;мощности</div></div>
+    <div class="col"><div class="hub" id="hub">Закупка<br>и&nbsp;поставка</div></div>
+    <div class="col" data-col="s"><div class="node">ПАО «Россети» – <span style="white-space:nowrap">МЭС Урала</span></div><div class="node">АО «Россети Тюмень»</div><div class="node">АО «Варьеган&shy;энергонефть»</div></div>
+    <div class="col col--f" data-col="f"><div class="node">Варьеганское</div><div class="node">Тагринское</div><div class="node">Северо‑Варьеганское</div><div class="node">Западно‑Варьеганское</div><div class="node">Бахиловское</div><div class="node">Сусликовское</div><div class="node">Верхне‑Колик‑Еганское</div><div class="node">Северо‑Хохряковское</div></div>
+  </div>
+  <p class="buyers"><small>Основные покупатели</small><span>Нижневартовский филиал ПАО&nbsp;НК «РуссНефть»</span><span>АО «Негуснефть»</span><span>АО «Варьеганэнергонефть»</span></p>
+</div></section>
+
+<section class="sec mem" id="req"><div class="wrap">
+  <div class="mem-g">
+    <div class="certs"><a href="img/ph/03.webp" target="_blank" data-reveal><img src="img/ph/03.webp" alt="Свидетельство № 411 о членстве в НП «Совет рынка», 3 декабря 2010 года" width="1920" height="2714" loading="lazy"></a><a href="img/ph/04.webp" target="_blank" data-reveal><img src="img/ph/04.webp" alt="Свидетельство № 19/2012 о внесении в реестр субъектов оптового рынка, 13 июля 2012 года" width="1920" height="2714" loading="lazy"></a></div>
+    <div><h2 data-split>Субъект оптового рынка</h2>
+      <ul class="facts">
+        <li><b>3 декабря 2010 года</b>ЭСКА вступила в&nbsp;НП «Совет рынка». Свидетельство №&nbsp;411, регистрационный номер <span class="mono">4.О.00115</span></li>
+        <li><b>13 июля 2012 года</b>Компания внесена в&nbsp;Реестр субъектов оптового рынка электрической энергии (мощности). Свидетельство №&nbsp;19/2012, регистрационный номер <span class="mono">2.1.0374</span></li>
+        <li><b>ОКВЭД 35.14</b>Зарегистрирована 3&nbsp;февраля 2004&nbsp;года в&nbsp;Радужном</li>
+      </ul>
+    </div>
+  </div>
+  <div class="reqs"><h3>Реквизиты ООО «ЭСКА»</h3>
+    <dl id="reqs">
+      <div><dt>ИНН</dt><dd data-c>8609018048</dd></div><div><dt>КПП</dt><dd data-c>860901001</dd></div><div><dt>ОГРН</dt><dd data-c>1048603250410</dd></div><div><dt>БИК</dt><dd data-c>044525411</dd></div>
+      <div class="w2"><dt>Расчётный счёт</dt><dd data-c>40702810521060001029</dd></div><div class="w2"><dt>Корреспондентский счёт</dt><dd data-c>30101810145250000411</dd></div>
+      <div class="w2"><dt>Банк</dt><dd>Филиал «Центральный» Банка ВТБ&nbsp;(ПАО)</dd></div><div class="w2"><dt>Статистические коды</dt><dd>ОКПО&nbsp;72305047, ОКАТО&nbsp;71137000000, ОКОГУ&nbsp;49014, ОКОПФ&nbsp;65, ОКФС&nbsp;16</dd></div>
+    </dl></div>
+</div></section>
+
+<section class="sec" id="contacts"><div class="wrap ct-g">
+  <div><h2 data-split>Кому звонить</h2>
+    <div class="hot"><p>Горячая линия, с&nbsp;8:00 до&nbsp;17:00 в&nbsp;рабочие дни</p><a class="num" href="tel:+73466844683">8 (34668) 44‑683</a></div>
+    <ul class="ppl" style="margin-top:14px">
+      <li><span>Главный бухгалтер<small>Кургузова Оксана Александровна</small></span><a class="num" href="tel:+73466844408">8 (34668) 44‑408</a></li>
+      <li><span>Ведущий бухгалтер<small>Богданова Екатерина Николаевна</small></span><a class="num" href="tel:+73466844707">8 (34668) 44‑707</a></li>
+      <li><span>Инженер по&nbsp;работе на&nbsp;РРЭМ<small>Беляшин Максим Александрович</small></span><a class="num" href="tel:+73466844620">8 (34668) 44‑620</a></li>
+      <li><span>Телефон и&nbsp;факс предприятия</span><a class="num" href="tel:+73466844747">8 (34668) 44‑747</a></li>
+    </ul>
+    <p class="adr">628464, ХМАО – Югра, Радужный, микрорайон&nbsp;1, дом&nbsp;43, 5&nbsp;этаж<br><a class="link" style="display:inline-block;padding:9px 0" href="mailto:eska@oooeska.ru">eska@oooeska.ru</a></p>
+  </div>
+  <div id="ask"><h2 data-split>Задать вопрос</h2>
+    <form data-demo-form style="margin-top:26px">
+      <label class="field"><span>Кто вы</span><select name="Кто" id="q-role"><option value="Житель">Житель</option><option value="Организация">Организация</option></select></label>
+      <label class="field"><span>О чём вопрос</span><select name="Тема" id="q-topic"></select></label>
+      <label class="field"><span>Имя</span><input name="Имя" required autocomplete="name"></label>
+      <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+      <label class="field full"><span>Вопрос</span><textarea name="Вопрос" required></textarea></label>
+      <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+      <button class="btn full" data-magnetic>Отправить вопрос</button>
+      <div class="done" role="status"><h3>Так вопрос придёт в ЭСКА</h3><dl></dl><p>Это макет: письмо никуда не ушло.</p></div>
+    </form>
+  </div>
+</div></section>
+</main>
+<footer class="ftr" data-theme="night"><div class="wrap"><span>ООО «Энергосбытовая компания Аган», ООО «ЭСКА»<br>ИНН 8609018048, ОГРН 1048603250410</span><span><a class="link" href="tel:+73466844683">8 (34668) 44‑683</a></span><span><a class="link" href="mailto:eska@oooeska.ru">eska@oooeska.ru</a></span></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73466844683">Горячая линия</a><a class="btn" href="#work" data-go="home">Оплата</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+addEventListener('DOMContentLoaded',function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+  /* ---------- провода: кубическая кривая между двумя точками, упругая «струна» поверх, импульсы ---------- */
+  function Grid(cv,host,opt){
+    var c=cv.getContext('2d'),W=0,H=0,self={wires:[]},N=44;
+    function size(){var r=host.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;if(W<2||H<2)return;cv.width=W*d;cv.height=H*d;c.setTransform(d,0,0,d,0,0)}
+    function pt(w,t){var u=1-t,k=w.k,x=u*u*u*k[0]+3*u*u*t*k[2]+3*u*t*t*k[4]+t*t*t*k[6],y=u*u*u*k[1]+3*u*u*t*k[3]+3*u*t*t*k[5]+t*t*t*k[7],s=Math.sin(Math.PI*t)*w.amp+Math.sin(2*Math.PI*t)*w.amp2;return [x+s*w.nx,y+s*w.ny]}
+    self.layout=function(){size();self.wires.forEach(function(w){w.k=w.geo(host.getBoundingClientRect());var dx=w.k[6]-w.k[0],dy=w.k[7]-w.k[1],l=Math.hypot(dx,dy)||1;w.nx=-dy/l*(dx<0?-1:1);w.ny=dx/l*(dx<0?-1:1)})};
+    self.add=function(w){w.amp=w.amp2=w.v=w.v2=0;w.p=[];w.hot=0;self.wires.push(w);return w};
+    self.fire=function(w,f){if(KIT.REDUCED||KIT.still){draw();return}w.p.push({t:0,s:f||.85});w.v+=(f?70:150);w.v2-=40};
+    function draw(t,dt){if(W<2)return;dt=(dt||0)/1000;c.clearRect(0,0,W,H);
+      self.wires.forEach(function(w,i){if(!w.k)return;
+        w.v+=(-210*w.amp-3.2*w.v)*dt;w.amp+=w.v*dt;w.v2+=(-640*w.amp2-4.4*w.v2)*dt;w.amp2+=w.v2*dt;
+        var idle=KIT.REDUCED?0:Math.sin((t||0)/1700+i*1.3)*opt.sway,P=[],j;w.amp+=idle;for(j=0;j<=N;j++)P.push(pt(w,j/N));w.amp-=idle;
+        var g=c.createLinearGradient(w.k[0],w.k[1],w.k[6],w.k[7]);opt.grad.forEach(function(s,q){g.addColorStop(q/(opt.grad.length-1),s)});
+        c.beginPath();P.forEach(function(p,j){c[j?'lineTo':'moveTo'](p[0],p[1])});c.lineWidth=w.hot?2.6:opt.w;c.strokeStyle=w.hot?'#6E9CFF':g;c.stroke();
+        w.p=w.p.filter(function(p){p.t+=p.s*dt;return p.t<1.18});
+        w.p.forEach(function(p){for(j=1;j<=N;j++){var q=j/N,d=p.t-q;if(d<0||d>.2||q>1)continue;var a=1-d/.2;c.beginPath();c.moveTo(P[j-1][0],P[j-1][1]);c.lineTo(P[j][0],P[j][1]);c.lineWidth=1.5+a*3;c.strokeStyle='rgba(120,168,255,'+a+')';c.stroke()}
+          if(p.t<1){var h=pt(w,p.t),r=c.createRadialGradient(h[0],h[1],0,h[0],h[1],22);r.addColorStop(0,'rgba(255,255,255,.95)');r.addColorStop(.18,'rgba(140,182,255,.8)');r.addColorStop(1,'rgba(60,110,255,0)');c.fillStyle=r;c.fillRect(h[0]-22,h[1]-22,44,44)}});
+      })}
+    self.draw=draw;self.pt=pt;
+    var rt=0;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){self.layout();draw(0,0)},80)});
+    return self;
+  }
+  var par=function(x0,y0,x1,y1,s){return [x0,y0,x0+(x1-x0)/3,y0+(y1-y0)/3+s*4/3,x0+(x1-x0)*2/3,y0+(y1-y0)*2/3+s*4/3,x1,y1]};
+
+  /* ---------- первый экран ---------- */
+  var ACT={home:[['Оплатить','не позднее 10‑го числа','#work'],['Личный кабинет','вход и регистрация','https://oooeska.ru/login.php'],['Договор','условия для физических лиц','#deal'],['Горячая линия','8 (34668) 44‑683','tel:+73466844683'],['Вопрос','написать в компанию','#ask']],
+    org:[['Тарифы','по месяцам с 2016 года','#work'],['Поставка','рынок, сети, месторождения','#net'],['Реквизиты','скопировать для договора','#req'],['Бухгалтерия','8 (34668) 44‑408','tel:+73466844408'],['Вопрос','написать в компанию','#ask']]};
+  var TOP={Житель:['Оплата','Личный кабинет','Договор','Другое'],Организация:['Тарифы и ценовые категории','Договор','Бухгалтерия','Работа на РРЭМ']};
+  var INS='<svg viewBox="0 0 26 58" aria-hidden="true"><path d="M13 0v58" stroke="#141935" stroke-width="3"/><rect class="d" x="3" y="8" width="20" height="7" rx="3.5" fill="#141935"/><rect class="d" x="0" y="20" width="26" height="8" rx="4" fill="#141935"/><rect class="d" x="3" y="33" width="20" height="7" rx="3.5" fill="#141935"/></svg>';
+  var hero=$('#hero'),terms=$('#terms'),img=$('#pylon'),G=Grid($('#wires'),hero,{sway:1.4,w:2,grad:['#0c0d18','#E9B98D','#F7D6B4','#141935']});
+  // точки подвеса на траверсе опоры, доли кадра фотографии
+  var HOOK=[[.01,.125],[.07,.128],[.20,.16],[.28,.172],[.352,.19]],mob=function(){return innerWidth<=900};
+  function build(role){
+    terms.textContent='';G.wires=[];
+    ACT[role].forEach(function(a,i){
+      var el=document.createElement('a');el.className='term';el.href=a[2];el.innerHTML=INS+'<b></b><span></span>';el.children[1].textContent=a[0];el.children[2].textContent=a[1];
+      if(/^http/.test(a[2])){el.target='_blank';el.rel='noopener'}terms.appendChild(el);
+      var w=G.add({geo:function(h){var r=img.getBoundingClientRect(),s=el.firstChild.getBoundingClientRect(),x0=r.left-h.left+r.width*HOOK[i][0],y0=r.top-h.top+r.height*HOOK[i][1],x1=s.left-h.left+s.width/2,y1=s.top-h.top+1;
+        if(mob()){var lane=(11+(4-i)*7);return [x0,y0,x0-10,y0+(y1-y0)*.5,lane,y0+(y1-y0)*.55,x1,y1]}
+        return par(x0,y0,x1,y1,(y1-y0)*.25+4)}});
+      var on=function(){w.hot=1;G.fire(w)},off=function(){w.hot=0;if(KIT.REDUCED)G.draw(0,0)};
+      el.addEventListener('pointerenter',on);el.addEventListener('focus',on);el.addEventListener('pointerleave',off);el.addEventListener('blur',off);el.addEventListener('pointerdown',function(){if(!w.p.length)G.fire(w)});
+    });
+    G.layout();G.draw(0,0);hero.style.setProperty('--th',(terms.offsetHeight+2)+'px');G.layout();
+    if(!KIT.REDUCED)G.wires.forEach(function(w,i){setTimeout(function(){G.fire(w,.75)},500+i*260)});
+  }
+  function role(r){
+    $$('[data-role]').forEach(function(b){b.setAttribute('aria-selected',b.dataset.role===r);b.tabIndex=b.dataset.role===r?0:-1});
+    $$('[data-panel]').forEach(function(p){p.hidden=p.dataset.panel!==r});
+    $('#work-t').innerHTML=r==='home'?'Оплатить до&nbsp;10‑го числа':'Тарифы по&nbsp;месяцам';
+    $('#q-role').value=r==='home'?'Житель':'Организация';topics();build(r);
+  }
+  function topics(){var s=$('#q-topic');s.textContent='';TOP[$('#q-role').value].forEach(function(t){var o=document.createElement('option');o.textContent=t;s.appendChild(o)})}
+  $('#q-role').addEventListener('change',topics);
+  $$('[data-role]').forEach(function(b){b.addEventListener('click',function(){role(b.dataset.role)});
+    b.addEventListener('keydown',function(e){if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;var o=b.dataset.role==='home'?'org':'home';role(o);b.parentNode.querySelector('[data-role='+o+']').focus()})});
+  $$('[data-go]').forEach(function(a){a.addEventListener('click',function(){role(a.dataset.go)})});
+  role('home');
+  addEventListener('load',function(){G.layout();G.draw(0,0)});if(document.fonts)document.fonts.ready.then(function(){G.layout();G.draw(0,0)});
+  setTimeout(function(){G.layout();G.draw(0,0)},1700);
+  KIT.raf(hero,function(t,dt){G.draw(t,dt)},40);
+  // курсор задевает провод: он пружинит
+  if(KIT.FINE&&!KIT.REDUCED){var py=null,px=0;hero.addEventListener('pointermove',function(e){var h=hero.getBoundingClientRect(),x=e.clientX-h.left,y=e.clientY-h.top;
+    if(py!==null)G.wires.forEach(function(w){var k=w.k;if(!k||x<Math.min(k[0],k[6])||x>Math.max(k[0],k[6]))return;var q=G.pt(w,(x-k[0])/(k[6]-k[0]))[1];if((py-q)*(y-q)<0)w.v+=Math.max(-190,Math.min(190,(y-py)*9))});py=y;px=x})}
+
+  /* ---------- срок оплаты: считаем от сегодняшней даты посетителя ---------- */
+  (function(){
+    var MG=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'],MA=['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'];
+    var now=new Date(),t=new Date(now.getFullYear(),now.getMonth(),now.getDate()),due=new Date(t.getFullYear(),t.getMonth()+(t.getDate()>10?1:0),10),n=Math.round((due-t)/864e5),per=new Date(due.getFullYear(),due.getMonth()-1,1);
+    $('#d-per').textContent=MA[per.getMonth()];$('#d-due').textContent='10 '+MG[due.getMonth()];
+    $('#d-n').textContent=n;var m=n%10,h=n%100;$('#d-w').textContent=n===0?'дней, платить сегодня':(m===1&&h!==11?'день':m>1&&m<5&&(h<12||h>14)?'дня':'дней')+' до срока';
+    function svg(){var s=$('#days'),W=s.parentNode.clientWidth,H=s.parentNode.clientHeight,days=new Date(per.getFullYear(),per.getMonth()+1,0).getDate(),tot=days+10,sag=30,y0=46,X=function(d){return 14+(W-28)*(d-1)/(tot-1)},Y=function(x){var q=(x-14)/(W-28);return y0+sag*4*q*(1-q)},o='',d,st=Math.round((t-per)/864e5)+1;
+      o+='<path d="M14 '+y0+'Q'+W/2+' '+(y0+sag*2)+' '+(W-14)+' '+y0+'" fill="none" stroke="#141935" stroke-width="2"/>';
+      for(d=1;d<=tot;d++){var x=X(d),y=Y(x),big=d===tot,td=d===st,past=d<st;o+='<circle cx="'+x+'" cy="'+y+'" r="'+(big?10:td?9:d===1||d===days+1?5:3.2)+'" fill="'+(big?'#D4250F':td?'#2469FF':past?'#9AA3C4':'#141935')+'"/>';}
+      var lab=function(d,txt,a,c){return '<text x="'+X(d)+'" y="'+(a==='middle'?Y(X(d))+36:20)+'" text-anchor="'+a+'" font-size="17" fill="'+c+'" font-family="Jost">'+txt+'</text>'};
+      o+=lab(1,'1 '+MG[per.getMonth()],'start','#545C7A')+lab(tot,'10 '+MG[due.getMonth()],'end','#B01C08');
+      if(X(st)>130&&X(st)<W-150)o+=lab(st,'сегодня','middle','#1A50D0');
+      s.setAttribute('viewBox','0 0 '+W+' '+H);s.innerHTML=o}
+    svg();addEventListener('resize',svg);
+    new MutationObserver(svg).observe($('[data-panel=home]'),{attributes:true});
+  })();
+
+  /* ---------- тарифы: реальные файлы со страницы marketn.php ---------- */
+  (function(){
+    var T={"p":["Менее 150 кВт|fakt_less_150.xls","От 150 кВт до 670 кВт|fakt_from_150_to_670.xls","От 670 кВт до 10 МВт|fakt_from_670_to_10.xls","Не менее 10 МВт|fakt_not_less_10.xls","Менее 670 кВт|fakt_less_670.xls","1 ценовая категория|1_tcenovay_kategoriya.pdf","2 ценовая категория|2_tcenovay_kategoriya.pdf","3 ценовая категория|3_tcenovay_kategoriya.pdf","5 ценовая категория|5_tcenovay_kategoriya.pdf","1 ценовая категория|1_tcenovay_kategoriya.PDF","2 ценовая категория|2_tcenovay_kategoriya.PDF","3 ценовая категория|3_tcenovay_kategoriya.PDF","5 ценовая категория|5_tcenovay_kategoriya.PDF","4 ценовая категория|4_tcenovay_kategoriya.pdf"],"y":{"2016":[[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2]],"2017":[[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2]],"2018":[[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[0,3,1,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2]],"2019":[[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2]],"2020":[[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[4,3,2],[5,6,7,8],[5,6,7,8]],"2021":[[9,10,11,12],[9,10,11,12],[9,10,11,12],[9,10,11,12],[9,10,11,12],[9,10,11,12],[9,10,11,12],[9,10,11,12],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8]],"2022":[[5,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8]],"2023":[[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8],[5,6,7,8]],"2024":[[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8]],"2025":[[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8]],"2026":[[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[5,6,7,13,8],[],[],[]]}},M=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],ys=Object.keys(T.y).reverse(),y=ys[0],mo;
+    function last(a){for(var i=11;i>=0;i--)if(a[i].length)return i}
+    mo=last(T.y[y]);
+    function files(){$('#f-t').textContent=M[mo]+' '+y;var u=$('#f-l');u.textContent='';T.y[y][mo].forEach(function(i){var p=T.p[i].split('|'),li=document.createElement('li'),a=document.createElement('a');a.href='https://oooeska.ru/price/'+y+'/'+y+'_'+String(mo+1).padStart(2,'0')+'_'+p[1];a.target='_blank';a.rel='noopener';a.innerHTML='<span></span><i></i>';a.firstChild.textContent=p[0];a.lastChild.textContent=p[1].split('.').pop().toUpperCase();li.appendChild(a);u.appendChild(li)})}
+    function months(){var b=$('#months');b.textContent='';M.forEach(function(m,i){var n=T.y[y][i].length,e=document.createElement('button');e.type='button';e.innerHTML=m+'<small>'+(n?n+(n<5?' файла':' файлов'):'не опубликован')+'</small>';e.disabled=!n;e.setAttribute('aria-pressed',i===mo);e.onclick=function(){mo=i;[].forEach.call(b.children,function(x,j){x.setAttribute('aria-pressed',j===i)});files()};b.appendChild(e)})}
+    ys.forEach(function(v){var b=document.createElement('button');b.type='button';b.textContent=v;b.setAttribute('aria-pressed',v===y);b.onclick=function(){y=v;if(!T.y[y][mo].length)mo=last(T.y[y]);$$('#years button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});months();files()};$('#years').appendChild(b)});
+    months();files();
+  })();
+
+  /* ---------- схема поставки ---------- */
+  (function(){
+    var host=$('#netg'),g=Grid($('#net-c'),host,{sway:.8,w:1.4,grad:['#FF9A55','#B9826F','#FF9A55']});
+    var dot=function(el){if(el===hub||!el.classList.contains('node'))return function(){return {x:0,y:0}};var s=getComputedStyle(el,'::before');return function(h){var r=el.getBoundingClientRect(),rt=s.right!=='auto'&&parseFloat(s.right)===0&&!mob(),w=parseFloat(s.width)||0;return {x:(rt?r.right-w/2:r.left+w/2)-h.left,y:r.top+parseFloat(s.top)+w/2-h.top}}};
+    var N=function(c){return $$('[data-col='+c+'] .node')},hub=$('#hub');
+    function link(a,b,fr){var A=dot(a),B=dot(b);return g.add({a:a,b:b,geo:function(h){var p=A(h),q=B(h),r=hub.getBoundingClientRect();
+      if(fr){var br=b.getBoundingClientRect(),tw=a.getBoundingClientRect();q=mob()?{x:br.left-h.left+3,y:br.top-h.top}:{x:br.left-h.left+3,y:br.top-h.top+br.height*fr};if(!mob())p={x:tw.right-h.left+10,y:p.y}}
+      if(a===hub)p=mob()?{x:r.left-h.left+14,y:r.bottom-h.top}:{x:r.right-h.left,y:r.top-h.top+r.height/2};
+      if(b===hub)q=mob()?{x:r.left-h.left+14,y:r.top-h.top}:{x:r.left-h.left,y:r.top-h.top+r.height/2};
+      if(mob()){return [p.x,p.y,p.x-16,p.y+(q.y-p.y)*.3,q.x-16,q.y-(q.y-p.y)*.3,q.x,q.y]}
+      return par(p.x,p.y,q.x,q.y,Math.abs(q.x-p.x)*.12)}})}
+    var m=N('m'),s=N('s'),f=N('f');m.forEach(function(a){link(a,hub)});s.forEach(function(b){link(hub,b)});
+    // линии от сетей сходятся на общую шину: сайт не указывает, какая сеть питает какое месторождение
+    var bus=$('.col--f');s.forEach(function(a,i){link(a,bus,(i+1)/4)});
+    g.layout();g.draw(0,0);addEventListener('load',function(){g.layout()});if(document.fonts)document.fonts.ready.then(function(){g.layout();g.draw(0,0)});
+    KIT.raf(host,function(t,dt){g.draw(t,dt)},40);
+    var fire=function(el){g.wires.forEach(function(w){if(w.a===el||w.b===el)g.fire(w)})};
+    m.concat(s,[hub]).forEach(function(el){el.addEventListener('pointerenter',function(){fire(el)})});f.forEach(function(el){el.addEventListener('pointerenter',function(){fire(bus)})});
+    var run=false;KIT.onView(host,function(v){if(v&&!run&&!KIT.REDUCED){run=true;[m,s,s].forEach(function(a,k){setTimeout(function(){a.forEach(function(el,i){setTimeout(function(){g.wires.forEach(function(w){if(k===1?w.b===el:w.a===el)g.fire(w,.8)})},i*90)})},700+k*900)})}},{threshold:.3});
+  })();
+
+  /* ---------- копирование реквизитов ---------- */
+  $$('[data-c]').forEach(function(d){var v=d.textContent,b=document.createElement('button');b.type='button';b.className='num';b.textContent=v;b.setAttribute('aria-label',d.previousElementSibling.textContent+' '+v+', скопировать');d.textContent='';d.appendChild(b);
+    b.onclick=function(){var ok=function(){b.classList.add('ok');setTimeout(function(){b.classList.remove('ok')},2200)};if(navigator.clipboard)navigator.clipboard.writeText(v).then(ok,function(){})}});
+});
+</script>
+</body>
+</html>

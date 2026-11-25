@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Пуровская компания — питание вахты, хлеб, кейтеринг и клининг, Тарко-Сале</title>
+<meta name="description" content="Концепция редизайна сайта ПКОПТ-ПНГГ: столовые на вахтово-жилых комплексах, собственная пекарня и мясной цех, кейтеринг, клининг, осмотры водителей. Тарко-Сале.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/playfair-display-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<style>
+:root{--linen:#FBF5EA;--cloth:#FFFDF9;--crust:#8A4A14;--crust-d:#3A2110;--ink:#2A190D;--or:#F68A12;--vio:#383088;--vio-d:#231C5C;--rye:#EBD9BD;
+  --bg:var(--linen);--fg:var(--ink);--muted:#6B5440;--accent:var(--or);--accent-h:#FFA53D;--on-accent:#2A190D;--r:999px;--wrap:1280px;
+  --f-display:"Playfair Display",Georgia,serif;--f-text:"Manrope",system-ui,sans-serif;--hdr-h:96px;--sec:clamp(76px,9vw,144px)}
+[data-theme=night]{--bg:var(--vio-d);--fg:#FFF8EC;--muted:#C9C3EA;--line:rgba(255,248,236,.24);background:var(--bg);color:var(--fg)}
+body{font-variant-numeric:lining-nums}img{height:auto}[data-img]{overflow:clip}
+h1,h2,h3{font-weight:700;letter-spacing:-.018em;line-height:1.02}
+h2{font-size:clamp(38px,5.1vw,80px)}
+h3{font-size:clamp(26px,2.3vw,36px);line-height:1.1}
+.lead{font-size:clamp(18px,1.4vw,21px);line-height:1.55;color:var(--muted);max-width:34em}
+:focus-visible{outline-color:var(--vio)}[data-theme=night] :focus-visible{outline-color:var(--or)}
+.field input,.field select,.field textarea{border-radius:14px}
+/* шапка */
+.hdr{background:#fff;color:var(--ink)}
+.hdr .wrap{height:var(--hdr-h);display:flex;align-items:center;gap:clamp(18px,2.4vw,40px)}
+.hdr img{height:84px;width:auto}
+.hdr nav{display:flex;gap:clamp(18px,2.2vw,36px);margin-left:auto;font-weight:600;font-size:16px}
+.hdr nav a{text-decoration:none;padding:12px 0;white-space:nowrap;position:relative}
+.hdr nav a::after{content:"";position:absolute;left:-6px;right:-6px;bottom:2px;height:12px;border:2.5px solid var(--or);border-color:transparent transparent var(--or);border-radius:50%;transform:rotate(-3deg) scaleX(0);transition:transform .4s var(--e-smooth)}
+.hdr nav a:hover::after{transform:rotate(-3deg)}
+.hdr .tel{text-decoration:none;font-weight:700;white-space:nowrap;color:var(--vio)}
+
+/* первый экран: печь */
+.hero{position:relative;padding-top:var(--hdr-h);background:linear-gradient(90deg,#F3F5F9,#F8F4EE 60%,var(--linen));overflow:clip;isolation:isolate}
+.hero>.wrap{min-height:min(calc(100svh - var(--hdr-h)),880px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.16fr);gap:0 clamp(20px,3vw,50px)}
+.hero-t{align-self:center;padding-block:clamp(28px,5vh,60px) clamp(90px,12vh,130px);position:relative;z-index:3}
+h1{font-size:clamp(54px,8.1vw,128px);line-height:.92;letter-spacing:-.03em;font-weight:800}
+h1 span{display:block}
+h1 em{font-style:italic;color:var(--crust)}
+.hero .lead{margin-top:28px;max-width:26em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.oven{position:relative;align-self:end;height:min(86%,740px);margin-right:calc(var(--gutter)*-1 - max(0px,(100vw - var(--wrap) - var(--gutter)*2)/2) + 34px)}
+.oven-in{position:absolute;inset:0;border-radius:50% 50% 0 0/62% 62% 0 0;overflow:hidden;background:var(--crust)}
+.oven-in img{width:100%;height:100%;object-fit:cover;object-position:42% 50%}
+.oven-in::after{content:"";position:absolute;inset:0;background:radial-gradient(90% 80% at 50% 100%,rgba(246,138,18,.1),rgba(58,33,16,0) 50%,rgba(58,33,16,.5) 100%)}
+.oven::before{content:"";position:absolute;inset:-26px -26px 0;border-radius:50% 50% 0 0/62% 62% 0 0;border:13px solid var(--or);border-bottom:0}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.ledge{position:absolute;left:0;right:0;bottom:0;z-index:4;background:var(--crust-d);color:#FFF3E0}
+.ledge ul{display:flex;flex-wrap:wrap;gap:4px clamp(28px,5vw,84px);padding-block:17px}
+.ledge li{font-size:17px;color:#E9D3B8}
+.ledge b{font:700 25px/1 var(--f-display);color:#fff;margin-right:.35em}
+@media (prefers-reduced-motion:no-preference){
+  .js .oven-in img{animation:bake 3.4s var(--e-smooth) both}
+  .js .oven::before{animation:ring 1.8s var(--e-smooth) both}
+  .js h1 span{animation:up 1.2s var(--e-smooth) both}.js h1 span:nth-child(2){animation-delay:.1s}.js h1 span:nth-child(3){animation-delay:.2s}
+}
+@keyframes bake{from{transform:scale(1.09)}}
+@keyframes ring{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0)}}
+@keyframes up{from{transform:translateY(.2em)}}
+
+/* круглый стол */
+.tbl{background:var(--rye);overflow:clip}
+.tbl .wrap{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:10px clamp(20px,3vw,50px);align-items:center;padding-block:clamp(64px,7vw,110px)}
+.tabs{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:26px}
+.tabs button{min-height:44px;font-weight:600;font-size:16px;color:var(--muted);border-bottom:3px solid transparent;transition:color .25s,border-color .25s}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected=true]{color:var(--vio);border-color:var(--or)}
+.say{margin-top:24px;min-height:300px}
+.say p{margin-top:14px;font-size:18px;max-width:31em}
+.say ul{margin-top:16px;display:grid;gap:8px;font-size:17px;color:var(--muted)}
+.say li{padding-left:24px;position:relative}
+.say li::before{content:"";position:absolute;left:0;top:.62em;width:14px;height:7px;border:2px solid var(--or);border-radius:50%;transform:rotate(-14deg)}
+.say .btn{margin-top:22px}
+.stage{position:relative;height:clamp(480px,46vw,660px);touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none;isolation:isolate;margin-right:calc(var(--gutter)*-.6)}
+.stage:active{cursor:grabbing}
+.stage>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.plate{position:absolute;left:50%;top:50%;width:var(--p);height:var(--p);margin:calc(var(--p)*-.5) 0 0 calc(var(--p)*-.5);border-radius:50%;background:radial-gradient(circle,#fff 62%,#F0E9DD 63%,#fff 66%,#FBF7F0 92%,#E5D8C3 100%);box-shadow:0 22px 34px -16px rgba(90,48,14,.5);padding:calc(var(--p)*.085);will-change:transform}
+.plate img{width:100%;height:100%;border-radius:50%;object-fit:cover;pointer-events:none}
+.plate:focus-visible{outline-offset:8px}
+.turn{position:absolute;z-index:200;right:6%;bottom:2%;display:flex;gap:8px}
+.turn button{width:54px;height:54px;border-radius:50%;background:var(--vio);color:#fff;display:grid;place-items:center;transition:background-color .2s}
+.turn button:hover{background:var(--vio-d)}.turn svg{width:24px}
+
+/* столовая */
+.mess{padding-block:var(--sec) 0}
+.mess-g{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px clamp(30px,5vw,80px);align-items:start}
+.mess .ph1{border-radius:22px;overflow:hidden}.mess .ph1 img{width:100%}
+.early{margin-top:30px;counter-reset:s}
+.early li{padding:15px 0 15px 60px;border-top:1px solid var(--line);position:relative;font-size:18px;line-height:1.45}
+.early li svg{position:absolute;left:0;top:13px;width:38px;height:34px}
+.pay{margin-top:clamp(44px,5vw,80px);position:relative}
+.pay img{width:100%;height:clamp(300px,38vw,560px);object-fit:cover;object-position:50% 72%}
+.pay-t{position:relative;margin-top:-90px;background:var(--linen);width:min(760px,92%);padding:34px clamp(20px,3vw,48px) 10px 0;border-radius:0 60px 0 0}
+.pay-t p{margin-top:12px;font-size:18px;color:var(--muted)}
+
+/* пекарня */
+.bake-h{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:20px 60px;align-items:end}
+.loaf{margin-top:clamp(30px,4vw,56px)}
+.loaf svg{width:100%;height:auto;overflow:visible}
+.slice{cursor:pointer;transition:transform .55s var(--e-smooth)}
+.slice:focus{outline:0}.slice:focus-visible path:first-child{stroke:var(--vio);stroke-width:4}
+.loaf-n{display:flex;flex-wrap:wrap;gap:6px 30px;align-items:baseline;min-height:64px;margin-top:8px}
+.loaf-n b{font:italic 700 clamp(30px,4vw,60px)/1.1 var(--f-display);color:var(--crust)}
+.loaf-n span{color:var(--muted)}
+.bake-g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;margin-top:clamp(40px,5vw,76px)}
+.bake-g figure{border-radius:22px;overflow:hidden}.bake-g img{width:100%;height:100%;object-fit:cover}
+.bake-g figure:nth-child(1){grid-column:1/8}.bake-g figure:nth-child(2){grid-column:8/13;grid-row:1/3}
+.bake-g .how{grid-column:1/8;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 36px;font-size:17px;color:var(--muted)}
+.how b{display:block;font:700 30px/1.1 var(--f-display);color:var(--ink);margin-bottom:8px}
+
+/* мясной цех */
+.meat{background:var(--cloth)}
+.meat-g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px;align-items:end}
+.meat-t{grid-column:1/6;align-self:center}.meat-t .lead{margin-top:20px}
+.meat figure{border-radius:22px;overflow:hidden}.meat img{width:100%;object-fit:cover}
+.meat figure:nth-of-type(1){grid-column:6/13}.meat figure:nth-of-type(1) img{aspect-ratio:16/10}
+.meat figure:nth-of-type(2){grid-column:1/5}.meat figure:nth-of-type(3){grid-column:5/9}.meat figure:nth-of-type(4){grid-column:9/13}
+.meat figure:nth-of-type(n+2) img{aspect-ratio:4/5}
+
+/* праздник и порядок */
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.duo article{padding:var(--sec) clamp(20px,5vw,90px)}
+.duo article:first-child{background:var(--or);--muted:#3A2110;padding-left:max(var(--gutter),calc((100vw - var(--wrap))/2))}
+.duo article:last-child{background:#DCE7F3;padding-right:max(var(--gutter),calc((100vw - var(--wrap))/2))}
+.duo p{margin-top:16px;font-size:18px;color:var(--muted)}
+.duo figure{margin-top:30px;border-radius:22px;overflow:hidden}
+.duo img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.duo h2{font-size:clamp(34px,3.9vw,60px)}
+
+/* бриф */
+.brief-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px clamp(30px,5vw,80px)}
+.count{position:sticky;top:110px;align-self:start}
+.count output{display:block;font:800 clamp(64px,9vw,148px)/.95 var(--f-display);color:var(--or);letter-spacing:-.03em;font-variant-numeric:lining-nums tabular-nums}
+.count .u{font-size:20px;color:var(--muted);margin-top:6px}
+.count canvas{width:100%;height:clamp(200px,24vw,320px);margin-top:26px}
+.count .k{font-size:15px;color:var(--muted);margin-top:8px;min-height:24px}
+.brief form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-content:start}
+.brief .full{grid-column:1/-1}
+.brief .num-in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:end}
+.brief .num-in .field input{font:700 26px/1 var(--f-display);font-variant-numeric:lining-nums}
+.brief .num-in button{min-height:52px;padding:0 16px;border-radius:14px;box-shadow:inset 0 0 0 1.5px var(--line);font-weight:600;white-space:nowrap}
+.brief .num-in button:hover{background:var(--or);color:var(--ink)}
+.need{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;min-width:0}
+.need legend{font-size:14px;color:var(--muted);margin-bottom:8px;padding:0}
+.need label{position:relative;display:flex}
+.need input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.need span{display:flex;align-items:center;min-height:48px;padding:8px 18px;border-radius:99px;box-shadow:inset 0 0 0 1.5px var(--line);font-weight:500}
+.need input:checked+span{background:var(--or);color:var(--ink);box-shadow:none}
+.need input:focus-visible+span{outline:3px solid #fff;outline-offset:3px}
+.brief .done{grid-column:1/-1}.brief .done dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 22px;margin:18px 0}.brief .done dt,.brief .done p{color:var(--muted)}
+
+/* контакты */
+.base-g{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px clamp(30px,5vw,80px);align-items:start}
+.base figure{border-radius:22px;overflow:hidden}.base figure img{width:100%}
+.base .cert{margin-top:26px;display:flex;flex-wrap:wrap;gap:6px 26px;font:600 20px/1.4 var(--f-display)}
+.cont{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px clamp(24px,4vw,64px);margin-top:clamp(44px,5vw,80px);border-top:2px solid var(--or);padding-top:34px}
+.cont p,.cont li{font-size:17px;color:var(--muted)}
+.cont h3{margin-bottom:14px}
+.cont a{display:inline-block;padding:6px 0;font-weight:700;font-size:19px;color:var(--vio);text-decoration:none}
+.cont a:hover{text-decoration:underline;text-underline-offset:5px}
+.ftr{background:var(--crust-d);color:#E3CFB4;padding:30px 0;font-size:15px}
+.ledge b,.how b,.cert,.num,h1,h2,h3,.num-in input{font-variant-numeric:lining-nums!important}
+.kit-tag{bottom:auto;top:calc(var(--hdr-h) + 12px)}
+@media (max-width:1180px){.hdr .tel{display:none}}
+@media (max-width:900px){
+  :root{--hdr-h:76px}
+  .hdr img{height:68px}[data-burger]{margin-left:auto}
+  .hdr nav{position:fixed;inset:var(--hdr-h) 0 auto;height:calc(100svh - var(--hdr-h));background:#fff;flex-direction:column;gap:2px;padding:20px var(--gutter);font:700 32px/1.25 var(--f-display);visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s}
+  .hdr nav.is-open{visibility:visible;opacity:1}
+  .hero>.wrap{grid-template-columns:minmax(0,1fr);min-height:0}
+  .hero-t{padding-block:52px 30px}
+  h1{font-size:clamp(52px,16vw,84px)}
+  .hero .lead{margin-top:18px}.cta .btn{flex:1 1 100%}
+  .oven{height:92vw;margin-right:0}.oven::before{inset:-16px -14px 0;border-width:9px}
+  .ledge{position:relative}.ledge ul{flex-direction:column}
+  .tbl .wrap,.mess-g,.bake-h,.duo,.brief-g,.base-g,.cont{grid-template-columns:minmax(0,1fr)}
+  .tbl .wrap{padding-block:56px 60px}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter);scrollbar-width:none}.tabs button{flex:none}
+  .stage{order:-1;height:400px;margin:0}
+  .tbl-l{display:contents}.tbl-l h2{order:-2}
+  .say{min-height:0}.turn{right:0;bottom:0}
+  .pay-t{width:auto;margin-right:24px;margin-top:-60px}
+  .loaf{overflow-x:auto;margin-inline:calc(var(--gutter)*-1);padding:0 var(--gutter);scrollbar-width:none}.loaf svg{width:720px;max-width:none}
+  .bake-g figure:nth-child(n),.bake-g .how{grid-column:1/13;grid-row:auto}.bake-g figure:nth-child(2) img{aspect-ratio:4/5}
+  .how{grid-template-columns:minmax(0,1fr)!important}
+  .meat-t{grid-column:1/13}.meat figure:nth-of-type(1){grid-column:1/13}.meat-g{gap:10px}
+  .duo article,.duo article:first-child,.duo article:last-child{padding:64px var(--gutter)}
+  .count{position:static}
+  .brief form{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a href="#main" aria-label="Пуровская компания, на главную"><img src="img/logo.png" alt="Пуровская компания общественного питания и торговли" width="560" height="505"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#tbl">Услуги</a><a href="#mess">Столовые</a><a href="#bake">Пекарня</a><a href="#brief">Питание объекта</a><a href="#jobs">Вакансии</a><a href="#cont">Контакты</a></nav>
+  <a class="tel num" href="tel:+73499725785">+7 (34997) 2-57-85</a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-t">
+      <h1><span>Вахта</span><span>на&nbsp;нашем</span><span><em>хлебе</em></span></h1>
+      <p class="lead">Кормим в&nbsp;столовых вахтово‑жилых комплексов, печём хлеб, делаем колбасы, убираем здания. Один подрядчик для&nbsp;крупных промышленных предприятий.</p>
+      <div class="cta"><a class="btn" data-magnetic href="#brief">Посчитать питание объекта</a><a class="btn btn--ghost" href="#tbl">Что мы делаем</a></div>
+    </div>
+    <div class="oven"><div class="oven-in"><img src="img/ph/08.webp" alt="Батоны, формовой и ржаной хлеб пекарни Пуровской компании" width="1920" height="1222" fetchpriority="high"></div></div>
+  </div>
+  <canvas id="steam" aria-hidden="true"></canvas>
+  <div class="ledge"><ul class="wrap num"><li><b>1997</b>на&nbsp;рынке услуг с&nbsp;этого года</li><li><b>12</b>видов хлеба каждый день</li><li><b>30</b>организаций водят к&nbsp;нам водителей на&nbsp;осмотр</li></ul></div>
+</section>
+
+<section class="tbl" id="tbl" aria-labelledby="tbl-t"><div class="wrap">
+  <div class="tbl-l">
+    <h2 id="tbl-t" data-split>Поверните стол</h2>
+    <div class="tabs" role="tablist" aria-label="Направления" id="tabs"></div>
+    <div class="say" id="say" role="tabpanel" aria-live="polite"><h3 id="s-t"></h3><p id="s-p"></p><ul id="s-l"></ul><button class="btn" type="button" id="s-b">Добавить в&nbsp;бриф</button></div>
+  </div>
+  <div class="stage" id="stage">
+    <svg viewBox="0 0 700 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g transform="rotate(-13 350 300)"><ellipse cx="350" cy="322" rx="372" ry="246" fill="#C9AE84" opacity=".55"/><ellipse cx="350" cy="300" rx="372" ry="246" fill="#FFFDF9"/><ellipse cx="350" cy="300" rx="356" ry="232" fill="none" stroke="#EADFCB" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round"/><ellipse cx="350" cy="300" rx="280" ry="172" fill="none" stroke="#F68A12" stroke-width="20"/></g></svg>
+    <div class="turn"><button type="button" id="t-p" aria-label="Повернуть назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9a9 9 0 1 1 0 7M4 3v6h6"/></svg></button><button type="button" id="t-n" aria-label="Повернуть вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 9a9 9 0 1 0 0 7M20 3v6h-6"/></svg></button></div>
+  </div>
+</div></section>
+
+<section class="mess" id="mess">
+  <div class="wrap mess-g">
+    <figure class="ph1" data-img><img src="img/ph/07.webp" alt="Раздача в столовой: повар выставляет блюда, на полках свежая выпечка" width="1920" height="1205" loading="lazy"></figure>
+    <div>
+      <h2 data-split>Столовая начинается со&nbsp;стройки</h2>
+      <p class="lead" style="margin-top:20px">Подключаемся, когда объект ещё строится: помогаем правильно спланировать кухню и&nbsp;зал.</p>
+      <ul class="early" id="early">
+        <li>Планируем производственные помещения</li>
+        <li>Подбираем, покупаем и&nbsp;поставляем оборудование и&nbsp;инвентарь</li>
+        <li>Расставляем всё по&nbsp;технологическому процессу и&nbsp;привязываем к&nbsp;коммуникациям</li>
+        <li>Бригады поваров готовят широкий ассортимент блюд, в&nbsp;том числе диетических</li>
+      </ul>
+    </div>
+  </div>
+  <div class="pay"><img src="img/ph/02.webp" alt="Светлый зал столовой с накрытыми столами" width="1920" height="1291" loading="lazy">
+    <div class="wrap"><div class="pay-t"><h3>Как оплачивается питание</h3><p>По&nbsp;желанию заказчика: безналично, электронными картами через кассу, или&nbsp;по&nbsp;ведомостям питания.</p></div></div></div>
+</section>
+
+<section class="sec bake" id="bake"><div class="wrap">
+  <div class="bake-h"><h2 data-split>Самая крупная пекарня в&nbsp;Пуровском районе</h2><p class="lead">Двенадцать видов хлеба в&nbsp;день. Шесть рецептов придумали сами: нажимайте на&nbsp;ломти.</p></div>
+  <div class="loaf" tabindex="-1"><svg id="loaf" viewBox="-20 -60 1240 400" role="group" aria-label="Буханка из двенадцати ломтей"></svg></div>
+  <div class="loaf-n wrap" style="padding:0" aria-live="polite"><b id="l-n"></b><span id="l-s"></span></div>
+  <div class="bake-g">
+    <figure data-img><img src="img/ph/13.webp" alt="Булочки на противнях после расстойки" width="1920" height="1273" loading="lazy"></figure>
+    <figure data-img><img src="img/ph/29.webp" alt="Формовой хлеб на столе" width="629" height="836" loading="lazy"></figure>
+    <div class="how"><p><b>2&nbsp;тонны в&nbsp;сутки</b>на&nbsp;столько рассчитано производство в&nbsp;Тарко‑Сале: роторные печи, тестомесы, расстойка, упаковка.</p><p><b>Магазины, сады, школы</b>Тарко‑Сале, Пуровска и&nbsp;Сывдармы, а&nbsp;ещё столовые на&nbsp;месторождениях, где мы организуем питание.</p></div>
+  </div>
+</div></section>
+
+<section class="sec meat" id="meat"><div class="wrap meat-g">
+  <div class="meat-t"><h2 data-split>Свой мясной цех</h2><p class="lead">Колбасы и&nbsp;мясные деликатесы из&nbsp;натурального сырья местных производителей.</p></div>
+  <figure data-img><img src="img/ph/24.webp" alt="Мясные деликатесы на разрезе" width="1920" height="1440" loading="lazy"></figure>
+  <figure data-img><img src="img/ph/17.webp" alt="Варёная колбаса" width="1920" height="1510" loading="lazy"></figure>
+  <figure data-img><img src="img/ph/22.webp" alt="Лепные полуфабрикаты на тарелке" width="1920" height="2560" loading="lazy"></figure>
+  <figure data-img><img src="img/ph/23.webp" alt="Вареники на тарелке" width="1920" height="2560" loading="lazy"></figure>
+</div></section>
+
+<section class="duo">
+  <article><h2 data-split>Праздник на&nbsp;выезде</h2><p>Банкет или фуршет на&nbsp;любое число гостей: в&nbsp;зале, на&nbsp;территории предприятия, на&nbsp;природе. Считаем бюджет, оформляем столы, привозим посуду и&nbsp;скатерти, работают повара и&nbsp;официанты. После убираем.</p><figure data-img><img src="img/ph/25.webp" alt="Фуршетный стол с закусками на синей скатерти" width="1920" height="1440" loading="lazy"></figure></article>
+  <article><h2 data-split>Порядок на&nbsp;объекте</h2><p>Убираем жилые и&nbsp;нежилые помещения вахтово‑жилых комплексов, административные и&nbsp;производственные здания, спортзалы, бассейны, сауны и&nbsp;прилегающие территории.</p><figure data-img><img src="img/ph/04.webp" alt="Убранная жилая комната" width="1920" height="1080" loading="lazy"></figure></article>
+</section>
+
+<section class="sec brief" id="brief" data-theme="night"><div class="wrap">
+  <h2 data-split>Сколько тарелок накрыть?</h2>
+  <div class="brief-g" style="margin-top:clamp(30px,4vw,56px)">
+    <div class="count"><output id="c-o" for="c-p c-d">0</output><p class="u" id="c-u">дневных рационов: люди × дни</p><canvas id="c-c" aria-hidden="true"></canvas><p class="k" id="c-k">Введите, сколько человек и&nbsp;на&nbsp;сколько дней.</p></div>
+    <form id="bf" data-demo-form>
+      <div class="num-in"><label class="field"><span>Человек</span><input name="Человек" id="c-p" inputmode="numeric" autocomplete="off"></label><button type="button" data-add="c-p" data-n="10" aria-label="Добавить 10 человек">+10</button></div>
+      <div class="num-in"><label class="field"><span>Дней</span><input name="Дней" id="c-d" inputmode="numeric" autocomplete="off"></label><button type="button" data-add="c-d" data-n="7" aria-label="Добавить неделю">+&nbsp;неделя</button></div>
+      <input type="hidden" name="Дневных рационов" id="c-h">
+      <label class="field full"><span>Где объект</span><select name="Где объект"><option value="">Выберите район</option><option>Пуровский район</option><option>Надымский район</option><option>Тазовский район</option><option>Красноселькупский район</option><option>Новый Уренгой</option><option>Тарко-Сале</option></select></label>
+      <fieldset class="need full"><legend>Что нужно на&nbsp;объекте</legend><div style="display:contents" id="need"></div></fieldset>
+      <label class="field"><span>Компания</span><input name="Компания" autocomplete="organization" required></label>
+      <label class="field"><span>Телефон или почта</span><input name="Телефон или почта" autocomplete="tel" required></label>
+      <label class="field full"><span>Что важно учесть: график смен, диеты, оснащение кухни</span><textarea name="Что важно учесть"></textarea></label>
+      <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+      <button class="btn full" type="submit">Отправить бриф</button>
+      <div class="done" role="status"><h3>Бриф собран</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+    </form>
+  </div>
+</div></section>
+
+<section class="sec base" id="cont"><div class="wrap">
+  <div class="base-g">
+    <figure data-img><img src="img/ph/12.webp" alt="Грузовики на производственной базе компании" width="1920" height="999" loading="lazy"></figure>
+    <div><h2 data-split>Всё едет с&nbsp;нашей базы</h2><p class="lead" style="margin-top:18px">Автотранспортный цех, склады продуктов и&nbsp;промтоваров, овощехранилища. Здесь каждый день собираем заказы партнёров. Сертифицируемся с&nbsp;2013&nbsp;года:</p><p class="cert"><span>ISO&nbsp;9001:2015</span><span>ISO&nbsp;14001:2004</span><span>OHSAS&nbsp;18001:2007</span><span>ХАССП</span></p></div>
+  </div>
+  <div class="cont">
+    <div><h3>Приёмная</h3><a class="num" href="tel:+73499725785">+7 (34997) 2-57-85</a><br><a href="mailto:office@purcompany.ru">office@purcompany.ru</a><br><a href="mailto:office@purcompani.ru">office@purcompani.ru</a></div>
+    <div><h3>Адрес</h3><p>629850, ЯНАО, г.&nbsp;Тарко‑Сале, ул.&nbsp;Победы, д.&nbsp;14А</p><p style="margin-top:12px">ООО «Пуровская компания общественного питания и&nbsp;торговли — Пурнефтегазгеология»</p></div>
+    <div id="jobs"><h3>Работа вахтой</h3><ul><li>Повар 4&nbsp;разряда, повар 2&nbsp;разряда</li><li>Горничная</li><li>Уборщик служебных помещений</li><li>Электромонтёр</li></ul><p style="margin-top:12px">Зарплату и&nbsp;условия подскажут по&nbsp;телефону приёмной.</p></div>
+  </div>
+</div></section>
+</main>
+<footer class="ftr"><div class="wrap">Пуровский, Надымский, Тазовский, Красноселькупский районы, Новый Уренгой и&nbsp;Тарко‑Сале</div></footer>
+<div class="mbar"><a class="btn" href="#brief">Посчитать питание</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+'use strict';
+var $=function(i){return document.getElementById(i)},R=KIT.REDUCED;
+/* ─── направления на столе ─── */
+var D=[
+{t:'Столовая',h:'Корпоративное питание',ph:'09',a:'Салаты в порционных салатниках на раздаче',p:'Столовые на вахтово‑жилых комплексах, в полевых подразделениях и офисах.',l:['широкий ассортимент, есть диетические блюда','выпечка и витаминные напитки своего производства','по санитарно‑эпидемиологическим нормам РФ']},
+{t:'Хлеб',h:'Хлеб и выпечка',ph:'31',a:'Буханка формового хлеба',p:'Печём 12 видов, шесть из них по собственной рецептуре. Везём в магазины, сады, школы и столовые на месторождениях.',l:['декларации соответствия','протоколы Тюменского независимого сертификационно‑испытательного центра']},
+{t:'Колбасы',h:'Мясные и колбасные изделия',ph:'20',a:'Полукопчёная и сырокопчёная колбаса',p:'Собственное мясоперерабатывающее предприятие: деликатесы и колбасы из натурального сырья.',l:['сырьё местных производителей']},
+{t:'Кейтеринг',h:'Кейтеринг',ph:'18',a:'Праздничное мясное блюдо на тарелке с зеленью',p:'Выездное ресторанное обслуживание: банкет, фуршет, праздник на природе или на территории предприятия.',l:['повара и официанты','посуда, скатерти, салфетки','уборка после праздника']},
+{t:'Клининг',h:'Клининг',ph:'01',a:'Уборка пылесосом в холле',p:'Уборка жилых комплексов, административных и производственных зданий.',l:['спортзалы, бассейны, сауны','прилегающие территории']},
+{t:'Осмотры',h:'Осмотры водителей',ph:'03',a:'Кабинет предрейсовых осмотров',p:'Предрейсовые и послерейсовые медицинские осмотры. Кабинет оснащён, лицензия есть.',l:['водители из 30 организаций Тарко‑Сале','график под заказчика']}
+];
+var N=D.length,st=$('stage'),A=0,tgt=0,cur=-1,id=0,W,H,ea,eb,need=$('need');
+D.forEach(function(d,i){
+  var b=document.createElement('button');b.type='button';b.className='plate';b.tabIndex=-1;b.setAttribute('aria-label',d.h);b.innerHTML='<img src="img/ph/'+d.ph+'.webp" alt="'+d.a+'" draggable="false">';st.appendChild(b);d.el=b;
+  b.addEventListener('click',function(){if(!moved)to(i)});
+  var t=document.createElement('button');t.type='button';t.setAttribute('role','tab');t.textContent=d.t;t.onclick=function(){to(i)};$('tabs').appendChild(t);d.tab=t;
+  var l=document.createElement('label');l.innerHTML='<input type="checkbox" name="Нужно" value="'+d.h+'"><span>'+d.t+'</span>';need.appendChild(l);d.ck=l.firstChild;d.ck.addEventListener('change',lbl);
+});
+function size(){W=st.clientWidth;H=st.clientHeight;var k=Math.min(W/700,H/600);ea=285*k;eb=176*k;st.style.setProperty('--p',Math.round((innerWidth<900?320:318)*k)+'px');place()}
+function place(){var tl=-13*Math.PI/180;D.forEach(function(d,i){var f=Math.PI/2+.5+(i-A)*2*Math.PI/N,x=Math.cos(f)*ea,y=Math.sin(f)*eb,dp=(Math.sin(f-.5)+1)/2,s=.46+.62*Math.pow(dp,1.5),X=x*Math.cos(tl)-y*Math.sin(tl),Y=x*Math.sin(tl)+y*Math.cos(tl)-(s-.46)*14;d.el.style.transform='translate('+X.toFixed(1)+'px,'+Y.toFixed(1)+'px) scale('+s.toFixed(3)+')';d.el.style.zIndex=Math.round(dp*100)})}
+function anim(){cancelAnimationFrame(id);if(R){A=tgt;place();return}(function s(){A+=(tgt-A)*.085;if(Math.abs(tgt-A)<.002)A=tgt;place();if(A!==tgt)id=requestAnimationFrame(s)})()}
+function mod(n){return (n%N+N)%N}
+function show(i){if(i===cur)return;cur=i;var d=D[i];$('s-t').textContent=d.h;$('s-p').textContent=d.p;$('s-l').innerHTML=d.l.map(function(x){return '<li>'+x+'</li>'}).join('');D.forEach(function(q,j){q.tab.setAttribute('aria-selected',j===i);q.tab.tabIndex=j===i?0:-1});lbl();if(innerWidth<900){var p=$('tabs');p.scrollTo({left:d.tab.offsetLeft-p.clientWidth/2+d.tab.offsetWidth/2-p.offsetLeft,behavior:R?'auto':'smooth'})}}
+function to(i){var k=mod(i-Math.round(tgt));if(k>N/2)k-=N;tgt=Math.round(tgt)+k;show(mod(tgt));anim()}
+function lbl(){var on=cur>-1&&D[cur].ck.checked;$('s-b').textContent=on?'В брифе. Перейти к расчёту':'Добавить в бриф'}
+$('s-b').onclick=function(){var d=D[cur];if(d.ck.checked){var y=$('brief');KIT.lenis?KIT.lenis.scrollTo(y,{offset:-60}):y.scrollIntoView({behavior:R?'auto':'smooth'})}else{d.ck.checked=true;lbl()}};
+$('t-n').onclick=function(){to(mod(tgt+1))};$('t-p').onclick=function(){to(mod(tgt-1))};
+$('tabs').addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;e.preventDefault();to(mod(tgt+k));D[cur].tab.focus()});
+var moved=false;(function(){var d=0,sx,sa,lx,lt,v;
+  st.addEventListener('pointerdown',function(e){if(e.target.closest('.turn')||e.button)return;d=1;moved=false;sx=lx=e.clientX;sa=A;lt=e.timeStamp;v=0});
+  addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-sx;if(Math.abs(dx)>7&&!moved){moved=true;cancelAnimationFrame(id)}if(!moved)return;A=tgt=sa-dx/(ea*.9);v=(e.clientX-lx)/Math.max(1,e.timeStamp-lt);lx=e.clientX;lt=e.timeStamp;place();show(mod(Math.round(A)))});
+  function up(){if(!d)return;d=0;if(!moved)return;tgt=Math.round(A-v*.9);show(mod(tgt));anim();setTimeout(function(){moved=false},60)}
+  addEventListener('pointerup',up);addEventListener('pointercancel',up)})();
+size();show(0);addEventListener('resize',size);
+/* первый показ: стол делает четверть оборота */
+if(!R){A=-1.6;place();var once=false;KIT.onView(st,function(v){if(v&&!once){once=true;anim()}},{threshold:.35})}
+D[0].ck.checked=true;lbl();
+
+/* значки этапов столовой: план, кастрюля, расстановка, блюдо */
+var IC=['M3 4h32v26H3zM3 16h14M17 4v18M17 26v4M26 30V18h9','M6 14h26v14q0 3-3 3H9q-3 0-3-3zM2 17h4M32 17h4M4 10h30M19 10V6','M3 5h12v10H3zM23 5h12v10H23zM3 21h12v10H3zM23 21h12v10H23zM19 3v28','M2 26h34M5 23a14 13 0 0 1 28 0zM19 10V7'];
+[].forEach.call($('early').children,function(li,i){li.insertAdjacentHTML('afterbegin','<svg viewBox="0 0 38 34" fill="none" stroke="#F68A12" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="'+IC[i]+'"/></svg>')});
+
+/* ─── буханка ─── */
+var BR=['Николаевский‑Новый','Урожайный','Полюшко','Карельский','Бородинский Премиум','8 злаков'],CR=['#A9662A','#B97636','#C28341','#7A4620','#4B2A18','#8D5A2B'],CM=['#F0DAB4','#F3E2C1','#F2DDB8','#C79A66','#8A5D3C','#D9B889'],lf=$('loaf'),so='';
+for(var i=0;i<12;i++){var own=i%2===0,n=i/2,c=own?CR[n]:'#B5763A',m=own?CM[n]:'#F1DDB8',x=i*98,crumb='';
+  for(var k=0;k<26;k++){var px=(k*53+i*31)%92,py=80+(k*71+i*17)%190;crumb+='<ellipse cx="'+(14+px)+'" cy="'+py+'" rx="'+(1.5+k%4)+'" ry="'+(1.2+k%3)+'" fill="'+(own&&n===5&&k%2?'#5B3517':'rgba(120,72,24,.22)')+'"/>'}
+  so+='<g class="slice" data-i="'+i+'" '+(own?'tabindex="0" role="button" aria-label="Хлеб '+BR[n]+'"':'')+' transform="translate('+x+' 0)"><g class="mv" style="transition:transform .55s cubic-bezier(.22,1,.36,1)"><path d="M0 300V100Q-18 70-4 42 20 6 62 6t66 36q14 28-4 58v200q0 12-12 12H12q-12 0-12-12z" fill="'+c+'" stroke="rgba(58,33,16,.4)" stroke-width="1.5"/><path d="M124 100v200q0 10-9 12 6-100 1-212z" fill="rgba(40,20,6,.28)"/><path d="M10 296V104Q-4 72 8 50 26 20 62 20t54 30q12 22-2 54v192q0 6-6 6H16q-6 0-6-6z" fill="'+m+'"/>'+crumb+'</g></g>'}
+lf.innerHTML=so;var sl=[].slice.call(lf.querySelectorAll('.slice'));
+function cut(i){sl.forEach(function(g,j){g.querySelector('.mv').style.transform=j===i?'translateY(-44px) rotate(-3deg)':''});$('l-n').textContent='«'+BR[i/2]+'»';$('l-s').textContent='хлеб по собственной рецептуре'}
+sl.forEach(function(g,j){if(j%2)return;g.addEventListener('click',function(){cut(j)});g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();cut(j)}});if(KIT.FINE)g.addEventListener('mouseenter',function(){cut(j)})});
+cut(0);
+
+/* ─── тарелки ─── */
+var cv=$('c-c'),cx=cv.getContext('2d'),shown=0,tot=0,unit=1,an=0;
+function num(id){return Math.min(99999,parseInt($(id).value.replace(/\D/g,''),10)||0)}
+function fmt(n){return n.toLocaleString('ru-RU')}
+function plates(p){var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;var d=Math.min(2,devicePixelRatio||1);if(cv.width!==Math.round(w*d)){cv.width=Math.round(w*d);cv.height=Math.round(h*d)}cx.setTransform(d,0,0,d,0,0);cx.clearRect(0,0,w,h);
+  var s=innerWidth<900?21:25,c=Math.floor(w/s),r=Math.floor(h/s),cap=c*r,n=tot?Math.min(cap,Math.ceil(tot/unit)):0;
+  for(var i=0;i<cap;i++){var x=(i%c+.5)*s,y=(Math.floor(i/c)+.5)*s,on=i<n*p;cx.beginPath();cx.arc(x,y,s*.4,0,7);if(on){cx.fillStyle='#FFF8EC';cx.fill();cx.beginPath();cx.arc(x,y,s*.24,0,7);cx.strokeStyle='#F68A12';cx.lineWidth=1.6;cx.stroke()}else{cx.strokeStyle='rgba(255,248,236,.2)';cx.lineWidth=1.2;cx.stroke()}}
+  return cap}
+function calc(){var P=num('c-p'),Dn=num('c-d');tot=P*Dn;$('c-h').value=tot||'';unit=1;var cap=plates(0)||1,st=[1,2,5,10,20,50,100,200,500,1000,2000,5000,10000,50000,100000,1e6,1e7,1e8];for(var i=0;i<st.length;i++){unit=st[i];if(tot/unit<=cap)break}
+  $('c-k').textContent=tot?(unit>1?'Одна тарелка на рисунке: '+fmt(unit)+' рационов.':'Одна тарелка на рисунке: один рацион.'):'Введите, сколько человек и на сколько дней.';
+  var f=shown,t0=performance.now(),me=++an;if(R){shown=tot;$('c-o').textContent=fmt(tot);plates(1);return}
+  (function s(n){if(me!==an)return;var q=Math.min(1,Math.max(0,(n-t0)/900)),e=1-Math.pow(1-q,3);shown=Math.round(f+(tot-f)*e);$('c-o').textContent=fmt(shown);$('c-o').style.fontSize=tot>999999?'clamp(40px,5.6vw,92px)':'';plates(e);if(q<1)requestAnimationFrame(s)})(t0)}
+['c-p','c-d'].forEach(function(i){$(i).addEventListener('input',calc)});
+[].forEach.call(document.querySelectorAll('[data-add]'),function(b){b.onclick=function(){var f=$(b.dataset.add);f.value=num(b.dataset.add)+ +b.dataset.n;calc()}});
+var rz;addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(calc,200)});calc();
+
+/* ─── пар над печью ─── */
+(function(){var c=$('steam'),x=c.getContext('2d'),w,h,P=[],sp=document.createElement('canvas');sp.width=sp.height=128;var g=sp.getContext('2d'),gr=g.createRadialGradient(64,64,0,64,64,64);gr.addColorStop(0,'rgba(255,255,255,.55)');gr.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=gr;g.fillRect(0,0,128,128);
+  function size(){var d=Math.min(1.5,devicePixelRatio||1);w=c.clientWidth;h=c.clientHeight;if(!w||!h)return;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0)}
+  size();addEventListener('resize',size);
+  var ov=document.querySelector('.oven');
+  for(var i=0;i<16;i++)P.push({u:Math.random(),l:i/16,s:Math.random()});
+  KIT.raf(c,function(t,dt){if(!w||!h)return;x.clearRect(0,0,w,h);var ox=ov.offsetLeft+ov.offsetParent.offsetLeft*0,oy=ov.offsetTop,ow=ov.offsetWidth,oh=ov.offsetHeight;P.forEach(function(p){p.l+=dt*.00009;if(p.l>1){p.l=0;p.u=Math.random()}var z=(90+170*p.l)*(w<900?.6:1),px=ox+ow*(.14+.72*p.u)+Math.sin(p.l*5+p.s*6)*26,py=oy+oh*.72-p.l*oh*.7;x.globalAlpha=Math.sin(p.l*Math.PI)*.5;x.drawImage(sp,px-z/2,py-z/2,z,z*1.25)})},24)})();
+/*done*/$('bf').addEventListener('submit',function(){var o=this.querySelector('.done');setTimeout(function(){o.scrollIntoView({block:'center',behavior:R?'auto':'smooth'})},30)});
+});
+</script>
+</body>
+</html>
