@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>(function(){var h=document.documentElement;h.classList.add('js');try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;h.classList.add('pre');if(!sessionStorage.getItem('sabPre'))h.classList.add('cov');setTimeout(function(){h.classList.remove('pre','cov')},5000)}catch(e){}})()</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Аэропорты Сабетта и Утренний — ООО «Международный аэропорт Сабетта»</title>
+<meta name="description" content="Концепция сайта ООО «Международный аэропорт Сабетта»: схемы и характеристики аэродромов Сабетта и Утренний, порядок для авиакомпаний и пассажиров, контакты служб.">
+<link rel="icon" href="img/mark.png">
+<link rel="preload" href="../../kit/fonts/roboto-condensed-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../kit/fonts/jetbrains-mono-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fx.css">
+</head>
+<body>
+<a class="skip" href="#plan">К содержанию</a>
+<div class="prog" aria-hidden="true"><i></i></div>
+
+<header class="hdr" data-header>
+  <div class="hdr-in">
+    <a class="logo" href="#top" aria-label="В начало страницы"><img id="logo" src="img/sabetta.png" width="260" height="84" alt="Аэропорт Сабетта"></a>
+    <nav id="nav" data-menu aria-label="Разделы"><i class="runner" aria-hidden="true"></i>
+      <a href="#plan">Схема аэродрома</a>
+      <a href="#route">По шагам</a>
+      <a href="#compare">Два аэродрома</a>
+      <a href="#airlines">Авиакомпаниям</a>
+      <a href="#pax">Пассажирам</a>
+      <a href="#about">О компании</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="tel mono" href="tel:+74952289850">+7 495 228-98-50<small>доб. 13-810</small></a>
+    <button type="button" class="burger" data-burger aria-expanded="false" aria-controls="nav" aria-label="Меню"></button>
+  </div>
+</header>
+
+<main id="top">
+<div class="atlas">
+  <aside class="pick" aria-label="Выбор: кто вы и аэропорт">
+    <div class="pick-in">
+      <h1 class="enter">Два аэродрома в&nbsp;Арктике: <b>Сабетта</b> и&nbsp;<b>Утренний</b></h1>
+      <p class="enter who">ООО «Международный аэропорт Сабетта» — оператор аэропортов на&nbsp;полуостровах Ямал и&nbsp;Гыдан: перевозки вахтового персонала и&nbsp;производственных грузов.</p>
+      <fieldset class="seg enter"><legend>Кто вы</legend>
+        <label><input type="radio" name="role" value="air" checked><span>Авиакомпания</span></label>
+        <label><input type="radio" name="role" value="pax"><span>Пассажир</span></label>
+      </fieldset>
+      <fieldset class="seg seg-ap enter"><legend>Аэропорт</legend>
+        <label><input type="radio" name="ap" value="s" checked><span>Сабетта<i class="mono">SBT · USDA</i></span></label>
+        <label><input type="radio" name="ap" value="u"><span>Утренний<i class="mono">USDM</i></span></label>
+      </fieldset>
+      <div class="acts enter">
+        <a class="btn" href="#route" id="act1" data-magnetic>Ваш рейс по шагам</a>
+        <a class="btn btn--ghost" href="#airlines" id="act2">Документы и тарифы</a>
+      </div>
+      <p class="duty enter" id="duty"></p>
+    </div>
+  </aside>
+
+  <div class="col">
+    <section id="plan" class="plan" aria-labelledby="plan-h">
+      <div class="pin">
+        <div class="plan-top">
+          <h2 id="plan-h">Схема аэродрома <span class="apname">Сабетта</span></h2>
+          <p class="mono note">Условная схема · не для навигации. Расположение и ширина объектов не соответствуют местности; длины двух ВПП — в общем масштабе.</p>
+        </div>
+        <div class="board">
+          <div class="draw">
+            <svg id="svg" viewBox="0 60 1000 560" aria-hidden="true" focusable="false"></svg>
+            <div class="pins" id="pins"></div>
+          </div>
+        </div>
+        <div class="zones" id="zones" aria-live="polite"></div>
+        <div class="chips" id="chips" role="group" aria-label="Части аэродрома"></div>
+      </div>
+    </section>
+
+    <section id="route" class="route sec" aria-labelledby="route-h">
+      <p class="route-why">Аэропорт нужен, чтобы рейс в&nbsp;Арктику прошёл от&nbsp;договора до&nbsp;стоянки, а&nbsp;человек — от&nbsp;согласования визита до&nbsp;борта.</p>
+      <h2 id="route-h" data-split>Что аэропорт делает для вас</h2>
+      <p class="route-sub" id="route-sub"></p>
+      <div class="swap" id="swap"></div>
+      <ol class="steps" id="steps"></ol>
+      <div class="route-grid">
+        <div class="mini"><svg id="mini" viewBox="0 60 1000 560" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"></svg><p class="mono">Условная схема</p></div>
+        <div class="cards" id="cards" aria-live="polite"></div>
+      </div>
+      <div class="route-nav"><button type="button" class="btn btn--ghost" id="prev">Назад</button><span class="mono" id="count"></span><button type="button" class="btn" id="next">Следующий шаг</button></div>
+    </section>
+  </div>
+</div>
+
+<section id="compare" class="compare sec" aria-labelledby="cmp-h">
+  <div class="wrap">
+    <h2 id="cmp-h" data-split>Два аэродрома рядом</h2>
+    <div class="scale">
+      <div class="scale-row"><b>Сабетта<small>полуостров Ямал</small></b><span class="bar-w"><span class="rw" style="--k:1" data-line></span></span><em class="mono">2&nbsp;704 × 46&nbsp;м</em></div>
+      <div class="scale-row"><b>Утренний<small>полуостров Гыдан</small></b><span class="bar-w"><span class="rw" style="--k:.5732" data-line></span></span><em class="mono">1&nbsp;550 × 36&nbsp;м</em></div>
+    </div>
+    <div class="tbl" role="region" aria-label="Сравнение характеристик" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Параметр</th><th scope="col">Сабетта</th><th scope="col">Утренний</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Класс аэропорта</th><td>V класс</td><td>местных воздушных линий I&nbsp;категории</td></tr>
+          <tr><th scope="row">Класс аэродрома</th><td><span data-tip="ICAO — Международная организация гражданской авиации (ИКАО)">Б, I&nbsp;категория ICAO</span></td><td>Г, I&nbsp;категория ICAO</td></tr>
+          <tr><th scope="row">Служебно-пассажирское здание</th><td>5&nbsp;500&nbsp;м²</td><td>6&nbsp;484&nbsp;м²</td></tr>
+          <tr><th scope="row">Пропускная способность</th><td>200 пасс./ч, в&nbsp;том числе международный сектор — 50</td><td>100 пасс./ч</td></tr>
+          <tr><th scope="row"><span data-tip="МКпос — магнитный курс посадки">Курсы посадки (МКпос)</span></th><td>036° и&nbsp;216°</td><td>012° и&nbsp;192°</td></tr>
+          <tr><th scope="row">Вертолётная площадка</th><td>42 × 40&nbsp;м, со светотехническим оборудованием</td><td>на странице характеристик не указана</td></tr>
+          <tr><th scope="row">Регламент работы</th><td colspan="2"><span data-tip="По данным сайта аэропорта местное время UTC+5">04:00–14:00 UTC, местное время UTC+5</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Источник — страницы технических характеристик <a class="link" href="https://sabetta.aero/aviakompaniyam/tekhnicheskie-kharakteristiki/" rel="noopener">Сабетты</a> и&nbsp;<a class="link" href="https://sabetta.aero/utrenny/aviakompaniyam/tekhnicheskie-kharakteristiki/" rel="noopener">Утреннего</a>. Для планирования рейса сверяйтесь с&nbsp;действующими аэронавигационными документами.</p>
+  </div>
+</section>
+
+<section id="airlines" class="airlines sec" data-theme="night" aria-labelledby="air-h">
+  <div class="wrap air-grid">
+    <div>
+      <h2 id="air-h" data-split>Авиакомпаниям: документы без&nbsp;поиска</h2>
+      <p class="lead" data-reveal>Договоры, ставки, сертификаты и&nbsp;расчётная техническая возможность по&nbsp;обоим аэропортам. Ссылки ведут на&nbsp;разделы действующего сайта: там лежат актуальные редакции.</p>
+      <p class="safety" data-reveal>Инспекция по&nbsp;безопасности полётов (Сабетта)<a class="mono" href="tel:+74952289845">+7 495 228-98-45</a><span class="mono">доб. 38-209</span></p>
+    </div>
+    <div class="docs">
+      <div class="doc" data-reveal><h3>Типовой договор на&nbsp;аэропортовое и&nbsp;наземное обслуживание</h3><p><a href="https://sabetta.aero/aviakompaniyam/tipovye-dogovory/" rel="noopener">Сабетта</a><a href="https://sabetta.aero/utrenny/aviakompaniyam/tipovye-dogovory/" rel="noopener">Утренний</a></p></div>
+      <div class="doc" data-reveal><h3>Ставки сборов и&nbsp;тарифы на&nbsp;наземное обслуживание</h3><p><a href="https://sabetta.aero/aviakompaniyam/stavki-sborov-i-tarify/" rel="noopener">Сабетта</a><a href="https://sabetta.aero/utrenny/aviakompaniyam/stavki-sborov-i-tarify/" rel="noopener">Утренний</a></p></div>
+      <div class="doc" data-reveal><h3>Расчётная техническая возможность</h3><p><a href="https://sabetta.aero/aviakompaniyam/tekhnicheskie-kharakteristiki/" rel="noopener">Сабетта</a><a href="https://sabetta.aero/utrenny/aviakompaniyam/tekhnicheskie-kharakteristiki/" rel="noopener">Утренний</a></p></div>
+      <div class="doc" data-reveal><h3>Сертификаты, свидетельства и&nbsp;лицензии</h3><p><a href="https://sabetta.aero/aviakompaniyam/sertifikaty-sootvetstviya/" rel="noopener">Сабетта</a><a href="https://sabetta.aero/utrenny/aviakompaniyam/sertifikaty-sootvetstviya/" rel="noopener">Утренний</a></p></div>
+      <div class="doc" data-reveal><h3>Раскрытие информации и&nbsp;закупки</h3><p><a href="https://sabetta.aero/about/raskrytie-informatsii/" rel="noopener">Раскрытие информации</a><a href="https://sabetta.aero/about/zakupki/" rel="noopener">Закупки</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pax" class="pax sec" aria-labelledby="pax-h">
+  <div class="wrap">
+    <h2 id="pax-h" data-split>Пассажирам: что проверить до&nbsp;выезда</h2>
+    <p class="lead" data-reveal>Оба аэропорта стоят на&nbsp;производственных территориях. Рейсов центрального расписания здесь нет.</p>
+    <div class="rules">
+      <div class="rule rule-big" data-reveal><p class="big mono">100&nbsp;мл</p><h3>Жидкости в&nbsp;ручной клади</h3><p>Ёмкости не&nbsp;более 100&nbsp;мл в&nbsp;одном прозрачном закрывающемся пакете, всего не&nbsp;более литра на&nbsp;пассажира. Ёмкость большего объёма не&nbsp;принимается, даже заполненная частично.</p></div>
+      <div class="rule" data-reveal><h3>Алкоголь ввозить нельзя</h3><p>Запрет действует на&nbsp;Южно-Тамбейском лицензионном участке (Сабетта) и&nbsp;на&nbsp;Утреннем месторождении — в&nbsp;том числе на&nbsp;предметы для изготовления алкоголя.</p></div>
+      <div class="rule" data-reveal><h3>Багаж</h3><p>Норму бесплатного провоза устанавливает перевозчик. Сверхнормативный и&nbsp;негабаритный багаж берут при&nbsp;свободной провозной ёмкости и&nbsp;оплате, если провоз не&nbsp;был согласован и&nbsp;оплачен при бронировании.</p>
+        <details><summary>Что можно взять сверх нормы бесплатно</summary><p>Если вещи при вас и&nbsp;не&nbsp;сданы в&nbsp;багаж: дамская сумочка или портфель, папка для бумаг, зонт, трость, букет, верхняя одежда, чтение в&nbsp;полёт, детское питание, телефон, фотоаппарат, видеокамера, портативный компьютер, костюм в&nbsp;портпледе, детская люлька, костыли, носилки или кресло-коляска.</p></details></div>
+      <div class="rule" data-reveal><h3>Оружие и&nbsp;бесхозные вещи</h3><p>Об&nbsp;оружии и&nbsp;боеприпасах сообщите сотруднику службы авиационной безопасности до&nbsp;досмотра. Чужие вещи не&nbsp;принимайте; бесхозный предмет не&nbsp;трогайте.</p><p><a class="tline mono" href="tel:+74952289850">+7 495 228-98-50</a> <span class="mono">доб. 38-232</span></p></div>
+      <div class="rule" data-reveal><h3>Табло и&nbsp;расписание</h3><p>Макет не&nbsp;показывает рейсы и&nbsp;погоду: эти данные быстро устаревают. Смотрите на&nbsp;сайте аэропорта.</p><p class="two"><a class="link" href="https://sabetta.aero/sabetta/" rel="noopener">Табло Сабетты</a><a class="link" href="https://sabetta.aero/utrenny/" rel="noopener">Табло Утреннего</a></p></div>
+    </div>
+    <p class="src">Краткое изложение. Полные тексты: <a class="link" href="https://sabetta.aero/passazhiram/pravila-perevozki-i-oformleniya-bagazha/" rel="noopener">багаж</a>, <a class="link" href="https://sabetta.aero/passazhiram/predpoletnyy-kontrol/" rel="noopener">предполётный контроль</a>, <a class="link" href="https://sabetta.aero/passazhiram/malomobilnym-passazhiram/" rel="noopener">маломобильным пассажирам</a>.</p>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="marq-in"><span>Сабетта · SBT · USDA — Утренний · USDM — I категория ICAO — 04:00–14:00 UTC — </span><span>Сабетта · SBT · USDA — Утренний · USDM — I категория ICAO — 04:00–14:00 UTC — </span></div></div>
+
+<section id="about" class="about sec" aria-labelledby="ab-h">
+  <div class="wrap">
+    <h2 id="ab-h" data-split>О компании</h2>
+    <p class="manifest" data-reveal>Аэропорт Сабетта — аэропорт федерального значения на&nbsp;полуострове Ямал, важная часть транспортной инфраструктуры проекта «Ямал СПГ». Утренний на&nbsp;Гыдане предназначен для вахтовых перевозок.</p>
+    <ul class="stats" data-reveal>
+      <li><b class="mono" data-count>2 704</b><span>метра — ВПП Сабетты</span></li>
+      <li><b class="mono" data-count>1 550</b><span>метров — ВПП Утреннего</span></li>
+      <li><b class="mono" data-count>200</b><span>пассажиров в час — Сабетта</span></li>
+      <li><b class="mono" data-count>100</b><span>пассажиров в час — Утренний</span></li>
+    </ul>
+    <ol class="years">
+      <li data-reveal><span class="mono">22 февраля 2013</span><p>Зарегистрировано ООО «Международный аэропорт Сабетта»</p></li>
+      <li data-reveal><span class="mono">2 февраля 2015</span><p>Аэропорт Сабетта принял первый рейс</p></li>
+      <li data-reveal><span class="mono">4 марта 2016</span><p>Первый международный рейс в&nbsp;Сабетту</p></li>
+    </ol>
+    <div class="ab-foot">
+      <p data-reveal><small>Генеральный директор</small>Шварц Леонид Семёнович</p>
+      <p data-reveal><small>Сертификация</small>Аэропорт Сабетта сертифицирован по&nbsp;всем основным видам аэропортовой деятельности</p>
+      <p data-reveal><small>Вакансии</small>Резюме принимают на&nbsp;<a class="link" href="mailto:sabetta.aero@yamalspg.ru">sabetta.aero@yamalspg.ru</a>. <a class="link" href="https://sabetta.aero/about/vakansii/" rel="noopener">Раздел вакансий</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="contacts" class="contacts sec" aria-labelledby="ct-h">
+  <div class="wrap ct-grid">
+    <div>
+      <h2 id="ct-h" data-split>Контакты</h2>
+      <p class="main-tel" data-reveal><a class="mono" href="tel:+74952289850">+7 495 228-98-50</a><span class="mono">доб. 13-810, 13-826</span><a class="link" href="mailto:sabetta.aero@yamalspg.ru">sabetta.aero@yamalspg.ru</a></p>
+      <dl class="addr" data-reveal>
+        <dt>Филиал в Москве</dt><dd>119415, г.&nbsp;Москва, ул.&nbsp;Удальцова, д.&nbsp;2</dd>
+        <dt>Почтовый адрес</dt><dd>117420, г.&nbsp;Москва, а/я&nbsp;18</dd>
+        <dt>Юридический адрес</dt><dd>629007, ЯНАО, г.&nbsp;Салехард, ул.&nbsp;Республики, д.&nbsp;9</dd>
+        <dt>Горячая линия безопасности (мошенничество и коррупция)</dt><dd><a class="tline mono" href="tel:+74999411429">+7 499 941-14-29</a><a class="link" href="mailto:mashotline@yamalspg.ru">mashotline@yamalspg.ru</a></dd>
+      </dl>
+      <details class="gov" data-reveal><summary>Контрольные службы в аэропорту Сабетта</summary>
+        <ul>
+          <li><b>Пограничный контроль</b><a class="tline mono" href="tel:+78152487620">+7 8152 487-620</a><span class="mono">487-540, 487-580</span><a class="link" href="mailto:cc@pufsbm.ru">cc@pufsbm.ru</a></li>
+          <li><b>Таможенный контроль</b><a class="tline mono" href="tel:+73492234062">+7 349-22 3-40-62</a><a class="link" href="mailto:Ymt-postsal@utu.customs.ru">Ymt-postsal@utu.customs.ru</a></li>
+          <li><b>Санитарно-карантинный контроль</b><a class="tline mono" href="tel:+73492241312">+7 349-22 4-13-12</a><a class="link" href="mailto:rpn-yanao@89.rospotrebnadzor.ru">rpn-yanao@89.rospotrebnadzor.ru</a></li>
+          <li><b>Ветеринарный и&nbsp;фитосанитарный контроль</b><a class="tline mono" href="tel:+73492240058">+7 349-22 4-00-58</a><a class="link" href="mailto:rosselhoz-yamal@yandex.ru">rosselhoz-yamal@yandex.ru</a></li>
+          <li><b>Линейный отдел МВД на&nbsp;транспорте</b><a class="tline mono" href="tel:+74952289850">+7 495 228-98-50</a><span class="mono">доб. 38-295</span></li>
+        </ul>
+      </details>
+    </div>
+    <form class="form" data-demo-form data-reveal>
+      <h3>Обращение в аэропорт</h3>
+      <label class="field"><span>Кто вы</span><select name="Кто вы" id="f-role"><option>Авиакомпания</option><option>Пассажир</option><option>Подрядная организация</option></select></label>
+      <label class="field"><span>Аэропорт</span><select name="Аэропорт" id="f-ap"><option>Сабетта</option><option>Утренний</option></select></label>
+      <label class="field"><span>Имя и организация</span><input name="Имя" autocomplete="name" required></label>
+      <label class="field"><span>Телефон или почта</span><input name="Связь" required></label>
+      <label class="field full"><span>Вопрос</span><textarea name="Вопрос" required></textarea></label>
+      <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных (в макете ничего не отправляется)</span></label>
+      <button class="btn full" type="submit" data-magnetic>Показать письмо</button>
+      <div class="done full"><h3>Это демонстрация: письмо не отправлено</h3><dl></dl></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><p>© 2026, ООО «Международный аэропорт Сабетта»</p><p><a class="link" href="https://sabetta.aero/" rel="noopener">Действующий сайт sabetta.aero</a></p></div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+74952289850">Позвонить</a><a class="btn" href="#route">По шагам</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/vendor/gsap.min.js" defer></script>
+<script src="../../kit/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../../kit/vendor/SplitText.min.js" defer></script>
+<script src="../../kit/vendor/DrawSVGPlugin.min.js" defer></script>
+<script src="../../kit/vendor/MotionPathPlugin.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script src="app.js" defer></script>
+<script src="fx.js" defer></script>
+</body>
+</html>

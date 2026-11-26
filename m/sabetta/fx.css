@@ -1,0 +1,94 @@
+/* премиум-слой: прелоадер, курсор-прицел, кнопки, подсказки, снег, шапка */
+html.pre .hdr,html.pre .pick-in>*,html.pre .plan-top,html.pre .board,html.pre .zones,html.pre .chips{visibility:hidden}
+html.pre.cov::before{content:"";position:fixed;inset:0;z-index:1000;background:var(--paper)}
+.curtain{position:fixed;inset:0;z-index:1001;background:var(--paper);display:grid;place-items:center;pointer-events:none}
+.curtain>*{grid-area:1/1}
+.curtain img{width:min(250px,56vw);height:auto}
+.curtain svg{width:min(190px,48vw);height:auto;overflow:visible;fill:none;stroke:var(--crim);stroke-width:2.2}
+.sl{padding-bottom:.08em}
+.prog{position:fixed;left:0;top:0;width:100%;height:3px;z-index:120;pointer-events:none}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--crim));transform:scaleX(0);transform-origin:0 50%}
+.snow{position:fixed;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.pick{z-index:3}
+
+/* шапка: прячется вниз, остаётся на схеме, темнеет над синей полосой */
+[data-header].keep{transform:none!important}
+.hdr{transition:transform .5s var(--e-smooth),background-color .35s,color .35s,border-color .35s}
+.hdr.on-dark{background:var(--deep);color:#fff;border-color:rgba(255,255,255,.18)}
+.hdr.on-dark .logo{background:#fff;padding:3px 10px;margin-left:-10px}
+.hdr.on-dark .tel{color:#fff}.hdr.on-dark .tel small{color:#C6D9E8}
+@media (min-width:1241px){.hdr nav{position:relative}}
+.runner{position:absolute;left:0;bottom:6px;height:3px;width:0;background:var(--crim);pointer-events:none;opacity:0}
+.hdr.on-dark .runner{background:#FF7FA6}
+.hdr nav a[aria-current]{background:none}
+.hdr nav a:hover{background-size:100% 2px}
+
+/* кнопки: заливка из точки входа, текст перекатывается, стрелка */
+.btn{--mx:50%;--my:50%}
+.btn::before{transform:none;clip-path:circle(0 at var(--mx) var(--my));transition:clip-path .6s var(--e-smooth)}
+.btn:hover::before,.btn:focus-visible::before{transform:none;clip-path:circle(160% at var(--mx) var(--my))}
+.rt{display:inline-block;overflow:hidden;height:1.3em;line-height:1.3em;vertical-align:middle;text-align:center}
+.rt>span{display:block;transition:transform .5s var(--e-smooth)}
+.btn:hover .rt>span,.btn:focus-visible .rt>span{transform:translateY(-100%)}
+.btn[data-arrow]::after{content:"→";display:inline-block;transition:transform .45s var(--e-smooth)}
+.btn[data-arrow]:hover::after{transform:translateX(6px)}
+.btn.busy{pointer-events:none}
+.btn.busy::after{content:"";width:16px;height:16px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .7s linear infinite;transform:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.doc a{position:relative;overflow:hidden;isolation:isolate;--mx:50%;--my:50%}
+.doc a::before{content:"";position:absolute;inset:0;z-index:-1;background:#fff;clip-path:circle(0 at var(--mx) var(--my));transition:clip-path .55s var(--e-smooth)}
+.doc a:hover::before{clip-path:circle(160% at var(--mx) var(--my))}
+.doc a:hover{background:transparent}
+@keyframes ul{0%{background-size:100% 1px;background-position:100% 100%}45%{background-size:0 1px;background-position:100% 100%}46%{background-size:0 1px;background-position:0 100%}100%{background-size:100% 1px;background-position:0 100%}}
+.link:hover{animation:ul .75s var(--e-smooth);background-size:100% 1px;background-position:0 100%}
+
+/* свет за курсором на карточках, подсказки */
+.spot{--x:50%;--y:50%;position:relative}
+.spot::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(240px circle at var(--x) var(--y),rgba(0,102,153,.11),transparent 70%);opacity:0;transition:opacity .35s}
+.spot:hover::after{opacity:1}
+.airlines .spot::after{background:radial-gradient(260px circle at var(--x) var(--y),rgba(255,255,255,.12),transparent 70%)}
+.years li.spot::after,.stats li.spot::after{inset:-6px -10px}
+[data-tip]{text-decoration:underline dotted;text-underline-offset:4px;text-decoration-color:var(--blue)}
+.tip{position:fixed;z-index:1500;max-width:min(280px,calc(100vw - 16px));padding:8px 12px;background:var(--ink);color:#fff;font-size:15px;line-height:1.3;pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity .2s,transform .3s var(--e-smooth)}
+.tip.on{opacity:1;transform:none}
+
+/* курсор-прицел: только мышь */
+.cur{position:fixed;left:0;top:0;z-index:2000;pointer-events:none;opacity:0;transition:opacity .25s}
+.cur.on{opacity:1}.cur.is-hide{opacity:0!important}
+html.has-cur,html.has-cur *{cursor:none!important}
+html.has-cur :is(input:not([type=radio],[type=checkbox]),textarea,select){cursor:text!important}
+.cur-ring{position:absolute;left:0;top:0;width:44px;height:44px;margin:-22px 0 0 -22px}
+.cur-in{width:100%;height:100%;transition:transform .45s var(--e-smooth)}
+.cur-in svg{width:100%;height:100%;overflow:visible}
+.cur-in polygon{fill:rgba(0,102,153,0);stroke:var(--blue);stroke-width:1.6;transition:fill .3s,stroke .3s}
+.cur-in .tk{stroke:var(--crim);stroke-width:2;fill:none;opacity:0;transition:opacity .3s}
+.cur-dot{position:absolute;left:0;top:0;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:var(--crim)}
+.cur-lab{position:absolute;left:0;top:0;padding:3px 8px;background:var(--ink);color:#fff;font:600 12px/1.3 var(--f-mono);white-space:nowrap;opacity:0;transition:opacity .2s}
+.cur.has-lab .cur-lab{opacity:1}
+.cur.is-link .cur-in{transform:scale(1.55)}.cur.is-link polygon{fill:rgba(204,51,102,.12);stroke:var(--crim)}
+.cur.is-zone .cur-in{transform:rotate(30deg) scale(1.3)}.cur.is-zone polygon{stroke:var(--crim)}.cur.is-zone .tk{opacity:1}
+.cur.down .cur-in{transform:scale(.8)}
+
+/* схема: подсветка под курсором, борт и метка рейса */
+.z.hl .ln:not(.strip,.axis,.mark,.dim){stroke:var(--crim);stroke-width:2.6}
+.z.hl .body{fill:rgba(204,51,102,.14)}
+.z.hl .strip{stroke:var(--crim);stroke-width:4}
+.draw .z{cursor:pointer}
+.mk-h{fill:rgba(204,51,102,.14);stroke:var(--crim);stroke-width:3}
+.mk-p{fill:var(--crim-d);stroke:#fff;stroke-width:1.5;stroke-linejoin:round}
+.plan.is-still #plane{display:none}
+@media (prefers-reduced-motion:no-preference){.draw .grid{animation:drift 20s ease-in-out infinite alternate}}
+@keyframes drift{to{transform:translate(14px,-8px)}}
+
+/* бегущая строка, цифры, наезд листов */
+.marq{overflow:hidden;background:var(--ink);color:#E8F0F6;padding:18px 0;white-space:nowrap;position:relative;z-index:2}
+.marq-in{display:inline-flex;width:max-content}
+.marq span{font:700 clamp(30px,4.6vw,64px)/1.05 var(--f-display);padding-right:.35em;letter-spacing:-.01em}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 32px;margin-top:52px}
+.stats li{padding-top:14px;border-top:2px solid var(--blue)}
+.stats li:nth-child(even){border-top-color:var(--crim)}
+.stats b{display:block;font-size:clamp(42px,5.6vw,88px);line-height:1;color:var(--deep);letter-spacing:-.06em;font-weight:700}
+.stats span{display:block;margin-top:8px;color:var(--muted);font-size:17px}
+.compare,.airlines,.pax,.about,.contacts{box-shadow:0 -22px 44px -26px rgba(8,58,92,.28)}
+@media (max-width:1240px){.runner{display:none}.hdr nav a[aria-current]{color:var(--crim-d)}}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}

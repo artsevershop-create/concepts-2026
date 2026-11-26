@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<script>(function(){var c=document.documentElement.classList,s=0;if(!matchMedia('(prefers-reduced-motion: reduce)').matches){try{s=sessionStorage.getItem('yl-pre');sessionStorage.setItem('yl-pre','1')}catch(e){}c.add('fx');if(!s)c.add('pre-on')}setTimeout(function(){c.remove('fx','pre-on')},4500)})()</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ЯмалЛогистик — сборные грузы тёплыми вагонами, Москва — Лабытнанги — Салехард</title>
+<meta name="description" content="Концепция сайта ООО «ЯмалЛогистик»: перевозка сборного груза почтово-багажными тёплыми вагонами, расчёт по прайсу с 01.10.2026, путь груза по станциям.">
+<meta property="og:title" content="ЯмалЛогистик — сборные грузы на Ямал тёплыми вагонами">
+<meta property="og:image" content="img/logo.webp">
+<link rel="icon" href="img/logo.webp">
+<link rel="preload" href="../../kit/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../kit/fonts/jetbrains-mono-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="pre" aria-hidden="true"><img src="img/logo.webp" alt="" width="96" height="80"><i></i></div>
+<div class="prog" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a class="logo" href="#main" aria-label="ЯмалЛогистик, на главную"><img src="img/logo.webp" alt="ЯмалЛогистик" width="189" height="158"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#raschet">Расчёт</a><a href="#put">Путь груза</a><a href="#tarify">Тарифы</a><a href="#uslugi">Услуги</a><a href="#novosti">Объявления</a><a href="#zayavka">Заявка</a><a href="#kontakty">Контакты</a></nav>
+  <a class="tel" href="tel:+79032188182"><small>Москва, погрузка</small><span class="mono">8 (903) 218-81-82</span></a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+
+<section class="hero" id="raschet" aria-labelledby="hero-h">
+  <div class="hero-lines" aria-hidden="true"></div>
+  <div class="wrap hero-g">
+    <div class="hero-t">
+      <h1 id="hero-h"><span class="ln"><span>Сборный груз</span></span> <span class="ln"><span>на&nbsp;Ямал</span></span> <span class="ln"><span><em>в&nbsp;тёплом вагоне</em></span></span></h1>
+      <p class="lead">Почтово-багажными вагонами из&nbsp;Москвы в&nbsp;Лабытнанги и&nbsp;обратно, есть доставка в&nbsp;Салехард. Из&nbsp;Москвы вагоны выходят 3–4&nbsp;раза в&nbsp;неделю (через день), в&nbsp;пути 2&nbsp;суток.</p>
+      <dl class="phones">
+        <div><dt>Москва, погрузка</dt><dd><a class="mono" href="tel:+79032188182">8&nbsp;(903) 218-81-82</a></dd></div>
+        <div><dt>Лабытнанги</dt><dd><a class="mono" href="tel:+79222887171">8&nbsp;(922) 288-71-71</a><a class="mono" href="tel:+73499259337">8&nbsp;(34992) 5-93-37</a></dd></div>
+      </dl>
+      <p class="hours">Оба терминала: будни 10:00–18:00, выходные 10:00–16:00</p>
+    </div>
+
+    <div class="bill-w"><form class="bill" id="bill" aria-labelledby="bill-h" onsubmit="return false">
+      <div class="bill-top">
+        <h2 id="bill-h">Расчёт перевозки</h2>
+        <p class="stamp stamp--hero">тариф с&nbsp;01.10.2026</p>
+      </div>
+      <fieldset class="f-route"><legend>Маршрут</legend>
+        <div class="seg">
+          <label><input type="radio" name="route" value="ml" checked><span>Москва → Лабытнанги</span></label>
+          <label><input type="radio" name="route" value="ms"><span>Москва → Салехард</span></label>
+          <label><input type="radio" name="route" value="lm"><span>Лабытнанги → Москва</span></label>
+          <label><input type="radio" name="route" value="sm"><span>Салехард → Москва</span></label>
+        </div>
+      </fieldset>
+      <div class="f-num">
+        <label>Вес всего груза, кг<input class="mono" name="kg" inputmode="decimal" value="100" autocomplete="off"></label>
+        <label>Объём всего груза, м³<input class="mono" name="m3" inputmode="decimal" value="0,5" autocomplete="off"></label>
+      </div>
+      <div class="f-flags">
+        <fieldset><legend>Особый груз, +20&nbsp;%</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="warm"><span>Тёплый</span></label>
+            <label><input type="checkbox" name="fragile"><span>Хрупкий</span></label>
+            <label title="Место от 100 кг или сумма трёх сторон от 3 м"><input type="checkbox" name="oversize"><span>Негабарит</span></label>
+          </div>
+        </fieldset>
+        <fieldset><legend>Автоэкспедирование</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="pickup"><span id="l-pickup">Забрать с&nbsp;адреса</span></label>
+            <label><input type="checkbox" name="delivery"><span id="l-delivery">Довезти до&nbsp;адреса</span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="tear">
+        <div class="sum" aria-live="polite" aria-atomic="true">
+          <p class="sum-k">Ориентир, с&nbsp;НДС</p>
+          <p class="sum-v mono"><span id="sum">5&nbsp;500&nbsp;₽</span></p>
+          <p class="sum-d" id="days">Срок по&nbsp;прайсу: 3–8&nbsp;суток</p>
+        </div>
+        <ul class="lines mono" id="lines"></ul>
+        <p class="note" id="warn"></p>
+        <div class="acts">
+          <a class="btn" href="#zayavka" data-magnetic>Оформить заявку</a>
+          <a class="btn btn--ghost" href="#put">Путь этого груза</a>
+        </div>
+      </div>
+      <noscript><p>Расчёт работает с&nbsp;JavaScript. Стоимость подскажут по&nbsp;телефонам терминалов.</p></noscript>
+    </form></div>
+  </div>
+</section>
+
+<div class="ticker" role="region" aria-label="Тариф и переправа"><div class="ticker-track"><p class="tk"><span>Тариф действует с&nbsp;01.10.2026</span><span>Вагон из&nbsp;Москвы через день, в&nbsp;пути 2&nbsp;суток</span><span>24.10.2026: паромная переправа скоро закроется, грузы на&nbsp;Салехард и&nbsp;Аксарку хранятся бесплатно в&nbsp;Лабытнанги</span><span>С&nbsp;1&nbsp;октября принимаются тёплые грузы</span></p></div></div>
+
+<section class="way sec" id="put" aria-labelledby="way-h">
+  <div class="wrap">
+    <div class="way-head">
+      <h2 id="way-h" data-split>Что происходит с&nbsp;вашим грузом</h2>
+      <p>Выберите, куда и&nbsp;что везёте. На&nbsp;каждой станции видно, что делает компания и&nbsp;что нужно от&nbsp;вас.</p>
+    </div>
+    <form class="way-ctl" id="wayctl" onsubmit="return false">
+      <fieldset><legend>Направление</legend>
+        <div class="chips">
+          <label><input type="radio" name="dir" value="ml"><span>в&nbsp;Лабытнанги</span></label>
+          <label><input type="radio" name="dir" value="ms" checked><span>в&nbsp;Салехард</span></label>
+          <label><input type="radio" name="dir" value="ma"><span>в&nbsp;Аксарку</span></label>
+          <label><input type="radio" name="dir" value="lm"><span>из&nbsp;Лабытнанги в&nbsp;Москву</span></label>
+          <label><input type="radio" name="dir" value="sm"><span>из&nbsp;Салехарда в&nbsp;Москву</span></label>
+        </div>
+      </fieldset>
+      <fieldset><legend>Груз</legend>
+        <div class="chips">
+          <label><input type="checkbox" name="warm"><span>Тёплый</span></label>
+          <label><input type="checkbox" name="fragile"><span>Хрупкий</span></label>
+          <label><input type="checkbox" name="oversize"><span>Негабарит</span></label>
+        </div>
+      </fieldset>
+    </form>
+    <div class="way-g">
+      <aside class="way-side" aria-label="Станции маршрута">
+        <p class="side-k">Накладная в&nbsp;пути</p>
+        <p class="side-r" id="side-r"></p>
+        <p class="side-s mono" id="side-s"></p>
+        <ol class="side-nav" id="side-nav"></ol>
+        <div class="acts"><a class="btn" href="#zayavka" data-magnetic>Оформить заявку</a><a class="btn btn--ghost" href="#raschet">Изменить расчёт</a></div>
+      </aside>
+      <div class="track">
+        <div class="rails" id="rails" aria-hidden="true"></div>
+        <div class="cargo-tag mono" aria-hidden="true"><b>груз</b> <span id="cargo-t"></span></div>
+        <ol class="stations" id="stations"></ol>
+      </div>
+    </div>
+    <noscript><p>Приём в&nbsp;Москве → тёплый вагон → Лабытнанги → переправа через Обь → Салехард. Подробности по&nbsp;телефонам терминалов.</p></noscript>
+  </div>
+</section>
+
+<section class="rates sec" id="tarify" aria-labelledby="rates-h">
+  <p class="ghost" aria-hidden="true">01.10.2026</p>
+  <div class="wrap">
+    <div class="rates-head">
+      <h2 id="rates-h" data-split>Прайс на&nbsp;одном листе</h2>
+      <p class="stamp" data-reveal>цены действительны с&nbsp;01.10.2026</p>
+    </div>
+    <p class="sub">Рубли, с&nbsp;НДС. Коэффициент объёма и&nbsp;веса&nbsp;— 200&nbsp;кг на&nbsp;1&nbsp;м³: считают по&nbsp;объёму или по&nbsp;весу, что больше, но&nbsp;не&nbsp;меньше минимальной стоимости.</p>
+    <ul class="figs">
+      <li><b class="mono" data-n="2">2</b><span>суток в&nbsp;пути по&nbsp;прайсу</span></li>
+      <li><b class="mono" data-n="4">4</b><span>направления в&nbsp;прайсе</span></li>
+      <li><b class="mono" data-n="8">8</b><span>ступеней веса для автоэкспедирования</span></li>
+      <li><b class="mono" data-n="200">200</b><span>кг на&nbsp;1&nbsp;м³: коэффициент объёма и&nbsp;веса</span></li>
+    </ul>
+    <div class="tbl" data-reveal>
+      <table class="t-main">
+        <caption class="sr">Тарифы по направлениям</caption>
+        <thead><tr><th scope="col">Направление</th><th scope="col">Срок, суток</th><th scope="col">Минимум, ₽</th><th scope="col">1&nbsp;м³, ₽</th><th scope="col">1&nbsp;кг, ₽</th></tr></thead>
+        <tbody id="t-routes"></tbody>
+      </table>
+    </div>
+    <h3 data-reveal>Автоэкспедирование, ₽</h3>
+    <div class="tbl" data-reveal>
+      <table class="t-exp">
+        <caption class="sr">Автоэкспедирование по ступеням веса и объёма</caption>
+        <thead><tr><th scope="col">Вес</th><th scope="col">Объём, м³</th><th scope="col">Москва</th><th scope="col">Лабытнанги</th></tr></thead>
+        <tbody id="t-exp"></tbody>
+      </table>
+    </div>
+    <p class="sub">За&nbsp;пределами МКАД и&nbsp;за&nbsp;пределами Лабытнанги&nbsp;— плюс 50&nbsp;₽/км в&nbsp;обе стороны. Другие населённые пункты ЯНАО&nbsp;— по&nbsp;согласованию.</p>
+    <div class="extra">
+      <div data-reveal>
+        <h3>Дополнительные услуги</h3>
+        <dl class="kv">
+          <div><dt>Негабарит (место от&nbsp;100&nbsp;кг или сумма сторон от&nbsp;3&nbsp;м)</dt><dd class="mono">+20&nbsp;%</dd></div>
+          <div><dt>Доставка «тёплого» груза</dt><dd class="mono">+20&nbsp;%</dd></div>
+          <div><dt>Доставка хрупкого груза</dt><dd class="mono">+20&nbsp;%</dd></div>
+          <div><dt>Погрузо-разгрузочные работы (место до&nbsp;20&nbsp;кг, без подъёма на&nbsp;этажи)</dt><dd class="mono">5&nbsp;₽/кг&nbsp;— 500&nbsp;₽/м³</dd></div>
+          <div><dt>Хранение на&nbsp;складе свыше 3&nbsp;дней в&nbsp;пункте назначения</dt><dd class="mono">5&nbsp;₽/кг&nbsp;— 500&nbsp;₽/м³</dd></div>
+        </dl>
+      </div>
+      <div data-reveal>
+        <h3>Организация переправы</h3>
+        <div class="tbl"><table class="t-cross">
+          <caption class="sr">Строка прайса об организации переправы, рубли</caption>
+          <thead><tr><th scope="col">Переправа</th><th scope="col">Минимум, ₽</th><th scope="col">м³, ₽</th><th scope="col">кг, ₽</th></tr></thead>
+          <tbody><tr><th scope="row">Ледовая</th><td>1&nbsp;500</td><td>4&nbsp;500</td><td>30</td></tr><tr><th scope="row">Паромная</th><td>500</td><td>50</td><td>0,5</td></tr></tbody>
+        </table></div>
+        <p class="note">В&nbsp;ориентир эти строки не&nbsp;включены: в&nbsp;прайсе не&nbsp;сказано, в&nbsp;каких случаях и&nbsp;как они складываются с&nbsp;тарифом. Уточните в&nbsp;терминале.</p>
+        <p><a class="link src" href="https://yamallogistic.ru/tarify" target="_blank" rel="noopener">Тарифы на&nbsp;действующем сайте</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="serv sec" id="uslugi" aria-labelledby="serv-h">
+  <div class="wrap serv-g">
+    <div class="serv-t">
+      <h2 id="serv-h" data-split>Не&nbsp;только вагон</h2>
+      <p>«ЯмалЛогистик» организует перевозки сборного груза почтово-багажными тёплыми вагонами и&nbsp;оказывает сопутствующие услуги.</p>
+    </div>
+    <ul class="pack">
+      <li data-reveal><b>Приёмка на&nbsp;склад</b><span>Разгрузка и&nbsp;погрузка.</span></li>
+      <li data-reveal><b>Ответственное хранение</b><span>Складское хранение груза.</span></li>
+      <li data-reveal><b>Автоэкспедирование</b><span>От&nbsp;двери отправителя и&nbsp;до&nbsp;двери получателя.</span></li>
+      <li data-reveal><b>Погрузо-разгрузочные работы</b><span>Цена&nbsp;— отдельной строкой прайса.</span></li>
+      <li data-reveal><b>Особые грузы</b><span>Хрупкие, температурные и&nbsp;негабаритные.</span></li>
+      <li data-reveal><b>Переправа через Обь</b><span>Организация доставки через реку в&nbsp;распутицу и&nbsp;паромом.</span></li>
+      <li data-reveal><b>Перевозка целым вагоном</b><span>Условия уточняйте в&nbsp;терминале.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="news sec" id="novosti" aria-labelledby="news-h">
+  <div class="wrap">
+    <h2 id="news-h" data-split>Объявления о&nbsp;переправе и&nbsp;тарифе</h2>
+    <ol class="board">
+      <li class="board-main" data-reveal><time class="mono" datetime="2026-10-24">24.10.2026</time><p>Скоро закроется паромная переправа Лабытнанги&nbsp;— Салехард. На&nbsp;период ледостава грузы на&nbsp;Салехард и&nbsp;Аксарку консолидируются на&nbsp;бесплатное хранение на&nbsp;складе в&nbsp;Лабытнанги до&nbsp;открытия ледовой переправы.</p><p class="note">Объявления об&nbsp;открытии ледовой переправы на&nbsp;главной странице их&nbsp;сайта не&nbsp;было (сверено 26.11.2026). Текущее состояние уточните по&nbsp;телефону <a class="mono" href="tel:+79222887171">8&nbsp;(922) 288-71-71</a>.</p></li>
+      <li data-reveal><time class="mono" datetime="2026-09-28">28.09.2026</time><p>С&nbsp;1&nbsp;октября принимаются грузы, требующие поддержания плюсовой температуры.</p></li>
+      <li data-reveal><time class="mono" datetime="2026-09-15">15.09.2026</time><p>Тариф меняется с&nbsp;01.10.2026. Причина по&nbsp;объявлению: распоряжение правительства об&nbsp;индексации тарифа на&nbsp;железнодорожные перевозки и&nbsp;услуги инфраструктуры.</p></li>
+      <li data-reveal><time class="mono" datetime="2026-05-15">15.05.2026</time><p>Летом, в&nbsp;условиях паромной переправы, грузы на&nbsp;Салехард и&nbsp;Аксарку принимаются с&nbsp;наценкой 500&nbsp;₽ на&nbsp;1&nbsp;000&nbsp;кг на&nbsp;10&nbsp;м³ в&nbsp;адрес к&nbsp;базовому тарифу.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="apply sec" id="zayavka" aria-labelledby="apply-h">
+  <div class="wrap apply-g">
+    <div class="apply-t">
+      <h2 id="apply-h" data-split>Заявка на&nbsp;перевозку</h2>
+      <p>Расчёт из&nbsp;накладной переносится в&nbsp;заявку сам.</p>
+      <div class="carbon"><p class="side-k">Копия расчёта</p><p id="carbon" class="mono"></p></div>
+    </div>
+    <form class="sheet" data-demo-form>
+      <input type="hidden" name="Расчёт" id="f-calc">
+      <div class="two">
+        <label>Наименование груза<input name="Груз" required></label>
+        <label>Упаковка и&nbsp;количество мест<input name="Упаковка и места"></label>
+        <label>Максимальная длина места<input name="Максимальная длина"></label>
+        <label>Дата загрузки<input type="date" name="Дата загрузки"></label>
+        <label>Адрес загрузки<input name="Адрес загрузки"></label>
+        <label>Получатель и&nbsp;адрес доставки<input name="Получатель"></label>
+        <label>Ваше имя или организация<input name="Отправитель" required autocomplete="name"></label>
+        <label>Контактный телефон<input type="tel" name="Телефон" required autocomplete="tel"></label>
+      </div>
+      <fieldset><legend>Кто платит за&nbsp;перевозку</legend><div class="chips">
+        <label><input type="radio" name="Плательщик" value="отправитель" checked><span>Отправитель</span></label>
+        <label><input type="radio" name="Плательщик" value="получатель"><span>Получатель</span></label>
+        <label><input type="radio" name="Плательщик" value="третье лицо"><span>Третье лицо</span></label>
+      </div></fieldset>
+      <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+      <button class="btn" type="submit" data-magnetic>Отправить заявку</button>
+      <div class="done" role="status"><h3>Так заявка придёт в&nbsp;терминал</h3><p>Это концепция: письмо никуда не&nbsp;отправлено.</p><dl></dl></div>
+    </form>
+  </div>
+</section>
+
+<section class="contacts sec" id="kontakty" data-theme="night" aria-labelledby="c-h">
+  <canvas class="snow" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h2 id="c-h" data-split>Два терминала на&nbsp;концах линии</h2>
+    <div class="terms">
+      <article data-reveal>
+        <h3>Москва</h3>
+        <p>ул.&nbsp;1-я&nbsp;Мытищинская, д.&nbsp;28, строение&nbsp;6. Слева от&nbsp;здания тупик. На&nbsp;охране сообщите: груз в&nbsp;ТК «ЯмалЛогистик».</p>
+        <p class="big"><a class="mono" href="tel:+79032188182">8&nbsp;(903) 218-81-82</a></p>
+        <p class="hours">Будни 10:00–18:00, выходные 10:00–16:00</p>
+      </article>
+      <article data-reveal>
+        <h3>Лабытнанги</h3>
+        <p>Промзона, территория магазина «Стройдвор», заезд со&nbsp;стороны Комяцкой деревни.</p>
+        <p class="big"><a class="mono" href="tel:+79222887171">8&nbsp;(922) 288-71-71</a><a class="mono" href="tel:+73499259337">8&nbsp;(34992) 5-93-37</a></p>
+        <p class="hours">Будни 10:00–18:00, выходные 10:00–16:00</p>
+      </article>
+    </div>
+    <dl class="kv kv--night">
+      <div><dt>Бухгалтерия</dt><dd><a class="mono" href="tel:+79362405004">8&nbsp;(936) 240-50-04</a></dd></div>
+      <div><dt>Почта</dt><dd><a href="mailto:yamallogistic@mail.ru">yamallogistic@mail.ru</a></dd></div>
+      <div><dt>Telegram</dt><dd><a href="https://t.me/yamallogistic" target="_blank" rel="noopener">t.me/yamallogistic</a></dd></div>
+      <div><dt>Договор, реквизиты, доверенность</dt><dd><a href="https://yamallogistic.ru/dokumenty" target="_blank" rel="noopener">Страница документов</a></dd></div>
+    </dl>
+    <p class="legal">ООО «ЯмалЛогистик» · ИНН 8901037988 · реестр уведомлений о&nbsp;транспортно-экспедиционной деятельности: GL-B044-00112-00/00002710. Компания отвечает за&nbsp;отправления, принятые к&nbsp;перевозке по&nbsp;факту и&nbsp;документально оформленные на&nbsp;её&nbsp;терминалах; за&nbsp;организацию грузоперевозок сторонних транспортных компаний не&nbsp;отвечает.</p>
+  </div>
+</section>
+</main>
+
+<div class="mbar"><a class="btn btn--ghost" href="tel:+79032188182">Позвонить</a><a class="btn" href="#raschet">Рассчитать</a></div>
+
+<script src="../../kit/vendor/gsap.min.js" defer></script>
+<script src="../../kit/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../../kit/vendor/DrawSVGPlugin.min.js" defer></script>
+<script src="../../kit/vendor/MotionPathPlugin.min.js" defer></script>
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script src="tariff.js" defer></script>
+<script src="app.js" defer></script>
+<script src="fx.js" defer></script>
+</body>
+</html>
