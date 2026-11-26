@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<script>(function(){var c=document.documentElement.classList,s=0;if(!matchMedia('(prefers-reduced-motion: reduce)').matches){try{s=sessionStorage.getItem('er-pre');sessionStorage.setItem('er-pre','1')}catch(e){}c.add('fx');if(!s)c.add('pre-on')}setTimeout(function(){c.remove('fx','pre-on')},4500)})()</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ЕРИЦ ЯНАО — одна квитанция за свет, тепло, воду и вывоз отходов</title>
+<meta name="description" content="Концепция сайта АО «ЕРИЦ ЯНАО»: передать показания и оплатить без входа в кабинет, разбор квитанции по строкам, поиск офиса обслуживания по городам Ямала.">
+<meta property="og:title" content="ЕРИЦ ЯНАО — одна квитанция за всё">
+<meta property="og:image" content="img/logo.webp">
+<link rel="icon" href="img/mark.png">
+<link rel="preload" href="../../kit/fonts/wix-madefor-display-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../kit/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="pre" aria-hidden="true"><img src="img/logo.webp" alt="" width="320" height="96"><i></i></div>
+<div class="prog" aria-hidden="true"></div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="hdr" data-header><div class="wrap hdr-in">
+  <a class="logo" href="#main" aria-label="ЕРИЦ ЯНАО, на главную"><img src="img/logo.webp" alt="ЕРИЦ — Единый расчётно-информационный центр ЯНАО" width="640" height="191"></a>
+  <nav data-menu aria-label="Основное меню">
+    <a href="#deystviya">Действия</a><a href="#kvitanciya">Квитанция</a><a href="#oplata">Оплата и показания</a><a href="#ofisy">Офисы</a><a href="#o-kompanii">О компании</a><a href="#yurlica">Юрлицам</a><a href="#kontakty">Контакты</a>
+    <span class="nav-run" aria-hidden="true"></span>
+  </nav>
+  <a class="hdr-tel" href="tel:88002506006"><small>жителям, бесплатно</small><span class="num">8 800 250-60-06</span></a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+
+<!-- ═════ HERO: быстрые действия ═════ -->
+<section class="hero" id="deystviya" aria-labelledby="hero-h">
+  <canvas class="hero-air" aria-hidden="true"></canvas>
+  <div class="wrap hero-g">
+    <div class="hero-t">
+      <p class="hero-kicker"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Единый расчётно-информационный центр Ямала</p>
+      <h1 id="hero-h"><span class="ln"><span>Одна квитанция —</span></span> <span class="ln"><span>за&nbsp;свет, тепло, воду</span></span> <span class="ln"><span><mark>и&nbsp;вывоз отходов</mark></span></span></h1>
+      <p class="lead">ЕРИЦ&nbsp;ЯНАО ведёт расчёты и&nbsp;начисления за&nbsp;жилищно-коммунальные услуги, принимает платежи и&nbsp;адресно распределяет их&nbsp;по&nbsp;поставщикам. Всё, что нужно жителю каждый месяц, — здесь, в&nbsp;одно касание.</p>
+      <div class="cal" aria-labelledby="cal-h">
+        <p class="cal-h" id="cal-h"><b data-cal-month>Каждый месяц</b><span>сегодня: <span data-cal-today>—</span></span></p>
+        <div class="cal-days" data-cal aria-hidden="true"></div>
+        <p class="cal-legend"><span class="lg lg--read">показания — с&nbsp;15 по&nbsp;25 число</span><span class="lg lg--pay">плата за&nbsp;электроэнергию — до&nbsp;15 числа следующего месяца</span></p>
+      </div>
+    </div>
+
+    <div class="acts" role="group" aria-label="Быстрые действия">
+      <a class="act act--main" href="https://trmnl.vostok-electra.ru/?r=89" target="_blank" rel="noopener" data-cur="Открыть">
+        <span class="act-ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 25V7h14l6 6v12z M20 7v6h6 M10 18h12 M10 22h8"/></svg></span>
+        <span class="act-t">Передать показания и&nbsp;оплатить</span>
+        <span class="act-d">Без регистрации в&nbsp;Личном кабинете — нужен только номер лицевого счёта</span>
+        <span class="act-badge">15–25 число</span>
+        <span class="act-go" aria-hidden="true">→</span>
+      </a>
+      <div class="act act--lk">
+        <span class="act-ic" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="12" r="5"/><path d="M6 27c1.5-5 5.5-7 10-7s8.5 2 10 7"/></svg></span>
+        <span class="act-t">Личный кабинет</span>
+        <span class="act-two"><a class="chip" href="https://lkk.eric-yanao.ru/" target="_blank" rel="noopener" data-cur="Войти">Физическое лицо</a><a class="chip" href="https://ulk.eric-yanao.ru/" target="_blank" rel="noopener" data-cur="Войти">Юридическое лицо</a></span>
+      </div>
+      <a class="act" href="#ofisy" data-cur="К офисам">
+        <span class="act-ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 28s-8-8-8-14a8 8 0 0 1 16 0c0 6-8 14-8 14z"/><circle cx="16" cy="14" r="3"/></svg></span>
+        <span class="act-t">Офисы и&nbsp;режим работы</span>
+        <span class="act-d"><span data-count>44</span> офиса обслуживания по&nbsp;округу</span>
+        <span class="act-go" aria-hidden="true">→</span>
+      </a>
+      <a class="act" href="https://max.ru/id7705424509_2_bot" target="_blank" rel="noopener" data-cur="Написать">
+        <span class="act-ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 8h20v13H14l-6 5v-5H6z"/><path d="M11 14h10"/></svg></span>
+        <span class="act-t">Онлайн-центр в&nbsp;Максе</span>
+        <span class="act-d">Чат, аудио- и&nbsp;видеосвязь с&nbsp;оператором вместо поездки в&nbsp;офис</span>
+        <span class="act-go" aria-hidden="true">→</span>
+      </a>
+      <div class="act act--tel">
+        <a class="tel-row" href="tel:88002506006" data-cur="Позвонить" data-tip="Операторы: будни 8:00–18:00; с 15 по 25 число ещё суббота 8:00–17:00. Автоматически — круглосуточно">
+          <small>физическим лицам</small><b class="num">8 800 250-60-06</b>
+        </a>
+        <a class="tel-row" href="tel:88002502874" data-cur="Позвонить" data-tip="Операторы: будни 9:00–18:00. Автоматически — круглосуточно">
+          <small>юридическим лицам</small><b class="num">8 800 250-28-74</b>
+        </a>
+        <span class="act-d">Звонок бесплатный</span>
+      </div>
+    </div>
+  </div>
+  <figure class="hero-city" data-par>
+    <img src="img/yamal.webp" srcset="img/yamal-s.webp 1000w, img/yamal.webp 2000w" sizes="100vw" alt="Салехард: крыши жилых кварталов, за рекой — горы Полярного Урала" width="2000" height="1074" fetchpriority="high">
+  </figure>
+</section>
+
+<!-- ═════ СЦЕНА: разбор квитанции ═════ -->
+<section class="kv" id="kvitanciya" aria-labelledby="kv-h">
+  <div class="kv-pin">
+    <div class="wrap kv-g">
+      <svg class="kv-link" aria-hidden="true"><path d=""/></svg>
+      <div class="kv-head">
+        <h2 id="kv-h" data-split>Разберём квитанцию по&nbsp;строкам</h2>
+        <p class="kv-sub">Наведите или нажмите на&nbsp;строку&nbsp;— рядом появится, что она значит и&nbsp;куда обращаться. Пояснения&nbsp;— из&nbsp;раздела «Клиентам» на&nbsp;сайте ЕРИЦ&nbsp;ЯНАО. Схема без сумм: у&nbsp;каждого своя квитанция.</p>
+      </div>
+      <div class="kv-paper-w">
+        <svg class="kv-clip" viewBox="0 0 40 92" aria-hidden="true"><path d="M14 70V18a7 7 0 0 1 14 0v56a11 11 0 0 1-22 0V26"/></svg>
+        <div class="kv-paper" role="listbox" aria-label="Строки квитанции" tabindex="-1">
+          <svg class="kv-cuts" aria-hidden="true"><g></g></svg>
+          <div class="kv-row kv-row--head" role="option" tabindex="0" aria-selected="true" data-step="0">
+            <span class="kv-cap">Платёжный документ</span>
+            <span class="kv-kv"><span>Лицевой счёт</span><i class="bar bar--s"></i></span>
+            <span class="kv-kv"><span>Адрес</span><i class="bar"></i></span>
+            <span class="kv-kv"><span>Расчётный период</span><i class="bar bar--s"></i></span>
+          </div>
+          <div class="kv-row" role="option" tabindex="-1" aria-selected="false" data-step="1">
+            <span class="kv-cap">Начисления по&nbsp;услугам</span>
+            <span class="kv-sv"><i class="sv sv--e"></i>Электроэнергия<i class="bar bar--m"></i></span>
+            <span class="kv-sv"><i class="sv sv--t"></i>Теплоснабжение<i class="bar bar--m"></i></span>
+            <span class="kv-sv"><i class="sv sv--w"></i>Водоснабжение: ХВС, ГВС<i class="bar bar--m"></i></span>
+            <span class="kv-sv"><i class="sv sv--k"></i>Обращение с&nbsp;ТКО<i class="bar bar--m"></i></span>
+          </div>
+          <div class="kv-row" role="option" tabindex="-1" aria-selected="false" data-step="2">
+            <span class="kv-cap">Приборы учёта</span>
+            <span class="kv-kv"><span>Заводской №</span><i class="bar bar--s"></i></span>
+            <span class="kv-meter" aria-hidden="true"><b>0</b><b>4</b><b>2</b><b>7</b><b>1</b><em>,</em><b>3</b></span>
+            <span class="kv-kv"><span>Показания: день / ночь</span><i class="bar bar--s"></i></span>
+          </div>
+          <div class="kv-row" role="option" tabindex="-1" aria-selected="false" data-step="3">
+            <span class="kv-cap">Перерасчёт, корректировка</span>
+            <span class="kv-kv"><span>±</span><i class="bar bar--m"></i></span>
+          </div>
+          <div class="kv-row kv-row--sum" role="option" tabindex="-1" aria-selected="false" data-step="4">
+            <span class="kv-cap">Итого к&nbsp;оплате</span>
+            <span class="kv-total"><i class="bar bar--l"></i><span class="kv-due">до&nbsp;15 числа</span></span>
+            <svg class="kv-qr" viewBox="0 0 21 21" aria-hidden="true"><path d="M1 1h7v7H1zM13 1h7v7h-7zM1 13h7v7H1z M3 3h3v3H3z M15 3h3v3h-3z M3 15h3v3H3z M10 2h1v2h-1z M10 6h2v1h-2z M9 9h3v1H9z M13 10h2v2h-2z M17 10h3v1h-3z M10 12h1v3h-1z M12 14h3v1h-3z M16 13h2v3h-2z M13 17h1v3h-1z M15 18h5v1h-5z M10 18h2v2h-2z M18 16h2v1h-2z"/></svg>
+          </div>
+        </div>
+        <svg class="kv-lens" viewBox="0 0 64 64" aria-hidden="true"><circle cx="26" cy="26" r="17"/><path d="M38.5 38.5 56 56"/></svg>
+      </div>
+
+      <div class="kv-panel" aria-live="polite">
+        <ol class="kv-steps" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li></ol>
+        <button class="kv-back link" type="button">↑ К&nbsp;квитанции</button>
+        <article class="kv-card is-on" data-card="0">
+          <h3>Лицевой счёт&nbsp;— ключ ко&nbsp;всем сервисам</h3>
+          <p>Номер лицевого счёта вводят, когда передают показания по&nbsp;телефону 8&nbsp;800&nbsp;250-60-06 в&nbsp;автоматическом режиме, и&nbsp;указывают в&nbsp;письменном обращении вместе с&nbsp;адресом объекта.</p>
+          <p>Квитанцию можно получать электронно: на&nbsp;сайте есть сервис «Электронная рассылка платёжных документов», а&nbsp;способ доставки меняют заявлением из&nbsp;раздела «Бланки заявлений».</p>
+          <p class="kv-where"><b>Куда обращаться</b><a class="chip" href="https://lkk.eric-yanao.ru/" target="_blank" rel="noopener">Личный кабинет</a><a class="chip" href="https://max.ru/id7705424509_2_bot" target="_blank" rel="noopener">Онлайн-ЦОК</a><a class="chip" href="#ofisy">Офис обслуживания</a></p>
+        </article>
+        <article class="kv-card" data-card="1">
+          <h3>Начисления: кто поставщик, кто считает</h3>
+          <p>ЕРИЦ&nbsp;ЯНАО&nbsp;— агент жилищных и&nbsp;ресурсоснабжающих организаций округа по&nbsp;теплоснабжению, водоснабжению, поставке электроэнергии и&nbsp;обращению с&nbsp;ТКО. Он&nbsp;ведёт расчёты и&nbsp;начисления, а&nbsp;полученные платежи адресно распределяет по&nbsp;поставщикам.</p>
+          <p>Вывоз отходов: региональный оператор&nbsp;— ООО&nbsp;«Ямал Экология», ЕРИЦ ведёт по&nbsp;нему агентскую работу. Действующие приказы по&nbsp;тарифам опубликованы на&nbsp;сайте Департамента тарифной политики, энергетики и&nbsp;ЖКК&nbsp;ЯНАО.</p>
+          <p class="kv-where"><b>Если вопрос к&nbsp;тарифу на&nbsp;электроэнергию</b><a class="chip" href="tel:+73452426677">РЭК, +7&nbsp;(3452) 426-677</a></p>
+        </article>
+        <article class="kv-card" data-card="2">
+          <h3>Показания&nbsp;— с&nbsp;15 по&nbsp;25 число</h3>
+          <p>Заводские номера всех расчётных приборов учёта напечатаны в&nbsp;платёжном документе&nbsp;— сверяйте номер, когда передаёте показания. Передавать их&nbsp;советуют каждый месяц, даже если они не&nbsp;изменились, одним способом и&nbsp;только один раз.</p>
+          <p>Если прибора учёта нет, об&nbsp;изменении числа проживающих нужно сообщить не&nbsp;позднее 5&nbsp;рабочих дней.</p>
+          <p class="kv-where"><b>Как передать</b><a class="chip" href="https://trmnl.vostok-electra.ru/?r=89" target="_blank" rel="noopener">Без входа в&nbsp;кабинет</a><a class="chip" href="tel:88002506006">8&nbsp;800&nbsp;250-60-06, автоответчик</a><a class="chip" href="#oplata">Все способы</a></p>
+        </article>
+        <article class="kv-card" data-card="3">
+          <h3>Перерасчёт и&nbsp;сверка</h3>
+          <p>Специалисты Онлайн-центра обслуживания клиентов делают перерасчёт в&nbsp;связи с&nbsp;временным отсутствием или ошибочно переданными показаниями, проводят сверку расчётов и&nbsp;выдают справку об&nbsp;отсутствии задолженности с&nbsp;электронной подписью.</p>
+          <p>Для письменного обращения есть бланки: заявление на&nbsp;перерасчёт, на&nbsp;сверку расчётов, на&nbsp;рассрочку платежа, на&nbsp;розыск платежа.</p>
+          <p class="kv-where"><b>Куда обращаться</b><a class="chip" href="https://max.ru/id7705424509_2_bot" target="_blank" rel="noopener">Онлайн-ЦОК</a><a class="chip" href="https://eric-yanao.ru/klientam/fizicheskim-litsam/blanki-zayavleniy" target="_blank" rel="noopener">Бланки заявлений</a></p>
+        </article>
+        <article class="kv-card" data-card="4">
+          <h3>Итого, срок и&nbsp;QR-код</h3>
+          <p>Плата за&nbsp;электроэнергию вносится до&nbsp;15&nbsp;числа месяца, следующего за&nbsp;истекшим (ч.&nbsp;1 ст.&nbsp;155 ЖК&nbsp;РФ). За&nbsp;просрочку начисляются пени: с&nbsp;31-го дня&nbsp;— 1/300 ставки рефинансирования Банка России, с&nbsp;91-го&nbsp;— 1/130.</p>
+          <p>QR-код в&nbsp;платёжном документе&nbsp;— для оплаты через СБП. Без комиссии: в&nbsp;Личном кабинете, онлайн-сервисе без регистрации, приложении «Коммуналка Онлайн» и&nbsp;банковских сервисах, в&nbsp;том числе «Сбербанк Онлайн».</p>
+          <p class="kv-where"><b>Оплатить</b><a class="chip" href="https://trmnl.vostok-electra.ru/?r=89" target="_blank" rel="noopener">Без входа в&nbsp;кабинет</a><a class="chip" href="#oplata">Все способы</a></p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ ОПЛАТА И ПОКАЗАНИЯ ═════ -->
+<section class="sec pay sheet" id="oplata" aria-labelledby="pay-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="pay-h" data-split>Где оплатить и&nbsp;передать показания</h2>
+      <p class="sec-lead" data-reveal>Каналы одни и&nbsp;те&nbsp;же для всего округа, кроме Салехарда и&nbsp;Нового Уренгоя&nbsp;— для них ниже отдельные способы.</p>
+    </div>
+    <div class="pay-g">
+      <article class="card spot" data-reveal>
+        <h3><span class="pill pill--pay">Оплата</span>Без комиссии</h3>
+        <ul class="ticks">
+          <li><a class="link" href="https://lkk.eric-yanao.ru/" target="_blank" rel="noopener">Личный кабинет</a>&nbsp;— картой, через СБП и&nbsp;SberPay</li>
+          <li><a class="link" href="https://trmnl.vostok-electra.ru/?r=89" target="_blank" rel="noopener">Онлайн-сервис без регистрации</a></li>
+          <li>Приложение «Коммуналка Онлайн» (RuStore, App&nbsp;Store, Google&nbsp;Play)</li>
+          <li>Через работодателя: заявление в&nbsp;бухгалтерию о&nbsp;перечислении платежей в&nbsp;ЕРИЦ&nbsp;ЯНАО</li>
+          <li>Банковские сервисы, в&nbsp;том числе «Сбербанк Онлайн»</li>
+        </ul>
+        <h4>И ещё</h4>
+        <p class="muted">Центры обслуживания ЕРИЦ&nbsp;ЯНАО; офисы и&nbsp;устройства Сбербанка (с&nbsp;платёжным документом); кассы АО&nbsp;КБ&nbsp;«АГРОПРОМКРЕДИТ»; Почта России; «ВТБ Онлайн»; приложение Т-Банка; СБП по&nbsp;QR-коду; безналичный платёж по&nbsp;реквизитам.</p>
+      </article>
+      <article class="card spot" data-reveal>
+        <h3><span class="pill pill--read">Показания</span>С&nbsp;15 по&nbsp;25 число</h3>
+        <ul class="ticks">
+          <li><a class="link" href="https://lkk.eric-yanao.ru/" target="_blank" rel="noopener">Личный кабинет</a></li>
+          <li><a class="link" href="https://trmnl.vostok-electra.ru/?r=89" target="_blank" rel="noopener">Онлайн-сервис без регистрации</a></li>
+          <li>Приложение «Коммуналка Онлайн»</li>
+          <li><a class="link" href="tel:88002506006">8&nbsp;800&nbsp;250-60-06</a>&nbsp;— автоответчик круглосуточно: приготовьте номер лицевого счёта и&nbsp;заводские номера приборов</li>
+          <li>Моноблоки в&nbsp;офисах ЕРИЦ&nbsp;ЯНАО, пункты приёма платежей и&nbsp;офисы обслуживания</li>
+        </ul>
+        <ol class="ivr" aria-label="Передача показаний по телефону">
+          <li><b>1</b>передать показания</li><li><b>1/2</b>клавиатура или голос</li><li><b>№ ЛС *</b>лицевой счёт</li><li><b>1–4</b>свет, ГВС, ХВС, тепло</li>
+        </ol>
+      </article>
+      <article class="card card--city spot" data-reveal>
+        <h3>Салехард</h3>
+        <p>Личный кабинет; офис на&nbsp;ул.&nbsp;Броднева,&nbsp;55 и&nbsp;моноблок в&nbsp;нём; приложение «ЕРИЦ ЯНАО Салехард».</p>
+        <p class="muted">С&nbsp;20 по&nbsp;23 число показания можно передать напрямую АО&nbsp;«Салехардэнерго»: <a class="link" href="tel:+78003502080">+7&nbsp;800&nbsp;350-20-80</a>, СМС на&nbsp;+7&nbsp;992&nbsp;405-44-84, <a class="link" href="mailto:se_info@bk.ru">se_info@bk.ru</a>.</p>
+      </article>
+      <article class="card card--city spot" data-reveal>
+        <h3>Новый Уренгой</h3>
+        <p>Личный кабинет; офис в&nbsp;микрорайоне Созидателей,&nbsp;3/1; «Коммуналка Онлайн»; <a class="link" href="mailto:client.nur@eric-yanao.ru">client.nur@eric-yanao.ru</a>.</p>
+        <p class="muted">СМС: 8&nbsp;929&nbsp;259-96-30, -31, -32, -33; Лимбяяха&nbsp;— 8&nbsp;932&nbsp;094-43-85; Коротчаево&nbsp;— 8&nbsp;932&nbsp;058-12-73.</p>
+      </article>
+      <aside class="card card--note spot" data-reveal>
+        <h3>Если ограничен мобильный интернет</h3>
+        <p>Подключитесь к&nbsp;Wi-Fi&nbsp;— сервисы работают полностью. Ещё варианты: приложения Сбербанка, Т-Банка, ВТБ; ГИС&nbsp;ЖКХ; начисления, показания и&nbsp;оплата&nbsp;— в&nbsp;отделениях Почты России.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="marq-t"><span>Показания&nbsp;— с&nbsp;15 по&nbsp;25 число</span><i></i><span>Даже если не&nbsp;изменились</span><i></i><span>Одним способом и&nbsp;один раз</span><i></i><span>8&nbsp;800&nbsp;250-60-06 — круглосуточно в&nbsp;автоматическом режиме</span><i></i></div></div>
+
+<!-- ═════ ОФИСЫ ═════ -->
+<section class="sec offices sheet" id="ofisy" aria-labelledby="of-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="of-h" data-split>Найдите ближайший офис</h2>
+      <p class="sec-lead" data-reveal>Адреса и&nbsp;режим работы&nbsp;— из&nbsp;списка офисов на&nbsp;сайте компании. Записаться на&nbsp;приём на&nbsp;удобное время можно по&nbsp;бесплатному телефону.</p>
+    </div>
+    <div class="of-g">
+      <div class="of-ctl" data-reveal>
+        <div class="seg" role="radiogroup" aria-label="Кого обслуживает офис">
+          <label><input type="radio" name="who" value="fz" checked><span>Физическим лицам</span></label>
+          <label><input type="radio" name="who" value="ul"><span>Юридическим лицам</span></label>
+        </div>
+        <label class="field of-q"><span>Город, посёлок или улица</span><input type="search" id="of-q" placeholder="Например, Тарко-Сале" autocomplete="off"></label>
+        <div class="of-chips" role="group" aria-label="Территория" id="of-chips"></div>
+        <p class="of-n" aria-live="polite"><b id="of-n">—</b></p>
+      </div>
+      <ul class="of-list" id="of-list" aria-label="Офисы обслуживания"></ul>
+    </div>
+    <noscript><p>Список офисов: eric-yanao.ru → Клиентам → Офисы обслуживания.</p></noscript>
+  </div>
+</section>
+
+<!-- ═════ О КОМПАНИИ: один платёж — адресатам ═════ -->
+<section class="sec about sheet" id="o-kompanii" data-theme="night" aria-labelledby="ab-h">
+  <div class="wrap ab-g">
+    <div class="ab-t">
+      <h2 id="ab-h" data-split>Вы платите один раз&nbsp;— деньги расходятся по&nbsp;адресам</h2>
+      <p data-reveal>АО&nbsp;«ЕРИЦ ЯНАО» создано 11&nbsp;июля 2011&nbsp;года. Компания ведёт расчёты и&nbsp;начисления за&nbsp;ЖКУ, организует приём платежей и&nbsp;распределяет средства по&nbsp;поставщикам, ведёт претензионно-исковую работу, занимается капитальным ремонтом и&nbsp;жилищными услугами (содержанием), а&nbsp;в&nbsp;Ноябрьске проверяет и&nbsp;меняет приборы учёта в&nbsp;многоквартирных домах.</p>
+      <p class="ab-group" data-reveal>Дочернее зависимое общество АО&nbsp;«Энергосбытовая компания «Восток».</p>
+    </div>
+    <div class="flow" aria-label="Схема: платёж жителя распределяется по поставщикам услуг">
+      <svg class="flow-svg" viewBox="0 0 520 420" aria-hidden="true">
+        <defs><linearGradient id="fl-g" x1="0" x2="1"><stop offset="0" stop-color="#FFD25A"/><stop offset="1" stop-color="#5FE0D6"/></linearGradient></defs>
+        <path class="fl-p" id="fl-1" d="M110 210 C220 210 250 60 400 60"/>
+        <path class="fl-p" id="fl-2" d="M110 210 C220 210 260 160 400 160"/>
+        <path class="fl-p" id="fl-3" d="M110 210 C220 210 260 260 400 260"/>
+        <path class="fl-p" id="fl-4" d="M110 210 C220 210 250 360 400 360"/>
+        <circle class="fl-dot" r="6"/><circle class="fl-dot" r="6"/><circle class="fl-dot" r="6"/><circle class="fl-dot" r="6"/>
+      </svg>
+      <div class="fl-src"><b>Ваш платёж</b><small>одна квитанция</small></div>
+      <ul class="fl-dst">
+        <li style="--c:#FFC93C"><i></i>Электроэнергия</li>
+        <li style="--c:#FF7A45"><i></i>Теплоснабжение</li>
+        <li style="--c:#2FB4E8"><i></i>Водоснабжение</li>
+        <li style="--c:#3DBE6B"><i></i>Обращение с&nbsp;ТКО</li>
+      </ul>
+    </div>
+    <dl class="facts">
+      <div data-reveal><dt><span data-count>206 000</span><small>+</small></dt><dd>лицевых счетов физических лиц на&nbsp;обслуживании</dd></div>
+      <div data-reveal><dt><span data-count>7 200</span><small>+</small></dt><dd>юридических лиц</dd></div>
+      <div data-reveal><dt><span data-count>44</span></dt><dd>офиса обслуживания на&nbsp;территории округа</dd></div>
+      <div data-reveal><dt><span data-count>400</span><small>+</small></dt><dd>специалистов в&nbsp;коллективе</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═════ ЮРЛИЦАМ ═════ -->
+<section class="sec biz sheet" id="yurlica" aria-labelledby="bz-h">
+  <div class="wrap bz-g">
+    <div>
+      <h2 id="bz-h" data-split>Юридическим лицам</h2>
+      <p class="sec-lead" data-reveal>Единая служба поддержки юридических лиц работает в&nbsp;будние дни с&nbsp;9:00 до&nbsp;18:00, в&nbsp;автоматическом режиме&nbsp;— круглосуточно.</p>
+      <div class="bz-cta" data-reveal>
+        <a class="btn" href="tel:88002502874" data-magnetic data-cur="Позвонить">8&nbsp;800&nbsp;250-28-74</a>
+        <a class="btn btn--ghost" href="https://ulk.eric-yanao.ru/" target="_blank" rel="noopener" data-cur="Войти">Кабинет юрлица</a>
+      </div>
+      <button class="link bz-of" type="button" data-of-ul>Показать 16 офисов для юрлиц</button>
+    </div>
+    <ul class="bz-list">
+      <li data-reveal><a href="https://eric-yanao.ru/klientam/yuridicheskim-litsam/zaklyuchenie-dogovora-energosnabzheniya" target="_blank" rel="noopener" class="spot"><b>Заключение договора энергоснабжения</b><span>→</span></a></li>
+      <li data-reveal><a href="https://eric-yanao.ru/klientam/yuridicheskim-litsam/tarify-i-tseny-na-elektroenergiyu" target="_blank" rel="noopener" class="spot"><b>Тарифы и&nbsp;цены на&nbsp;электроэнергию</b><span>→</span></a></li>
+      <li data-reveal><a href="https://eric-yanao.ru/klientam/yuridicheskim-litsam/ustanovka-priborov-ucheta-elektroenergii" target="_blank" rel="noopener" class="spot"><b>Установка приборов учёта</b><span>→</span></a></li>
+      <li data-reveal><a href="https://eric-yanao.ru/klientam/yuridicheskim-litsam/informatsiya-po-obrashcheniyu-s-tko" target="_blank" rel="noopener" class="spot"><b>Договор по&nbsp;обращению с&nbsp;ТКО</b><span>→</span></a></li>
+      <li data-reveal><a href="https://eric-yanao.ru/klientam/yuridicheskim-litsam/sposoby-oplaty" target="_blank" rel="noopener" class="spot"><b>Способы оплаты</b><span>→</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═════ КОНТАКТЫ ═════ -->
+<section class="sec contacts sheet" id="kontakty" aria-labelledby="ct-h">
+  <div class="wrap ct-g">
+    <div class="ct-info">
+      <h2 id="ct-h" data-split>Контакты</h2>
+      <dl class="ct-dl">
+        <div><dt>Физическим лицам</dt><dd><a class="big num" href="tel:88002506006">8 800 250-60-06</a><small>будни 8:00–18:00; с&nbsp;15 по&nbsp;25 число ещё суббота 8:00–17:00</small></dd></div>
+        <div><dt>Юридическим лицам</dt><dd><a class="big num" href="tel:88002502874">8 800 250-28-74</a><small>будни 9:00–18:00</small></dd></div>
+        <div><dt>Почта</dt><dd><a class="link" href="mailto:office@eric-yanao.ru">office@eric-yanao.ru</a><small>пресс-центр: <a class="link" href="mailto:pressa@eric-yanao.ru">pressa@eric-yanao.ru</a></small></dd></div>
+        <div><dt>Телефон офиса</dt><dd><a class="link num" href="tel:+73492299228">+7 3492 299-228</a></dd></div>
+        <div><dt>Юридический адрес</dt><dd>629008, ЯНАО, г.&nbsp;Салехард, ул.&nbsp;Броднева,&nbsp;55</dd></div>
+        <div><dt>Почтовый адрес</dt><dd>629802, ЯНАО, г.&nbsp;Ноябрьск, ул.&nbsp;60&nbsp;лет СССР, д.&nbsp;74/74</dd></div>
+      </dl>
+    </div>
+    <form class="ct-form" data-demo-form aria-labelledby="fm-h" novalidate>
+      <h3 id="fm-h">Обращение</h3>
+      <p class="muted">Укажите номер лицевого счёта или договора и&nbsp;адрес объекта&nbsp;— так ответ придёт быстрее.</p>
+      <div class="seg seg--s" role="radiogroup" aria-label="Кто обращается">
+        <label><input type="radio" name="Кто" value="Физическое лицо" checked><span>Физическое лицо</span></label>
+        <label><input type="radio" name="Кто" value="Юридическое лицо"><span>Юридическое лицо</span></label>
+      </div>
+      <div class="fm-2">
+        <label class="field"><span>Имя или организация</span><input name="Имя" autocomplete="name" required></label>
+        <label class="field"><span>Телефон</span><input name="Телефон" type="tel" autocomplete="tel" inputmode="tel" required></label>
+      </div>
+      <div class="fm-2">
+        <label class="field"><span>Лицевой счёт / договор</span><input name="Лицевой счёт" inputmode="numeric" autocomplete="off"></label>
+        <label class="field"><span>Тема</span><select name="Тема"><option>Начисления и перерасчёт</option><option>Показания приборов учёта</option><option>Оплата и сверка расчётов</option><option>Договор</option><option>Другое</option></select></label>
+      </div>
+      <label class="field"><span>Суть обращения</span><textarea name="Суть" rows="3"></textarea></label>
+      <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+      <button class="btn fm-send" type="submit" data-cur="Отправить">Отправить обращение</button>
+      <div class="done" role="status">
+        <p class="done-t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17 19 7"/></svg>Это демо: письмо не&nbsp;ушло. Отдел получил бы:</p>
+        <dl></dl>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr"><div class="wrap ftr-g">
+  <img src="img/logo.webp" alt="ЕРИЦ ЯНАО" width="640" height="191" loading="lazy">
+  <p>© АО&nbsp;«Единый расчётно-информационный центр ЯНАО». ОГРН&nbsp;1118901002164, ИНН&nbsp;8901025439.</p>
+  <p><a class="link" href="https://www.vostok-electra.ru" target="_blank" rel="noopener">Сайт АО «ЭК «Восток»</a> · <a class="link" href="https://vk.com/eric_yanao" target="_blank" rel="noopener">ВКонтакте</a></p>
+</div></footer>
+
+<div class="mbar"><a class="btn" href="https://trmnl.vostok-electra.ru/?r=89" target="_blank" rel="noopener">Показания и оплата</a><a class="btn btn--ghost" href="tel:88002506006">Позвонить</a></div>
+
+<div class="cur is-init" aria-hidden="true"><div class="cur-r"><svg class="cur-clip" viewBox="0 0 40 92"><path d="M14 70V18a7 7 0 0 1 14 0v56a11 11 0 0 1-22 0V26"/></svg><span class="cur-l"></span></div><div class="cur-d"></div></div>
+<div class="tip" role="tooltip" id="tip"></div>
+
+<script src="../../kit/vendor/gsap.min.js" defer></script>
+<script src="../../kit/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../../kit/vendor/SplitText.min.js" defer></script>
+<script src="../../kit/vendor/DrawSVGPlugin.min.js" defer></script>
+<script src="../../kit/vendor/MotionPathPlugin.min.js" defer></script>
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script src="offices.js" defer></script>
+<script src="app.js" defer></script>
+<script src="fx.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js');try{sessionStorage.getItem('sd-seen')&&document.documentElement.classList.add('seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>УК «Северный дом» — мой дом в Новом Уренгое</title>
+<meta name="description" content="Концепция редизайна сайта управляющей компании «Северный дом», Новый Уренгой: поиск своего дома, аварийная служба, показания, раскрытие информации, дома в управлении.">
+<link rel="icon" href="img/icon.png">
+<link rel="preload" href="../../kit/fonts/rubik-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="curtain" aria-hidden="true"><img src="img/logo.webp" alt="" width="520" height="86"></div>
+<div class="progress" aria-hidden="true"><i></i></div>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header>
+  <a class="plate" href="#top" aria-label="Управляющая компания «Северный дом», на главную"><img src="img/logo.webp" alt="Северный дом, управляющая компания" width="520" height="86"></a>
+  <nav data-menu aria-label="Основное меню"><i class="runner" aria-hidden="true"></i><a href="#resident">Жителю</a><a href="#zones">Кто отвечает</a><a href="#news">Объявления</a><a href="#disclosure">Раскрытие информации</a><a href="#houses">Дома</a><a href="#about">О&nbsp;компании</a><a href="#contacts">Контакты</a></nav>
+  <button class="vi" id="vi" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg><span>Для&nbsp;слабовидящих</span></button>
+  <a class="hdr-sos" href="tel:+73494927777"><i aria-hidden="true"></i><span class="num">92-7777</span><span class="sr"> — аварийно-диспетчерская служба, круглосуточно</span></a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <canvas class="snow" aria-hidden="true"></canvas>
+  <div class="hero-in wrap">
+    <div class="hero-text">
+      <p class="kick">Управляющая компания «Северный&nbsp;дом» · Новый&nbsp;Уренгой</p>
+      <h1>Мой дом</h1>
+      <p class="lead">Найдите свой дом&nbsp;— и&nbsp;сразу видно, куда звонить, где объявления и&nbsp;за&nbsp;что в&nbsp;доме отвечает управляющая компания.</p>
+      <div class="finder">
+        <label for="q" class="finder-l">Адрес вашего дома</label>
+        <div class="finder-box">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="q" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="q-list" aria-describedby="q-count" autocomplete="off" placeholder="Например: Тундровый, 3">
+        </div>
+        <ul id="q-list" role="listbox" aria-label="Дома в управлении" hidden></ul>
+        <p id="q-count" class="sr" aria-live="polite"></p>
+        <div class="chips" aria-label="Быстрый выбор района"><button type="button" data-q="Восточный">Восточный</button><button type="button" data-q="Тундровый">Тундровый</button><button type="button" data-q="Губкина">Губкина</button><button type="button" data-q="Оптимистов">Оптимистов</button><button type="button" data-q="Юбилейный">Юбилейный</button><button type="button" data-q="Дружба">Дружба</button></div>
+      </div>
+    </div>
+    <div class="hero-scene">
+      <figure class="hero-house" id="hero-house"></figure>
+      <div class="card" id="card" tabindex="-1" aria-live="polite">
+        <div class="c1"><p class="card-k">Ваш дом</p>
+        <p class="card-a card-empty">Выберите адрес&nbsp;— здесь появятся паспорт дома, ссылки на&nbsp;объявления и&nbsp;раскрытие по&nbsp;дому</p></div>
+        <div class="c2"><a class="sos" href="tel:+73494927777"><span>Авария в&nbsp;доме&nbsp;— круглосуточно</span><b class="num">92-7777</b></a></div>
+      </div>
+    </div>
+  </div>
+  <ul class="hero-strip wrap">
+    <li><span>Аварийно-диспетчерская служба</span><a class="ulink num" href="tel:+73494927777">+7&nbsp;(3494)&nbsp;92-7777</a> <a class="ulink num" href="tel:+79224564444">+7&nbsp;922&nbsp;456-44-44</a></li>
+    <li><span>Показания воды и&nbsp;тепла</span><b>с&nbsp;20 по&nbsp;25 число&nbsp;— в&nbsp;АО&nbsp;«ЕРИЦ»</b></li>
+    <li><span>Приёмная</span><a class="ulink num" href="tel:+73494926022">+7&nbsp;(3494)&nbsp;926-022</a></li>
+  </ul>
+</section>
+
+<section class="sec resident" id="resident">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-split>Что нужно жителю</h2>
+      <p data-reveal>Пять дел, ради которых открывают сайт управляющей компании. Всё&nbsp;— на&nbsp;первом экране раздела, без поиска по&nbsp;меню.</p>
+    </div>
+    <div class="acts">
+      <a class="act act-sos" href="tel:+73494927777" data-reveal>
+        <span class="act-ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 4l12 22H4z"/><path d="M16 13v6M16 22.5v.5"/></svg></span>
+        <h3>Авария&nbsp;— звоните сразу</h3>
+        <p>Прорыв трубы, протечка с&nbsp;крыши, нет тепла или воды, остановился лифт. Аварийно-диспетчерская служба работает круглосуточно.</p>
+        <b class="act-tel num">92-7777</b>
+        <span class="act-sub num">или +7&nbsp;922&nbsp;456-44-44</span>
+      </a>
+      <div class="act" data-reveal>
+        <span class="act-ic" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="17" r="10"/><path d="M16 17l5-5M11 9V5h10v4"/></svg></span>
+        <h3>Показания счётчиков</h3>
+        <p>Показания приборов учёта воды и&nbsp;тепла передают ежемесячно, с&nbsp;20 по&nbsp;25 число, в&nbsp;АО&nbsp;«ЕРИЦ».</p>
+        <p class="act-cal" aria-label="Срок: с 20 по 25 число"><i>18</i><i>19</i><i class="on">20</i><i class="on">21</i><i class="on">22</i><i class="on">23</i><i class="on">24</i><i class="on">25</i><i>26</i></p>
+      </div>
+      <div class="act" data-reveal>
+        <span class="act-ic" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="16" rx="3"/><path d="M4 13h24M9 19h6"/></svg></span>
+        <h3>Оплата</h3>
+        <p>Картой в&nbsp;личном кабинете на&nbsp;сайте. Логин и&nbsp;пароль выдаёт управляющая компания: мкр.&nbsp;Оптимистов, д.&nbsp;4, корп.&nbsp;2.</p>
+        <p class="act-row"><a class="ulink" href="https://sdnur.ru/" target="_blank" rel="noopener">Личный кабинет</a> <a class="ulink num" href="tel:+73494926689">Касса 926-689</a></p>
+      </div>
+      <div class="act" data-reveal>
+        <span class="act-ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 6h20v15H13l-7 5z"/><path d="M11 12h10M11 16h6"/></svg></span>
+        <h3>Сообщить о&nbsp;проблеме</h3>
+        <p>Не&nbsp;убран снег, яма на&nbsp;дороге, не&nbsp;горит фонарь&nbsp;— через «Решаем вместе» на&nbsp;Госуслугах. По&nbsp;дому&nbsp;— заявкой в&nbsp;управляющую компанию.</p>
+        <p class="act-row"><a class="ulink" href="https://pos.gosuslugi.ru/" target="_blank" rel="noopener">Решаем вместе</a> <a class="ulink" href="#contacts">Заявка в&nbsp;УК</a></p>
+      </div>
+      <div class="act" data-reveal>
+        <span class="act-ic" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="11" r="5"/><path d="M6 27c1.5-6 5.5-9 10-9s8.5 3 10 9"/></svg></span>
+        <h3>Личный приём</h3>
+        <p>По&nbsp;четвергам с&nbsp;16:00 до&nbsp;17:00, по&nbsp;записи. Офис открыт пн&nbsp;—&nbsp;пт с&nbsp;9:00 до&nbsp;18:00, перерыв 12:30&nbsp;—&nbsp;14:00.</p>
+        <p class="act-row"><a class="ulink num" href="tel:+73494926022">Записаться: 926-022</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zones" id="zones" aria-labelledby="zones-h">
+  <div class="zones-pin">
+    <div class="wrap zones-grid">
+      <div class="zones-head">
+        <h2 id="zones-h">Кто за&nbsp;что отвечает в&nbsp;доме</h2>
+        <p class="zones-for">Ваш дом: <b id="zones-house">выберите адрес в&nbsp;начале страницы</b></p>
+      </div>
+      <figure class="zstage-wrap">
+        <div id="zstage" class="zstage"></div>
+        <figcaption>Схема условная: подъезды и&nbsp;этажи&nbsp;— по&nbsp;паспорту выбранного дома</figcaption>
+      </figure>
+      <div class="zones-side">
+        <div class="ztabs" role="tablist" aria-label="Части дома">
+          <button role="tab" type="button" id="zt-roof" data-z="roof" aria-controls="zp-roof" aria-selected="true">Кровля</button>
+          <button role="tab" type="button" id="zt-entr" data-z="entr" aria-controls="zp-entr" aria-selected="false" tabindex="-1">Подъезд</button>
+          <button role="tab" type="button" id="zt-base" data-z="base" aria-controls="zp-base" aria-selected="false" tabindex="-1">Подвал</button>
+          <button role="tab" type="button" id="zt-yard" data-z="yard" aria-controls="zp-yard" aria-selected="false" tabindex="-1">Двор</button>
+        </div>
+        <div class="zpanels">
+          <article class="zp" id="zp-roof" role="tabpanel" aria-labelledby="zt-roof">
+            <h3>Кровля и&nbsp;чердак</h3>
+            <p class="who"><b>Отвечает управляющая компания</b>&nbsp;— кровля входит в&nbsp;общее имущество дома.</p>
+            <p class="inc">Кровля и&nbsp;парапет, выходы на&nbsp;крышу, водостоки, чердачные и&nbsp;технические помещения.</p>
+            <ul class="case">
+              <li><span>Течёт с&nbsp;потолка на&nbsp;верхнем этаже</span><a href="tel:+73494927777">Аварийная служба, круглосуточно · <b class="num">92-7777</b></a></li>
+              <li><span>Снег и&nbsp;наледь на&nbsp;козырьке подъезда</span><a href="tel:+73494926022">Приёмная · <b class="num">926-022</b></a></li>
+            </ul>
+          </article>
+          <article class="zp" id="zp-entr" role="tabpanel" aria-labelledby="zt-entr" hidden>
+            <h3>Подъезд</h3>
+            <p class="who"><b>Отвечает управляющая компания</b>&nbsp;— подъезд, как и&nbsp;кровля, общее имущество.</p>
+            <p class="inc">Лестницы и&nbsp;площадки, входные двери и&nbsp;козырьки, освещение мест общего пользования, лифты&nbsp;— где они есть.</p>
+            <ul class="case">
+              <li><span>Остановился лифт</span><a href="tel:+73494927777">Аварийная служба · <b class="num">92-7777</b></a></li>
+              <li><span>Не&nbsp;горит свет, сломана дверь</span><a href="tel:+73494926022">Приёмная · <b class="num">926-022</b></a></li>
+              <li><span>Что висит на&nbsp;стенде подъезда</span><a href="https://sdnur.ru/page/informacionnyestendymnogokvartirnyhdomov" target="_blank" rel="noopener">Информационные стенды на&nbsp;сайте</a></li>
+            </ul>
+          </article>
+          <article class="zp" id="zp-base" role="tabpanel" aria-labelledby="zt-base" hidden>
+            <h3>Подвал и&nbsp;инженерные сети</h3>
+            <p class="who"><b>Отвечает управляющая компания</b>&nbsp;— за&nbsp;общедомовые сети до&nbsp;квартиры.</p>
+            <p class="inc">Трубы отопления, холодной и&nbsp;горячей воды, канализации, общедомовые приборы учёта, подвальные помещения.</p>
+            <ul class="case">
+              <li><span>Прорыв трубы, нет тепла или воды</span><a href="tel:+73494927777">Аварийная служба · <b class="num">92-7777</b></a></li>
+              <li><span>Показания квартирных счётчиков</span><a href="#resident">АО&nbsp;«ЕРИЦ», с&nbsp;20 по&nbsp;25 число</a></li>
+              <li><span>Газовое оборудование в&nbsp;квартирах</span><a href="https://sdnur.ru/info" target="_blank" rel="noopener">Графики ТО ВДГО в&nbsp;сообщениях</a></li>
+            </ul>
+          </article>
+          <article class="zp" id="zp-yard" role="tabpanel" aria-labelledby="zt-yard" hidden>
+            <h3>Двор</h3>
+            <p class="who"><b>Отвечает управляющая компания</b>&nbsp;— в&nbsp;границах участка дома (он указан в&nbsp;паспорте дома).</p>
+            <p class="inc">Уборка двора и&nbsp;снега, тротуар у&nbsp;дома, контейнерная площадка.</p>
+            <ul class="case">
+              <li><span>Не&nbsp;убран снег, яма на&nbsp;дороге, не&nbsp;горит фонарь</span><a href="https://pos.gosuslugi.ru/" target="_blank" rel="noopener">«Решаем вместе» на&nbsp;Госуслугах</a></li>
+              <li><span>Что можно оставлять у&nbsp;контейнеров</span><a href="#news">Памятка по&nbsp;ТКО и&nbsp;КГО</a></li>
+            </ul>
+          </article>
+        </div>
+        <p class="zhow"><b>Заявка по&nbsp;дому:</b> приёмная <a class="ulink num" href="tel:+73494926022">926-022</a> (пн&nbsp;—&nbsp;пт, 9:00&nbsp;—&nbsp;18:00), почта <a class="ulink" href="mailto:sevdom89@mail.ru">sevdom89@mail.ru</a> или <a class="ulink" href="#contacts">форма на&nbsp;сайте</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec news" id="news">
+  <div class="wrap news-grid">
+    <div class="news-main">
+      <h2 data-split>Объявления для жителей</h2>
+      <ol class="feed">
+        <li data-reveal><time class="num">9&nbsp;окт. 2026</time><a class="ulink" href="https://sdnur.ru/info" target="_blank" rel="noopener">Уважаемые жители!</a></li>
+        <li data-reveal><time class="num">8&nbsp;июн. 2026</time><a class="ulink" href="https://sdnur.ru/info" target="_blank" rel="noopener">Уважаемые жители!</a></li>
+        <li data-reveal><time class="num">19&nbsp;мая 2026</time><a class="ulink" href="https://sdnur.ru/info" target="_blank" rel="noopener">Уважаемые жители!</a></li>
+        <li data-reveal><time class="num">12&nbsp;мар. 2026</time><a class="ulink" href="https://sdnur.ru/info" target="_blank" rel="noopener">Уважаемые жители!</a></li>
+        <li data-reveal><time class="num">10&nbsp;февр. 2026</time><a class="ulink" href="https://sdnur.ru/info" target="_blank" rel="noopener">Уважаемые жители!</a></li>
+      </ol>
+      <h3 class="sub" data-reveal>Памятки</h3>
+      <ul class="memo" data-reveal>
+        <li>Инструкция по&nbsp;безопасному использованию газа</li>
+        <li>Соблюдайте правила использования газа в&nbsp;быту</li>
+        <li>Кибермошенничество</li>
+        <li>Графики ТО ВДГО на&nbsp;3–4 квартал 2025&nbsp;года (с&nbsp;изменениями)</li>
+      </ul>
+    </div>
+    <aside class="news-side">
+      <figure class="tko" data-img><img src="img/tko.webp" alt="Памятка: что допускается к сбору на контейнерной площадке (ТКО и КГО) и что запрещено складировать — строительные, животноводческие отходы, растительный мусор" width="760" height="570" loading="lazy"></figure>
+      <p class="cap">Памятка по&nbsp;ТКО и&nbsp;КГО из&nbsp;сообщений для жителей</p>
+      <div class="stands" data-reveal>
+        <h3>Информационные стенды домов</h3>
+        <ul>
+          <li>Установленные сроки локализации и&nbsp;устранения аварий</li>
+          <li>Адреса и&nbsp;телефоны исполнительной власти</li>
+          <li>Объявление по&nbsp;ТКО</li>
+          <li>Объявление по&nbsp;пожарной безопасности и&nbsp;электрокабелям</li>
+          <li>Сведения о&nbsp;приборах с&nbsp;газовой и&nbsp;с&nbsp;электроплитой</li>
+        </ul>
+        <a class="ulink" href="https://sdnur.ru/page/informacionnyestendymnogokvartirnyhdomov" target="_blank" rel="noopener">Все стенды на&nbsp;сайте</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="disc" id="disclosure" data-theme="night">
+  <div class="wrap">
+    <div class="disc-head">
+      <h2 data-split>Раскрытие информации</h2>
+      <p data-reveal>Обязательный раздел управляющей компании&nbsp;— по&nbsp;Постановлению №731 от&nbsp;23.09.2010, а&nbsp;по&nbsp;каждому дому&nbsp;— по&nbsp;Приказу №882/пр. Вход остаётся на&nbsp;своём месте: в&nbsp;меню и&nbsp;в&nbsp;карточке каждого дома.</p>
+    </div>
+    <div class="disc-grid">
+      <ul class="docs">
+        <li data-reveal><a href="https://sdnur.ru/uk/1" target="_blank" rel="noopener"><b>Информация об&nbsp;управляющей организации</b><span>Форма&nbsp;1: руководитель, лицензия, часы работы, финансовые показатели</span></a></li>
+        <li data-reveal><a href="https://sdnur.ru/house" target="_blank" rel="noopener"><b>Раскрытие по&nbsp;дому</b><span>Паспорт, конструктивные элементы, инженерные системы, выполняемые работы, отчёты</span></a></li>
+        <li data-reveal><a href="https://sdnur.ru/page/archive1" target="_blank" rel="noopener"><b>Документы</b><span>Документы ООО «УК Северный дом», подлежащие раскрытию</span></a></li>
+        <li data-reveal><a href="https://sdnur.ru/page/tarify" target="_blank" rel="noopener"><b>Тарифы</b><span>На&nbsp;содержание и&nbsp;текущий ремонт для населения</span></a></li>
+        <li data-reveal><a href="https://sdnur.ru/page/rekvizityorganizacii" target="_blank" rel="noopener"><b>Реквизиты организации</b><span>ОГРН, ИНН, адреса</span></a></li>
+        <li data-reveal><a href="https://sdnur.ru/page/sout" target="_blank" rel="noopener"><b>СОУТ</b><span>Специальная оценка условий труда</span></a></li>
+        <li data-reveal><a href="https://sdnur.ru/page/oprotivodeistviikorrupcii" target="_blank" rel="noopener"><b>О&nbsp;противодействии коррупции</b><span>Документы и&nbsp;сведения</span></a></li>
+        <li data-reveal><a href="https://sdnur.ru/page/informacionnyestendymnogokvartirnyhdomov" target="_blank" rel="noopener"><b>Информационные стенды</b><span>Копии стендов многоквартирных домов</span></a></li>
+      </ul>
+      <dl class="lic" data-reveal>
+        <div><dt>Лицензия</dt><dd>№&nbsp;<span class="num">089000031</span> от&nbsp;<span class="num">29.04.2015</span></dd></div>
+        <div><dt>Выдана</dt><dd>Департаментом госжилнадзора ЯНАО</dd></div>
+        <div><dt>Вид деятельности</dt><dd>Управление многоквартирными домами</dd></div>
+        <div><dt>Руководитель</dt><dd>Попова Татьяна Александровна</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><p class="track">Арктическая,&nbsp;31 <i>·</i> Восточный,&nbsp;1&nbsp;корп.&nbsp;1А <i>·</i> Восточный,&nbsp;2&nbsp;корп.&nbsp;3А <i>·</i> Восточный,&nbsp;3&nbsp;корп.&nbsp;3 <i>·</i> Восточный,&nbsp;4&nbsp;корп.&nbsp;2 <i>·</i> Восточный,&nbsp;4&nbsp;корп.&nbsp;3 <i>·</i> Восточный,&nbsp;5&nbsp;корп.&nbsp;4 <i>·</i> Восточный,&nbsp;6&nbsp;корп.&nbsp;4Б <i>·</i> Губкина,&nbsp;7&nbsp;лит.&nbsp;Б <i>·</i> Губкина,&nbsp;15 <i>·</i> Губкина,&nbsp;19 <i>·</i> Губкина,&nbsp;26 <i>·</i> Губкина,&nbsp;26&nbsp;(Паркинг) <i>·</i> Дружба,&nbsp;2&nbsp;корп.&nbsp;2 <i>·</i> Дружба,&nbsp;6&nbsp;корп.&nbsp;2 <i>·</i> Дружба,&nbsp;6&nbsp;(Паркинг)&nbsp;корп.&nbsp;2 <i>·</i> Железнодорожная,&nbsp;46А <i>·</i> Ленинградский,&nbsp;17 <i>·</i> Набережная,&nbsp;32&nbsp;корп.&nbsp;1 <i>·</i> Надымская,&nbsp;12&nbsp;корп.&nbsp;1 <i>·</i> Оптимистов,&nbsp;4&nbsp;корп.&nbsp;1 <i>·</i> Оптимистов,&nbsp;4&nbsp;корп.&nbsp;3 <i>·</i> Оптимистов,&nbsp;10&nbsp;корп.&nbsp;1 <i>·</i> Советский,&nbsp;3&nbsp;корп.&nbsp;1 <i>·</i> Созидателей,&nbsp;2А <i>·</i> Созидателей,&nbsp;4&nbsp;корп.&nbsp;1 <i>·</i> Строителей,&nbsp;3 <i>·</i> Строителей,&nbsp;5&nbsp;корп.&nbsp;5 <i>·</i> Тундровый,&nbsp;1 <i>·</i> Тундровый,&nbsp;2 <i>·</i> Тундровый,&nbsp;3 <i>·</i> Тундровый,&nbsp;4 <i>·</i> Тундровый,&nbsp;5 <i>·</i> Тундровый,&nbsp;6 <i>·</i> Юбилейный,&nbsp;1&nbsp;корп.&nbsp;1А <i>·</i> Юбилейный,&nbsp;2&nbsp;корп.&nbsp;2&nbsp;А <i>·</i> Юбилейный,&nbsp;3&nbsp;корп.&nbsp;1а <i>·</i> Южная,&nbsp;52&nbsp;лит.&nbsp;А</p></div>
+
+<section class="sec houses" id="houses">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-split>Дома в&nbsp;управлении</h2>
+      <p data-reveal>В&nbsp;списке на&nbsp;сайте <b class="num" data-count>38</b> адресов, включая два паркинга. Нажмите на&nbsp;адрес&nbsp;— откроется карточка дома.</p>
+    </div>
+    <div class="hgrid">
+<div class="hg" data-reveal><h3>ул.&nbsp;Арктическая</h3><ul><li><button type="button" data-i="0">31</button></li></ul></div>
+<div class="hg" data-reveal><h3>мкр.&nbsp;Восточный</h3><ul><li><button type="button" data-i="1">1&nbsp;корп.&nbsp;1А</button></li><li><button type="button" data-i="2">2&nbsp;корп.&nbsp;3А</button></li><li><button type="button" data-i="3">3&nbsp;корп.&nbsp;3</button></li><li><button type="button" data-i="4">4&nbsp;корп.&nbsp;2</button></li><li><button type="button" data-i="5">4&nbsp;корп.&nbsp;3</button></li><li><button type="button" data-i="6">5&nbsp;корп.&nbsp;4</button></li><li><button type="button" data-i="7">6&nbsp;корп.&nbsp;4Б</button></li></ul></div>
+<div class="hg" data-reveal><h3>пр-кт.&nbsp;Губкина</h3><ul><li><button type="button" data-i="8">7&nbsp;лит.&nbsp;Б</button></li><li><button type="button" data-i="9">15</button></li><li><button type="button" data-i="10">19</button></li><li><button type="button" data-i="11">26</button></li><li><button type="button" data-i="12">26&nbsp;(Паркинг)</button></li></ul></div>
+<div class="hg" data-reveal><h3>мкр.&nbsp;Дружба</h3><ul><li><button type="button" data-i="13">2&nbsp;корп.&nbsp;2</button></li><li><button type="button" data-i="14">6&nbsp;корп.&nbsp;2</button></li><li><button type="button" data-i="15">6&nbsp;(Паркинг)&nbsp;корп.&nbsp;2</button></li></ul></div>
+<div class="hg" data-reveal><h3>ул.&nbsp;Железнодорожная</h3><ul><li><button type="button" data-i="16">46А</button></li></ul></div>
+<div class="hg" data-reveal><h3>пр.&nbsp;Ленинградский</h3><ul><li><button type="button" data-i="17">17</button></li></ul></div>
+<div class="hg" data-reveal><h3>ул.&nbsp;Набережная</h3><ul><li><button type="button" data-i="18">32&nbsp;корп.&nbsp;1</button></li></ul></div>
+<div class="hg" data-reveal><h3>ул.&nbsp;Надымская</h3><ul><li><button type="button" data-i="19">12&nbsp;корп.&nbsp;1</button></li></ul></div>
+<div class="hg" data-reveal><h3>мкр.&nbsp;Оптимистов</h3><ul><li><button type="button" data-i="20">4&nbsp;корп.&nbsp;1</button></li><li><button type="button" data-i="21">4&nbsp;корп.&nbsp;3</button></li><li><button type="button" data-i="22">10&nbsp;корп.&nbsp;1</button></li></ul></div>
+<div class="hg" data-reveal><h3>мкр.&nbsp;Советский</h3><ul><li><button type="button" data-i="23">3&nbsp;корп.&nbsp;1</button></li></ul></div>
+<div class="hg" data-reveal><h3>мкр.&nbsp;Созидателей</h3><ul><li><button type="button" data-i="24">2А</button></li><li><button type="button" data-i="25">4&nbsp;корп.&nbsp;1</button></li></ul></div>
+<div class="hg" data-reveal><h3>мкр.&nbsp;Строителей</h3><ul><li><button type="button" data-i="26">3</button></li><li><button type="button" data-i="27">5&nbsp;корп.&nbsp;5</button></li></ul></div>
+<div class="hg" data-reveal><h3>мкр.&nbsp;Тундровый</h3><ul><li><button type="button" data-i="28">1</button></li><li><button type="button" data-i="29">2</button></li><li><button type="button" data-i="30">3</button></li><li><button type="button" data-i="31">4</button></li><li><button type="button" data-i="32">5</button></li><li><button type="button" data-i="33">6</button></li></ul></div>
+<div class="hg" data-reveal><h3>мкр.&nbsp;Юбилейный</h3><ul><li><button type="button" data-i="34">1&nbsp;корп.&nbsp;1А</button></li><li><button type="button" data-i="35">2&nbsp;корп.&nbsp;2&nbsp;А</button></li><li><button type="button" data-i="36">3&nbsp;корп.&nbsp;1а</button></li></ul></div>
+<div class="hg" data-reveal><h3>ул.&nbsp;Южная</h3><ul><li><button type="button" data-i="37">52&nbsp;лит.&nbsp;А</button></li></ul></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <blockquote class="quote">
+      <p data-split>Мы хотим, чтобы вы узнали о&nbsp;нашей компании, заключили договор и&nbsp;…&nbsp;забыли о&nbsp;нас.</p>
+      <footer data-reveal>Из&nbsp;раздела «О&nbsp;нас»</footer>
+    </blockquote>
+    <div class="about-text">
+      <p data-reveal>«Новый Уренгой&nbsp;— наш общий дом. Северный дом». Принцип добрососедства&nbsp;— основа компании: её сотрудники сами живут в&nbsp;Новом Уренгое и&nbsp;хотят того же, что и&nbsp;жители,&nbsp;— тепла, уюта и&nbsp;чистоты.</p>
+      <p data-reveal>Когда тепло в&nbsp;квартирах, чисто в&nbsp;подъезде и&nbsp;убрано во&nbsp;дворе, можно сосредоточиться на&nbsp;самой жизни. «В&nbsp;мире, который мы строим, есть: сантехники&nbsp;— поэты, дворники&nbsp;— художники, технические работники&nbsp;— философы».</p>
+      <p class="motto" data-reveal>Готовы делать скучную работу, чтобы вы&nbsp;наслаждались интересной.</p>
+      <dl class="figs">
+        <div data-reveal><dt>Лицензия на&nbsp;управление домами</dt><dd>с&nbsp;<span class="num">2015</span></dd></div>
+        <div data-reveal><dt>Адресов в&nbsp;списке домов</dt><dd class="num">38</dd></div>
+        <div data-reveal><dt>Аварийная служба</dt><dd class="t">круглосуточно</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec contacts" id="contacts">
+  <div class="wrap contacts-grid">
+    <div class="cinfo">
+      <h2 data-split>Контакты</h2>
+      <ul class="phones">
+        <li class="ph-sos"><span>Аварийно-диспетчерская служба, круглосуточно</span><a class="num" href="tel:+73494927777">+7&nbsp;(3494)&nbsp;92-7777</a><a class="num" href="tel:+79224564444">+7&nbsp;922&nbsp;456-44-44</a></li>
+        <li><span>Приёмная, запись на&nbsp;приём</span><a class="num" href="tel:+73494926022">+7&nbsp;(3494)&nbsp;926-022</a></li>
+        <li><span>Офис</span><a class="num" href="tel:+73494925210">+7&nbsp;(3494)&nbsp;925-210</a></li>
+        <li><span>Касса, платежи</span><a class="num" href="tel:+73494926689">+7&nbsp;(3494)&nbsp;926-689</a></li>
+        <li><span>Бухгалтерия</span><a class="num" href="tel:+73494926021">+7&nbsp;(3494)&nbsp;926-021</a></li>
+        <li><span>Почта</span><a href="mailto:sevdom89@mail.ru">sevdom89@mail.ru</a></li>
+      </ul>
+      <dl class="addr">
+        <dt>Офис</dt><dd>629300, ЯНАО, г.&nbsp;Новый Уренгой, ул.&nbsp;Юбилейная, д.&nbsp;5, офис&nbsp;2537 (ДЦ «Ямал»)</dd>
+        <dt>Часы работы</dt><dd>Пн&nbsp;—&nbsp;пт 9:00&nbsp;—&nbsp;18:00, перерыв 12:30&nbsp;—&nbsp;14:00. Личный приём: четверг 16:00&nbsp;—&nbsp;17:00, по&nbsp;записи</dd>
+        <dt>Почтовый адрес</dt><dd>г.&nbsp;Новый Уренгой, ул.&nbsp;Интернациональная, д.&nbsp;6, а/я&nbsp;46</dd>
+      </dl>
+    </div>
+    <form class="form" data-demo-form>
+      <h3>Заявка в&nbsp;управляющую компанию</h3>
+      <p class="form-sos">Авария&nbsp;— не&nbsp;пишите, звоните <a class="num" href="tel:+73494927777">92-7777</a></p>
+      <label class="field full"><span>Адрес дома</span><input name="Дом" list="dl-houses" required autocomplete="off"></label>
+      <datalist id="dl-houses"></datalist>
+      <label class="field"><span>Квартира</span><input name="Квартира" inputmode="numeric"></label>
+      <label class="field"><span>Где проблема</span><select name="Где"><option>Подъезд</option><option>Кровля</option><option>Подвал и&nbsp;сети</option><option>Двор</option><option>Другое</option></select></label>
+      <label class="field full"><span>Что случилось</span><textarea name="Описание" required></textarea></label>
+      <label class="field"><span>Имя</span><input name="Имя" required autocomplete="name"></label>
+      <label class="field"><span>Телефон</span><input name="Телефон" required type="tel" autocomplete="tel"></label>
+      <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+      <button class="btn full" data-magnetic data-arrow>Отправить заявку</button>
+      <div class="done full" role="status"><svg class="ok" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="21"/><path d="M14 25l7 7 14-15"/></svg><h3>Так выглядит заявка</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="ftr" data-theme="night"><div class="wrap">
+  <img src="img/logo.webp" alt="Северный дом" width="260" height="43" loading="lazy">
+  <p>ООО «УК Северный дом» · <span class="num">ОГРН 1098904004044 · ИНН 8904062693</span></p>
+  <p><a class="ulink" href="https://sdnur.ru/?special_version=Y" target="_blank" rel="noopener">Версия для слабовидящих</a> · <a class="ulink" href="#disclosure">Раскрытие информации</a></p>
+</div></footer>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73494927777">Авария 92-7777</a><a class="btn" href="#top">Мой дом</a></div>
+<script src="../../kit/vendor/gsap.min.js" defer></script>
+<script src="../../kit/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../../kit/vendor/SplitText.min.js" defer></script>
+<script src="../../kit/vendor/DrawSVGPlugin.min.js" defer></script>
+<script src="../../kit/vendor/MotionPathPlugin.min.js" defer></script>
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script src="app.js" defer></script>
+<script src="fx.js" defer></script>
+</body>
+</html>
