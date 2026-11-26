@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Нижневартовскавиа — вертолёты Ми-8 под задачу заказчика</title>
+<meta name="description" content="Концепция сайта АО «Нижневартовскавиа»: авиационные работы и перевозки на Ми-8Т и Ми-8АМТ, обслуживание вертолётов, авиационный учебный центр. Нижневартовск.">
+<meta property="og:title" content="Нижневартовскавиа — вертолёты Ми-8 под задачу">
+<meta property="og:image" content="img/og.jpg">
+<link rel="icon" href="img/fav.png">
+<link rel="preload" href="../../kit/fonts/sofia-sans-extra-condensed-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../kit/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/hero.webp" as="image" media="(min-width:761px)" fetchpriority="high">
+<link rel="preload" href="img/hero-m.webp" as="image" media="(max-width:760px)" fetchpriority="high">
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a class="logo" href="#main" aria-label="Нижневартовскавиа, на главную"><img src="img/logo.png" alt="Логотип АО «Нижневартовскавиа»" width="384" height="259"><span>Нижневартовск&shy;авиа</span></a>
+  <nav data-menu aria-label="Основное меню"><a href="#task">Задачи</a><a href="#routes">Местные рейсы</a><a href="#about">О компании</a><a href="#docs">Документы</a><a href="#order">Заявка и контакты</a></nav>
+  <a class="tel" href="tel:+73466492042"><small>Заказ вертолётов</small><b class="num">+7 3466 49-20-42</b></a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero" data-theme="night">
+  <picture class="hero-ph">
+    <source media="(max-width:760px)" srcset="img/hero-m.webp" width="960" height="723">
+    <img src="img/hero.webp" alt="Оранжевый вертолёт Ми-8 несёт груз на внешней подвеске над тайгой" width="2092" height="723" fetchpriority="high">
+  </picture>
+  <div class="wrap hero-t">
+    <h1>Вертолёт под&nbsp;вашу задачу</h1>
+    <p>Авиакомпания из&nbsp;Нижневартовска. Перевозим пассажиров и&nbsp;грузы Заказчика на&nbsp;Ми-8 и&nbsp;Ми-8АМТ: в&nbsp;фюзеляже и&nbsp;на&nbsp;внешней подвеске, по&nbsp;вашим заявкам на&nbsp;полёт и&nbsp;маршрутам.</p>
+    <div class="cta"><a class="btn" href="#task" data-magnetic>Выбрать задачу</a><a class="btn btn--ghost num" href="tel:+79129380470">+7&nbsp;912&nbsp;938-04-70</a></div>
+  </div>
+  <dl class="wrap hero-f">
+    <div><dt>Парк</dt><dd>Ми-8Т и&nbsp;Ми-8АМТ</dd></div>
+    <div><dt>На&nbsp;один вертолёт</dt><dd>до&nbsp;22 пассажиров или до&nbsp;4,0&nbsp;т</dd></div>
+    <div><dt>Площадки</dt><dd>подготовленные и&nbsp;подобранные с&nbsp;воздуха</dd></div>
+    <div><dt>Авиапредприятие</dt><dd>с&nbsp;20&nbsp;июля 1965&nbsp;года</dd></div>
+  </dl>
+</section>
+
+<nav class="wrap quick" aria-label="Быстрые действия">
+  <a href="tel:+73466492042"><span>Заказать вертолёт</span><b class="num">49-20-42</b></a>
+  <a href="#routes"><span>Улететь в&nbsp;посёлок</span><b>Местные рейсы</b></a>
+  <a href="tel:+73466492006"><span>Обслужить Ми-8</span><b class="num">49-20-06</b></a>
+  <a href="tel:+73466492056"><span>Учиться в&nbsp;АУЦ</span><b class="num">49-20-56</b></a>
+  <a href="tel:+73466492269"><span>Пройти ВЛЭК</span><b class="num">49-22-69</b></a>
+</nav>
+
+<section class="scene" id="task" data-theme="night" aria-labelledby="task-h">
+  <div class="wrap">
+    <div class="scene-h"><h2 id="task-h">Какую работу нужно выполнить?</h2><p>Выберите задачу: покажем, что делает авиакомпания, цифры по&nbsp;вертолёту и&nbsp;кому звонить.</p></div>
+    <div class="scene-g">
+      <div class="tasks" id="tasks" role="tablist" aria-label="Задачи"></div>
+      <div class="desk" id="desk" role="tabpanel" tabindex="0">
+        <figure class="shot" id="shot"><div class="shot-in" id="shot-in"></div><figcaption id="cap"></figcaption></figure>
+        <div class="pass">
+          <div class="pass-t"><h3 id="p-title"></h3><p id="p-text"></p><p class="note" id="p-note"></p></div>
+          <div class="pass-d">
+            <div id="p-load">
+              <div class="types" role="group" aria-label="Тип вертолёта"><button type="button" data-type="Ми-8Т" aria-pressed="true">Ми-8Т</button><button type="button" data-type="Ми-8АМТ" aria-pressed="false">Ми-8АМТ</button></div>
+              <div class="load">
+                <div class="load-p"><p><b class="num" id="p-pax"></b> <span>пассажиров</span></p><div class="seats" id="seats" aria-hidden="true"></div></div>
+                <i class="or">или</i>
+                <div class="load-c"><p><b class="num">до&nbsp;4,0</b> <span>тонн груза</span></p><div class="tons" aria-hidden="true"><u></u><u></u><u></u><u></u></div></div>
+              </div>
+            </div>
+            <ul class="list" id="p-list"></ul>
+          </div>
+          <div class="pass-a"><p><span id="p-who"></span><span id="p-contact"></span></p><a class="btn" href="#order" id="p-go">Составить заявку</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec routes" id="routes">
+  <div class="wrap">
+    <div class="two">
+      <h2 data-split>Вертолётом в&nbsp;посёлки Нижневартовского района</h2>
+      <p class="lead" data-reveal>Коммерческие перевозки в&nbsp;труднодоступные населённые пункты на&nbsp;Ми-8Т. Расписание на&nbsp;2026&nbsp;год действует с&nbsp;1&nbsp;января по&nbsp;31&nbsp;декабря.</p>
+    </div>
+    <ul class="lines">
+      <li data-reveal><small>НП-9803 / 9804</small><ol><li>Нижневартовск</li><li>Большой Ларьяк</li><li>Чехломей</li><li>Ларьяк</li><li>Корлики</li></ol></li>
+      <li data-reveal><small>НП-9806 / 9807</small><ol><li>Нижневартовск</li><li>Сосновый Бор</li><li>Ларьяк</li><li>Корлики</li></ol></li>
+      <li data-reveal><small>НП-9808 / 9809</small><ol><li>Нижневартовск</li><li>Ларьяк</li><li>Корлики</li></ol></li>
+      <li data-reveal class="mud"><small>НП-9805, в&nbsp;распутицу</small><ol><li>Нижневартовск</li><li>Покур</li><li>Былино</li><li>Вампугол</li></ol></li>
+      <li data-reveal class="mud"><small>НП-9819 / 9820, в&nbsp;распутицу</small><ol><li>Нижневартовск</li><li>Ларьяк</li><li>Чехломей</li><li>Корлики</li></ol></li>
+    </ul>
+    <div class="tickets" data-reveal>
+      <p><b>Билеты&nbsp;— в&nbsp;кассах аэропорта.</b> Продажа открывается за&nbsp;15&nbsp;дней до&nbsp;вылета. Обратная продажа не&nbsp;производится, промежуточные брони не&nbsp;устанавливаются. Маршруты показаны из&nbsp;Нижневартовска, не&nbsp;в&nbsp;масштабе.</p>
+      <ul>
+        <li><a class="link" href="https://nvavia.ru/Home/Show?_id=6114" target="_blank" rel="noopener">Даты, время и&nbsp;тарифы</a></li>
+        <li><a class="link" href="https://nvavia.ru/Home/Show?_id=67" target="_blank" rel="noopener">Пассажирам с&nbsp;инвалидностью</a></li>
+        <li><a class="link" href="https://nvavia.ru/Home/Show?_id=6128" target="_blank" rel="noopener">Перевозка оружия и&nbsp;патронов</a></li>
+        <li><a class="link" href="https://nvavia.ru/Home/Show?_id=6129" target="_blank" rel="noopener">Что нельзя брать на&nbsp;борт</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div class="two">
+      <h2 data-split>С&nbsp;геологами и&nbsp;нефтяниками с&nbsp;самого начала</h2>
+      <div data-reveal>
+        <p class="lead">Авиапредприятие образовано 20&nbsp;июля 1965&nbsp;года, в&nbsp;год открытия Самотлорского месторождения. В&nbsp;тайге и&nbsp;болотах авиаторы стали помощниками геологов, нефтяников и&nbsp;энергетиков.</p>
+        <p>Сегодня это авиакомпания с&nbsp;базой на&nbsp;аэродроме Нижневартовск. В&nbsp;составе: лётный отряд, инженерно-авиационная служба, авиационный учебный центр и&nbsp;врачебно-лётная экспертная комиссия. С&nbsp;2009&nbsp;года 100&nbsp;% акций принадлежат Ханты-Мансийскому автономному округу. Генеральный директор&nbsp;— Д.&nbsp;Г.&nbsp;Падуков.</p>
+      </div>
+    </div>
+    <ol class="years">
+      <li data-reveal><b>1965</b><span>Образовано Нижневартовское авиапредприятие</span></li>
+      <li data-reveal><b>1973</b><span>Начало эксплуатации вертолётов Ми-8</span></li>
+      <li data-reveal><b>2010</b><span>Аккредитация в&nbsp;ООН и&nbsp;Всемирной продовольственной программе на&nbsp;перевозки за&nbsp;рубежом</span></li>
+      <li data-reveal><b>2019</b><span>Приобретены два новых вертолёта Ми-8АМТ</span></li>
+      <li data-reveal><b>2023</b><span>Аэропорт передан другому юрлицу; общество работает как вертолётная авиакомпания</span></li>
+    </ol>
+    <div class="abroad">
+      <figure class="a1" data-img><img src="img/abroad-af.webp" alt="Два белых вертолёта Ми-8 на фоне гор в Афганистане: один взлетает" width="1569" height="572"></figure>
+      <div class="a-t" data-reveal><h3>Работа за&nbsp;рубежом</h3><p>В&nbsp;разное время экипажи и&nbsp;инженеры работали в&nbsp;Непале, Йемене, Пакистане, Индонезии, Ираке, Афганистане, Кот-д’Ивуаре, Сьерра-Леоне, Либерии, Гвинее, Мали, Конго, Южном Судане, Судане, Сомали и&nbsp;на&nbsp;Гаити, а&nbsp;в&nbsp;2023–2024 годах&nbsp;— на&nbsp;тушении пожаров в&nbsp;Турции.</p></div>
+      <figure class="a2" data-img><img src="img/abroad-an124.webp" alt="Белый вертолёт Ми-8 у открытого носового люка транспортного самолёта Ан-124" width="1024" height="576"></figure>
+      <figure class="a3" data-img><img src="img/abroad-il76.webp" alt="Загрузка вертолётов в самолёт Ил-76" width="1024" height="768"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec docs" id="docs">
+  <div class="wrap docs-g">
+    <div><h2 data-split>Документы, по&nbsp;которым мы&nbsp;летаем</h2>
+      <p class="safety" data-reveal><b>Безопасность полётов.</b> Добровольные сообщения принимает руководитель по&nbsp;управлению безопасностью полётов: <a class="num" href="tel:+79825359707">8&nbsp;982&nbsp;535-97-07</a>, <a href="mailto:rukhlyak@nvavia.ru">rukhlyak@nvavia.ru</a></p></div>
+    <div>
+      <dl class="papers">
+        <div data-reveal><dt>Сертификат эксплуатанта <span class="num">№&nbsp;470</span></dt><dd>Право на&nbsp;коммерческие воздушные перевозки. Действует до&nbsp;приостановления или аннулирования.</dd></div>
+        <div data-reveal><dt>Сертификат организации по&nbsp;ТО <span class="num">№&nbsp;145-26-155</span></dt><dd>Соответствие ФАП-145, выдан 24.07.2026.</dd></div>
+        <div data-reveal><dt>Свидетельства по&nbsp;полётной информации</dt><dd><span class="num">№&nbsp;MI8-16800011026-26</span> и&nbsp;<span class="num">№&nbsp;MI8-16900011026-26</span>: сбор, обработка и&nbsp;анализ по&nbsp;Ми-8Т(П) и&nbsp;Ми-8АМТ.</dd></div>
+        <div data-reveal><dt>Страхование ответственности перевозчика</dt><dd>АО «СОГАЗ», договор действует с&nbsp;15.03.2026 по&nbsp;14.03.2027.</dd></div>
+      </dl>
+      <ul class="more" data-reveal>
+        <li><a href="https://nvavia.ru/Home/Show?_id=6131&amp;_cl=s" target="_blank" rel="noopener">Сертификаты и&nbsp;лицензии</a></li>
+        <li><a href="https://nvavia.ru/Home/Show?_id=48&amp;_cl=s" target="_blank" rel="noopener">Раскрытие информации</a></li>
+        <li><a href="https://nvavia.ru/Home/Show?_id=5106&amp;_cl=s" target="_blank" rel="noopener">Закупки</a></li>
+        <li><a href="https://nvavia.ru/Home/Show?_id=6110&amp;_cl=s" target="_blank" rel="noopener">Торги</a></li>
+        <li><a href="https://nvavia.ru/Home/Show?_id=6118&amp;_cl=s" target="_blank" rel="noopener">Охрана труда</a></li>
+        <li><a href="https://nvavia.ru/Home/Show?_id=60&amp;_cl=s" target="_blank" rel="noopener">Противодействие коррупции</a></li>
+        <li><a href="https://nvavia.ru/Home/Show?_id=4087&amp;_cl=s" target="_blank" rel="noopener">Персональные данные</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec order" id="order" data-theme="night">
+  <div class="wrap order-g">
+    <div class="sheet"><form data-demo-form id="form">
+      <h2>Заявка на&nbsp;полёт и&nbsp;услуги</h2>
+      <div class="f2">
+        <label class="field full"><span>Задача</span><select name="Задача" id="f-task"></select></label>
+        <fieldset class="f2 full" id="f-flight">
+          <legend class="sr">Параметры полёта</legend>
+          <label class="field"><span>Откуда</span><input name="Откуда" autocomplete="off"></label>
+          <label class="field"><span>Куда или район работ</span><input name="Куда" autocomplete="off"></label>
+          <label class="field"><span>Площадка назначения</span><select name="Площадка"><option>Пока не знаю</option><option>Подготовленная</option><option>Подбирается с воздуха</option></select></label>
+          <label class="field"><span>Вертолёт</span><select name="Вертолёт" id="f-type"><option value="">Любой подходящий</option><option>Ми-8Т</option><option>Ми-8АМТ</option></select></label>
+          <label class="field"><span>Пассажиров</span><input name="Пассажиров" id="f-pax" type="number" min="0" step="1" inputmode="numeric"></label>
+          <label class="field"><span>Груз, тонн</span><input name="Груз, т" id="f-ton" type="number" min="0" step="any" inputmode="decimal"></label>
+          <p class="hint full" id="f-hint" role="status"></p>
+        </fieldset>
+        <label class="field full"><span>Когда нужно</span><input name="Когда" autocomplete="off"></label>
+        <label class="field full"><span>Что сделать: груз, объект, пожелания</span><textarea name="Описание"></textarea></label>
+        <label class="field"><span>Организация и&nbsp;имя</span><input name="Контакт" required autocomplete="organization"></label>
+        <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+        <label class="agree full"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+        <button class="btn full">Отправить заявку</button>
+      </div>
+      <div class="done" role="status"><h2>Так заявка придёт в&nbsp;авиакомпанию</h2><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+    </form></div>
+    <div class="cont">
+      <h2>Контакты</h2>
+      <p class="big"><span>Заказ вертолётов</span><a class="num" href="tel:+73466492042">+7 3466 49-20-42</a><a class="num" href="tel:+79129380470">+7 912 938-04-70</a></p>
+      <dl class="dir">
+        <div><dt>Приёмная</dt><dd><a class="num" href="tel:+73466492002">+7 3466 49-20-02</a><a href="mailto:office@nvavia.ru">office@nvavia.ru</a></dd></div>
+        <div><dt>Обслуживание вертолётов</dt><dd><a class="num" href="tel:+73466492006">49-20-06</a><a class="num" href="tel:+73466492083">49-20-83</a></dd></div>
+        <div><dt>Авиационный учебный центр</dt><dd><a class="num" href="tel:+73466492056">49-20-56</a><a href="mailto:nvutc@nvavia.ru">nvutc@nvavia.ru</a></dd></div>
+        <div><dt>ВЛЭК, секретарь</dt><dd><a class="num" href="tel:+73466492269">49-22-69</a></dd></div>
+        <div><dt>Отдел кадров, вакансии</dt><dd><a class="num" href="tel:+73466492013">49-20-13</a><a href="mailto:kozlova@nvavia.ru">kozlova@nvavia.ru</a></dd></div>
+      </dl>
+      <address>г.&nbsp;Нижневартовск, ул.&nbsp;Авиаторов,&nbsp;2<br>Почта: 628609, ХМАО&nbsp;– Югра, г.&nbsp;Нижневартовск, ОПС-9, а/я&nbsp;1628</address>
+    </div>
+  </div>
+  <footer class="wrap ftr"><p>АО «Нижневартовскавиа», ИНН&nbsp;8603119138. Фото с&nbsp;сайта авиакомпании; авторы подписанных снимков: Vladislav Gubzhokov, Alexander Krasnikov, Michael Panyuta.</p><a class="link" href="#main">Наверх</a></footer>
+</section>
+</main>
+<div class="mbar"><a class="btn btn--ghost" href="tel:+73466492042">Позвонить</a><a class="btn" href="#order">Заявка</a></div>
+
+<script src="app.js" defer></script>
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+</body>
+</html>

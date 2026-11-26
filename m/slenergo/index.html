@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>var r=document.documentElement;r.classList.add('js');try{if(localStorage.getItem('slen-a11y')==='1')r.classList.add('a11y')}catch(e){}</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Салехардэнерго — свет, тепло и вода в Салехарде</title>
+<meta name="description" content="Концепция сайта АО «Салехардэнерго»: аварийные телефоны, показания приборов учёта, оплата, тарифы и подключение к сетям в Салехарде.">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="../../kit/fonts/commissioner-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../kit/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<link rel="stylesheet" href="style.css">
+<script defer src="../../kit/vendor/lenis.min.js"></script>
+<script defer src="../../kit/kit.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="hdr" data-header>
+  <div class="wrap">
+    <a class="logo" href="#main">
+      <img src="img/logo.png" width="132" height="93" alt="Эмблема АО «Салехардэнерго»">
+      <span><small>Акционерное общество</small><b>«Салехардэнерго»</b></span>
+    </a>
+    <nav data-menu id="menu" aria-label="Разделы">
+      <a href="#abonentam">Абонентам</a>
+      <a href="#dom">Подключение</a>
+      <a href="#tarify">Тарифы</a>
+      <a href="#biznes">Организациям</a>
+      <a href="#predpriyatie">Предприятие</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="phone tel" href="tel:88003502080"><b>8-800-350-20-80</b><small>контактный центр</small></a>
+    <button type="button" class="eye" id="eye" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+      <span>Для слабовидящих</span>
+    </button>
+    <button type="button" data-burger aria-expanded="false" aria-controls="menu" aria-label="Меню"></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-g">
+    <div>
+      <h1><em>Свет, тепло и вода</em> для Салехарда</h1>
+      <p class="lead">Производим, передаём и реализуем электрическую и тепловую энергию, питьевую воду для предприятий, учреждений и населения города.</p>
+      <div class="cta">
+        <a class="btn" href="#pokazaniya">Передать показания</a>
+        <a class="btn btn--ghost" href="#dom">Подключить дом</a>
+      </div>
+    </div>
+    <div class="sos" id="avaria">
+      <h2>Авария на наружных сетях</h2>
+      <ul>
+        <li><a href="tel:+73492243014"><span>Электроснабжение</span><b class="num"><i>+7 (34922)</i>4-30-14</b></a></li>
+        <li><a href="tel:+73492243219"><span>Теплоснабжение, водоснабжение, централизованное водоотведение</span><b class="num"><i>+7 (34922)</i>4-32-19</b></a></li>
+      </ul>
+      <dl>
+        <div><dt>Контактный центр</dt><dd><a class="tel" href="tel:88003502080">8-800-350-20-80</a></dd></div>
+        <div><dt>Заказ воды</dt><dd><a class="tel" href="tel:+73492241616">(34922) 4-16-16</a></dd></div>
+      </dl>
+    </div>
+  </div>
+  <nav class="quick" aria-label="Быстрые действия абонента">
+    <div class="wrap">
+      <ul>
+        <li><a href="#pokazaniya"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 16l6-6M9 21h14"/></svg><b>Передать показания</b><span>телефон, СМС, почта, кабинет ЕРИЦ</span></a></li>
+        <li><a href="#oplata"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="8" width="24" height="17" rx="3"/><path d="M4 14h24M9 20h6"/></svg><b>Оплатить услуги</b><span>онлайн, на почте и в кассах</span></a></li>
+        <li><a href="#tarify"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4h12l6 6v18H8zM20 4v6h6M12 17h10M12 22h10"/></svg><b>Тарифы</b><span>для населения с 1 октября 2026</span></a></li>
+        <li><a href="#dom"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 15L16 6l11 9M8 13v13h16V13M16 26v-8"/></svg><b>Подключиться</b><span>к сетям тепла, воды и канализации</span></a></li>
+        <li><a href="tel:+73492241616"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4s9 10 9 16a9 9 0 11-18 0c0-6 9-16 9-16z"/></svg><b>Заказать воду</b><span>привозная вода: <i class="num">4-16-16</i></span></a></li>
+        <li><a href="#chasy"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg><b>Долги и часы приёма</b><span>начисления, задолженность, офис</span></a></li>
+      </ul>
+    </div>
+  </nav>
+</section>
+
+<section class="house" id="dom" aria-labelledby="dom-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="dom-h">Дом в разрезе: выберите, с чем нужна помощь</h2>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Система дома">
+      <button type="button" role="tab" id="t-el" data-s="el" aria-controls="p-el">Свет</button>
+      <button type="button" role="tab" id="t-he" data-s="he" aria-controls="p-he">Тепло</button>
+      <button type="button" role="tab" id="t-wa" data-s="wa" aria-controls="p-wa">Вода</button>
+      <button type="button" role="tab" id="t-se" data-s="se" aria-controls="p-se">Канализация</button>
+    </div>
+    <div class="house-g">
+      <figure class="drawing">
+        <!-- Условный чертёж: щелчок по линии дублирует вкладки, поэтому для клавиатуры и чтения с экрана он скрыт -->
+        <svg class="dw" id="dw" viewBox="0 0 760 590" aria-hidden="true" data-on="he">
+          <defs>
+            <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" stroke="#8A91B0" stroke-width="1"/></pattern>
+          </defs>
+          <rect width="760" height="590" fill="#EDF1FA"/>
+          <!-- грунт и снег -->
+          <rect y="470" width="760" height="120" fill="#D9DDEA"/>
+          <rect y="480" width="760" height="110" fill="url(#hatch)" opacity=".35"/>
+          <path d="M0 470 Q60 462 130 470 T300 470 T470 470 T620 468 T760 470 V480 H0Z" fill="#fff" stroke="#9AA2C0"/>
+          <!-- сваи и перекрытия -->
+          <g class="wall"><path d="M168 430h12v112l-6 10-6-10zM258 430h12v112l-6 10-6-10zM348 430h12v112l-6 10-6-10zM438 430h12v112l-6 10-6-10zM528 430h12v38h-12z"/></g>
+          <path class="room" d="M162 176H548V416H162Z"/>
+          <path class="room" d="M150 170L355 84L560 170Z"/>
+          <g class="glow"><path d="M162 176H352V286H162ZM358 176H548V286H358ZM162 298H330V416H162ZM336 298H548V416H336Z"/></g>
+          <g class="thin">
+            <!-- окна задней стены -->
+            <path d="M200 196h70v52h-70zM235 196v52M440 196h56v42h-56zM468 196v42M200 318h70v52h-70zM235 318v52M436 318h56v40h-56zM464 318v40" />
+            <!-- кровать, диван, стол, кухня -->
+            <path d="M280 286v-22h62v22M280 272h62M288 264v-9h18v9M276 416v-20h46v20M276 396v-14h10v14M366 416v-36h60M366 394h46M345 286v0M240 138h230M355 84v54"/>
+          </g>
+          <g class="wall">
+            <path d="M150 170h12v246h-12zM548 170h12v246h-12zM150 286h410v12H150zM150 170h410v6H150zM140 416h430v14H140z"/>
+            <path d="M352 176h6v66h-6zM330 298h6v40h-6z"/>
+          </g>
+          <path d="M122 176L355 78L588 176L576 178L355 90L134 178Z" fill="#2B315F"/>
+          <path d="M118 170Q125 160 145 156L355 68L570 158Q590 164 592 172L584 174L355 78L128 174Z" fill="#fff" stroke="#9AA2C0" stroke-width="1.4"/>
+          <!-- надземный короб теплосети и водопровода -->
+          <g class="thin"><path d="M570 432H760V472H570M600 472v-0M612 472l-8 12h20l-8-12M692 472l-8 12h20l-8-12"/></g>
+
+          <g class="sys" data-s="se">
+            <path class="hit" d="M520 280H531V540H760"/>
+            <path class="ln" d="M490 278V284H531V540H760M392 394V410H531"/>
+            <path class="dev" d="M438 260h66q0 20-14 20h-38q-14 0-14-20zM512 262h12v14h-4v8h-8z"/>
+            <path class="fl" d="M490 278V284H531V540H760M392 394V410H531"/>
+          </g>
+          <g class="sys" data-s="wa">
+            <path class="hit" d="M760 461H404V230"/>
+            <path class="ln" d="M760 461H404V388H382V372M404 388V230H440V250"/>
+            <path class="dev" d="M376 366h14v7h-14zM434 248h14v7h-14zM376 392h32v-8h-32z"/>
+            <circle class="dev" cx="404" cy="448" r="10"/>
+            <path class="fl" d="M760 461H404V388H382V372M404 388V230H440V250"/>
+          </g>
+          <g class="sys" data-s="he">
+            <path class="hit" d="M760 443H478M450 443H188V268"/>
+            <path class="ln" d="M760 443H478M450 443H188V268H204M188 390H204M478 450H516V390H498"/>
+            <path class="dev" d="M450 436h28v26h-28z"/>
+            <path class="dev" d="M204 256h66v24h-66zM215 256v24M226 256v24M237 256v24M248 256v24M259 256v24M204 378h66v26h-66zM215 378v26M226 378v26M237 378v26M248 378v26M259 378v26M440 378h58v26h-58zM452 378v26M464 378v26M476 378v26M488 378v26"/>
+            <path class="fl" d="M760 443H478M450 443H188V268H204M188 390H204M478 450H516V390H498"/>
+          </g>
+          <g class="sys" data-s="el">
+            <path class="hit" d="M760 510H590V345H548M537 330V182H250M537 304H250"/>
+            <path class="ln" d="M760 510H590V345H546M537 330V304H246M537 304V182H246M246 182v12M450 182v12M246 304v12M450 304v12"/>
+            <path class="dev" d="M528 330h18v30h-18z"/>
+            <path class="dev bulb" d="M234 206q0-12 12-12t12 12zM438 206q0-12 12-12t12 12zM234 328q0-12 12-12t12 12zM438 328q0-12 12-12t12 12z"/>
+            <path class="fl" d="M760 510H590V345H546M537 330V304H246M537 304V182H246"/>
+          </g>
+
+          <!-- подписи -->
+          <path class="lead-ln" d="M546 354L612 354M397 455L344 488M464 462V489M700 432V412"/>
+          <g class="lbl">
+            <text x="616" y="358">щит и счётчик</text>
+            <text x="464" y="501" text-anchor="middle">тепловой узел</text>
+            <text x="340" y="496" text-anchor="end">водомер</text>
+            <text x="750" y="406" text-anchor="end">теплосеть и водопровод</text>
+            <text x="750" y="500" text-anchor="end">электрокабель</text>
+            <text x="750" y="566" text-anchor="end">на очистные сооружения →</text>
+          </g>
+
+          <g class="pill" data-s="el"><rect x="268" y="188" width="76" height="30" rx="15"/><text x="306" y="208">Свет</text></g>
+          <g class="pill" data-s="he"><rect x="188" y="340" width="86" height="30" rx="15"/><text x="231" y="360">Тепло</text></g>
+          <g class="pill" data-s="wa"><rect x="362" y="322" width="78" height="30" rx="15"/><text x="401" y="342">Вода</text></g>
+          <g class="pill" data-s="se"><rect x="454" y="525" width="148" height="30" rx="15"/><text x="528" y="545">Канализация</text></g>
+        </svg>
+        <figcaption>Условная схема: нажмите на линию в доме или на кнопку сверху.</figcaption>
+      </figure>
+
+      <div>
+        <div class="pane" role="tabpanel" id="p-el" aria-labelledby="t-el" data-s="el">
+          <h3>Свет</h3>
+          <div class="row">
+            <h4>Нет света из-за наружных сетей</h4>
+            <a class="big tel" href="tel:+73492243014">(34922) 4-30-14</a>
+          </div>
+          <div class="row">
+            <h4>Договор и подключение</h4>
+            <p>Населению договор оформляют в Центре обслуживания клиентов, ул. Чубынина, 14. На странице услуг опубликованы порядок и заявки на присоединение к электросетям в посёлке Пельвож, в том числе до 15 кВт.</p>
+            <div class="links"><a class="tl" href="https://www.slenergo.ru/page/tehnologicheskoe-prisoedinenie/" target="_blank" rel="noopener">Порядок и заявки</a><a class="tl" href="#biznes">Организациям</a></div>
+          </div>
+          <div class="row">
+            <h4>Показания, оплата, счётчик</h4>
+            <p>Узлы учёта: <a class="tel" href="tel:+73492242116">4-21-16</a>, <a class="tel" href="tel:+73492242216">4-22-16</a>, <a class="tel" href="tel:+73492249025">4-90-25</a></p>
+            <div class="links"><a class="tl" href="#pokazaniya">Передать показания</a><a class="tl" href="#oplata">Где оплатить</a></div>
+          </div>
+          <div class="row">
+            <h4>Тариф для населения, 01.10–31.12.2026</h4>
+            <div data-tariff>
+              <div class="price"><div><b>4,77 ₽</b><span>1-й диапазон, за кВт·ч</span></div><div><b>8,74 ₽</b><span>2-й диапазон</span></div><div><b>12,62 ₽</b><span>3-й диапазон</span></div></div>
+              <p class="sm">Салехард и Горнокнязевск, одноставочный, с НДС. Границы диапазонов зависят от типа жилья. Для городских домов с электроплитами или электроотоплением 1-й диапазон — 3,34 ₽.</p>
+            </div>
+            <a class="tl" href="#tarify">Все тарифы</a>
+          </div>
+        </div>
+
+        <div class="pane" role="tabpanel" id="p-he" aria-labelledby="t-he" data-s="he">
+          <h3>Тепло</h3>
+          <div class="row">
+            <h4>Проблема на наружных теплосетях</h4>
+            <a class="big tel" href="tel:+73492243219">(34922) 4-32-19</a>
+          </div>
+          <div class="row">
+            <h4>Подключить объект к теплоснабжению</h4>
+            <p>Консультация и статус заявки: <a class="tel" href="tel:+73492254481">5-44-81</a>, <a class="tel" href="tel:+73492254489">5-44-89</a>. Почта для заявок: <a href="mailto:gruppatp@mail.ru">gruppatp@mail.ru</a></p>
+            <div class="links"><a class="tl" href="https://lktp.slenergo.ru/" target="_blank" rel="noopener">Личный кабинет</a><a class="tl" href="https://www.gosuslugi.ru/600561/1/form" target="_blank" rel="noopener">Заявка на Госуслугах</a></div>
+          </div>
+          <div class="row">
+            <h4>Показания, оплата, счётчик</h4>
+            <p>Узлы учёта: <a class="tel" href="tel:+73492242116">4-21-16</a>, <a class="tel" href="tel:+73492242216">4-22-16</a>, <a class="tel" href="tel:+73492249025">4-90-25</a></p>
+            <div class="links"><a class="tl" href="#pokazaniya">Передать показания</a><a class="tl" href="#oplata">Где оплатить</a></div>
+          </div>
+          <div class="row">
+            <h4>Тариф для населения, 01.10–31.12.2026</h4>
+            <div data-tariff>
+              <div class="price p2"><div><b>2 406,27 ₽</b><span>за Гкал, Салехард</span></div><div><b>2 370,00 ₽</b><span>за Гкал, Горнокнязевск</span></div></div>
+              <p class="sm">С НДС.</p>
+            </div>
+            <a class="tl" href="#tarify">Все тарифы</a>
+          </div>
+        </div>
+
+        <div class="pane" role="tabpanel" id="p-wa" aria-labelledby="t-wa" data-s="wa">
+          <h3>Вода</h3>
+          <div class="row">
+            <h4>Проблема на наружных сетях водоснабжения</h4>
+            <a class="big tel" href="tel:+73492243219">(34922) 4-32-19</a>
+            <p>Заказ привозной воды: <a class="tel" href="tel:+73492241616"><b>4-16-16</b></a>. Талоны продают в кассе на ул. Свердлова, 39.</p>
+            <a class="tl" href="https://www.slenergo.ru/uploadfiles/standarts/grafik-podvoza-vodi-noyabr--2026g.docx" target="_blank" rel="noopener">График подвоза, ноябрь 2026 (docx)</a>
+          </div>
+          <div class="row">
+            <h4>Подключить объект к водоснабжению</h4>
+            <p>Консультация и статус заявки: <a class="tel" href="tel:+73492254481">5-44-81</a>, <a class="tel" href="tel:+73492254489">5-44-89</a>. Почта для заявок: <a href="mailto:gruppatp@mail.ru">gruppatp@mail.ru</a></p>
+            <div class="links"><a class="tl" href="https://lktp.slenergo.ru/" target="_blank" rel="noopener">Личный кабинет</a><a class="tl" href="https://www.gosuslugi.ru/600484/1/form" target="_blank" rel="noopener">Заявка на Госуслугах</a></div>
+          </div>
+          <div class="row">
+            <h4>Показания и оплата</h4>
+            <div class="links"><a class="tl" href="#pokazaniya">Передать показания</a><a class="tl" href="#oplata">Где оплатить</a></div>
+          </div>
+          <div class="row">
+            <h4>Тариф для населения, 01.10–31.12.2026</h4>
+            <div data-tariff>
+              <div class="price p2"><div><b>88,00 ₽</b><span>холодная вода, за м³</span></div><div><b>88,00 ₽</b><span>подвоз воды, за м³</span></div></div>
+              <p class="sm">Салехард, с НДС. Горячая вода: компонент на холодную воду 88,00 ₽ за м³ и компонент на тепловую энергию 2 406,27 ₽ за Гкал.</p>
+            </div>
+            <a class="tl" href="#tarify">Все тарифы</a>
+          </div>
+        </div>
+
+        <div class="pane" role="tabpanel" id="p-se" aria-labelledby="t-se" data-s="se">
+          <h3>Канализация</h3>
+          <div class="row">
+            <h4>Проблема на наружных сетях централизованного водоотведения</h4>
+            <a class="big tel" href="tel:+73492243219">(34922) 4-32-19</a>
+          </div>
+          <div class="row">
+            <h4>Подключить объект к водоотведению</h4>
+            <p>Консультация и статус заявки: <a class="tel" href="tel:+73492254481">5-44-81</a>, <a class="tel" href="tel:+73492254489">5-44-89</a>. Почта для заявок: <a href="mailto:gruppatp@mail.ru">gruppatp@mail.ru</a></p>
+            <div class="links"><a class="tl" href="https://lktp.slenergo.ru/" target="_blank" rel="noopener">Личный кабинет</a><a class="tl" href="https://www.gosuslugi.ru/600484/1/form" target="_blank" rel="noopener">Заявка на Госуслугах</a></div>
+          </div>
+          <div class="row">
+            <h4>Договор и оплата</h4>
+            <p>Населению договор оформляют в Центре обслуживания клиентов, ул. Чубынина, 14. Организациям по водоснабжению и водоотведению: <a class="tel" href="tel:+73492254587">5-45-87</a>, <a class="tel" href="tel:+73492254589">5-45-89</a></p>
+            <div class="links"><a class="tl" href="#oplata">Где оплатить</a></div>
+          </div>
+          <div class="row">
+            <h4>Тариф для населения, 01.10–31.12.2026</h4>
+            <div data-tariff>
+              <div class="price p2"><div><b>99,00 ₽</b><span>водоотведение, за м³</span></div></div>
+              <p class="sm">Салехард, с НДС, с использованием систем коммунальной инфраструктуры.</p>
+            </div>
+            <a class="tl" href="#tarify">Все тарифы</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="abonentam" aria-labelledby="ab-h">
+  <div class="wrap">
+    <div class="head"><h2 id="ab-h">Абонентам</h2></div>
+    <div class="cols">
+      <div id="pokazaniya">
+        <h3>Передать показания</h3>
+        <ul class="ways">
+          <li>Личный кабинет АО «ЕРИЦ ЯНАО»<small>с 15 по 25 число</small><span class="state" data-win="15-25" hidden></span><br><a class="tl" href="https://lk.eric-yanao.ru/" target="_blank" rel="noopener">lk.eric-yanao.ru</a></li>
+          <li>По телефону <a class="tel" href="tel:88003502080">8-800-350-20-80</a><small>с 20 по 23 число</small><span class="state" data-win="20-23" hidden></span></li>
+          <li>СМС на номер <a class="tel" href="sms:+79924054484">8-992-405-4484</a><small>с 20 по 23 число</small></li>
+          <li>Письмом на <a href="mailto:SE_info@bk.ru">SE_info@bk.ru</a><small>с 20 по 23 число</small></li>
+        </ul>
+        <p class="sm" style="margin-top:12px">Порядок для потребителей категории «население».</p>
+      </div>
+      <div id="oplata">
+        <h3>Оплатить услуги</h3>
+        <ul class="ways">
+          <li>Личный кабинет на сайте <a href="https://eric-yanao.ru/" target="_blank" rel="noopener">ЕРИЦ ЯНАО</a></li>
+          <li>Личный кабинет на сайте Сбербанка</li>
+          <li>Отделения Почты России</li>
+          <li>Административное здание, ул. Свердлова, 39<small>касса: пн–пт 8:30–17:30, перерыв 12:30–14:30</small></li>
+          <li>Центр обслуживания клиентов, ул. Чубынина, 14</li>
+          <li>Кассы АО «ЕРИЦ ЯНАО», ул. Броднева, 55</li>
+        </ul>
+        <a class="tl" href="https://www.slenergo.ru/page/pages-4753/" target="_blank" rel="noopener">Реквизиты для оплаты</a>
+      </div>
+      <div id="chasy">
+        <h3>Часы приёма и долги</h3>
+        <ul class="ways">
+          <li><b>Население</b><small>Пн–пт 8:00–20:00, суббота и предпраздничные дни 8:00–18:00, без перерыва. Воскресенье — выходной.</small></li>
+          <li><b>Организации и прочие потребители</b><small>Пн–чт 8:30–18:00, перерыв 12:30–14:00. Пт 8:30–12:30. Сб и вс — выходные.</small></li>
+          <li>Консультация по начислениям<br><a class="tl tel" href="tel:88003502080">8-800-350-20-80</a></li>
+          <li>По вопросам задолженности<br><a class="tl tel" href="tel:+73492254562">5-45-62</a>&ensp; <a class="tl tel" href="tel:+73492254563">5-45-63</a>&ensp; <a class="tl tel" href="tel:+73492254564">5-45-64</a></li>
+        </ul>
+        <a class="tl" href="https://www.slenergo.ru/page/information/" target="_blank" rel="noopener">Бланки заявлений</a>
+      </div>
+    </div>
+
+    <div class="off" id="otklyucheniya">
+      <div class="off-h">
+        <h3>Объявления об отключениях</h3>
+        <a class="tl" href="https://www.slenergo.ru/page/news/" target="_blank" rel="noopener">Свежие объявления на странице новостей</a>
+      </div>
+      <p class="sm">Примеры из ленты предприятия на 26.11.2026. Это не оперативная сводка.</p>
+      <ul>
+        <li><b>20.11.2026, 9:00–11:00</b><span>Теплоснабжение: ул. Гаврюшина, 26, 28; ул. Кирпичная, 12; ул. Республики, 70, 72.</span><span class="state" data-day="2026-11-20">работы 20 ноября</span></li>
+        <li><b>17.11.2026, 14:30–17:30</b><span>Теплоснабжение: ул. Игарская, 36, 38, 38А, 40, 41А, 44, 48, 52, 54, 56; ул. Патрикеева, 19А, 19Г, 21А, 21Б.</span><span class="state" data-day="2026-11-17">работы 17 ноября</span></li>
+        <li><b>12.11.2026, 14:30–17:30</b><span>Водоснабжение: мкр. 3-й Первомайский, 19а, 21–25.</span><span class="state" data-day="2026-11-12">работы 12 ноября</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec tariffs" id="tarify" aria-labelledby="tr-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="tr-h">Тарифы для населения</h2>
+      <p>Действуют с 1 октября по 31 декабря 2026 года. Цены в рублях, с НДС.</p>
+    </div>
+    <p class="expired" id="expired" hidden>Срок действия опубликованных здесь тарифов закончился 31.12.2026. Актуальные цены — на <a href="https://www.slenergo.ru/page/ogranichenie-rejima-posesheniya/" target="_blank" rel="noopener">странице тарифов</a>.</p>
+    <div class="tt" data-tariff>
+      <table>
+        <caption class="sr">Тарифы для населения с 01.10.2026 по 31.12.2026</caption>
+        <thead><tr><th scope="col">Услуга</th><th scope="col">1-й диапазон</th><th scope="col">2-й диапазон</th><th scope="col">3-й диапазон</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Электроэнергия, руб./кВт·ч<small>Салехард и Горнокнязевск, одноставочный</small></th><td data-l="1-й диапазон">4,77</td><td data-l="2-й диапазон">8,74</td><td data-l="3-й диапазон">12,62</td></tr>
+          <tr><th scope="row">Электроэнергия: электроплиты, электроотопление<small>городские дома, одноставочный</small></th><td data-l="1-й диапазон">3,34</td><td data-l="2-й диапазон">8,74</td><td data-l="3-й диапазон">12,62</td></tr>
+          <tr><th scope="row">Тепловая энергия, Салехард<small>приказ № 310-т от 18.12.2025</small></th><td colspan="3">2 406,27 <small>руб./Гкал</small></td></tr>
+          <tr><th scope="row">Тепловая энергия, Горнокнязевск<small>приказ № 310-т от 18.12.2025</small></th><td colspan="3">2 370,00 <small>руб./Гкал</small></td></tr>
+          <tr><th scope="row">Холодная вода<small>приказ № 311-т от 18.12.2025</small></th><td colspan="3">88,00 <small>руб./м³</small></td></tr>
+          <tr><th scope="row">Горячая вода<small>приказ № 312-т от 18.12.2025</small></th><td colspan="3">2 406,27 <small>руб./Гкал — компонент на тепло</small> 88,00 <small>руб./м³ — компонент на холодную воду</small></td></tr>
+          <tr><th scope="row">Водоотведение<small>приказ № 313-т от 18.12.2025</small></th><td colspan="3">99,00 <small>руб./м³</small></td></tr>
+          <tr><th scope="row">Подвоз воды<small>приказ № 314-т от 18.12.2025</small></th><td colspan="3">88,00 <small>руб./м³</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p data-tariff>Границы диапазонов, кВт·ч. Квартиры в многоквартирных домах: до 1200, 1201–1850, свыше 1850. Жилые дома: до 3900, 3901–6000, свыше 6000. Для жилья с электроотоплением действуют отдельные границы. Многодетным семьям весь объём считают по первому диапазону по заявлению.</p>
+      <p>Электроэнергия: распоряжение РЭК Тюменской области, ХМАО и ЯНАО от 26.12.2025 № 62. Тарифы по зонам суток, для Пельвожа и для организаций — в полной таблице.<br><a class="tl" href="https://www.slenergo.ru/page/ogranichenie-rejima-posesheniya/" target="_blank" rel="noopener">Полная таблица тарифов 2026</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="biznes" aria-labelledby="bz-h">
+  <div class="wrap biz-g">
+    <div>
+      <div class="head"><h2 id="bz-h">Организациям</h2><p>Прямые телефоны отделов. Код города (34922).</p></div>
+      <table class="mx">
+        <thead><tr><th scope="col">Вопрос</th><th scope="col">Электроснабжение</th><th scope="col">Теплоснабжение</th><th scope="col">Вода и водоотведение</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Договоры<small>заключение, расторжение, ведение</small></th><td data-l="Электроснабжение" data-p="5-45-90 5-45-91"></td><td data-l="Теплоснабжение" data-p="5-45-85 5-45-86"></td><td data-l="Вода и водоотведение" data-p="5-45-87 5-45-89"></td></tr>
+          <tr><th scope="row">Показания и расчёты<small>приборы учёта, счета-фактуры, акты</small></th><td data-l="Электроснабжение" data-p="5-45-78 5-45-79 5-45-80"></td><td data-l="Теплоснабжение" data-p="5-45-81 5-45-82"></td><td data-l="Вода и водоотведение" data-p="5-45-83 5-45-84"></td></tr>
+        </tbody>
+      </table>
+      <p class="sm" style="margin-top:14px">Выдача счетов-фактур и актов: <a class="tel" href="tel:+73492254571">5-45-71</a>, <a class="tel" href="tel:+73492254572">5-45-72</a>, <a class="tel" href="tel:+73492254573">5-45-73</a></p>
+    </div>
+    <ul class="docs">
+      <li><a href="http://lkul.slenergo.ru/" target="_blank" rel="noopener"><span>Личный кабинет юридических лиц</span></a></li>
+      <li><a href="https://www.slenergo.ru/page/torgi-po-223fz/" target="_blank" rel="noopener"><span>Торги по 223-ФЗ</span></a></li>
+      <li><a href="https://www.slenergo.ru/page/torgi-po-44fz/" target="_blank" rel="noopener"><span>Торги по 44-ФЗ</span></a></li>
+      <li><a href="https://www.slenergo.ru/page/edinstvenniy-istochnik/" target="_blank" rel="noopener"><span>Закупки у единственного источника</span></a></li>
+      <li><a href="https://www.slenergo.ru/page/pages-5090/" target="_blank" rel="noopener"><span>Раскрытие информации: электроснабжение</span></a></li>
+      <li><a href="https://www.slenergo.ru/page/pages-2025/" target="_blank" rel="noopener"><span>Раскрытие информации: теплоснабжение</span></a></li>
+      <li><a href="https://www.slenergo.ru/page/pages-472/" target="_blank" rel="noopener"><span>Раскрытие информации: холодное водоснабжение</span></a></li>
+      <li><a href="https://www.slenergo.ru/page/pages-5808/" target="_blank" rel="noopener"><span>Раскрытие информации: горячее водоснабжение</span></a></li>
+      <li><a href="https://www.slenergo.ru/page/pages-1171/" target="_blank" rel="noopener"><span>Раскрытие информации: водоотведение</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec about" id="predpriyatie" aria-labelledby="pr-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="pr-h">Энергия, тепло и вода из одних рук</h2>
+      <p>Предприятие образовано 31 октября 1997 года слиянием «Водоканала», объединённых котельных и тепловых сетей и городской электростанции. С 2015 года — акционерное общество. Здесь работает около 1600 человек.</p>
+    </div>
+    <ul class="figs">
+      <li><b>2</b><span>газовые электростанции</span></li>
+      <li><b>36</b><span>котельных</span></li>
+      <li><b>328,214 км</b><span>тепловых сетей</span></li>
+      <li><b>2</b><span>подземных водозабора питьевой воды</span></li>
+      <li><b>20 000 м³</b><span>в сутки — общая производительность водоочистных станций</span></li>
+      <li><b>218,29 км</b><span>водоводных сетей</span></li>
+      <li><b>14 000 м³</b><span>в сутки — производительность канализационных очистных сооружений</span></li>
+      <li><b>72,2 км</b><span>канализационных сетей</span></li>
+    </ul>
+    <p class="src">По страницам «О предприятии» и «СП Водоканал» сайта slenergo.ru.</p>
+
+    <h3>Электричество в городе — с 1926 года</h3>
+    <div class="hist">
+      <figure data-reveal><img src="img/building.webp" width="728" height="498" loading="lazy" alt="Архивное фото: белое здание электростанции с высокими окнами"><figcaption>Здание электростанции</figcaption></figure>
+      <figure data-reveal><img src="img/station.webp" width="752" height="428" loading="lazy" alt="Архивное фото: городская электростанция Салехарда с тремя трубами зимой"><figcaption>Городская электростанция Салехарда</figcaption></figure>
+      <figure data-reveal><img src="img/engine.webp" width="728" height="520" loading="lazy" alt="Архивное фото: нефтяной двигатель с большим маховиком"><figcaption>Нефтяной двигатель «Балаковец», 40 л. с., 1932 год</figcaption></figure>
+      <figure data-reveal><img src="img/repair.webp" width="691" height="663" loading="lazy" alt="Архивное фото: ремонт машин электростанции"><figcaption>Заканчивается ремонт машин электростанции</figcaption></figure>
+    </div>
+    <ol class="years">
+      <li><b>1926</b><span>В феврале в селе Обдорск загорелись первые электрические лампочки.</span></li>
+      <li><b>1937</b><span>Устроена электростанция на локомобиле мощностью 90 кВт.</span></li>
+      <li><b>1940</b><span>Образована Салехардская городская электростанция.</span></li>
+      <li><b>1953</b><span>От стройки № 501 город получил станцию на четырёх локомобилях, 1100 кВт.</span></li>
+      <li><b>1960</b><span>Пущен первый дизель-генератор.</span></li>
+      <li><b>1997</b><span>Три городских предприятия объединены в «Салехардэнерго».</span></li>
+    </ol>
+    <p class="boss">Генеральный директор — <b>Федотов Евгений Владимирович</b>.</p>
+  </div>
+</section>
+
+<section class="sec" id="uslugi" aria-labelledby="us-h">
+  <div class="wrap">
+    <div class="head"><h2 id="us-h">Платные услуги</h2><p>По письменному заявлению: исполнитель приступает к работе в течение трёх рабочих дней; если нужна смета, сначала готовят расчёт стоимости. Работы выполняют после оплаты, если договором не предусмотрено иное.</p></div>
+    <ul class="docs srv">
+      <li><a href="https://www.slenergo.ru/page/pages-2390/" target="_blank" rel="noopener"><span>Приборы учёта<small>установка, замена, эксплуатация; перечень на 2026 год</small></span></a></li>
+      <li><a href="https://www.slenergo.ru/page/analysis-of-tests-of-water/" target="_blank" rel="noopener"><span>Анализ проб воды<small>перечень на 2026 год</small></span></a></li>
+      <li><a href="https://www.slenergo.ru/page/motor-transport/" target="_blank" rel="noopener"><span>Автотранспортный цех<small>перечень на 2026 год</small></span></a></li>
+      <li><a href="https://www.slenergo.ru/page/other-services-of-info/" target="_blank" rel="noopener"><span>Прочие услуги<small>перечень на 2026 год</small></span></a></li>
+      <li><a href="https://www.slenergo.ru/page/perechen-uslug/" target="_blank" rel="noopener"><span>Порядок предоставления услуг<small>что указать в заявлении и как заключают договор</small></span></a></li>
+      <li><a href="https://www.slenergo.ru/page/sale-of-illiquid-assets/" target="_blank" rel="noopener"><span>Продажа неликвидов<small>имущество предприятия</small></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec contacts" id="kontakty" aria-labelledby="kn-h">
+  <div class="wrap">
+    <div class="head"><h2 id="kn-h">Контакты и обращения</h2></div>
+    <div class="cgrid">
+      <div class="addr">
+        <div><h3>Административное здание</h3><p>629007, г. Салехард, ул. Свердлова, 39<br>Для писем: а/я 42</p></div>
+        <div><h3>Центр обслуживания клиентов</h3><p>г. Салехард, ул. Чубынина, 14</p></div>
+        <div><h3>Приёмная</h3><p><a class="tl tel" href="tel:+73492254503">+7 (34922) 5-45-03</a>&ensp; <a class="tl tel" href="tel:+73492254504">5-45-04</a><br>Факс: +7 (34922) 5-44-35<br><a class="tl" href="mailto:secret@slenergo.ru">secret@slenergo.ru</a></p></div>
+        <div><h3>Уведомления об ограничении электроснабжения</h3><p class="sm">Выделенные абонентские номера для уведомления потребителей о введении полного или частичного ограничения режима потребления электроэнергии</p><p><a class="tl tel" href="tel:+79519929720">+7 951 992-97-20</a>&ensp; <a class="tl tel" href="tel:+79519929877">+7 951 992-98-77</a></p></div>
+      </div>
+      <form data-demo-form>
+        <h3>Написать обращение</h3>
+        <label class="field"><span>Тема</span><select name="Тема"><option>Электроснабжение</option><option>Теплоснабжение</option><option>Водоснабжение</option><option>Водоотведение</option><option>Начисления и оплата</option><option>Технологическое присоединение</option></select></label>
+        <div class="f2">
+          <label class="field"><span>Имя</span><input name="Имя" autocomplete="name" required></label>
+          <label class="field"><span>Телефон</span><input name="Телефон" type="tel" autocomplete="tel" required></label>
+        </div>
+        <label class="field"><span>Адрес</span><input name="Адрес" autocomplete="street-address"></label>
+        <label class="field"><span>Сообщение</span><textarea name="Сообщение" required></textarea></label>
+        <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных</span></label>
+        <button class="btn" type="submit">Отправить обращение</button>
+        <p class="sm">Об авариях сообщайте только по телефону.</p>
+        <div class="done" role="status"><h3>Так обращение получит сотрудник</h3><p class="sm">Это макет: данные никуда не отправлены.</p><dl></dl></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <p>АО «Салехардэнерго»<br>ИНН 8901030855, КПП 890101001<br>ОГРН 1158901001434</p>
+    <p>629007, Ямало-Ненецкий автономный округ,<br>г. Салехард, ул. Свердлова, 39</p>
+    <p><a href="#avaria">Аварийные телефоны</a><br><a href="https://www.slenergo.ru/page/about/" target="_blank" rel="noopener">Действующий сайт slenergo.ru</a></p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn" href="#avaria">Авария</a>
+  <a class="btn btn--ghost" href="tel:88003502080">Позвонить 8-800</a>
+</div>
+</body>
+</html>

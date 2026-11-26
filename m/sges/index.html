@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>СГЭС — Сургутские городские электрические сети: диспетчерская и отключения</title>
+<meta name="description" content="Концепция сайта ООО «СГЭС»: телефоны диспетчерской службы, плановые отключения по кооперативам и улицам, услуги потребителям, цифры о сетях.">
+<link rel="icon" href="img/mark.png">
+<link rel="preload" href="../../kit/fonts/geologica-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../kit/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="hdr" data-header><div class="wrap">
+  <a class="logo" href="#main"><img src="img/logo.png" alt="СГЭС — Сургутские городские электрические сети, на главную" width="289" height="97"></a>
+  <nav data-menu aria-label="Основное меню"><a href="#outages">Отключения</a><a href="#services">Потребителям</a><a href="#city">Сети в&nbsp;цифрах</a><a href="#about">О&nbsp;компании</a><a href="#contacts">Контакты</a></nav>
+  <a class="hdr-tel" href="tel:+73462323535"><span>Центральная диспетчерская</span><b class="num">8 (3462) 32-35-35</b></a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <canvas class="hero__city" aria-hidden="true"></canvas>
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <h1>Электричество и&nbsp;тепло в&nbsp;сетях Сургута</h1>
+      <p class="lead">ООО «СГЭС» передаёт и&nbsp;распределяет электроэнергию в&nbsp;Сургуте, прилегающих посёлках и&nbsp;38&nbsp;дачных кооперативах города и&nbsp;района. С&nbsp;2012&nbsp;года поставляет тепло в&nbsp;западную часть города.</p>
+      <div class="hero__cta">
+        <a class="btn" href="#outages">Найти отключение по&nbsp;адресу</a>
+        <a class="btn btn--ghost" href="#services">Подключение и&nbsp;учёт</a>
+      </div>
+    </div>
+    <div class="desk">
+      <div class="desk__call">
+        <h2>Нет света? Диспетчерская служба</h2>
+        <a class="desk__big num" href="tel:+73462323535">8 (3462) 32-35-35</a>
+        <a class="desk__big num" href="tel:88002000276">8-800-200-02-76</a>
+        <p>Телефоны со&nbsp;страницы контактов:</p>
+        <div class="desk__two">
+          <a href="tel:+73462550166"><span>по&nbsp;электроснабжению</span><b class="num">55-01-66</b></a>
+          <a href="tel:+73462555665"><span>по&nbsp;теплоснабжению</span><b class="num">55-56-65</b></a>
+        </div>
+      </div>
+      <a class="desk__off" href="#outages">
+        <b>Объявления на&nbsp;26&nbsp;ноября 2026</b>
+        <span>Кооперативы и&nbsp;посёлок: «Ветеран-2», «Старожил-1», «Многодетная семья», «Прибрежный», «Зелёный бор», п.&nbsp;Юность</span>
+        <em>Время и&nbsp;улицы</em>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec off" id="outages" aria-labelledby="off-h">
+  <div class="wrap">
+    <div class="off__head">
+      <h2 id="off-h">Плановые отключения электроэнергии</h2>
+      <p>Перенесено из&nbsp;объявлений сайта surgutges.ru, снимок на&nbsp;26&nbsp;ноября 2026&nbsp;года. Перед поездкой на&nbsp;участок сверьтесь с&nbsp;<a href="https://surgutges.ru/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=1&amp;Itemid=7" target="_blank" rel="noopener">новостями компании</a>.</p>
+    </div>
+    <p class="off__stale" id="stale" hidden>Все даты в&nbsp;этом списке уже прошли. Это пример оформления, а&nbsp;не&nbsp;действующие объявления.</p>
+    <div class="off__tools">
+      <label class="field off__search"><span>Кооператив, посёлок, улица или номер КТПН</span><input id="q" type="search" autocomplete="off" placeholder="например, Старожил"></label>
+      <div class="off__days" role="group" aria-label="День отключения">
+        <button type="button" data-day="" aria-pressed="true">Все дни</button>
+        <button type="button" data-day="2026-11-26" aria-pressed="false">26&nbsp;ноября</button>
+        <button type="button" data-day="2026-11-27" aria-pressed="false">27&nbsp;ноября</button>
+        <button type="button" data-day="2026-11-28" aria-pressed="false">28&nbsp;ноября</button>
+      </div>
+    </div>
+    <p class="off__count" id="count" role="status"></p>
+    <ul class="off__list" id="list">
+      <li data-day="2026-11-26"><time datetime="2026-11-26">26&nbsp;ноября<span class="num">09:00–16:00</span></time><div><h3>ПСК «Ветеран-2», ПСОК «Старожил-1», ПОК «Многодетная семья»</h3><p>Полное отключение ПС&nbsp;73-20, ремонтные работы.</p></div></li>
+      <li data-day="2026-11-26"><time datetime="2026-11-26">26&nbsp;ноября<span class="num">09:00–17:00</span></time><div><h3>СОК «Прибрежный»: улицы Экскаваторная, Буровиков, Механизаторов</h3><p>Частичное отключение, КТПН-786, 787, 1040. Перенос приборов учёта на&nbsp;новую ВЛ-0,4&nbsp;кВ.</p></div></li>
+      <li data-day="2026-11-26"><time datetime="2026-11-26">26&nbsp;ноября<span class="num">09:00–17:00</span></time><div><h3>ДНТ «Зелёный бор»</h3><p>КТПН-767, плановый ремонт по&nbsp;заявке вышестоящей организации. Перенесено: 25&nbsp;ноября отключения нет.</p></div></li>
+      <li data-day="2026-11-26"><time datetime="2026-11-26">26&nbsp;ноября<span class="num">09:30–11:00</span></time><div><h3>Посёлок Юность: улицы Красная, Кольцевая</h3><p>КТПН-720, плановые ремонтные работы.</p></div></li>
+      <li data-day="2026-11-27"><time datetime="2026-11-27">27&nbsp;ноября<span class="num">09:00–16:00</span></time><div><h3>ПСК «Ветеран-2», ПСОК «Старожил-1», ПОК «Многодетная семья»</h3><p>Полное отключение ПС&nbsp;73-20, ремонтные работы.</p></div></li>
+      <li data-day="2026-11-27"><time datetime="2026-11-27">27&nbsp;ноября<span class="num">09:00–17:00</span></time><div><h3>СОК «Прибрежный»: улицы Экскаваторная, Буровиков, Механизаторов</h3><p>Частичное отключение, КТПН-786, 787, 1040. Перенос приборов учёта на&nbsp;новую ВЛ-0,4&nbsp;кВ.</p></div></li>
+      <li data-day="2026-11-28"><time datetime="2026-11-28">28&nbsp;ноября<span class="num">09:00–17:00</span></time><div><h3>СОК «Прибрежный»: улица Разведочная</h3><p>Частичное отключение, КТПН-786, 787, 1040. Перенос приборов учёта на&nbsp;новую ВЛ-0,4&nbsp;кВ.</p></div></li>
+    </ul>
+    <p class="off__empty" id="empty" hidden>В&nbsp;этом снимке такого адреса нет. Это не&nbsp;значит, что отключения не&nbsp;будет: позвоните диспетчеру по&nbsp;<a href="tel:+73462323535">8&nbsp;(3462)&nbsp;32-35-35</a>.</p>
+
+    <div class="act">
+      <h3>Что может сделать потребитель</h3>
+      <ul>
+        <li><b>Света нет, а&nbsp;объявления нет</b><span>Позвоните в&nbsp;центральную диспетчерскую службу.</span><a href="tel:88002000276">8-800-200-02-76</a></li>
+        <li><b>Нужны причина и&nbsp;сроки планового перерыва</b><span>Эти сведения даёт служба энергетических услуг.</span><a href="tel:+73462202659">+7&nbsp;(3462)&nbsp;20-26-59</a></li>
+        <li><b>Есть претензия</b><span>Подайте письменное обращение: бланк есть на&nbsp;странице обслуживания потребителей.</span><a href="https://surgutges.ru/index.php?option=com_content&amp;view=article&amp;id=475&amp;Itemid=51" target="_blank" rel="noopener">Открыть страницу</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec srv" id="services" aria-labelledby="srv-h">
+  <div class="wrap">
+    <h2 id="srv-h" data-split>Потребителям</h2>
+    <div class="srv__grid">
+      <article class="srv__main">
+        <h3>Подключиться к&nbsp;сетям</h3>
+        <p>Заявку на&nbsp;технологическое присоединение можно подать онлайн через АИС ТПС со&nbsp;входом через Госуслуги или через службу энергетических услуг. На&nbsp;сайте компании есть калькулятор ориентировочной стоимости, формы заявок и&nbsp;типовые договоры: для бытовых нужд до&nbsp;15&nbsp;кВт и&nbsp;для организаций.</p>
+        <a class="btn" href="https://surgutges.ru/index.php?option=com_content&amp;view=article&amp;id=51&amp;Itemid=24" target="_blank" rel="noopener">Заявка, формы и&nbsp;калькулятор</a>
+      </article>
+      <ul class="srv__list">
+        <li><a href="http://lk.surgutges.ru" target="_blank" rel="noopener"><b>Личный кабинет</b><span>Этапы рассмотрения заявки и&nbsp;исполнения договора</span></a></li>
+        <li><a href="https://surgutges.ru/index.php?option=com_content&amp;view=article&amp;id=22&amp;Itemid=8" target="_blank" rel="noopener"><b>Приборы учёта электроэнергии</b><span>Бесплатная замена и&nbsp;установка, заявление на&nbsp;обследование узла учёта</span></a></li>
+        <li><a href="https://surgutges.ru/index.php?option=com_content&amp;view=article&amp;id=22&amp;Itemid=8" target="_blank" rel="noopener"><b>Счётчики тепла</b><span>Заявление на&nbsp;опломбирование приборов учёта тепловой энергии</span></a></li>
+        <li><a href="https://surgutges.ru/index.php?option=com_content&amp;view=article&amp;id=561&amp;Itemid=57" target="_blank" rel="noopener"><b>Резерв мощности ПС&nbsp;35–110&nbsp;кВ</b><span>Сведения о&nbsp;свободной трансформаторной мощности</span></a></li>
+      </ul>
+      <aside class="srv__seu">
+        <h3>Служба энергетических услуг</h3>
+        <p>Нефтеюганское шоссе, 15, кабинеты 115 и&nbsp;114</p>
+        <dl>
+          <dt>Понедельник–четверг</dt><dd class="num">9:00–15:55</dd>
+          <dt>Обед</dt><dd class="num">11:55–13:00</dd>
+          <dt>Пятница</dt><dd>уточняйте по&nbsp;телефону</dd>
+          <dt>Суббота, воскресенье</dt><dd>выходные</dd>
+        </dl>
+        <p><a href="tel:+73462202659" class="num">+7&nbsp;(3462)&nbsp;20-26-59</a><a href="tel:+73462202613" class="num">+7&nbsp;(3462)&nbsp;20-26-13</a><a href="mailto:seu@surgutges.ru">seu@surgutges.ru</a></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="city" id="city" aria-labelledby="city-h">
+  <div class="city__stick">
+    <canvas class="city__cv" role="img" aria-label="Условная схема: ночной город по шагам загорается от центра питания через линии и подстанции до домов, уличных фонарей и тепловых сетей"></canvas>
+    <div class="wrap city__wrap">
+      <div class="hud">
+        <h2 id="city-h">Ночной Сургут: как приходит свет</h2>
+        <ol class="hud__facts" id="facts" aria-live="polite">
+          <li class="on"><b>1,4&nbsp;<small>ГВА</small></b><span>Общая трансформаторная мощность. Схема начинается с&nbsp;центра питания.</span></li>
+          <li><b>2&nbsp;305&nbsp;<small>км</small></b><span>Протяжённость кабельных линий и&nbsp;воздушных сетей.</span></li>
+          <li><b>802</b><span>Трансформаторные подстанции. На&nbsp;схеме ровно столько голубых точек.</span></li>
+          <li><b>38</b><span>Дачных кооперативов города и&nbsp;района, а&nbsp;ещё Сургут и&nbsp;прилегающие посёлки. Свет доходит до&nbsp;домов.</span></li>
+          <li><b>2023</b><span>Год концессионного соглашения с&nbsp;администрацией Сургута: компания обновляет уличное освещение города.</span></li>
+          <li><b>312&nbsp;<small>Гкал/ч</small></b><span>Мощность тепловых объектов. 35&nbsp;объектов и&nbsp;54&nbsp;км магистральных и&nbsp;распределительных сетей. С&nbsp;2012&nbsp;года тепло идёт в&nbsp;западную часть Сургута.</span></li>
+        </ol>
+        <div class="hud__steps" role="group" aria-label="Шаги схемы">
+          <button type="button" aria-current="step">Центр</button>
+          <button type="button">Линии</button>
+          <button type="button">Подстанции</button>
+          <button type="button">Дома</button>
+          <button type="button">Фонари</button>
+          <button type="button">Тепло</button>
+        </div>
+        <p class="hud__note">Это условная схема, а&nbsp;не&nbsp;карта: расположение линий, объектов и&nbsp;домов не&nbsp;соответствует настоящему.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about" aria-labelledby="about-h">
+  <div class="wrap about__grid">
+    <div>
+      <h2 id="about-h" data-split>Сетевая компания Сургута</h2>
+      <p class="lead">ООО «Сургутские городские электрические сети»&nbsp;— это распределительная сетевая компания, основана в&nbsp;2006&nbsp;году.</p>
+      <dl class="time">
+        <div data-reveal><dt class="num">2006</dt><dd>Основание компании.</dd></div>
+        <div data-reveal><dt class="num">2012</dt><dd>СГЭС становится поставщиком тепла в&nbsp;западную часть Сургута.</dd></div>
+        <div data-reveal><dt class="num">2023</dt><dd>Концессионное соглашение с&nbsp;администрацией города: обновление уличного освещения.</dd></div>
+      </dl>
+    </div>
+    <figure class="about__ph">
+      <div data-img><img src="img/office.webp" alt="Здание компании зимним вечером: на фасаде светится надпись «Сургутские городские электрические сети»" width="528" height="146" loading="lazy"></div>
+      <figcaption>Нефтеюганское шоссе, 15</figcaption>
+    </figure>
+    <div class="nums">
+      <h3>Хозяйство в&nbsp;цифрах</h3>
+      <dl>
+        <div><dt>Общая трансформаторная мощность</dt><dd class="num">1,4&nbsp;ГВА</dd></div>
+        <div><dt>Трансформаторные подстанции</dt><dd class="num">802</dd></div>
+        <div><dt>Кабельные линии и&nbsp;воздушные сети</dt><dd class="num">2&nbsp;305&nbsp;км</dd></div>
+        <div><dt>Мощность тепловых объектов</dt><dd class="num">312&nbsp;Гкал/ч</dd></div>
+        <div><dt>Тепловые объекты</dt><dd class="num">35</dd></div>
+        <div><dt>Магистральные и&nbsp;распределительные тепловые сети</dt><dd class="num">54&nbsp;км</dd></div>
+      </dl>
+    </div>
+    <div class="boss">
+      <h3>Руководство</h3>
+      <ul>
+        <li><b>Мазуров Виталий Сергеевич</b><span>Генеральный директор</span></li>
+        <li><b>Боголюбов Евгений Евгеньевич</b><span>Главный инженер</span></li>
+        <li><b>Попова Любовь Николаевна</b><span>Заместитель генерального директора по&nbsp;экономике и&nbsp;финансам</span></li>
+        <li><b>Ковин Сергей Константинович</b><span>Заместитель генерального директора по&nbsp;транспорту электроэнергии</span></li>
+      </ul>
+      <p class="boss__docs">На&nbsp;действующем сайте: <a href="https://surgutges.ru/index.php?option=com_content&amp;view=article&amp;id=103&amp;Itemid=20" target="_blank" rel="noopener">закупки</a> <a href="https://surgutges.ru/index.php?option=com_content&amp;view=article&amp;id=32&amp;Itemid=30" target="_blank" rel="noopener">антикоррупционная политика</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec cont" id="contacts" aria-labelledby="cont-h">
+  <div class="wrap cont__grid">
+    <div>
+      <h2 id="cont-h" data-split>Контакты</h2>
+      <p class="cont__addr">628415, ХМАО — Югра, Сургут, Нефтеюганское шоссе, 15</p>
+      <dl class="cont__list">
+        <div><dt>Приёмная</dt><dd><a class="num" href="tel:+73462202600">+7&nbsp;(3462)&nbsp;20-26-00</a><a href="mailto:sges@surgutges.ru">sges@surgutges.ru</a><span class="num">факс +7&nbsp;(3462)&nbsp;34-63-13</span></dd></div>
+        <div><dt>Центральная диспетчерская служба</dt><dd><a class="num" href="tel:+73462323535">8&nbsp;(3462)&nbsp;32-35-35</a><a class="num" href="tel:88002000276">8-800-200-02-76</a></dd></div>
+        <div><dt>Диспетчерская по&nbsp;электроснабжению</dt><dd><a class="num" href="tel:+73462550166">+7&nbsp;(3462)&nbsp;55-01-66</a></dd></div>
+        <div><dt>Диспетчерская по&nbsp;теплоснабжению</dt><dd><a class="num" href="tel:+73462555665">+7&nbsp;(3462)&nbsp;55-56-65</a></dd></div>
+        <div><dt>Отдел кадров</dt><dd><a class="num" href="tel:+73462202677">+7&nbsp;(3462)&nbsp;20-26-77</a></dd></div>
+      </dl>
+    </div>
+    <form class="form" data-demo-form>
+      <h3>Обращение в&nbsp;компанию</h3>
+      <p>Об&nbsp;аварии сообщайте только по&nbsp;телефону диспетчерской.</p>
+      <label class="field"><span>Тема</span><select name="Тема"><option>Плановое отключение</option><option>Технологическое присоединение</option><option>Прибор учёта</option><option>Жалоба</option><option>Другой вопрос</option></select></label>
+      <label class="field"><span>Адрес или кооператив</span><input name="Адрес" autocomplete="street-address"></label>
+      <label class="field"><span>Вопрос</span><textarea name="Вопрос" required></textarea></label>
+      <label class="field"><span>Имя</span><input name="Имя" required autocomplete="name"></label>
+      <label class="field"><span>Телефон</span><input name="Телефон" type="tel" required autocomplete="tel"></label>
+      <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+      <button class="btn">Отправить обращение</button>
+      <div class="done" role="status"><h3>Так обращение придёт в&nbsp;СГЭС</h3><dl></dl><p>Это макет: письмо никуда не&nbsp;ушло.</p></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="wrap">
+  <p>ООО «СГЭС». ИНН&nbsp;8602015464, КПП&nbsp;860201001, ОГРН&nbsp;1068602153773.</p>
+  <p>Концепция редизайна. Тексты, логотип и&nbsp;фото взяты с&nbsp;сайта <a href="https://surgutges.ru/" target="_blank" rel="noopener">surgutges.ru</a>.</p>
+</div></footer>
+
+<div class="mbar"><a class="btn" href="tel:+73462323535">Диспетчер</a><a class="btn btn--ghost" href="#outages">Отключения</a></div>
+
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
