@@ -47,22 +47,28 @@
     i.addEventListener("change", function () { show(o[0]); play(); });
   });
 
+  var vial = $("#vial");
   function still() { return KIT.REDUCED || KIT.still; }
+  /* перезапуск CSS-анимации: снять класс, пересчитать, вернуть */
+  function kick(e, c) { e.classList.remove(c); void e.offsetWidth; e.classList.add(c); }
+  function enter(e, i) { e.classList.add("nx"); e.style.setProperty("--d", i); return e; }
   function play() {
     timers.forEach(clearTimeout); timers = [];
     if (still()) { run.dataset.at = 4; return; }
-    run.dataset.at = 1;
-    [2, 3, 4].forEach(function (n) { timers.push(setTimeout(function () { run.dataset.at = n; }, (n - 1) * 850)); });
+    run.dataset.at = 1; kick(vial, "pour");
+    [2, 3, 4].forEach(function (n) { timers.push(setTimeout(function () { run.dataset.at = n; kick(vial, "go"); }, (n - 1) * 900)); });
   }
   function show(id) {
     cur = O.filter(function (o) { return o[0] === id; })[0];
     rack.querySelector('[value="' + id + '"]').checked = true;
     run.style.setProperty("--sample", cur[2]);
     var img = $("#s-img"); img.src = "img/" + cur[3] + ".webp"; img.alt = cur[4];
+    kick(img.parentNode, "nx");
     $("#s-name").textContent = cur[5]; $("#s-text").textContent = cur[6]; $("#s-svc").textContent = cur[7];
+    [$("#s-name"), $("#s-text"), $("#s-svc").parentNode].forEach(function (e, i) { e.style.setProperty("--d", i + 2); kick(e, "nx"); });
     var w = $("#works"); w.textContent = ""; w.classList.toggle("dense", cur[8].length > 8);
-    cur[8].forEach(function (name) {
-      var l = el("label", "opt"), c = el("input"); c.type = "checkbox"; c.checked = picked[id].indexOf(name) > -1;
+    cur[8].forEach(function (name, n) {
+      var l = enter(el("label", "opt"), n), c = el("input"); c.type = "checkbox"; c.checked = picked[id].indexOf(name) > -1;
       c.addEventListener("change", function () {
         picked[id] = [].filter.call(w.querySelectorAll("input"), function (x) { return x.checked; }).map(function (x) { return x.value; });
         sheet();
@@ -70,17 +76,19 @@
       c.value = name; l.append(c, el("span", "", name)); w.append(l);
     });
     var b = $("#labs"); b.textContent = "";
+    var k = 0;
     cur[9].forEach(function (g) {
-      var d = el("div", "lg"), ul = el("ul"); d.append(el("p", "", g.t));
-      g.r.forEach(function (r) { var li = el("li"); li.append(el("span", "", r[0])); if (r[1]) li.append(el("code", "", r[1])); ul.append(li); });
+      var d = el("div", "lg"), ul = el("ul"); d.append(enter(el("p", "", g.t), k++));
+      g.r.forEach(function (r) { var li = enter(el("li"), k++); li.append(el("span", "", r[0])); if (r[1]) li.append(el("code", "", r[1])); ul.append(li); });
       d.append(ul); b.append(d);
     });
-    sheet();
+    sheet(true);
   }
-  function sheet() {
+  function sheet(fresh) {
     var list = picked[cur[0]], ul = $("#o-list"); ul.textContent = "";
     $("#o-obj").textContent = cur[5]; $("#o-n").textContent = list.length ? "(" + list.length + ")" : "";
-    (list.length ? list : ["не отмечены, уточним по телефону"]).forEach(function (n) { ul.append(el("li", "", n)); });
+    if (fresh) kick($("#o-obj"), "nx");
+    (list.length ? list : ["не отмечены, уточним по телефону"]).forEach(function (n, i) { var li = el("li", "", n); ul.append(fresh ? enter(li, i + 1) : li); });
   }
   $("#o-go").addEventListener("click", function () {
     $("#form").classList.remove("sent");
@@ -96,8 +104,23 @@
   show("water");
   if (!KIT.REDUCED) {
     run.dataset.at = 1;
-    var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { io.disconnect(); if (!seen) { seen = true; play(); } } }, { threshold: .35 });
+    var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { io.disconnect(); if (!seen) { seen = true; show(cur[0]); play(); } } }, { threshold: .35 });
     io.observe(run);
   }
   document.addEventListener("kit:still", function () { if (KIT.still) { timers.forEach(clearTimeout); run.dataset.at = 4; } });
+
+  /* hero: слои фото расходятся при прокрутке и чуть следуют за курсором (только translate, только пока hero виден) */
+  var ph = $("[data-depth]");
+  if (ph && !KIT.REDUCED) {
+    var figs = [].slice.call(ph.children), sp = [-.05, .1, .17], mx = 0, my = 0, on = true, tk = 0;
+    function draw() {
+      tk = 0; if (KIT.still) return;
+      var y = Math.min(scrollY, innerHeight);
+      figs.forEach(function (f, i) { f.style.translate = (mx * (i + 1) * 6).toFixed(1) + "px " + (-y * sp[i] + my * (i + 1) * 5).toFixed(1) + "px"; });
+    }
+    function req() { if (on && !tk) tk = requestAnimationFrame(draw); }
+    KIT.onView(ph, function (v) { on = v; req(); });
+    addEventListener("scroll", req, { passive: true });
+    if (KIT.FINE) $(".hero").addEventListener("pointermove", function (e) { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; req(); });
+  }
 })();

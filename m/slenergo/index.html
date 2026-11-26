@@ -42,17 +42,23 @@
     <button type="button" data-burger aria-expanded="false" aria-controls="menu" aria-label="Меню"></button>
   </div>
 </header>
+<div class="prog" aria-hidden="true"></div>
 
 <main id="main">
-<section class="hero">
+<section class="hero" data-theme="night">
+  <div class="sky" aria-hidden="true">
+    <img class="sky-ph" src="img/station.webp" width="752" height="428" alt="" fetchpriority="high">
+    <canvas class="snow" id="snow"></canvas>
+  </div>
   <div class="wrap hero-g">
-    <div>
-      <h1><em>Свет, тепло и вода</em> для Салехарда</h1>
+    <div class="hero-t">
+      <h1><span class="hl"><span><em>Свет, тепло и вода</em></span></span> <span class="hl"><span>для Салехарда</span></span></h1>
       <p class="lead">Производим, передаём и реализуем электрическую и тепловую энергию, питьевую воду для предприятий, учреждений и населения города.</p>
       <div class="cta">
         <a class="btn" href="#pokazaniya">Передать показания</a>
         <a class="btn btn--ghost" href="#dom">Подключить дом</a>
       </div>
+      <p class="ph-cap">На фоне — городская электростанция Салехарда, архивное фото. Электричество в&nbsp;городе с&nbsp;1926&nbsp;года.</p>
     </div>
     <div class="sos" id="avaria">
       <h2>Авария на наружных сетях</h2>
@@ -80,10 +86,10 @@
   </nav>
 </section>
 
-<section class="house" id="dom" aria-labelledby="dom-h">
+<section class="house" data-theme="night" id="dom" aria-labelledby="dom-h">
   <div class="wrap">
     <div class="head">
-      <h2 id="dom-h">Дом в разрезе: выберите, с чем нужна помощь</h2>
+      <h2 id="dom-h" data-split>Дом в разрезе: выберите, с чем нужна помощь</h2>
     </div>
     <div class="tabs" role="tablist" aria-label="Система дома">
       <button type="button" role="tab" id="t-el" data-s="el" aria-controls="p-el">Свет</button>
@@ -96,13 +102,15 @@
         <!-- Условный чертёж: щелчок по линии дублирует вкладки, поэтому для клавиатуры и чтения с экрана он скрыт -->
         <svg class="dw" id="dw" viewBox="0 0 760 590" aria-hidden="true" data-on="he">
           <defs>
-            <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" stroke="#8A91B0" stroke-width="1"/></pattern>
+            <linearGradient id="dsky" x1="0" y1="0" x2="0" y2="1"><stop class="d-sky-a" offset="0"/><stop class="d-sky-b" offset=".8"/></linearGradient>
+            <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line class="d-hl" x1="0" y1="0" x2="0" y2="9" stroke-width="1"/></pattern>
           </defs>
-          <rect width="760" height="590" fill="#EDF1FA"/>
+          <rect class="d-sky" width="760" height="590"/>
+          <g class="d-stars"><circle cx="64" cy="58" r="1.4"/><circle cx="132" cy="112" r="1"/><circle cx="214" cy="40" r="1.2"/><circle cx="520" cy="36" r="1"/><circle cx="612" cy="92" r="1.5"/><circle cx="700" cy="48" r="1.1"/><circle cx="676" cy="160" r=".9"/><circle cx="40" cy="190" r="1"/></g>
           <!-- грунт и снег -->
-          <rect y="470" width="760" height="120" fill="#D9DDEA"/>
+          <rect class="d-gr" y="470" width="760" height="120"/>
           <rect y="480" width="760" height="110" fill="url(#hatch)" opacity=".35"/>
-          <path d="M0 470 Q60 462 130 470 T300 470 T470 470 T620 468 T760 470 V480 H0Z" fill="#fff" stroke="#9AA2C0"/>
+          <path class="d-snow" d="M0 470 Q60 462 130 470 T300 470 T470 470 T620 468 T760 470 V480 H0Z"/>
           <!-- сваи и перекрытия -->
           <g class="wall"><path d="M168 430h12v112l-6 10-6-10zM258 430h12v112l-6 10-6-10zM348 430h12v112l-6 10-6-10zM438 430h12v112l-6 10-6-10zM528 430h12v38h-12z"/></g>
           <path class="room" d="M162 176H548V416H162Z"/>
@@ -118,8 +126,8 @@
             <path d="M150 170h12v246h-12zM548 170h12v246h-12zM150 286h410v12H150zM150 170h410v6H150zM140 416h430v14H140z"/>
             <path d="M352 176h6v66h-6zM330 298h6v40h-6z"/>
           </g>
-          <path d="M122 176L355 78L588 176L576 178L355 90L134 178Z" fill="#2B315F"/>
-          <path d="M118 170Q125 160 145 156L355 68L570 158Q590 164 592 172L584 174L355 78L128 174Z" fill="#fff" stroke="#9AA2C0" stroke-width="1.4"/>
+          <path d="M122 176L355 78L588 176L576 178L355 90L134 178Z" class="d-roof"/>
+          <path d="M118 170Q125 160 145 156L355 68L570 158Q590 164 592 172L584 174L355 78L128 174Z" class="d-snow" stroke-width="1.4"/>
           <!-- надземный короб теплосети и водопровода -->
           <g class="thin"><path d="M570 432H760V472H570M600 472v-0M612 472l-8 12h20l-8-12M692 472l-8 12h20l-8-12"/></g>
 
@@ -282,9 +290,9 @@
 
 <section class="sec" id="abonentam" aria-labelledby="ab-h">
   <div class="wrap">
-    <div class="head"><h2 id="ab-h">Абонентам</h2></div>
+    <div class="head"><h2 id="ab-h" data-split>Абонентам</h2></div>
     <div class="cols">
-      <div id="pokazaniya">
+      <div id="pokazaniya" data-reveal>
         <h3>Передать показания</h3>
         <ul class="ways">
           <li>Личный кабинет АО «ЕРИЦ ЯНАО»<small>с 15 по 25 число</small><span class="state" data-win="15-25" hidden></span><br><a class="tl" href="https://lk.eric-yanao.ru/" target="_blank" rel="noopener">lk.eric-yanao.ru</a></li>
@@ -294,7 +302,7 @@
         </ul>
         <p class="sm" style="margin-top:12px">Порядок для потребителей категории «население».</p>
       </div>
-      <div id="oplata">
+      <div id="oplata" data-reveal>
         <h3>Оплатить услуги</h3>
         <ul class="ways">
           <li>Личный кабинет на сайте <a href="https://eric-yanao.ru/" target="_blank" rel="noopener">ЕРИЦ ЯНАО</a></li>
@@ -306,7 +314,7 @@
         </ul>
         <a class="tl" href="https://www.slenergo.ru/page/pages-4753/" target="_blank" rel="noopener">Реквизиты для оплаты</a>
       </div>
-      <div id="chasy">
+      <div id="chasy" data-reveal>
         <h3>Часы приёма и долги</h3>
         <ul class="ways">
           <li><b>Население</b><small>Пн–пт 8:00–20:00, суббота и предпраздничные дни 8:00–18:00, без перерыва. Воскресенье — выходной.</small></li>
@@ -318,7 +326,7 @@
       </div>
     </div>
 
-    <div class="off" id="otklyucheniya">
+    <div class="off" id="otklyucheniya" data-reveal>
       <div class="off-h">
         <h3>Объявления об отключениях</h3>
         <a class="tl" href="https://www.slenergo.ru/page/news/" target="_blank" rel="noopener">Свежие объявления на странице новостей</a>
@@ -336,11 +344,11 @@
 <section class="sec tariffs" id="tarify" aria-labelledby="tr-h">
   <div class="wrap">
     <div class="head">
-      <h2 id="tr-h">Тарифы для населения</h2>
+      <h2 id="tr-h" data-split>Тарифы для населения</h2>
       <p>Действуют с 1 октября по 31 декабря 2026 года. Цены в рублях, с НДС.</p>
     </div>
     <p class="expired" id="expired" hidden>Срок действия опубликованных здесь тарифов закончился 31.12.2026. Актуальные цены — на <a href="https://www.slenergo.ru/page/ogranichenie-rejima-posesheniya/" target="_blank" rel="noopener">странице тарифов</a>.</p>
-    <div class="tt" data-tariff>
+    <div class="tt" data-tariff data-reveal>
       <table>
         <caption class="sr">Тарифы для населения с 01.10.2026 по 31.12.2026</caption>
         <thead><tr><th scope="col">Услуга</th><th scope="col">1-й диапазон</th><th scope="col">2-й диапазон</th><th scope="col">3-й диапазон</th></tr></thead>
@@ -366,8 +374,8 @@
 <section class="sec" id="biznes" aria-labelledby="bz-h">
   <div class="wrap biz-g">
     <div>
-      <div class="head"><h2 id="bz-h">Организациям</h2><p>Прямые телефоны отделов. Код города (34922).</p></div>
-      <table class="mx">
+      <div class="head"><h2 id="bz-h" data-split>Организациям</h2><p>Прямые телефоны отделов. Код города (34922).</p></div>
+      <table class="mx" data-reveal>
         <thead><tr><th scope="col">Вопрос</th><th scope="col">Электроснабжение</th><th scope="col">Теплоснабжение</th><th scope="col">Вода и водоотведение</th></tr></thead>
         <tbody>
           <tr><th scope="row">Договоры<small>заключение, расторжение, ведение</small></th><td data-l="Электроснабжение" data-p="5-45-90 5-45-91"></td><td data-l="Теплоснабжение" data-p="5-45-85 5-45-86"></td><td data-l="Вода и водоотведение" data-p="5-45-87 5-45-89"></td></tr>
@@ -376,7 +384,7 @@
       </table>
       <p class="sm" style="margin-top:14px">Выдача счетов-фактур и актов: <a class="tel" href="tel:+73492254571">5-45-71</a>, <a class="tel" href="tel:+73492254572">5-45-72</a>, <a class="tel" href="tel:+73492254573">5-45-73</a></p>
     </div>
-    <ul class="docs">
+    <ul class="docs" data-reveal>
       <li><a href="http://lkul.slenergo.ru/" target="_blank" rel="noopener"><span>Личный кабинет юридических лиц</span></a></li>
       <li><a href="https://www.slenergo.ru/page/torgi-po-223fz/" target="_blank" rel="noopener"><span>Торги по 223-ФЗ</span></a></li>
       <li><a href="https://www.slenergo.ru/page/torgi-po-44fz/" target="_blank" rel="noopener"><span>Торги по 44-ФЗ</span></a></li>
@@ -390,38 +398,37 @@
   </div>
 </section>
 
-<section class="sec about" id="predpriyatie" aria-labelledby="pr-h">
+<section class="sec about" data-theme="night" id="predpriyatie" aria-labelledby="pr-h">
   <div class="wrap">
     <div class="head">
-      <h2 id="pr-h">Энергия, тепло и вода из одних рук</h2>
+      <h2 id="pr-h" data-split>Энергия, тепло и вода из одних рук</h2>
       <p>Предприятие образовано 31 октября 1997 года слиянием «Водоканала», объединённых котельных и тепловых сетей и городской электростанции. С 2015 года — акционерное общество. Здесь работает около 1600 человек.</p>
     </div>
     <ul class="figs">
-      <li><b>2</b><span>газовые электростанции</span></li>
-      <li><b>36</b><span>котельных</span></li>
-      <li><b>328,214 км</b><span>тепловых сетей</span></li>
-      <li><b>2</b><span>подземных водозабора питьевой воды</span></li>
-      <li><b>20 000 м³</b><span>в сутки — общая производительность водоочистных станций</span></li>
-      <li><b>218,29 км</b><span>водоводных сетей</span></li>
-      <li><b>14 000 м³</b><span>в сутки — производительность канализационных очистных сооружений</span></li>
-      <li><b>72,2 км</b><span>канализационных сетей</span></li>
+      <li><b data-count>2</b><span>газовые электростанции</span></li>
+      <li><b data-count>36</b><span>котельных</span></li>
+      <li><b data-count>328,214 км</b><span>тепловых сетей</span></li>
+      <li><b data-count>2</b><span>подземных водозабора питьевой воды</span></li>
+      <li><b data-count>20 000 м³</b><span>в сутки — общая производительность водоочистных станций</span></li>
+      <li><b data-count>218,29 км</b><span>водоводных сетей</span></li>
+      <li><b data-count>14 000 м³</b><span>в сутки — производительность канализационных очистных сооружений</span></li>
+      <li><b data-count>72,2 км</b><span>канализационных сетей</span></li>
     </ul>
     <p class="src">По страницам «О предприятии» и «СП Водоканал» сайта slenergo.ru.</p>
 
     <h3>Электричество в городе — с 1926 года</h3>
     <div class="hist">
-      <figure data-reveal><img src="img/building.webp" width="728" height="498" loading="lazy" alt="Архивное фото: белое здание электростанции с высокими окнами"><figcaption>Здание электростанции</figcaption></figure>
-      <figure data-reveal><img src="img/station.webp" width="752" height="428" loading="lazy" alt="Архивное фото: городская электростанция Салехарда с тремя трубами зимой"><figcaption>Городская электростанция Салехарда</figcaption></figure>
-      <figure data-reveal><img src="img/engine.webp" width="728" height="520" loading="lazy" alt="Архивное фото: нефтяной двигатель с большим маховиком"><figcaption>Нефтяной двигатель «Балаковец», 40 л. с., 1932 год</figcaption></figure>
-      <figure data-reveal><img src="img/repair.webp" width="691" height="663" loading="lazy" alt="Архивное фото: ремонт машин электростанции"><figcaption>Заканчивается ремонт машин электростанции</figcaption></figure>
+      <figure><div class="ph" data-img><img src="img/building.webp" width="728" height="498" loading="lazy" alt="Архивное фото: белое здание электростанции с высокими окнами"></div><figcaption>Здание электростанции</figcaption></figure>
+      <figure><div class="ph" data-img><img src="img/engine.webp" width="728" height="520" loading="lazy" alt="Архивное фото: нефтяной двигатель с большим маховиком"></div><figcaption>Нефтяной двигатель «Балаковец», 40 л. с., 1932 год</figcaption></figure>
+      <figure><div class="ph" data-img><img src="img/repair.webp" width="691" height="663" loading="lazy" alt="Архивное фото: ремонт машин электростанции"></div><figcaption>Заканчивается ремонт машин электростанции</figcaption></figure>
     </div>
     <ol class="years">
-      <li><b>1926</b><span>В феврале в селе Обдорск загорелись первые электрические лампочки.</span></li>
-      <li><b>1937</b><span>Устроена электростанция на локомобиле мощностью 90 кВт.</span></li>
-      <li><b>1940</b><span>Образована Салехардская городская электростанция.</span></li>
-      <li><b>1953</b><span>От стройки № 501 город получил станцию на четырёх локомобилях, 1100 кВт.</span></li>
-      <li><b>1960</b><span>Пущен первый дизель-генератор.</span></li>
-      <li><b>1997</b><span>Три городских предприятия объединены в «Салехардэнерго».</span></li>
+      <li data-reveal><b>1926</b><span>В феврале в селе Обдорск загорелись первые электрические лампочки.</span></li>
+      <li data-reveal><b>1937</b><span>Устроена электростанция на локомобиле мощностью 90 кВт.</span></li>
+      <li data-reveal><b>1940</b><span>Образована Салехардская городская электростанция.</span></li>
+      <li data-reveal><b>1953</b><span>От стройки № 501 город получил станцию на четырёх локомобилях, 1100 кВт.</span></li>
+      <li data-reveal><b>1960</b><span>Пущен первый дизель-генератор.</span></li>
+      <li data-reveal><b>1997</b><span>Три городских предприятия объединены в «Салехардэнерго».</span></li>
     </ol>
     <p class="boss">Генеральный директор — <b>Федотов Евгений Владимирович</b>.</p>
   </div>
@@ -429,29 +436,29 @@
 
 <section class="sec" id="uslugi" aria-labelledby="us-h">
   <div class="wrap">
-    <div class="head"><h2 id="us-h">Платные услуги</h2><p>По письменному заявлению: исполнитель приступает к работе в течение трёх рабочих дней; если нужна смета, сначала готовят расчёт стоимости. Работы выполняют после оплаты, если договором не предусмотрено иное.</p></div>
+    <div class="head"><h2 id="us-h" data-split>Платные услуги</h2><p>По письменному заявлению: исполнитель приступает к работе в течение трёх рабочих дней; если нужна смета, сначала готовят расчёт стоимости. Работы выполняют после оплаты, если договором не предусмотрено иное.</p></div>
     <ul class="docs srv">
-      <li><a href="https://www.slenergo.ru/page/pages-2390/" target="_blank" rel="noopener"><span>Приборы учёта<small>установка, замена, эксплуатация; перечень на 2026 год</small></span></a></li>
-      <li><a href="https://www.slenergo.ru/page/analysis-of-tests-of-water/" target="_blank" rel="noopener"><span>Анализ проб воды<small>перечень на 2026 год</small></span></a></li>
-      <li><a href="https://www.slenergo.ru/page/motor-transport/" target="_blank" rel="noopener"><span>Автотранспортный цех<small>перечень на 2026 год</small></span></a></li>
-      <li><a href="https://www.slenergo.ru/page/other-services-of-info/" target="_blank" rel="noopener"><span>Прочие услуги<small>перечень на 2026 год</small></span></a></li>
-      <li><a href="https://www.slenergo.ru/page/perechen-uslug/" target="_blank" rel="noopener"><span>Порядок предоставления услуг<small>что указать в заявлении и как заключают договор</small></span></a></li>
-      <li><a href="https://www.slenergo.ru/page/sale-of-illiquid-assets/" target="_blank" rel="noopener"><span>Продажа неликвидов<small>имущество предприятия</small></span></a></li>
+      <li data-reveal><a href="https://www.slenergo.ru/page/pages-2390/" target="_blank" rel="noopener"><span>Приборы учёта<small>установка, замена, эксплуатация; перечень на 2026 год</small></span></a></li>
+      <li data-reveal><a href="https://www.slenergo.ru/page/analysis-of-tests-of-water/" target="_blank" rel="noopener"><span>Анализ проб воды<small>перечень на 2026 год</small></span></a></li>
+      <li data-reveal><a href="https://www.slenergo.ru/page/motor-transport/" target="_blank" rel="noopener"><span>Автотранспортный цех<small>перечень на 2026 год</small></span></a></li>
+      <li data-reveal><a href="https://www.slenergo.ru/page/other-services-of-info/" target="_blank" rel="noopener"><span>Прочие услуги<small>перечень на 2026 год</small></span></a></li>
+      <li data-reveal><a href="https://www.slenergo.ru/page/perechen-uslug/" target="_blank" rel="noopener"><span>Порядок предоставления услуг<small>что указать в заявлении и как заключают договор</small></span></a></li>
+      <li data-reveal><a href="https://www.slenergo.ru/page/sale-of-illiquid-assets/" target="_blank" rel="noopener"><span>Продажа неликвидов<small>имущество предприятия</small></span></a></li>
     </ul>
   </div>
 </section>
 
 <section class="sec contacts" id="kontakty" aria-labelledby="kn-h">
   <div class="wrap">
-    <div class="head"><h2 id="kn-h">Контакты и обращения</h2></div>
+    <div class="head"><h2 id="kn-h" data-split>Контакты и обращения</h2></div>
     <div class="cgrid">
-      <div class="addr">
+      <div class="addr" data-reveal>
         <div><h3>Административное здание</h3><p>629007, г. Салехард, ул. Свердлова, 39<br>Для писем: а/я 42</p></div>
         <div><h3>Центр обслуживания клиентов</h3><p>г. Салехард, ул. Чубынина, 14</p></div>
         <div><h3>Приёмная</h3><p><a class="tl tel" href="tel:+73492254503">+7 (34922) 5-45-03</a>&ensp; <a class="tl tel" href="tel:+73492254504">5-45-04</a><br>Факс: +7 (34922) 5-44-35<br><a class="tl" href="mailto:secret@slenergo.ru">secret@slenergo.ru</a></p></div>
         <div><h3>Уведомления об ограничении электроснабжения</h3><p class="sm">Выделенные абонентские номера для уведомления потребителей о введении полного или частичного ограничения режима потребления электроэнергии</p><p><a class="tl tel" href="tel:+79519929720">+7 951 992-97-20</a>&ensp; <a class="tl tel" href="tel:+79519929877">+7 951 992-98-77</a></p></div>
       </div>
-      <form data-demo-form>
+      <form data-demo-form data-reveal>
         <h3>Написать обращение</h3>
         <label class="field"><span>Тема</span><select name="Тема"><option>Электроснабжение</option><option>Теплоснабжение</option><option>Водоснабжение</option><option>Водоотведение</option><option>Начисления и оплата</option><option>Технологическое присоединение</option></select></label>
         <div class="f2">
@@ -470,7 +477,7 @@
 </section>
 </main>
 
-<footer class="ftr">
+<footer class="ftr" data-theme="night">
   <div class="wrap">
     <p>АО «Салехардэнерго»<br>ИНН 8901030855, КПП 890101001<br>ОГРН 1158901001434</p>
     <p>629007, Ямало-Ненецкий автономный округ,<br>г. Салехард, ул. Свердлова, 39</p>

@@ -15,6 +15,7 @@
 </head>
 <body>
 <a class="skip" href="#main">К&nbsp;содержанию</a>
+<div class="prog" aria-hidden="true"></div>
 <header class="hdr" data-header>
   <a class="brand" href="#main" aria-label="АО «УСГГ», на главную"><img src="img/logo.png" alt="Логотип АО «УСГГ»" width="216" height="213"><span><b>АО «УСГГ»</b><i>Салехард</i></span></a>
   <nav data-menu aria-label="Основное меню"><a href="#abon">Абонентам</a><a href="#path">Путь газа</a><a href="#about">О&nbsp;компании</a><a href="#docs">Тарифы и&nbsp;раскрытие</a><a href="#contacts">Контакты</a></nav>
@@ -46,8 +47,9 @@
 
 <section class="hero" data-theme="night">
   <div class="hero-ph" aria-hidden="true"><picture><source media="(max-width:760px)" srcset="img/burner-m.webp"><img src="img/burner.webp" alt="" width="1478" height="464" fetchpriority="high"></picture></div>
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="wrap hero-in">
-    <h1>Газ в&nbsp;доме&nbsp;— <span>от&nbsp;газопровода до&nbsp;синего пламени</span></h1>
+    <h1 aria-label="Газ в доме — от газопровода до синего пламени"><span class="ln" aria-hidden="true"><span>Газ в&nbsp;доме&nbsp;—</span></span> <span class="ln hl" aria-hidden="true"><span>от&nbsp;газопровода</span></span> <span class="ln hl" aria-hidden="true"><span>до&nbsp;синего пламени</span></span></h1>
     <p class="lead">Управление по&nbsp;строительству газопроводов и&nbsp;газификации: транспортируем газ, газифицируем дома и&nbsp;обслуживаем газовое оборудование в&nbsp;Салехарде, Лабытнанги, Аксарке и&nbsp;Харпе.</p>
     <div class="hero-cta">
       <a class="btn" data-magnetic href="#path">Как подключить газ к&nbsp;дому</a>
@@ -116,6 +118,7 @@
       <div class="dots" role="group" aria-label="Этапы пути газа">
         <button type="button">Заявка</button><button type="button">Условия</button><button type="button">Проект</button><button type="button">Монтаж</button><button type="button">Врезка</button><button type="button">Пуск</button><button type="button">Сервис</button>
       </div>
+      <div class="path-prog" aria-hidden="true"><i></i></div>
       <a class="btn path-cta" href="#appeal" data-topic="Подключение дома к газу">Начать с&nbsp;заявки</a>
     </div>
     <div class="board">
@@ -124,10 +127,17 @@
           <linearGradient id="pg" gradientUnits="userSpaceOnUse" x1="230" y1="0" x2="660" y2="0"><stop offset="0" stop-color="#009FE3"/><stop offset="1" stop-color="#5B55C9"/></linearGradient>
           <pattern id="soil" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="14" stroke="#6F8FD0" stroke-opacity=".16" stroke-width="1.5"/></pattern>
           <radialGradient id="warm"><stop offset="0" stop-color="#FFC861" stop-opacity=".55"/><stop offset="1" stop-color="#FFC861" stop-opacity="0"/></radialGradient>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F2058" stop-opacity="0"/><stop offset="1" stop-color="#1A3B8F" stop-opacity=".55"/></linearGradient>
+          <linearGradient id="deep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#132A66"/><stop offset="1" stop-color="#050D2A"/></linearGradient>
         </defs>
-        <rect x="0" y="382" width="800" height="218" fill="#0B1B48"/>
+        <rect x="0" y="150" width="800" height="232" fill="url(#sky)"/>
+        <rect x="0" y="382" width="800" height="218" fill="url(#deep)"/>
         <rect x="0" y="382" width="800" height="218" fill="url(#soil)"/>
         <path d="M0 382H800" stroke="#8FB4F0" stroke-width="2"/>
+        <path d="M0 383H800" stroke="#5FC8FF" stroke-width="10" stroke-opacity=".12"/>
+        <!-- после пуска в окне тёплый свет (под рамой окна) -->
+        <rect class="s s5" x="591" y="223" width="58" height="46" fill="#FFD27A" fill-opacity=".9"/>
+        <ellipse class="s s5" cx="620" cy="246" rx="70" ry="56" fill="url(#warm)"/>
         <!-- дом в разрезе -->
         <g class="house" fill="none" stroke="#BFD4FA" stroke-width="2.5" stroke-linejoin="round">
           <path d="M470 382V222L620 130l150 92v160"/>
@@ -159,6 +169,8 @@
           <path d="M230 496V452H442V368H624" stroke-width="2" stroke-dasharray="5 6"/>
           <path d="M230 548v28M442 466v110M230 566H442M230 559v14M442 559v14" stroke-width="1.5" stroke-opacity=".7"/>
         </g>
+        <!-- пуск: свечение под новой трубой -->
+        <path class="s s5" d="M230 502V452H442V368H624M539 368V334" stroke="#38BDFF" stroke-width="36" stroke-opacity=".22" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
         <!-- монтаж: труба, прорисовывается по прокрутке -->
         <path class="pipe pipe-o" pathLength="100" d="M230 502V452H442V368H624" stroke="#08143A" stroke-width="20" fill="none" stroke-linejoin="round"/>
         <path class="pipe" pathLength="100" d="M230 502V452H442V368H624" stroke="url(#pg)" stroke-width="12" fill="none" stroke-linejoin="round"/>
@@ -171,6 +183,12 @@
         </g>
         <!-- пуск: газ идёт по новой трубе -->
         <path class="s s5 flow" d="M230 502V452H442V368H624" stroke="#E8FAFF" stroke-width="4" stroke-dasharray="6 22" fill="none"/>
+        <g class="s s5" fill="none" stroke-linecap="round">
+          <path class="pulse" pathLength="100" d="M230 502V452H442V368H624" stroke="#9EE6FF" stroke-width="14" stroke-opacity=".35"/>
+          <path class="pulse" pathLength="100" d="M230 502V452H442V368H624" stroke="#fff" stroke-width="6"/>
+          <path class="pulse p2" pathLength="100" d="M230 502V452H442V368H624" stroke="#9EE6FF" stroke-width="14" stroke-opacity=".35"/>
+          <path class="pulse p2" pathLength="100" d="M230 502V452H442V368H624" stroke="#fff" stroke-width="6"/>
+        </g>
         <path class="s s5" d="M631 346q3-12 9-3 6-12 9 0M661 346q3-12 9-3 6-12 9 0" stroke="#38BDFF" stroke-width="3" fill="none" stroke-linecap="round"/>
         <!-- обслуживание -->
         <g class="s s6" fill="#FFC22E"><circle cx="560" cy="304" r="13"/><circle cx="688" cy="366" r="13"/><path d="m554 306 4 5 8-9M682 366l4 5 8-9" stroke="#08143A" stroke-width="3" fill="none"/></g>
@@ -193,10 +211,14 @@
     <p>АО «Управление по&nbsp;строительству газопроводов и&nbsp;газификации» транспортирует природный газ от&nbsp;поставщиков до&nbsp;потребителей, обеспечивает надёжную эксплуатацию газораспределительной системы автономного округа и&nbsp;газоиспользующего оборудования, строит, реконструирует и&nbsp;ремонтирует объекты газового хозяйства.</p>
   </div>
   <dl class="facts">
-    <div data-reveal><dt>С&nbsp;1&nbsp;июня 2017&nbsp;года</dt><dd>акционерное общество, преобразованное из&nbsp;государственного унитарного предприятия ЯНАО</dd></div>
-    <div data-reveal><dt>4&nbsp;населённых пункта</dt><dd>услуги физическим и&nbsp;юридическим лицам: Салехард, Лабытнанги, Аксарка, Харп</dd></div>
-    <div data-reveal><dt>11&nbsp;видов работ</dt><dd>в&nbsp;«Едином окне»&nbsp;— от&nbsp;технических условий до&nbsp;инструктажа и&nbsp;договора поставки газа</dd></div>
+    <div data-reveal><dt><b class="num">2017</b><span>с&nbsp;1&nbsp;июня</span></dt><dd>акционерное общество, преобразованное из&nbsp;государственного унитарного предприятия ЯНАО</dd></div>
+    <div data-reveal><dt><b class="num" data-count>4</b><span>населённых пункта</span></dt><dd>услуги физическим и&nbsp;юридическим лицам: Салехард, Лабытнанги, Аксарка, Харп</dd></div>
+    <div data-reveal><dt><b class="num" data-count>11</b><span>видов работ</span></dt><dd>в&nbsp;«Едином окне»&nbsp;— от&nbsp;технических условий до&nbsp;инструктажа и&nbsp;договора поставки газа</dd></div>
   </dl>
+</div></section>
+
+<section class="sec ops" data-theme="night" aria-labelledby="ops-h"><div class="wrap">
+  <h2 class="sr" id="ops-h">Виды деятельности</h2>
   <ul class="works">
     <li data-reveal><b>Строительство газопроводов и&nbsp;газификация объектов</b></li>
     <li data-reveal><b>Проектирование объектов газификации</b></li>
@@ -213,11 +235,11 @@
 <section class="sec docs" id="docs"><div class="wrap docs-in">
   <div><h2 data-split>Тарифы и&nbsp;раскрытие информации</h2><p>Разделы действующего сайта открываются в&nbsp;новой вкладке.</p></div>
   <ul>
-    <li><a href="https://usgg-salekhard.ru/raskrytie-informatsii/tarify-na-uslugi-po-transportirovke-gaza/" target="_blank" rel="noopener"><b>Транспортировка газа</b><span>Приказы ФАС России о&nbsp;тарифах, в&nbsp;том числе №&nbsp;1224/25 от&nbsp;30.12.2025</span></a></li>
-    <li><a href="https://usgg-salekhard.ru/raskrytie-informatsii/tarify-na-uslugi-po-tekhnologicheskomu-prisoedineniyu/" target="_blank" rel="noopener"><b>Технологическое присоединение</b><span>Приказы о&nbsp;плате за&nbsp;подключение к&nbsp;газораспределительным сетям</span></a></li>
-    <li><a href="https://usgg-salekhard.ru/tekhnicheskoe-obsluzhivanie/fizicheskie-litsa/" target="_blank" rel="noopener"><b>Прейскуранты на&nbsp;обслуживание</b><span>Внутридомовое и&nbsp;внутриквартирное газовое оборудование</span></a></li>
-    <li><a href="https://usgg-salekhard.ru/raskrytie-informatsii/" target="_blank" rel="noopener"><b>Раскрытие информации</b><span>Формы по&nbsp;приказам ФАС и&nbsp;ФСТ России, сведения о&nbsp;СОУТ</span></a></li>
-    <li><a href="https://usgg-salekhard.ru/zakupki/" target="_blank" rel="noopener"><b>Закупки</b><span>По&nbsp;223-ФЗ; положение и&nbsp;план&nbsp;— на&nbsp;zakupki.gov.ru</span></a></li>
+    <li data-reveal><a href="https://usgg-salekhard.ru/raskrytie-informatsii/tarify-na-uslugi-po-transportirovke-gaza/" target="_blank" rel="noopener"><b>Транспортировка газа</b><span>Приказы ФАС России о&nbsp;тарифах, в&nbsp;том числе №&nbsp;1224/25 от&nbsp;30.12.2025</span></a></li>
+    <li data-reveal><a href="https://usgg-salekhard.ru/raskrytie-informatsii/tarify-na-uslugi-po-tekhnologicheskomu-prisoedineniyu/" target="_blank" rel="noopener"><b>Технологическое присоединение</b><span>Приказы о&nbsp;плате за&nbsp;подключение к&nbsp;газораспределительным сетям</span></a></li>
+    <li data-reveal><a href="https://usgg-salekhard.ru/tekhnicheskoe-obsluzhivanie/fizicheskie-litsa/" target="_blank" rel="noopener"><b>Прейскуранты на&nbsp;обслуживание</b><span>Внутридомовое и&nbsp;внутриквартирное газовое оборудование</span></a></li>
+    <li data-reveal><a href="https://usgg-salekhard.ru/raskrytie-informatsii/" target="_blank" rel="noopener"><b>Раскрытие информации</b><span>Формы по&nbsp;приказам ФАС и&nbsp;ФСТ России, сведения о&nbsp;СОУТ</span></a></li>
+    <li data-reveal><a href="https://usgg-salekhard.ru/zakupki/" target="_blank" rel="noopener"><b>Закупки</b><span>По&nbsp;223-ФЗ; положение и&nbsp;план&nbsp;— на&nbsp;zakupki.gov.ru</span></a></li>
   </ul>
 </div></section>
 

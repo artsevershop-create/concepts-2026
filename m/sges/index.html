@@ -21,14 +21,15 @@
   <nav data-menu aria-label="Основное меню"><a href="#outages">Отключения</a><a href="#services">Потребителям</a><a href="#city">Сети в&nbsp;цифрах</a><a href="#about">О&nbsp;компании</a><a href="#contacts">Контакты</a></nav>
   <a class="hdr-tel" href="tel:+73462323535"><span>Центральная диспетчерская</span><b class="num">8 (3462) 32-35-35</b></a>
   <button data-burger aria-label="Меню" aria-expanded="false"></button>
-</div></header>
+</div><i class="hdr__prog" aria-hidden="true"></i></header>
 
 <main id="main">
-<section class="hero">
+<section class="hero" data-theme="night">
   <canvas class="hero__city" aria-hidden="true"></canvas>
+  <div class="hero__glow" aria-hidden="true"></div>
   <div class="wrap hero__grid">
     <div class="hero__text">
-      <h1>Электричество и&nbsp;тепло в&nbsp;сетях Сургута</h1>
+      <h1><span class="ln"><span>Электричество и&nbsp;тепло</span></span> <span class="ln"><span>в&nbsp;сетях Сургута</span></span></h1>
       <p class="lead">ООО «СГЭС» передаёт и&nbsp;распределяет электроэнергию в&nbsp;Сургуте, прилегающих посёлках и&nbsp;38&nbsp;дачных кооперативах города и&nbsp;района. С&nbsp;2012&nbsp;года поставляет тепло в&nbsp;западную часть города.</p>
       <div class="hero__cta">
         <a class="btn" href="#outages">Найти отключение по&nbsp;адресу</a>
@@ -72,7 +73,7 @@
       </div>
     </div>
     <p class="off__count" id="count" role="status"></p>
-    <ul class="off__list" id="list">
+    <ul class="off__list" id="list" data-reveal>
       <li data-day="2026-11-26"><time datetime="2026-11-26">26&nbsp;ноября<span class="num">09:00–16:00</span></time><div><h3>ПСК «Ветеран-2», ПСОК «Старожил-1», ПОК «Многодетная семья»</h3><p>Полное отключение ПС&nbsp;73-20, ремонтные работы.</p></div></li>
       <li data-day="2026-11-26"><time datetime="2026-11-26">26&nbsp;ноября<span class="num">09:00–17:00</span></time><div><h3>СОК «Прибрежный»: улицы Экскаваторная, Буровиков, Механизаторов</h3><p>Частичное отключение, КТПН-786, 787, 1040. Перенос приборов учёта на&nbsp;новую ВЛ-0,4&nbsp;кВ.</p></div></li>
       <li data-day="2026-11-26"><time datetime="2026-11-26">26&nbsp;ноября<span class="num">09:00–17:00</span></time><div><h3>ДНТ «Зелёный бор»</h3><p>КТПН-767, плановый ремонт по&nbsp;заявке вышестоящей организации. Перенесено: 25&nbsp;ноября отключения нет.</p></div></li>
@@ -124,7 +125,7 @@
   </div>
 </section>
 
-<section class="city" id="city" aria-labelledby="city-h">
+<section class="city" id="city" aria-labelledby="city-h" data-theme="night">
   <div class="city__stick">
     <canvas class="city__cv" role="img" aria-label="Условная схема: ночной город по шагам загорается от центра питания через линии и подстанции до домов, уличных фонарей и тепловых сетей"></canvas>
     <div class="wrap city__wrap">
@@ -138,6 +139,7 @@
           <li><b>2023</b><span>Год концессионного соглашения с&nbsp;администрацией Сургута: компания обновляет уличное освещение города.</span></li>
           <li><b>312&nbsp;<small>Гкал/ч</small></b><span>Мощность тепловых объектов. 35&nbsp;объектов и&nbsp;54&nbsp;км магистральных и&nbsp;распределительных сетей. С&nbsp;2012&nbsp;года тепло идёт в&nbsp;западную часть Сургута.</span></li>
         </ol>
+        <div class="hud__bar" aria-hidden="true"><i></i></div>
         <div class="hud__steps" role="group" aria-label="Шаги схемы">
           <button type="button" aria-current="step">Центр</button>
           <button type="button">Линии</button>
@@ -171,11 +173,11 @@
       <h3>Хозяйство в&nbsp;цифрах</h3>
       <dl>
         <div><dt>Общая трансформаторная мощность</dt><dd class="num">1,4&nbsp;ГВА</dd></div>
-        <div><dt>Трансформаторные подстанции</dt><dd class="num">802</dd></div>
-        <div><dt>Кабельные линии и&nbsp;воздушные сети</dt><dd class="num">2&nbsp;305&nbsp;км</dd></div>
-        <div><dt>Мощность тепловых объектов</dt><dd class="num">312&nbsp;Гкал/ч</dd></div>
-        <div><dt>Тепловые объекты</dt><dd class="num">35</dd></div>
-        <div><dt>Магистральные и&nbsp;распределительные тепловые сети</dt><dd class="num">54&nbsp;км</dd></div>
+        <div><dt>Трансформаторные подстанции</dt><dd class="num" data-count>802</dd></div>
+        <div><dt>Кабельные линии и&nbsp;воздушные сети</dt><dd class="num" data-count>2&nbsp;305&nbsp;км</dd></div>
+        <div><dt>Мощность тепловых объектов</dt><dd class="num" data-count>312&nbsp;Гкал/ч</dd></div>
+        <div><dt>Тепловые объекты</dt><dd class="num" data-count>35</dd></div>
+        <div><dt>Магистральные и&nbsp;распределительные тепловые сети</dt><dd class="num" data-count>54&nbsp;км</dd></div>
       </dl>
     </div>
     <div class="boss">
@@ -204,7 +206,7 @@
         <div><dt>Отдел кадров</dt><dd><a class="num" href="tel:+73462202677">+7&nbsp;(3462)&nbsp;20-26-77</a></dd></div>
       </dl>
     </div>
-    <form class="form" data-demo-form>
+    <form class="form" data-demo-form data-reveal>
       <h3>Обращение в&nbsp;компанию</h3>
       <p>Об&nbsp;аварии сообщайте только по&nbsp;телефону диспетчерской.</p>
       <label class="field"><span>Тема</span><select name="Тема"><option>Плановое отключение</option><option>Технологическое присоединение</option><option>Прибор учёта</option><option>Жалоба</option><option>Другой вопрос</option></select></label>

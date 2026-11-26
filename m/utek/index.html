@@ -33,7 +33,7 @@
 <main id="main">
 <section class="hero" aria-labelledby="h1">
   <div class="hero-t">
-    <h1 id="h1">Подключение к&nbsp;электросетям Югры</h1>
+    <h1 id="h1"><span class="ln"><span>Подключение</span></span> <span class="ln"><span>к&nbsp;электросетям</span></span> <span class="ln"><span>Югры</span></span></h1>
     <p class="lead">АО «ЮТЭК&nbsp;— Региональные сети» передаёт электроэнергию до&nbsp;потребителя и&nbsp;присоединяет к&nbsp;своим сетям дома, дачи, гаражи и&nbsp;объекты бизнеса.</p>
     <div class="cta">
       <a class="btn" href="#route">Пройти маршрут заявки</a>
@@ -47,6 +47,7 @@
   </div>
   <figure class="hero-ph">
     <img src="img/blok-ps.webp" srcset="img/blok-ps-800.webp 800w, img/blok-ps.webp 1600w" sizes="(max-width:900px) 100vw, 56vw" width="1600" height="1200" alt="Модульная электрическая подстанция с синими лестницами и логотипом ЮТЭК" fetchpriority="high">
+    <span class="glow" aria-hidden="true"></span>
     <figcaption><b>1&nbsp;379</b><span>присоединений мощностью 25,48&nbsp;МВт за&nbsp;9 месяцев 2026&nbsp;года</span></figcaption>
   </figure>
 </section>
@@ -60,10 +61,10 @@
   </ul>
 </nav>
 
-<section class="route sec" id="route" aria-labelledby="route-h">
+<section class="route sec" data-theme="night" id="route" aria-labelledby="route-h">
   <div class="wrap">
     <div class="route-head">
-      <h2 id="route-h">Маршрут вашей заявки</h2>
+      <h2 id="route-h" data-split>Маршрут вашей заявки</h2>
       <p>Выберите, кто подаёт заявку: маршрут подставит нужную форму, договор и&nbsp;порядок его получения. Пройдите пять шагов до&nbsp;акта.</p>
     </div>
 
@@ -98,9 +99,14 @@
           <img class="off" src="img/ktp-rezerv-800.webp" srcset="img/ktp-rezerv-800.webp 800w, img/ktp-rezerv.webp 1600w" sizes="(max-width:900px) 100vw, 52vw" alt="" loading="lazy">
           <img class="on" src="img/ktp-rezerv-800.webp" srcset="img/ktp-rezerv-800.webp 800w, img/ktp-rezerv.webp 1600w" sizes="(max-width:900px) 100vw, 52vw" alt="Энергетик на площадке подстанции рядом с передвижной электростанцией" loading="lazy">
         </figure>
-        <figure data-shot="done">
-          <img class="off" src="img/blok-ps-800.webp" srcset="img/blok-ps-800.webp 800w, img/blok-ps.webp 1600w" sizes="(max-width:900px) 100vw, 52vw" alt="" loading="lazy">
-          <img class="on" src="img/blok-ps-800.webp" srcset="img/blok-ps-800.webp 800w, img/blok-ps.webp 1600w" sizes="(max-width:900px) 100vw, 52vw" alt="Модульная подстанция ЮТЭК под открытым небом" loading="lazy">
+        <figure data-shot="done" class="sign">
+          <!-- финал без фото: линии знака «Ю» входят в кольцо — сеть замкнута на объект -->
+          <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g class="s-lines"><path d="M-420 278H530"/><path d="M-420 300H530"/><path d="M-420 322H530"/></g>
+            <rect class="s-bar" x="378" y="146" width="38" height="308" rx="19"/>
+            <circle class="s-ring" cx="580" cy="300" r="160" pathLength="1"/>
+          </svg>
+          <p class="sign-t" aria-hidden="true"><b>Акт</b><span>об&nbsp;осуществлении технологического присоединения</span></p>
         </figure>
         <span class="edge" aria-hidden="true"></span>
         <p class="badge" aria-hidden="true"></p>
@@ -134,11 +140,11 @@
 
 <section class="places sec" id="places" aria-labelledby="places-h">
   <div class="wrap">
-    <h2 id="places-h" data-reveal>Куратор и&nbsp;офис по&nbsp;вашей территории</h2>
+    <h2 id="places-h" data-split>Куратор и&nbsp;офис по&nbsp;вашей территории</h2>
     <p class="sub">Телефон сотрудника отдела технологического присоединения и&nbsp;офис обслуживания потребителей.</p>
     <div class="places-g">
-      <div class="chips" role="group" aria-label="Территория"></div>
-      <div class="place" aria-live="polite">
+      <div class="chips" data-reveal role="group" aria-label="Территория"></div>
+      <div class="place" data-reveal aria-live="polite">
         <div class="cur">
           <h3>Куратор присоединения</h3>
           <p class="cur-t"></p>
@@ -155,11 +161,11 @@
   </div>
 </section>
 
-<section class="consumers sec" id="consumers" aria-labelledby="cons-h">
+<section class="consumers sec" data-theme="night" id="consumers" aria-labelledby="cons-h">
   <div class="wrap">
-    <h2 id="cons-h" data-reveal>Потребителям</h2>
+    <h2 id="cons-h" data-split>Потребителям</h2>
     <div class="cons-g">
-      <article id="meters">
+      <article data-reveal id="meters">
         <h3>Прибор учёта: установка и&nbsp;замена без&nbsp;оплаты</h3>
         <p>Сетевая организация приобретает, устанавливает, меняет и&nbsp;допускает в&nbsp;эксплуатацию приборы учёта электроэнергии:</p>
         <ul class="ticks">
@@ -170,7 +176,7 @@
         <p class="small">Основание: п.&nbsp;136 постановления Правительства РФ №&nbsp;442 от&nbsp;04.05.2012 и&nbsp;закон №&nbsp;35-ФЗ «Об&nbsp;электроэнергетике» в&nbsp;редакции №&nbsp;522-ФЗ.</p>
       </article>
 
-      <article>
+      <article data-reveal>
         <h3>СНТ и&nbsp;СОТ: передача сетей на&nbsp;баланс компании</h3>
         <p>Для&nbsp;садовых товариществ у&nbsp;компании есть отдельный порядок: сначала передача сетей, затем договоры присоединения с&nbsp;каждым участком.</p>
         <details>
@@ -212,7 +218,7 @@
         <a class="more" href="https://utek-rs.ru/index.php?option=com_content&amp;view=article&amp;id=7657&amp;catid=33&amp;Itemid=40" target="_blank" rel="noopener">Полный порядок и&nbsp;образцы на&nbsp;действующем сайте</a>
       </article>
 
-      <article>
+      <article data-reveal>
         <h3>Сообщить о&nbsp;коррупции</h3>
         <p><a class="ph" href="tel:+73467323143">8 (3467) 32-31-43</a><a class="ph" href="tel:+78001018600">8-800-101-86-00</a></p>
         <h3 class="gap">Обращения граждан</h3>
@@ -225,38 +231,38 @@
 <section class="about sec" id="about" aria-labelledby="about-h">
   <div class="wrap">
     <div class="about-top">
-      <h2 id="about-h" data-reveal>Сетевая компания Югры с&nbsp;2007&nbsp;года</h2>
+      <h2 id="about-h" data-split>Сетевая компания Югры с&nbsp;2007&nbsp;года</h2>
       <p class="lead">Общество исполняет инвестиционную программу по&nbsp;строительству электросетевых объектов на&nbsp;территории округа и&nbsp;обеспечивает транспортировку электроэнергии до&nbsp;конечного потребителя.</p>
     </div>
     <ul class="nums">
-      <li><b>3&nbsp;466 <small>км</small></b><span>воздушных линий</span></li>
-      <li><b>1&nbsp;577 <small>км</small></b><span>кабельных линий</span></li>
-      <li><b>1&nbsp;721</b><span>трансформаторная подстанция</span></li>
-      <li><b>92 <small>%</small></b><span>объектов, присоединённых за&nbsp;9 месяцев 2026&nbsp;года,&nbsp;— физлиц: 1&nbsp;266 из&nbsp;1&nbsp;379</span></li>
+      <li data-reveal><b data-count>3&nbsp;466 <small>км</small></b><span>воздушных линий</span></li>
+      <li data-reveal><b data-count>1&nbsp;577 <small>км</small></b><span>кабельных линий</span></li>
+      <li data-reveal><b data-count>1&nbsp;721</b><span>трансформаторная подстанция</span></li>
+      <li data-reveal><b data-count>92 <small>%</small></b><span>объектов, присоединённых за&nbsp;9 месяцев 2026&nbsp;года,&nbsp;— физлиц: 1&nbsp;266 из&nbsp;1&nbsp;379</span></li>
     </ul>
     <p class="small">Протяжённость линий и&nbsp;число подстанций&nbsp;— из&nbsp;раздела «Цифры и&nbsp;факты» сайта компании; дата подсчёта там не&nbsp;указана.</p>
 
     <div class="news">
         <h3>Из&nbsp;последних работ</h3>
         <ul>
-          <li><time datetime="2026-11-12">12 ноября 2026</time><p><b>Пыть-Ях.</b> За&nbsp;2025–2026 годы реконструированы распределительные сети в&nbsp;пяти садовых товариществах и&nbsp;районе ИЖС, всего 1&nbsp;011&nbsp;участков. Вложено более 46&nbsp;миллионов рублей.</p></li>
-          <li><time datetime="2026-11-05">5 ноября 2026</time><p><b>Лангепас.</b> Обновлено электросетевое хозяйство в&nbsp;товариществах «Рябинушка», «Урьево» и&nbsp;«Дорожник».</p></li>
-          <li><time datetime="2026-10-22">22 октября 2026</time><p><b>Итоги 9 месяцев.</b> 1&nbsp;379&nbsp;присоединений мощностью 25,48&nbsp;МВт; больше всего в&nbsp;Сургутском районе&nbsp;— 275&nbsp;участков садовых товариществ.</p></li>
-          <li><time datetime="2026-10-15">15 октября 2026</time><p><b>Сургут.</b> Противоаварийная тренировка с&nbsp;«Россети Тюмень» и&nbsp;СГЭС: действия при&nbsp;авариях в&nbsp;мороз и&nbsp;сильный снегопад.</p></li>
+          <li data-reveal><time datetime="2026-11-12">12 ноября 2026</time><p><b>Пыть-Ях.</b> За&nbsp;2025–2026 годы реконструированы распределительные сети в&nbsp;пяти садовых товариществах и&nbsp;районе ИЖС, всего 1&nbsp;011&nbsp;участков. Вложено более 46&nbsp;миллионов рублей.</p></li>
+          <li data-reveal><time datetime="2026-11-05">5 ноября 2026</time><p><b>Лангепас.</b> Обновлено электросетевое хозяйство в&nbsp;товариществах «Рябинушка», «Урьево» и&nbsp;«Дорожник».</p></li>
+          <li data-reveal><time datetime="2026-10-22">22 октября 2026</time><p><b>Итоги 9 месяцев.</b> 1&nbsp;379&nbsp;присоединений мощностью 25,48&nbsp;МВт; больше всего в&nbsp;Сургутском районе&nbsp;— 275&nbsp;участков садовых товариществ.</p></li>
+          <li data-reveal><time datetime="2026-10-15">15 октября 2026</time><p><b>Сургут.</b> Противоаварийная тренировка с&nbsp;«Россети Тюмень» и&nbsp;СГЭС: действия при&nbsp;авариях в&nbsp;мороз и&nbsp;сильный снегопад.</p></li>
         </ul>
     </div>
 
-    <div class="trust">
+    <div class="trust" data-reveal>
       <p class="mission">«Мы несём энергию людям»<span>миссия компании</span></p>
       <p class="ekg"><b>АА</b><span>ЭКГ-рейтинг 2025&nbsp;года, уровень «Продвинутый», 96 баллов. Годом раньше&nbsp;— уровень А, 74 балла.</span></p>
     </div>
   </div>
 </section>
 
-<section class="contacts sec" id="contacts" aria-labelledby="cont-h">
+<section class="contacts sec" data-theme="night" id="contacts" aria-labelledby="cont-h">
   <div class="wrap cont-g">
     <div>
-      <h2 id="cont-h" data-reveal>Контакты</h2>
+      <h2 id="cont-h" data-split>Контакты</h2>
       <a class="big" href="tel:+78005558610">8-800-555-86-10</a>
       <p>Горячая линия и&nbsp;центральная диспетчерская служба, звонок бесплатный.</p>
       <dl class="list">
@@ -268,7 +274,7 @@
       </dl>
     </div>
 
-    <form data-demo-form>
+    <form data-demo-form data-reveal>
       <h3>Вопрос по&nbsp;присоединению</h3>
       <p class="small">Максимальный срок официального ответа&nbsp;— 30&nbsp;дней (п.&nbsp;41 приказа Минэнерго России №&nbsp;186 от&nbsp;15.04.2014).</p>
       <label class="field"><span>Как к&nbsp;вам обращаться</span><input name="Имя" autocomplete="name" required></label>
@@ -283,7 +289,7 @@
 </section>
 </main>
 
-<footer class="ftr">
+<footer class="ftr" data-theme="night">
   <div class="wrap">
     <p><b>АО «ЮТЭК-Региональные сети»</b><br>Акционерное общество «Югорская территориальная энергетическая компания&nbsp;— Региональные сети»</p>
     <p>ИНН 8601033125 · КПП 860101001<br>ОГРН 1078601003788</p>

@@ -20,21 +20,67 @@ h1,h2{letter-spacing:-.025em;font-weight:600} h3{font-weight:600;letter-spacing:
 .tel svg{display:none;width:22px;height:22px;fill:currentColor}
 
 /* hero */
-.hero{padding-top:var(--hdr-h);background:var(--paper)}
-.hero-g{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px clamp(28px,4vw,72px);align-items:end;padding-block:clamp(28px,3.6vw,52px)}
-.hero h1{font-size:clamp(34px,4.5vw,66px);line-height:1.02}
-.lead{margin-top:18px;max-width:38em;font-size:clamp(17px,1.35vw,19px);color:var(--muted)}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-/* штамп чертежа */
-.stamp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:#fff;border:1.5px solid var(--fg)}
-.stamp>div{padding:12px 16px 14px;border-top:1px solid var(--fg)}
-.stamp>div:nth-child(-n+2){border-top:0}
-.stamp>div:nth-child(2){border-left:1px solid var(--fg)}
-.stamp .full{grid-column:1/-1}
-.stamp dt{font-size:14px;color:var(--muted);line-height:1.35}
-.stamp dd{font:600 clamp(18px,1.55vw,22px)/1.25 var(--f-display);margin-top:3px}
-.hero-ph{height:clamp(230px,calc(100svh - 540px),520px);clip-path:polygon(0 0,calc(100% - 110px) 0,100% 110px,100% 100%,0 100%);position:relative}
-.hero-ph img{width:100%;height:100%;object-fit:cover;object-position:62% 38%}
+/* hero — «ночь» на фото парка: фото внизу во всю ширину (исходник 1250×450, поэтому высота ограничена), текст поверх затемнения */
+.hero{position:relative;isolation:isolate;overflow:clip;display:flex;flex-direction:column;justify-content:flex-end;min-height:100vh;min-height:100svh;padding-top:calc(var(--hdr-h) + 40px);background:var(--night);color:#fff}
+.hero-ph{position:absolute;inset:auto 0 0;height:min(76%,660px);z-index:-2}
+.hero-ph img{width:100%;height:100%;object-fit:cover;object-position:64% 42%}
+.hero-ph::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,#141d26f5 0%,#141d26d9 30%,#141d2666 56%,#141d2600 76%),
+  linear-gradient(180deg,#141d26 0%,#141d2600 34%,#141d2600 58%,#141d26e6 100%)}
+/* свет и зерно: глубина без серых теней */
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(60% 50% at 78% 18%,#ed7d1e2e,transparent 70%),radial-gradient(50% 60% at 10% 0%,#2a3b4c,transparent 70%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.09;mix-blend-mode:overlay;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* диагонали из логотипа */
+.hero-rays{position:absolute;right:0;top:var(--hdr-h);width:min(46vw,640px);height:62%;z-index:-1;pointer-events:none;
+  background:repeating-linear-gradient(135deg,transparent 0 56px,#ed7d1e 56px 66px,transparent 66px 92px);opacity:.22;
+  -webkit-mask:linear-gradient(200deg,#000 0%,transparent 62%);mask:linear-gradient(200deg,#000 0%,transparent 62%)}
+.hero-t{width:100%}
+.eyebrow{font:500 15px/1.4 var(--f-text);color:var(--accent-h);letter-spacing:.01em}
+.hero h1{margin-top:16px;font-size:clamp(40px,7vw,108px);line-height:.98;font-weight:700;letter-spacing:-.035em;max-width:10.5em}
+.hero h1 .ln{display:block;overflow:clip;padding-bottom:.06em;margin-bottom:-.06em}
+.hero h1 .ln>span{display:block}
+.lead{margin-top:24px;max-width:36em;font-size:clamp(17px,1.35vw,20px);color:#d5dde4}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .btn--ghost{color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;margin-top:clamp(40px,6vh,72px)}
+.facts>div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:6px;padding:22px 24px 30px;border-top:1px solid #ffffff38;border-left:1px solid #ffffff1f;background:#141d2659;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.facts>div:first-child{border-left:0}
+.facts dd{font:700 clamp(34px,3.6vw,56px)/1 var(--f-display);letter-spacing:-.03em}
+.facts dd small{font-size:.36em;font-weight:500;letter-spacing:0;color:#d5dde4}
+.facts dt{font-size:15px;line-height:1.35;color:#c9d3dc;max-width:16em}
+.facts>div:first-child dd b{color:var(--accent-h)}
+/* вход: фото → заголовок по строкам → лид → действия → цифры; ≤ 3 с. H1 и фото на месте с первого кадра без JS */
+@media (prefers-reduced-motion:no-preference){
+  .js .hero-ph img{animation:h-img 2.4s var(--e-smooth) both}
+  .js .hero-rays{animation:h-fade 2s var(--e-smooth) .5s both}
+  .js .eyebrow{animation:h-up .9s var(--e-smooth) .15s both}
+  .js .hero h1 .ln>span{animation:h-line 1.1s var(--e-smooth) both}
+  .js .hero h1 .ln:nth-child(1)>span{animation-delay:.25s}
+  .js .hero h1 .ln:nth-child(2)>span{animation-delay:.37s}
+  .js .hero h1 .ln:nth-child(3)>span{animation-delay:.49s}
+  .js .lead{animation:h-up 1s var(--e-smooth) .85s both}
+  .js .hero .cta{animation:h-up 1s var(--e-smooth) 1.05s both}
+  .js .facts>div{animation:h-up 1s var(--e-smooth) both}
+  .js .facts>div:nth-child(1){animation-delay:1.3s}.js .facts>div:nth-child(2){animation-delay:1.4s}
+  .js .facts>div:nth-child(3){animation-delay:1.5s}.js .facts>div:nth-child(4){animation-delay:1.6s}
+  @keyframes h-img{from{transform:scale(1.14);opacity:.2}}
+  @keyframes h-fade{from{opacity:0}}
+  @keyframes h-line{from{transform:translateY(108%)}}
+  @keyframes h-up{from{opacity:0;transform:translateY(24px)}}
+  /* тихая жизнь: фото уходит медленнее страницы */
+  @supports (animation-timeline:scroll()){
+    .hero-ph{animation:h-par linear both;animation-timeline:scroll(root);animation-range:0 100vh}
+    @keyframes h-par{to{transform:translateY(22%)}}
+  }
+}
+
+/* прогресс прокрутки */
+.prog{display:none}
+@supports (animation-timeline:scroll()){
+  .prog{display:block;position:fixed;inset:0 0 auto;height:3px;z-index:101;background:var(--accent);transform-origin:0 50%;animation:prog linear both;animation-timeline:scroll(root)}
+  @keyframes prog{from{transform:scaleX(0)}}
+}
 
 .quick{background:var(--night);color:#fff}
 .quick .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -58,8 +104,18 @@ h2{font-size:clamp(30px,3.9vw,56px)}
 #road .layer{will-change:transform,opacity}
 #road .layer .shade{transition:opacity .35s}
 #road .ghost polygon{fill:none;stroke:#7d8994;stroke-width:1.2;stroke-dasharray:5 6}
-#road .hl{opacity:0;transition:opacity .35s;fill:none;stroke:var(--accent);stroke-width:3.5;stroke-linejoin:round}
+#road .hl{opacity:0;transition:opacity .35s;fill:none;stroke:var(--accent);stroke-width:3.5;stroke-linejoin:round;filter:drop-shadow(0 0 5px #ed7d1e99)}
 #road .on .hl{opacity:1}
+/* контур активного слоя прочерчивается линией, как на чертеже; пунктир будущих слоёв медленно бежит */
+#road .hl>*{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s var(--e-smooth)}
+#road .on .hl>*{stroke-dashoffset:0}
+#road .hl>.dim{transition-delay:.35s}
+@media (prefers-reduced-motion:no-preference){
+  #road .ghost polygon{animation:march 8s linear infinite}
+  @keyframes march{to{stroke-dashoffset:-110}}
+  .rz-now.sw{animation:rz-sw .7s var(--e-smooth)}
+  @keyframes rz-sw{from{opacity:0;transform:translateY(12px)}}
+}
 #road .hl .dim{stroke:var(--fg);stroke-width:1.6}
 .rz-now{position:absolute;left:0;top:0;font:600 clamp(19px,2vw,28px)/1.2 var(--f-display);max-width:11em;pointer-events:none}
 .rz-now b{font-weight:600;border-bottom:4px solid var(--accent);-webkit-box-decoration-break:clone;box-decoration-break:clone}
@@ -88,8 +144,10 @@ h2{font-size:clamp(30px,3.9vw,56px)}
 .mach{display:flex;flex-wrap:wrap;gap:8px}
 .mach li{display:flex;gap:10px;align-items:baseline;padding:7px 12px;background:#fff;border:1px solid #c9cfd0;font-size:15px}
 .mach b{font:600 18px var(--f-display);color:var(--accent-ink)}
-.more{display:inline-flex;align-items:center;min-height:44px;font-weight:650;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:6px}
-.more:hover{text-decoration-thickness:4px}
+.more{position:relative;display:inline-flex;align-items:center;min-height:44px;font-weight:650;text-decoration:none}
+.more::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;background:var(--accent)}
+.more:hover::after{animation:sweep .75s var(--e-smooth)}
+@keyframes sweep{0%{transform-origin:100% 0;transform:scaleX(1)}45%{transform-origin:100% 0;transform:scaleX(0)}46%{transform-origin:0 0;transform:scaleX(0)}100%{transform-origin:0 0;transform:scaleX(1)}}
 
 /* реестр */
 .head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px 64px;align-items:end;margin-bottom:clamp(28px,4vw,52px)}
@@ -186,14 +244,16 @@ summary::-webkit-details-marker{display:none}
 @media (max-width:900px){
   :root{--hdr-h:70px}
   .hero-g,.rz-head,.head,.prod,.park-h,.ab-g,.docs-g,.pt-g,.rq-g{grid-template-columns:minmax(0,1fr)}
-  /* на телефоне фото сразу после кнопок, штамп под ним */
-  .hero{display:flex;flex-direction:column}
-  .hero-g{display:contents}
-  .hero-t{padding:22px var(--gutter) 22px;order:1}
-  .hero-ph{order:2}
-  .stamp{order:3;margin:20px var(--gutter) 24px}
+  /* на телефоне фото сверху под шапкой, заголовок наезжает на его низ */
+  .hero{justify-content:flex-start;min-height:0;padding-top:calc(var(--hdr-h) + clamp(170px,44vw,330px))}
+  .hero-ph{inset:var(--hdr-h) 0 auto;height:clamp(240px,62vw,460px)}
+  .hero-ph img{object-position:58% 50%}
+  .hero-ph::after{background:linear-gradient(180deg,#141d2600 30%,#141d26d9 78%,#141d26 100%)}
+  .hero-rays{width:70vw;height:40%}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:32px;padding-inline:0}
+  .facts>div{padding:16px var(--gutter) 20px;background:none}
+  .facts>div:nth-child(3){border-left:0}
   .rz-on .hdr:not(.is-open){transform:translateY(-110%)}
-  .hero-ph{height:clamp(200px,56vw,420px);clip-path:polygon(0 0,calc(100% - 56px) 0,100% 56px,100% 100%,0 100%)}
   .quick .wrap{grid-template-columns:repeat(2,minmax(0,1fr));padding-inline:0}
   .quick a,.quick a:first-child{padding:14px 18px;min-height:88px;border-top:1px solid #ffffff1f}
   .quick a:nth-child(odd){border-left:0}
@@ -220,6 +280,8 @@ summary::-webkit-details-marker{display:none}
   .cta .btn{width:100%}
   .req form{grid-template-columns:minmax(0,1fr)}
   .vol dt{font-size:13px}
+  .grow{grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr);gap:12px}
+  .facts dt{font-size:14px}
 }
 @media (max-width:640px){
   .hdr .wrap{gap:8px;padding-right:8px}
@@ -229,6 +291,28 @@ summary::-webkit-details-marker{display:none}
 /* телефон в альбомной и низкие окна: прилипшая схема не должна съедать весь экран */
 @media (max-height:560px){.rz-fig{position:relative;height:auto}}
 @media (prefers-reduced-motion:reduce){#road .layer{will-change:auto}}
+
+/* тёмные секции наезжают на предыдущий лист диагональю из логотипа */
+.plant,.req{--cut:clamp(36px,6vw,96px);margin-top:calc(var(--cut) * -1);padding-top:calc(var(--sec) + var(--cut));clip-path:polygon(0 var(--cut),100% 0,100% 100%,0 100%);z-index:1}
+.plant::before,.req::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(50% 40% at 85% 0%,#ed7d1e1f,transparent 70%)}
+.plant>.wrap,.req>.wrap{position:relative}
+.works,.partners{padding-bottom:calc(var(--sec) + clamp(36px,6vw,96px))}
+/* «10 → 681» */
+.grow{display:grid;grid-template-columns:auto minmax(40px,1fr) auto;align-items:center;gap:20px;padding:22px 0;border-block:1px solid var(--line)}
+.grow p{display:grid;gap:4px;max-width:13em}
+.grow b{font:700 clamp(48px,5.4vw,84px)/.95 var(--f-display);letter-spacing:-.04em}
+.grow p:last-child b{color:var(--accent-ink)}
+.grow span{font-size:14px;line-height:1.35;color:var(--muted)}
+.grow i{height:2px;background:linear-gradient(90deg,var(--line),var(--accent));position:relative}
+.grow i::after{content:"";position:absolute;right:-1px;top:-5px;border:6px solid transparent;border-left:9px solid var(--accent);border-right:0}
+/* hover карточек */
+.clients li{transition:transform .35s var(--e-smooth),background-color .25s}
+.clients li:hover{transform:translateX(6px);background:#e4e7e3}
+.prod li{transition:padding-left .4s var(--e-smooth)}
+.prod li:hover{padding-left:10px}
+.docs li{transition:border-color .3s}.docs li:hover{border-top-color:var(--accent)}
+.hero .facts,.vol,.park,.ct-tel{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.prog{display:none}}
 
 /* фото до появления увеличено: не даём ему расширять страницу */
 [data-img]{overflow:clip}

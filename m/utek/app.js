@@ -60,6 +60,7 @@
   var rail = $(".rail"), shot = $(".shot"), body = $(".panel-body"), prev = $("[data-prev]"), next = $("[data-next]"), step = 0, type = "fl15";
   function route() {
     var t = TYPES[type], s = STEPS[step], last = step === STEPS.length - 1;
+    body.classList.remove("swap"); void body.offsetWidth; body.classList.add("swap"); /* перезапуск въезда панели */
     $(".who", body).textContent = s.actor;
     $("h3", body).textContent = nb(s.title);
     $(".txt", body).innerHTML = nb(s.html(t));

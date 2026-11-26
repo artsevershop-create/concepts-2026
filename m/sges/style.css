@@ -196,5 +196,100 @@ h3{font-weight:600;letter-spacing:-.015em}
   .hud__steps{max-width:520px}
 }
 
+/* ——— полировка: свет, глубина, движение ——— */
+/* прогресс прокрутки в шапке (scroll-driven; где не поддерживается — полоски нет) */
+.hdr__prog{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--blue),var(--orange));transform-origin:0 50%;transform:scaleX(0)}
+@supports (animation-timeline:scroll()){@media (prefers-reduced-motion:no-preference){.hdr__prog{animation:prog linear both;animation-timeline:scroll(root)}}}
+@keyframes prog{to{transform:scaleX(1)}}
+.hdr.on-dark{box-shadow:0 1px 0 rgba(20,32,46,.12),0 10px 40px rgba(4,10,18,.45)}
+.hdr nav a{position:relative}
+.hdr nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:8px;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:100% 50%;transition:transform .45s var(--e-smooth)}
+.hdr nav a:hover{background:none}.hdr nav a:hover::after{transform:scaleX(1);transform-origin:0 50%}
+/* подчёркивание ссылок уезжает и возвращается */
+:is(.off__head,.off__empty,.act,.boss__docs,.ftr) a{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;transition:background-size .45s var(--e-smooth)}
+:is(.off__head,.off__empty,.act,.boss__docs,.ftr) a:hover{background-size:0 1px;background-position:100% 100%}
+.desk__off em{justify-self:start;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;transition:background-size .45s var(--e-smooth)}
+.desk__off:hover em{background-size:0 1px;background-position:100% 100%}
+
+/* hero: свет над городом, зерно, виньетка */
+.hero__city{will-change:transform}
+.hero__glow{position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(60% 55% at 62% 52%,rgba(40,140,210,.20),transparent 70%),radial-gradient(40% 40% at 20% 110%,rgba(232,123,68,.16),transparent 70%),radial-gradient(120% 90% at 60% 50%,transparent 55%,rgba(5,11,19,.75)),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero::after{z-index:0}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .ln>span{display:block}
+.desk__call{box-shadow:0 30px 80px -20px rgba(2,8,16,.7),0 0 0 1px rgba(255,255,255,.04)}
+.desk__off{box-shadow:0 20px 60px -24px rgba(23,137,196,.45);transition:border-color .3s,transform .5s var(--e-smooth)}
+.desk__off:hover{transform:translateY(-3px)}
+.desk__big{transition:color .25s}
+@media (prefers-reduced-motion:no-preference){
+  .js .hero__city{animation:h-bg 1.8s var(--e-smooth) both}
+  .js .hero__glow{animation:h-fade 2.4s ease-out .2s both}
+  .js .hero h1 .ln>span{animation:h-line 1.1s var(--e-smooth) both;animation-delay:.35s}
+  .js .hero h1 .ln+.ln>span{animation-delay:.48s}
+  .js .hero .lead{animation:h-up .9s var(--e-smooth) .85s both}
+  .js .hero__cta{animation:h-up .9s var(--e-smooth) 1.05s both}
+  .js .desk__call{animation:h-card 1.1s var(--e-smooth) 1.2s both}
+  .js .desk__off{animation:h-card 1.1s var(--e-smooth) 1.4s both}
+}
+@keyframes h-bg{from{opacity:0;scale:1.06}}
+@keyframes h-fade{from{opacity:0}}
+@keyframes h-line{from{transform:translateY(105%)}}
+@keyframes h-up{from{opacity:0;transform:translateY(18px)}}
+@keyframes h-card{from{opacity:0;transform:translateY(26px)}}
+
+/* листы наезжают на ночь */
+.off,.about{border-radius:28px 28px 0 0;margin-top:-28px;z-index:2}
+.off{box-shadow:0 -30px 60px -30px rgba(0,0,0,.5)}
+/* отключения: строки въезжают по очереди, hover */
+.off__list li{position:relative;transition:transform .45s var(--e-smooth),box-shadow .45s var(--e-smooth)}
+.off__list li::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px;background:var(--orange);transform:scaleY(0);transition:transform .45s var(--e-smooth)}
+.off__list li:hover{transform:translateX(4px);box-shadow:0 14px 36px -18px rgba(20,32,46,.28)}
+.off__list li:hover::before{transform:scaleY(1)}
+.off__list li.past{background:#E9EDF1;color:#5F6C79}.off__list li.past h3{color:#4A5866}
+.off__list li.past time::after{display:inline-block;margin-top:6px;padding:2px 8px;border-radius:99px;background:#FBE1D2;font-weight:600}
+@media (prefers-reduced-motion:no-preference){
+  .js .off__list[data-reveal]{opacity:1;transform:none}
+  .js .off__list[data-reveal] li{opacity:0;transform:translateX(-24px);transition:opacity .7s var(--e-smooth),transform .9s var(--e-smooth),box-shadow .45s}
+  .js .off__list[data-reveal].in li{opacity:1;transform:none}
+  .js .off__list[data-reveal].in li:hover{transform:translateX(4px)}
+  .off__list li:nth-child(2){transition-delay:60ms}.off__list li:nth-child(3){transition-delay:120ms}.off__list li:nth-child(4){transition-delay:180ms}
+  .off__list li:nth-child(5){transition-delay:240ms}.off__list li:nth-child(6){transition-delay:300ms}.off__list li:nth-child(7){transition-delay:360ms}
+  .js .off__list[data-reveal].in li:hover{transition-delay:0ms}
+}
+.off__days button{transition:background-color .25s,box-shadow .25s,color .25s}
+.off__days button:hover:not([aria-pressed=true]){box-shadow:inset 0 0 0 1.5px var(--ink)}
+
+/* услуги: свет в карточке, отклик списка */
+.srv__main{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(90% 70% at 100% 0%,rgba(143,211,250,.35),transparent 60%),linear-gradient(160deg,#1478AC,#0B4E72)}
+.srv__main::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px) 0 0/28px 28px;mask:radial-gradient(80% 80% at 100% 0%,#000,transparent)}
+.srv__list a{position:relative}
+.srv__list a::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;background:var(--blue);transform:scaleY(0);transition:transform .4s var(--e-smooth)}
+.srv__list a:hover::before{transform:scaleY(1)}
+
+/* сцена: свет горизонта и виньетка поверх canvas, HUD мягче */
+.city__stick::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(70% 60% at 62% 50%,rgba(40,140,210,.10),transparent 70%),radial-gradient(130% 100% at 60% 50%,transparent 50%,rgba(4,10,18,.8))}
+.city__wrap{z-index:1}
+.hud{background:linear-gradient(180deg,rgba(14,30,48,.92),rgba(9,20,32,.92));box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
+@media (prefers-reduced-motion:no-preference){
+  .js .hud__facts li{transform:translateY(12px);transition:opacity .25s,transform .25s,visibility 0s .25s}
+  .js .hud__facts li.on{transform:none;transition:opacity .6s var(--e-smooth) .1s,transform .8s var(--e-smooth) .1s}
+}
+.hud__facts b{text-shadow:0 0 40px rgba(127,208,255,.35)}
+.hud__bar{height:2px;margin-top:18px;background:rgba(203,216,230,.16);border-radius:2px;overflow:hidden}
+.hud__bar i{display:block;height:100%;background:linear-gradient(90deg,var(--sky),var(--orange));transform-origin:0 50%;transform:scaleX(0)}
+.hud__steps button{transition:box-shadow .25s,background-color .35s,color .35s}
+
+/* о компании: цифры — ночная вставка в светлом листе */
+.nums{background:radial-gradient(80% 90% at 100% 0%,rgba(23,137,196,.35),transparent 60%),var(--night);color:#EEF4FA;border-radius:16px;padding:clamp(22px,3vw,36px)}
+.nums dl div{border-top-color:rgba(203,216,230,.16)}
+.nums dt{color:#B9C8D8}
+.nums dd{color:#fff;font-size:clamp(22px,2.4vw,32px)}
+.boss li{transition:padding .35s var(--e-smooth)}.boss li:hover{padding-left:10px}
+.about__ph img{box-shadow:0 30px 60px -30px rgba(20,32,46,.5)}
+@media (max-width:900px){.off,.about{border-radius:20px 20px 0 0;margin-top:-20px}}
+@media (prefers-reduced-motion:reduce){.hdr__prog{display:none}}
+
 /* фото до появления увеличено: не даём ему расширять страницу */
 [data-img]{overflow:clip}

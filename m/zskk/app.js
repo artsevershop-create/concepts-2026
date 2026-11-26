@@ -57,10 +57,10 @@
       for (var v = .03; v < .95; v += .17) el("polygon", { points: pts([P(.487, v), P(.513, v), P(.513, v + .095), P(.487, v + .095)]), fill: "#f4f5f2" }, l.g);
     }
     /* контур активного слоя и размерная скобка */
-    var hl = el("g", { "class": "hl" }, l.g);
-    el("polygon", { points: pts(f.front) }, hl); el("polyline", { points: pts([f.front[2], f.top[2], f.top[3], f.top[0]]) }, hl); el("polyline", { points: pts([f.front[1], f.right[3], f.right[2]]) }, hl);
+    var hl = el("g", { "class": "hl" }, l.g), PL = { pathLength: 1 }; /* pathLength — чтобы контур «прочерчивался» через dashoffset */
+    el("polygon", Object.assign({ points: pts(f.front) }, PL), hl); el("polyline", Object.assign({ points: pts([f.front[2], f.top[2], f.top[3], f.top[0]]) }, PL), hl); el("polyline", Object.assign({ points: pts([f.front[1], f.right[3], f.right[2]]) }, PL), hl);
     var x = 26, yb = l.s[2], yt = l.s[5];
-    el("path", { d: "M" + x + " " + yt + "V" + yb + "M" + (x - 9) + " " + yt + "h18M" + (x - 9) + " " + yb + "h18M" + (x + 14) + " " + yt + "H" + (l.s[3] - 8), "class": "dim" }, hl);
+    el("path", { d: "M" + x + " " + yt + "V" + yb + "M" + (x - 9) + " " + yt + "h18M" + (x - 9) + " " + yb + "h18M" + (x + 14) + " " + yt + "H" + (l.s[3] - 8), "class": "dim", pathLength: 1 }, hl);
   });
 
   var active = -1, queued = false;
@@ -69,6 +69,7 @@
     L.forEach(function (l, k) { l.g.classList.toggle("on", k === i); });
     tabs.forEach(function (t, k) { t.setAttribute("aria-current", k === i ? "true" : "false"); });
     nameEl.textContent = L[i].name;
+    var p = nameEl.parentNode; p.classList.remove("sw"); void p.offsetWidth; p.classList.add("sw");
   }
   /* линия срабатывания: на телефоне экран под схемой, поэтому она ниже */
   function line() { return innerHeight * (matchMedia("(max-width:900px)").matches ? .8 : .56); }

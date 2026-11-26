@@ -19,13 +19,15 @@
 </head>
 <body>
 <a class="skip" href="#main">К содержанию</a>
+<div class="progress" aria-hidden="true"></div>
 
 <header class="hdr" data-header><div class="wrap">
   <a class="logo" href="#main"><img src="img/logo.webp" width="640" height="336" alt="Северречфлот"></a>
   <nav data-menu aria-label="Основное меню">
     <a href="#tasks">Что вам нужно</a>
     <a href="#rivers">Схема рек</a>
-    <a href="#port">Причал и&nbsp;флот</a>
+    <a href="#port">Причал</a>
+    <a href="#fleet">Флот</a>
     <a href="#about">О&nbsp;компании</a>
     <a href="#contacts">Контакты</a>
     <a class="board" href="https://info.severflot.ru/" target="_blank" rel="noopener">Инфо-табло рейсов</a>
@@ -38,9 +40,10 @@
 
 <section class="hero" data-theme="night">
   <div class="hero-ph"><img src="img/hero.webp" width="1920" height="1271" alt="Пассажирский теплоход «Линда-2» с надписью «Северречфлот» идёт мимо грузового причала с портальным краном, за ним лесистый берег"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-text">
-      <h1>По&nbsp;рекам Югры: люди, машины и&nbsp;грузы</h1>
+      <h1 data-split>По&nbsp;рекам Югры: люди, машины и&nbsp;грузы</h1>
       <p class="lead">АО&nbsp;«Северречфлот», Ханты-Мансийск. Пассажирские теплоходы, паром Приобье&nbsp;— Андра, грузовые перевозки, причал, док и&nbsp;отстой судов.</p>
       <div class="cta">
         <a class="btn btn--azure" href="#tasks" data-magnetic>Выбрать задачу</a>
@@ -146,8 +149,8 @@
 <section class="rivers" id="rivers" data-theme="night" aria-labelledby="rivers-h">
   <div class="wrap">
     <div class="r-head">
-      <h2 id="rivers-h">Реки, по&nbsp;которым мы&nbsp;ходим</h2>
-      <p>Выберите маршрут: теплоход пройдёт по&nbsp;нему, а&nbsp;рядом появятся пристани. Паром Приобье&nbsp;— Андра&nbsp;— в&nbsp;той&nbsp;же схеме.</p>
+      <h2 id="rivers-h" data-split>Реки, по&nbsp;которым мы&nbsp;ходим</h2>
+      <p data-reveal>Выберите маршрут: теплоход пройдёт по&nbsp;нему, а&nbsp;рядом появятся пристани. Паром Приобье&nbsp;— Андра&nbsp;— в&nbsp;той&nbsp;же схеме.</p>
     </div>
     <div class="r-grid">
       <div class="r-side">
@@ -191,8 +194,8 @@
       <p data-reveal>Компания называет его единственной в&nbsp;городе оборудованной причальной стенкой. Перевалка на&nbsp;суда и&nbsp;автотранспорт возможна круглосуточно.</p>
     </div>
     <dl class="figures">
-      <div data-reveal><dt>портальные краны для тарно-штучных и&nbsp;негабаритных грузов</dt><dd>до&nbsp;32<small>т</small></dd></div>
-      <div data-reveal><dt>пропускная способность по&nbsp;навалочным грузам</dt><dd>150<small>т/ч</small></dd></div>
+      <div data-reveal><dt>портальные краны для тарно-штучных и&nbsp;негабаритных грузов</dt><dd><small>до</small><span data-count>32</span><small>т</small></dd></div>
+      <div data-reveal><dt>пропускная способность по&nbsp;навалочным грузам</dt><dd><span data-count>150</span><small>т/ч</small></dd></div>
       <div data-reveal><dt>общая площадь тыловой зоны</dt><dd><small>более</small>6,5<small>га</small></dd></div>
       <div data-reveal><dt>в&nbsp;тылу: башенный кран 10&nbsp;т и&nbsp;автокран 25&nbsp;т</dt><dd>10 и&nbsp;25<small>т</small></dd></div>
     </dl>
@@ -205,14 +208,20 @@
       <h3>Песок и&nbsp;щебень</h3>
       <p>Строительный песок компания добывает на&nbsp;Сурей-Юганском месторождении, на&nbsp;Большой Оби в&nbsp;15&nbsp;км от&nbsp;деревни Нижние Тугияны. Модуль крупности&nbsp;— от&nbsp;1,55 до&nbsp;2,42&nbsp;мм; небольшие партии&nbsp;— от&nbsp;1&nbsp;т в&nbsp;биг-бэгах. Щебень из&nbsp;плотных горных пород&nbsp;— с&nbsp;Новобибиевского карьера, по&nbsp;ГОСТ&nbsp;8267-93. Возможна доставка по&nbsp;реке в&nbsp;посёлки Тюменской области, Югры и&nbsp;Ямала.</p>
     </div>
+  </div>
+</section>
 
-    <h3 class="fleet-h" data-reveal>Суда на&nbsp;линиях</h3>
+<section class="fleet-sec" id="fleet" data-theme="night" aria-labelledby="fleet-h">
+  <div class="wrap">
+    <div class="fleet-head">
+      <h2 id="fleet-h" data-split>Суда на&nbsp;линиях</h2>
+      <p class="fleet-more" data-reveal>В&nbsp;расписаниях 2026 года также названы «Восход», «Валдай», «Валдай&nbsp;45Р», «Югорский», «Югорский-10», суда проекта А-145, «Фарман Салманов», «Ляд Айваседо», суда на&nbsp;воздушной подушке и&nbsp;паром РТ-423.</p>
+    </div>
     <ul class="fleet">
-      <li data-reveal><figure><img src="img/meteor.webp" width="1000" height="603" alt="«Метеор-148» с надписью «Северречфлот» на борту идёт на подводных крыльях" loading="lazy"><figcaption><b>«Метеор»</b>дальние линии: на&nbsp;Берёзово и&nbsp;Салехард</figcaption></figure></li>
-      <li data-reveal><figure><img src="img/linda.webp" width="1000" height="662" alt="Теплоход «Линда-6» у берега Ханты-Мансийска" loading="lazy"><figcaption><b>«Линда»</b>Берёзово, Игрим, Октябрьское, Троица</figcaption></figure></li>
-      <li data-reveal><figure><img src="img/zarya.webp" width="1000" height="665" alt="Теплоход «Заря-304» у причала" loading="lazy"><figcaption><b>«Заря»</b>Кондинское, Угут, Ларьяк, Белоярское направление</figcaption></figure></li>
+      <li class="big"><figure><div class="ph" data-img><img src="img/meteor.webp" width="1769" height="1066" alt="«Метеор-148» с надписью «Северречфлот» на борту идёт на подводных крыльях" loading="lazy"></div><figcaption><b>«Метеор»</b><span>дальние линии: на&nbsp;Берёзово и&nbsp;Салехард</span></figcaption></figure></li>
+      <li><figure><div class="ph" data-img><img src="img/linda.webp" width="1500" height="993" alt="Теплоход «Линда-6» у берега Ханты-Мансийска" loading="lazy"></div><figcaption><b>«Линда»</b><span>Берёзово, Игрим, Октябрьское, Троица</span></figcaption></figure></li>
+      <li><figure><div class="ph" data-img><img src="img/zarya.webp" width="1500" height="997" alt="Теплоход «Заря-304» у причала" loading="lazy"></div><figcaption><b>«Заря»</b><span>Кондинское, Угут, Ларьяк, Белоярское направление</span></figcaption></figure></li>
     </ul>
-    <p class="fleet-more" data-reveal>В&nbsp;расписаниях 2026 года также названы «Восход», «Валдай», «Валдай&nbsp;45Р», «Югорский», «Югорский-10», суда проекта А-145, «Фарман Салманов», «Ляд Айваседо», суда на&nbsp;воздушной подушке и&nbsp;паром РТ-423.</p>
   </div>
 </section>
 
@@ -262,7 +271,7 @@
 <section class="sec contacts" id="contacts" data-theme="night" aria-labelledby="contacts-h">
   <div class="wrap c-grid">
     <div>
-      <h2 id="contacts-h">Телефоны и&nbsp;кассы</h2>
+      <h2 id="contacts-h" data-split>Телефоны и&nbsp;кассы</h2>
       <p class="addr">628001, Ханты-Мансийск, ул.&nbsp;Бориса Щербины,&nbsp;3 (речной вокзал). Контора: пн–пт 8:00–17:00, перерыв 12:00–13:00.</p>
 
       <h3>Пристани и&nbsp;справочная <span>часы навигационного периода</span></h3>

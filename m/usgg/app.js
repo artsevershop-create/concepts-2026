@@ -19,7 +19,17 @@
   // низкий горизонтальный экран: закреплённая сцена не помещается, остаётся статичный список
   var live = !K.REDUCED && !matchMedia("(max-height:520px)").matches;
 
-  var cv = $("#flame"), cx = cv.getContext("2d");
+  var cv = $("#flame"), cx = cv.getContext("2d"), board = $(".board"), lastLv = "", prog = $(".path-prog");
+
+  // hero: фото уходит медленнее страницы (параллакс), только пока hero в кадре
+  var hero = $(".hero");
+  if (!K.REDUCED) {
+    var hy = -1, heroTick = false;
+    addEventListener("scroll", function () {
+      if (heroTick) return; heroTick = true;
+      requestAnimationFrame(function () { heroTick = false; var y = Math.min(scrollY, innerHeight * 1.2) * .28 | 0; if (y !== hy) { hy = y; hero.style.setProperty("--py", y); } });
+    }, { passive: true });
+  }
   function jet(a, t, i, R, mx, my, rx, ry) {
     var c = Math.cos(a), s = Math.sin(a), x = mx + rx * c, y = my + ry * s;
     var f = .86 + .1 * Math.sin(t * .011 + i * 1.7) + .06 * Math.sin(t * .027 + i * 3.1);
@@ -41,6 +51,7 @@
     if (cv.width !== Math.round(w * r)) { cv.width = Math.round(w * r); cv.height = Math.round(h * r); }
     cx.setTransform(r, 0, 0, r, 0, 0); cx.clearRect(0, 0, w, h);
     level = dt ? level + (target - level) * Math.min(1, dt / 420) : target;
+    var lv = level.toFixed(2); if (lv !== lastLv) { lastLv = lv; board.style.setProperty("--lv", lv); }
     var R = w / 2, mx = R, my = h * .62, rx = R * .5, ry = R * .17, i, a, N2 = 44;
     if (level > .01) {
       cx.save(); cx.translate(mx, my - R * .08); cx.scale(1, .62);
@@ -68,6 +79,7 @@
     // труба растёт на этапе «Строительство» (индекс 3)
     var grow = Math.max(0, Math.min(1, (p * N - 3) / .85));
     pipes.forEach(function (el) { el.style.strokeDashoffset = 100 - grow * 100; el.style.visibility = grow ? "visible" : "hidden"; });
+    prog.style.setProperty("--p", p.toFixed(3));
     if (n === cur) return; cur = n;
     steps.forEach(function (el, i) { el.classList.toggle("on", i === n); });
     dots.forEach(function (el, i) { el.classList.toggle("done", i < n); if (i === n) el.setAttribute("aria-current", "step"); else el.removeAttribute("aria-current"); });

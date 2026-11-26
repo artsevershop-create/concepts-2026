@@ -20,6 +20,7 @@
 </head>
 <body>
 <a class="skip" href="#main">К содержанию</a>
+<div class="prog" aria-hidden="true"></div>
 <header class="hdr" data-header><div class="wrap">
   <a class="logo" href="#main" aria-label="Нижневартовскавиа, на главную"><img src="img/logo.png" alt="Логотип АО «Нижневартовскавиа»" width="384" height="259"><span>Нижневартовск&shy;авиа</span></a>
   <nav data-menu aria-label="Основное меню"><a href="#task">Задачи</a><a href="#routes">Местные рейсы</a><a href="#about">О компании</a><a href="#docs">Документы</a><a href="#order">Заявка и контакты</a></nav>
@@ -34,7 +35,7 @@
     <img src="img/hero.webp" alt="Оранжевый вертолёт Ми-8 несёт груз на внешней подвеске над тайгой" width="2092" height="723" fetchpriority="high">
   </picture>
   <div class="wrap hero-t">
-    <h1>Вертолёт под&nbsp;вашу задачу</h1>
+    <h1><span class="ln"><span>Вертолёт</span></span> <span class="ln"><span>под&nbsp;вашу</span></span> <span class="ln"><span>задачу</span></span></h1>
     <p>Авиакомпания из&nbsp;Нижневартовска. Перевозим пассажиров и&nbsp;грузы Заказчика на&nbsp;Ми-8 и&nbsp;Ми-8АМТ: в&nbsp;фюзеляже и&nbsp;на&nbsp;внешней подвеске, по&nbsp;вашим заявкам на&nbsp;полёт и&nbsp;маршрутам.</p>
     <div class="cta"><a class="btn" href="#task" data-magnetic>Выбрать задачу</a><a class="btn btn--ghost num" href="tel:+79129380470">+7&nbsp;912&nbsp;938-04-70</a></div>
   </div>
@@ -56,7 +57,7 @@
 
 <section class="scene" id="task" data-theme="night" aria-labelledby="task-h">
   <div class="wrap">
-    <div class="scene-h"><h2 id="task-h">Какую работу нужно выполнить?</h2><p>Выберите задачу: покажем, что делает авиакомпания, цифры по&nbsp;вертолёту и&nbsp;кому звонить.</p></div>
+    <div class="scene-h"><h2 id="task-h" data-split>Какую работу нужно выполнить?</h2><p>Выберите задачу: покажем, что делает авиакомпания, цифры по&nbsp;вертолёту и&nbsp;кому звонить.</p></div>
     <div class="scene-g">
       <div class="tasks" id="tasks" role="tablist" aria-label="Задачи"></div>
       <div class="desk" id="desk" role="tabpanel" tabindex="0">
@@ -122,12 +123,15 @@
       <li data-reveal><b>2019</b><span>Приобретены два новых вертолёта Ми-8АМТ</span></li>
       <li data-reveal><b>2023</b><span>Аэропорт передан другому юрлицу; общество работает как вертолётная авиакомпания</span></li>
     </ol>
-    <div class="abroad">
-      <figure class="a1" data-img><img src="img/abroad-af.webp" alt="Два белых вертолёта Ми-8 на фоне гор в Афганистане: один взлетает" width="1569" height="572"></figure>
-      <div class="a-t" data-reveal><h3>Работа за&nbsp;рубежом</h3><p>В&nbsp;разное время экипажи и&nbsp;инженеры работали в&nbsp;Непале, Йемене, Пакистане, Индонезии, Ираке, Афганистане, Кот-д’Ивуаре, Сьерра-Леоне, Либерии, Гвинее, Мали, Конго, Южном Судане, Судане, Сомали и&nbsp;на&nbsp;Гаити, а&nbsp;в&nbsp;2023–2024 годах&nbsp;— на&nbsp;тушении пожаров в&nbsp;Турции.</p></div>
-      <figure class="a2" data-img><img src="img/abroad-an124.webp" alt="Белый вертолёт Ми-8 у открытого носового люка транспортного самолёта Ан-124" width="1024" height="576"></figure>
-      <figure class="a3" data-img><img src="img/abroad-il76.webp" alt="Загрузка вертолётов в самолёт Ил-76" width="1024" height="768"></figure>
-    </div>
+  </div>
+</section>
+
+<section class="abroad" data-theme="night" aria-labelledby="abroad-h">
+  <figure class="a1"><img src="img/abroad-af.webp" alt="Два белых вертолёта Ми-8 на фоне гор в Афганистане: один взлетает" width="1569" height="572" loading="lazy"></figure>
+  <div class="wrap a-g">
+    <div class="a-t"><h2 id="abroad-h" data-split>Работа за&nbsp;рубежом</h2><p data-reveal>В&nbsp;разное время экипажи и&nbsp;инженеры работали в&nbsp;Непале, Йемене, Пакистане, Индонезии, Ираке, Афганистане, Кот-д’Ивуаре, Сьерра-Леоне, Либерии, Гвинее, Мали, Конго, Южном Судане, Судане, Сомали и&nbsp;на&nbsp;Гаити, а&nbsp;в&nbsp;2023–2024 годах&nbsp;— на&nbsp;тушении пожаров в&nbsp;Турции.</p></div>
+    <figure class="a2" data-img><img src="img/abroad-an124.webp" alt="Белый вертолёт Ми-8 у открытого носового люка транспортного самолёта Ан-124" width="1024" height="576"></figure>
+    <figure class="a3" data-img><img src="img/abroad-il76.webp" alt="Загрузка вертолётов в самолёт Ил-76" width="1024" height="768"></figure>
   </div>
 </section>
 

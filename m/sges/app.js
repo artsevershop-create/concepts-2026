@@ -168,21 +168,46 @@
   function fitCanvas(cv) {
     var r = cv.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, r.width < 700 ? 1.5 : 2), g = cv.getContext("2d");
     cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr); g.setTransform(dpr, 0, 0, dpr, 0, 0);
-    return { g: g, w: r.width, h: r.height };
+    return { g: g, w: r.width, h: r.height, dpr: dpr, cv: cv };
   }
 
+  /* «тихая жизнь»: готовый кадр кэшируется, поверх по горящим линиям медленно идут импульсы тока.
+     Кадр = 1 drawImage + N спрайтов, поэтому на телефоне не тяжелее статичной картинки */
+  var runs = segs.filter(function (s) { return s[5] >= 2; });
+  function Life(o, n) { this.o = o; this.n = n; this.snap = null; }
+  Life.prototype.frame = function (t, cam, rL) {
+    var o = this.o, g = o.g, c = o.cv; if (!c.width || !c.height) return;
+    if (!this.snap) { this.snap = d.createElement("canvas"); this.snap.width = c.width; this.snap.height = c.height; this.snap.getContext("2d").drawImage(c, 0, 0); }
+    g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = "source-over"; g.globalAlpha = 1; g.drawImage(this.snap, 0, 0); g.setTransform(o.dpr, 0, 0, o.dpr, 0, 0);
+    var S = cam.s, sz = Math.max(22, S * 1.6); g.globalCompositeOperation = "lighter";
+    for (var k = 0; k < this.n; k++) {
+      var s = runs[(k * 37) % runs.length]; if (rL < s[4] + s[5]) continue;
+      var pos = (t * .0011 * (.7 + (k % 5) * .12) + k * 2.3) % (s[5] + 6); if (pos > s[5]) continue; // пауза между импульсами
+      var f = pos / s[5], x = s[0] + (s[2] - s[0]) * f, y = s[1] + (s[3] - s[1]) * f;
+      var px = cam.x + (x - y) * .866 * S, py = cam.y + (x + y) * .5 * S, r = Math.max(1.5, S * .07);
+      g.globalAlpha = Math.sin(f * Math.PI);
+      g.drawImage(gBlue, px - sz / 2, py - sz / 2, sz, sz); g.fillStyle = "#E6F6FF"; g.fillRect(px - r, py - r, r * 2, r * 2);
+    }
+    g.globalCompositeOperation = "source-over"; g.globalAlpha = 1;
+  };
+  var PULSES = innerWidth < 700 ? 16 : 34;
+
   /* hero: свет проходит по городу один раз после загрузки, дальше кадр неподвижен */
-  var heroCv = $(".hero__city"), hero, heroP = K.REDUCED ? 4 : .15;
+  var heroCv = $(".hero__city"), hero, heroP = K.REDUCED ? 4 : .15, heroLife;
+  function heroCam() { var wide = hero.w > 900; return { x: hero.w * (wide ? .6 : .5), y: hero.h * .5, s: wide ? Math.max(hero.w / 40, hero.h / 24) : hero.h / 30 }; }
   function heroDraw() {
     if (!hero || !hero.w || !hero.h) return;
-    var wide = hero.w > 900;
-    draw(hero.g, hero.w, hero.h, heroP, { x: hero.w * (wide ? .6 : .5), y: hero.h * .5, s: wide ? Math.max(hero.w / 40, hero.h / 24) : hero.h / 30 });
+    draw(hero.g, hero.w, hero.h, heroP, heroCam()); heroLife.snap = null;
   }
-  function heroSize() { hero = fitCanvas(heroCv); heroDraw(); }
+  function heroSize() { hero = fitCanvas(heroCv); heroLife = new Life(hero, PULSES); heroDraw(); }
   heroSize();
   if (!K.REDUCED) {
     var t0 = 0;
-    requestAnimationFrame(function step(t) { t0 = t0 || t; var k = clamp((t - t0) / 4200); heroP = K.still ? 4 : .15 + 3.85 * k; heroDraw(); if (heroP < 4) requestAnimationFrame(step); });
+    requestAnimationFrame(function step(t) { t0 = t0 || t; var k = clamp((t - t0) / 3400); heroP = K.still ? 4 : .15 + 3.85 * (1 - Math.pow(1 - k, 2)); heroDraw(); if (heroP < 4) requestAnimationFrame(step); });
+    K.raf(heroCv, function (t) { if (t && heroP >= 4 && hero.w) heroLife.frame(t, heroCam(), maxD + 1); }, 24);
+    // глубина: схема уходит медленнее текста
+    var py = -1;
+    addEventListener("scroll", function () { var y = Math.min(scrollY, innerHeight); if (y === py) return; py = y; heroCv.style.transform = "translate3d(0," + (y * .35).toFixed(1) + "px,0)"; }, { passive: true });
   }
 
   /* сцена */
@@ -196,7 +221,8 @@
     var s = Math.min(aw / 36.5, ah / 22) * z, west = clamp(p - 4);
     return { x: L + aw / 2 + (w > 900 ? west * s * .5 : 0), y: T + ah / 2, s: s };
   }
-  function paint() { if (view && view.w && view.h) draw(view.g, view.w, view.h, cur, camera(cur)); }
+  var bar = $(".hud__bar i"), life;
+  function paint() { if (view && view.w && view.h) { draw(view.g, view.w, view.h, cur, camera(cur)); life.snap = null; } bar.style.transform = "scaleX(" + (cur / 5).toFixed(3) + ")"; }
   function tick() {
     var diff = target - cur;
     cur = Math.abs(diff) < .004 || K.still ? target : cur + diff * .14;
@@ -223,8 +249,9 @@
       if (K.lenis) K.lenis.scrollTo(y); else scrollTo({ top: y, behavior: "smooth" });
     });
   });
-  function size() { view = fitCanvas(cv); paint(); }
+  function size() { view = fitCanvas(cv); life = new Life(view, PULSES); paint(); }
   size(); show(K.REDUCED ? 5 : 0); onScroll();
+  K.raf(cv, function (t) { if (t && !raf && cur >= .5 && view.w) life.frame(t, camera(cur), clamp(cur) * (maxD + 1)); }, 24);
   addEventListener("scroll", onScroll, { passive: true });
   var lw = innerWidth, lh = innerHeight, rt = 0;
   addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { if (innerWidth !== lw || Math.abs(innerHeight - lh) > 120) { lw = innerWidth; lh = innerHeight; heroSize(); } size(); onScroll(); }, 120); });

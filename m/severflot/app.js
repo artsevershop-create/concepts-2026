@@ -126,24 +126,50 @@
   }
   var pt = function (n) { if (!N[n]) throw new Error("нет координат: " + n); return N[n]; };
 
-  var gRiv = el("g", {}), gPiers = el("g", {}), gRoute = el("g", {}), gLab = el("g", { "aria-hidden": "true" });
+  var gRiv = el("g", {}), gPiers = el("g", {}), gRoute = el("g", {}), gLab = el("g", { "class": "labs", "aria-hidden": "true" });
   var rivers = RIVERS.map(function (r) { return [el("path", { "class": "riv", d: curve((r[2] || []).concat(r[1].map(pt), r[3] || [])) }, gRiv), r[0]]; });
   var piers = Object.keys(N).filter(function (n) { return n !== "Выкатное" && n !== "Андра" && n.indexOf("·") < 0; }).map(function (n) { return el("circle", { "class": "pier", cx: N[n][0], cy: N[n][1] }, gPiers); });
-  var route = el("path", { "class": "route" }, gRoute), wake = el("path", { "class": "wake" }, gRoute), gStops = el("g", {}, gRoute);
+  var route = el("path", { "class": "route" }, gRoute), glow = el("path", { "class": "glow" }, gRoute), wake = el("path", { "class": "wake" }, gRoute), gStops = el("g", {}, gRoute);
+  /* кольца волны за кормой: пул из 7, переиспользуются */
+  var ripples = [0, 1, 2, 3, 4, 5, 6].map(function () { return { c: el("circle", { "class": "ripple", r: 0, opacity: 0 }, gRoute), age: 1e9 }; }), rip = 0, ripT = 0;
   var ship = el("g", { "class": "ship" }, gRoute);
   /* судно на подводных крыльях, вид сверху, нос по +x */
   el("path", { "class": "hull", d: "M19 0C13-5.5 6-6.5-3-6.5H-15Q-18-6-18-3V3Q-18 6-15 6.5H-3C6 6.5 13 5.5 19 0Z" }, ship);
   el("path", { "class": "deck", d: "M9 0C6-3 2-3.4-3-3.4H-12V3.4H-3C2 3.4 6 3 9 0Z" }, ship);
 
-  var cur, len = 0, dist = 0, dir = 1, hold = 0, k = 1, vb = [0, 0, 1000, 1000], vbId = 0, overview = false, speed = 90;
+  var cur, len = 0, dist = 0, dir = 1, hold = 0, k = 1, vb = [0, 0, 1000, 1000], vbId = 0, overview = false, speed = 90, ang = 0, pos = { x: 0, y: 0 }, stopL = [];
 
-  function place() {
+  /* dt — для плавного поворота носа (на разворотах судно поворачивает, а не «перескакивает»); без dt — сразу по курсу */
+  function place(dt) {
     var a = route.getPointAtLength(dist), b = route.getPointAtLength(Math.max(0, Math.min(len, dist + 3 * dir)));
     if (a.x === b.x && a.y === b.y) { b = a; a = route.getPointAtLength(Math.max(0, dist - 3 * dir)); }
-    ship.setAttribute("transform", "translate(" + a.x + " " + a.y + ") rotate(" + Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI + ") scale(" + k * 1.15 + ")");
+    var target = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
+    if (!dt) ang = target; else { var df = ((target - ang) % 360 + 540) % 360 - 180; ang += df * Math.min(1, dt / 260); }
+    pos = route.getPointAtLength(dist);
+    ship.setAttribute("transform", "translate(" + pos.x + " " + pos.y + ") rotate(" + ang + ") scale(" + k * 1.15 + ")");
     /* след за кормой: от начала пути в эту сторону до судна */
-    var from = dir > 0 ? 0 : dist, to = dir > 0 ? dist : len;
-    wake.setAttribute("stroke-dasharray", "0 " + from + " " + Math.max(0, to - from) + " " + (len + 10));
+    var from = dir > 0 ? 0 : dist, to = dir > 0 ? dist : len, da = "0 " + from + " " + Math.max(0, to - from) + " " + (len + 10);
+    wake.setAttribute("stroke-dasharray", da); glow.setAttribute("stroke-dasharray", da);
+  }
+
+  /* километры пути до каждой пристани — ищем по порядку, чтобы повторные заходы (Приобье дважды) не путались */
+  function measure() {
+    var n = 700, S = [], from = 0;
+    for (var i = 0; i <= n; i++) { var p = route.getPointAtLength(len * i / n); S.push([p.x, p.y, len * i / n]); }
+    stopL = cur.s.map(function (s) {
+      var q = pt(s[0]), best = from, bd = 1e12;
+      for (var j = from; j < S.length; j++) { var dd = (S[j][0] - q[0]) * (S[j][0] - q[0]) + (S[j][1] - q[1]) * (S[j][1] - q[1]); if (dd < bd - 1e-6) { bd = dd; best = j; } }
+      from = best; return S[best][2];
+    });
+  }
+  /* судно проходит пристань: кольцо на схеме и подсветка строки в списке */
+  function arrive(i) {
+    var li = $("#r-stops").children[i], c = gStops.children[i]; if (!li || !c) return;
+    $$("#r-stops li.at").forEach(function (x) { x.classList.remove("at"); }); li.classList.add("at");
+    c.classList.add("passed");
+    var ol = $("#r-stops"); if (ol.scrollHeight > ol.clientHeight + 4) ol.scrollTo({ top: li.offsetTop - ol.clientHeight / 2, behavior: "smooth" });
+    var q = pt(cur.s[i][0]), g = el("circle", { "class": "ping", cx: q[0], cy: q[1], r: 6 * k, "stroke-width": 2 * k }, gRoute);
+    setTimeout(function () { g.remove(); }, 1700);
   }
 
   function frame(box) {
@@ -188,7 +214,8 @@
     var phone = svg.getBoundingClientRect().width < 500;
     rivers.forEach(function (r) { r[0].setAttribute("stroke-width", r[1] * Math.max(.75, Math.min(1.5, k))); });
     piers.forEach(function (c) { c.setAttribute("r", 2.1 * k); });
-    route.setAttribute("stroke-width", 5 * k); wake.setAttribute("stroke-width", 5 * k);
+    route.setAttribute("stroke-width", 5 * k); wake.setAttribute("stroke-width", 5 * k); glow.setAttribute("stroke-width", 16 * k);
+    ripples.forEach(function (o) { o.c.setAttribute("stroke-width", 1.4 * k); });
     [].forEach.call(gStops.children, function (c) {
       if (c.tagName === "circle") { c.setAttribute("r", (c.classList.contains("end") ? 6 : 4.2) * k); c.setAttribute("stroke-width", 2 * k); }
       else c.setAttribute("stroke-width", 5 * k);
@@ -214,13 +241,18 @@
     HUBS.forEach(function (n) { add(n, !overview); });
     sizes(); labels(order, f.box);
     cancelAnimationFrame(vbId);
-    var from = vb.slice(), t0 = performance.now();
+    var from = vb.slice(), to = f.box, t0 = performance.now();
     function set(v) { vb = v; svg.setAttribute("viewBox", v.join(" ")); }
-    if (!animate || K.REDUCED || K.still) return set(f.box);
+    if (!animate || K.REDUCED || K.still) { gLab.style.opacity = 1; return set(to); }
+    /* «полёт камеры»: центр и масштаб плавно (ease-in-out), а на дальних перелётах камера чуть отъезжает и снова приближается */
+    var c0 = [from[0] + from[2] / 2, from[1] + from[3] / 2], c1 = [to[0] + to[2] / 2, to[1] + to[3] / 2];
+    var far = Math.hypot(c1[0] - c0[0], c1[1] - c0[1]) / Math.max(from[2], to[2]), bump = Math.min(.45, far * .6), T = 1100 + Math.min(700, far * 900);
+    gLab.style.opacity = 0;
     (function step(t) {
-      var q = Math.min(1, Math.max(0, (t - t0) / 850)), e = 1 - Math.pow(1 - q, 3);
-      set(from.map(function (v, i) { return v + (f.box[i] - v) * e; }));
-      if (q < 1) vbId = requestAnimationFrame(step);
+      var q = Math.min(1, Math.max(0, (t - t0) / T)), e = q < .5 ? 4 * q * q * q : 1 - Math.pow(-2 * q + 2, 3) / 2, z = 1 + bump * Math.sin(Math.PI * q);
+      var w = (from[2] + (to[2] - from[2]) * e) * z, h = (from[3] + (to[3] - from[3]) * e) * z, cx = c0[0] + (c1[0] - c0[0]) * e, cy = c0[1] + (c1[1] - c0[1]) * e;
+      set([cx - w / 2, cy - h / 2, w, h]);
+      if (q < 1) vbId = requestAnimationFrame(step); else gLab.style.opacity = 1;
     })(t0);
   }
 
@@ -228,8 +260,14 @@
     cur = r; overview = false; $("#all").setAttribute("aria-pressed", "false");
     var path = r.p || r.s.map(function (s) { return s[0]; });
     var dd = r.ferry ? "M" + pt("Приобье·паром").join(" ") + "Q294 655 " + pt("Андра").join(" ") : curve(path.map(pt));
-    route.setAttribute("d", dd); wake.setAttribute("d", dd); route.classList.toggle("ferry", !!r.ferry);
-    len = route.getTotalLength(); dist = K.REDUCED ? len * .55 : 0; dir = 1; hold = 600;
+    route.setAttribute("d", dd); wake.setAttribute("d", dd); glow.setAttribute("d", dd); route.classList.toggle("ferry", !!r.ferry);
+    len = route.getTotalLength(); dist = K.REDUCED ? len * .55 : 0; dir = 1; hold = animate ? 1300 : 600;
+    ripples.forEach(function (o) { o.age = 1e9; o.c.setAttribute("opacity", 0); });
+    /* линия маршрута прорисовывается, пока камера летит */
+    if (animate && !K.REDUCED && !K.still) {
+      route.style.transition = "none"; route.style.strokeDasharray = len + " " + (len + 10); route.style.strokeDashoffset = len;
+      route.getBoundingClientRect(); route.style.transition = "stroke-dashoffset 1.6s cubic-bezier(.65,0,.35,1) .25s"; route.style.strokeDashoffset = 0;
+    } else { route.style.transition = "none"; route.style.strokeDasharray = ""; route.style.strokeDashoffset = ""; }
     gStops.textContent = "";
     r.s.forEach(function (s, i) { var p = pt(s[0]); el("circle", { "class": "stop" + (i === 0 || i === r.s.length - 1 ? " end" : ""), cx: p[0], cy: p[1] }, gStops); });
     $("#r-title").textContent = r.n;
@@ -240,8 +278,12 @@
     ol.scrollTop = 0;
     $("#r-closed").textContent = r.c;
     $$("#routes button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.n === r.n); });
+    measure();
     draw(animate);
+    if (!K.REDUCED) arriveQuiet(0);
   }
+  /* отметить пристань без кольца (старт маршрута) */
+  function arriveQuiet(i) { var li = $("#r-stops").children[i]; $$("#r-stops li.at").forEach(function (x) { x.classList.remove("at"); }); if (li) li.classList.add("at"); }
 
   function group(g, animate) {
     var box = $("#routes"); box.textContent = ""; box.scrollTop = 0;
@@ -266,11 +308,25 @@
   /* теплоход ходит туда и обратно, пока схема на экране; стоп-кран и reduced motion учитывает KIT.raf */
   K.raf(svg, function (t, dt) {
     if (!cur || !dt) return;
-    if (hold > 0) { hold -= dt; return; }
-    dist += dir * speed * dt / 1000;
-    if (dist >= len) { dist = len; dir = -1; hold = 1500; } else if (dist <= 0) { dist = 0; dir = 1; hold = 1500; }
-    place();
-  });
+    /* волна: кольца расходятся и гаснут */
+    ripples.forEach(function (o) {
+      if (o.age > 2000) return; o.age += dt;
+      var q = o.age / 2000; o.c.setAttribute("r", k * (3 + 15 * (1 - Math.pow(1 - q, 2)))); o.c.setAttribute("opacity", Math.max(0, .5 * (1 - q)));
+    });
+    if (hold > 0) { hold -= dt; place(dt); return; }
+    /* разгон от пристани и торможение к концу пути */
+    var ramp = Math.min(len * .2, speed * 1.8), edge = Math.min(dist, len - dist), v = speed * Math.max(.14, Math.min(1, edge / ramp));
+    var prev = dist; dist += dir * v * dt / 1000;
+    if (dist >= len) { dist = len; } else if (dist <= 0) { dist = 0; }
+    stopL.forEach(function (L, i) { if ((dir > 0 && prev < L - .01 && dist >= L - .01) || (dir < 0 && prev > L + .01 && dist <= L + .01)) arrive(i); });
+    if (dist === len || dist === 0) { dir = dist ? -1 : 1; hold = 1800; $$("#chart .stop.passed").forEach(function (c) { c.classList.remove("passed"); }); }
+    place(dt);
+    ripT += dt;
+    if (ripT > 420 && v > speed * .3) {
+      ripT = 0; var o = ripples[rip++ % ripples.length], rad = ang * Math.PI / 180;
+      o.age = 0; o.c.setAttribute("cx", pos.x - Math.cos(rad) * 15 * k); o.c.setAttribute("cy", pos.y - Math.sin(rad) * 15 * k);
+    }
+  }, 60);
   var rt; addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { draw(false); }, 150); });
   d.fonts && d.fonts.ready.then(function () { draw(false); });
 })();

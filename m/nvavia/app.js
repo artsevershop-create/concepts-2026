@@ -41,7 +41,7 @@
   var still = matchMedia("(prefers-reduced-motion: reduce)");
 
   var group, seats = $("seats");
-  for (var s = 0; s < 22; s++) seats.appendChild(el("u"));
+  for (var s = 0; s < 22; s++) seats.appendChild(el("u")).style.setProperty("--i", s);
   TASKS.forEach(function (t, i) {
     if (t.g !== group) {
       group = t.g;
@@ -62,10 +62,14 @@
     if (i === null) return; e.preventDefault(); show(i); $("t" + i).focus();
   });
 
-  /* новый кадр открывается «оборотом винта» поверх старого */
+  /* новый кадр открывается «оборотом винта» поверх старого: старый гаснет, по кромке идёт блик лопасти */
+  var blade = el("i", "", "blade"); blade.setAttribute("aria-hidden", "true"); $("shot").appendChild(blade);
+  function replay(n, cls) { n.classList.remove(cls); void n.offsetWidth; n.classList.add(cls); }
   function put(node) {
     while (frame.children.length > 1) frame.firstChild.remove();
-    if (frame.children.length && !still.matches && !(window.KIT && KIT.still)) node.className += " sweep";
+    if (frame.children.length && !still.matches && !(window.KIT && KIT.still)) {
+      frame.firstChild.classList.add("out"); node.className += " sweep"; replay(blade, "go");
+    }
     frame.appendChild(node);
   }
   function picture(t) {
@@ -88,7 +92,8 @@
 
   function show(i) {
     if (i === cur) return;
-    var t = TASKS[i]; cur = i;
+    var t = TASKS[i], first = cur < 0; cur = i;
+    if (!first) replay(desk.querySelector(".pass"), "swap");
     [].forEach.call(list.querySelectorAll("[role=tab]"), function (b, k) { b.setAttribute("aria-selected", k === i); b.tabIndex = k === i ? 0 : -1; });
     desk.setAttribute("aria-labelledby", "t" + i);
     picture(t);

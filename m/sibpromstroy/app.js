@@ -7,17 +7,18 @@
   function P(x, y, z) { return [+((x - y) * .866 * U).toFixed(1), +(((x + y) * .5 - (z || 0)) * U).toFixed(1)]; }
   function pts(a) { return a.map(function (p) { return P(p[0], p[1], p[2]).join(","); }).join(" "); }
   function poly(a, fill, extra) { return '<polygon points="' + pts(a) + '" fill="' + fill + '" ' + (extra || "") + '/>'; }
-  function line(cls, a) { return '<polyline class="' + cls + '" points="' + pts(a) + '"/>'; }
+  function line(cls, a, extra) { return '<polyline class="' + cls + '" points="' + pts(a) + '" ' + (extra || "") + '/>'; }
 
   function rect(x0, y0, x1, y1, fill, extra) { return poly([[x0, y0, 0], [x1, y0, 0], [x1, y1, 0], [x0, y1, 0]], fill, extra); }
   /* дом: две видимые стены, крыша и окна */
   function house(x0, y0, x1, y1, h) {
+    var k = 0, win = function () { return 'class="win' + (k++ % 5 === 2 ? ' lit' : '') + '"'; };
     var s = poly([[x0, y1, 0], [x1, y1, 0], [x1, y1, h], [x0, y1, h]], "#8FA6AD") +
       poly([[x1, y0, 0], [x1, y1, 0], [x1, y1, h], [x1, y0, h]], "#6B848C") +
       poly([[x0, y0, h], [x1, y0, h], [x1, y1, h], [x0, y1, h]], "#CBD8DA");
     for (var z = .35; z < h - .3; z += .55) {
-      for (var x = x0 + .3; x < x1 - .4; x += .6) s += poly([[x, y1, z], [x + .3, y1, z], [x + .3, y1, z + .28], [x, y1, z + .28]], "#2B434C");
-      for (var y = y0 + .3; y < y1 - .4; y += .6) s += poly([[x1, y, z], [x1, y + .3, z], [x1, y + .3, z + .28], [x1, y, z + .28]], "#22363E");
+      for (var x = x0 + .3; x < x1 - .4; x += .6) s += poly([[x, y1, z], [x + .3, y1, z], [x + .3, y1, z + .28], [x, y1, z + .28]], "#2B434C", win());
+      for (var y = y0 + .3; y < y1 - .4; y += .6) s += poly([[x1, y, z], [x1, y + .3, z], [x1, y + .3, z + .28], [x1, y, z + .28]], "#22363E", win());
     }
     return s;
   }
@@ -28,7 +29,8 @@
   /* runs идут по направлению движения среды: по ним же рисуется поток */
   function net(name, runs, ends, extra) {
     return '<g class="net n-' + name + '">' +
-      runs.map(function (r) { return line("pipe" + (r.back ? " back" : ""), r.a); }).join("") +
+      runs.map(function (r) { return line("halo", r.a); }).join("") +
+      runs.map(function (r, i) { return line("pipe" + (r.back ? " back" : ""), r.a, 'pathLength="1" style="--k:' + i + '"'); }).join("") +
       runs.map(function (r) { return line("flow", r.a); }).join("") +
       ends.map(function (e) { var p = P(e[0], e[1], e[2]); return '<circle class="end" cx="' + p[0] + '" cy="' + p[1] + '" r="9"/>'; }).join("") +
       extra + '</g>';
@@ -48,7 +50,8 @@
     /* двор и проезд */
     s += rect(0, 4.5, W, 5.3, "#2D4851") + rect(5, .4, 5.6, 4.5, "#2D4851") + rect(9.3, .4, 9.8, 4.5, "#2D4851");
     for (var g = 2; g < W; g += 2) s += '<polyline points="' + pts([[g, 5.3, 0], [g, H, 0]]) + '" stroke="rgba(255,255,255,.07)" fill="none"/>';
-    houses.forEach(function (h) { s += house.apply(null, h); });
+    s = '<g class="lay">' + s + '</g>';
+    houses.forEach(function (h, i) { s += '<g class="hs" style="--k:' + i + '">' + house.apply(null, h) + '</g>'; });
 
     function branches(off, main, z, outward) {
       return doors.map(function (x, i) {
@@ -79,8 +82,19 @@
 
   var scene = d.getElementById("scheme"), buttons = $$("[data-set]");
   function pick(name) {
+    if (scene.getAttribute("data-net") === name) return;
     scene.setAttribute("data-net", name);
+    scene.classList.add("on", "built");
     buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-set") === name); });
+    /* выбранная сеть прокладывается заново */
+    $$("#iso .net").forEach(function (g) { g.classList.remove("draw"); });
+    void svg.getBBox();
+    $$(name === "all" ? "#iso .net" : "#iso .n-" + name).forEach(function (g) { g.classList.add("draw"); });
+  }
+  /* первый показ: грунт → дома → сети по очереди */
+  if (svg) {
+    var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { scene.classList.add("on"); io.disconnect(); setTimeout(function () { scene.classList.add("built"); }, 3800); } }, { threshold: .2 });
+    io.observe(svg);
   }
   buttons.forEach(function (b) { b.addEventListener("click", function () { pick(b.getAttribute("data-set")); }); });
   $$("[data-pick]").forEach(function (a) { a.addEventListener("click", function () { pick(a.getAttribute("data-pick")); }); });
