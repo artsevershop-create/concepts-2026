@@ -16,7 +16,7 @@
   var vel = 0, lastY = scrollY;
   g.ticker.add(function () { var y = scrollY; vel += (Math.abs(y - lastY) - vel) * .12; lastY = y; });
 
-  var dive = $(".dive"), pin = $(".dive-pin"), water = $(".water"), lens = $(".lens"), photo = $("img", lens), surf = $(".surface"), deep = $(".deep"), bubbles = $(".bubbles");
+  var dive = $(".dive"), pin = $(".dive-pin"), water = $(".water"), lens = $(".lens"), photo = $("img", lens), surf = $(".surface"), deep = $(".deep"), bubbles = $(".bubbles"), fx = $(".water-fx");
 
   /* ---------- вода: волна на SVG (реагирует на скорость), пузырьки и каустика на canvas ---------- */
   var pw = $(".wave:not(.wave-b) path"), pb = $(".wave-b path");
@@ -56,6 +56,56 @@
     cx.putImageData(cimg, 0, 0);
   }, 16);
 
+
+  /* ---------- рыбы: плавание под водой (клоны нарисованных видов), реакция на курсор, пауза вне экрана ---------- */
+  var mouse = { x: -9999, y: -9999, on: false };
+  d.addEventListener("pointermove", function (e) { if (e.pointerType !== "mouse") return; mouse.x = e.clientX; mouse.y = e.clientY; mouse.on = true; }, { passive: true });
+  d.documentElement.addEventListener("mouseleave", function () { mouse.on = false; });
+  function swim(layer, defs, vh) {
+    if (!layer) return;
+    var small = innerWidth < 700, F = [], W = 1, H = 1;
+    function size() { W = layer.clientWidth || innerWidth; H = Math.min(layer.clientHeight || innerHeight, (vh || .8) * innerHeight); }
+    size(); addEventListener("resize", size);
+    defs.forEach(function (s, i) {
+      var src = d.querySelector("#sp-" + s.k + " svg"); if (!src) return;
+      var el = d.createElement("div"), svg = src.cloneNode(true), w = small ? s.w * .62 : s.w;
+      el.className = "sw-f"; el.style.width = w + "px"; el.style.opacity = s.a; svg.style.setProperty("--t", s.t + "s"); el.appendChild(svg); layer.appendChild(el);
+      F.push({ el: el, w: w, vx: s.v, sc: s.v < 0 ? -1 : 1, x: (i + .5) / defs.length * W - w / 2, y0: s.y, amp: 6 + 10 * s.depth, f: .6 + i * .13, ph: i * 2.1, depth: s.depth, fx: 0, fy: 0, ox: 0, oy: 0 });
+    });
+    var live = false;
+    function setLive() { layer.classList.toggle("live", live && !d.hidden); }
+    K.onView(layer, function (v) { live = v; setLive(); }); d.addEventListener("visibilitychange", setLive);
+    var still = calm.matches;
+    K.raf(layer, function (t, dt) {
+      var lr = layer.getBoundingClientRect(), mxp = mouse.on ? mouse.x : innerWidth / 2, par = (mxp / innerWidth - .5);
+      F.forEach(function (s) {
+        var ty = s.y0 * H + (still ? 0 : Math.sin(t * .0006 * s.f + s.ph) * s.amp);
+        if (!still && dt) {
+          var k = dt / 1000, cx = lr.left + s.x + s.ox + s.w / 2, cy = lr.top + ty + s.oy + s.w * .17;
+          if (mouse.on) { var dx = cx - mouse.x, dy = cy - mouse.y, dist = Math.sqrt(dx * dx + dy * dy) || 1, R = 120 + 130 * s.depth; if (dist < R) { var p = 1 - dist / R; s.fx += dx / dist * p * 420 * k * 4; s.fy += dy / dist * p * 260 * k * 4; } }
+          s.fx *= .94; s.fy *= .94;
+          s.ox += s.fx * k * 2.2; s.oy += s.fy * k * 2.2; s.ox *= .995; s.oy *= .985;
+          s.x += s.vx * k * (1 + vel * .06);
+          if (s.vx > 0 && s.x > W + s.w * .3) s.x = -s.w * 1.2; else if (s.vx < 0 && s.x < -s.w * 1.3) s.x = W + s.w * .3;
+          var tv = s.vx + s.fx; s.sc += ((tv < 0 ? -1 : 1) - s.sc) * .08;
+        }
+        var rot = still ? 0 : Math.max(-14, Math.min(14, s.fy * .1)) * (s.sc < 0 ? -1 : 1) * 0.5;
+        s.el.style.transform = "translate3d(" + (s.x + s.ox + (still ? 0 : par * s.depth * -26)).toFixed(1) + "px," + (ty + s.oy).toFixed(1) + "px,0) scaleX(" + s.sc.toFixed(2) + ") rotate(" + rot.toFixed(1) + "deg)";
+      });
+    }, 30);
+  }
+  swim($(".swim-back"), [{ k: "muksun", w: 420, v: 15, y: .2, a: .28, t: 3.6, depth: .4 }, { k: "pelyad", w: 340, v: -19, y: .52, a: .26, t: 3.2, depth: .35 }, { k: "chir", w: 460, v: 11, y: .74, a: .22, t: 4, depth: .3 }], .82);
+  swim($(".swim-front"), [{ k: "sterlyad", w: 320, v: -34, y: .1, a: .34, t: 2.4, depth: 1 }, { k: "osetr", w: 380, v: 26, y: .36, a: .34, t: 2.8, depth: .9 }, { k: "forel", w: 230, v: -44, y: .58, a: .3, t: 2.1, depth: .8 }], .82);
+  swim($(".swim-about"), [{ k: "muksun", w: 240, v: 18, y: .2, a: .3, t: 3.6, depth: .5 }, { k: "sterlyad", w: 210, v: -24, y: .5, a: .32, t: 3, depth: .6 }, { k: "chir", w: 260, v: 14, y: .78, a: .26, t: 3.8, depth: .4 }], 5);
+
+  /* карточки видов: подробнее по клику и с клавиатуры */
+  $$(".sp").forEach(function (card) {
+    var b = $(".sp-more", card), p = $(".sp-d", card), lab = $("span", b); p.inert = true;
+    b.addEventListener("click", function () {
+      var o = card.classList.toggle("open"); b.setAttribute("aria-expanded", o); p.inert = !o; lab.textContent = o ? "Свернуть" : "Подробнее";
+    });
+  });
+
   /* ---------- погружение (hero) ---------- */
   function shape(k) {
     var pts = [], n = 72;
@@ -70,7 +120,7 @@
   function drawDive(p) {
     p = Math.round(clamp(p) * 500) / 500; if (p === lastP) return; lastP = p;
     var H = pin.clientHeight, sink = ease(p / .5);
-    water.style.transform = "translateY(" + (-sink * H * .8).toFixed(1) + "px)";
+    water.style.transform = fx.style.transform = "translateY(" + (-sink * H * .8).toFixed(1) + "px)";
     lens.style.transform = "translateY(" + (-sink * H * .45).toFixed(1) + "px) scale(" + (.9 + .1 * sink).toFixed(3) + ")";
     shape(ease(p / .55));
     surf.style.transform = "translateY(" + (-ease(p / .34) * H * .2).toFixed(1) + "px)";
@@ -151,7 +201,7 @@
     layoutFish(); if (!scene) { cur = -1; cycleFlat(); }
     return function () {
       hdr.classList.remove("off");
-      [water, lens, surf, deep, bubbles, track].forEach(function (el) { el.style.transform = el.style.opacity = el.style.visibility = ""; });
+      [water, fx, lens, surf, deep, bubbles, track].forEach(function (el) { el.style.transform = el.style.opacity = el.style.visibility = ""; });
       stages.forEach(function (s) { s.inert = false; });
     };
   });
