@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js');try{sessionStorage.getItem('dn-seen')&&document.documentElement.classList.add('seen')}catch(e){}</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ООО «Дружба Н» — строительство жилых домов в Советском и Югорске</title>
+<meta name="description" content="Концепция редизайна сайта ООО «Дружба Н»: девелопер и подрядчик в ХМАО — Югре. Многоквартирные дома в Югорске и Советском, капитальный ремонт, квартиры. С 2006 года.">
+<link rel="icon" href="img/icon.png">
+<link rel="preload" href="../../kit/fonts/playfair-display-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../kit/fonts/jost-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/house.webp" as="image" fetchpriority="high">
+<link rel="stylesheet" href="../../kit/fonts.css">
+<link rel="stylesheet" href="../../kit/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="curtain" aria-hidden="true"><img src="img/logo.webp" alt="" width="1302" height="317"><i></i></div>
+<div class="progress" aria-hidden="true"><i></i></div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="hdr" data-header>
+  <a class="brand" href="#top" aria-label="ООО «Дружба Н», строительная компания — на главную"><img src="img/logo.webp" alt="Логотип ООО «Дружба Н», строительная компания" width="1302" height="317"></a>
+  <nav data-menu aria-label="Разделы"><i class="runner" aria-hidden="true"></i><a href="#objects">Объекты</a><a href="#services">Услуги</a><a href="#about">О&nbsp;компании</a><a href="#contacts">Контакты</a></nav>
+  <a class="hdr-tel" href="tel:+79527150119"><small>Пн 9–18, вт–пт 9–17</small><span class="num">+7 952 715‑01‑19</span></a>
+  <button data-burger aria-label="Меню" aria-expanded="false"></button>
+</header>
+
+<main id="main">
+<section class="hero" id="top" data-theme="night">
+  <canvas class="motes" aria-hidden="true"></canvas>
+  <div class="hero-in wrap">
+    <div class="hero-text">
+      <p class="kick">Советский · Советский район · Югорск</p>
+      <h1>Жильё для Советского и&nbsp;Югорска&nbsp;— от&nbsp;котлована до&nbsp;двора</h1>
+      <p class="lead">ООО «Дружба Н»&nbsp;— девелопер и&nbsp;подрядчик в&nbsp;Ханты-Мансийском автономном округе&nbsp;— Югре. Строим многоквартирные дома, делаем капитальный ремонт, продаём квартиры в&nbsp;готовых домах.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#objects" data-magnetic data-arrow>Смотреть объекты</a>
+        <a class="btn btn--ghost" href="tel:+79527150119">Позвонить</a>
+      </div>
+      <ul class="trust">
+        <li><b class="num">с 2006</b><span>на&nbsp;рынке недвижимости</span></li>
+        <li><b>крупнейший</b><span>застройщик по&nbsp;объёмам введённого жилья в&nbsp;Советском районе и&nbsp;Югорске</span></li>
+        <li><b>сотни</b><span>контрактов с&nbsp;муниципалитетами на&nbsp;строительство и&nbsp;продажу жилья для&nbsp;социальных нужд</span></li>
+      </ul>
+    </div>
+    <figure class="hero-fig">
+      <div class="hero-photo"><img src="img/house.webp" alt="Кирпичный многоэтажный жилой дом компании, вид снизу во двор" width="1400" height="993" fetchpriority="high"></div>
+      <figcaption>Фото с&nbsp;сайта компании</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec objects" id="objects" data-theme="night" aria-labelledby="obj-h">
+  <div class="wrap objects-head">
+    <h2 id="obj-h" data-split>Дом по&nbsp;этапам</h2>
+    <p>Выберите объект и&nbsp;листайте: здание собирается так, как его строят,&nbsp;— котлован, каркас, фасад, благоустройство. Рядом&nbsp;— адрес и&nbsp;то, что о&nbsp;доме сказано на&nbsp;сайте компании.</p>
+  </div>
+  <div class="stage wrap" id="stage">
+    <div class="stage-side">
+      <div class="obj-tabs" role="tablist" aria-label="Объекты">
+        <button role="tab" aria-selected="true" data-obj="0">Магистральная, 21</button>
+        <button role="tab" aria-selected="false" data-obj="1" tabindex="-1">Мира</button>
+        <button role="tab" aria-selected="false" data-obj="2" tabindex="-1">Садовая, 62</button>
+        <button role="tab" aria-selected="false" data-obj="3" tabindex="-1">Квартал у&nbsp;Гагарина</button>
+      </div>
+      <article class="obj-card" role="tabpanel" aria-live="polite">
+        <p class="obj-city" data-f="city">г. Югорск</p>
+        <h3 data-f="addr">ул. Магистральная, 21</h3>
+        <p class="obj-type" data-f="type">Многоквартирный жилой дом</p>
+        <ul class="obj-facts" data-f="facts"></ul>
+        <a class="link" data-f="url" href="https://drugba-n.tilda.ws/page83013116.html" target="_blank" rel="noopener">Планировки на&nbsp;сайте компании ↗</a>
+      </article>
+    </div>
+    <div class="stage-view">
+      <svg class="house" viewBox="0 0 800 560" role="img" aria-labelledby="house-t">
+        <title id="house-t">Условная схема: этапы строительства многоквартирного дома</title>
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A1F1A"/><stop offset="1" stop-color="#4A2C1E"/></linearGradient>
+          <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFC77D" stop-opacity=".55"/><stop offset="1" stop-color="#FFC77D" stop-opacity="0"/></radialGradient>
+          <pattern id="soil" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#6B4A36" stroke-width="2"/></pattern>
+        </defs>
+        <rect class="sky" width="800" height="560" fill="url(#sky)"/>
+        <ellipse class="dusk" cx="370" cy="300" rx="330" ry="230" fill="url(#glow)"/>
+        <!-- 1. котлован -->
+        <g class="s1">
+          <path class="pit-fill" d="M150 480 L180 530 L560 530 L590 480 Z" fill="url(#soil)"/>
+          <path class="pit draw" d="M60 480 H150 L180 530 H560 L590 480 H740"/>
+          <path class="stakes draw" d="M150 470v20M590 470v20M370 470v20"/>
+        </g>
+        <path class="ground draw" d="M20 480 H780"/>
+        <!-- 2. каркас -->
+        <g class="s2"><rect class="slab0" x="180" y="470" width="380" height="14"/><g class="frame"></g></g>
+        <!-- кран -->
+        <g class="crane">
+          <path class="draw" d="M660 480 V90 M640 480 V90 M640 90 H660 M640 130 L660 150 M640 170 L660 190 M640 210 L660 230 M640 250 L660 270 M640 290 L660 310 M640 330 L660 350 M640 370 L660 390 M640 410 L660 430 M640 450 L660 470"/>
+          <path class="draw" d="M450 80 H740 M650 60 V80 M650 60 L470 80 M650 60 L730 80"/>
+          <path class="cable" d="M0 0"/>
+          <path class="hook-path" id="hook-path" d="M700 470 L700 120 L370 120 L370 140" fill="none" stroke="none"/>
+          <g class="load"><rect x="-26" y="-5" width="52" height="10" rx="1"/></g>
+        </g>
+        <!-- 3. фасад -->
+        <g class="s3"><g class="bricks"></g><g class="wins"></g></g>
+        <!-- 4. благоустройство -->
+        <g class="s4">
+          <path class="walk" d="M60 490 H740"/>
+          <g class="trees"></g>
+          <g class="lamps"></g>
+        </g>
+        <path class="ground-top" d="M20 480 H780"/>
+      </svg>
+      <ol class="stages" aria-label="Этапы">
+        <li><button data-st="0" aria-pressed="false"><b>Котлован</b><span>разметка и&nbsp;земляные работы</span></button></li>
+        <li><button data-st="1" aria-pressed="false"><b>Каркас</b><span>фундамент и&nbsp;этажи</span></button></li>
+        <li><button data-st="2" aria-pressed="false"><b>Фасад</b><span>стены и&nbsp;окна</span></button></li>
+        <li><button data-st="3" aria-pressed="true"><b>Благоустройство</b><span>двор, свет, деревья</span></button></li>
+      </ol>
+      <p class="note">Условная схема этапов, не&nbsp;проект конкретного дома. Сроков, цен и&nbsp;числа квартир на&nbsp;схеме нет&nbsp;— их&nbsp;уточняйте в&nbsp;отделе продаж.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec services" id="services" aria-labelledby="srv-h">
+  <div class="wrap">
+    <h2 id="srv-h" data-split>Что делаем</h2>
+    <ul class="srv">
+      <li class="srv-row sp" data-reveal>
+        <h3>Строительство жилых домов</h3>
+        <p>Ключевая специализация&nbsp;— комфортное современное жильё. Компания не&nbsp;только возводит дома, но&nbsp;и&nbsp;участвует в&nbsp;формировании благоустроенной городской среды.</p>
+        <a class="link" href="#objects">Объекты</a>
+      </li>
+      <li class="srv-row srv-row--photo sp" data-reveal>
+        <h3>Капитальный ремонт</h3>
+        <p>Обновление объектов социальной инфраструктуры&nbsp;— одно из&nbsp;социально значимых направлений компании.</p>
+        <figure class="srv-photo" data-img><img src="img/remont.webp" alt="Отремонтированный учебный класс: новые парты, расписанная стена" width="900" height="1200" loading="lazy" decoding="async"></figure>
+      </li>
+      <li class="srv-row sp" data-reveal>
+        <h3>Квартиры</h3>
+        <p>Продажа квартир в&nbsp;домах компании. Планировки по&nbsp;подъездам и&nbsp;этажам&nbsp;— на&nbsp;страницах объектов.</p>
+        <a class="link" href="https://drugba-n.ru/drugba-n" target="_blank" rel="noopener">Квартиры на&nbsp;сайте компании ↗</a>
+      </li>
+    </ul>
+    <div class="social" data-reveal>
+      <p class="social-t">Ещё в&nbsp;работе компании</p>
+      <ul><li>Модульные спортзалы</li><li>Объекты социальной инфраструктуры</li><li>Склад для&nbsp;предприятия «Югра-Плит»</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about" aria-labelledby="ab-h">
+  <div class="wrap about-in">
+    <h2 id="ab-h" class="sr">О компании</h2>
+    <p class="about-big" data-words>Один из&nbsp;основных застройщиков в&nbsp;Советском, Советском районе и&nbsp;Югорске. Компания заметно влияет на&nbsp;рост жилищного фонда региона.</p>
+    <dl class="about-facts">
+      <div data-reveal><dt>На рынке недвижимости</dt><dd><span class="num">с&nbsp;<span data-count>2006</span></span> года</dd></div>
+      <div data-reveal><dt>Работаем с&nbsp;муниципальными структурами</dt><dd>сотни контрактов на&nbsp;строительство и&nbsp;продажу готового жилья для&nbsp;социальных нужд</dd></div>
+      <div data-reveal><dt>Директор и&nbsp;учредитель</dt><dd>Саявуш Джафар оглы Новрузов</dd></div>
+    </dl>
+  </div>
+  <div class="streets" aria-labelledby="st-h">
+    <p class="wrap streets-t" id="st-h">В&nbsp;портфеле компании&nbsp;— дома и&nbsp;жилые комплексы в&nbsp;Югорске и&nbsp;Советском</p>
+    <div class="streets-track" aria-hidden="true"><span>ул.&nbsp;Трассовиков</span><i></i><span>ул.&nbsp;Макаренко</span><i></i><span>ул.&nbsp;Калинина</span><i></i><span>ул.&nbsp;Гагарина</span><i></i><span>ЖК&nbsp;«Авалон», ул.&nbsp;Садовая</span><i></i><span>ЖК&nbsp;«Мирный»</span><i></i><span>ул.&nbsp;Трассовиков</span><i></i><span>ул.&nbsp;Макаренко</span><i></i><span>ул.&nbsp;Калинина</span></div>
+    <ul class="sr"><li>Дома на улицах Трассовиков, Макаренко, Калинина и Гагарина</li><li>ЖК «Авалон» на улице Садовой</li><li>ЖК «Мирный»</li></ul>
+  </div>
+</section>
+
+<section class="sec contacts" id="contacts" data-theme="night" aria-labelledby="ct-h">
+  <div class="wrap contacts-in">
+    <div class="ct-info">
+      <h2 id="ct-h" data-split>Позвоните или напишите</h2>
+      <ul class="tels">
+        <li><a href="tel:+79527150119" class="num">+7 952 715‑01‑19</a></li>
+        <li><a href="tel:+79224008630" class="num">+7 922 400‑86‑30</a></li>
+        <li><a href="tel:+73467578801" class="num">+7 34675 7‑88‑01</a></li>
+      </ul>
+      <p><a class="link mail" href="mailto:drugba-n@mail.ru">drugba-n@mail.ru</a> · <a class="link" href="https://max.ru/id6673149728_biz" target="_blank" rel="noopener">Мы есть в&nbsp;MAX ↗</a></p>
+      <dl class="ct-dl">
+        <div><dt>Режим работы</dt><dd>пн 9.00–18.00<br>вт–пт 9.00–17.00</dd></div>
+        <div><dt>Адрес</dt><dd>628240, ХМАО&nbsp;— Югра, Советский район, г.&nbsp;Советский, Зона Южная промышленная, проезд 5‑й, строение&nbsp;3</dd></div>
+        <div><dt>Почтовый адрес</dt><dd>628240, ХМАО&nbsp;— Югра, Советский район, г.&nbsp;Советский, ул.&nbsp;Строительная, д.&nbsp;14, кв.&nbsp;2</dd></div>
+      </dl>
+    </div>
+    <form class="ct-form" data-demo-form novalidate>
+      <p class="form-t">Заявка</p>
+      <label class="field"><span>Имя</span><input name="Имя" autocomplete="name" required></label>
+      <label class="field"><span>Телефон</span><input name="Телефон" type="tel" autocomplete="tel" inputmode="tel" required></label>
+      <label class="field"><span>Что интересует</span><select name="Тема"><option>Квартира в&nbsp;доме компании</option><option>Строительство</option><option>Капитальный ремонт</option><option>Другое</option></select></label>
+      <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+      <button class="btn" type="submit" data-arrow>Отправить заявку</button>
+      <div class="done"><p><b>Так выглядела&nbsp;бы заявка.</b> Это демо: письмо никуда не&nbsp;ушло.</p><dl></dl></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <p class="ftr-word" aria-hidden="true">Дружба&nbsp;Н</p>
+    <p>ООО «Дружба Н» · строительство и&nbsp;ремонт капитальных строений · Советский, ХМАО&nbsp;— Югра</p>
+    <p><a class="link" href="https://drugba-n.ru/drugba-n" target="_blank" rel="noopener">Учредительные документы&nbsp;— на&nbsp;действующем сайте ↗</a></p>
+  </div>
+</footer>
+<div class="mbar"><a class="btn" href="tel:+79527150119">Позвонить</a><a class="btn btn--ghost" href="#contacts">Заявка</a></div>
+
+<script src="../../kit/vendor/gsap.min.js" defer></script>
+<script src="../../kit/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../../kit/vendor/SplitText.min.js" defer></script>
+<script src="../../kit/vendor/DrawSVGPlugin.min.js" defer></script>
+<script src="../../kit/vendor/MotionPathPlugin.min.js" defer></script>
+<script src="../../kit/vendor/lenis.min.js" defer></script>
+<script src="../../kit/kit.js" defer></script>
+<script src="fx.js" defer></script>
+</body>
+</html>
